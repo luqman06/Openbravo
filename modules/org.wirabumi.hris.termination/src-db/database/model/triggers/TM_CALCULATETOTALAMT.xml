@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER TM_CALCULATETOTALAMT">
+    <trigger name="TM_CALCULATETOTALAMT" table="TM_DETAIL_PESANGON" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_totalamt NUMBER;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+    
+    -- definisi trigger
+       select round(sum(total), 2) into v_totalamt
+       from tm_detail_pesangon where tm_form_pesangon_id=:new.tm_form_pesangon_id;
+
+    
+       update tm_form_pesangon set totalamt=v_totalamt
+       where tm_form_pesangon_id=:new.tm_form_pesangon_id;
+      END TM_CALCULATETOTALAMT
+]]></body>
+    </trigger>
+  </database>

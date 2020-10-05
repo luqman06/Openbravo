@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="315" trl="N">
+    <value column="Name" isTrl="N" original="Import Format">Import Format</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Create and edit import formats for specific database tables.">Create and edit import formats for specific database tables.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Create and edit import formats for specific database tables.">Create and edit import formats for specific database tables.</value>
+  </row>
+  <row id="316" trl="N">
+    <value column="Name" isTrl="N" original="Field Format">Field Format</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Define individual fields and the required format of the import file.">Define individual fields and the required format of the import file.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Define individual fields and the required format of the import file.">Define individual fields and the required format of the import file.</value>
+  </row>
+  <row id="441" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner">Import Business Partner</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import business partners in .csv format from previously used databases/applications and past business operations.">Import business partners in .csv format from previously used databases/applications and past business operations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Import business partners in .csv format from previously used databases/applications and past business operations.">Import business partners in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="442" trl="N">
+    <value column="Name" isTrl="N" original="Import Product">Import Product</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import products in .csv format from previously used databases/applications and past business operations.">Import products in .csv format from previously used databases/applications and past business operations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Import products in .csv format from previously used databases/applications and past business operations.">Import products in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="443" trl="N">
+    <value column="Name" isTrl="N" original="Import Account">Import Account</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import chart of accounts in .csv format from previously used databases/applications and past business operations.">Import chart of accounts in .csv format from previously used databases/applications and past business operations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Import chart of accounts in .csv format from previously used databases/applications and past business operations.">Import chart of accounts in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="481" trl="N">
+    <value column="Name" isTrl="N" original="Inventory">Inventory</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Validate and Import Inventory Transactions. The Locator is primarily determined by the Locator Key, then the Warehouse and X,Y,Z fields.&lt;p&gt;A Physical Inventory is created per Warehouse and Movement Date.">Validate and Import Inventory Transactions. The Locator is primarily determined by the Locator Key, then the Warehouse and X,Y,Z fields.&lt;p&gt;A Physical Inventory is created per Warehouse and Movement Date.</value>
+  </row>
+  <row id="507" trl="N">
+    <value column="Name" isTrl="N" original="Bank Statement">Bank Statement</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import Bank Statement">Import Bank Statement</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="508" trl="N">
+    <value column="Name" isTrl="N" original="General Ledger">General Ledger</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import General Ledger">Import General Ledger</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="A new Journal Batch is created, if the Batch Document No is different. A new Journal is created, if the Document No, Accounting Schema, Currency, Document Type, GL Category, Posting Type or Accounting type is different.&lt;p&gt;Please note that there are three">A new Journal Batch is created, if the Batch Document No is different. A new Journal is created, if the Document No, Accounting Schema, Currency, Document Type, GL Category, Posting Type or Accounting type is different.&lt;p&gt;Please note that there are three</value>
+  </row>
+  <row id="510" trl="N">
+    <value column="Name" isTrl="N" original="Invoice">Invoice</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import Invoices">Import Invoices</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="You should supply the Document Type Name (or ID). The Document Type is on purpose not fully derived as it has too many consequences if it's wrong.  The best way is to set the Document Type Name as a Constant in your Import File Format or as an imported fi">You should supply the Document Type Name (or ID). The Document Type is on purpose not fully derived as it has too many consequences if it's wrong.  The best way is to set the Document Type Name as a Constant in your Import File Format or as an imported fi</value>
+  </row>
+  <row id="512" trl="N">
+    <value column="Name" isTrl="N" original="Import Order">Import Order</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import orders in .csv format from previously used databases/applications and past business operations.">Import orders in .csv format from previously used databases/applications and past business operations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Import orders in .csv format from previously used databases/applications and past business operations.">Import orders in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="800208" trl="N">
+    <value column="Name" isTrl="N" original="Import Budget">Import Budget</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import budgets in .csv format from previously used databases/applications and past business operations.">Import budgets in .csv format from previously used databases/applications and past business operations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Import budgets in .csv format from previously used databases/applications and past business operations.">Import budgets in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="800260" trl="N">
+    <value column="Name" isTrl="N" original="Import Taxes">Import Taxes</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Import taxes in .csv format from previously used databases/applications and past business operations.">Import taxes in .csv format from previously used databases/applications and past business operations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Import taxes in .csv format from previously used databases/applications and past business operations.">Import taxes in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptFIN_PaymentLines" pageWidth="565" pageHeight="391" orientation="Landscape" columnWidth="565" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8ff0fb53-ffd8-4a35-a22c-2d1b2defed19">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.464100000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="GroupHeader_DarkGray" mode="Opaque" forecolor="#FFFFFF" backcolor="#555555" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="18" isBold="true">
+		<box leftPadding="5"/>
+	</style>
+	<style name="Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<parameter name="FIN_PAYMENT_ID" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT LINE_DOCUMENTTYPE, LINE_DOCUMENTNO, LINE_DATE, LINE_CURRENCY ,SUM(A.LINE_AMOUNT) AS AMOUNT,description,
+bankname
+FROM
+  (SELECT
+     case when psd.fin_payment_schedule_order is not null and psd.fin_payment_schedule_invoice is null then 'O'
+          when psd.fin_payment_schedule_invoice is not null and psd.fin_payment_schedule_order is null then 'I'
+          when psd.fin_payment_schedule_invoice is not null and psd.fin_payment_schedule_order is not null then 'I'
+          when pd.c_glitem_id is not null then 'GL'
+           else 'U'
+     end as LINE_DOCUMENTTYPE,
+     coalesce(to_char(inv.documentno), to_char(ord.documentno), to_char('')) as LINE_DOCUMENTNO,
+     coalesce(to_char(inv.dateinvoiced), to_char(ord.dateordered), to_char('')) as LINE_DATE,
+     coalesce(psd.amount, pd.amount) as LINE_AMOUNT,
+     cur.cursymbol as LINE_CURRENCY, p.description as description,
+     bank.name as bankname
+   FROM fin_payment p join fin_payment_detail pd on (p.fin_payment_id=pd.fin_payment_id)
+        join fin_payment_scheduledetail psd on (pd.fin_payment_detail_id=psd.fin_payment_detail_id)
+        left outer join fin_payment_schedule ps on (psd.fin_payment_schedule_invoice=ps.fin_payment_schedule_id)
+        left outer join c_invoice inv on (ps.c_invoice_id = inv.c_invoice_id)
+        left outer join fin_payment_schedule ps2 on (psd.fin_payment_schedule_order=ps2.fin_payment_schedule_id)
+        left outer join c_order ord on (ps2.c_order_id = ord.c_order_id)
+        left outer join c_glitem gl on (pd.c_glitem_id = gl.c_glitem_id)
+        left outer join c_currency cur on (p.c_currency_id = cur.c_currency_id)
+        left outer join Fin_Financial_Account bank on p.Fin_Financial_Account_ID=bank.Fin_Financial_Account_ID
+   WHERE p.fin_payment_id=$P{FIN_PAYMENT_ID}) A
+GROUP BY LINE_DOCUMENTTYPE, LINE_DOCUMENTNO, LINE_DATE, LINE_CURRENCY,description,bankname
+ORDER BY LINE_DOCUMENTTYPE,LINE_DATE, LINE_DOCUMENTNO]]>
+	</queryString>
+	<field name="line_documenttype" class="java.lang.String"/>
+	<field name="line_documentno" class="java.lang.String"/>
+	<field name="line_date" class="java.lang.String"/>
+	<field name="line_currency" class="java.lang.String"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="bankname" class="java.lang.String"/>
+	<variable name="SUM_LINEAMT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" style="GroupHeader_DarkGray" x="0" y="0" width="183" height="15" forecolor="#000000" backcolor="#3366FF" uuid="b38f1088-a59a-44a7-bef5-48b1bc2b48e3"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[Number of Evidence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-2" style="GroupHeader_DarkGray" x="443" y="0" width="122" height="15" forecolor="#000000" backcolor="#3366FF" uuid="882fe54e-192a-4119-b4ce-305ea81d5f9b"/>
+				<box leftPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[TOTAL (Rp)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-1" style="GroupHeader_DarkGray" x="183" y="0" width="260" height="15" forecolor="#000000" backcolor="#3366FF" uuid="dfe1a83d-f825-4e66-bb1c-8eaec578d237"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="invoice" stretchType="RelativeToTallestObject" x="0" y="0" width="183" height="16" uuid="36ffa608-ebbf-4c4d-ab3b-93aaa7dad5ad">
+					<printWhenExpression><![CDATA[new Boolean($F{line_documenttype}.equalsIgnoreCase("I"))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="1" leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Invoice" + ", " + (($F{line_documentno}!=null) ? $F{line_documentno} : new String("")) + ", " + (($F{line_date}!=null) ? $F{line_date} : new String(""))]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="order" stretchType="RelativeToTallestObject" x="0" y="0" width="183" height="16" uuid="56be77db-4fe7-4f52-ae96-f738f4cdbd0e">
+					<printWhenExpression><![CDATA[new Boolean($F{line_documenttype}.equalsIgnoreCase("O"))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="1" leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Order" + ", " + (($F{line_documentno}!=null) ? $F{line_documentno} : new String("")) + ", " + (($F{line_date}!=null) ? $F{line_date} : new String(""))]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="others" stretchType="RelativeToTallestObject" x="0" y="0" width="183" height="16" uuid="4769b6a9-fc0d-4f56-bb8e-837fb7a55046">
+					<printWhenExpression><![CDATA[new Boolean($F{line_documenttype}.equalsIgnoreCase("GL"))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="1" leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Others" + ", " + (($F{line_documentno}!=null) ? $F{line_documentno} : new String("")) + ", " + (($F{line_date}!=null) ? $F{line_date} : new String(""))]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="unapplied" stretchType="RelativeToTallestObject" x="0" y="0" width="183" height="16" uuid="e242ac50-6d51-42f2-b1f6-20a520082136">
+					<printWhenExpression><![CDATA[new Boolean($F{line_documenttype}.equalsIgnoreCase("U"))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="1" leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Unapplied" + ", " + (($F{line_documentno}!=null) ? $F{line_documentno} : new String("")) + ", " + (($F{line_date}!=null) ? $F{line_date} : new String(""))]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-2" stretchType="RelativeToTallestObject" x="443" y="0" width="122" height="16" uuid="d868d9e2-bbe5-4e58-a8d1-44fd8a1a741f"/>
+				<box rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{amount}!=null) ? $P{NUMBERFORMAT}.format($F{amount}).toString() : new String(" ")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="order" stretchType="RelativeToTallestObject" x="183" y="0" width="260" height="16" uuid="1eb337e5-1e91-4073-9810-f756c01ab569"/>
+				<box topPadding="1" leftPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="28" splitType="Stretch">
+			<textField evaluationTime="Report" isBlankWhenNull="false">
+				<reportElement key="textField-3" style="Gray" x="443" y="0" width="122" height="27" uuid="54edc464-96e2-4cf2-8b2a-a2c13364a69a"/>
+				<box rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{SUM_LINEAMT}!=null) ? $P{NUMBERFORMAT}.format($V{SUM_LINEAMT}).toString() : new String(" ")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-4" x="200" y="0" width="243" height="28" uuid="a70d0b76-e649-49c8-9f19-2797eeff94d8"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" isBold="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["JUMLAH YANG HARUS DI BAYAR (" + $F{line_currency}.toString() + "): "]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

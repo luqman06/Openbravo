@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="24CD5925F8634F5BA15C72A03CA37ED7" trl="N">
+    <value column="Text" isTrl="N" original="Jamsostek Perusahaan">Jamsostek Perusahaan</value>
+  </row>
+  <row id="2A85DDEC436D4882AA99224CF5163A5F" trl="N">
+    <value column="Text" isTrl="N" original="No Pegawai">No Pegawai</value>
+  </row>
+  <row id="2C272C3CDD224852B8714772A137AACC" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Masuk">Tanggal Masuk</value>
+  </row>
+  <row id="2CA95711EFA44FB9A4D93C5A74828BEA" trl="N">
+    <value column="Text" isTrl="N" original="Jamsostek Pegawai">Jamsostek Pegawai</value>
+  </row>
+  <row id="458627295FE140D79C6E71B8201A4935" trl="N">
+    <value column="Text" isTrl="N" original="No Pegawai">No Pegawai</value>
+  </row>
+  <row id="495D51FE24964EBC84D2EF719E45F0CF" trl="N">
+    <value column="Text" isTrl="N" original="No Jamsostek">No Jamsostek</value>
+  </row>
+  <row id="6F76ADCF14A94E5C92B8CA943D0047FF" trl="N">
+    <value column="Text" isTrl="N" original="Nama Pegawai">Nama Pegawai</value>
+  </row>
+  <row id="948DAD3460D346E18530E820DCFF3B40" trl="N">
+    <value column="Text" isTrl="N" original="Dana Pensiun Perusahaan">Dana Pensiun Perusahaan</value>
+  </row>
+  <row id="9B037DCCCCDA4EDDBFA72C7BE417B9D7" trl="N">
+    <value column="Text" isTrl="N" original="Dana Pensiun Pegawai">Dana Pensiun Pegawai</value>
+  </row>
+  <row id="9D674C54D87D4CCD9E73D9420D857E64" trl="N">
+    <value column="Text" isTrl="N" original="Report Jamsostek">Report Jamsostek</value>
+  </row>
+  <row id="A02CA01556D1445A96B6672E6ACF2B04" trl="N">
+    <value column="Text" isTrl="N" original="Report Dana Pensiun">Report Dana Pensiun</value>
+  </row>
+  <row id="B595F0AA227C4683A25C55BE04154765" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Masuk">Tanggal Masuk</value>
+  </row>
+  <row id="B5E55798E4F947A8BFEEF0B4E4B4C48C" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Lahir">Tanggal Lahir</value>
+  </row>
+  <row id="C98DF2E630794E8D96097D039C804116" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Lahir">Tanggal Lahir</value>
+  </row>
+  <row id="CE3A51B8DBBA445EBF099353F993A308" trl="N">
+    <value column="Text" isTrl="N" original="Nama Pegawai">Nama Pegawai</value>
+  </row>
+  <row id="D873D28364BD4F3EA9942FFF70F40881" trl="N">
+    <value column="Text" isTrl="N" original="Gaji">Gaji</value>
+  </row>
+  <row id="EAE6199B84C647878A6E14CA76D95B0D" trl="N">
+    <value column="Text" isTrl="N" original="Gaji">Gaji</value>
+  </row>
+</compiereTrl>

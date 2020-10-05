@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION HRIS_MAKE_CURRENT_POS">
+    <function name="HRIS_MAKE_CURRENT_POS" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_ResultStr VARCHAR(2000):= ''; --will contain text describing the stage the stored procedure is in
+  v_Message VARCHAR(2000):= ''; --will contain the final message to be logged
+  BEGIN
+  
+  BEGIN --BODY
+    --Successfully finish the process by updating AD_PInstance, setting the 
+    --IsProcessing, ErrorMsg and Result
+    DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message);
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 1, v_Message);
+    RETURN;
+  END; --BODY
+ 
+ EXCEPTION
+ WHEN OTHERS THEN
+   DBMS_OUTPUT.PUT_LINE(v_ResultStr);
+   AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr);
+   RETURN;
+END HRIS_MAKE_CURRENT_POS
+]]></body>
+    </function>
+  </database>

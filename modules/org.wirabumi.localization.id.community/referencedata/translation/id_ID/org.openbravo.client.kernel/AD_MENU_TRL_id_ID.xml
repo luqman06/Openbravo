@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="68BBCC31506745D6A9223F63B87FD96D" trl="N">
+    <value column="Name" isTrl="N" original="Template">Template</value>
+    <value column="Description" isTrl="N" original="Maintain component templates">Maintain component templates</value>
+  </row>
+  <row id="8C54E34A8D594B10865A86BDC2082EEE" trl="N">
+    <value column="Name" isTrl="N" original="User Interface">User Interface</value>
+    <value column="Description" isTrl="N" original="Contains the application dictionary for the new user interface">Contains the application dictionary for the new user interface</value>
+  </row>
+</compiereTrl>

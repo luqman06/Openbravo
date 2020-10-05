@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="00418FA96E6147638AB881615A0B1EEC" trl="N">
+    <value column="Name" isTrl="Y" original="KPI Category">Kategori KPI</value>
+    <value column="Description" isTrl="Y" original="KPI Category">Kategori KPI</value>
+  </row>
+  <row id="01DF7C8BC47A4FAE9A95F16EE3901580" trl="N">
+    <value column="Name" isTrl="N" original="Education Permit">Education Permit</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="04E3253C80F94C718651383489CD4FF4" trl="Y">
+    <value column="Name" isTrl="Y" original="Certificate/License Catalogue">Sertifikat/Lisensi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="066996EB27BD45428E204856C07C6A0C" trl="N">
+    <value column="Name" isTrl="N" original="Required Training Report by Job Title by Personel">Required Training Report by Job Title by Personel</value>
+    <value column="Description" isTrl="N" original="Required Training Report by Job Title by Personel">Required Training Report by Job Title by Personel</value>
+  </row>
+  <row id="0ACB89E153EF40A48F0F453A1EF712F9" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Setup For Employee">Setup For Employee</value>
+  </row>
+  <row id="0B3F85C844214F79A0CD206AD4334833" trl="Y">
+    <value column="Name" isTrl="Y" original="Overtime And Emergency Call">Lembur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="15A62031828049C4B3570446231F0AF7" trl="N">
+    <value column="Name" isTrl="Y" original="Import Employee Candidate">Import Calon Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="257EB730106844DDA919105E3C66E94B" trl="N">
+    <value column="Name" isTrl="Y" original="Salary Back Payment">Rapel Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2D0D34BA2CFB4B8DAECE935948C3DF31" trl="N">
+    <value column="Name" isTrl="N" original="ARCI Matrix Report">ARCI Matrix Report</value>
+    <value column="Description" isTrl="N" original="Print ARCI Matrix">Print ARCI Matrix</value>
+  </row>
+  <row id="2F278DAD5C88482295BD7F302681D2FF" trl="N">
+    <value column="Name" isTrl="Y" original="Job Title">Jabatan Lengkap</value>
+    <value column="Description" isTrl="Y" original="Job Title">Jabatan Lengkap</value>
+  </row>
+  <row id="2FCD2323CF074D059991793939C76DCD" trl="N">
+    <value column="Name" isTrl="N" original="Required Competency Report by Job Title by Personel">Required Competency Report by Job Title by Personel</value>
+    <value column="Description" isTrl="N" original="Required Competency Report by Job Title by Personel">Required Competency Report by Job Title by Personel</value>
+  </row>
+  <row id="31F781A1053A437DBA7D8ECF33F529B0" trl="N">
+    <value column="Name" isTrl="Y" original="Training Plan">Usulan Pelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="32B72A126F9844E9A7A4A0637450FFBC" trl="N">
+    <value column="Name" isTrl="Y" original="Punishment Classification">Klasifikasi Hukuman</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="38D58329F8DD4460ADCD5E70E78D9A44" trl="N">
+    <value column="Name" isTrl="Y" original="Training Calendar">Jadwal Pelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="414AF0BAD12646D6B0FD5678F66B52FA" trl="N">
+    <value column="Name" isTrl="Y" original="Family Information Change Request">Usulan Perubahan Data Keluarga</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4270D4DD885C41D89D55EDB6D34018DE" trl="N">
+    <value column="Name" isTrl="Y" original="Term Loan">Pinjaman Berjangka</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="47D8F278425C406A89A36BB942322978" trl="N">
+    <value column="Name" isTrl="Y" original="Payroll Calculator">Kalulator Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4BC024D440F64359812032907E19E20A" trl="N">
+    <value column="Name" isTrl="Y" original="Training Catalogue">Katalog Pelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4FCA43BEC3EB4B1AAE6451BC4F1F3CFD" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Master">Master Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="54048AB7EECC4BD88A6F0F919D247F34" trl="Y">
+    <value column="Name" isTrl="Y" original="Job Competency Catalogue">Kompetensi</value>
+    <value column="Description" isTrl="N" original="Competency">Competency</value>
+  </row>
+  <row id="5486520488C142A598DA2BFAEBE85B6E" trl="N">
+    <value column="Name" isTrl="N" original="Employee Transfer">Employee Transfer</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5508A7C2CDE243CDBC016624A074FA5C" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Case">Pelanggaran Kepegawaian</value>
+    <value column="Description" isTrl="Y" original="Employee Case History">Pelanggaran Kepegawaian</value>
+  </row>
+  <row id="5682D5143CD9404C9AC9249122912F51" trl="N">
+    <value column="Name" isTrl="N" original="Set Applicable Contract">Set Applicable Contract</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="57E63750DF604E4B86B4158DDEBBCF8E" trl="N">
+    <value column="Name" isTrl="Y" original="Case Management">Pelanggaran Kepegawaian</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="63D58C198AF34B1BBDDC98C46FC49C71" trl="N">
+    <value column="Name" isTrl="N" original="KPI">KPI</value>
+    <value column="Description" isTrl="Y" original="Key Performance Indicator">KPI</value>
+  </row>
+  <row id="6FF3FA410B4E400C8D63B8C99D2ACC66" trl="N">
+    <value column="Name" isTrl="N" original="Insurance Payee">Insurance Payee</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7779B31D6E1B40D9BE6DAB670F939AC8" trl="N">
+    <value column="Name" isTrl="N" original="Employee Competency">Kompetensi Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7ADF6C95F1E744298A6236089D1F1526" trl="N">
+    <value column="Name" isTrl="Y" original="Performance Management">Penilaian Kinerja</value>
+    <value column="Description" isTrl="N" original="key performance indicator">key performance indicator</value>
+  </row>
+  <row id="7DBA7E032B644C53A46BD6BA848E00DF" trl="N">
+    <value column="Name" isTrl="N" original="ARCI Matrix">ARCI Matrix</value>
+    <value column="Description" isTrl="N" original="ARCI Matrix">ARCI Matrix</value>
+  </row>
+  <row id="80F7AA9F0D3D4C9B9A256331497BDE75" trl="Y">
+    <value column="Name" isTrl="Y" original="Education Dicipline">Disiplin Ilmu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="86009AC985FB4C91B988690C93119370" trl="N">
+    <value column="Name" isTrl="N" original="Competency By Employee">Competency By Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8A128933877448E08BBD7B279E96E63E" trl="N">
+    <value column="Name" isTrl="N" original="Education Admission">Education Admission</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="90B6EE9DDE6C4238902A8B7F510C336C" trl="N">
+    <value column="Name" isTrl="Y" original="Pay Slip">Slip Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="915ECA07ADAE4C2EA39CAE740A42BD9B" trl="N">
+    <value column="Name" isTrl="N" original="Violation Catalogue">Violation Catalogue</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="94009CF2D8574D2DB902D595F4B5005E" trl="N">
+    <value column="Name" isTrl="Y" original="Benefits Claim">Klaim Manfaat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="95ED39FD20344CE4BE640143186D6934" trl="N">
+    <value column="Name" isTrl="Y" original="Retirement">Pensiun Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9600F75874AA46F386F819275CB5870B" trl="N">
+    <value column="Name" isTrl="N" original="Employee Job Experience">Pengalaman Kerja Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9902FAC5893B44BFB69279299EBD4304" trl="N">
+    <value column="Name" isTrl="N" original="Employee Education">Pendidikan Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="991FF63982F443DEAA1BA2B7F12F857E" trl="Y">
+    <value column="Name" isTrl="Y" original="Site">Wilayah</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9CD9ED2286364669A5FAA5351C5735D2" trl="N">
+    <value column="Name" isTrl="N" original="General Exam">General Exam</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A6E62D1AD147464B8F726844259B188A" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Candidate">Calon Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AA0C91C364B9407E862124680E6A38A6" trl="N">
+    <value column="Name" isTrl="N" original="Generate Employee Closure">Generate Employee Closure</value>
+    <value column="Description" isTrl="N" original="Generate Employee Closure">Generate Employee Closure</value>
+  </row>
+  <row id="AF2EE49085A14989B1BB9D352DAFEA95" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B3FF7D6ED5274A65907C4B800B479F3A" trl="N">
+    <value column="Name" isTrl="Y" original="Achievement Catalogue">Achivments</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BDD54A6FFF394213A2A9C48D07C1626F" trl="N">
+    <value column="Name" isTrl="Y" original="Insurance Provider">Penyedia Asuransi</value>
+    <value column="Description" isTrl="Y" original="Insurance provider">Asuransi</value>
+  </row>
+  <row id="BFC0E41BDED348148079AA5BFAC633EA" trl="Y">
+    <value column="Name" isTrl="Y" original="Department">Departemen</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C0DF1934039946029B0C661202876DA3" trl="N">
+    <value column="Name" isTrl="Y" original="Position Rule">Aturan Jabatan</value>
+    <value column="Description" isTrl="Y" original="Position rule">aturan menempatkan karyawan pada jabatan tertentu. sebuah jabatan hanya bisa ditempati oleh karyawan dengan jenjang jabatan dan pangkat/golongan tertentu</value>
+  </row>
+  <row id="C0DFFCF4404240BD9507506D0980F9F5" trl="N">
+    <value column="Name" isTrl="N" original="Employee Training">Pelatihan Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C97248489BD74968915A24865AA2C823" trl="N">
+    <value column="Name" isTrl="Y" original="Recruitment">Penerimaan Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CD170D1C71104FFB87F1E5ECEE540677" trl="N">
+    <value column="Name" isTrl="Y" original="Reimbursment">Uang Pengganti</value>
+    <value column="Description" isTrl="Y" original="Reimbursment request">Uang Pengganti</value>
+  </row>
+  <row id="CD2C5EED167B42819C97554FBB49F6C3" trl="N">
+    <value column="Name" isTrl="N" original="Employee Achievement">Employee Achievement</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CF224743084D44508AA5946988FAF4EF" trl="N">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D17AC47164994BCDA09B96989701B961" trl="N">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D400AC4267F341E3BCAC4E85DC012B4B" trl="N">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D6F90833DF6C40BAA5C1047DE0C4A73E" trl="Y">
+    <value column="Name" isTrl="Y" original="Manufacturing Cost Center">Pusat Biaya Produksi</value>
+    <value column="Description" isTrl="N" original="Create and edit cost centers related to production to sum up charges associated with a specific transaction.">Create and edit cost centers related to production to sum up charges associated with a specific transaction.</value>
+  </row>
+  <row id="D799640050BC4D20835F1CD95CBE8A86" trl="N">
+    <value column="Name" isTrl="N" original="Employee Certificate/License">Employee Certificate/License</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D80B8C953BC945A6A33C0A1F2ACE1EBD" trl="N">
+    <value column="Name" isTrl="N" original="Employee Supervisor Management">Employee Supervisor Management</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D85DCBA47CF248678B0298CF7162152A" trl="N">
+    <value column="Name" isTrl="N" original="Education Exam">Education Exam</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D919B22D62CE4D97B7DD6994AB0AD893" trl="N">
+    <value column="Name" isTrl="N" original="Employee Self Service">Employee Self Service</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DA481BDADD22444281FC0269589E7F55" trl="N">
+    <value column="Name" isTrl="N" original="Employee Administration">Employee Administration</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DD3F60CB76C7487FB12784DD1D7CACD4" trl="N">
+    <value column="Name" isTrl="N" original="Employee Grade Rule">Employee Grade Rule</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DDE119A00DD848FC99390CDB49CA9F74" trl="N">
+    <value column="Name" isTrl="N" original="KPI Measurement">KPI Measurement</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E1C3864838F64B6CB2642EFC4EDC4386" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Profile">Profil Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="ED3D7C37A0F149109ADD89E0DFD1DD66" trl="N">
+    <value column="Name" isTrl="Y" original="Career Administration">Administrasi Karir</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F07352E4E9094245B3F762A0C250AA11" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Transfer (OLD)">Mutasi Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F2399DA3A8634579AE749D3B9B70DCFD" trl="Y">
+    <value column="Name" isTrl="Y" original="Human Resource Management">Manajemen SDM</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FFCDF46C32C94179867C6E3E9E3DC291" trl="N">
+    <value column="Name" isTrl="Y" original="People Development">Pengembangan SDM</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

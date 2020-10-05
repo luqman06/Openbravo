@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION ID_TAXCURRENCYCONVERT">
+    <function name="ID_TAXCURRENCYCONVERT" type="NUMERIC">
+      <parameter name="p_amount" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_curfrom_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_curto_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_convdate" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_client_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_precissiontype" type="CHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_Rate NUMBER;
+BEGIN
+  -- Return Amount
+  IF(p_Amount=0 OR p_CurFrom_ID=p_CurTo_ID) THEN
+    RETURN p_Amount;
+  END IF;
+  -- Return NULL
+  IF(p_Amount IS NULL OR p_CurFrom_ID IS NULL OR p_CurTo_ID IS NULL) THEN
+    RETURN NULL;
+  END IF;
+  -- Get Rate
+  select multiplyrate into v_Rate
+	from id_tax_conversion_rate
+	where ad_client_id=p_client_id
+	and c_currency_id=p_curfrom_id
+	and c_currency_id_to=p_curto_id
+	and validfrom<=p_convdate
+	and validto>=p_convdate;
+  
+  IF(v_Rate IS NULL) THEN
+  raise notice 'null rate';
+    RETURN NULL;
+  END IF;
+  -- Standard Precision
+  RETURN ROUND(p_Amount * v_Rate, C_GET_CURRENCY_PRECISION(p_CurTo_ID, p_precissiontype)) ;
+EXCEPTION
+WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ;
+  RAISE;
+END ID_TAXCURRENCYCONVERT
+]]></body>
+    </function>
+  </database>

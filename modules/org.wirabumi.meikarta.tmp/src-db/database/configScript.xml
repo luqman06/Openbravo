@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+  <vector>
+    <versionInfo version="3.0.32403"/>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="A84744603B334C339FD94B89367038CD">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="402456AA516A4358B7DCC47958FF5E4E">
+      <oldValue><![CDATA[Description]]></oldValue>
+      <newValue><![CDATA[Detail Specification]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISCENTRALLYMAINTAINED" pkRow="402456AA516A4358B7DCC47958FF5E4E">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="SHOWINRELATION" pkRow="422938880DFB428A8803289F6C1E7354">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+  </vector>

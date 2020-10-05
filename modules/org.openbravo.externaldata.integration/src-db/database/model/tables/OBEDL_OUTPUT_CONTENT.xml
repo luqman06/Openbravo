@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+  <database name="TABLE OBEDL_OUTPUT_CONTENT">
+    <table name="OBEDL_OUTPUT_CONTENT" primaryKey="OBEDL_OUTPUT_CONTENT_KEY">
+      <column name="OBEDL_OUTPUT_CONTENT_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OBEDL_REQUEST_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OBEDL_REQUEST_LINE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EXECUTION_DATE" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OUTPUT_CONTENT" primaryKey="false" required="true" type="CLOB" size="4000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="AD_CLIENT" name="OBEDL_OUT_CONT_CLI_FK">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="OBEDL_OUT_CONT_ORG_FK">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="OBEDL_REQUEST" name="OBEDL_REQUEST_FK" onDelete="cascade">
+        <reference local="OBEDL_REQUEST_ID" foreign="OBEDL_REQUEST_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="OBEDL_REQUEST_LINE" name="OBEDL_REQUEST_LINE_FK" onDelete="cascade">
+        <reference local="OBEDL_REQUEST_LINE_ID" foreign="OBEDL_REQUEST_LINE_ID"/>
+      </foreign-key>
+      <index name="OBEDL_OUTPUTCONT_REQLINE_IDX" unique="false">
+        <index-column name="OBEDL_REQUEST_LINE_ID"/>
+      </index>
+      <index name="OBEDL_OUTPUTCONT_REQUEST_IDX" unique="false">
+        <index-column name="OBEDL_REQUEST_ID"/>
+      </index>
+      <check name="OBEDL_OUT_CONT_ISACTIVE_CHECK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+    </table>
+  </database>

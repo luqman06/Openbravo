@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="purchaseorder.jrxml" pageWidth="595" pageHeight="792" columnWidth="539" leftMargin="28" rightMargin="28" topMargin="13" bottomMargin="13" uuid="392e1deb-c78f-488f-ad38-b0ab73e32902">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("8BEF5146D76E4B3CA313519E967BC75C")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT Distinct
+	--(SELECT USR.name FROM AD_USER USR INNER JOIN C_ORDER on C_ORDER.createdby = USR.ad_user_id LIMIT 1) as CREATED_BY,
+	I_USER.name as CREATED_BY,
+	I_USER.email as USER_EMAIL,
+	--(SELECT USR.email FROM AD_USER USR INNER JOIN C_ORDER on C_ORDER.createdby = USR.ad_user_id LIMIT 1) as USER_EMAIL,
+	C_BPARTNER.name AS VENDOR_NAME,
+	coalesce(L.address1, '')||coalesce(' '||L.address2,'') as address1,
+	coalesce(l.city,'')||coalesce(' - '||l.postal,'')||coalesce(' - '||r.name,'')||coalesce(' - '||co.name,'') as address2,
+	coalesce(C_BPARTNER_LOCATION.PHONE,'')||coalesce(', Fax : '||C_BPARTNER_LOCATION.FAX,'') as phonefax,
+	C_BPARTNER.URL,
+	C_ORDER.DESCRIPTION AS HEADER_DESCRIPTION,
+	C_ORDER.DATEORDERED,
+	C_ORDER.AD_ORG_ID AS ORGANIZATIONID,
+	C_ORDER.DELIVERYNOTES,
+	C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+	C_ORDER.docstatus AS STATUS,
+	coalesce(AD_USER.NAME,'')||coalesce(' / Phone : '||AD_USER.PHONE,'') AS VENDOR_CONTACT,
+	AD_USER.EMAIL AS VENDOR_CONTACT_EMAIL,
+	AD_USER.PHONE AS VENDOR_CONTACT_PHONE,
+	DELIVERYRULE.NAME AS DELIVERYTERM,
+	PAYMENTTERM.TERM AS PAYMENTTERM,
+	C_CURRENCY.ISO_CODE as CURRENCY_ISO,
+	M_PRICELIST.ISTAXINCLUDED,
+	C_ORDER.DOCUMENTNO AS PURCHASE_ORDER_NO,
+	POLINE.Line AS PURCHASE_ORDER_LINE,
+	P.value AS PRODUCT_SEARCHKEY,
+	P.name AS PRODUCT_NAME,
+	--coalesce(P.description,'') || coalesce(' ' || POLINE.description,'') AS PRODUCT_DESCRIPTION,
+	POLINE.QTYORDERED AS QTY_ORDERED,
+	UOM.x12de355 AS UOM_CODE,
+	UOM.name AS UOM_NAME,
+	POLINE.description as linedescription,
+	POLINE.priceactual AS PRICE_ACTUAL,
+	POLINE.linenetamt AS LINE_NET_AMOUNT,
+	POLINE.discount AS LINE_DISCOUNT,
+	c_costcenter.name as requestBy,
+	POLINE.freightamt AS LINE_FREIGHT_AMOUNT,
+	w.name as namewarehouse,
+	POLINE.datepromised AS LINE_DATE_PROMISED,
+	C_ORDER.grandtotal AS TOTAL_ORDER_AMOUNT
+FROM
+C_BPARTNER_LOCATION
+left join C_LOCATION L on C_BPARTNER_LOCATION.C_LOCATION_ID = L.C_LOCATION_ID
+left join C_COUNTRY CO ON L.C_COUNTRY_ID = CO.C_COUNTRY_ID
+left join  C_REGION R on L.C_REGION_ID = R.C_REGION_ID,
+AD_USER right join C_ORDER on AD_USER.AD_USER_ID = C_ORDER.AD_USER_ID,
+C_BPARTNER,
+AD_ORGINFO,
+AD_CLIENT,
+C_UOM UOM,
+c_costcenter,
+M_PRODUCT P,
+AD_ORG,
+M_WAREHOUSE W,
+C_ORDERLINE POLINE,
+C_CURRENCY,
+M_PRICELIST,
+(SELECT VALUE, NAME FROM AD_REF_LIST_V WHERE AD_REFERENCE_ID = '151') DELIVERYRULE,
+(SELECT C_PAYMENTTERM.C_PAYMENTTERM_ID, COALESCE( C_PAYMENTTERM_TRL.NAME, C_PAYMENTTERM.NAME) AS TERM
+	FROM C_PAYMENTTERM LEFT JOIN C_PAYMENTTERM_TRL ON C_PAYMENTTERM.C_PAYMENTTERM_ID = C_PAYMENTTERM_TRL.C_PAYMENTTERM_ID) PAYMENTTERM,
+
+--(select ad_user.ad_user_id, ad_user.name, ad_user.email from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id where c_order.c_order_id ='204C506C678E471C92BF361CAB87D4E7') AS I_USER
+(select ad_user.ad_user_id, ad_user.name, ad_user.email
+	from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id
+		where c_order.c_order_id = $P{DOCUMENT_ID}) AS I_USER
+
+WHERE
+C_ORDER.C_BPARTNER_LOCATION_ID = C_BPARTNER_LOCATION.C_BPARTNER_LOCATION_ID
+AND C_ORDER.M_PRICELIST_ID = M_PRICELIST.M_PRICELIST_ID
+AND C_ORDER.C_BPARTNER_ID = C_BPARTNER.C_BPARTNER_ID
+AND AD_ORG.ad_org_id = AD_ORGINFO.ad_org_id
+AND AD_ORG.ad_org_id = (SELECT o.AD_ORG_ID FROM AD_ORG o JOIN AD_OrgType t USING (AD_ORGTYPE_ID)
+			WHERE AD_ISORGINCLUDED(C_ORDER.AD_ORG_ID, o.ad_org_id, C_ORDER.ad_client_id)<>-1
+			AND (t.IsLegalEntity='Y' OR t.IsAcctLegalEntity='Y'))
+AND C_ORDER.AD_CLIENT_ID = AD_CLIENT.AD_CLIENT_ID
+AND C_ORDER.DELIVERYRULE = DELIVERYRULE.VALUE
+AND C_ORDER.C_PAYMENTTERM_ID = PAYMENTTERM.C_PAYMENTTERM_ID
+AND C_CURRENCY.C_CURRENCY_ID=C_ORDER.C_CURRENCY_ID
+AND C_ORDER.C_ORDER_ID = POLINE.C_ORDER_ID
+AND POLINE.c_uom_id = UOM.c_uom_id
+AND POLINE.m_product_id = P.m_product_id
+AND C_ORDER.m_warehouse_id=W.m_warehouse_id
+AND C_ORDER.c_costcenter_id=c_costcenter.c_costcenter_id
+AND C_ORDER.createdby = I_USER.ad_user_id
+AND C_ORDER.C_ORDER_ID = $P{DOCUMENT_ID}
+--'8BEF5146D76E4B3CA313519E967BC75C'
+
+--AND C_ORDER.C_ORDER_ID = '3CFBD977FB5642D7B03CC5A9043DA92B'
+--Sample VOIDED document = '16A9AC47B08E469CACEF9907E364A73C'
+--sample Tool&Jig = '5BEB019EE44D4C64A42D04D699E76D0E'
+
+ORDER BY POLINE.line ASC]]>
+	</queryString>
+	<field name="created_by" class="java.lang.String"/>
+	<field name="user_email" class="java.lang.String"/>
+	<field name="vendor_name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="address2" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="url" class="java.lang.String"/>
+	<field name="header_description" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="deliverynotes" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="location" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="vendor_contact" class="java.lang.String"/>
+	<field name="vendor_contact_email" class="java.lang.String"/>
+	<field name="vendor_contact_phone" class="java.lang.String"/>
+	<field name="deliveryterm" class="java.lang.String"/>
+	<field name="paymentterm" class="java.lang.String"/>
+	<field name="currency_iso" class="java.lang.String"/>
+	<field name="istaxincluded" class="java.lang.String"/>
+	<field name="purchase_order_no" class="java.lang.String"/>
+	<field name="purchase_order_line" class="java.math.BigDecimal"/>
+	<field name="product_searchkey" class="java.lang.String"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="qty_ordered" class="java.math.BigDecimal"/>
+	<field name="uom_code" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="linedescription" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="price_actual" class="java.math.BigDecimal"/>
+	<field name="line_net_amount" class="java.math.BigDecimal"/>
+	<field name="line_discount" class="java.math.BigDecimal"/>
+	<field name="requestby" class="java.lang.String"/>
+	<field name="line_freight_amount" class="java.math.BigDecimal"/>
+	<field name="namewarehouse" class="java.lang.String"/>
+	<field name="line_date_promised" class="java.sql.Timestamp"/>
+	<field name="total_order_amount" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="217" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-4" x="18" y="52" width="69" height="13" uuid="eb2c6227-00d1-4a16-b4ef-82672133c5f8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[No. SP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" x="267" y="65" width="60" height="13" uuid="eb29b9fa-ecfb-4ef0-8822-6f61409df143"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Tgl. SP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-6" x="18" y="65" width="69" height="13" uuid="968425f5-e558-4fea-9450-1bfac88b7adf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Di Buat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="267" y="52" width="60" height="13" uuid="9df75e10-4395-44bd-80e4-b7d311cb2604"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" x="327" y="52" width="5" height="13" uuid="ee8abdbb-92c7-40a4-815d-ceb6b18a9084"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="87" y="64" width="7" height="13" uuid="904bb57b-02a5-49e9-96bc-533945fb70fd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-12" x="327" y="65" width="9" height="13" uuid="c5a43f87-590b-4280-9d45-52116b74ab66"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-13" x="87" y="52" width="7" height="13" uuid="e096397d-d37d-4db7-9e6b-ea234d51fc07"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="94" y="51" width="171" height="13" uuid="9c8717dc-84ee-4ccc-80d8-ea817db25491"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" x="333" y="65" width="207" height="13" uuid="9218a355-dacb-4e45-bb3b-fb0c5ec093d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateordered}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="94" y="64" width="171" height="13" uuid="81851a5c-a128-4f61-b8ff-7fae0dc96fd7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{created_by}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="333" y="52" width="207" height="13" uuid="e9a68ece-b618-4cd7-9df8-0a3559c33fe6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user_email}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-1" x="0" y="89" width="539" height="1" uuid="a3e7a6c8-56cf-48c9-b22b-3e5b60e4042c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-24" x="87" y="104" width="9" height="13" uuid="a29cce0e-43a2-4a97-9bb8-5c4f90f5c5f2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-25" x="87" y="92" width="9" height="13" uuid="84b82615-9409-400e-ac9c-1406e886dd1c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="87" y="116" width="9" height="13" uuid="1d067161-1c4a-457f-8a0d-c0820a876e74"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="17" y="116" width="71" height="13" uuid="2d851e46-3bbe-45a5-8cf7-45b7d47b342b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Telephon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="17" y="104" width="71" height="13" uuid="581bb254-a87a-4e59-9016-a473ad0998e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="0" y="92" width="87" height="13" uuid="79430c7e-b662-44b1-9a02-49bdad9f9c4e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Pemasok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-32" x="17" y="130" width="71" height="13" uuid="91e72fe6-277e-400a-8d1c-dcccce8fde81"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Attention]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-33" x="87" y="130" width="9" height="13" uuid="c2f1dd01-a4e3-44bf-984e-5ff45dd45c81"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="95" y="92" width="244" height="13" uuid="76ea92a3-2a83-4499-94a8-ca41e7baa3a7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="95" y="104" width="244" height="13" uuid="7196991a-d982-440c-9bf1-cb77769d2d86"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="95" y="116" width="240" height="13" uuid="ace4a578-e560-4743-a3b5-b812da9ebdbd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phonefax}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-36" x="291" y="161" width="74" height="14" uuid="c784a6a0-09a5-47e5-b920-3e8cadf2410d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Penerima]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-6" x="0" y="158" width="538" height="1" uuid="bf511fe1-d935-49dc-a8a8-3724ed8726cd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="95" y="173" width="192" height="13" uuid="7be93e4e-2f81-4759-be56-a4d60d72b369"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currency_iso}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="95" y="186" width="192" height="14" uuid="51669032-3e4f-4f4e-8d75-5ff7fcafab77"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentterm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-37" x="87" y="186" width="9" height="13" uuid="d30bed62-0d79-44ba-b78b-af0898e805e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" x="87" y="173" width="9" height="13" uuid="7cb0a694-10e5-4f22-9563-35bd4b6040e6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="17" y="186" width="70" height="13" uuid="caead450-bf26-47a0-9dbc-b46d823a2628"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Jenis SP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-44" x="17" y="173" width="70" height="13" uuid="d508dc32-cf23-4a98-890d-704be2613141"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Mata Uang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" x="0" y="160" width="287" height="13" uuid="4c609618-47c2-486a-8864-f4dfd4d182a6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Ketentuan]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-7" x="0" y="216" width="538" height="1" uuid="76e7969e-2175-4c12-8860-0618c4915489"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-3" x="96" y="201" width="191" height="13" uuid="e5a99a25-17af-4262-92f0-e89c706e0ca8"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deliverynotes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-4" x="95" y="130" width="240" height="13" uuid="ea171413-f6ab-48fe-8bdf-8d90d72976ca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_contact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-48" x="17" y="143" width="71" height="13" uuid="317b7441-f3e1-48c5-a0ce-56bc1e2eba8d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-49" x="87" y="143" width="9" height="13" uuid="710d5c67-851c-4891-95ef-aed0ba9d9ef4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-5" x="95" y="143" width="240" height="13" uuid="a09b75cd-b832-4c67-b84a-34babdfd7370"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_contact_email}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="351" y="91" width="185" height="62" uuid="e299a845-8ffc-4880-a1ec-afaa91a59e5f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-50" x="351" y="92" width="185" height="28" uuid="7902d49d-195d-4031-9d07-fa6930394428"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Vendor Acceptance
+( Cap/Tanda Tangan/Nama/Tanggal )]]></text>
+			</staticText>
+			<textField evaluationTime="Report" pattern="#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField-1" x="503" y="39" width="35" height="13" uuid="11ac1c29-d4bb-4192-815f-1a8295add3cd"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of "+ $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField-1" x="438" y="39" width="63" height="13" uuid="89f995e9-dcf0-4a69-8e14-aee3812c66ca"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-1" x="1" y="37" width="534" height="1" uuid="c1060fb4-9237-489c-8e8c-cfa660e21437"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-31" x="5" y="39" width="126" height="13" uuid="d49ce9e0-1637-4c49-a0a1-975cff351ca1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Pesanan Pembelian]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="53" y="7" width="230" height="14" uuid="e8a80f23-1ed7-47df-b219-1d72674edc09"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="txtStatusDRAFT-1" x="352" y="120" width="143" height="33" forecolor="#0000FF" uuid="bab7f85d-ff9a-4142-8602-16cdd1a9b9a5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="26" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{status}.compareTo("DR")==0) ? "DRAFT" : " ")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="txtStatusDRAFT-1" x="351" y="120" width="144" height="38" forecolor="#0000FF" uuid="7841bc3b-79cc-44b5-9d82-dfab586da05f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="26" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{status}.compareTo("OEZ_RELEASE")==0) ? "RELEASE" : " ")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-5" x="268" y="76" width="59" height="13" uuid="91ac551e-925d-48c3-9ecf-94f2ac87a703"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Request By]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="335" y="76" width="200" height="13" uuid="0bdfd62f-9616-4ebe-84e6-76ea5750603b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{requestby}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-12" x="327" y="76" width="9" height="13" uuid="b8e9770b-a63c-4f18-8fed-c7d10d4c75e6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="17" y="200" width="70" height="13" uuid="a9edd78e-5e2c-4910-bac4-4491a0bdd065"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Catatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-37" x="87" y="200" width="9" height="13" uuid="1a0483cf-eb42-4658-a578-000b65187680"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="53" y="21" width="230" height="14" uuid="4bdd4ee4-53ec-433c-8c37-0c47025222e0"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="305" y="175" width="230" height="14" uuid="ad18ada5-6970-41dc-b392-1914566b7526"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="305" y="189" width="230" height="14" uuid="59db44a3-4e8b-4e54-be61-f7e182bb1cec"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address2}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="3" y="-7" width="87" height="40" uuid="cd7520a8-01b1-46a0-bcf8-ca18778ab65e"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{organizationid})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-6" x="18" y="76" width="70" height="14" uuid="7365e336-1591-4027-9ed6-4b23f22211c9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Gudang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="87" y="76" width="7" height="13" uuid="23cf06fe-b5a9-4be6-8367-ed5f7c887aba"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="95" y="77" width="171" height="13" uuid="14a88686-9010-4633-84b2-117103df03b4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namewarehouse}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-15" x="3" y="5" width="25" height="13" uuid="3a4f1337-bf96-4e6f-a85d-edc90370ea89"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="29" y="5" width="274" height="13" uuid="c9574a4e-e3d4-4431-b17d-5150b44cc1f4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" x="305" y="5" width="35" height="13" uuid="e60285a0-620c-44b4-ba7c-dcba35e3d757"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="339" y="5" width="48" height="13" uuid="282ebff5-11db-409b-8004-289abac338a1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Satuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-19" x="391" y="5" width="72" height="13" uuid="847c683a-f47f-4c6e-8ec8-036169d46dd2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Harga Satuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" x="465" y="6" width="72" height="13" uuid="883a0f66-acae-48e9-9a67-ac6c1ecb451b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Jumlah Harga]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-5" x="0" y="3" width="538" height="1" uuid="9d986377-8bb3-42c8-a47e-2b8ee6b20f62"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-8" x="0" y="20" width="538" height="1" uuid="a400607e-ed13-4ee4-9c78-197a0db5c591"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="0" y="5" width="1" height="16" uuid="c781b569-d815-4563-983f-365f010354ec"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="538" y="5" width="1" height="15" uuid="1c961254-c075-44b3-8d44-700cbd520b64"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="303" y="3" width="1" height="17" uuid="5f9fd655-3d2a-4f4f-a3d7-c5aa62a69813"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="390" y="4" width="1" height="16" uuid="5f5199aa-2d5a-44f9-9ee1-d3db250afe06"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="463" y="5" width="1" height="15" uuid="dfc80436-4239-4f14-977a-dd5703f7b24e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="26" y="3" width="1" height="17" uuid="8df4f127-0919-4c0a-951c-03a078e0f634"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="340" y="3" width="1" height="15" uuid="5f8dd38a-f0c2-4245-b923-893f55356ace"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Prevent">
+			<textField pattern="###0" isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="0" width="26" height="13" uuid="36cebdab-94b5-414b-b177-d22274e0eb9d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_line}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="28" y="1" width="278" height="13" uuid="b1fb06c0-f47c-4651-9372-ab4f57f956c0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true">
+				<reportElement key="textField" x="465" y="0" width="72" height="13" uuid="7510769a-9b78-41c3-83c6-eb7acf3864c8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line_net_amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-12" x="3" y="13" width="536" height="1" uuid="781a54e8-d2f1-4bf1-a83d-cefe5d00785c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="0" y="0" width="1" height="14" uuid="9174f3b7-2fc0-486a-a884-bec8185d2fcf"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="303" y="0" width="1" height="13" uuid="1092915d-9f01-4d47-866e-68ba750b2546"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" x="391" y="0" width="72" height="13" uuid="c34e3500-1fa9-4297-b500-4a22e45dc882"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price_actual}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-1" x="538" y="-1" width="1" height="13" uuid="651f86da-2f9f-41dc-81e9-2c5f32601e6b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="464" y="2" width="1" height="11" uuid="7f7b371e-0bee-4291-8504-31ff4fad813e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="26" y="-2" width="1" height="14" uuid="599ff8ef-8cb8-4944-9b02-c0562edeefe5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="340" y="1" width="1" height="12" uuid="c80b7849-dc8e-4d27-84a9-a560d8673b6d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="390" y="1" width="1" height="12" uuid="79196870-3598-4dcd-aaa6-c2767cb24c7e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="339" y="0" width="50" height="13" uuid="b5289a35-a6fc-47fe-b92a-d85ff24be9c0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="94" y="1" width="209" height="13" uuid="338614cb-d98f-4a00-a7e1-f71837e8690b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{linedescription}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true">
+				<reportElement key="textField" x="303" y="0" width="36" height="12" uuid="29db94e0-0ff5-45d6-a9e8-79e8cec983d2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty_ordered}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="103">
+			<textField pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true">
+				<reportElement key="textField" x="432" y="1" width="105" height="15" uuid="829ef352-65e2-4d70-ba58-8f1cddead62b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_order_amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-14" x="-1" y="15" width="538" height="1" uuid="e9683fe9-e583-42af-8c65-f343b2f90509"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-14" x="214" y="1" width="154" height="15" uuid="826dfb88-187f-4254-8a03-33807e90ef42"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-2" x="367" y="1" width="64" height="15" uuid="cf7993ae-9820-4577-bdc0-ff8635b4f774"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currency_iso}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-13" x="-1" y="1" width="538" height="1" uuid="da5494fd-84ad-4bf4-82a7-00f2337f7816"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-16" x="307" y="71" width="83" height="15" uuid="12bdd055-5c32-4904-8370-2daaa2835317"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Direktur /Wadir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="168" y="16" width="83" height="15" uuid="b097bc82-8ccf-4be0-b5e9-a5ff1679c874"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Diperiksa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="441" y="16" width="83" height="15" uuid="9cf88d5a-dff3-456d-bb8a-b7af4332befb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Di Terima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="137" y="72" width="139" height="15" uuid="a0fed166-05ee-4255-9280-a4db56f620c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ Controller]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="441" y="71" width="83" height="15" uuid="d49769fb-bd42-4664-b7f1-8231f178d62d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Gudang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="-2" y="72" width="128" height="15" uuid="81a33d29-5db8-421d-853e-f9e841f4364c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Ka Instalasi Farmasi / Logistik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="17" y="17" width="83" height="15" uuid="02c1ffed-0760-4c8e-85e7-e0b5ba8fc4b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Di Ketahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="311" y="16" width="76" height="15" uuid="0e4b346a-dd8a-4389-a7a2-63e7370c1e7c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Di Setujui]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="0" y="17" width="1" height="71" uuid="07878f33-706e-4f5f-997a-93050e5443a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-14" x="2" y="87" width="538" height="1" uuid="4896e924-f74a-4e0a-a7e5-0f658f8c1264"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="129" y="17" width="1" height="71" uuid="2f2eef4a-c602-4cda-a54f-19b32667a366"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="279" y="17" width="1" height="70" uuid="12ae7c2b-ba11-4a9c-9022-d80060691d33"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="413" y="17" width="1" height="71" uuid="d4004af3-9a9f-4ffb-bf89-de6292815d42"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="538" y="17" width="1" height="71" uuid="323e0d03-d0eb-466d-a99f-8ea3f8884d6d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="0" y="1" width="1" height="14" uuid="02697469-2753-4e83-a426-e5d59cbf5b51"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-1" x="538" y="1" width="1" height="14" uuid="bc7e432d-080f-4c42-9590-3633d2315663"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

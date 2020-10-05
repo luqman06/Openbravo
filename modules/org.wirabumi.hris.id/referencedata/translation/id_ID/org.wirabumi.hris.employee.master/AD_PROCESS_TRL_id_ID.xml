@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="03E56616272845EA9F662AD983F1595F" trl="N">
+    <value column="Name" isTrl="N" original="Generate Employee Closure">Generate Employee Closure</value>
+    <value column="Description" isTrl="N" original="Generate Employee Closure">Generate Employee Closure</value>
+    <value column="Help" isTrl="N" original="update employee hierarchy based on job title. this process should be run after employee transfer completed.">update employee hierarchy based on job title. this process should be run after employee transfer completed.</value>
+  </row>
+  <row id="07724A96E8344288B8C61A94CCBFFFC9" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Card">Riwayat Hidup Karywan</value>
+    <value column="Description" isTrl="N" original="Employee Card">Employee Card</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0A218C05221F4AD8AF530FAC0548FB09" trl="N">
+    <value column="Name" isTrl="N" original="Create Employee">Create Employee</value>
+    <value column="Description" isTrl="N" original="Create Employee">Create Employee</value>
+    <value column="Help" isTrl="N" original="Create employee record in employee window based on this recruitment batch">Create employee record in employee window based on this recruitment batch</value>
+  </row>
+  <row id="1511B5CDC40B4F7CBD99EAB57F53AD5E" trl="N">
+    <value column="Name" isTrl="N" original="Update Contact Data">Update Contact Data</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="151AE91995A24463A7861B81CB403F43" trl="N">
+    <value column="Name" isTrl="N" original="Required Competency Report by Job Title by Personel">Required Competency Report by Job Title by Personel</value>
+    <value column="Description" isTrl="N" original="Required Competency Report by Job Title by Personel">Required Competency Report by Job Title by Personel</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="29954ADED42947329B05E01379B0C8A2" trl="N">
+    <value column="Name" isTrl="N" original="Required Training Report by Job Title by Personel">Required Training Report by Job Title by Personel</value>
+    <value column="Description" isTrl="N" original="Required Training Report by Job Title by Personel">Required Training Report by Job Title by Personel</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2CFFB51D2FB04D85B18AAD4C1741FED3" trl="N">
+    <value column="Name" isTrl="N" original="ARCI Matrix Report">ARCI Matrix Report</value>
+    <value column="Description" isTrl="N" original="Print ARCI Matrix">Print ARCI Matrix</value>
+    <value column="Help" isTrl="N" original="Display ARCI relationship between job title.">Display ARCI relationship between job title.</value>
+  </row>
+  <row id="34C1DF029D234BA29FC8DBCBC4AC4B28" trl="N">
+    <value column="Name" isTrl="N" original="Generate Measurement">Generate Measurement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Generate Kpi Measurment By Job Title On Employee">Generate Kpi Measurment By Job Title On Employee</value>
+  </row>
+  <row id="4770A9FF2E724DDD8B59CC914A894DB7" trl="N">
+    <value column="Name" isTrl="N" original="Menghitung Masa Kerja Jabatan">Menghitung Masa Kerja Jabatan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4CD83C2A2470454DA1762133E0744572" trl="N">
+    <value column="Name" isTrl="N" original="Generate KPI Measure">Generate KPI Measure</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="53A720D166714A208F2B43060E47A049" trl="N">
+    <value column="Name" isTrl="N" original="Create Resignation Letter">Create Resignation Letter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="547E4F03BBA5495EAF63CA3B31023C48" trl="N">
+    <value column="Name" isTrl="N" original="Create Contact Data">Create Contact Data</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="556420A9A9F746E887227511AF3079AA" trl="N">
+    <value column="Name" isTrl="N" original="Create History Training">Create History Training</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5895BF18709A4268A218C519EF4451F3" trl="N">
+    <value column="Name" isTrl="N" original="ARCI Matrix Activity">ARCI Matrix Activity</value>
+    <value column="Description" isTrl="N" original="ARCI Matrix Activity">ARCI Matrix Activity</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="62525FB7D809411C98C7AE053BBC3676" trl="N">
+    <value column="Name" isTrl="N" original="Crete Dependency Member">Crete Dependency Member</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6327905FF65D4D42A3A667B8ADE5380D" trl="N">
+    <value column="Name" isTrl="N" original="Competency By Employee">Competency By Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7D1FD4B0FCBB4CC698DD502C8BB4DC4F" trl="N">
+    <value column="Name" isTrl="Y" original="Import Employee Candidate">Import Data Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8FF5F2A36A9443AFB97DE34AC5E4E9DC" trl="N">
+    <value column="Name" isTrl="N" original="Update Usia dan Masa Kerja Karyawan">Update Usia dan Masa Kerja Karyawan</value>
+    <value column="Description" isTrl="N" original="Update Usia dan Masa Kerja Karyawan">Update Usia dan Masa Kerja Karyawan</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9E673FD989FB49779E7E9B3DFB58040D" trl="N">
+    <value column="Name" isTrl="N" original="Create Punishment">Create Punishment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="ABA6FABCB88F4CD4976DD34BBAA3F226" trl="N">
+    <value column="Name" isTrl="N" original="Create First Contract">Create First Contract</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BC22C0CB91014A6CB8AEA65E2460F003" trl="N">
+    <value column="Name" isTrl="N" original="Create Retirement Letter">Create Retirement Letter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C384DFB29934414B84ED4204CE8B8F10" trl="N">
+    <value column="Name" isTrl="N" original="KPI Approval">KPI Approval</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CCA562AC11004AE0AA35D2CA54CE8B3A" trl="N">
+    <value column="Name" isTrl="N" original="Create Employee Transfer Leter">Create Employee Transfer Leter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E2A09C3C7EE8431DAD0FBB6818D91DF4" trl="N">
+    <value column="Name" isTrl="N" original="Set Applicable Contract">Set Applicable Contract</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

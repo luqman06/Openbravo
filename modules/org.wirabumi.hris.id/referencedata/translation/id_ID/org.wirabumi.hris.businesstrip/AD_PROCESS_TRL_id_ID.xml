@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="6EF21694F0BE469F85C82B1D4862A6CE" trl="N">
+    <value column="Name" isTrl="N" original="Businesstrip Report">Businesstrip Report</value>
+    <value column="Description" isTrl="N" original="Businesstrip Report">Businesstrip Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BDE2D1DC9CA3482095B267CF447565D9" trl="N">
+    <value column="Name" isTrl="N" original="Post Business Trip">Post Business Trip</value>
+    <value column="Description" isTrl="N" original="Post Business Trip">Post Business Trip</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

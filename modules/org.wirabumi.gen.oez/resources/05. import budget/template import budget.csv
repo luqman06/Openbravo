@@ -1,0 +1,4 @@
+"Sequence Number","Price","Currency Identification","Quantity","Amount","Period Identification","Elementvalueident","Acctschemaident","Product Identification","Product Category ID","Partner Identification","BP Group Identitification","Organization Trx Identification","Activity Identification","Campaign Identification","Project Identification","Sales Region Identification","Description"
+10,,"USD",10,100,"01-01-2013",6290,"F&B International Group US/A/US Dollar","US/0002","Alcoholic","EA","US-C1/0001","Customer - Tier 1",,,,,
+10,,"USD",20,200,"01-02-2012",6290,"F&B International Group US/A/US Dollar","US/0002","Alcoholic","EA","US-C1/0001","Customer - Tier 1",,,,,
+20,,"USD",30,300,"01-03-2012",6290,"F&B International Group US/A/US Dollar","US/0002","Alcoholic","EA","US-C1/0001","Customer - Tier 1",,,,,

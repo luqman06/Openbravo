@@ -1,0 +1,4102 @@
+<?xml version="1.0" encoding="UTF-8"?><ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DataImportFormat id="0DB023818E334C47896D4638B77710A2" identifier="Shipment">
+    <id>0DB023818E334C47896D4638B77710A2</id>
+    <active>true</active>
+    <name>Shipment</name>
+    <description xsi:nil="true"/>
+    <table id="A344D67A1576412F8E0A2AFC1DBA919F" entity-name="ADTable" identifier="OEZ_I_Inout"/>
+    <format>C</format>
+    <processNow>false</processNow>
+  </DataImportFormat>
+  <DataImportFormat id="71A236DD847B41A48D73E4C60457FB69" identifier="Work Effort">
+    <id>71A236DD847B41A48D73E4C60457FB69</id>
+    <active>true</active>
+    <name>Work Effort</name>
+    <description xsi:nil="true"/>
+    <table id="1964B29FE24D4DAC8438F431852ECC5A" entity-name="ADTable" identifier="OEZ_I_Workeffort"/>
+    <format>C</format>
+    <processNow>false</processNow>
+  </DataImportFormat>
+  <DataImportFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" identifier="Inventory">
+    <id>7E713A5D45FB43FD9DD9A171AD6066B8</id>
+    <active>true</active>
+    <name>Inventory</name>
+    <description xsi:nil="true"/>
+    <table id="0F8C33F4BFEA4B1D82F08CB3D176457B" entity-name="ADTable" identifier="oez_i_inventory"/>
+    <format>S</format>
+    <processNow>false</processNow>
+  </DataImportFormat>
+  <DataImportFormat id="DC310927F09C480183EABEE3C25FDD9D" identifier="Order">
+    <id>DC310927F09C480183EABEE3C25FDD9D</id>
+    <active>true</active>
+    <name>Order</name>
+    <description xsi:nil="true"/>
+    <table id="591" entity-name="ADTable" identifier="I_Order"/>
+    <format>C</format>
+    <processNow>false</processNow>
+  </DataImportFormat>
+  <DataImportFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" identifier="Invoice">
+    <id>E516BC1FA14D45AC93FDA4F2AF2A77F3</id>
+    <active>true</active>
+    <name>Invoice</name>
+    <description xsi:nil="true"/>
+    <table id="598" entity-name="ADTable" identifier="I_Invoice"/>
+    <format>S</format>
+    <processNow>false</processNow>
+  </DataImportFormat>
+  <DataImportFormatRow id="014D257A93A14169B929D310C33E5FDF" identifier="Work Requirement DocNo">
+    <id>014D257A93A14169B929D310C33E5FDF</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>50</sequenceNumber>
+    <name>Work Requirement DocNo</name>
+    <column id="E5DC7364527944A988B7124414CE7866" entity-name="ADColumn" identifier="Wrdocno"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="0669DAB26AF14979AC4B483A25E9CFD4" identifier="Movement Type">
+    <id>0669DAB26AF14979AC4B483A25E9CFD4</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>55</sequenceNumber>
+    <name>Movement Type</name>
+    <column id="29D88F52CAC244E799710CBFCC83B1F6" entity-name="ADColumn" identifier="Movementtype"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="0754CB704219493BA5904AB50EA3329F" identifier="Country">
+    <id>0754CB704219493BA5904AB50EA3329F</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>120</sequenceNumber>
+    <name>Country</name>
+    <column id="4092DDA8998240A7B29F6710876DE522" entity-name="ADColumn" identifier="Countryname"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="08DDDAD3746440B4B71610BB7CD27EE4" identifier="Starting Time">
+    <id>08DDDAD3746440B4B71610BB7CD27EE4</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>20</sequenceNumber>
+    <name>Starting Time</name>
+    <column id="8BD47C45BF7A488D8F2B437EE647660C" entity-name="ADColumn" identifier="Startingtime"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="0A41071CE37F412FA5A0926A21DEE810" identifier="Work Requirement SeqNo">
+    <id>0A41071CE37F412FA5A0926A21DEE810</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>60</sequenceNumber>
+    <name>Work Requirement SeqNo</name>
+    <column id="913FFC109C8B45A0B1E87E772545FE32" entity-name="ADColumn" identifier="Wrseqno"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="0BA81E727A6E41088F329160AFBD3FB6" identifier="Product Key">
+    <id>0BA81E727A6E41088F329160AFBD3FB6</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>150</sequenceNumber>
+    <name>Product Key</name>
+    <column id="39B3AB17915149BAA2BCD9BDC3933495" entity-name="ADColumn" identifier="Productkey"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="0BB5DC79D1934AA0B19DB2927007D8E4" identifier="Currency Code">
+    <id>0BB5DC79D1934AA0B19DB2927007D8E4</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>120</sequenceNumber>
+    <name>Currency Code</name>
+    <column id="A87BCE318079485CAAD7226DDC61BEFE" entity-name="ADColumn" identifier="em_oez_currencyiso"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="1109C9C10EEC4BCF992804CC2516761A" identifier="Movement Date">
+    <id>1109C9C10EEC4BCF992804CC2516761A</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>50</sequenceNumber>
+    <name>Movement Date</name>
+    <column id="6D1309FC31D34826B88EB9C948030970" entity-name="ADColumn" identifier="Movementdate"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="12654279195448B9B1C3BDB8D64A5102" identifier="Storage Search Key">
+    <id>12654279195448B9B1C3BDB8D64A5102</id>
+    <active>true</active>
+    <importFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" entity-name="DataImportFormat" identifier="Inventory"/>
+    <sequenceNumber>60</sequenceNumber>
+    <name>Storage Search Key</name>
+    <column id="5F9064A8D91D46CBB3F3EF2D031BCD63" entity-name="ADColumn" identifier="Storagebinvalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="2006CCA33BF94303BA64A54AAE5CBE22" identifier="DocumentNo">
+    <id>2006CCA33BF94303BA64A54AAE5CBE22</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>40</sequenceNumber>
+    <name>DocumentNo</name>
+    <column id="D823133B2C534DADB23079008061ED3D" entity-name="ADColumn" identifier="Documentno"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="2033F091082B4D1581DF46D8BC2BCECC" identifier="Warehouse">
+    <id>2033F091082B4D1581DF46D8BC2BCECC</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>70</sequenceNumber>
+    <name>Warehouse</name>
+    <column id="A35E29B07E4A4DF399C6CE8D6A0591A9" entity-name="ADColumn" identifier="EM_Oez_Warehouse"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="2BAF2E4C29654494B1E44D4237775868" identifier="Document Number">
+    <id>2BAF2E4C29654494B1E44D4237775868</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>25</sequenceNumber>
+    <name>Document Number</name>
+    <column id="8999" entity-name="ADColumn" identifier="DocumentNo"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="319A45491F13473C90A3D19BB552E7F2" identifier="Order Date">
+    <id>319A45491F13473C90A3D19BB552E7F2</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>80</sequenceNumber>
+    <name>Order Date</name>
+    <column id="802397" entity-name="ADColumn" identifier="DateOrdered"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="391B387C88594537AAC7B87DDBB9C8A1" identifier="Warehouse">
+    <id>391B387C88594537AAC7B87DDBB9C8A1</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>60</sequenceNumber>
+    <name>Warehouse</name>
+    <column id="595279E88AB44CDDA894DDB73733E44D" entity-name="ADColumn" identifier="Warehousevalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="3CE7545BB520448A8D96EE401D816D64" identifier="Description">
+    <id>3CE7545BB520448A8D96EE401D816D64</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>30</sequenceNumber>
+    <name>Description</name>
+    <column id="9015" entity-name="ADColumn" identifier="Description"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="40B03A92B1414E56802504AFB012E95B" identifier="Process QTY">
+    <id>40B03A92B1414E56802504AFB012E95B</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>90</sequenceNumber>
+    <name>Process QTY</name>
+    <column id="1B8AC80623D940BAA26BD7878E52A4B8" entity-name="ADColumn" identifier="Processqty"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="413CA9CFEC13433ABEDDD249BB53C975" identifier="Payment Method">
+    <id>413CA9CFEC13433ABEDDD249BB53C975</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>130</sequenceNumber>
+    <name>Payment Method</name>
+    <column id="B1800ED5E28C4F67A47AD5E33621796B" entity-name="ADColumn" identifier="EM_Oez_Paymentmethodvalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="414F6E03D7474D0E9093C105E9FFABA5" identifier="Document Type">
+    <id>414F6E03D7474D0E9093C105E9FFABA5</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>10</sequenceNumber>
+    <name>Document Type</name>
+    <column id="8B758A50CEA64B788CE798779C57A5C1" entity-name="ADColumn" identifier="Doctypename"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="46271DF879394F09AB48ECADF37E9599" identifier="Storage Bin">
+    <id>46271DF879394F09AB48ECADF37E9599</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>100</sequenceNumber>
+    <name>Storage Bin</name>
+    <column id="092BC82E2C44415CA03C474B96B2A380" entity-name="ADColumn" identifier="Storagebinvalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="564FEDB5A69F497E88DDF79C0A554C23" identifier="Document Type">
+    <id>564FEDB5A69F497E88DDF79C0A554C23</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>10</sequenceNumber>
+    <name>Document Type</name>
+    <column id="9036" entity-name="ADColumn" identifier="DocTypeName"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="56FF3E1FC5184E3AA5047D5FDC280A3F" identifier="Invoice Date">
+    <id>56FF3E1FC5184E3AA5047D5FDC280A3F</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>50</sequenceNumber>
+    <name>Invoice Date</name>
+    <column id="0ABFE0BEE0E848DC900554003993721B" entity-name="ADColumn" identifier="EM_Oez_Dateinvoiced"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>D</dataType>
+    <dataFormat>dd-MM-yyyy</dataFormat>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="576AC13E3A6447B3B9F25339A776AD35" identifier="Region">
+    <id>576AC13E3A6447B3B9F25339A776AD35</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>110</sequenceNumber>
+    <name>Region</name>
+    <column id="4B23F208D3CA44E7AA494A712249F7EA" entity-name="ADColumn" identifier="Regionname"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="5A47F2EC26DA4E588498363080086C78" identifier="Unit Price">
+    <id>5A47F2EC26DA4E588498363080086C78</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>85</sequenceNumber>
+    <name>Unit Price</name>
+    <column id="9200" entity-name="ADColumn" identifier="PriceActual"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="5F80D069AC174B459FEC2475F38B3470" identifier="Qty">
+    <id>5F80D069AC174B459FEC2475F38B3470</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>90</sequenceNumber>
+    <name>Qty</name>
+    <column id="1EAC10FB2BDA46F8B42447EAA0903CC5" entity-name="ADColumn" identifier="Movementqty"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="6169F68D453B4189B04875F0EF59EFDC" identifier="Country">
+    <id>6169F68D453B4189B04875F0EF59EFDC</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>110</sequenceNumber>
+    <name>Country</name>
+    <column id="9417" entity-name="ADColumn" identifier="CountryCode"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="62B5694BEE1A46C79431C490CB24BA67" identifier="Sales Transaction">
+    <id>62B5694BEE1A46C79431C490CB24BA67</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>30</sequenceNumber>
+    <name>Sales Transaction</name>
+    <column id="CF864C6826864C67A1D4E58CDAA02304" entity-name="ADColumn" identifier="Issotrx"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="63458C739ABD41D99CC7109AA2CF4554" identifier="Sales Representative">
+    <id>63458C739ABD41D99CC7109AA2CF4554</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>40</sequenceNumber>
+    <name>Sales Representative</name>
+    <column id="16CBDD08C106479C8EFD445DDA2FE28F" entity-name="ADColumn" identifier="EM_Oez_Salesrep"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="67A9DF8F32384FF9AAFA46C7023421EE" identifier="Close Phase">
+    <id>67A9DF8F32384FF9AAFA46C7023421EE</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>140</sequenceNumber>
+    <name>Close Phase</name>
+    <column id="61D8862DE1B748EDB542F9033219062B" entity-name="ADColumn" identifier="Closephase"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="681F0C3E3A3D473C9D35AB4984F9A024" identifier="Name">
+    <id>681F0C3E3A3D473C9D35AB4984F9A024</id>
+    <active>true</active>
+    <importFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" entity-name="DataImportFormat" identifier="Inventory"/>
+    <sequenceNumber>20</sequenceNumber>
+    <name>Name</name>
+    <column id="697D9DD7254D490483FDE262D2F30001" entity-name="ADColumn" identifier="Name"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="72129B63356C4C948E4CC1E7FBA0F1D1" identifier="Sales Transaction">
+    <id>72129B63356C4C948E4CC1E7FBA0F1D1</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>20</sequenceNumber>
+    <name>Sales Transaction</name>
+    <column id="9040" entity-name="ADColumn" identifier="IsSOTrx"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="744B7BE3CBCC4AD78E2CE395C4EBE192" identifier="Document Number">
+    <id>744B7BE3CBCC4AD78E2CE395C4EBE192</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>20</sequenceNumber>
+    <name>Document Number</name>
+    <column id="681BB6A21D19409EBC832E201C8C08EA" entity-name="ADColumn" identifier="Documentno"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="780268DFB209408893983F5BAB2653C8" identifier="Cost Center DocNo">
+    <id>780268DFB209408893983F5BAB2653C8</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>110</sequenceNumber>
+    <name>Cost Center DocNo</name>
+    <column id="620AFB611BC747E0B82BEAF82EFFBDC7" entity-name="ADColumn" identifier="Costcenterdocno"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="7B53DD6F61A04AC686615065F5FFD806" identifier="Order Qty">
+    <id>7B53DD6F61A04AC686615065F5FFD806</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>120</sequenceNumber>
+    <name>Order Qty</name>
+    <column id="9028" entity-name="ADColumn" identifier="QtyOrdered"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="7BCDB350490E4A5D9562589FB685C19C" identifier="Sales Representative">
+    <id>7BCDB350490E4A5D9562589FB685C19C</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>90</sequenceNumber>
+    <name>Sales Representative</name>
+    <column id="8292E252682A4C7E82CDF37E9463A8C2" entity-name="ADColumn" identifier="EM_Oez_Salesrep"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="7EC781DF524740C986B8CFB11B7D124F" identifier="Cost Center Use">
+    <id>7EC781DF524740C986B8CFB11B7D124F</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>120</sequenceNumber>
+    <name>Cost Center Use</name>
+    <column id="58BF48A9939644489874DCE384186D41" entity-name="ADColumn" identifier="Costcenteruse"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="82C613D98A20418AABF6A30C72FADA2C" identifier="Product">
+    <id>82C613D98A20418AABF6A30C72FADA2C</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>80</sequenceNumber>
+    <name>Product</name>
+    <column id="1B36112FE4024C73BC5FEB3410583DDA" entity-name="ADColumn" identifier="Productvalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="84D7F75249224DB784F110282132AC11" identifier="Outsourced">
+    <id>84D7F75249224DB784F110282132AC11</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>130</sequenceNumber>
+    <name>Outsourced</name>
+    <column id="1CE27DBEB2DB434EBB298400CF3C5DA2" entity-name="ADColumn" identifier="Oursourced"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="8A57FBDE8B0949CD9DE1203C0999587C" identifier="Qty">
+    <id>8A57FBDE8B0949CD9DE1203C0999587C</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>170</sequenceNumber>
+    <name>Qty</name>
+    <column id="32C4DF5719DF4DD29C4186937B44AE7D" entity-name="ADColumn" identifier="Quantity"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="8AD41982E36A4A929020A253DE4AE451" identifier="Cost Center Key">
+    <id>8AD41982E36A4A929020A253DE4AE451</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>100</sequenceNumber>
+    <name>Cost Center Key</name>
+    <column id="F9796592B1F248F29B07610E430FBF63" entity-name="ADColumn" identifier="Costcenterkey"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="938EB821B2914DD0B18F8F5C51223C3D" identifier="Description">
+    <id>938EB821B2914DD0B18F8F5C51223C3D</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>40</sequenceNumber>
+    <name>Description</name>
+    <column id="9222" entity-name="ADColumn" identifier="Description"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="9644AD535E5F460B83A676CE3B380345" identifier="Product Reject QTY">
+    <id>9644AD535E5F460B83A676CE3B380345</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>180</sequenceNumber>
+    <name>Product Reject QTY</name>
+    <column id="AA65FD53544F4A3FB2D77F0EB5EDFB9C" entity-name="ADColumn" identifier="productRejectQty"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="988DDF1D1B1045F28F285FB8BAEC6D58" identifier="Movement Date">
+    <id>988DDF1D1B1045F28F285FB8BAEC6D58</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>10</sequenceNumber>
+    <name>Movement Date</name>
+    <column id="0FF00ED497BC438289B73BF19AFBEEC9" entity-name="ADColumn" identifier="Movementdate"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="9EAD283DE03C4461B5EA82A39D370BDC" identifier="Date Promised">
+    <id>9EAD283DE03C4461B5EA82A39D370BDC</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>90</sequenceNumber>
+    <name>Date Promised</name>
+    <column id="802399" entity-name="ADColumn" identifier="DatePromised"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="AD827FA6721A46F89E9D8CAD06FC717C" identifier="Description">
+    <id>AD827FA6721A46F89E9D8CAD06FC717C</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>40</sequenceNumber>
+    <name>Description</name>
+    <column id="7367CD71B8AB48E38460866E86C9C2BC" entity-name="ADColumn" identifier="Description"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="ADDC6BA564F8412E9B044A52C1B87DD5" identifier="Business Partner">
+    <id>ADDC6BA564F8412E9B044A52C1B87DD5</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>60</sequenceNumber>
+    <name>Business Partner</name>
+    <column id="9192" entity-name="ADColumn" identifier="BPartnerValue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="AF4F533B627442BE87725455CC328C1D" identifier="QTY">
+    <id>AF4F533B627442BE87725455CC328C1D</id>
+    <active>true</active>
+    <importFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" entity-name="DataImportFormat" identifier="Inventory"/>
+    <sequenceNumber>70</sequenceNumber>
+    <name>QTY</name>
+    <column id="6CE1A58E652B43DDAF0789DB69A23E8F" entity-name="ADColumn" identifier="Movementqty"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="B2CBCD95245440F089D82B41FFD02B7E" identifier="Qty">
+    <id>B2CBCD95245440F089D82B41FFD02B7E</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>80</sequenceNumber>
+    <name>Qty</name>
+    <column id="9177" entity-name="ADColumn" identifier="QtyOrdered"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="B86ADDBEBB4B4478A676CDE6FF3F1DCD" identifier="Logistic">
+    <id>B86ADDBEBB4B4478A676CDE6FF3F1DCD</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>35</sequenceNumber>
+    <name>Logistic</name>
+    <column id="5A9B39DBC7984530B97C715135E1516D" entity-name="ADColumn" identifier="Islogistic"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="BB7F3E2DC0454BB78C8D2BF353A1CED6" identifier="Document Type">
+    <id>BB7F3E2DC0454BB78C8D2BF353A1CED6</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>10</sequenceNumber>
+    <name>Document Type</name>
+    <column id="9219" entity-name="ADColumn" identifier="DocTypeName"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="BDA904C786A7499A98C644ABE54575B9" identifier="Business Partner">
+    <id>BDA904C786A7499A98C644ABE54575B9</id>
+    <active>true</active>
+    <importFormat id="0DB023818E334C47896D4638B77710A2" entity-name="DataImportFormat" identifier="Shipment"/>
+    <sequenceNumber>70</sequenceNumber>
+    <name>Business Partner</name>
+    <column id="E3635518DC5443E280E50041B00F2229" entity-name="ADColumn" identifier="Bpartnervalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="D0E9114FA6194A9E841222EFC730CD40" identifier="Rejected QTY">
+    <id>D0E9114FA6194A9E841222EFC730CD40</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>80</sequenceNumber>
+    <name>Rejected QTY</name>
+    <column id="F3B1B96DF36042C28665CC2520B83E7C" entity-name="ADColumn" identifier="Rejectedqty"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="D1964A0B85B74DF595755E32D9325E53" identifier="Region">
+    <id>D1964A0B85B74DF595755E32D9325E53</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>100</sequenceNumber>
+    <name>Region</name>
+    <column id="9185" entity-name="ADColumn" identifier="RegionName"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="D2EAF19858EF4ECBB099AB81B31C5E7E" identifier="Description">
+    <id>D2EAF19858EF4ECBB099AB81B31C5E7E</id>
+    <active>true</active>
+    <importFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" entity-name="DataImportFormat" identifier="Inventory"/>
+    <sequenceNumber>40</sequenceNumber>
+    <name>Description</name>
+    <column id="C8C6B96C10DD41459B005E9CBC58861A" entity-name="ADColumn" identifier="Description"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="D6AF1DE76DF8462686543285F5DCE971" identifier="Product Search Key">
+    <id>D6AF1DE76DF8462686543285F5DCE971</id>
+    <active>true</active>
+    <importFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" entity-name="DataImportFormat" identifier="Inventory"/>
+    <sequenceNumber>50</sequenceNumber>
+    <name>Product Search Key</name>
+    <column id="8C8AC29948B648A199F3AECE2F75A3B1" entity-name="ADColumn" identifier="Productvalue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="DF11AA17823744C4A9F4EA2E6FE5826F" identifier="Business Partner Key">
+    <id>DF11AA17823744C4A9F4EA2E6FE5826F</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>100</sequenceNumber>
+    <name>Business Partner Key</name>
+    <column id="8994" entity-name="ADColumn" identifier="BPartnerValue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="E42704BC6D864870B88AC73A54F0A944" identifier="Product Key">
+    <id>E42704BC6D864870B88AC73A54F0A944</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>70</sequenceNumber>
+    <name>Product Key</name>
+    <column id="9178" entity-name="ADColumn" identifier="ProductValue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="E6B97BD1686B4ED586FF3CA54A52087A" identifier="Sales Transaction">
+    <id>E6B97BD1686B4ED586FF3CA54A52087A</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>20</sequenceNumber>
+    <name>Sales Transaction</name>
+    <column id="9202" entity-name="ADColumn" identifier="IsSOTrx"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="E7F8722856674DED99C9C3BA9997242E" identifier="Product Key">
+    <id>E7F8722856674DED99C9C3BA9997242E</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>110</sequenceNumber>
+    <name>Product Key</name>
+    <column id="9037" entity-name="ADColumn" identifier="ProductValue"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="EA94FA04FD17424F9C7D27E65834A88B" identifier="Ending Time">
+    <id>EA94FA04FD17424F9C7D27E65834A88B</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>30</sequenceNumber>
+    <name>Ending Time</name>
+    <column id="471AF038464243C5AA68774829C4708C" entity-name="ADColumn" identifier="Endingtime"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="EEA321E0DB4B416D9B41EF98508426FE" identifier="Country">
+    <id>EEA321E0DB4B416D9B41EF98508426FE</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>140</sequenceNumber>
+    <name>Country</name>
+    <column id="9407" entity-name="ADColumn" identifier="CountryCode"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="EECF1A85E6A04E2F9913372FAAE6A9FB" identifier="Storage Bin Key">
+    <id>EECF1A85E6A04E2F9913372FAAE6A9FB</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>190</sequenceNumber>
+    <name>Storage Bin Key</name>
+    <column id="E181E05B44EB4CF5A0FAAE1B0A06181E" entity-name="ADColumn" identifier="Storagekey"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="F2920CEEEC1D44FCACB652EEE29033C6" identifier="Region">
+    <id>F2920CEEEC1D44FCACB652EEE29033C6</id>
+    <active>true</active>
+    <importFormat id="DC310927F09C480183EABEE3C25FDD9D" entity-name="DataImportFormat" identifier="Order"/>
+    <sequenceNumber>130</sequenceNumber>
+    <name>Region</name>
+    <column id="9030" entity-name="ADColumn" identifier="RegionName"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="F4FACD2BDE3F4879ADE33274E29C38A7" identifier="Tax Code">
+    <id>F4FACD2BDE3F4879ADE33274E29C38A7</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>140</sequenceNumber>
+    <name>Tax Code</name>
+    <column id="9186" entity-name="ADColumn" identifier="TaxIndicator"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="F684C6A9010C47CABE424B872DAFF20F" identifier="Document Number">
+    <id>F684C6A9010C47CABE424B872DAFF20F</id>
+    <active>true</active>
+    <importFormat id="E516BC1FA14D45AC93FDA4F2AF2A77F3" entity-name="DataImportFormat" identifier="Invoice"/>
+    <sequenceNumber>30</sequenceNumber>
+    <name>Document Number</name>
+    <column id="9187" entity-name="ADColumn" identifier="DocumentNo"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="F916EACCC4EE4192806476F04CEB290C" identifier="Complete QTY">
+    <id>F916EACCC4EE4192806476F04CEB290C</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>70</sequenceNumber>
+    <name>Complete QTY</name>
+    <column id="99E6D05B30114DF3A509C5AA52CD3791" entity-name="ADColumn" identifier="Completeqty"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>N</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="F9E6A8532B6B4D5A99A067C0EC72B830" identifier="Movement Date">
+    <id>F9E6A8532B6B4D5A99A067C0EC72B830</id>
+    <active>true</active>
+    <importFormat id="7E713A5D45FB43FD9DD9A171AD6066B8" entity-name="DataImportFormat" identifier="Inventory"/>
+    <sequenceNumber>10</sequenceNumber>
+    <name>Movement Date</name>
+    <column id="6A438CB8DB514F0B88156916D3B78688" entity-name="ADColumn" identifier="Movementdate"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormatRow id="FE75D4F30248481686A6E6E0FD9ECD41" identifier="Production Type">
+    <id>FE75D4F30248481686A6E6E0FD9ECD41</id>
+    <active>true</active>
+    <importFormat id="71A236DD847B41A48D73E4C60457FB69" entity-name="DataImportFormat" identifier="Work Effort"/>
+    <sequenceNumber>160</sequenceNumber>
+    <name>Production Type</name>
+    <column id="E68554037A8C4C50B65A62CA5B561EEB" entity-name="ADColumn" identifier="Productiontype"/>
+    <startingNo xsi:nil="true"/>
+    <endNo xsi:nil="true"/>
+    <dataType>S</dataType>
+    <dataFormat xsi:nil="true"/>
+    <decimalPoint>.</decimalPoint>
+    <divideBy100>false</divideBy100>
+    <constantValue xsi:nil="true"/>
+    <calloutFunction xsi:nil="true"/>
+    <script xsi:nil="true"/>
+  </DataImportFormatRow>
+  <DataImportFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" identifier="import budget">
+    <id>03AC9E0DABDE40B2A4E10451C1A47BA5</id>
+    <active>true</active>
+    <name>import budget</name>
+    <description xsi:nil="true"/>
+    <table id="800175" entity-name="ADTable" identifier="I_Budgetline"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="0A7D07C7F41C4960B8B954CE94C07665" identifier="Product Category Key">
+        <id>0A7D07C7F41C4960B8B954CE94C07665</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>Product Category Key</name>
+        <column id="802914" entity-name="ADColumn" identifier="Prodcategoryident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="17246F239DD14F9382E56AC61D3C0F5E" identifier="Description">
+        <id>17246F239DD14F9382E56AC61D3C0F5E</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>Description</name>
+        <column id="802909" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1B52DEA38B244A268126BFC68E79FC9E" identifier="Campaign Key">
+        <id>1B52DEA38B244A268126BFC68E79FC9E</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Campaign Key</name>
+        <column id="802906" entity-name="ADColumn" identifier="Campaignident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2A35E364020543B289185A8F688C1380" identifier="Product Key">
+        <id>2A35E364020543B289185A8F688C1380</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Product Key</name>
+        <column id="802896" entity-name="ADColumn" identifier="Productident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="50761759D9854EADA15C31F2A6D9BF05" identifier="Sales Region Key">
+        <id>50761759D9854EADA15C31F2A6D9BF05</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Sales Region Key</name>
+        <column id="802902" entity-name="ADColumn" identifier="Salesregionident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="555E7C4246F243C9A25C38903DC6D2FE" identifier="General Ledger Name">
+        <id>555E7C4246F243C9A25C38903DC6D2FE</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>General Ledger Name</name>
+        <column id="1005500002" entity-name="ADColumn" identifier="Acctschemaident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="59BE57B0A0B4446C833CC69B6D6ABAC9" identifier="Activity Name">
+        <id>59BE57B0A0B4446C833CC69B6D6ABAC9</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>Activity Name</name>
+        <column id="802908" entity-name="ADColumn" identifier="Activityident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="6F8024C544794E43AF4AE3B57EFB3D00" identifier="Business Partner Key">
+        <id>6F8024C544794E43AF4AE3B57EFB3D00</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Business Partner Key</name>
+        <column id="802898" entity-name="ADColumn" identifier="Partnerident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="7A60D683E4F84D249B6B64D60DF8F376" identifier="Account Name">
+        <id>7A60D683E4F84D249B6B64D60DF8F376</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Account Name</name>
+        <column id="1005500005" entity-name="ADColumn" identifier="Elementvalueident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="82FEDF058D5B459B98DE9FB4BF5A9859" identifier="Quantity">
+        <id>82FEDF058D5B459B98DE9FB4BF5A9859</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Quantity</name>
+        <column id="802916" entity-name="ADColumn" identifier="Qty"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="937694E464D5481F8AF64638601E44CF" identifier="Period Name">
+        <id>937694E464D5481F8AF64638601E44CF</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Period Name</name>
+        <column id="802892" entity-name="ADColumn" identifier="Periodident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="AC38DB056BDD48E2ADB017AB923C8F90" identifier="Sequence Number">
+        <id>AC38DB056BDD48E2ADB017AB923C8F90</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>Sequence Number</name>
+        <column id="802910" entity-name="ADColumn" identifier="SeqNo"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="B17E4C84606F4910AF746674AF3050EB" identifier="Currency Code">
+        <id>B17E4C84606F4910AF746674AF3050EB</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Currency Code</name>
+        <column id="802967" entity-name="ADColumn" identifier="Currencyident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="B5E52D1A8F764554A3AF9AA7053B80BD" identifier="Project Key">
+        <id>B5E52D1A8F764554A3AF9AA7053B80BD</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>Project Key</name>
+        <column id="802904" entity-name="ADColumn" identifier="Projectident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="BBD9360D600D440D88901F620245C1B9" identifier="Amount">
+        <id>BBD9360D600D440D88901F620245C1B9</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Amount</name>
+        <column id="802918" entity-name="ADColumn" identifier="Amount"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E12FBEB8078648E6842B5BEA3C94C1E1" identifier="Business Partner Group Key">
+        <id>E12FBEB8078648E6842B5BEA3C94C1E1</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Business Partner Group Key</name>
+        <column id="802912" entity-name="ADColumn" identifier="Bpgroupident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E8326FA19C87489E89A1B3897B98128B" identifier="Organization Trx Key">
+        <id>E8326FA19C87489E89A1B3897B98128B</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>Organization Trx Key</name>
+        <column id="802900" entity-name="ADColumn" identifier="Orgtrxident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F36714D550584187883174CFA70B3D07" identifier="Price">
+        <id>F36714D550584187883174CFA70B3D07</id>
+        <active>true</active>
+        <importFormat id="03AC9E0DABDE40B2A4E10451C1A47BA5" entity-name="DataImportFormat" identifier="import budget"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Price</name>
+        <column id="802917" entity-name="ADColumn" identifier="Price"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+  <DataImportFormat id="077E6901AC1B4226831C8550B4F606AD" identifier="import G/L Journal">
+    <id>077E6901AC1B4226831C8550B4F606AD</id>
+    <active>true</active>
+    <name>import G/L Journal</name>
+    <description xsi:nil="true"/>
+    <table id="599" entity-name="ADTable" identifier="I_GLJournal"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="01E552AF87B54430BE397EC0D12B6C8C" identifier="Product Search Key">
+        <id>01E552AF87B54430BE397EC0D12B6C8C</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>230</sequenceNumber>
+        <name>Product Search Key</name>
+        <column id="9244" entity-name="ADColumn" identifier="ProductValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1945E0E502A34E6CA4B58C12FAC807CA" identifier="Quantity">
+        <id>1945E0E502A34E6CA4B58C12FAC807CA</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>190</sequenceNumber>
+        <name>Quantity</name>
+        <column id="9248" entity-name="ADColumn" identifier="Qty"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1A1F727EBD2D4E8BBD8CC04BCE5A474B" identifier="Accounting Date">
+        <id>1A1F727EBD2D4E8BBD8CC04BCE5A474B</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Accounting Date</name>
+        <column id="9253" entity-name="ADColumn" identifier="DateAcct"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1E454560AE6F468B9D5B2CDBA53772A0" identifier="Project Key">
+        <id>1E454560AE6F468B9D5B2CDBA53772A0</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>260</sequenceNumber>
+        <name>Project Key</name>
+        <column id="9258" entity-name="ADColumn" identifier="ProjectValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1E9F52D6653E4D3AAE7C82713867D3E5" identifier="Line No.">
+        <id>1E9F52D6653E4D3AAE7C82713867D3E5</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>Line No.</name>
+        <column id="9230" entity-name="ADColumn" identifier="Line"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1EA3065D77D84FF5BA24FC0D8E009F70" identifier="Foreign Currency Debit">
+        <id>1EA3065D77D84FF5BA24FC0D8E009F70</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Foreign Currency Debit</name>
+        <column id="9229" entity-name="ADColumn" identifier="AmtSourceDr"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1F003631C4CB41ED8814E683C51F0DF8" identifier="Business Partner Search Key">
+        <id>1F003631C4CB41ED8814E683C51F0DF8</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>220</sequenceNumber>
+        <name>Business Partner Search Key</name>
+        <column id="9242" entity-name="ADColumn" identifier="BPartnerValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="28CF4560535A4D3E8BE159B080FF7646" identifier="SKU">
+        <id>28CF4560535A4D3E8BE159B080FF7646</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>250</sequenceNumber>
+        <name>SKU</name>
+        <column id="9280" entity-name="ADColumn" identifier="SKU"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2935BEF4E347494BA1905279923AB772" identifier="ISO Code">
+        <id>2935BEF4E347494BA1905279923AB772</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>ISO Code</name>
+        <column id="9272" entity-name="ADColumn" identifier="ISO_Code"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4CED4F450B584B25846C7AAD25537185" identifier="New Client Identifier">
+        <id>4CED4F450B584B25846C7AAD25537185</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>New Client Identifier</name>
+        <column id="9257" entity-name="ADColumn" identifier="ClientValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4D6139CC72D74694BAE838944697B611" identifier="Debit">
+        <id>4D6139CC72D74694BAE838944697B611</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Debit</name>
+        <column id="9256" entity-name="ADColumn" identifier="AmtAcctDr"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="5AA99B0F59AE4445823A24B63A2149AB" identifier="Journal Document No">
+        <id>5AA99B0F59AE4445823A24B63A2149AB</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Journal Document No</name>
+        <column id="9773" entity-name="ADColumn" identifier="JournalDocumentNo"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="72D40F048D9F46098D3C6565647E2840" identifier="Account Key">
+        <id>72D40F048D9F46098D3C6565647E2840</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>210</sequenceNumber>
+        <name>Account Key</name>
+        <column id="9233" entity-name="ADColumn" identifier="AccountValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="791A0AB97E58464F95FB23FD005FF3B0" identifier="Description">
+        <id>791A0AB97E58464F95FB23FD005FF3B0</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Description</name>
+        <column id="9286" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="7BC849025DA4440AB53177E50959C73F" identifier="Foreign Currency Credit">
+        <id>7BC849025DA4440AB53177E50959C73F</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>Foreign Currency Credit</name>
+        <column id="9281" entity-name="ADColumn" identifier="AmtSourceCr"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="7C39AEFF88784718B9F5728441BA1E18" identifier="Org Key">
+        <id>7C39AEFF88784718B9F5728441BA1E18</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>200</sequenceNumber>
+        <name>Org Key</name>
+        <column id="9264" entity-name="ADColumn" identifier="OrgValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="82A49F08984F4E03BE21F21A1FFA2882" identifier="Batch Description">
+        <id>82A49F08984F4E03BE21F21A1FFA2882</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Batch Description</name>
+        <column id="9235" entity-name="ADColumn" identifier="BatchDescription"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="939A88C4412D4F218229651304F5698C" identifier="Currency Rate Type">
+        <id>939A88C4412D4F218229651304F5698C</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Currency Rate Type</name>
+        <column id="9275" entity-name="ADColumn" identifier="CurrencyRateType"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="96838B1F4F0D4832A6A682457B5A9FD3" identifier="UPC/EAN">
+        <id>96838B1F4F0D4832A6A682457B5A9FD3</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>240</sequenceNumber>
+        <name>UPC/EAN</name>
+        <column id="9263" entity-name="ADColumn" identifier="UPC"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="A71A66CA19604CA282635CC624AB8FE0" identifier="Document Type Name">
+        <id>A71A66CA19604CA282635CC624AB8FE0</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Document Type Name</name>
+        <column id="9261" entity-name="ADColumn" identifier="DocTypeName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="A799FBEE939545C78BA1F7A8E7C54A49" identifier="Credit">
+        <id>A799FBEE939545C78BA1F7A8E7C54A49</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>Credit</name>
+        <column id="9266" entity-name="ADColumn" identifier="AmtAcctCr"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="AA37F28078B642B897EF9E0FA7126FF2" identifier="Batch Document No">
+        <id>AA37F28078B642B897EF9E0FA7126FF2</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Batch Document No</name>
+        <column id="9273" entity-name="ADColumn" identifier="BatchDocumentNo"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="B338EECE5236460E8F9FEE77B6500F55" identifier="Category Name">
+        <id>B338EECE5236460E8F9FEE77B6500F55</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>Category Name</name>
+        <column id="9238" entity-name="ADColumn" identifier="CategoryName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="B840FEDCF3294213A1717511EFA88D95" identifier="Trx Org Key">
+        <id>B840FEDCF3294213A1717511EFA88D95</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>270</sequenceNumber>
+        <name>Trx Org Key</name>
+        <column id="9234" entity-name="ADColumn" identifier="OrgTrxValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="DD44ED82F219430D9BC9E0430222F78A" identifier="Rate">
+        <id>DD44ED82F219430D9BC9E0430222F78A</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>Rate</name>
+        <column id="9268" entity-name="ADColumn" identifier="CurrencyRate"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E7D29ED2A07A43528B4EB519E071199F" identifier="Account Schema Name">
+        <id>E7D29ED2A07A43528B4EB519E071199F</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Account Schema Name</name>
+        <column id="9270" entity-name="ADColumn" identifier="AcctSchemaName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F5D2F59015A4485996BDF2E182B021C6" identifier="Posting Type">
+        <id>F5D2F59015A4485996BDF2E182B021C6</id>
+        <active>true</active>
+        <importFormat id="077E6901AC1B4226831C8550B4F606AD" entity-name="DataImportFormat" identifier="import G/L Journal"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Posting Type</name>
+        <column id="9239" entity-name="ADColumn" identifier="PostingType"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+  <DataImportFormat id="1587864296BB4527A678C451386257C4" identifier="import sales invoice">
+    <id>1587864296BB4527A678C451386257C4</id>
+    <active>true</active>
+    <name>import sales invoice</name>
+    <description xsi:nil="true"/>
+    <table id="598" entity-name="ADTable" identifier="I_Invoice"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="0A64B323F01A4649A554668320DBE85E" identifier="Tax Search Key">
+        <id>0A64B323F01A4649A554668320DBE85E</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>230</sequenceNumber>
+        <name>Tax Search Key</name>
+        <column id="9186" entity-name="ADColumn" identifier="TaxIndicator"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1DCB4DCFAC9C480B8E87CF395CF25E03" identifier="UPC/EAN">
+        <id>1DCB4DCFAC9C480B8E87CF395CF25E03</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>190</sequenceNumber>
+        <name>UPC/EAN</name>
+        <column id="9204" entity-name="ADColumn" identifier="UPC"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="32CB222BD539453C83F98E41BFC3B45C" identifier="Line Description">
+        <id>32CB222BD539453C83F98E41BFC3B45C</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>220</sequenceNumber>
+        <name>Line Description</name>
+        <column id="9214" entity-name="ADColumn" identifier="LineDescription"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="33749AE3997A442DBF6AC40A9BD17E09" identifier="Business Partner Search Key">
+        <id>33749AE3997A442DBF6AC40A9BD17E09</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Business Partner Search Key</name>
+        <column id="9192" entity-name="ADColumn" identifier="BPartnerValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="39CC8BCB6A294796BAE0953A4238A7DE" identifier="Contact Name">
+        <id>39CC8BCB6A294796BAE0953A4238A7DE</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>Contact Name</name>
+        <column id="9418" entity-name="ADColumn" identifier="ContactName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="54077A771F004F498D23D3C9706B9EDD" identifier="Postal Code">
+        <id>54077A771F004F498D23D3C9706B9EDD</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Postal Code</name>
+        <column id="9208" entity-name="ADColumn" identifier="Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="59093A4413644112B3D81BF0D330116E" identifier="Tax Amount">
+        <id>59093A4413644112B3D81BF0D330116E</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>240</sequenceNumber>
+        <name>Tax Amount</name>
+        <column id="9179" entity-name="ADColumn" identifier="TaxAmt"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="5E82284A57DC4DE19946EE98D29D7857" identifier="Ordered Quantity">
+        <id>5E82284A57DC4DE19946EE98D29D7857</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>200</sequenceNumber>
+        <name>Ordered Quantity</name>
+        <column id="9177" entity-name="ADColumn" identifier="QtyOrdered"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="6E6DB7E211534899AE200F30747DDC42" identifier="Phone">
+        <id>6E6DB7E211534899AE200F30747DDC42</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Phone</name>
+        <column id="9415" entity-name="ADColumn" identifier="Phone"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="74982CF12FCA4400AA737CED9CE16EFF" identifier="Region Name">
+        <id>74982CF12FCA4400AA737CED9CE16EFF</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Region Name</name>
+        <column id="9185" entity-name="ADColumn" identifier="RegionName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="76C2D3DF1FFA4FE18CD4CB8ADD3EBAFB" identifier="Product Search Key">
+        <id>76C2D3DF1FFA4FE18CD4CB8ADD3EBAFB</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Product Search Key</name>
+        <column id="9178" entity-name="ADColumn" identifier="ProductValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="7B06309F850846F597BB3A535BA14892" identifier="Payment Term Key">
+        <id>7B06309F850846F597BB3A535BA14892</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Payment Term Key</name>
+        <column id="9209" entity-name="ADColumn" identifier="PaymentTermValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="86565803F116421E8D2416F7FDA7F61A" identifier="City Name">
+        <id>86565803F116421E8D2416F7FDA7F61A</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>City Name</name>
+        <column id="9197" entity-name="ADColumn" identifier="City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="86F996697E534189A71CF451C72A0AA6" identifier="Name">
+        <id>86F996697E534189A71CF451C72A0AA6</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Name</name>
+        <column id="9190" entity-name="ADColumn" identifier="Name"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="98871DB18F494E7B9260E97DA71DCCD3" identifier="Description">
+        <id>98871DB18F494E7B9260E97DA71DCCD3</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Description</name>
+        <column id="9222" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="A64D55AC55574DAD86C2569005E1BEE9" identifier="Document Type Name">
+        <id>A64D55AC55574DAD86C2569005E1BEE9</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>Document Type Name</name>
+        <column id="9219" entity-name="ADColumn" identifier="DocTypeName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="B1334147C0C045B18B6A6AA1C92A3681" identifier="Address Line 1">
+        <id>B1334147C0C045B18B6A6AA1C92A3681</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>Address Line 1</name>
+        <column id="9194" entity-name="ADColumn" identifier="Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="BFFF70B521374E6D91F5FD51E8851C6C" identifier="Sales Transaction">
+        <id>BFFF70B521374E6D91F5FD51E8851C6C</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Sales Transaction</name>
+        <column id="9202" entity-name="ADColumn" identifier="IsSOTrx"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>Y</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="CB4A69BAD18A4DF6B6C474C61AB5DB2B" identifier="Email">
+        <id>CB4A69BAD18A4DF6B6C474C61AB5DB2B</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>Email</name>
+        <column id="9183" entity-name="ADColumn" identifier="Email"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D98B43FFD0C946DB81745F466F7B75B2" identifier="ISO Country Code">
+        <id>D98B43FFD0C946DB81745F466F7B75B2</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>ISO Country Code</name>
+        <column id="9417" entity-name="ADColumn" identifier="CountryCode"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F1835975ACEB465CAE2853A07DAAD790" identifier="Unit Price">
+        <id>F1835975ACEB465CAE2853A07DAAD790</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>210</sequenceNumber>
+        <name>Unit Price</name>
+        <column id="9200" entity-name="ADColumn" identifier="PriceActual"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F4D711D14C1942E79426CFF775CC14EF" identifier="SKU">
+        <id>F4D711D14C1942E79426CFF775CC14EF</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>SKU</name>
+        <column id="9205" entity-name="ADColumn" identifier="SKU"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F4E580518DCD4D81947FE6EF9F2D0FD5" identifier="Address Line 2">
+        <id>F4E580518DCD4D81947FE6EF9F2D0FD5</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Address Line 2</name>
+        <column id="9201" entity-name="ADColumn" identifier="Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="FD0B81EA9139467AA2594A2F4BF30264" identifier="Document No.">
+        <id>FD0B81EA9139467AA2594A2F4BF30264</id>
+        <active>true</active>
+        <importFormat id="1587864296BB4527A678C451386257C4" entity-name="DataImportFormat" identifier="import sales invoice"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Document No.</name>
+        <column id="9187" entity-name="ADColumn" identifier="DocumentNo"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+  <DataImportFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" identifier="import sales order (IDR)">
+    <id>2D15C19ADF074CC5ACBF9A07E3CA7FF1</id>
+    <active>true</active>
+    <name>import sales order (IDR)</name>
+    <description>Import sales order file format. Note: currency hardcoded, UOM depend on main UOM in the product. warehouse hardcoded.</description>
+    <table id="591" entity-name="ADTable" identifier="I_Order"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="21932D50661A4C01A0B112AEA5467B00" identifier="ISO Country Code">
+        <id>21932D50661A4C01A0B112AEA5467B00</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>ISO Country Code</name>
+        <column id="9407" entity-name="ADColumn" identifier="CountryCode"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2F2C55D7B3654695B24A72FBD2DB65D3" identifier="Tax Amount">
+        <id>2F2C55D7B3654695B24A72FBD2DB65D3</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>240</sequenceNumber>
+        <name>Tax Amount</name>
+        <column id="9022" entity-name="ADColumn" identifier="TaxAmt"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="3A872F48C97B43F8B69D0E521DFC4225" identifier="Document Type Name">
+        <id>3A872F48C97B43F8B69D0E521DFC4225</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>Document Type Name</name>
+        <column id="9036" entity-name="ADColumn" identifier="DocTypeName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="3AF6AEB60DDB4663BBEAEB0F78A1EE9B" identifier="Address Line 2">
+        <id>3AF6AEB60DDB4663BBEAEB0F78A1EE9B</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Address Line 2</name>
+        <column id="9033" entity-name="ADColumn" identifier="Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="41AD0B61E2B74F70BAE867E730782BC4" identifier="Attibuteset Identification">
+        <id>41AD0B61E2B74F70BAE867E730782BC4</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>190</sequenceNumber>
+        <name>Attibuteset Identification</name>
+        <column id="E1722FCFC2F4455289A4AE97DB56D2EF" entity-name="ADColumn" identifier="Attributesetident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="43135CFCA8064995A0886F816C49896B" identifier="Currency ID">
+        <id>43135CFCA8064995A0886F816C49896B</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Currency ID</name>
+        <column id="9009" entity-name="ADColumn" identifier="C_Currency_ID"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>303</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4CAB2EDB43A04725B9BCA3978A1C4F49" identifier="Ordered Qty">
+        <id>4CAB2EDB43A04725B9BCA3978A1C4F49</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>200</sequenceNumber>
+        <name>Ordered Qty</name>
+        <column id="9028" entity-name="ADColumn" identifier="QtyOrdered"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4E7FB40F75984720AB1655ABFEA617EE" identifier="Product Search Key">
+        <id>4E7FB40F75984720AB1655ABFEA617EE</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>Product Search Key</name>
+        <column id="9037" entity-name="ADColumn" identifier="ProductValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4EEFF592E3AF4CCE9893E02782DDD750" identifier="Net Unit Price">
+        <id>4EEFF592E3AF4CCE9893E02782DDD750</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>210</sequenceNumber>
+        <name>Net Unit Price</name>
+        <column id="8997" entity-name="ADColumn" identifier="PriceActual"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="50D51B1163334F7DBE3D5CCB6B2E3323" identifier="Document No.">
+        <id>50D51B1163334F7DBE3D5CCB6B2E3323</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Document No.</name>
+        <column id="8999" entity-name="ADColumn" identifier="DocumentNo"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="524459FAF2D44F3F9ED33268445D709C" identifier="Order Date">
+        <id>524459FAF2D44F3F9ED33268445D709C</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>Order Date</name>
+        <column id="802397" entity-name="ADColumn" identifier="DateOrdered"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="56DAFBBA84584CCDA4F4BF07F77FF2F9" identifier="Payment Term Key">
+        <id>56DAFBBA84584CCDA4F4BF07F77FF2F9</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Payment Term Key</name>
+        <column id="9002" entity-name="ADColumn" identifier="PaymentTermValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="744DE9804A0A428F8D35256646CD7355" identifier="Order Reference">
+        <id>744DE9804A0A428F8D35256646CD7355</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Order Reference</name>
+        <column id="802398" entity-name="ADColumn" identifier="Order_Referenceno"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="768507B2002247F0BA6F2A47E97461FF" identifier="Warehouse ID">
+        <id>768507B2002247F0BA6F2A47E97461FF</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>250</sequenceNumber>
+        <name>Warehouse ID</name>
+        <column id="9026" entity-name="ADColumn" identifier="M_Warehouse_ID"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>4D45FE4C515041709047F51D139A21AC</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="9208A620E4BD4ACE9ACB98D7DF3D51E6" identifier="Address Line 1">
+        <id>9208A620E4BD4ACE9ACB98D7DF3D51E6</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Address Line 1</name>
+        <column id="9011" entity-name="ADColumn" identifier="Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="A436AEEDCF8F42AD807C6EF10297B64E" identifier="Description">
+        <id>A436AEEDCF8F42AD807C6EF10297B64E</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Description</name>
+        <column id="9015" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="A95F5055E2D14037A72BCB18E8FDE9D7" identifier="Postal Code">
+        <id>A95F5055E2D14037A72BCB18E8FDE9D7</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>Postal Code</name>
+        <column id="9039" entity-name="ADColumn" identifier="Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="AF433345B96340869813C00E9A91810D" identifier="Line Description">
+        <id>AF433345B96340869813C00E9A91810D</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>220</sequenceNumber>
+        <name>Line Description</name>
+        <column id="9029" entity-name="ADColumn" identifier="LineDescription"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="B84DCA0E7C224D2B853961351BB040C6" identifier="City Name">
+        <id>B84DCA0E7C224D2B853961351BB040C6</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>City Name</name>
+        <column id="9042" entity-name="ADColumn" identifier="City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="C85FE7D4D20C4AEA8A16C75D371090E9" identifier="Scheduled Delivery Date">
+        <id>C85FE7D4D20C4AEA8A16C75D371090E9</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Scheduled Delivery Date</name>
+        <column id="802399" entity-name="ADColumn" identifier="DatePromised"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D17E340E005C4A1481F0AA48B79CF47A" identifier="Sales Transaction">
+        <id>D17E340E005C4A1481F0AA48B79CF47A</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Sales Transaction</name>
+        <column id="9040" entity-name="ADColumn" identifier="IsSOTrx"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>Y</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D616BDD56A6D43D6BD241B54BD1B1B15" identifier="Business Partner Key">
+        <id>D616BDD56A6D43D6BD241B54BD1B1B15</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>Business Partner Key</name>
+        <column id="8994" entity-name="ADColumn" identifier="BPartnerValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D968B02F808B428F86923E6F007F24A0" identifier="Tax Search Key">
+        <id>D968B02F808B428F86923E6F007F24A0</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>230</sequenceNumber>
+        <name>Tax Search Key</name>
+        <column id="8991" entity-name="ADColumn" identifier="TaxIndicator"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E5715CE0B5A4454296BCA416E76908B3" identifier="Region Name">
+        <id>E5715CE0B5A4454296BCA416E76908B3</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Region Name</name>
+        <column id="9030" entity-name="ADColumn" identifier="RegionName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F4CA66D054A04753866662B24CE2D6C0" identifier="Contact Name">
+        <id>F4CA66D054A04753866662B24CE2D6C0</id>
+        <active>true</active>
+        <importFormat id="2D15C19ADF074CC5ACBF9A07E3CA7FF1" entity-name="DataImportFormat" identifier="import sales order (IDR)"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Contact Name</name>
+        <column id="9411" entity-name="ADColumn" identifier="ContactName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+  <DataImportFormat id="78904EF685C5463FA839BC3F66DCEA3A" identifier="import goods receipt">
+    <id>78904EF685C5463FA839BC3F66DCEA3A</id>
+    <active>true</active>
+    <name>import goods receipt</name>
+    <description xsi:nil="true"/>
+    <table id="A344D67A1576412F8E0A2AFC1DBA919F" entity-name="ADTable" identifier="OEZ_I_Inout"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="0B27613C3D9B45178F43BBB42C0A7BE3" identifier="Description">
+        <id>0B27613C3D9B45178F43BBB42C0A7BE3</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>Description</name>
+        <column id="7367CD71B8AB48E38460866E86C9C2BC" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="0D41772AA43A4A29B6AE46B244E9A810" identifier="Edi Code">
+        <id>0D41772AA43A4A29B6AE46B244E9A810</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>220</sequenceNumber>
+        <name>Edi Code</name>
+        <column id="B4AF2069FFD64893B876B880C2D50F05" entity-name="ADColumn" identifier="Edicode"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="0FA434BA76754A768DF31F4DF497EB1F" identifier="Document Type Name">
+        <id>0FA434BA76754A768DF31F4DF497EB1F</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>Document Type Name</name>
+        <column id="8B758A50CEA64B788CE798779C57A5C1" entity-name="ADColumn" identifier="Doctypename"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2679AE392BD84E2FB1E37B061AD6A1DA" identifier="Line No.">
+        <id>2679AE392BD84E2FB1E37B061AD6A1DA</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>190</sequenceNumber>
+        <name>Line No.</name>
+        <column id="69B9C544CE5643BB856184CFA2A9BF75" entity-name="ADColumn" identifier="Line"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2B52CCF76639444898E1D56EF6BA77A4" identifier="Address Line 1">
+        <id>2B52CCF76639444898E1D56EF6BA77A4</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Address Line 1</name>
+        <column id="EFBE458657924CE982AD72CF015C1B07" entity-name="ADColumn" identifier="Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2ECE922C1E004EA3902A3C645867CB60" identifier="Ship Postal">
+        <id>2ECE922C1E004EA3902A3C645867CB60</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Ship Postal</name>
+        <column id="9C01CDBC90834AAAA3F435C202493AD4" entity-name="ADColumn" identifier="Ship_Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="327FA9A126A846539CC9E649C859D422" identifier="Business Partner Search Key">
+        <id>327FA9A126A846539CC9E649C859D422</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Business Partner Search Key</name>
+        <column id="E3635518DC5443E280E50041B00F2229" entity-name="ADColumn" identifier="Bpartnervalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="37B20D0890304140A0CDA9CEF932136A" identifier="Ship Country Code">
+        <id>37B20D0890304140A0CDA9CEF932136A</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Ship Country Code</name>
+        <column id="D751C66FB5A140268DCDE5069DCA9911" entity-name="ADColumn" identifier="Ship_Countryname"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="66FEB16429B94C4AAF6BCE717895CA67" identifier="Ship Address2">
+        <id>66FEB16429B94C4AAF6BCE717895CA67</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>Ship Address2</name>
+        <column id="6AB87B75B1B240AC80516EA41ACDF2AB" entity-name="ADColumn" identifier="Ship_Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="8F4F3D7D2A104D18A907B5BDC4772EAD" identifier="Product Search Key">
+        <id>8F4F3D7D2A104D18A907B5BDC4772EAD</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>200</sequenceNumber>
+        <name>Product Search Key</name>
+        <column id="1B36112FE4024C73BC5FEB3410583DDA" entity-name="ADColumn" identifier="Productvalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="929925BB20984E2BA6BC3B56AD370ADC" identifier="Movement Date">
+        <id>929925BB20984E2BA6BC3B56AD370ADC</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>Movement Date</name>
+        <column id="6D1309FC31D34826B88EB9C948030970" entity-name="ADColumn" identifier="Movementdate"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat>yyyy-MM-dd</dataFormat>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="95E7A334C4CF43FBB836D729E49F3CA1" identifier="City Name">
+        <id>95E7A334C4CF43FBB836D729E49F3CA1</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>City Name</name>
+        <column id="BFC167AE32C34DC28F692F54725551F0" entity-name="ADColumn" identifier="City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="9C367E20FA8F4806A9FF43AB766DF88B" identifier="Storage Bin Search Key">
+        <id>9C367E20FA8F4806A9FF43AB766DF88B</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>230</sequenceNumber>
+        <name>Storage Bin Search Key</name>
+        <column id="092BC82E2C44415CA03C474B96B2A380" entity-name="ADColumn" identifier="Storagebinvalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="AAD782B3E32C48F59CD55D71BBE98DAF" identifier="Warehouse Key">
+        <id>AAD782B3E32C48F59CD55D71BBE98DAF</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Warehouse Key</name>
+        <column id="595279E88AB44CDDA894DDB73733E44D" entity-name="ADColumn" identifier="Warehousevalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="C4BE1AEEBABC4C9F9367EC3226891F78" identifier="Ship Address1">
+        <id>C4BE1AEEBABC4C9F9367EC3226891F78</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>Ship Address1</name>
+        <column id="F1BBE2883F6D4AC691407CD492CA3097" entity-name="ADColumn" identifier="Ship_Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="C7EAC9C13337461CBB5BA65278F3A44A" identifier="Document No.">
+        <id>C7EAC9C13337461CBB5BA65278F3A44A</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Document No.</name>
+        <column id="681BB6A21D19409EBC832E201C8C08EA" entity-name="ADColumn" identifier="Documentno"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D2FDE8D62572401A8F184309DF92B4E1" identifier="Sales Transaction">
+        <id>D2FDE8D62572401A8F184309DF92B4E1</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Sales Transaction</name>
+        <column id="CF864C6826864C67A1D4E58CDAA02304" entity-name="ADColumn" identifier="Issotrx"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>N</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D7450E723B4E41AFBC383BB44F5047BB" identifier="Line Description">
+        <id>D7450E723B4E41AFBC383BB44F5047BB</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>240</sequenceNumber>
+        <name>Line Description</name>
+        <column id="68A9DAB557DF4B0D8305B2756BF51DD6" entity-name="ADColumn" identifier="Product_Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D8E09EC21C75466DB280D4DCE0C7DB98" identifier="Postal Code">
+        <id>D8E09EC21C75466DB280D4DCE0C7DB98</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Postal Code</name>
+        <column id="94AF8D7B11ED4D6B87025200CD401733" entity-name="ADColumn" identifier="Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E29673C9173F41749F852F29E00F8343" identifier="Address Line 2">
+        <id>E29673C9173F41749F852F29E00F8343</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Address Line 2</name>
+        <column id="B30D26073458471689A929C005AE963C" entity-name="ADColumn" identifier="Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F1B4DBBE9D4B463BB4049396C7864C66" identifier="Movement Quantity">
+        <id>F1B4DBBE9D4B463BB4049396C7864C66</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>210</sequenceNumber>
+        <name>Movement Quantity</name>
+        <column id="1EAC10FB2BDA46F8B42447EAA0903CC5" entity-name="ADColumn" identifier="Movementqty"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F56D20615F0F40C9AE52A5067AC75C23" identifier="Accounting Date">
+        <id>F56D20615F0F40C9AE52A5067AC75C23</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Accounting Date</name>
+        <column id="7A99E07171A44FA690372C22958BF37E" entity-name="ADColumn" identifier="Dateacct"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat>yyyy-MM-dd</dataFormat>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F664171A72ED4811829312721A1EA951" identifier="Country Code">
+        <id>F664171A72ED4811829312721A1EA951</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Country Code</name>
+        <column id="4092DDA8998240A7B29F6710876DE522" entity-name="ADColumn" identifier="Countryname"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="FEA8D31D81C947B3987E732A765CE37B" identifier="Ship City Name">
+        <id>FEA8D31D81C947B3987E732A765CE37B</id>
+        <active>true</active>
+        <importFormat id="78904EF685C5463FA839BC3F66DCEA3A" entity-name="DataImportFormat" identifier="import goods receipt"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>Ship City Name</name>
+        <column id="EA15E59D7DBD47CF8BCC90FE9C89D1C6" entity-name="ADColumn" identifier="Ship_City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+  <DataImportFormat id="88E1423F6E6D404B9658E0BBD4087D75" identifier="import goods shipment">
+    <id>88E1423F6E6D404B9658E0BBD4087D75</id>
+    <active>true</active>
+    <name>import goods shipment</name>
+    <description xsi:nil="true"/>
+    <table id="A344D67A1576412F8E0A2AFC1DBA919F" entity-name="ADTable" identifier="OEZ_I_Inout"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="0C9C50E15A8742D1B907E4E315AC27CC" identifier="Description">
+        <id>0C9C50E15A8742D1B907E4E315AC27CC</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>Description</name>
+        <column id="7367CD71B8AB48E38460866E86C9C2BC" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="196619B192A74CDC802AF6658A450F34" identifier="Ship Postal">
+        <id>196619B192A74CDC802AF6658A450F34</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Ship Postal</name>
+        <column id="9C01CDBC90834AAAA3F435C202493AD4" entity-name="ADColumn" identifier="Ship_Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="1CF8EC01BD154CBC80F9827709F28DF0" identifier="Accounting Date">
+        <id>1CF8EC01BD154CBC80F9827709F28DF0</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Accounting Date</name>
+        <column id="7A99E07171A44FA690372C22958BF37E" entity-name="ADColumn" identifier="Dateacct"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat>yyyy-MM-dd</dataFormat>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="2BB54C898FD74D32BF910EB12030EC6F" identifier="Document Type Name">
+        <id>2BB54C898FD74D32BF910EB12030EC6F</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>Document Type Name</name>
+        <column id="8B758A50CEA64B788CE798779C57A5C1" entity-name="ADColumn" identifier="Doctypename"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4982DEA8854F4E52BB6181C274171915" identifier="Ship Country Code">
+        <id>4982DEA8854F4E52BB6181C274171915</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Ship Country Code</name>
+        <column id="D751C66FB5A140268DCDE5069DCA9911" entity-name="ADColumn" identifier="Ship_Countryname"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="49CB144AE61A4F5CBC39C31123448F61" identifier="Address Line 2">
+        <id>49CB144AE61A4F5CBC39C31123448F61</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Address Line 2</name>
+        <column id="B30D26073458471689A929C005AE963C" entity-name="ADColumn" identifier="Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="53C7606A92E24AF09DC1A215CED9CFF4" identifier="Storage Bin Search Key">
+        <id>53C7606A92E24AF09DC1A215CED9CFF4</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>230</sequenceNumber>
+        <name>Storage Bin Search Key</name>
+        <column id="092BC82E2C44415CA03C474B96B2A380" entity-name="ADColumn" identifier="Storagebinvalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="55209CF592A84D2AA5CCC3F6D3044784" identifier="Country Code">
+        <id>55209CF592A84D2AA5CCC3F6D3044784</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Country Code</name>
+        <column id="4092DDA8998240A7B29F6710876DE522" entity-name="ADColumn" identifier="Countryname"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="561E3E2DD8E84384B9EFFC8223C89156" identifier="Edi Code">
+        <id>561E3E2DD8E84384B9EFFC8223C89156</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>220</sequenceNumber>
+        <name>Edi Code</name>
+        <column id="B4AF2069FFD64893B876B880C2D50F05" entity-name="ADColumn" identifier="Edicode"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="65BFDD8556CB4CF2829C1D8DC1F983B8" identifier="Ship Address2">
+        <id>65BFDD8556CB4CF2829C1D8DC1F983B8</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>Ship Address2</name>
+        <column id="6AB87B75B1B240AC80516EA41ACDF2AB" entity-name="ADColumn" identifier="Ship_Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="70037128B1574DB9A435D3E50B9AAF5B" identifier="Movement Date">
+        <id>70037128B1574DB9A435D3E50B9AAF5B</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>Movement Date</name>
+        <column id="6D1309FC31D34826B88EB9C948030970" entity-name="ADColumn" identifier="Movementdate"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat>yyyy-MM-dd</dataFormat>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="717BE1C98F854423A16C73545D191896" identifier="Address Line 1">
+        <id>717BE1C98F854423A16C73545D191896</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Address Line 1</name>
+        <column id="EFBE458657924CE982AD72CF015C1B07" entity-name="ADColumn" identifier="Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="805E73E702A64C259F9720AC07662545" identifier="Postal Code">
+        <id>805E73E702A64C259F9720AC07662545</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Postal Code</name>
+        <column id="94AF8D7B11ED4D6B87025200CD401733" entity-name="ADColumn" identifier="Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="831570C0E2314A6C9A328204DBB11BCD" identifier="Ship City Name">
+        <id>831570C0E2314A6C9A328204DBB11BCD</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>Ship City Name</name>
+        <column id="EA15E59D7DBD47CF8BCC90FE9C89D1C6" entity-name="ADColumn" identifier="Ship_City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="888BC0B984BA41B0A10488DB7432EE8C" identifier="Document No.">
+        <id>888BC0B984BA41B0A10488DB7432EE8C</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Document No.</name>
+        <column id="681BB6A21D19409EBC832E201C8C08EA" entity-name="ADColumn" identifier="Documentno"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="8B80790274A24D6FBCB56F83A9EE86A5" identifier="Movement Quantity">
+        <id>8B80790274A24D6FBCB56F83A9EE86A5</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>210</sequenceNumber>
+        <name>Movement Quantity</name>
+        <column id="1EAC10FB2BDA46F8B42447EAA0903CC5" entity-name="ADColumn" identifier="Movementqty"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="8E78AE3B55CE44C1B941BDD74F057FC7" identifier="City Name">
+        <id>8E78AE3B55CE44C1B941BDD74F057FC7</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>City Name</name>
+        <column id="BFC167AE32C34DC28F692F54725551F0" entity-name="ADColumn" identifier="City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="97070F797C024C6DB8D253B8CED908B4" identifier="Sales Transaction">
+        <id>97070F797C024C6DB8D253B8CED908B4</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Sales Transaction</name>
+        <column id="CF864C6826864C67A1D4E58CDAA02304" entity-name="ADColumn" identifier="Issotrx"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>Y</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="C5C52C68ABB24C66B493B1D093FAF245" identifier="Product Search Key">
+        <id>C5C52C68ABB24C66B493B1D093FAF245</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>200</sequenceNumber>
+        <name>Product Search Key</name>
+        <column id="1B36112FE4024C73BC5FEB3410583DDA" entity-name="ADColumn" identifier="Productvalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="D2441F0EA40B4533BD5A88E1638F1F7A" identifier="Business Partner Search Key">
+        <id>D2441F0EA40B4533BD5A88E1638F1F7A</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Business Partner Search Key</name>
+        <column id="E3635518DC5443E280E50041B00F2229" entity-name="ADColumn" identifier="Bpartnervalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="DC77E01F06EC45F5BD86FF0A65CE3AEC" identifier="Warehouse Key">
+        <id>DC77E01F06EC45F5BD86FF0A65CE3AEC</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Warehouse Key</name>
+        <column id="595279E88AB44CDDA894DDB73733E44D" entity-name="ADColumn" identifier="Warehousevalue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E676168C4DEB4AA48B14B70E9D6F8803" identifier="Line No.">
+        <id>E676168C4DEB4AA48B14B70E9D6F8803</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>190</sequenceNumber>
+        <name>Line No.</name>
+        <column id="69B9C544CE5643BB856184CFA2A9BF75" entity-name="ADColumn" identifier="Line"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F1CE48A46B1C47CE8AE2B35DB2DF041C" identifier="Line Description">
+        <id>F1CE48A46B1C47CE8AE2B35DB2DF041C</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>240</sequenceNumber>
+        <name>Line Description</name>
+        <column id="68A9DAB557DF4B0D8305B2756BF51DD6" entity-name="ADColumn" identifier="Product_Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F81F47D1F9B34987901CA99C65DC42BB" identifier="Ship Address1">
+        <id>F81F47D1F9B34987901CA99C65DC42BB</id>
+        <active>true</active>
+        <importFormat id="88E1423F6E6D404B9658E0BBD4087D75" entity-name="DataImportFormat" identifier="import goods shipment"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>Ship Address1</name>
+        <column id="F1BBE2883F6D4AC691407CD492CA3097" entity-name="ADColumn" identifier="Ship_Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+  <DataImportFormat id="E6C1250AF0A0411C9B477BDB46A59709" identifier="import purchase order (IDR)">
+    <id>E6C1250AF0A0411C9B477BDB46A59709</id>
+    <active>true</active>
+    <name>import purchase order (IDR)</name>
+    <description>Import sales order file format. Note: currency hardcoded, UOM depend on main UOM in the product. warehouse hardcoded.</description>
+    <table id="591" entity-name="ADTable" identifier="I_Order"/>
+    <format>C</format>
+    <processNow>false</processNow>
+    <dataImportFormatRowList>
+      <DataImportFormatRow id="01F91F020E864120A648168E5B4EF45B" identifier="Warehouse ID">
+        <id>01F91F020E864120A648168E5B4EF45B</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>250</sequenceNumber>
+        <name>Warehouse ID</name>
+        <column id="9026" entity-name="ADColumn" identifier="M_Warehouse_ID"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>4D45FE4C515041709047F51D139A21AC</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="13946EAC51314FAAA5C2306A59E0A57F" identifier="Product Search Key">
+        <id>13946EAC51314FAAA5C2306A59E0A57F</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>180</sequenceNumber>
+        <name>Product Search Key</name>
+        <column id="9037" entity-name="ADColumn" identifier="ProductValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="19CDD30270954C71BFA55DA34F0AEA67" identifier="Tax Search Key">
+        <id>19CDD30270954C71BFA55DA34F0AEA67</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>230</sequenceNumber>
+        <name>Tax Search Key</name>
+        <column id="8991" entity-name="ADColumn" identifier="TaxIndicator"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="36E67C92DACE486B96ABB10C1A1F2E00" identifier="Net Unit Price">
+        <id>36E67C92DACE486B96ABB10C1A1F2E00</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>210</sequenceNumber>
+        <name>Net Unit Price</name>
+        <column id="8997" entity-name="ADColumn" identifier="PriceActual"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="4F190D720E734CF18AF0FC84676FB654" identifier="Document No.">
+        <id>4F190D720E734CF18AF0FC84676FB654</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>20</sequenceNumber>
+        <name>Document No.</name>
+        <column id="8999" entity-name="ADColumn" identifier="DocumentNo"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="5CB5FAE47E4D4D09BCFEACA35CBD278C" identifier="Line Description">
+        <id>5CB5FAE47E4D4D09BCFEACA35CBD278C</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>220</sequenceNumber>
+        <name>Line Description</name>
+        <column id="9029" entity-name="ADColumn" identifier="LineDescription"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="5E4DAFF9351840DFAB961195A8843A71" identifier="ISO Country Code">
+        <id>5E4DAFF9351840DFAB961195A8843A71</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>160</sequenceNumber>
+        <name>ISO Country Code</name>
+        <column id="9407" entity-name="ADColumn" identifier="CountryCode"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="63F4FEB86E9442ED97EE5ACE03301473" identifier="Region Name">
+        <id>63F4FEB86E9442ED97EE5ACE03301473</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>150</sequenceNumber>
+        <name>Region Name</name>
+        <column id="9030" entity-name="ADColumn" identifier="RegionName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="6E80212D92264B41ACEAA304BB7CA37D" identifier="Business Partner Key">
+        <id>6E80212D92264B41ACEAA304BB7CA37D</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>100</sequenceNumber>
+        <name>Business Partner Key</name>
+        <column id="8994" entity-name="ADColumn" identifier="BPartnerValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="8882DF0E85824FA68E66E11BF24639B1" identifier="Description">
+        <id>8882DF0E85824FA68E66E11BF24639B1</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>40</sequenceNumber>
+        <name>Description</name>
+        <column id="9015" entity-name="ADColumn" identifier="Description"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="9C7AE71D4FBE4D5B8165D16D0DFF5A5C" identifier="Postal Code">
+        <id>9C7AE71D4FBE4D5B8165D16D0DFF5A5C</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>140</sequenceNumber>
+        <name>Postal Code</name>
+        <column id="9039" entity-name="ADColumn" identifier="Postal"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="9DAA7561864C4E7D93F2B3E62A6D710F" identifier="Document Type Name">
+        <id>9DAA7561864C4E7D93F2B3E62A6D710F</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>10</sequenceNumber>
+        <name>Document Type Name</name>
+        <column id="9036" entity-name="ADColumn" identifier="DocTypeName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="9EC7AF62B8D54EB18FF3207D04E37831" identifier="Payment Term Key">
+        <id>9EC7AF62B8D54EB18FF3207D04E37831</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>70</sequenceNumber>
+        <name>Payment Term Key</name>
+        <column id="9002" entity-name="ADColumn" identifier="PaymentTermValue"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="9F7F1696B53B401087B011EDE219C533" identifier="Order Date">
+        <id>9F7F1696B53B401087B011EDE219C533</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>80</sequenceNumber>
+        <name>Order Date</name>
+        <column id="802397" entity-name="ADColumn" identifier="DateOrdered"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="ACFE58FD930D4D2F9899E456DCE4F02B" identifier="Order Reference">
+        <id>ACFE58FD930D4D2F9899E456DCE4F02B</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>50</sequenceNumber>
+        <name>Order Reference</name>
+        <column id="802398" entity-name="ADColumn" identifier="Order_Referenceno"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="BDE39FEF4926495BA89FBFE5FE741E98" identifier="Contact Name">
+        <id>BDE39FEF4926495BA89FBFE5FE741E98</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>170</sequenceNumber>
+        <name>Contact Name</name>
+        <column id="9411" entity-name="ADColumn" identifier="ContactName"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="C001A48220374E1AACD8FBBA1F60A130" identifier="Ordered Qty">
+        <id>C001A48220374E1AACD8FBBA1F60A130</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>200</sequenceNumber>
+        <name>Ordered Qty</name>
+        <column id="9028" entity-name="ADColumn" identifier="QtyOrdered"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="CC1329FB56FA4DF99BA604C3DD546C57" identifier="Attibuteset Identification">
+        <id>CC1329FB56FA4DF99BA604C3DD546C57</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>190</sequenceNumber>
+        <name>Attibuteset Identification</name>
+        <column id="E1722FCFC2F4455289A4AE97DB56D2EF" entity-name="ADColumn" identifier="Attributesetident"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="DE4DF92D94974F89B583BC044D394576" identifier="Tax Amount">
+        <id>DE4DF92D94974F89B583BC044D394576</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>240</sequenceNumber>
+        <name>Tax Amount</name>
+        <column id="9022" entity-name="ADColumn" identifier="TaxAmt"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>N</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E455DB0A6FDA4F3187144EAEF8A643AB" identifier="City Name">
+        <id>E455DB0A6FDA4F3187144EAEF8A643AB</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>130</sequenceNumber>
+        <name>City Name</name>
+        <column id="9042" entity-name="ADColumn" identifier="City"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="E5A545B35E9A41F18F3A67AA0B61B699" identifier="Scheduled Delivery Date">
+        <id>E5A545B35E9A41F18F3A67AA0B61B699</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>90</sequenceNumber>
+        <name>Scheduled Delivery Date</name>
+        <column id="802399" entity-name="ADColumn" identifier="DatePromised"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="EE0F6E690D0649638294A33F6A3A733F" identifier="Address Line 2">
+        <id>EE0F6E690D0649638294A33F6A3A733F</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>120</sequenceNumber>
+        <name>Address Line 2</name>
+        <column id="9033" entity-name="ADColumn" identifier="Address2"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F010F406F146457DA6517E802AF86621" identifier="Address Line 1">
+        <id>F010F406F146457DA6517E802AF86621</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>110</sequenceNumber>
+        <name>Address Line 1</name>
+        <column id="9011" entity-name="ADColumn" identifier="Address1"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>S</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue xsi:nil="true"/>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F26899A553BD458083CF436025A467DF" identifier="Sales Transaction">
+        <id>F26899A553BD458083CF436025A467DF</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>30</sequenceNumber>
+        <name>Sales Transaction</name>
+        <column id="9040" entity-name="ADColumn" identifier="IsSOTrx"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>N</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+      <DataImportFormatRow id="F4D2DDF2BBAD4EC1B155B03821D70F8C" identifier="Currency ID">
+        <id>F4D2DDF2BBAD4EC1B155B03821D70F8C</id>
+        <active>true</active>
+        <importFormat id="E6C1250AF0A0411C9B477BDB46A59709" entity-name="DataImportFormat" identifier="import purchase order (IDR)"/>
+        <sequenceNumber>60</sequenceNumber>
+        <name>Currency ID</name>
+        <column id="9009" entity-name="ADColumn" identifier="C_Currency_ID"/>
+        <startingNo xsi:nil="true"/>
+        <endNo xsi:nil="true"/>
+        <dataType>C</dataType>
+        <dataFormat xsi:nil="true"/>
+        <decimalPoint>.</decimalPoint>
+        <divideBy100>false</divideBy100>
+        <constantValue>303</constantValue>
+        <calloutFunction xsi:nil="true"/>
+        <script xsi:nil="true"/>
+      </DataImportFormatRow>
+    </dataImportFormatRowList>
+  </DataImportFormat>
+</ob:Openbravo>

@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION PPH_GET_PPH21_NETT">
+    <function name="PPH_GET_PPH21_NETT" type="NULL">
+      <parameter name="p_sp_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_update" type="CHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_atas" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_bawah" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_seqno" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="employee_id" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="employeename" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="maritalstatus" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="penghasilanbruto" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="biayajabatan" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="ptkp" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="pengurangpajak" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="pkp" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="pph21dibayar" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="pph21terhutang" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="pph21terhutangbulanini" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="pph21terpotong" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_client varchar(32);
+  v_org varchar(32);
+  v_user varchar(32);
+  v_npwp VARCHAR(60);
+  v_taxmode varchar(60);
+  v_effectivedate DATE;
+  v_fiscalyear NUMBER;
+  v_fiscalmonth NUMBER;
+  v_maxbiayajabatan NUMBER;
+  v_ratebiayajabatan NUMBER;
+  v_biayajabatan_gaji NUMBER;
+  v_penghasilanditerima NUMBER;
+  v_penghasilanrealisasi NUMBER;
+  v_amt_unannualized NUMBER;
+  v_sp_employee_id varchar(32);
+  v_maritalstatus varchar(60);
+  v_biayajabatan NUMBER;
+  v_ptkp NUMBER;
+  v_pph21dibayar NUMBER;
+  v_pph21terhutang NUMBER;
+  v_pph21terhutangbulanini NUMBER;
+  v_pph21terpotong NUMBER;
+  v_emp_id varchar(32);
+  
+  v_pkp_gaji NUMBER;
+  v_pph21terhutang_gaji NUMBER;
+  
+  --record
+  CUR_TARIF RECORD;
+  CUR_TARIF_GAJI RECORD;
+ 
+BEGIN
+--validating mandatory paramter
+if p_sp_employee_id is null or
+   p_update is null
+then raise exception '@pph_nullparamconstraint@'; end if;
+
+--get effectivedate, fiscalyear dan fiscalmonth
+select sp.valutadate, sp.em_pph_taxmode, spe.c_bpartner_id into v_effectivedate, v_taxmode, v_emp_id
+from pyr_sp_employee spe
+inner join pyr_salarypayment sp on sp.pyr_salarypayment_id=spe.pyr_salarypayment_id
+where spe.pyr_sp_employee_id=p_sp_employee_id;
+
+v_fiscalmonth=date_part('month', v_effectivedate);
+v_fiscalyear=date_part('year',v_effectivedate);
+
+--get client, nama, marital status, npwp
+select ad_client_id, name, em_pph_taxmaritalstatus, taxid into v_client, employeename, v_maritalstatus, v_npwp
+from c_bpartner
+where c_bpartner_id=v_emp_id;
+maritalstatus:=v_maritalstatus;
+
+--Hitung  Pendapatan yang telah ter realisasi [semua salary payment yang closed dan pendapatan bulan ini]
+select sum(ear.amount) into v_penghasilanrealisasi
+from pyr_spe_earning ear 
+inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=ear.pyr_sp_employee_id
+inner join pyr_salarypayment sal on sal.pyr_salarypayment_id=spe.pyr_salarypayment_id
+inner join pyr_earning pe on pe.pyr_earning_id=ear.pyr_earning_id
+where (date_part('year',sal.valutadate)=v_fiscalyear
+ and date_part('month', sal.valutadate)<=v_fiscalmonth
+ and pe.em_pph_taxmode='TAXABLE'
+ and sal.docstatus='CL'
+ and spe.c_bpartner_id=v_emp_id)
+OR
+(spe.pyr_sp_employee_id=p_sp_employee_id and pe.em_pph_taxmode='TAXABLE' );
+
+penghasilanbruto:=v_penghasilanrealisasi;
+--Hitung biaya jabatan setahun (pembulatan ke bawah)
+select maximum_pkp, rate into v_maxbiayajabatan, v_ratebiayajabatan
+from pph_tarifpph21
+where ad_client_id=v_client
+and validfrom<=v_effectivedate
+and validto>=v_effectivedate
+limit 1;
+
+--==biaya jabatan dari tarif bruto ditambah penghasilan bonus
+if (v_penghasilanrealisasi*(v_ratebiayajabatan/100)>v_maxbiayajabatan) then v_biayajabatan:=v_maxbiayajabatan;
+else v_biayajabatan:=floor(v_penghasilanrealisasi*(v_ratebiayajabatan/100)); end if;
+biayajabatan:=v_biayajabatan;--biaya jabatan atas gaji dan bonus
+
+
+--hitung pengurang pajak setahun (pembulatan kebawah) [semua salary payment yang closed, dan current salary payment]
+select floor(sum(sped.amount)) into pengurangpajak 
+from pyr_spe_deduction sped 
+inner join pyr_sp_employee emp on emp.pyr_sp_employee_id=sped.pyr_sp_employee_id
+inner join pyr_salarypayment sal on sal.pyr_salarypayment_id=emp.pyr_salarypayment_id
+inner join pyr_deduction pd on pd.pyr_deduction_id=sped.pyr_deduction_id
+where (date_part('year',sal.valutadate)=v_fiscalyear
+and date_part('month', sal.valutadate)<=v_fiscalmonth
+and pd.em_pph_taxmode='DEDUCTIBLE'
+and sal.docstatus='CL'
+and emp.c_bpartner_id=v_emp_id)
+OR
+(emp.pyr_sp_employee_id=p_sp_employee_id
+ and pd.em_pph_taxmode='DEDUCTIBLE');
+
+
+--keluarkan employee id
+employee_id:=v_emp_id;
+
+--get ptkp setahun
+select (case maritalstatus
+	when 'TK' then t0
+	when 'K/0' then k0
+	when 'K/1' then k1
+	when 'K/2' then k2
+	when 'K/3' then k3
+	when 'K/4' then k3
+	else 0
+	end) into v_ptkp
+
+from pph_set_ptkp
+where ad_client_id=v_client
+and validfrom<=v_effectivedate
+and validto>=v_effectivedate
+limit 1;
+
+ptkp:=v_ptkp/12*v_fiscalmonth;
+if ptkp=0 then raise exception 'tidak ditemukan PTKP dengan status perkawinan menurut pajak: %',maritalstatus; end if;
+
+--hitung pkp setahun (pembulatan keatas)
+pkp:=ceil(v_penghasilanrealisasi-(biayajabatan+pengurangpajak+ptkp));
+IF pkp<0 then pkp:=0; end if;
+--raise notice 'pkp setahun: %, v_penghasilanbrutosetahun: %, biayajabatan, %, pengurangpajak: %, ptkp: %',pkp, v_penghasilanbrutosetahun, biayajabatan, pengurangpajak,ptkp;
+
+RAISE NOTICE 'realisasi:%,a:%,b:%,c:%',v_penghasilanrealisasi,biayajabatan,pengurangpajak,ptkp;
+
+--hitung pph21 terhutang setahun (pembulatan keatas)
+v_pph21terhutang:=0;
+
+FOR CUR_TARIF IN( select validfrom, validto, lowerbound, uperbound, progresiverate
+			from pph_tarifprogresif
+			where validfrom<=v_effectivedate
+			and validto>=v_effectivedate
+			order by validfrom asc, lowerbound asc)
+LOOP
+	IF pkp <= CUR_TARIF.uperbound 
+	then 
+	  v_pph21terhutang:=v_pph21terhutang+(pkp-CUR_TARIF.lowerbound)*CUR_TARIF.progresiverate/100; 
+	  --raise notice 'v_pph21terhutang: %',v_pph21terhutang;
+	  exit;
+	else
+	  v_pph21terhutang:=v_pph21terhutang+(CUR_TARIF.uperbound-CUR_TARIF.lowerbound)*CUR_TARIF.progresiverate/100;
+	  --raise notice 'v_pph21terhutang: %',v_pph21terhutang;
+	END IF;
+
+END LOOP;
+
+v_pph21terhutang:=ceil(v_pph21terhutang);
+pph21terhutang:=v_pph21terhutang;--==pph terhutang atas bonus dan gaji
+
+--hitung pph atas gaji
+--ambil bruto gaji
+select sum(ear.amount) into v_penghasilanditerima
+from pyr_spe_earning ear 
+inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=ear.pyr_sp_employee_id
+inner join pyr_salarypayment sal on sal.pyr_salarypayment_id=spe.pyr_salarypayment_id
+inner join pyr_earning pe on pe.pyr_earning_id=ear.pyr_earning_id
+where date_part('year',sal.valutadate)=v_fiscalyear
+ and date_part('month', sal.valutadate)<=v_fiscalmonth
+ and pe.em_pph_taxmode='TAXABLE'
+ and sal.docstatus='CL'
+ and spe.c_bpartner_id=v_emp_id;
+--biaya jabatan atas gaji
+if (v_penghasilanditerima*(v_ratebiayajabatan/100)>v_maxbiayajabatan) then v_biayajabatan_gaji:=v_maxbiayajabatan;
+else v_biayajabatan_gaji:=floor(v_penghasilanditerima*(v_ratebiayajabatan/100)); end if;
+
+v_pkp_gaji:=ceil(v_penghasilanditerima-(v_biayajabatan_gaji+pengurangpajak+ptkp));
+
+--hitung tarif
+v_pph21terhutang_gaji:=0;
+FOR CUR_TARIF_GAJI IN( select validfrom, validto, lowerbound, uperbound, progresiverate
+			from pph_tarifprogresif
+			where validfrom<=v_effectivedate
+			and validto>=v_effectivedate
+			order by validfrom asc, lowerbound asc)
+LOOP
+	IF v_pkp_gaji <= CUR_TARIF_GAJI.uperbound 
+	then 
+	  v_pph21terhutang_gaji:=v_pph21terhutang_gaji+(v_pkp_gaji-CUR_TARIF.lowerbound)*CUR_TARIF.progresiverate/100; 
+	  --raise notice 'v_pph21terhutang: %',v_pph21terhutang;
+	  exit;
+	else
+	  v_pph21terhutang_gaji:=v_pph21terhutang_gaji+(CUR_TARIF.uperbound-CUR_TARIF.lowerbound)*CUR_TARIF.progresiverate/100;
+	  --raise notice 'v_pph21terhutang: %',v_pph21terhutang;
+	END IF;
+
+END LOOP;
+
+pph21terhutangbulanini:=v_pph21terhutang;
+pph21dibayar:=v_pph21terhutang_gaji;
+pph21terpotong:=v_pph21terhutang-v_pph21terhutang_gaji;
+
+raise notice 'terhutangbln:%,dibayar:%,terpotong:%',pph21terhutangbulanini,pph21dibayar,pph21terpotong;
+
+if v_npwp is null then pph21terpotong:=ceil(pph21terpotong+(pph21terpotong*(20/100))); end if;
+v_pph21terpotong:=pph21terpotong;
+--IF update=Y maka update log PPh21 bulanan dan potongan PPh21
+if p_update='Y' then 
+
+  --memasukkan data pph_get_pph21 ke table pph_pph21
+  select pyr_sp_employee_id into v_sp_employee_id
+  from pph_pph21 where pyr_sp_employee_id=p_sp_employee_id;
+
+  --get org dan createdby di salary payment employee
+  select ad_org_id, createdby into v_org, v_user
+  from pyr_sp_employee
+  where pyr_sp_employee_id=p_sp_employee_id;
+
+  --IF v_sp_employee_id null, maka belum ada record di tab pph21, maka insert. else: update.
+  if v_sp_employee_id is null then 
+    INSERT
+    INTO pph_pph21
+    (
+     pph_pph21_id, AD_Client_ID, AD_Org_ID, IsActive, Created,
+     CreatedBy, Updated, UpdatedBy, c_bpartner_id, pyr_sp_employee_id, 
+     MaritalStatus, PenghasilanBruto, BiayaJabatan, Ptkp, 
+     pkpsetahun, pph21bonus,
+     month, year,taxmode
+    )
+    VALUES
+    (
+     get_uuid(), v_client, v_org,  'Y', now(),
+     v_user, now(),  v_user, v_emp_id, p_sp_employee_id, 
+     maritalstatus, penghasilanbruto, biayajabatan, ptkp, pkp, pph21terpotong,
+     v_fiscalmonth, v_fiscalyear,v_taxmode
+    );
+  else
+    update pph_pph21
+    set	ad_client_id=v_client, ad_org_id=v_org, isactive='Y',
+	c_bpartner_id=v_emp_id,
+	updated=now(), updatedby=v_user, maritalstatus=v_maritalstatus, biayajabatan=v_biayajabatan, ptkp=v_ptkp,
+	pph21bonus=v_pph21terpotong, month=v_fiscalmonth, year=v_fiscalyear ,taxmode=v_taxmode
+    where pyr_sp_employee_id=p_sp_employee_id;
+  end if; --end IF v_sp_employee_id null, maka belum ada record di tab 1721, maka insert. else: update.
+  raise notice '%','ini insert';
+--update amount potongan pajak, hardcode searchkey pada deduction harus PPH21.
+  update pyr_spe_deduction
+  set amount=pph21terpotong
+  where pyr_deduction_id = (select pyr_deduction_id
+			    from pyr_deduction
+			    where value='PPH21'
+			    and ad_client_id=v_client
+			    limit 1)
+  and pyr_sp_employee_id=p_sp_employee_id;
+end if; --end IF update=Y maka update log PPh21 bulanan dan potongan PPh21
+
+
+RETURN;
+END PPH_GET_PPH21_NETT
+]]></body>
+    </function>
+  </database>

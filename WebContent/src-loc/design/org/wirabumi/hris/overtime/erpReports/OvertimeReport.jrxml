@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="overtimeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0bc09bc2-8799-41fc-be75-86b260185ef0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pyr_salarypayment_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[new String ("")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BASE_DESIGN" class="java.lang.String">
+		<defaultValueExpression><![CDATA[new String("/home/administrator/openbravo/openbravo/modules/org.wirabumi.hris.overtime/src")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select bp.value||'-'|| bp.name as "nik/nama", ot.amount as "tarif", ot.validrequstfinish as "valid sampai", ot.validrequeststart as "valid mulai", sp.name as "pembayaran gaji"
+from ot_overtime ot
+left join c_bpartner bp on bp.c_bpartner_id = ot.c_bpartner_id
+left join pyr_salarypayment sp on sp.pyr_salarypayment_id = ot.pyr_salarypayment_id
+where sp.pyr_salarypayment_id =$P{pyr_salarypayment_id} and ot.amount <> 0
+order by bp.c_bpartner_id]]>
+	</queryString>
+	<field name="nik/nama" class="java.lang.String"/>
+	<field name="tarif" class="java.math.BigDecimal"/>
+	<field name="valid sampai" class="java.sql.Timestamp"/>
+	<field name="valid mulai" class="java.sql.Timestamp"/>
+	<field name="pembayaran gaji" class="java.lang.String"/>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="211" height="20" uuid="2e8ee616-68ca-4df5-9fde-5a439924a5f4"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMBAYARAN BULAN: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement key="textField" x="211" y="0" width="344" height="20" uuid="5e7ff03b-f035-4e1d-a485-205089ea13cb"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pembayaran gaji}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="179" height="26" uuid="ef3c08fb-657f-4b4b-9e97-3054c1f259c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Garuda" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NIK / Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="0" width="140" height="26" uuid="3bc1fef6-9f09-47f3-88d2-c6e0a47f6443"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="12"/>
+				</textElement>
+				<text><![CDATA[Valid Mulai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="0" width="136" height="26" uuid="bd056c27-d747-4d17-ac78-3a7c4ee81893"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="12"/>
+				</textElement>
+				<text><![CDATA[Valid Sampai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="26" uuid="5c8cc6cc-a350-4d50-832f-d241d9a3d45b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="12"/>
+				</textElement>
+				<text><![CDATA[Tarif]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="19">
+			<textField>
+				<reportElement key="textField" x="0" y="0" width="179" height="19" uuid="c884bfaf-f547-499f-a446-d66842a36f5b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nik/nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="textField" x="179" y="0" width="140" height="19" uuid="209cc640-f0f2-45df-819f-f00365884cf8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valid mulai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="textField" x="319" y="0" width="136" height="19" uuid="ac728485-9843-4146-ac44-9e820bbb5c23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valid sampai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="textField" x="455" y="0" width="100" height="19" uuid="b4047cbc-a7c1-4c18-b742-86abe14b0eba"/>
+				<textElement textAlignment="Center">
+					<font fontName="Garuda" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarif}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

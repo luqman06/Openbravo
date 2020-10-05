@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="1D77B98A285147EA835AF9D50C4BE902" trl="N">
+    <value column="Name" isTrl="N" original="Shift">Shift</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2DE0CB2E028D4DE5A9BB5715F4F279FC" trl="N">
+    <value column="Name" isTrl="N" original="Attendance">Attendance</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="45AABF472AA44F8CB0E35F66F61D7014" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potong Gaji">Akumulasi Potong Gaji</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="52BF04F6B74C4F528EB3E0E0A914CCC6" trl="Y">
+    <value column="Name" isTrl="Y" original="Line">Baris</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="60233EDD8C0A4E41B7B25B0C6F7D6FCF" trl="N">
+    <value column="Name" isTrl="N" original="Shift">Shift</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="67E505CDCE2549E690E7E677DA3E16D3" trl="N">
+    <value column="Name" isTrl="N" original="Shift">Shift</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AD293A02867442D39D0A115ADFC4DD79" trl="N">
+    <value column="Name" isTrl="Y" original="Lines">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CBE76151738346B49FB9DBC4F71230AE" trl="N">
+    <value column="Name" isTrl="N" original="Labour Time Master">Labour Time Master</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D20095F1275B4B03B13EC2A242F3DD0E" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potong Cuti">Akumulasi Potong Cuti</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D220ADD1B4F64CE69BEC9791C21ECC1C" trl="N">
+    <value column="Name" isTrl="Y" original="Lines">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D4A01B99A91E464DA3D5880868F83E5C" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F2C43D8BBB1244618A3B50CE13F98CCD" trl="N">
+    <value column="Name" isTrl="N" original="Tukar Shift">Tukar Shift</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

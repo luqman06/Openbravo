@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="01EAF61F9C944114AAFF49294E43B057" trl="N">
+    <value column="Text" isTrl="N" original="BIAYA JABATAN / BIAYA PENSIUN ATAS PENGHASILAN PADA ANGKA 7">BIAYA JABATAN / BIAYA PENSIUN ATAS PENGHASILAN PADA ANGKA 7</value>
+  </row>
+  <row id="0208F076225941A6B2EA348D050805D8" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH TANGGUNGAN KELUARGA UNTUK PTKP">JUMLAH TANGGUNGAN KELUARGA UNTUK PTKP</value>
+  </row>
+  <row id="0406E9350E34485D95E250BD44D95C7D" trl="N">
+    <value column="Text" isTrl="N" original="PEREMPUAN">PEREMPUAN</value>
+  </row>
+  <row id="0467097CE64E47998C903BC460873FC6" trl="N">
+    <value column="Text" isTrl="N" original="LAPORAN BULANAN PAJAK PENGHASILAN PASAL 21 PER ORANG">LAPORAN BULANAN PAJAK PENGHASILAN PASAL 21 PER ORANG</value>
+  </row>
+  <row id="04A72A84B76044FA9E52AD2A61E458F7" trl="N">
+    <value column="Text" isTrl="N" original="A. RINCIAN PENGHASILAN DAN PENGHITUNGAN PPh PASAL 21 SEBAGAI BERIKUT :">A. RINCIAN PENGHASILAN DAN PENGHITUNGAN PPh PASAL 21 SEBAGAI BERIKUT :</value>
+  </row>
+  <row id="0847408FD69A400CA0A269FBA80B4941" trl="N">
+    <value column="Text" isTrl="N" original="HB/">HB/</value>
+  </row>
+  <row id="0ABADADB515841F497E8B36E210C90E9" trl="N">
+    <value column="Text" isTrl="N" original="K">K</value>
+  </row>
+  <row id="100719E034574648AE89C47E4706A0CA" trl="N">
+    <value column="Text" isTrl="N" original="KODE OBJEK PAJAK">KODE OBJEK PAJAK</value>
+  </row>
+  <row id="1097BEC180C4472A841E1D7807287894" trl="N">
+    <value column="Text" isTrl="N" original="a. DIPOTONG DARI PEMBAYARAN GAJI">a. DIPOTONG DARI PEMBAYARAN GAJI</value>
+  </row>
+  <row id="10BB934218064570A1334F1D383C940F" trl="N">
+    <value column="Text" isTrl="N" original="Lembar 1 untuk Pegawai Lembar 2 untuk Pemotong Pajak">Lembar 1 untuk Pegawai Lembar 2 untuk Pemotong Pajak</value>
+  </row>
+  <row id="16F5E472DF78459DABFBBE001CF7B189" trl="N">
+    <value column="Text" isTrl="N" original="C">C</value>
+  </row>
+  <row id="17544ECFD4774959B9DB7D15B89C4B01" trl="N">
+    <value column="Text" isTrl="N" original="RUPIAH">RUPIAH</value>
+  </row>
+  <row id="19FFA00CED0E4FE6936DDAF7552B1E1D" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN TIDAK KENA PAJAK (PTKP)">PENGHASILAN TIDAK KENA PAJAK (PTKP)</value>
+  </row>
+  <row id="1BD4EA061FAA4E66BB1EE17FFB110D2B" trl="N">
+    <value column="Text" isTrl="N" original="E">E</value>
+  </row>
+  <row id="1C5E78B0099F4F37BDA4638C17A05EC9" trl="N">
+    <value column="Text" isTrl="N" original="E">E</value>
+  </row>
+  <row id="1EB034AB4F184F79838555AE3F808A07" trl="N">
+    <value column="Text" isTrl="N" original="TUNJANGAN PPh">TUNJANGAN PPh</value>
+  </row>
+  <row id="22C051140AD64217985AF02D126C2A10" trl="N">
+    <value column="Text" isTrl="N" original="KAWIN">KAWIN</value>
+  </row>
+  <row id="22CE2C1BDF0A440681FE9AF421A257DC" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH TERSEBUT PADA ANGKA 23 TELAH">JUMLAH TERSEBUT PADA ANGKA 23 TELAH</value>
+  </row>
+  <row id="24ECA949CECF43669A2E7F0B400D5867" trl="N">
+    <value column="Text" isTrl="N" original="D">D</value>
+  </row>
+  <row id="299D1726B7AD474E906C6BEC1BC102F8" trl="N">
+    <value column="Text" isTrl="N" original="NAMA LENGKAP">NAMA LENGKAP</value>
+  </row>
+  <row id="2A09CE55F166484DA17EC185FD433973" trl="N">
+    <value column="Text" isTrl="N" original="A">A</value>
+  </row>
+  <row id="2A31CB7BC034442F98D131F61CE32940" trl="N">
+    <value column="Text" isTrl="N" original="NPWP PEGAWAI ATAU PENERIMA PENSIUN/THT/JHT">NPWP PEGAWAI ATAU PENERIMA PENSIUN/THT/JHT</value>
+  </row>
+  <row id="2AAC6CB16D3D4FF78477A963B4324FA7" trl="N">
+    <value column="Text" isTrl="N" original="TAHUN KALENDER">TAHUN KALENDER</value>
+  </row>
+  <row id="2C9E3879DACB4F32B8664AC8679FA53B" trl="N">
+    <value column="Text" isTrl="N" original="JABATAN">JABATAN</value>
+  </row>
+  <row id="3567F9A3CD4E4D3D8FEBA31657F337A8" trl="N">
+    <value column="Text" isTrl="N" original="GAJI / PENSIUN ATAU THT / JHT">GAJI / PENSIUN ATAU THT / JHT</value>
+  </row>
+  <row id="35E8276D978A469AA0401B65508305F6" trl="N">
+    <value column="Text" isTrl="N" original="PT. SEMEN BATURAJA (PERSERO) TBK">PT. SEMEN BATURAJA (PERSERO) TBK</value>
+  </row>
+  <row id="38489FA27487422A946C86F22467DEAA" trl="N">
+    <value column="Text" isTrl="N" original="NAMA PEGAWAI ATAU PENERIMA PENSIUN/THT/JHT">NAMA PEGAWAI ATAU PENERIMA PENSIUN/THT/JHT</value>
+  </row>
+  <row id="3B33B5E2D6E34536862A5569789859CD" trl="N">
+    <value column="Text" isTrl="N" original="TAHUN">TAHUN</value>
+  </row>
+  <row id="3C07F0BE9BEF49A69C93DEDE8EAAF3C1" trl="N">
+    <value column="Text" isTrl="N" original="PT. SEMEN BATURAJA (PERSERO) TBK">PT. SEMEN BATURAJA (PERSERO) TBK</value>
+  </row>
+  <row id="3CB66AD329F14F408FC834F7825C7B5E" trl="N">
+    <value column="Text" isTrl="N" original="BUKTI PEMOTONGAN PAJAK PENGHASILAN PASAL 21 BAGI PEGAWAI TETAP ATAU PENERIMA PENSIUN ATAU TUNJANGAN HARI TUA/TABUNGAN HARI TUA/JAMINAN HARI TUA">BUKTI PEMOTONGAN PAJAK PENGHASILAN PASAL 21 BAGI PEGAWAI TETAP ATAU PENERIMA PENSIUN ATAU TUNJANGAN HARI TUA/TABUNGAN HARI TUA/JAMINAN HARI TUA</value>
+  </row>
+  <row id="3F1C1E51951B4801BF15A62049AD51FC" trl="N">
+    <value column="Text" isTrl="N" original="IURAN PENSIUN ATAU IURAN THT/ JHT">IURAN PENSIUN ATAU IURAN THT/ JHT</value>
+  </row>
+  <row id="407F6F96894C49F99BBB35BD78E51C0E" trl="N">
+    <value column="Text" isTrl="N" original="F">F</value>
+  </row>
+  <row id="4511458A5D374F2DB49E8EBEF7A3A3C3" trl="N">
+    <value column="Text" isTrl="N" original="SITE">SITE</value>
+  </row>
+  <row id="45374BA1715F4BC593A6194BFE45FA58" trl="N">
+    <value column="Text" isTrl="N" original="NAMA">NAMA</value>
+  </row>
+  <row id="468AD62E891A454ABF3475B29A945520" trl="N">
+    <value column="Text" isTrl="N" original="Dipotong dan dilunasi dengan SSP PPh Pasal 21 Ditanggung Pemerintah">Dipotong dan dilunasi dengan SSP PPh Pasal 21 Ditanggung Pemerintah</value>
+  </row>
+  <row id="4A34EA3027334A95B42996A34D95E467" trl="N">
+    <value column="Text" isTrl="N" original="MASA PEROLEHAN PENGHASILAN :">MASA PEROLEHAN PENGHASILAN :</value>
+  </row>
+  <row id="4E54A1D0D5624558BAFD36CBD23EBDAD" trl="N">
+    <value column="Text" isTrl="N" original="C">C</value>
+  </row>
+  <row id="5241477DCB594631A187882A4ECC8C04" trl="N">
+    <value column="Text" isTrl="N" original="TGL">TGL</value>
+  </row>
+  <row id="57EA8A01C78046B79DE6AD9F42AFB62D" trl="N">
+    <value column="Text" isTrl="N" original="1721 - A1">1721 - A1</value>
+  </row>
+  <row id="590637A29C9949E9AEBF6DB4DE4C5CB6" trl="N">
+    <value column="Text" isTrl="N" original="HONORARIUM DAN IMBALAN LAIN SEJENISNYA">HONORARIUM DAN IMBALAN LAIN SEJENISNYA</value>
+  </row>
+  <row id="59EA9084EBB94A4FB1AA311EEDFDD543" trl="N">
+    <value column="Text" isTrl="N" original="BLN">BLN</value>
+  </row>
+  <row id="5D10F6E18D9D4886AD900F0AFCCDFD38" trl="N">
+    <value column="Text" isTrl="N" original="PPh PASAL 21 YANG TELAH DIPOTONG MASA SEBELUMNYA">PPh PASAL 21 YANG TELAH DIPOTONG MASA SEBELUMNYA</value>
+  </row>
+  <row id="657F52CCDCB44D978DC4B27EE7860C45" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN NETO MASA SEBELUMNYA">PENGHASILAN NETO MASA SEBELUMNYA</value>
+  </row>
+  <row id="6703509073044A9BB3012BFDDBC463EC" trl="N">
+    <value column="Text" isTrl="N" original="PAJAK PENGHASILAN TERHUTANG">PAJAK PENGHASILAN TERHUTANG</value>
+  </row>
+  <row id="69C6369DADE740178F3BD78CB214E562" trl="N">
+    <value column="Text" isTrl="N" original="PREMI ASURANSI YANG DIBAYAR PEMBERI KERJA">PREMI ASURANSI YANG DIBAYAR PEMBERI KERJA</value>
+  </row>
+  <row id="6C59F02A4A58486FAF4CAB374853E0BB" trl="N">
+    <value column="Text" isTrl="N" original="K/">K/</value>
+  </row>
+  <row id="6D028B8D150246A7A75C9E9AE30992B5" trl="N">
+    <value column="Text" isTrl="N" original="G">G</value>
+  </row>
+  <row id="6D7C751A757341D7863B3A28385F6BB4" trl="N">
+    <value column="Text" isTrl="N" original="b. DIPERHITUNGKAN DENGAN PPh PASAL 21">b. DIPERHITUNGKAN DENGAN PPh PASAL 21</value>
+  </row>
+  <row id="6DD07459C6C745F8B071C3D38FA3987A" trl="N">
+    <value column="Text" isTrl="N" original="• PENGHITUNGAN PPh PASAL 21 :">• PENGHITUNGAN PPh PASAL 21 :</value>
+  </row>
+  <row id="6F1144C5A1514D57BFB396AC139D04D7" trl="N">
+    <value column="Text" isTrl="N" original="G">G</value>
+  </row>
+  <row id="6F4DACD42BC743CE883FDB796585BC94" trl="N">
+    <value column="Text" isTrl="N" original="J">J</value>
+  </row>
+  <row id="7018775A70884F91885255A77994D286" trl="N">
+    <value column="Text" isTrl="N" original="LAKI-LAKI">LAKI-LAKI</value>
+  </row>
+  <row id="70AA7BE4086C44D489D23F1B810A1BE8" trl="N">
+    <value column="Text" isTrl="N" original="BIAYA JABATAN / BIAYA PENSIUN ATAS PENGHASILAN PADA ANGKA 8">BIAYA JABATAN / BIAYA PENSIUN ATAS PENGHASILAN PADA ANGKA 8</value>
+  </row>
+  <row id="74A9B6BBCFD049AE90D8468D9FA3AF6E" trl="N">
+    <value column="Text" isTrl="N" original="PPh PASAL 21 TERUTANG">PPh PASAL 21 TERUTANG</value>
+  </row>
+  <row id="77995582C5F141C7935FB526A1DF3BD3" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH PENGURANGAN (10 + 11 + 12)">JUMLAH PENGURANGAN (10 + 11 + 12)</value>
+  </row>
+  <row id="80FD2C0F907C4B1E9A56612CE5B001A4" trl="N">
+    <value column="Text" isTrl="N" original="NAMA PEMOTONG PAJAK">NAMA PEMOTONG PAJAK</value>
+  </row>
+  <row id="8440916B9C1349CE8A2B6CC65CB89D8D" trl="N">
+    <value column="Text" isTrl="N" original="b. YANG LEBIH DIPOTONG (22 - 21)">b. YANG LEBIH DIPOTONG (22 - 21)</value>
+  </row>
+  <row id="88CE173D7FB042C59277A213BFCF2513" trl="N">
+    <value column="Text" isTrl="N" original="TIDAK KAWIN">TIDAK KAWIN</value>
+  </row>
+  <row id="8944D63A73DD4839808426BFC46F68D8" trl="N">
+    <value column="Text" isTrl="N" original="POTONGAN">POTONGAN</value>
+  </row>
+  <row id="899AD0D55226432F8C34FD337CDB6634" trl="N">
+    <value column="Text" isTrl="N" original="PENERIMAAN DALAM BENTUK NATURA DAN KENIKMATAN LAINNYA YANG DIKENAKAN PEMOTONGAN PPh PASAL 21">PENERIMAAN DALAM BENTUK NATURA DAN KENIKMATAN LAINNYA YANG DIKENAKAN PEMOTONGAN PPh PASAL 21</value>
+  </row>
+  <row id="8BBF7D6037F14969BF65FB11A36AB808" trl="N">
+    <value column="Text" isTrl="N" original="PAJAK PENGHASILAN TERHUTANGNG">PAJAK PENGHASILAN TERHUTANGNG</value>
+  </row>
+  <row id="8DBC2208328643BF9ECF7D14219B47B7" trl="N">
+    <value column="Text" isTrl="N" original="ALAMAT PEGAWAI ATAU PENERIMA PENSIUN/THT/JHT">ALAMAT PEGAWAI ATAU PENERIMA PENSIUN/THT/JHT</value>
+  </row>
+  <row id="8E2EF35F6C0F417ABD9D5CA8F5D5527E" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH PENGHASILAN NETO UNTUK PENGHITUNGAN PPh PASAL 21 (SETAHUN/DISETAHUNKAN)">JUMLAH PENGHASILAN NETO UNTUK PENGHITUNGAN PPh PASAL 21 (SETAHUN/DISETAHUNKAN)</value>
+  </row>
+  <row id="8E4BA1093313446E87524B3861665AC3" trl="N">
+    <value column="Text" isTrl="N" original="DASAR PERHITUNGAN PAJAK">DASAR PERHITUNGAN PAJAK</value>
+  </row>
+  <row id="91C6868D48614C1A8671C700EEF65012" trl="N">
+    <value column="Text" isTrl="N" original="H">H</value>
+  </row>
+  <row id="926BE2C6C9E44670819C41B849AD21F5" trl="N">
+    <value column="Text" isTrl="N" original="B. TANDA TANGAN DAN CAP PERUSAHAAN">B. TANDA TANGAN DAN CAP PERUSAHAAN</value>
+  </row>
+  <row id="9DFD8124ED86485A88D3A0F0098AD3B1" trl="N">
+    <value column="Text" isTrl="N" original="TANTIEM, BONUS, GRATIFIKASI, JASA PRODUKSI, DAN THR">TANTIEM, BONUS, GRATIFIKASI, JASA PRODUKSI, DAN THR</value>
+  </row>
+  <row id="9E5EAE329F524C34A667BCB40776DF10" trl="N">
+    <value column="Text" isTrl="N" original="• PENGHASILAN BRUTO :">• PENGHASILAN BRUTO :</value>
+  </row>
+  <row id="9F45243B91394997B01F99837D84050E" trl="N">
+    <value column="Text" isTrl="N" original="I">I</value>
+  </row>
+  <row id="A066B384259D4B978252477F2A5054A2" trl="N">
+    <value column="Text" isTrl="N" original="THN">THN</value>
+  </row>
+  <row id="A06FF1FBD73B4D92A7E4C4D83E70276F" trl="N">
+    <value column="Text" isTrl="N" original="KARYAWAN ASING">KARYAWAN ASING</value>
+  </row>
+  <row id="A0E8FA01AA0C4DEE9776141716937870" trl="N">
+    <value column="Text" isTrl="N" original="PPh PASAL 21 DAN PPh PASAL 26 YANG TELAH DIPOTONG DAN DILUNASI">PPh PASAL 21 DAN PPh PASAL 26 YANG TELAH DIPOTONG DAN DILUNASI</value>
+  </row>
+  <row id="A242AD6B53524363A8421EB37EF28E10" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN BRUTO">PENGHASILAN BRUTO</value>
+  </row>
+  <row id="A33AF4B1A6CE42A79A707E4BF7F538DA" trl="N">
+    <value column="Text" isTrl="N" original="• PENGURANGAN :">• PENGURANGAN :</value>
+  </row>
+  <row id="A58E3CA314FB461F8BC09474F56626BD" trl="N">
+    <value column="Text" isTrl="N" original="D">D</value>
+  </row>
+  <row id="A60A29F2973F487798D00BFD52C28958" trl="N">
+    <value column="Text" isTrl="N" original="22b.">22b.</value>
+  </row>
+  <row id="A8370874B95C4E6B9B2A0C618F442C22" trl="N">
+    <value column="Text" isTrl="N" original="Dipotong dan dilunasi dengan SSP">Dipotong dan dilunasi dengan SSP</value>
+  </row>
+  <row id="B19882CFA795420F8012D374D2299400" trl="N">
+    <value column="Text" isTrl="N" original="F">F</value>
+  </row>
+  <row id="B43EC24631854FBFAE758ADDD02A8B46" trl="N">
+    <value column="Text" isTrl="N" original="BULAN">BULAN</value>
+  </row>
+  <row id="B78723F6BD30452795B82819D472CCFA" trl="N">
+    <value column="Text" isTrl="N" original="PEMOTONG PAJAK">PEMOTONG PAJAK</value>
+  </row>
+  <row id="B813D761D9B4465580C8F444AF1D122F" trl="N">
+    <value column="Text" isTrl="N" original="DASAR PERHITUNGAN PAJAK">DASAR PERHITUNGAN PAJAK</value>
+  </row>
+  <row id="BE84A4AFF4664DD89E327F8FE7DE1551" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN BRUTO">PENGHASILAN BRUTO</value>
+  </row>
+  <row id="C353F00D172C4BF5B9EF781034769AF4" trl="N">
+    <value column="Text" isTrl="N" original="KUASA">KUASA</value>
+  </row>
+  <row id="C4910AB4097D4D4AA167964EF931637C" trl="N">
+    <value column="Text" isTrl="N" original="STATUS, JENIS KELAMIN DAN KARYAWAN ASING">STATUS, JENIS KELAMIN DAN KARYAWAN ASING</value>
+  </row>
+  <row id="C59A2A6353D14C6B9EE79462DC224C11" trl="N">
+    <value column="Text" isTrl="N" original="B">B</value>
+  </row>
+  <row id="C5D14DB91E294796961904799291C383" trl="N">
+    <value column="Text" isTrl="N" original="FORMULIR">FORMULIR</value>
+  </row>
+  <row id="C639D9F8F8284ABD9CA8806C6A085761" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH PENGHASILAN NETO (9 - 13)">JUMLAH PENGHASILAN NETO (9 - 13)</value>
+  </row>
+  <row id="C837F52FF7D24023B3342B03DCB57CAB" trl="N">
+    <value column="Text" isTrl="N" original="DEPARTEMEN KEUANGAN RI DIREKTORAT JENDERAL PAJAK">DEPARTEMEN KEUANGAN RI DIREKTORAT JENDERAL PAJAK</value>
+  </row>
+  <row id="CC4AFB82D5F644C687B40C3ADF6CC811" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH (1 s.d. 6)">JUMLAH (1 s.d. 6)</value>
+  </row>
+  <row id="CE1A148741B0479899668CD913C32EE9" trl="N">
+    <value column="Text" isTrl="N" original="PENERIMA PENGHASILAN">PENERIMA PENGHASILAN</value>
+  </row>
+  <row id="CF2A9CBA95C248538F1FC62A576746B2" trl="N">
+    <value column="Text" isTrl="N" original="PPh PASAL 21 ATAS PENGHASILAN KENA PAJAK SETAHUN/DISETAHUNKAN">PPh PASAL 21 ATAS PENGHASILAN KENA PAJAK SETAHUN/DISETAHUNKAN</value>
+  </row>
+  <row id="CFAA06D4D944450F9CCF3F64F373A750" trl="N">
+    <value column="Text" isTrl="N" original="H">H</value>
+  </row>
+  <row id="D190AFFD78BA45FCA4BF6E7854DF2274" trl="N">
+    <value column="Text" isTrl="N" original="LAPORAN BULANAN PAJAK PENGHASILAN PASAL 21 PER ORANG">LAPORAN BULANAN PAJAK PENGHASILAN PASAL 21 PER ORANG</value>
+  </row>
+  <row id="D2E6958082A8413C9A1D6D81B0C35DFC" trl="N">
+    <value column="Text" isTrl="N" original="A">A</value>
+  </row>
+  <row id="D71E91C8802743BCA5A384E11196D82D" trl="N">
+    <value column="Text" isTrl="N" original="a. YANG KURANG DIPOTONG (21 - 22)">a. YANG KURANG DIPOTONG (21 - 22)</value>
+  </row>
+  <row id="D85B58B016DE4CA594D7FAC4B02E905B" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN KENA PAJAK SETAHUN / DISETAHUNKAN (16 - 17)">PENGHASILAN KENA PAJAK SETAHUN / DISETAHUNKAN (16 - 17)</value>
+  </row>
+  <row id="D9E7B9C92DA643FB9E9A9741D89D973D" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN NETTO">PENGHASILAN NETTO</value>
+  </row>
+  <row id="DBD1728035A14E1DB6CC2E6A8BB391A7" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH PENGHASILAN BRUTO (7 + 8)">JUMLAH PENGHASILAN BRUTO (7 + 8)</value>
+  </row>
+  <row id="DD9FBC8E0C31443580686C89B718B99A" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN NETTO">PENGHASILAN NETTO</value>
+  </row>
+  <row id="E0A598FA4282421581B944452B2CE677" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN TIDAK TERATUR">PENGHASILAN TIDAK TERATUR</value>
+  </row>
+  <row id="E0B96452897047D4BC6C31006EB458B6" trl="N">
+    <value column="Text" isTrl="N" original="NOMOR URUT">NOMOR URUT</value>
+  </row>
+  <row id="E2F33D01002F4C71BB305D39CF58EB30" trl="N">
+    <value column="Text" isTrl="N" original="TK/">TK/</value>
+  </row>
+  <row id="E8DC00FD15454DAEBBF86351512E7112" trl="N">
+    <value column="Text" isTrl="N" original="POTONGAN">POTONGAN</value>
+  </row>
+  <row id="EB8E5275307B41EFBCD8A2F97786A453" trl="N">
+    <value column="Text" isTrl="N" original="NPWP">NPWP</value>
+  </row>
+  <row id="EDCF801471B94F9E98BBF54DA367CAFC" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="EE29811535654EB08F77ED15E6CB3740" trl="N">
+    <value column="Text" isTrl="N" original="22a.">22a.</value>
+  </row>
+  <row id="EF09441951B54C23B8DFC4D6EC3CD6DA" trl="N">
+    <value column="Text" isTrl="N" original="PAJAK PENGHASILAN BULAN INI">PAJAK PENGHASILAN BULAN INI</value>
+  </row>
+  <row id="EF4A8B168C7B4008B2EF793A8E67E3AD" trl="N">
+    <value column="Text" isTrl="N" original="PENGHASILAN TIDAK TERTAUR">PENGHASILAN TIDAK TERTAUR</value>
+  </row>
+  <row id="F1F7CB90DB1F4B85B6823800CFD253F5" trl="N">
+    <value column="Text" isTrl="N" original="NPWP PEMOTONG PAJAK">NPWP PEMOTONG PAJAK</value>
+  </row>
+  <row id="F291B99CFC9341C99EEB31BF8C5D25FF" trl="N">
+    <value column="Text" isTrl="N" original="S. D">S. D</value>
+  </row>
+  <row id="F2AF0F49B97C44A1B0CEF1B8EBFE5EF0" trl="N">
+    <value column="Text" isTrl="N" original="PAJAK PENGHASILAN BULAN INI">PAJAK PENGHASILAN BULAN INI</value>
+  </row>
+  <row id="F2FE01B0F6B542F5A105AEECA1237309" trl="N">
+    <value column="Text" isTrl="N" original="B">B</value>
+  </row>
+  <row id="F72B0CE7E634431F869E4080A3133484" trl="N">
+    <value column="Text" isTrl="N" original="JUMLAH PPh PASAL 21 :">JUMLAH PPh PASAL 21 :</value>
+  </row>
+  <row id="FD522826AE084AF495ADF03E729FB1C7" trl="N">
+    <value column="Text" isTrl="N" original="TUNJANGAN LAINNYA, UANG LEMBUR, DAN SEBAGAINYA">TUNJANGAN LAINNYA, UANG LEMBUR, DAN SEBAGAINYA</value>
+  </row>
+  <row id="FDC5709C3A1E47FBA3202541099E188B" trl="N">
+    <value column="Text" isTrl="N" original="I">I</value>
+  </row>
+  <row id="FFFAB0E5BF57498694719A3ED30A6E9E" trl="N">
+    <value column="Text" isTrl="N" original="TANDA TANGAN DAN CAP PERUSAHAAN">TANDA TANGAN DAN CAP PERUSAHAAN</value>
+  </row>
+</compiereTrl>

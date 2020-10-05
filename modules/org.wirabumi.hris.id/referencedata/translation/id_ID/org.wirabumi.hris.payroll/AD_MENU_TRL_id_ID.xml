@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="0F19E458763A4723BA385889ECE32AA9" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction Catalog">Komponen Gaji - Potongan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0F74C074F0DB41BAA4CB618302D169EC" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment Summary Report">Laporan Rekapitulasi Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Salary Payment Summary Report">Salary Payment Summary Report</value>
+  </row>
+  <row id="195FEDCFD5C043F58B24594A98FBDC5D" trl="N">
+    <value column="Name" isTrl="N" original="Employee Salary">Employee Salary</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1B71A7AE07544295A255F96CB22BDBF9" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Earning">Import Incidental Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2B02214323DA4C26B4053FC4B856A72B" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment Report">Laporan Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Salary Payment Report">Salary Payment Report</value>
+  </row>
+  <row id="2B11C29DDCF143BC80622B9A352DD848" trl="Y">
+    <value column="Name" isTrl="Y" original="Payroll">Penggajian</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="39B63FD414E64B8B83084E461357E675" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment (Payroll Master View)">Pembayaran Gaji - Penggaji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="44BE497C03194C7C8984D4BB2D1A277E" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4B71EAC0B584499A8AB0848D39A9F71A" trl="N">
+    <value column="Name" isTrl="N" original="Transaction">Transaction</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4E6C4D3960A64C3EABC584B7A3FCB250" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Deduction">Import Incidental Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="728E9855D53440D2B839F9A5EC622090" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning Paramater">Rumusan Gaji - Parameter Pendapatan</value>
+    <value column="Description" isTrl="N" original="For saved Salary Formula Paramater">For saved Salary Formula Paramater</value>
+  </row>
+  <row id="735BAD013A8145DA8EBC3782BD6F777E" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Take-Home Pay">Calculate Take-Home Pay</value>
+    <value column="Description" isTrl="N" original="Calculate Take-Home Pay">Calculate Take-Home Pay</value>
+  </row>
+  <row id="7E15AA1FE3844AF5B3FD9D25616066B1" trl="N">
+    <value column="Name" isTrl="N" original="Insurance">Insurance</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8B9D8B6A7B2246689F4C58319A4CD383" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Variable">Variabel Penggajian</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8D592C08A2A5423C9B7D3434159174D0" trl="N">
+    <value column="Name" isTrl="Y" original="Salary Formula Library">Java Class Formula</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8F7776A09F0B4F709D84693C9FE043B1" trl="N">
+    <value column="Name" isTrl="N" original="Incidental Deduction">Incidental Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9E18417CF8574CEEAF8B8F1733AEBB5D" trl="N">
+    <value column="Name" isTrl="N" original="Setup">Setup</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A22A53EA3C5C4EDB9BCB46900590D879" trl="N">
+    <value column="Name" isTrl="N" original="Earning Group">Earning Group</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A3E31290034C473293813BB1B94AC771" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Setup For Payroll">Setup For Payroll</value>
+  </row>
+  <row id="AE10DE841CCD4F69BD58CBAC3F0774E3" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment">Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Salary Payment">Salary Payment</value>
+  </row>
+  <row id="BDFF491648B14C4192F908C8E3F5AA6A" trl="N">
+    <value column="Name" isTrl="N" original="Incidental Earning">Incidental Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CC7E4776372C4ED199B9950018BB0D2F" trl="N">
+    <value column="Name" isTrl="Y" original="Deduction Paramater">Salary Formula - Deduction Paramater</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DC51E1751F71483BA3991F96D9FB429D" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning Catalog">konponen Gaji - Pendapatan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EB81CA47B6624FB5B5CEF5E6E73CC8E0" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Group">Deduction Group</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="ECB5E40F899B4A5194223DC54F77CA1E" trl="N">
+    <value column="Name" isTrl="N" original="Generate Employee Salary">Generate Employee Salary</value>
+    <value column="Description" isTrl="N" original="Generate Employee Salary">Generate Employee Salary</value>
+  </row>
+  <row id="FABB96B2673A4A1F8FE2567324462FA7" trl="N">
+    <value column="Name" isTrl="N" original="Transaction">Transaction</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

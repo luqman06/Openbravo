@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Region id="045D894092B74399B35D90FA403065D5" identifier="Kepulauan Bangka Belitung">
+    <id>045D894092B74399B35D90FA403065D5</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:05:42.519Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:05:42.519Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Kepulauan Bangka Belitung</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="0EB5B5BB73AB4DDCBBBCDD2841E4DA10" identifier="Sulawesi Selatan">
+    <id>0EB5B5BB73AB4DDCBBBCDD2841E4DA10</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:11:23.813Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:11:23.813Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sulawesi Selatan</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="16FC62BCDFE0462EAFB09915193722A2" identifier="Sulawesi Utara">
+    <id>16FC62BCDFE0462EAFB09915193722A2</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:11:04.590Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:11:04.590Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sulawesi Utara</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="216791B4624E40A1B601C433AEA9D967" identifier="Sulawesi Tenggara">
+    <id>216791B4624E40A1B601C433AEA9D967</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:15.249Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:15.249Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sulawesi Tenggara</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="24A567BD1B7D46AC83D14B0464E8AE22" identifier="Gorontalo">
+    <id>24A567BD1B7D46AC83D14B0464E8AE22</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:19.823Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:19.823Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Gorontalo</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="290361A213494A528FE7444782DF3540" identifier="Sumatera Barat">
+    <id>290361A213494A528FE7444782DF3540</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:04:56.896Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:04:56.896Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sumatera Barat</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="2978589BA72B467EAE2A8EF55DB39AD8" identifier="Jambi">
+    <id>2978589BA72B467EAE2A8EF55DB39AD8</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:05:08.534Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:05:08.534Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Jambi</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="39DBD6C1AFE244849B93B9330E81107D" identifier="DKI Jakarta">
+    <id>39DBD6C1AFE244849B93B9330E81107D</id>
+    <active>true</active>
+    <creationDate transient="true">2011-11-08T17:32:46.818Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:06:35.289Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>DKI Jakarta</name>
+    <description>Daerah Khusus Ibukota Jakarta</description>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="436EF2C6E82B4CD9A56E7379C132C2E2" identifier="Sulawesi Barat">
+    <id>436EF2C6E82B4CD9A56E7379C132C2E2</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:25.577Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:25.577Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sulawesi Barat</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="4C5F032A4DAB4209A046A8D487568862" identifier="Bengkulu">
+    <id>4C5F032A4DAB4209A046A8D487568862</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:05:23.658Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:05:23.658Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Bengkulu</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="4F172E77370E47889E7CDF0ACE1681F3" identifier="Kalimantan Selatan">
+    <id>4F172E77370E47889E7CDF0ACE1681F3</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:05.151Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:05.151Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Kalimantan Selatan</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="50F7A70920754381B33C99B606962155" identifier="Lampung">
+    <id>50F7A70920754381B33C99B606962155</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:05:29.108Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:05:29.108Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Lampung</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="5C52B12DD3CD40AAA7CC0DF6E2E48C5A" identifier="Banten">
+    <id>5C52B12DD3CD40AAA7CC0DF6E2E48C5A</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:07:19.141Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:07:19.141Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Banten</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="6421682B1C90469AB7804BD8367EE134" identifier="Papua">
+    <id>6421682B1C90469AB7804BD8367EE134</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:45.9Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:45.9Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Papua</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="64A7694AAD754C8292A8E44B1764A585" identifier="Jawa Barat">
+    <id>64A7694AAD754C8292A8E44B1764A585</id>
+    <active>true</active>
+    <creationDate transient="true">2011-11-08T17:33:41.517Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2011-11-08T17:33:41.517Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Jawa Barat</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="72A1BBA864EC4F3C94221386E2AE8161" identifier="Nusa Tenggara Timur">
+    <id>72A1BBA864EC4F3C94221386E2AE8161</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:07:43.601Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:07:43.601Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Nusa Tenggara Timur</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="77A693F452D543D0BB9FEBF6523875E3" identifier="Kalimantan Tengah">
+    <id>77A693F452D543D0BB9FEBF6523875E3</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:00.115Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:00.115Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Kalimantan Tengah</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="7AE0271A960440A889DF9F27A714070A" identifier="Kepulauan Riau">
+    <id>7AE0271A960440A889DF9F27A714070A</id>
+    <active>true</active>
+    <creationDate transient="true">2011-12-05T11:46:22.356Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2011-12-05T11:46:22.356Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Kepulauan Riau</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="891E0799014B4D668A9446A402A5F394" identifier="Nusa Tenggara Barat">
+    <id>891E0799014B4D668A9446A402A5F394</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:07:36.780Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:07:36.780Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Nusa Tenggara Barat</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="8D6CA4BF9EDF450E86682F8C16BF4ADE" identifier="Papua Barat">
+    <id>8D6CA4BF9EDF450E86682F8C16BF4ADE</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:41.39Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:41.39Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Papua Barat</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="91FC0999E35243E2806BCEE0ECEF6F5D" identifier="Maluku Utara">
+    <id>91FC0999E35243E2806BCEE0ECEF6F5D</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:35.31Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:35.31Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Maluku Utara</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="99DB7A452AB945A4BBC96BCE65F37350" identifier="Jawa Tengah">
+    <id>99DB7A452AB945A4BBC96BCE65F37350</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:06:52.510Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:06:52.510Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Jawa Tengah</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="A1D3DE79451A43CD8D57532822A59DF2" identifier="Aceh">
+    <id>A1D3DE79451A43CD8D57532822A59DF2</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:04:43.338Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:04:43.338Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Aceh</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="B24E9E67980943A8B38C33214776BB1C" identifier="Sumatera Utara">
+    <id>B24E9E67980943A8B38C33214776BB1C</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:04:51.545Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:04:51.545Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sumatera Utara</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="B3435432840A49E69A94C1068C9D8A0F" identifier="Maluku">
+    <id>B3435432840A49E69A94C1068C9D8A0F</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:08:30.898Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:08:30.898Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Maluku</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="B7A8A9ACAEB74250BB0F3E00815C0931" identifier="DI Yogyakarta">
+    <id>B7A8A9ACAEB74250BB0F3E00815C0931</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:07:11.283Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:07:11.283Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>DI Yogyakarta</name>
+    <description>Daerah Istimewa Yogyakarta</description>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="C3DAEFD593F94AEEB595EB8F736437DE" identifier="Bali">
+    <id>C3DAEFD593F94AEEB595EB8F736437DE</id>
+    <active>true</active>
+    <creationDate transient="true">2011-12-29T05:53:45.833Z</creationDate>
+    <createdBy transient="true" id="FF8081813463C1C7013463C90AD40026" entity-name="ADUser" identifier="Zaien Aji Trahutomo"/>
+    <updated transient="true">2011-12-29T05:53:45.833Z</updated>
+    <updatedBy transient="true" id="FF8081813463C1C7013463C90AD40026" entity-name="ADUser" identifier="Zaien Aji Trahutomo"/>
+    <name>Bali</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="CDEB1D467DFF4F89A7DFECE359906DFF" identifier="Kalimantan Timur">
+    <id>CDEB1D467DFF4F89A7DFECE359906DFF</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:10:10.704Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:10:10.704Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Kalimantan Timur</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="D0A1B15CE9EA4BA59BBB9B473761234B" identifier="Riau">
+    <id>D0A1B15CE9EA4BA59BBB9B473761234B</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:05:04.478Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:05:04.478Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Riau</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="D44C738D88B34374B0FF490E9E7B3DF3" identifier="Kalimantan Barat">
+    <id>D44C738D88B34374B0FF490E9E7B3DF3</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:07:51.784Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:07:51.784Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Kalimantan Barat</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="E847E8A542BF47F1BE80C89468B155BE" identifier="Jawa Timur">
+    <id>E847E8A542BF47F1BE80C89468B155BE</id>
+    <active>true</active>
+    <creationDate transient="true">2011-11-08T17:32:53.498Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2011-11-08T17:32:53.498Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Jawa Timur</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="F1B12FF1EAE8491F9E0ECACAEBC32866" identifier="Sumatera Selatan">
+    <id>F1B12FF1EAE8491F9E0ECACAEBC32866</id>
+    <active>true</active>
+    <creationDate transient="true">2011-11-30T08:30:33.977Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:12:22.597Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sumatera Selatan</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+  <Region id="F6820E7302E54D52BDD6ED07446E383B" identifier="Sulawesi Tengah">
+    <id>F6820E7302E54D52BDD6ED07446E383B</id>
+    <active>true</active>
+    <creationDate transient="true">2012-02-19T05:11:12.863Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-02-19T05:11:12.863Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sulawesi Tengah</name>
+    <description xsi:nil="true"/>
+    <country id="209" entity-name="Country" identifier="Indonesia"/>
+    <default>false</default>
+    <searchKey xsi:nil="true"/>
+  </Region>
+</ob:Openbravo>

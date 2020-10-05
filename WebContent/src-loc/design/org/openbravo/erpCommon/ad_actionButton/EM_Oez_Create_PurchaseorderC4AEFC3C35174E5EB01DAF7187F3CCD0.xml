@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPORT>
+<template id="class" file="EM_Oez_Create_PurchaseorderC4AEFC3C35174E5EB01DAF7187F3CCD0.html"></template>
+
+<PARAMETER id="paramLanguage" name="language" default=""></PARAMETER>
+<PARAMETER id="paramCSS" name="css" attribute="href" replace="Default"></PARAMETER>
+<PARAMETER id="paramCSS_print" name="css" attribute="href" replace="Default"></PARAMETER>
+<PARAMETER id="key" name="key" default="" attribute="value"></PARAMETER>
+<PARAMETER id="form" name="form" default="" attribute="action"></PARAMETER>
+<PARAMETER id="processing" name="processing" default="" attribute="value"></PARAMETER>
+<PARAMETER id="window" name="window" default="" attribute="value"></PARAMETER>
+<PARAMETER id="paramCheck" name="check" default="Y"></PARAMETER>
+<PARAMETER id="paramDirectory" name="directory" default=""></PARAMETER>
+<PARAMETER id="processId" name="processId" default="PROCESS"></PARAMETER>
+<PARAMETER id="trlFormType" name="trlFormType" default="PROCESS"></PARAMETER>
+<PARAMETER id="processName" name="processName" replace="#processName#" default=""></PARAMETER>
+<PARAMETER id="processDescription" name="processDescription" replace="#processDescription#" default=""></PARAMETER>
+<PARAMETER id="processHelp" name="processHelp" replace="#processHelp#" default=""></PARAMETER>
+
+
+<PARAMETER id="buttonOK" name="ok" attribute="onmouseover" replace="xx" default=""></PARAMETER>
+<PARAMETER id="buttonOK" name="ok" attribute="onfocus" replace="xx" default=""></PARAMETER>
+<PARAMETER id="imgButtonOK" name="ok" attribute="alt" replace="xx" default=""></PARAMETER>
+<PARAMETER id="imgButtonOK" name="ok" attribute="title" replace="xx" default=""></PARAMETER>
+<PARAMETER id="tdButtonOK" name="ok"></PARAMETER>
+
+<PARAMETER id="buttonCancel" name="cancel" attribute="onmouseover" replace="xx" default=""></PARAMETER>
+<PARAMETER id="buttonCancel" name="cancel" attribute="onfocus" replace="xx" default=""></PARAMETER>
+<PARAMETER id="imgButtonCancel" name="cancel" attribute="alt" replace="xx" default=""></PARAMETER>
+<PARAMETER id="imgButtonCancel" name="cancel" attribute="title" replace="xx" default=""></PARAMETER>
+<PARAMETER id="tdButtonCancel" name="cancel"></PARAMETER>
+
+
+<PARAMETER id="messageBoxID" name="messageType" attribute="class" replace="yy" default="HIDDEN"></PARAMETER>
+<PARAMETER id="messageBoxIDTitle" name="messageTitle" default=""></PARAMETER>
+<PARAMETER id="messageBoxIDMessage" name="messageMessage" default=""></PARAMETER>
+
+
+
+<PARAMETER id="AD_Org_Id" name="AD_Org_Id" attribute="value"/>
+<SUBREPORT id="reportAD_Org_Id" name="reportAD_Org_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="AD_Org_Id"/>
+</SUBREPORT>
+<PARAMETER id="C_Bpartner_Id" name="C_Bpartner_Id" attribute="value"/>
+<SUBREPORT id="reportC_Bpartner_Id" name="reportC_Bpartner_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="C_Bpartner_Id"/>
+</SUBREPORT>
+<PARAMETER id="M_Pricelist_Id" name="M_Pricelist_Id" attribute="value"/>
+<SUBREPORT id="reportM_Pricelist_Id" name="reportM_Pricelist_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="M_Pricelist_Id"/>
+</SUBREPORT>
+<PARAMETER id="C_DocType_Id" name="C_DocType_Id" attribute="value"/>
+<SUBREPORT id="reportC_DocType_Id" name="reportC_DocType_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="C_DocType_Id"/>
+</SUBREPORT>
+
+  
+  <PARAMETER id="DateOrdered" name="DateOrdered" attribute="value"></PARAMETER>
+  <PARAMETER id="DateOrdered" name="DateOrdered_Format" attribute="displayformat"></PARAMETER>
+  <PARAMETER id="DateOrdered" name="DateOrdered_Format" attribute="saveformat"></PARAMETER>
+
+
+
+  
+  <PARAMETER id="DatePromised" name="DatePromised" attribute="value"></PARAMETER>
+  <PARAMETER id="DatePromised" name="DatePromised_Format" attribute="displayformat"></PARAMETER>
+  <PARAMETER id="DatePromised" name="DatePromised_Format" attribute="saveformat"></PARAMETER>
+
+
+<PARAMETER id="M_Warehouse_Id" name="M_Warehouse_Id" attribute="value"/>
+<SUBREPORT id="reportM_Warehouse_Id" name="reportM_Warehouse_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="M_Warehouse_Id"/>
+</SUBREPORT>
+<PARAMETER id="C_PaymentTerm_Id" name="C_PaymentTerm_Id" attribute="value"/>
+<SUBREPORT id="reportC_PaymentTerm_Id" name="reportC_PaymentTerm_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="C_PaymentTerm_Id"/>
+</SUBREPORT>
+<PARAMETER id="FIN_PaymentMethod_Id" name="FIN_PaymentMethod_Id" attribute="value"/>
+<SUBREPORT id="reportFIN_PaymentMethod_Id" name="reportFIN_PaymentMethod_Id" report="org/openbravo/erpCommon/reference/List">
+  <ARGUMENT name="parameterListSelected" withId="FIN_PaymentMethod_Id"/>
+</SUBREPORT>
+
+
+<DISCARD id="discard"></DISCARD>
+
+<LABEL id="lbl::AD_Org_Id" name="lbl::AD_Org_Id" replace="#AD_Org_Id#">AD_Org_Idlbl</LABEL>
+<LABEL id="lbl::C_Bpartner_Id" name="lbl::C_Bpartner_Id" replace="#C_Bpartner_Id#">C_Bpartner_Idlbl</LABEL>
+<LABEL id="lbl::M_Pricelist_Id" name="lbl::M_Pricelist_Id" replace="#M_Pricelist_Id#">M_Pricelist_Idlbl</LABEL>
+<LABEL id="lbl::C_DocType_Id" name="lbl::C_DocType_Id" replace="#C_DocType_Id#">C_DocType_Idlbl</LABEL>
+<LABEL id="lbl::DateOrdered" name="lbl::DateOrdered" replace="#DateOrdered#">DateOrderedlbl</LABEL>
+<LABEL id="lbl::DatePromised" name="lbl::DatePromised" replace="#DatePromised#">DatePromisedlbl</LABEL>
+<LABEL id="lbl::M_Warehouse_Id" name="lbl::M_Warehouse_Id" replace="#M_Warehouse_Id#">M_Warehouse_Idlbl</LABEL>
+<LABEL id="lbl::C_PaymentTerm_Id" name="lbl::C_PaymentTerm_Id" replace="#C_PaymentTerm_Id#">C_PaymentTerm_Idlbl</LABEL>
+<LABEL id="lbl::FIN_PaymentMethod_Id" name="lbl::FIN_PaymentMethod_Id" replace="#FIN_PaymentMethod_Id#">FIN_PaymentMethod_Idlbl</LABEL>
+
+</REPORT>

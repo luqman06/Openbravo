@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+  <database name="TABLE OBEDL_REQUEST_LINE">
+    <table name="OBEDL_REQUEST_LINE" primaryKey="OBEDL_REQ_LINE_KEY">
+      <column name="OBEDL_REQUEST_LINE_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OBEDL_REQUEST_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="C_IMPORT_ENTRY_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="C_IMPORT_ENTRY_ARCHIVE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="STATUS" primaryKey="false" required="true" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="LINEDATA" primaryKey="false" required="false" type="CLOB" size="4000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ERRORMSG" primaryKey="false" required="false" type="NVARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="PROCESS" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="AD_CLIENT" name="OBEDL_REQ_LINE_AD_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="OBEDL_REQ_LINE_AD_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_IMPORT_ENTRY" name="OBEDL_REQ_LINE_IE" onDelete="setnull">
+        <reference local="C_IMPORT_ENTRY_ID" foreign="C_IMPORT_ENTRY_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_IMPORT_ENTRY_ARCHIVE" name="OBEDL_REQ_LINE_IEA" onDelete="setnull">
+        <reference local="C_IMPORT_ENTRY_ARCHIVE_ID" foreign="C_IMPORT_ENTRY_ARCHIVE_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="OBEDL_REQUEST" name="OBEDL_REQ_LINE_REQ" onDelete="cascade">
+        <reference local="OBEDL_REQUEST_ID" foreign="OBEDL_REQUEST_ID"/>
+      </foreign-key>
+      <index name="OBEDL_REQ_LINE_REQ_INDEX" unique="false">
+        <index-column name="OBEDL_REQUEST_ID"/>
+      </index>
+      <index name="OBEDL_REQ_LINE_STATUS" unique="false">
+        <index-column name="STATUS"/>
+      </index>
+      <check name="OBEDL_REQ_LIN_PROCESS_CHECK"><![CDATA[PROCESS IN ('Y', 'N')]]></check>
+      <check name="OBEDL_REQ_LINE_ACTIVE_CHECK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+    </table>
+  </database>

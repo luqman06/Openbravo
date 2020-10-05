@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="6F665F66857E492495E1D593AB8EBD73" trl="N">
+    <value column="Name" isTrl="N" original="Entity Default Values">Entity Default Values</value>
+    <value column="Description" isTrl="N" original="Initial Data Load Window for entities definition">Initial Data Load Window for entities definition</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

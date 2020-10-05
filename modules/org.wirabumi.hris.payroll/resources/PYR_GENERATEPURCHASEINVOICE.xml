@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION PYR_GENERATEPURCHASEINVOICE">
+    <function name="PYR_GENERATEPURCHASEINVOICE" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[--generate product value list that have suspect of duplicity
+  -- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_result NUMBER:=1; -- 0=failure
+  v_count integer:=0;
+  v_Record_ID VARCHAR(32);
+  v_AD_User_ID VARCHAR(32);
+  v_Client_ID VARCHAR(32);
+  v_Org_ID  VARCHAR(32);
+  v_bpartner_location_id VARCHAR(32);
+  v_documentno VARCHAR(60);
+  v_bpartner_id VARCHAR(32);
+  v_uom_id VARCHAR(32);
+  v_pricelist_id VARCHAR(32);
+  v_tax_id VARCHAR(32);
+  v_line NUMBER;
+  v_effectivedate timestamp without time zone;
+  v_dateacct timestamp without time zone;
+  v_doctype VARCHAR(32);
+  v_post VARCHAR(32);
+  v_currency_id VARCHAR(32);
+  v_settlement_id VARCHAR(32);
+  v_description VARCHAR(2000);
+  v_invoice_id VARCHAR(32);
+  v_PROCESSED VARCHAR2(60):='N';
+  v_paymentterm_id VARCHAR(32);
+
+  
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+    Cur_Parameter RECORD;
+    Cur RECORD;
+    Cur_salary RECORD;
+
+    
+ 
+  BEGIN
+   DBMS_OUTPUT.PUT_LINE('Updating PInstance - Processing ' || p_PInstance_ID) ;
+    v_ResultStr:='PInstanceNotFound';
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'Y', NULL, NULL) ;
+  BEGIN --BODY
+
+    -- Get Parameters
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID, p.ParameterName, p.P_String, p.P_Number, p.P_Date, p.ad_client_id, p.ad_org_id
+      FROM AD_PInstance i
+      LEFT JOIN AD_PInstance_Para p
+        ON i.AD_PInstance_ID=p.AD_PInstance_ID
+      WHERE i.AD_PInstance_ID=p_PInstance_ID
+      ORDER BY p.SeqNo
+      )
+    LOOP
+      v_Record_ID:=Cur_Parameter.Record_ID;
+      v_AD_User_ID:=Cur_Parameter.AD_User_ID;
+    END LOOP; -- Get Parameter
+
+    /*
+    --mengambil data process dari window salary payment
+    select processed into v_PROCESSED
+    from pyr_salarypayment 
+    where pyr_salarypayment_id=v_Record_ID;
+    */
+    
+    --get client and org
+    select ad_client_id, ad_org_id, valutadate, dateacct, c_currency_id, description
+    into v_Client_ID, v_Org_ID, v_effectivedate, v_dateacct, v_currency_id, v_description
+    from pyr_salarypayment where pyr_salarypayment_id=v_Record_ID;
+    --get uom, tax, pricelist
+    select c_uom_volume_id, m_pricelist_id, em_pyr_taxforpayroll, em_pyr_paymenttermforpayroll
+    into v_uom_id, v_pricelist_id, v_tax_id, v_paymentterm_id
+    from ad_clientinfo
+    where ad_client_id=v_Client_ID;
+    --get doctype
+    SELECT AD_GET_DOCTYPE(v_Client_ID, v_Org_ID, 'API', null) into v_doctype FROM DUAL;
+
+    
+    --function definition here
+    --loop for all employee
+    for Cur in (select pyr_sp_employee_id, c_bpartner_id, ad_org_id,
+			coalesce(
+			((select sum(amount) from pyr_spe_earning
+					where isactive='Y' and pyr_earning_id=
+					(select pyr_earning_id from pyr_earning where pyr_earning_id=
+					pyr_spe_earning.pyr_earning_id and account_id is not null)
+					and pyr_sp_employee_id=pyr_sp_employee.pyr_sp_employee_id)-
+			(select sum(amount) from pyr_spe_deduction
+					where isactive='Y' and pyr_deduction_id=
+					(select pyr_deduction_id from pyr_deduction where pyr_deduction_id=
+					pyr_spe_deduction.pyr_deduction_id and account_id is not null)
+					and pyr_sp_employee_id=pyr_sp_employee.pyr_sp_employee_id)),0) as total
+			from pyr_sp_employee where isactive='Y' and pyr_salarypayment_id=v_Record_ID)
+    loop	
+    --insert Purchase Invoice
+    select get_uuid() into v_invoice_id from dual;
+    select c_bpartner_location_id into v_bpartner_location_id
+    from c_bpartner_location
+    where c_bpartner_id=cur.c_bpartner_id;
+
+    --raise exception '%', v_doctype;
+
+    
+    --get documentno
+    SELECT p_documentno into v_documentno from ad_sequence_doctype(v_doctype,null,'Y');
+    
+    INSERT INTO c_invoice(
+            c_invoice_id, ad_client_id, ad_org_id, isactive, created, 
+            createdby, updated, updatedby, issotrx, documentno, docstatus, docaction, 
+            processing, processed, posted, c_doctype_id, c_doctypetarget_id, c_order_id, 
+            description, isprinted, salesrep_id, dateinvoiced, dateprinted, dateacct, c_bpartner_id,
+            c_bpartner_location_id, poreference, isdiscountprinted, dateordered, c_currency_id, paymentrule, c_paymentterm_id,
+            c_charge_id, chargeamt, totallines, grandtotal, m_pricelist_id, istaxincluded, c_campaign_id, c_project_id,
+            c_activity_id, createfrom, generateto, ad_user_id, copyfrom, isselfservice, ad_orgtrx_id, user1_id, user2_id, 
+            withholdingamount, taxdate, c_withholding_id, ispaid, totalpaid, outstandingamt, daystilldue, dueamt, lastcalculatedondate,
+            updatepaymentmonitor, fin_paymentmethod_id, fin_payment_priority_id)
+     VALUES (v_invoice_id, v_Client_ID, cur.Ad_Org_ID, 'Y', now(), 
+            v_AD_User_ID, now(), v_AD_User_ID, 'N', v_documentno, 'DR', 'CO',
+            'N', 'N', 'N', v_doctype, v_doctype, null, 
+            v_description, 'N', null, v_effectivedate, null, v_dateacct, cur.c_bpartner_id,
+            v_bpartner_location_id, null, 'Y', null, v_currency_id, 5, v_paymentterm_id,
+            null, null, cur.total, cur.total, v_pricelist_id, 'N', null, null, 
+            null, 'N', 'N', null, 'N', 'N', null, null, null,
+            null, now(), null, 'N', 0, 0, 0, 0, null,
+            'N', null, null);
+
+       
+	--mendapatkan line
+	v_line:=10;
+
+	--loop for earning
+	for Cur_salary in (select pyr_spe_earning.amount, pyr_earning.account_id
+				from pyr_spe_earning
+				inner join  pyr_earning on pyr_earning.pyr_earning_id=pyr_spe_earning.pyr_earning_id
+				where  pyr_sp_employee_id=Cur.pyr_sp_employee_id
+				and account_id is not null
+				and pyr_spe_earning.isactive='Y')
+	loop
+	
+	--memasukkan data ke line
+	  INSERT INTO c_invoiceline(
+              c_invoiceline_id, ad_client_id, ad_org_id, isactive, created, createdby, 
+	      updated, updatedby, c_invoice_id, c_orderline_id, m_inoutline_id, line,
+              description, financial_invoice_line,  account_id, m_product_id, qtyinvoiced,
+              pricelist, priceactual, pricelimit, linenetamt, c_charge_id, chargeamt, c_uom_id,
+              c_tax_id, s_resourceassignment_id, taxamt, m_attributesetinstance_id, isdescription,
+              quantityorder, m_product_uom_id, c_invoice_discount_id, c_projectline_id, m_offer_id,
+              pricestd, excludeforwithholding, iseditlinenetamt, taxbaseamt)
+	    VALUES (get_uuid(), v_Client_ID, cur.Ad_Org_ID, 'Y', now(), v_AD_User_ID, 
+		   now(), v_AD_User_ID, v_invoice_id, null, null, v_line,
+		   v_description, 'Y', Cur_salary.account_id, null, 1, 
+		   Cur_salary.amount, Cur_salary.amount, Cur_salary.amount, Cur_salary.amount, null, null, v_uom_id,
+		   v_tax_id, null, 0, null, 'N', 
+		   null, null, null, null, null, 
+		   Cur_salary.amount, 'N', 'N', Cur_salary.amount);
+	v_line:=v_line+10;
+	end loop;
+	
+	--loop for deduction
+	for Cur_salary in (select (pyr_spe_deduction.amount*-1) as amount, pyr_deduction.account_id
+				from pyr_spe_deduction
+				inner join pyr_deduction on pyr_deduction.pyr_deduction_id=pyr_spe_deduction.pyr_deduction_id
+				where pyr_sp_employee_id=Cur.pyr_sp_employee_id
+				and account_id is not null
+				and pyr_spe_deduction.isactive='Y')
+	loop
+	
+	   INSERT INTO c_invoiceline(
+              c_invoiceline_id, ad_client_id, ad_org_id, isactive, created, createdby, 
+	      updated, updatedby, c_invoice_id, c_orderline_id, m_inoutline_id, line,
+              description, financial_invoice_line,  account_id, m_product_id, qtyinvoiced,
+              pricelist, priceactual, pricelimit, linenetamt, c_charge_id, chargeamt, c_uom_id,
+              c_tax_id, s_resourceassignment_id, taxamt, m_attributesetinstance_id, isdescription,
+              quantityorder, m_product_uom_id, c_invoice_discount_id, c_projectline_id, m_offer_id,
+              pricestd, excludeforwithholding, iseditlinenetamt, taxbaseamt)
+	    VALUES (get_uuid(), v_Client_ID, cur.Ad_Org_ID, 'Y', now(), v_AD_User_ID, 
+		   now(), v_AD_User_ID, v_invoice_id, null, null, v_line,
+		   v_description, 'Y', Cur_salary.account_id, null, 1, 
+		   Cur_salary.amount, Cur_salary.amount, Cur_salary.amount, Cur_salary.amount, null, null, v_uom_id,
+		   v_tax_id, null, 0, null, 'N', 
+		   null, null, null, null, null, 
+		   Cur_salary.amount, 'N', 'N', Cur_salary.amount);
+        v_line:=v_line+10;
+	end loop;
+        
+    --post document
+    select c_invoice_post(null, v_invoice_id) into v_post FROM DUAL;   
+    
+    end loop;
+
+    update pyr_salarypayment 
+    set docstatus='CL'
+    where pyr_salarypayment_id=v_Record_ID;
+    
+    IF(p_PInstance_ID IS NOT NULL) THEN
+      DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message) ;
+      AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', v_Result, v_Message) ;
+    ELSE
+      DBMS_OUTPUT.PUT_LINE('Finished ' || v_Message) ;
+    END IF;
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= '@ERROR=' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  IF(p_PInstance_ID IS NOT NULL) THEN
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr) ;
+  END IF;
+END PYR_GENERATEPURCHASEINVOICE
+]]></body>
+    </function>
+  </database>

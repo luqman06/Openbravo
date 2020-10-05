@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="id_ID" language="id_ID" table="AD_MODULE" version="">
+  <row id="6E431566B74C4E00B92D660FE7C1F5D0" trl="N">
+    <value column="Description" isTrl="N" original="Openbravo Indonesia Localization pack">Openbravo Indonesia Localization pack</value>
+    <value column="Help" isTrl="N" original="Localization pack of Openbravo Indonesia.">Localization pack of Openbravo Indonesia.</value>
+    <value column="License" isTrl="N" original="GNU GPL v2">GNU GPL v2</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

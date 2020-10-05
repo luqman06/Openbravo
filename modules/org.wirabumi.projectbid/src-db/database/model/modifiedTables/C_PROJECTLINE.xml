@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_PROJECTLINE">
+    <table name="C_PROJECTLINE" primaryKey="C_PROJECTLINE_KEY">
+      <column name="EM_PBID_ORDERLINE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_ORDERLINE" name="EM_PBID_ORDERLINE_FK2">
+        <reference local="EM_PBID_ORDERLINE_ID" foreign="C_ORDERLINE_ID"/>
+      </foreign-key>
+    </table>
+  </database>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="D6193AA7FAB6429C8F34249FBF5A5F50" trl="N">
+    <value column="Name" isTrl="N" original="OBUIAPP_ViewImplementation">OBUIAPP_ViewImplementation</value>
+    <value column="Description" isTrl="N" original="OBUIAPP_ViewImplementation">OBUIAPP_ViewImplementation</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813201F2DE013201F5628C0003" trl="N">
+    <value column="Name" isTrl="N" original="Personalization Type">Personalization Type</value>
+    <value column="Description" isTrl="N" original="The type of the personalization record">The type of the personalization record</value>
+    <value column="Help" isTrl="N" original="The type of the personalization record">The type of the personalization record</value>
+  </row>
+  <row id="FF80818132D8F0F30132D9BC395D0038" trl="N">
+    <value column="Name" isTrl="N" original="Window Reference">Window Reference</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF80818132F94B500132F9575619000A" trl="N">
+    <value column="Name" isTrl="N" original="Button List">Button List</value>
+    <value column="Description" isTrl="N" original="Defines the list of actions/buttons to be displayed in the form">Defines the list of actions/buttons to be displayed in the form</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813310CEAE0133116AA792014D" trl="N">
+    <value column="Name" isTrl="N" original="OBUIAPP_ProcessDefinition">OBUIAPP_ProcessDefinition</value>
+    <value column="Description" isTrl="N" original="Process Definition">Process Definition</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

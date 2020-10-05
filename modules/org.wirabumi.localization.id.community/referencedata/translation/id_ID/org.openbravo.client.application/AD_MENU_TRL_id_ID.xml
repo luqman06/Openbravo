@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="1005400002" trl="N">
+    <value column="Name" isTrl="N" original="Register">Register</value>
+    <value column="Description" isTrl="N" original="Register your installation of Openbravo ERP in order to receive development and commercial updates and information">Register your installation of Openbravo ERP in order to receive development and commercial updates and information</value>
+  </row>
+  <row id="6FD97ECD72B4405FA1442FD8673AE571" trl="N">
+    <value column="Name" isTrl="N" original="Navigation Bar Components">Navigation Bar Components</value>
+    <value column="Description" isTrl="N" original="Navigation Bar Components">Navigation Bar Components</value>
+  </row>
+  <row id="B487FABEB36F45C28E22CD309914FD71" trl="N">
+    <value column="Name" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="Description" isTrl="N" original="A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.">A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.</value>
+  </row>
+  <row id="FF8080812EB90459012EBA72B4E7004D" trl="N">
+    <value column="Name" isTrl="N" original="Alert Management">Alert Management</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813157AED2013157C149F40039" trl="N">
+    <value column="Name" isTrl="N" original="Window Personalization">Window Personalization</value>
+    <value column="Description" isTrl="N" original="Maintains ui personalization records">Maintains ui personalization records</value>
+  </row>
+  <row id="FF80818132D822FF0132D8291C960011" trl="N">
+    <value column="Name" isTrl="N" original="Process Definition">Process Definition</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION JST_CALCULATE_JAMSOSTEK">
+    <function name="JST_CALCULATE_JAMSOSTEK" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[declare
+v_total_jst NUMBER;
+v_total_dp NUMBER;
+v_amount NUMBER;
+v_jst_employee NUMBER;
+v_dp_employee NUMBER;
+v_gajipokok NUMBER;
+v_tunjangantetap NUMBER;
+v_datefrom timestamp without time zone;
+v_dateto timestamp without time zone;
+
+--Record
+cur record;
+
+begin
+ result:=0;
+
+--loop employee
+for cur in 
+(select startdate::date as startdate, enddate::date as enddate, sp.pyr_salarypayment_id, c_bpartner_id, 
+pyr_sp_employee_id, sp.ad_client_id
+from pyr_salarypayment sp
+inner join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+where startdate::date<=now()::date
+and enddate::date>=now()::date
+and exists (select 1 from pyr_spe_deduction spee 
+inner join pyr_deduction pe on pe.pyr_deduction_id=spee.pyr_deduction_id
+where pe.value='JST' and spee.pyr_sp_employee_id=spe.pyr_sp_employee_id)
+and exists (select 1 from pyr_spe_deduction spee 
+inner join pyr_deduction pe on pe.pyr_deduction_id=spee.pyr_deduction_id
+where pe.value='DP' and spee.pyr_sp_employee_id=spe.pyr_sp_employee_id)
+and (case when p_employee_id is not null then spe.c_bpartner_id=p_employee_id else 1=1 end))
+
+loop  --loop overtime
+--mendapatkan gaji pokok
+select spee.amount into v_gajipokok
+from pyr_spe_earning spee
+inner join pyr_earning pe on pe.pyr_earning_id=spee.pyr_earning_id
+inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=spee.pyr_sp_employee_id
+where pe.value='GP'
+and spe.c_bpartner_id=cur.c_bpartner_id
+and spe.pyr_salarypayment_id=cur.pyr_salarypayment_id;
+
+--mendapatkan Tunjangan Tetap
+select spee.amount into v_tunjangantetap
+from pyr_spe_earning spee
+inner join pyr_earning pe on pe.pyr_earning_id=spee.pyr_earning_id
+inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=spee.pyr_sp_employee_id
+where spe.c_bpartner_id=cur.c_bpartner_id
+and pe.value='TP'
+and spe.pyr_salarypayment_id=cur.pyr_salarypayment_id;
+
+--mendapatkan rate untuk jamsostek
+select param_amount into v_jst_employee 
+from pyr_deduction_param
+where ad_client_id=cur.ad_client_id
+and value='JST_KR'
+order by validfrom desc, validto desc limit 1;
+
+--penentuan Gaji Total
+v_total_jst:=((v_gajipokok+v_tunjangantetap)*v_jst_employee/100);
+
+--mendapatkan rate untuk Dana Pensiun
+select param_amount into v_dp_employee 
+from pyr_deduction_param
+where ad_client_id=cur.ad_client_id
+and value='DP_KR'
+order by validfrom desc, validto desc limit 1;
+
+--penentuan Gaji Total
+v_total_dp:=trunc((v_gajipokok+v_tunjangantetap)*v_dp_employee/100);
+
+
+--update jamsostek di salary payment
+update pyr_spe_deduction set updated=now(), amount=v_total_jst
+where pyr_deduction_id=(select pyr_deduction_id from pyr_deduction where value='JST')
+and ad_client_id=cur.ad_client_id
+and pyr_sp_employee_id=cur.pyr_sp_employee_id;
+
+--update jamsostek di salary payment
+update pyr_spe_deduction set updated=now(), amount=v_total_dp
+where pyr_deduction_id=(select pyr_deduction_id from pyr_deduction where value='DP')
+and ad_client_id=cur.ad_client_id
+and pyr_sp_employee_id=cur.pyr_sp_employee_id;
+
+end loop; --loop pph_get_pph21
+
+
+result:=1;
+
+return;
+end
+]]></body>
+    </function>
+  </database>

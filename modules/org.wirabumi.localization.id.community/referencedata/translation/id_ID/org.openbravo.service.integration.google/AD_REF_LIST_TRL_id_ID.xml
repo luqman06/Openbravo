@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="FF808081321441D9013214697218000D" trl="N">
+    <value column="Name" isTrl="N" original="Enable Google Button in Login Page">Enable Google Button in Login Page</value>
+    <value column="Description" isTrl="N" original="Shows/hides the G button in the Login page">Shows/hides the G button in the Login page</value>
+  </row>
+</compiereTrl>

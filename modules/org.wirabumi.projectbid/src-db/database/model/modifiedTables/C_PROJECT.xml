@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_PROJECT">
+    <table name="C_PROJECT" primaryKey="C_PROJECT_KEY">
+      <column name="EM_PBID_COSTCENTER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PBID_ORDER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_COSTCENTER" name="EM_PBID_COSTCENTER_FK">
+        <reference local="EM_PBID_COSTCENTER_ID" foreign="C_COSTCENTER_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_ORDER" name="EM_PBID_ORDER_FK2">
+        <reference local="EM_PBID_ORDER_ID" foreign="C_ORDER_ID"/>
+      </foreign-key>
+    </table>
+  </database>

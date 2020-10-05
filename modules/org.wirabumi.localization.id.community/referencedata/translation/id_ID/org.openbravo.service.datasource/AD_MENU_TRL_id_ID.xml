@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="BAD7089AF94541D985644424BCBC5841" trl="N">
+    <value column="Name" isTrl="N" original="Datasource">Datasource</value>
+    <value column="Description" isTrl="N" original="Maintain datasources which are used to provide data to the user interface">Maintain datasources which are used to provide data to the user interface</value>
+  </row>
+</compiereTrl>

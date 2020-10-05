@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION PYR_TAKEHOMEPAY">
+    <function name="PYR_TAKEHOMEPAY" type="NULL">
+      <parameter name="p_sp_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_summary NUMBER;
+BEGIN
+result:=0;
+
+select (sum(spee.amount) - (select sum(sped.amount) from pyr_spe_deduction sped where sped.pyr_sp_employee_id=p_sp_employee_id)) as summary into v_summary from pyr_spe_earning as spee 
+  where spee.pyr_sp_employee_id= p_sp_employee_id; 
+v_summary = coalesce(v_summary,0);
+result:=v_summary;
+RETURN;
+END PYR_TAKEHOMEPAY
+]]></body>
+    </function>
+  </database>

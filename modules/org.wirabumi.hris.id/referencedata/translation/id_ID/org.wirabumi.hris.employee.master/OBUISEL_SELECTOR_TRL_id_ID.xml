@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="OBUISEL_SELECTOR" version="">
+  <row id="1560F335C60A40DD9E412E754D13406B" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5EBAA59B7A934EE48666F4708D4335C9" trl="N">
+    <value column="Name" isTrl="N" original="Employee Supervised">Employee Supervised</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9389B82D420249FCABB3032D0B118059" trl="N">
+    <value column="Name" isTrl="N" original="Employee Tree">Employee Tree</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9EAD956AF70145DDAC2324C0896807B0" trl="N">
+    <value column="Name" isTrl="N" original="Training Provider">Training Provider</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A21C7C7BDA5B4E438D9A29EE25D35E7D" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B2028F667F5340FE854CF990438290FD" trl="N">
+    <value column="Name" isTrl="N" original="Education Dicipline">Education Dicipline</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B8F17B363B704D6092992905F52DCEA6" trl="N">
+    <value column="Name" isTrl="N" original="Insurance Provider">Insurance Provider</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E64194A0D7E346B99AB0C4FD1D92E6A1" trl="N">
+    <value column="Name" isTrl="N" original="Organization Selector">Organization Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FE3C75767E73415B9E799EDB9EAF8092" trl="N">
+    <value column="Name" isTrl="N" original="Dependend Employee">Dependend Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,1779 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="00586F3BDF8D4929BB9B79D47030FAE1" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Nusa Cendana (Undana)">Universitas Nusa Cendana (Undana)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="00A111CA33F047E9B01CB3B5DDDDC3FA" trl="N">
+    <value column="Name" isTrl="N" original="&lt;No Action&gt;">&lt;No Action&gt;</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="01BD476CB69540F286D9817EDC83B2C6" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Pertanian Negeri Samarinda">Politeknik Pertanian Negeri Samarinda</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="01C3ECDC4E9D484C88A2F53E2C1C8725" trl="N">
+    <value column="Name" isTrl="N" original="Presiden Director">Presiden Director</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="01D377540DFD44FBAD4B19CD244B97E5" trl="N">
+    <value column="Name" isTrl="N" original="Belum Kawin">Belum Kawin</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="021045D2F66143E19F6DEFA8AAAA9781" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Nasional Pasim">Universitas Nasional Pasim</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="02F1C144571C4B4ABF5FD9F05501C151" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Teknologi Terpadu Nurul Fikri">Sekolah Tinggi Teknologi Terpadu Nurul Fikri</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0344C60D893E4F03B4876D13B313BEA7" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik De La Salle Manado">Universitas Katolik De La Salle Manado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="037C1BAFB65240F49D2B798B3D4999CB" trl="N">
+    <value column="Name" isTrl="N" original="AB">AB</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="037F9F6386034D4BB19805D1832CA2DD" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bakrie">Universitas Bakrie</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="03A8DA7F75E640BB855C3ACA8B47C0B3" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Banyuwangi (Poliwangi)">Politeknik Negeri Banyuwangi (Poliwangi)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="03BC4F882C9E48778FBDB10F9FB9C804" trl="N">
+    <value column="Name" isTrl="N" original="Penghargaan Pensiun">Penghargaan Pensiun</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="055D024C6F374687B86542FBE2213267" trl="N">
+    <value column="Name" isTrl="N" original="O">O</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="062D196F0CBF404DBDE6BF483DE875F1" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Surakarta">Universitas Muhammadiyah Surakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="06C13F2FB66047FAB8852E239139BDBE" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Santo Thomas">Universitas Katolik Santo Thomas</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="08A3F724DAE54029A3A700E2C64768BE" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Ambon">Politeknik Negeri Ambon</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="090CF62A6DA2404C88E834E56561F8CE" trl="N">
+    <value column="Name" isTrl="N" original="D1">D1</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0924B52222614A379FD8D9D34C932AD5" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Ketapang">Politeknik Negeri Ketapang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0956D496D56A49E0A69F1AB03926D26E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Purworejo">Universitas Muhammadiyah Purworejo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="09DC733E29E0469B8CB9EC907D890BD6" trl="N">
+    <value column="Name" isTrl="N" original="Gold - VIP">Gold - VIP</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0AC1D17FFDF743AC86F4D3350E317372" trl="N">
+    <value column="Name" isTrl="Y" original="General Transfer">Rotasi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0ACF84CDBD4845E1B5FDA15C8365A3AD" trl="N">
+    <value column="Name" isTrl="N" original="Non Jenjang">Non Jenjang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0DA2868DF93E436AB7151B0574D95F30" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Bekasi">Universitas Muhammadiyah Bekasi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0DA36FCC2DF84282803346DEF24AB11E" trl="N">
+    <value column="Name" isTrl="N" original="Pengangkatan Pegawai">Pengangkatan Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0E0ADC3210174AA1A012B8563B085B55" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Manufaktur Negeri Bandung (Polman)">Politeknik Manufaktur Negeri Bandung (Polman)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0E334AB042864CE5914A4F46563A3DF7" trl="N">
+    <value column="Name" isTrl="N" original="Forklift Driver">Forklift Driver</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0F0E6BA434A54894B3D7267BE04EF7B8" trl="N">
+    <value column="Name" isTrl="N" original="Supporting">Supporting</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0F8C51723937489CB9AD483C991E4F0C" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Manado">Politeknik Negeri Manado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0F90C3E61A3F41F3A6DD8A4610E46B71" trl="N">
+    <value column="Name" isTrl="N" original="Di Tanggung Pribadi">Di Tanggung Pribadi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1017AFF3745A498BBF590047BB6AFE93" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Surakarta">Universitas Surakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="10C9DDF47E714B53834F7D1AEF1C0F0F" trl="N">
+    <value column="Name" isTrl="N" original="Permanent - Full Time">Permanent - Full Time</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="121E0E1A11EF46B8A05C4A7C1D924B27" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Pontianak">Politeknik Negeri Pontianak</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="140BDCDE3A934FC0853431AB835CBFC5" trl="N">
+    <value column="Name" isTrl="Y" original="Car Ownership Program">Program Kepemilikan Mobil</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1461B3C314B241EEBD5F1F64073DE056" trl="N">
+    <value column="Name" isTrl="N" original="Accept">Accept</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="146A69BB45F645AA8501F411CC691215" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Bandung (Polban)">Politeknik Negeri Bandung (Polban)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="153F9F4EFFDC4C4FB74971EBFE4F7867" trl="N">
+    <value column="Name" isTrl="N" original="Suami">Suami</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1571C03A2A804FF18B7E20BAC34AA58F" trl="N">
+    <value column="Name" isTrl="N" original="Budha">Budha</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="15DBDB6939A1420D8C51A6159CB2DC3F" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Sriwijaya">Politeknik Negeri Sriwijaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1654504461AD4B5082AE8312747AE400" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Widya Mandala Madiun">Universitas Katolik Widya Mandala Madiun</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1687BD329A374A2AA675A98D130F4362" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Ciputra">Universitas Ciputra</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="16BE15637C6E4579A477C1985A2D799D" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Haluoleo">Universitas Haluoleo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="16D30B7E19DA4AF9A120E13167D835DB" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Mercu Buana Yogyakarta">Universitas Mercu Buana Yogyakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="17486D2AC0FE4C7DA8AA9FBDD37098B7" trl="N">
+    <value column="Name" isTrl="N" original="Director">Director</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1767AEEC3C584242B27932F4D0DF05C6" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Darul Ulum Lamongan">Universitas Islam Darul Ulum Lamongan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1838A97EA24D4FA78ABA9886A25D4F45" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Kelautan dan Perikanan Negeri Bone">Politeknik Kelautan dan Perikanan Negeri Bone</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1839A08C9EC743509A16586DBA15C97C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Satya Wacana">Universitas Kristen Satya Wacana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="192C9022313840B9A903BBD916845EE8" trl="N">
+    <value column="Name" isTrl="Y" original="Meal">Makanan dan Minuman</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="19EE2B1C178347739E2F773430EC0C4E" trl="N">
+    <value column="Name" isTrl="N" original="&lt;None&gt;">&lt;None&gt;</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1A16426F46CD44E0B9D1212DF4350CF3" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Ibn Khaldun Bogor">Universitas Ibn Khaldun Bogor</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1A2E0A4C781C4BAC91E21B09A3135BD0" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pramita Indonesia">Universitas Pramita Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1A8770DB56E64BA586A39639F8EBFE01" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Cirebon">Universitas Muhammadiyah Cirebon</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1AA0BF70111A4E3D8379AA387742CE25" trl="N">
+    <value column="Name" isTrl="N" original="THR / Gaji 13">THR / Gaji 13</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1AF7C660EB79457EA15821216136D477" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Ma Chung">Universitas Ma Chung</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1B4D06410ABE4EDFB55AC224660F496F" trl="N">
+    <value column="Name" isTrl="N" original="Institut Tekhnologi Robotik">Institut Tekhnologi Robotik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1BB617C3F5244918BE0856CEE65C87C8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Mahasaraswati Mataram">Universitas Mahasaraswati Mataram</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1E47C293682E433D86D8133F205CBEF2" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Angkling Darmo">Universitas Angkling Darmo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1E560F7EDDCA4EBC81FFEBC0EC76E729" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Semarang">Universitas Negeri Semarang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1EEA7D9E7AFC4B20A20A4EB79180B0D1" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Krida Wacana">Universitas Kristen Krida Wacana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1EEE2E2DD7F4413FB4EF2E95C8B751F4" trl="N">
+    <value column="Name" isTrl="N" original="Institut Sains dan Teknologi Nasional">Institut Sains dan Teknologi Nasional</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1F181E397DF040188077E2C9AA6D87CE" trl="N">
+    <value column="Name" isTrl="N" original="customer complaint handling">customer complaint handling</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1F2669DC9BA149778C7DD6C89484E153" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Duta Wacana">Universitas Kristen Duta Wacana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1FAF21E43B1949249C703EEF3267D425" trl="N">
+    <value column="Name" isTrl="N" original="Deduction">Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1FE54E4C7F864B9F8417172D0E6814CA" trl="N">
+    <value column="Name" isTrl="N" original="KPI">KPI</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="20C0414B5C2A4378B5241E79B93141C9" trl="N">
+    <value column="Name" isTrl="N" original="presentation with decision maker">presentation with decision maker</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="20D74127DBC143248FB20BE409DA049E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Surabaya">Universitas Muhammadiyah Surabaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="212A99248E7B42968A13D94CA5C76775" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Tasikmalaya">Universitas Muhammadiyah Tasikmalaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="216384561C674B66BCD22CF96690CB06" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pembangunan Nasional &quot;Veteran&quot; Jakarta (UPN)">Universitas Pembangunan Nasional "Veteran" Jakarta (UPN)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="22622F07A99140FF828658DADD3C3BC0" trl="N">
+    <value column="Name" isTrl="Y" original="Zero is Better">Nol Lebih Baik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="23030071EBCC475999D04398445A1D14" trl="N">
+    <value column="Name" isTrl="Y" original="Echelon 1">Jenjang 1</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2344601F0F0345AD83B2D6C1B7FF0262" trl="N">
+    <value column="Name" isTrl="N" original="Akademi Komunitas Negeri Banyuasin">Akademi Komunitas Negeri Banyuasin</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="23B6F7052DA4451FA8E13D40BE75C977" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Tadulako">Universitas Tadulako</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="23E23F015AC34B8EB70EDD82CA3B71BA" trl="N">
+    <value column="Name" isTrl="N" original="IT">IT</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="246A7749E25549B2963FB527431E0B89" trl="N">
+    <value column="Name" isTrl="N" original="Trainee">Trainee</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="259289366DC74CF88F19E281515CEFCA" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Mulawarman">Universitas Mulawarman</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="271DBC8F1D0E4866A3637347D58D55B4" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Tidar (Untidar)">Universitas Tidar (Untidar)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2757E014B9474B449FB1D3446D1EFFE8" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Semarang">Politeknik Negeri Semarang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="27D0176487BA4690AA632F5B7424B734" trl="N">
+    <value column="Name" isTrl="N" original="Mathematic">Mathematic</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="28C9148463044B9F84C67ACD1DE58893" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Brawijaya (UB)">Universitas Brawijaya (UB)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="29F4F61E7C97473D822A40539C12AEAB" trl="N">
+    <value column="Name" isTrl="N" original="Suspend">Suspend</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2A8948D9A7CB4315A53D37585B8E4F17" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Medan (Unimed)">Universitas Negeri Medan (Unimed)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2ADAD791B99C451C94EB1275A9971281" trl="N">
+    <value column="Name" isTrl="N" original="LULUS">LULUS</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2B44E9BEF9CA4C129ADD1F80659DA990" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Langlangbuana">Universitas Langlangbuana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2B5320C47B8F4532AF27C2D770AEF26D" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Prof. Dr. HAMKA">Universitas Muhammadiyah Prof. Dr. HAMKA</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2BA2E31E4CB24000A7F149347E7343A5" trl="N">
+    <value column="Name" isTrl="N" original="Jasa Produksi">Jasa Produksi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2BBAF3F7D47243DE9E5CCB580D2EAE41" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sultan Mahesa">Universitas Sultan Mahesa</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2C4F5853428547D3BC8490A47633BC13" trl="N">
+    <value column="Name" isTrl="N" original="Mutasi - Promosi">Mutasi - Promosi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2D5F34663B5346F28093EC133F740A70" trl="N">
+    <value column="Name" isTrl="Y" original="Medical Bill">Biaya Pengobatan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2D6840C53D7749ECA5ABD8BE34480E2C" trl="N">
+    <value column="Name" isTrl="N" original="Santunan Kematian Keluarga Pegawai">Santunan Kematian Keluarga Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2D6A8E63681D4B6F9C7ECD6B3A8BAB73" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Makassar (UNM)">Universitas Negeri Makassar (UNM)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2DDC2B9200EA4FCB9DEE340E70960B4F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sriwijaya">Universitas Sriwijaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2E29BE9F3DFF4EC1B493618021CC0D8E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sarjanawiyata Tamansiswa">Universitas Sarjanawiyata Tamansiswa</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2EA4CF077A264F059B436BF8AC37B8BF" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Kupang">Politeknik Negeri Kupang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2EC6580F13A4408091A8EE8E31215AC3" trl="N">
+    <value column="Name" isTrl="N" original="Recurrent">Recurrent</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2F86DE03109041B1A34333D879BE50E3" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Majapahit">Universitas Islam Majapahit</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="30045BCFBB544435AAF6DA6263E2D897" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Malang (UM)">Universitas Negeri Malang (UM)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="30261420F5D74C66934DD123259B576D" trl="N">
+    <value column="Name" isTrl="N" original="STIMIK Widya Dharma">STIMIK Widya Dharma</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3040C848EC9F49AA83E28BFBE1A11858" trl="N">
+    <value column="Name" isTrl="N" original="Freelance">Freelance</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="314857CFE6ED4079AFF80D65AFE906D6" trl="N">
+    <value column="Name" isTrl="N" original="Aliran Kepercayaan">Aliran Kepercayaan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="314EA5D93E7F4B209032D6B16D97D52A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Nahdlatul Ulama Sidoarjo">Universitas Nahdlatul Ulama Sidoarjo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="31A9DDBD3EC14D3D93C4943520BAA418" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Gresik">Universitas Muhammadiyah Gresik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="31AC7DAD516F449EB1339A8475CDB161" trl="N">
+    <value column="Name" isTrl="Y" original="Male">Laki-laki</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="31E78B87661D476392AE393BA6655D51" trl="N">
+    <value column="Name" isTrl="N" original="Policy Maker">Policy Maker</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="323CD0C108584BCFBEE1A09335F3972C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Borneo Tarakan">Universitas Borneo Tarakan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="34D90D53BBBC44E3AA043437B701ADF7" trl="N">
+    <value column="Name" isTrl="N" original="Anak Menantu">Anak Menantu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="35D62100B43E4744946281F8E575B314" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pattimura">Universitas Pattimura</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="35E1EDE2126D430A9417BB2BA149CDE7" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Lampung">Politeknik Negeri Lampung</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="36291A065F8B44698A614FBAAC859F23" trl="N">
+    <value column="Name" isTrl="N" original="Universitas HKBP Nommensen">Universitas HKBP Nommensen</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3648DDDA5FC446B0A645A0D84C1E9C93" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Seni Indonesia Padang Panjang (STSI)">Sekolah Tinggi Seni Indonesia Padang Panjang (STSI)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="37412549340D49A8B29180B2B4A0C31E" trl="N">
+    <value column="Name" isTrl="N" original="S2">S2</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="38D2D710FBC144F89BCB499CC7AF6D8E" trl="N">
+    <value column="Name" isTrl="N" original="Diamond-VVIP">Diamond-VVIP</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3A9F1CD6117447F0BD5A8DA1E1C4C270" trl="N">
+    <value column="Name" isTrl="N" original="Di Tanggung Perusahaan">Di Tanggung Perusahaan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3ACDCDD80F624E5593E111FE9910FCBB" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Media Kreatif">Politeknik Negeri Media Kreatif</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3B1047034CC94EF2900DEEDE671C4F98" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Indonesia Atma Jaya">Universitas Katolik Indonesia Atma Jaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3B9D93B12DD1416592C6F02022742F2A" trl="N">
+    <value column="Name" isTrl="N" original="Cerai">Cerai</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3C51D838F0ED489CBCBEA90D67E4B2B6" trl="N">
+    <value column="Name" isTrl="N" original="II/B">II/B</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3C94A3C479674582870216ABC58A1CE9" trl="N">
+    <value column="Name" isTrl="N" original="Institut Teknologi Kalimantan (ITK)">Institut Teknologi Kalimantan (ITK)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3CC51E741A814045B9B74D3F08207702" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Jember (POLIJE)">Politeknik Negeri Jember (POLIJE)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3DB7003DDB134A0DBC5D035CCDABCE01" trl="N">
+    <value column="Name" isTrl="N" original="Terminate">Terminate</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3DC5F4EFD9A74A99943EA9F04A31EE77" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Elektronika Negeri Surabaya (PENS)">Politeknik Elektronika Negeri Surabaya (PENS)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3DE7731DCCA54929B1AE286DA8B8D33C" trl="N">
+    <value column="Name" isTrl="N" original="Ibu Mertua">Ibu Mertua</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3F4195BA17A54112B22516422B90FDBA" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pembangunan Jaya">Universitas Pembangunan Jaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4060134015374E1E944C1B3D2628DB03" trl="N">
+    <value column="Name" isTrl="N" original="Internal">Internal</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="40C16278E3D94739B222A612FEBAE9DF" trl="N">
+    <value column="Name" isTrl="Y" original="Demotion">Demosi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="41ECAE53BCDA48229683AE543C5CD7CD" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Padang">Politeknik Negeri Padang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="42979EE7F20D4AD8A49BF8CA4042DF9B" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pendidikan Ganesha">Universitas Pendidikan Ganesha</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="42F7D38FA06349E4A354F1AAF6AC1235" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Sambas">Politeknik Negeri Sambas</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="43C3C4BD072740E98643067D38A67340" trl="N">
+    <value column="Name" isTrl="N" original="Rejected">Rejected</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="447DD29951514E09AD41892305EA5CF8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bengkulu">Universitas Bengkulu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="47552D372A4A4FEEB59E5CF6658D976F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Mataram">Universitas Muhammadiyah Mataram</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4825B8C20ABA4A789AF41D2270A6F191" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pancasila">Universitas Pancasila</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="48EE5AA7B37B4F9DA02AE3B08EF5463D" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sanata Dharma Yogyakarta">Universitas Sanata Dharma Yogyakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="49289EE5A3484025B5B527712E1B5638" trl="N">
+    <value column="Name" isTrl="Y" original="External">Eksternal</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4A1FAD77AA644EBDB861ED5B6DFFA23A" trl="N">
+    <value column="Name" isTrl="N" original="Level 2">Level 2</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4AA5B6983F7248EFA40E98E4E83156BD" trl="N">
+    <value column="Name" isTrl="N" original="Institut Bisnis Nusantara">Institut Bisnis Nusantara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4AC2FEB124BD411FB1F9309558FBC175" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Hasanuddin (Unhas)">Universitas Hasanuddin (Unhas)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4BB481BE574B47E2A12DC756FFD5A693" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Surabaya">Universitas Surabaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4BE36FBD27FF4E538E2109399E5658C1" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Dian Nuswantoro">Universitas Dian Nuswantoro</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4C076E9ED99F4B4E83B47FABAA7578A6" trl="N">
+    <value column="Name" isTrl="N" original="Institut Kalbis">Institut Kalbis</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4DB53FA617EE487E95C129CE85D2CD46" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Nusa Utara">Politeknik Negeri Nusa Utara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4EC64A7436C540D7AA02AA3BFF2B25C4" trl="N">
+    <value column="Name" isTrl="N" original="Wakil Manager">Wakil Manager</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4F17D5BEE76C4540BF6971E1FF52EFA8" trl="N">
+    <value column="Name" isTrl="Y" original="Core Competency">Kompetensi Inti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4F3A95D7A8A342E998AF03837E5A2323" trl="N">
+    <value column="Name" isTrl="Y" original="Transport Cost, Fuel, Toll, and Parking Fee">Biaya Transportasi, Bahan Bakar, Tol, dan Parkir</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4F629A8CD4F746A7863A1B65F434CD20" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Malang">Universitas Islam Malang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4FA1E36DFF7246E78590B5AA114445CA" trl="N">
+    <value column="Name" isTrl="Y" original="Technical">Teknis</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="500265120E3443DCBE75DF93F7FE36A3" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Gunung Rinjani">Universitas Gunung Rinjani</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="50F8EEF15A03461485C874125DE3EB8E" trl="N">
+    <value column="Name" isTrl="N" original="MIPA">MIPA</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="510E8095394E477383DE292C53CC6A28" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Teknologi Nusantara">Universitas Teknologi Nusantara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="52ADBBDBF0EB4846A87937A88C5F6AC5" trl="N">
+    <value column="Name" isTrl="N" original="Kursus 1 Tahun">Kursus 1 Tahun</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="54D26F1F324C4D52A2E5768315DE8D7D" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Batam">Politeknik Negeri Batam</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="54DA4FB3CB1D4788ADE638331FD3F02E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Atmajaya Yogyakarta">Universitas Atmajaya Yogyakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="55C403064F3E4AF68DC65207DD4C2DE8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Syiah Kuala">Universitas Syiah Kuala</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="573E79226CCB4435BBCB4F177B0A9BCC" trl="N">
+    <value column="Name" isTrl="N" original="Kursus 2 Tahun">Kursus 2 Tahun</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="580EC2A2474F4714999B4EE3D8B98BC7" trl="N">
+    <value column="Name" isTrl="Y" original="II/A">2A</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5841E8C6F7534B048ADB194840BDC37C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Indonesia">Universitas Kristen Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5876CF3425DA49FD9BAE6EAC1CA2BD24" trl="N">
+    <value column="Name" isTrl="Y" original="Kristen Protestan">Kristen</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="589B45F2887C4B209CD2A984817D7DAD" trl="N">
+    <value column="Name" isTrl="N" original="Institut Seni Indonesia Denpasar">Institut Seni Indonesia Denpasar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="58DB8F27ADFE4EB0984BA6F32DAE260A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Borobudur">Universitas Borobudur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="59230EE7D997467EB1F00C1C4AA36678" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Jenderal Soedirman">Universitas Jenderal Soedirman</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="59A4C4255DE74B28AA47F502B8D39CC6" trl="N">
+    <value column="Name" isTrl="N" original="Earning">Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5A068AB4767F4EB5AF95E10C055F0893" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sultan Ageng Tirtayasa">Universitas Sultan Ageng Tirtayasa</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5A1BA3DEAB194482B3A39C2C1029C160" trl="N">
+    <value column="Name" isTrl="Y" original="Hard Skill">Keahlian Spesifik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5A9353A68DCA409B8F763458946D2329" trl="N">
+    <value column="Name" isTrl="N" original="Accounting">Accounting</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5B09F0656592424898AC157262DC383C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Swiss German">Universitas Swiss German</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5B495B16AACE434393755C25DD94E9F7" trl="N">
+    <value column="Name" isTrl="N" original="Kenaika Golongan Akselerasi">Kenaika Golongan Akselerasi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5BAECB21382C498E9C0CBF61E2FE120A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Jakarta (UNJ)">Universitas Negeri Jakarta (UNJ)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5BF4B6A0B6F049D7AA9D624A2BCCC5B1" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Diponegoro">Universitas Diponegoro</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5D41B759AF3F4E9F84B319721B32E8CD" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Jakarta">Universitas Muhammadiyah Jakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5DD856C47DE440119A0990D575EF753D" trl="N">
+    <value column="Name" isTrl="Y" original="Kristen Katholik">Katholik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5DEDAE1130154B7B82067DEC49D3FB62" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Jambi">Universitas Jambi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5E04B34CDD0A47BA87CF8F99ECD9FE51" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Parahyangan">Universitas Katolik Parahyangan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5E3998471D4B4B4AA2522709482C65D6" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Jenderal Achmad Yani">Universitas Jenderal Achmad Yani</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5EF55D8FE2384A2A82386A9AEA4A3836" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Janabadra">Universitas Janabadra</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5EF9C401D934442797CED4AF37C5EBB2" trl="N">
+    <value column="Name" isTrl="Y" original="Promotion">Promosi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5F580B6BA6294C82A59F05F0B8327F26" trl="N">
+    <value column="Name" isTrl="N" original="Institut Informatika dan Bisnis Darmajaya">Institut Informatika dan Bisnis Darmajaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5F77A8F52B5C4766B95C7DCBB0789DA1" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Musamus Merauke">Universitas Musamus Merauke</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5F7A68D87E0E4C1E82D9DED64B659117" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Nasional">Universitas Nasional</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="611B4951F36E4C7AA3F68C93D2748791" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Fajar">Universitas Fajar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6148FFF963A041DF8D924657B90B7CC3" trl="N">
+    <value column="Name" isTrl="N" original="STMIK AMIKOM YOGYAKARTA">STMIK AMIKOM YOGYAKARTA</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="61E36DF44CE54F54A4DE576A55B9E7BE" trl="N">
+    <value column="Name" isTrl="N" original="Supervisor">Supervisor</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="62CF9639410E4B9D9F0C471FD18BD943" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Papua">Universitas Papua</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="646554479182452792C1EA9DEDC8AEDB" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Khairun">Universitas Khairun</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6556F1B1F0A24536AFF471C76DE2ABD8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Samawa">Universitas Samawa</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="66F5C768DF1B48B2920D8C8A8159A4A9" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Stikubank">Universitas Stikubank</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="673870C05B1B43888E72D588A5A68F73" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Advent Indonesia">Universitas Advent Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="67D9725102A54E428DCDF7A97A0125B0" trl="N">
+    <value column="Name" isTrl="N" original="Lainnya">Lainnya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="68EB33403EAF43F0BEF9925ED2F9C8D8" trl="N">
+    <value column="Name" isTrl="N" original="Non-Permanent - Full Time">Non-Permanent - Full Time</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="69B481B1B9D944A9858500DAAA7A8DDA" trl="N">
+    <value column="Name" isTrl="N" original="Exavator Driver">Exavator Driver</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="69B84748B3A74E7794C0DF071607C44A" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Jakarta">Politeknik Negeri Jakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6A1FFFA992064A23A6460B99E09EFF96" trl="N">
+    <value column="Name" isTrl="N" original="Kakak">Kakak</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6A2FB3EF40C14EC2B40873541B671C5A" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Medan">Politeknik Negeri Medan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6ACF55186B024AE2BD100D26D01F5A53" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Surabaya (Unesa)">Universitas Negeri Surabaya (Unesa)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6BDCC1DE5BF747B1BCCAEF0C5A698DFC" trl="N">
+    <value column="Name" isTrl="N" original="SMP">SMP</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6BF17D165E644D768D6646DD0B0EC904" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Cordova Indonesia">Universitas Cordova Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6BFEC5CF929A410C9736BA48548A9D94" trl="N">
+    <value column="Name" isTrl="N" original="I/A">I/A</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6C15D53C38EF4C828E2A63CE41B6563A" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Lhokseumawe">Politeknik Negeri Lhokseumawe</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6C19A637FF33455F982116CEA82053C9" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Madura (POLTERA)">Politeknik Negeri Madura (POLTERA)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6C2A499B9A7E4DC7B55D1C7870DDB78E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Purwokerto">Universitas Muhammadiyah Purwokerto</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6CBF6759C4774CB583FEAE72FF358B1C" trl="N">
+    <value column="Name" isTrl="N" original="Terminated">Terminated</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6D3B1167C7B0424B9E21F59EA72AF376" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Sukabumi">Universitas Muhammadiyah Sukabumi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6DC2716EA98240C7A2810EF0221DCDC9" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pembangunan Nasional Veteran Jawa Timur">Universitas Pembangunan Nasional Veteran Jawa Timur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6DC6449C53F1474F87B577FBDD3ADF46" trl="N">
+    <value column="Name" isTrl="Y" original="I/B">1B</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6F1AC9F044854D61B9AC3021DD4A8A54" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Tanri Abeng">Universitas Tanri Abeng</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="706959649DA849B6806910A852FB4154" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Matana">Universitas Matana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="707C05C499D84D58B327EBD16095C9A5" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Petra">Universitas Kristen Petra</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="709E939FC02F477F8E734C910C4B0F87" trl="N">
+    <value column="Name" isTrl="N" original="Gold - I">Gold - I</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="70CEB42814F44691AF8AD180CBEEB4D8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Sumatera Utara">Universitas Islam Sumatera Utara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="713BFD27D8844918B87ABC80FE17FBC0" trl="N">
+    <value column="Name" isTrl="N" original="Kawin">Kawin</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="71BA9C06A5CF43D2B47C99E11D63D4FF" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Semarang">Universitas Muhammadiyah Semarang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="71C3DF7DD0E14D7F963CB9B24E43C806" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Gadjah Mada (UGM)">Universitas Gadjah Mada (UGM)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="72053F511AD04C6990F48173EE5B6072" trl="N">
+    <value column="Name" isTrl="N" original="STIKES Katolik St. Vincentius a Paulo Surabaya">STIKES Katolik St. Vincentius a Paulo Surabaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="730D841E9D8F4E86B60D9C8A40A8375F" trl="N">
+    <value column="Name" isTrl="N" original="Institut Teknologi Bandung">Institut Teknologi Bandung</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="74DC526A1B7C47D78C36E22E7D8881BE" trl="N">
+    <value column="Name" isTrl="N" original="Sains">Sains</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="74FF2CB3D3714A15AF5F4D6FDA2FB9A1" trl="N">
+    <value column="Name" isTrl="N" original="Recomended">Recomended</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="75640DA5B3D24D2DB3758DEBCAF35F58" trl="N">
+    <value column="Name" isTrl="N" original="Contract">Contract</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="75AC793C398C429DAD62D674F2B4F221" trl="N">
+    <value column="Name" isTrl="N" original="STMIK Bandung Bali">STMIK Bandung Bali</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7644951B638040DD917F6B4D1CC35319" trl="N">
+    <value column="Name" isTrl="N" original="Hari Libur">Hari Libur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="76A0F849DAA1447B8F4E76A60C15B097" trl="N">
+    <value column="Name" isTrl="N" original="Junior Programmer">Junior Programmer</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="77477B0ED55D4DB4AE06935E4686058F" trl="N">
+    <value column="Name" isTrl="Y" original="Echelon 2">Jenjang 2</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="77FD82911BC0474C85F571A76D98EB11" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Depok">Universitas Muhammadiyah Depok</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="786C9ABB0EA346FCB4224D9A313BF7CF" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sumatera Utara (USU)">Universitas Sumatera Utara (USU)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="786EF3E757E84DDA82B9149275499E99" trl="N">
+    <value column="Name" isTrl="N" original="Universitas 45 Mataram">Universitas 45 Mataram</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="78CC01D3FE764235A8AB49FB32A5E421" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Garut">Universitas Muhammadiyah Garut</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="79337303271548F8B69805C4F2D6A1E2" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Makassar">Politeknik Negeri Makassar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="79F1228DACAF4FD7A4BBF4FD44F9349A" trl="N">
+    <value column="Name" isTrl="N" original="Platinum - VIP">Platinum - VIP</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7A5A44876FB04F9F9E9D8A4820016765" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Airlangga (Unair)">Universitas Airlangga (Unair)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7B05809CC4B043EAAA010D9625B26AC3" trl="N">
+    <value column="Name" isTrl="N" original="Kenaikan Golongan Reguler">Kenaikan Golongan Reguler</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7C201EFA637D4E328906B0A79C7A6F88" trl="N">
+    <value column="Name" isTrl="N" original="Institut Teknologi Bandung (ITB)">Institut Teknologi Bandung (ITB)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7D1166F4512448859AC100966D880F4F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Al-Azhar Mataram">Universitas Islam Al-Azhar Mataram</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7E1781266D0C4E21A338AC456972B2A4" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Samudra">Universitas Samudra</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7F446EB0918A45428DAD668FEFC1D757" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Yogyakarta (UNY)">Universitas Negeri Yogyakarta (UNY)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7FA1937E22814A8480C84771FAA31675" trl="N">
+    <value column="Name" isTrl="N" original="Manager">Manager</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="806F8ED5176349BA8749E2F95B9EFA29" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Mercubuana">Universitas Mercubuana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="80838BA4BAF147EEACBF664005DBB291" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Makassar">Universitas Muhammadiyah Makassar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8091C32F0A694E6C8D55FDE8DDF7445F" trl="N">
+    <value column="Name" isTrl="N" original="Benefits Asuransi Direksi">Benefits Asuransi Direksi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="80EC8864CD204BBBBEEFF075441C21FA" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Manufaktur Negeri">Politeknik Manufaktur Negeri</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8143D4AC2ADE410B801469AC2C34E820" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bunda Mulia">Universitas Bunda Mulia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="81B04807887D4BC68FFE7BCBFBCE88C3" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Manado">Universitas Negeri Manado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8200757B499141918D306302F11412E0" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Batik Surakarta">Universitas Islam Batik Surakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8233BC211C2042528125982C1AF5E029" trl="N">
+    <value column="Name" isTrl="N" original="BELUM LULUS">BELUM LULUS</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="82F08CD234FE48608FE1D8A6237144CA" trl="N">
+    <value column="Name" isTrl="N" original="Terminate">Terminate</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="83A144DF031B4BD19546364D4AD1D375" trl="N">
+    <value column="Name" isTrl="N" original="Mutasi - Rotasi">Mutasi - Rotasi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8420537B425D439F8A439DF1C99ADC8A" trl="N">
+    <value column="Name" isTrl="N" original="STIMIK ESQ Business School">STIMIK ESQ Business School</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8430AA4AD8394EBAB9E6E9BD3ACB98F9" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Banjarmasin">Politeknik Negeri Banjarmasin</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="84BB25FF5D1249CEA46865DB8197641C" trl="N">
+    <value column="Name" isTrl="N" original="Presiden Komisaris">Presiden Komisaris</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="84E735DBE7DE459095047BE27291382B" trl="N">
+    <value column="Name" isTrl="N" original="Institut Pertanian Bogor (IPB)">Institut Pertanian Bogor (IPB)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="85747FE42FA74F8FB4153FA2F13E5E20" trl="N">
+    <value column="Name" isTrl="N" original="Underwater Welding">Underwater Welding</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="85BB192D607242C198B34DE3489CAB5B" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Malang (POLINEMA)">Politeknik Negeri Malang (POLINEMA)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="85F2DB9861B04E60BC8D6C91B205981B" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Udayana (Unud)">Universitas Udayana (Unud)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="86372ADDD0EA4BA29E47E5B850DCAFA4" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Andalas">Universitas Andalas</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="86C75FABA5C64BC59E1C02BAC8169EF5" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bangka Belitung">Universitas Bangka Belitung</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="86D784C6D1E64CEB853F8B8943C9DF27" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Artha Wacana">Universitas Kristen Artha Wacana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="87704F2B5E0342B788D013D4B209314D" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Manajemen Informatika Bumi Gora">Sekolah Tinggi Manajemen Informatika Bumi Gora</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="882F649BFD7248A9AC2871A8B5D90158" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Perikanan Negeri Tual">Politeknik Perikanan Negeri Tual</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="893008B4E2ED492CBFCF39C9853FA7F8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Surya">Universitas Surya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="89ED6B2121BB4D39ADCE2105ABEEA55A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Padang">Universitas Negeri Padang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="89FC54D240544283B18942C8787F0809" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pelita Harapan">Universitas Pelita Harapan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8A7CA308AD3744F69DC8F93B7F253E7A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Perjuangan Siliwangi">Universitas Perjuangan Siliwangi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8A7E6CE58BEF4A02952369F22D3CEAA9" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Palangka Raya">Universitas Palangka Raya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8AF59ED7218748A3A189030B3D96A220" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Tanah Laut">Politeknik Negeri Tanah Laut</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8B7596605DB84256AF85B95FB964ABF7" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bojonegoro">Universitas Bojonegoro</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8D8F0DBCDBEC42C8A9C8E7DE7561243C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Nusantara">Universitas Islam Nusantara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8E320EC4A26046E791AEF82E29CEE060" trl="N">
+    <value column="Name" isTrl="N" original="Akademi Teknologi Kulit Yogyakarta (ATK)">Akademi Teknologi Kulit Yogyakarta (ATK)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8E7F4861AE854E6992BF48318AFCBDA4" trl="N">
+    <value column="Name" isTrl="N" original="Ibu">Ibu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8E92C33437394E89B77945AC5ED46594" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Galuh Ciamis">Universitas Galuh Ciamis</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8F0554AE22714A7694E6E53850BEA372" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Samarinda">Politeknik Negeri Samarinda</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9007F0222E654A5993CF76E0C3F5F2ED" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Peradaban Bumiayu">Universitas Peradaban Bumiayu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="906DB5EC5C254916BF3FDF6A72191CC1" trl="N">
+    <value column="Name" isTrl="N" original="Kepala Seksi">Kepala Seksi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9119A111CCEC457FA74409E6405D9D5E" trl="N">
+    <value column="Name" isTrl="N" original="Institut Seni Indonesia Yogyakarta (ISI)">Institut Seni Indonesia Yogyakarta (ISI)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="91800470B1FF4AB0A0C2B96FEA69EEDD" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Gunadarma (Kampus K)">Universitas Gunadarma (Kampus K)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="91D369A36B824D8395E5DA1F2E08F8FF" trl="N">
+    <value column="Name" isTrl="Y" original="Higher Better">Lebih Tinggi Lebih Baik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="92FF35B9AB8F434DAE4026AFDAFBEC52" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sulawesi Barat">Universitas Sulawesi Barat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="93300D4663064A37AED92154F95DD995" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Methodist Indonesia">Universitas Methodist Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9446F4F14DBA433F97BAEC6ACDBB1333" trl="N">
+    <value column="Name" isTrl="N" original="Paid Once">Paid Once</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9593261DD8344197BAB7358896D7E4AC" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Lampung">Universitas Lampung</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9641DCE283BF450FA0ADC01B9C9E810F" trl="N">
+    <value column="Name" isTrl="N" original="Job Title">Job Title</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="983F94D96D5E4EEE84EBB0974BEF9597" trl="N">
+    <value column="Name" isTrl="N" original="GM">GM</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9896B6C2F1CF4E739C3BED1BAB7E8428" trl="N">
+    <value column="Name" isTrl="N" original="Ekonomi">Ekonomi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="98E1B54FFD084BDEB1C3233763F000A9" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Teknologi Yogyakarta">Universitas Teknologi Yogyakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="98F3DD053E0E4DD3ADF92506C7E27C62" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Ilmu Akuntansi Mataram">Sekolah Tinggi Ilmu Akuntansi Mataram</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="98FFB22DDF584566B51DC24DEA935B2B" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Trisakti">Universitas Trisakti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="99811E9B8E3244439ADEFDB03CC55B5A" trl="N">
+    <value column="Name" isTrl="N" original="often work out side of office">often work out side of office</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="99DABD69820A440E86254D5DB126E5EC" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Siliwangi (UNSIL)">Universitas Siliwangi (UNSIL)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="99DF6A5BE1994D79971EC1AA19F39275" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Soegijapranata">Universitas Katolik Soegijapranata</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="99F3419EBBC74DE3B6E8B6EB82FB6A1B" trl="N">
+    <value column="Name" isTrl="N" original="Institut Sains dan Teknologi AKPRIND">Institut Sains dan Teknologi AKPRIND</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9AABE0D6F5434D28B42D8BC499C0DB14" trl="N">
+    <value column="Name" isTrl="N" original="Institut Manajemen Telkom">Institut Manajemen Telkom</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9C63DF00A4124986AAD2379D2E89AED4" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Trunojoyo">Universitas Trunojoyo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9CB50E010F1048B4B5A570A503B497F9" trl="N">
+    <value column="Name" isTrl="N" original="Universitas PGRI Banyuwangi">Universitas PGRI Banyuwangi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9CDED9BADA2E437194652C27C9579ADA" trl="N">
+    <value column="Name" isTrl="Y" original="Reject">Reject / Terminate</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9CE57C71DC044AC6ACB76A6060C1DC54" trl="N">
+    <value column="Name" isTrl="Y" original="Echelon 3">Jenjang 3</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9D0D5F3087DC418EAB88EF5AF1563CD8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bhayangkara Jakarta Raya">Universitas Bhayangkara Jakarta Raya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9D2077B1C39E4B9880D2B62B3BFE5609" trl="N">
+    <value column="Name" isTrl="N" original="Universitas YARSI">Universitas YARSI</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9E0AE8BD32754D5183BE2AA954C3A987" trl="N">
+    <value column="Name" isTrl="N" original="Probation">Probation</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9E1EA67C33F141B1807E9667663C9FA9" trl="N">
+    <value column="Name" isTrl="N" original="Imbalan Pasca Kerja">Imbalan Pasca Kerja</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9E72217B2DE643F6AE0B5552DB7DC7AD" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Riau">Universitas Riau</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9F0DA66F62B1480A904EF1A8EBF3A3BF" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Budi Luhur">Universitas Budi Luhur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9F39FA41C3F54F9B88677A996528D36E" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Pertanian Negeri Payakumbuh">Politeknik Pertanian Negeri Payakumbuh</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A0813A6B1FDD41B29A66CA8836F5B3C0" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Tanjungpura">Universitas Tanjungpura</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A13D0CD5D76F41E5A6BE3EA514FDE610" trl="N">
+    <value column="Name" isTrl="N" original="Bapak">Bapak</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A174B42CEF604FCF81745E60431B9B78" trl="N">
+    <value column="Name" isTrl="N" original="Inti College Indonesia">Inti College Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A233E2EBB15E4BD79A7D93B8EBB2D251" trl="N">
+    <value column="Name" isTrl="N" original="I/B">I/B</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A23AF95C82F947C9AC278D3FA8EE1B40" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pepabri Makassar">Universitas Pepabri Makassar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A4655531797C4D4E8F3DA4D650FE284E" trl="N">
+    <value column="Name" isTrl="N" original="Psikologi">Psikologi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A46EE3B77C13469EA80C60C009EF0813" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pendidikan Indonesia (UPI)">Universitas Pendidikan Indonesia (UPI)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A5E2411CD56143D6A054202F5D7A33CE" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Palembang">Universitas Muhammadiyah Palembang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A73E2655A9974E3CBC480986F0DAC893" trl="N">
+    <value column="Name" isTrl="N" original="Universitas 19 November">Universitas 19 November</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A78854236B25475DA55D4E96532AD4BC" trl="N">
+    <value column="Name" isTrl="N" original="Level 1">Level 1</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A8557979618A4AA9808D7D8B696BA8E9" trl="N">
+    <value column="Name" isTrl="Y" original="Non Technical">Non Teknis</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A8E0BCA00F76483999353CB45B4F1A74" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Madiun (PNM)">Politeknik Negeri Madiun (PNM)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A8E8C1D5575041FF8778A88ECC7EE65F" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Teknologi Adisutjipto">Sekolah Tinggi Teknologi Adisutjipto</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A93243ED90DA4D9088D2425FB7D1C602" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Malang">Universitas Muhammadiyah Malang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A93BFBDD239B41F29DC60394F27AFF80" trl="N">
+    <value column="Name" isTrl="N" original="STKIP Bina Bangsa Getsempena">STKIP Bina Bangsa Getsempena</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A97B51C93661456097C291E61FF52B41" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pembangunan Nasional &quot;Veteran&quot; Yogyakarta">Universitas Pembangunan Nasional "Veteran" Yogyakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A980980205764F3091B8EF2BCC049DCB" trl="N">
+    <value column="Name" isTrl="N" original="Suspended">Suspended</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A9843DD536C54195A26E28859E94A793" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Bengkulu">Universitas Muhammadiyah Bengkulu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AA5009EC64504996ACFAE1FE76AF07E2" trl="N">
+    <value column="Name" isTrl="N" original="Perguruan Tinggi Raharja Tangerang">Perguruan Tinggi Raharja Tangerang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AA727C67B7A64CB5A6D0665251C3BF1D" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Maritim Negeri Indonesia">Politeknik Maritim Negeri Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="ABEC01D9D8A84799BE0BED60A0392640" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Jember (UNEJ)">Universitas Jember (UNEJ)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AC898D97A9E7454786FED44C6DA88031" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Bali">Politeknik Negeri Bali</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AC9D8DC2DEFD4F698BA5ADF9EFF6FAB3" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Indonesia (UI)">Universitas Indonesia (UI)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AE80D67F7E3E4F1CA543E072E6514A1F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Kristen Maranatha">Universitas Kristen Maranatha</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AF5E854DBDC8434384EEEF2851399B24" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Binus">Universitas Binus</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AFE8ACE98778465080B84A30EE4AD4FE" trl="N">
+    <value column="Name" isTrl="N" original="Outsource">Outsource</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B0A68116B4804BEA9729508B26EA202C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pembangunan Nasional Veteran (UPN)">Universitas Pembangunan Nasional Veteran (UPN)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B1180A3DDE8D4501B9E0FC6BD2E8FD80" trl="N">
+    <value column="Name" isTrl="N" original="Anak">Anak</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B37ED64578624928B6924879AB9A6599" trl="N">
+    <value column="Name" isTrl="N" original="Non-Permanent - Part Time">Non-Permanent - Part Time</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B38989A802D54CA9AFD5BED82BB0109B" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Multimedia Nusantara">Universitas Multimedia Nusantara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B3CCE5381D814677A1358998EE3B3CA6" trl="N">
+    <value column="Name" isTrl="N" original="Beasiswa Anak Pegawai">Beasiswa Anak Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B48630C8A2B142D6BA426D94C3B16D7F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Bogor">Universitas Muhammadiyah Bogor</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B4E7E7483E4547E7B4A8AAF6BAEA4DA1" trl="N">
+    <value column="Name" isTrl="N" original="Di Tanggung Pribadi">Di Tanggung Pribadi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B5F7F47D41C74839B7F9BADB5D8282F4" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Widya Dharma">Universitas Widya Dharma</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B699EE9740174DD3BCAD5E2D0219395D" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Teknologi Negeri Bone">Politeknik Teknologi Negeri Bone</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B6B9D36E63B941809E65546E73227D61" trl="N">
+    <value column="Name" isTrl="N" original="Institut Teknologi Sepuluh Nopember (ITS)">Institut Teknologi Sepuluh Nopember (ITS)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B77CC889599546678CD89C03DBEAD944" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Presiden">Universitas Presiden</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B7AED85BE0584CA897402DC05E7716EA" trl="N">
+    <value column="Name" isTrl="N" original="IKIP-PGRI Pontianak">IKIP-PGRI Pontianak</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B90194F7FEB742A4B24768CEADB1D502" trl="N">
+    <value column="Name" isTrl="N" original="Benefits Tunjangan Direksi">Benefits Tunjangan Direksi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BA21B7037E0A47088F2FE90111DF09ED" trl="N">
+    <value column="Name" isTrl="N" original="IKIP Mataram">IKIP Mataram</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BA30973195274388A92EF381214FCA49" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Malikussaleh">Universitas Malikussaleh</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BB5509AAC13B41A4BFE5BD75104D383A" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Perkapalan Negeri Surabaya (PPNS)">Politeknik Perkapalan Negeri Surabaya (PPNS)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BBAE94897883418C8A1B9DE4EE885903" trl="N">
+    <value column="Name" isTrl="N" original="D3">D3</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BBBC030EB1D543E98CD3988B441F4F1C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Ahmad Dahlan">Universitas Ahmad Dahlan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BBD9C2754DA942CBAD70464F6BAAE306" trl="N">
+    <value column="Name" isTrl="Y" original="I/A">1A</value>
+    <value column="Description" isTrl="N" original="Entry level">Entry level</value>
+  </row>
+  <row id="BC4CBAB020CD459F90AC444FE7C59113" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pendidikan Indonesia">Universitas Pendidikan Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BC4E8FA5E7264651AF05CFADA0717627" trl="N">
+    <value column="Name" isTrl="N" original="Money Maker">Money Maker</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BDD1ECFCFF27460B9A5338F42FC7F03B" trl="N">
+    <value column="Name" isTrl="Y" original="Female">Perempuan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BDDF203D6304487592FD8A1D40FED28B" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Bandung">Universitas Muhammadiyah Bandung</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BDF6DDC147004B3089EB043C30317F66" trl="N">
+    <value column="Name" isTrl="N" original="Site Tree">Site Tree</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BE120C585EC9489F81DE4F977555D3DE" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sam Ratulangi">Universitas Sam Ratulangi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BE3C32CE3FE943C0A17BD90B11552119" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Nahdlatun Wathan">Universitas Nahdlatun Wathan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BECCF276EC174DF18494967BC7606C43" trl="N">
+    <value column="Name" isTrl="N" original="D2">D2</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BF10253837274A8485FF4049E6F8A581" trl="N">
+    <value column="Name" isTrl="N" original="STIE BIMA">STIE BIMA</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BF54B22CBDDD4F0CADC9CA7508B89067" trl="N">
+    <value column="Name" isTrl="N" original="Islam">Islam</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BF662FD901454F5083F65306333C4344" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Merdeka Malang">Universitas Merdeka Malang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BF7B1B313E8F4199A1791C2B04A24453" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Widya Mandala Surabaya">Universitas Katolik Widya Mandala Surabaya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C26525263AAF47AA9E17970904039D7E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Magelang">Universitas Muhammadiyah Magelang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C2E0EE854B0F4B228E5E63155E1D0CC9" trl="N">
+    <value column="Name" isTrl="N" original="Akademi Manajemen Informatika BSI Purwokerto">Akademi Manajemen Informatika BSI Purwokerto</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C2F377053919406ABEB72BD1E069670D" trl="N">
+    <value column="Name" isTrl="N" original="Keponakan">Keponakan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C335FD8926E24279B04AE088B30C04F5" trl="N">
+    <value column="Name" isTrl="N" original="Adik">Adik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C44E5DDB6ECE4444BF3AA4F55F733B91" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Panji Sakti">Universitas Panji Sakti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C458CE4552E64C1E98C95EA9B33B3208" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Singaperbangsa (UNSIKA)">Universitas Singaperbangsa (UNSIKA)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C48B9034592B4712A92BA370CB65957F" trl="N">
+    <value column="Name" isTrl="N" original="Mutasi - Demosi">Mutasi - Demosi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C4B51297A3F84D818991B4B4B9ED3DF2" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Islam Indonesia">Universitas Islam Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C62ED5987859443D850C9B31D9FE73DC" trl="N">
+    <value column="Name" isTrl="N" original="Bapak Mertua">Bapak Mertua</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C6363F420AE945C18866182DA9EB6812" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Maritim Raja Ali Haji">Universitas Maritim Raja Ali Haji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C66611A8528C4CA795D9B5CF8B36E0A8" trl="N">
+    <value column="Name" isTrl="N" original="Diluar Jam Dinas">Diluar Jam Dinas</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C789AFCE35B44E42BB7F43CFF737FCA1" trl="N">
+    <value column="Name" isTrl="N" original="Benefits Uang Muka Rumah">Benefits Uang Muka Rumah</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C79A691B8F174001B4DDB89F120A6AC6" trl="N">
+    <value column="Name" isTrl="Y" original="Role Competency">Kompetensi Peran</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C82080F004844DF4987C13975A69795A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Widyagama">Universitas Widyagama</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C87A11D8A5A449A692FCAA4D925F606F" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Ilmu Kesehatan Mitra RIA Husada">Sekolah Tinggi Ilmu Kesehatan Mitra RIA Husada</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C8D7FEF73FEA43ED93524FB47FBD94A8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Komputer Indonesia">Universitas Komputer Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C9C493FA44A44012B9C94A1FA774BA90" trl="N">
+    <value column="Name" isTrl="N" original="Suspended">Suspended</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CAC6DD89550E421EBC385B30B991A075" trl="N">
+    <value column="Name" isTrl="N" original="Institut Seni Indonesia Surakarta">Institut Seni Indonesia Surakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CB364CFB425C4EE9BDC3A46DD0B13A4B" trl="N">
+    <value column="Name" isTrl="N" original="SD">SD</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CC3F506AFA7647379E65A9AC2A77995F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Cendrawasih (Uncen)">Universitas Cendrawasih (Uncen)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CE8AC4BDBB8049A18DE8B2F6958A1D2F" trl="N">
+    <value column="Name" isTrl="N" original="Penghargaan Kekaryaan">Penghargaan Kekaryaan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CEB0BC52DED9499BBA7B04750E2447D2" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Pamulang">Universitas Pamulang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CFD3D8F021E6416786E73382048B8F71" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Tjut Nyak Dhien">Universitas Tjut Nyak Dhien</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D0BE72207CDC4B7AAD0B9FF4D5E418F0" trl="N">
+    <value column="Name" isTrl="N" original="Unknown">Unknown</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D0C948457C1348DC86A5004E1A29B5BC" trl="N">
+    <value column="Name" isTrl="N" original="Istri">Istri</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D16DC736CA0F49CFA0FF86C5419A38A4" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Alkhairaat">Universitas Alkhairaat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D1B8B121542B4F1FBD2DE4E99DC4328F" trl="N">
+    <value column="Name" isTrl="Y" original="II/B">2B</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D252ACE554E24AD3A95E12DDA99B3E08" trl="N">
+    <value column="Name" isTrl="Y" original="Lower is Better">Lebih Rendah Lebih Baik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D269D65444A94A45BE8837F110862F5B" trl="N">
+    <value column="Name" isTrl="N" original="Komisaris">Komisaris</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D2D2371A2664400792C1BDB721632B7A" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Yogyakarta">Universitas Muhammadiyah Yogyakarta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D383002081834952803C8AF8437BFC2E" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Filsafat Widya Sasana">Sekolah Tinggi Filsafat Widya Sasana</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D386C0DD5A6B4C11B60803EBC3E2601C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Bina Nusantara (Kampus Alam Sutera)">Universitas Bina Nusantara (Kampus Alam Sutera)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D52042A9D44C4EBC88EB8B668AFA44A7" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Tarumanagara">Universitas Tarumanagara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D68ACB777C1144ED8DC3011BB69F4BC8" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Timor (Unimor)">Universitas Timor (Unimor)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D70B70DF780C435E84FDBE1A1EC70ED4" trl="N">
+    <value column="Name" isTrl="N" original="Insentif Kinerja">Insentif Kinerja</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D72C3849EB5949EF821499EFDD3451EF" trl="N">
+    <value column="Name" isTrl="N" original="STIE Kusuma Negara">STIE Kusuma Negara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D82D3F1A64C94743883559C18C783369" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Paramadina">Universitas Paramadina</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D8909581C0D3403D989744DCBC6F94C5" trl="N">
+    <value column="Name" isTrl="N" original="Institut Pertanian Bogor">Institut Pertanian Bogor</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D9515B0583914651BA4EC6BC1AAE1C8B" trl="N">
+    <value column="Name" isTrl="N" original="SLTA Sederajat">SLTA Sederajat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D9DC8D7DB5F24D08B19086AB65228149" trl="N">
+    <value column="Name" isTrl="N" original="Institut Ilmu Kesehatan Bhakti Wiyata">Institut Ilmu Kesehatan Bhakti Wiyata</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DA4B5B8FECBC4E0EB0569B3E927F3F3E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Negeri Gorontalo">Universitas Negeri Gorontalo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DA9C6670F4FF489783C8654BE671601F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muria Kudus">Universitas Muria Kudus</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DABC6D54343F4EE684D7B7E18B148C76" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Serang Raya">Universitas Serang Raya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DAC491997D924852BD34B25C29567930" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Teknologi Indonesia">Sekolah Tinggi Teknologi Indonesia</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DB70135C295A42F99CD4000588208079" trl="N">
+    <value column="Name" isTrl="N" original="Recomend">Recomend</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DCC431889F8540C5A37E60E406C93F0F" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Sukabumi Utara">Universitas Muhammadiyah Sukabumi Utara</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DCDEEBE374084220817D318F39864BDC" trl="N">
+    <value column="Name" isTrl="N" original="PERUM">PERUM</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DDFDD15203884CB38BF14058629B01C2" trl="N">
+    <value column="Name" isTrl="N" original="Bahasa">Bahasa</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DE47266B06D844AAB4420A202C91D36F" trl="N">
+    <value column="Name" isTrl="N" original="Anggota Seksi">Anggota Seksi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DFAFE84D05EE4388B768FF4E49C02D69" trl="N">
+    <value column="Name" isTrl="N" original="A">A</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DFED0CE6E99E482A9621C85BE2B1A9C1" trl="N">
+    <value column="Name" isTrl="N" original="Support Engineer">Support Engineer</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DFFD28A1F6174B219B321F6D14CE6CD0" trl="N">
+    <value column="Name" isTrl="N" original="PNS">PNS</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E0AC618CA6954449BA97909712F9E47C" trl="N">
+    <value column="Name" isTrl="N" original="Institut Teknologi Telkom">Institut Teknologi Telkom</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E258BC83C03448BBB36DAC796841A192" trl="N">
+    <value column="Name" isTrl="N" original="Permanent - Part Time">Permanent - Part Time</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E2D18B70771F40079F6111A83D3055E0" trl="N">
+    <value column="Name" isTrl="Y" original="Echelon 4">Jenjang 4</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E3AC097B4883416088010728B3515D55" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Sebelas Maret (UNS)">Universitas Sebelas Maret (UNS)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E3F74970230A4220819A6ED7B7CE02AC" trl="N">
+    <value column="Name" isTrl="Y" original="Home Rent">Tunjangan Sewa Rumah</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E4EF7AF3C98E4C3A9D0313B8A77A3F7A" trl="N">
+    <value column="Name" isTrl="N" original="Senior Programmer">Senior Programmer</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E6D11A481F1042DD8A08ECAC7EB096C8" trl="N">
+    <value column="Name" isTrl="N" original="Boiler Operator">Boiler Operator</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E7871A5397C64572A19055D2B3538335" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Gunadarma">Universitas Gunadarma</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E7B25FA44BC04020A3E1A7C0A64FBF9C" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Jember">Universitas Muhammadiyah Jember</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E832BBC5003C40F1AFB6E5A420CBF55A" trl="N">
+    <value column="Name" isTrl="N" original="Hindu">Hindu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E9096E9FC07A4C50890CE507D786C186" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Sidoarjo">Universitas Muhammadiyah Sidoarjo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E9379E7B3A7C438E97901F62A38E2892" trl="N">
+    <value column="Name" isTrl="N" original="Institut Teknologi Sumatera">Institut Teknologi Sumatera</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EA1479C3B8674507A29CF2691559C787" trl="N">
+    <value column="Name" isTrl="N" original="Di Tanggung Perusahaan">Di Tanggung Perusahaan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EA6F85E753FB47D4A56AFB4EEC19D739" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Swadaya Gunung Jati">Universitas Swadaya Gunung Jati</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EAA7B081DF9D4D2EA655A7D856E816DF" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Padjadjaran (UNPAD)">Universitas Padjadjaran (UNPAD)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EB7E1872D2C84EC5B855E5B70372670D" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Persada Indonesia Y.A.I">Universitas Persada Indonesia Y.A.I</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EBD63D0D734B472B99B706232BB2AFAD" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Teuku Umar">Universitas Teuku Umar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EC894BC87253421DB302670807FB8170" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Siliwangi">Universitas Siliwangi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="ECE05F041D6645F995255E9AC3CFA836" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Katolik Darma Cendika">Universitas Katolik Darma Cendika</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EE5C32641B074455A6DBB691A08A72B0" trl="N">
+    <value column="Name" isTrl="N" original="Dalam Jam Dinas">Dalam Jam Dinas</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EF1A4AEAF86E4C99B48BCF4193191C5E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Telkom">Universitas Telkom</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EFE0EF2095344AF4BE626F476FE91DEA" trl="N">
+    <value column="Name" isTrl="N" original="B">B</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F2D1320A657A455586D8FA990B4282BD" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Mataram (Unram)">Universitas Mataram (Unram)</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F2F7D6F9961A447C9D27827F00B52CE6" trl="N">
+    <value column="Name" isTrl="N" original="S1">S1</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F389AC8504464D52BF10E44E2ECCCBF8" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Ilmu Ekonomi Kertanegara Malang">Sekolah Tinggi Ilmu Ekonomi Kertanegara Malang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F40463C2B0104E96B49ECB0423924EB3" trl="N">
+    <value column="Name" isTrl="N" original="Hukum">Hukum</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F49E563758124370B19099C72603713F" trl="N">
+    <value column="Name" isTrl="N" original="II/A">II/A</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F55CBCF5C1994F8B9E12D5C507324FB8" trl="N">
+    <value column="Name" isTrl="N" original="Teknik">Teknik</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F797F0689DB04B1EB0918EB4D837711E" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Lambung Mangkurat">Universitas Lambung Mangkurat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F834180FD8E8411BB7E9BEE3E73BB1A2" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Negeri Balikpapan">Politeknik Negeri Balikpapan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F844D77A1349488ABB1ABA0D1DEF41A9" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Mayjen Sungkono">Universitas Mayjen Sungkono</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F8D9B1D0E9354C3C8C952E4828299F2D" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Medan Area">Universitas Medan Area</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F8F6874F5FEE4B5EB5DE3144947FA03C" trl="N">
+    <value column="Name" isTrl="Y" original="Santunan Kematian Pegawai">Satuan Kematian Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F9C8B754A75B441B9BB115DCF988D7AE" trl="N">
+    <value column="Name" isTrl="N" original="Department">Department</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FAC47723494D41E283C41F25332CF48E" trl="N">
+    <value column="Name" isTrl="N" original="Politeknik Pertanian Negeri Pangkajene Kepulauan">Politeknik Pertanian Negeri Pangkajene Kepulauan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FB2CB324348347B29C43B2ACFA157D51" trl="N">
+    <value column="Name" isTrl="N" original="S3">S3</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FDCB3F55C2504120A55217C1F000D47A" trl="N">
+    <value column="Name" isTrl="N" original="Sekolah Tinggi Ilmu Ekonomi Prasetiya Mulya">Sekolah Tinggi Ilmu Ekonomi Prasetiya Mulya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FF07D12ED6FA459686C42004DCF4F713" trl="N">
+    <value column="Name" isTrl="N" original="Universitas Muhammadiyah Metro">Universitas Muhammadiyah Metro</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FF76AB202AE748F0BC5C035CFC3BFC1E" trl="N">
+    <value column="Name" isTrl="N" original="Pemberhentian">Pemberhentian</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

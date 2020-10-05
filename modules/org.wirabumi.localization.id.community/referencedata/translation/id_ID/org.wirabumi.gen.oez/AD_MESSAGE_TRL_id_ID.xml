@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="A7D7225F473D4681A753E83B36B3FD13" trl="N">
+    <value column="MsgText" isTrl="N" original="Based on you role, you don't have any previllage to approve this document.">Based on you role, you don't have any previllage to approve this document.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A872E064BD684E83BA101BB4A8BC8BB2" trl="N">
+    <value column="MsgText" isTrl="N" original="This Process Is Not Supported Multiple Document Status,Please Check Your Selecte Document">This Process Is Not Supported Multiple Document Status,Please Check Your Selecte Document</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

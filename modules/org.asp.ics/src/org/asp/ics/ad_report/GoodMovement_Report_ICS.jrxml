@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Untitled_report_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="553" leftMargin="21" rightMargin="21" topMargin="21" bottomMargin="21" uuid="5b12dbcd-a6d1-4455-aef8-9e67f8254dc8">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0000000000000018"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="118"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Column_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#666666"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["default"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select distinct
+a."name" as name_header,
+a.EM_Oez_No_Vehicle,
+
+CASE WHEN a.EM_Oez_Docstatus = 'DR' THEN 'candra.png' ELSE 'candra.png' end as ttd,
+CASE WHEN a.EM_Oez_Docstatus = 'CO' THEN 'candra.png' ELSE 'candra.png' end as ttd,
+CASE WHEN a.EM_Oez_Docstatus = 'DR' THEN 'istana.png' ELSE 'istana.png' end as ttd2,
+CASE WHEN a.EM_Oez_Docstatus = 'CO' THEN 'istana.png' ELSE 'istana.png' end as ttd2,
+
+a.description as description_header,
+a.movementdate as movementdate_header,
+a.documentno as documentno_header,
+AD_ORG.NAME as ORG_NAME,
+a.AD_ORG_ID as ORGANIZATIONID,
+a.description as description_header,
+a.movementdate as movementdate_header,
+g.name as createdby_header,
+h.name as updateby_header,
+i.name as costcenter_header,
+a.em_oez_docstatus as status,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'ORDER OF GOODS RELEASE*' else 'ORDER OF GOODS RELEASE' end  as header_title,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then coalesce('Warehouse Location'||E'\n'||a.description,'') else null end  as warehouse,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Document No' else 'Cost Center' end  as cost_center,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then a.documentno else i.name end  as cost_center1,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Date' else 'Name Movement' end  as name_movement,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then to_char(a.movementdate, 'DD/MM/YYYY') else a."name" end  as name_movement1,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'To' else 'Document No' end  as document_no,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then a.description else a.documentno end  as document_no1,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'No. Vehicle' else 'Date' end  as date,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then a.em_oez_no_vehicle else to_char(a.movementdate, 'DD/MM/YYYY') end  as date1,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Note : When delivery order out, report to security' else 'Note : When delivery order out, report to security'  end  as note,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Security :' else 'Accepted By :' end  as security,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Driver :' else null end  as driver,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then null else 'Created by :' end  as created,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then null else g.name end  as created_field,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Lot No' else null end  as lotNo,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then j.lot else null end  as lotno1,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Driver :' else 'Request By :' end  as driver5,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then a.em_oez_drivername else null end  as drivername,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then 'Driver Name' else null end  as drivername1,
+case when a.em_oez_doctype_id = '15C682A198004117B18731297999C6A5' then ':' else null end  as drivername2,
+c.name as product_line,
+b.movementqty as movementqty_line,
+b.line as lineNo_line,
+d.value as Storage_Bin,
+f.value as new_Storage_Bin,
+c.value as codeproduct,
+TO_CHAR (e.name) as uom,
+b.description as description_line
+from M_Movement a
+left join M_MovementLine b on a.m_movement_id=b.m_movement_id
+left join m_product c on b.m_product_id=c.m_product_id
+left join M_Locator d on b.m_locator_id=d.m_locator_id
+left join c_uom e on b.c_uom_id=e.c_uom_id
+left join m_locator f on b.m_locatorto_id=f.m_locator_id
+left join ad_user g on a.createdby=g.ad_user_id
+left join ad_user h on a.updatedby=h.ad_user_id
+left join C_Costcenter i on a.c_costcenter_id=i.c_costcenter_id
+left join m_attributesetinstance j on b.m_attributesetinstance_id=j.m_attributesetinstance_id,
+AD_ORG, AD_CLIENT
+where a.m_movement_id = $P{DOCUMENT_ID}
+and ad_org.ad_org_id=a.ad_org_id
+and a.ad_client_id = AD_CLIENT.AD_CLIENT_ID
+
+
+ORDER BY b.line asc]]>
+	</queryString>
+	<field name="name_header" class="java.lang.String"/>
+	<field name="em_oez_no_vehicle" class="java.lang.String"/>
+	<field name="ttd" class="java.lang.String"/>
+	<field name="ttd2" class="java.lang.String"/>
+	<field name="description_header" class="java.lang.String"/>
+	<field name="movementdate_header" class="java.sql.Timestamp"/>
+	<field name="documentno_header" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="createdby_header" class="java.lang.String"/>
+	<field name="updateby_header" class="java.lang.String"/>
+	<field name="costcenter_header" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="header_title" class="java.lang.String"/>
+	<field name="warehouse" class="java.lang.String"/>
+	<field name="cost_center" class="java.lang.String"/>
+	<field name="cost_center1" class="java.lang.String"/>
+	<field name="name_movement" class="java.lang.String"/>
+	<field name="name_movement1" class="java.lang.String"/>
+	<field name="document_no" class="java.lang.String"/>
+	<field name="document_no1" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="date1" class="java.lang.String"/>
+	<field name="note" class="java.lang.String"/>
+	<field name="security" class="java.lang.String"/>
+	<field name="driver" class="java.lang.String"/>
+	<field name="created" class="java.lang.String"/>
+	<field name="created_field" class="java.lang.String"/>
+	<field name="lotno" class="java.lang.String"/>
+	<field name="lotno1" class="java.lang.String"/>
+	<field name="driver5" class="java.lang.String"/>
+	<field name="drivername" class="java.lang.String"/>
+	<field name="drivername1" class="java.lang.String"/>
+	<field name="drivername2" class="java.lang.String"/>
+	<field name="product_line" class="java.lang.String"/>
+	<field name="movementqty_line" class="java.math.BigDecimal"/>
+	<field name="lineno_line" class="java.math.BigDecimal"/>
+	<field name="storage_bin" class="java.lang.String"/>
+	<field name="new_storage_bin" class="java.lang.String"/>
+	<field name="codeproduct" class="java.lang.String"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="description_line" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-26" x="100" y="91" width="8" height="17" uuid="bbfe59e5-27fd-44c4-bf1f-228c43a4028d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="212" height="13" uuid="298a9992-ac2b-4021-ad41-204b7fcd9a20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Helvetica-Normal" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PT ISTANA CIPTA SEMBADA]]></text>
+			</staticText>
+			<image scaleImage="RetainShape" hAlign="Right" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="436" y="-22" width="117" height="83" uuid="b5a9efce-62e5-421b-b8a7-f7c22ae96500"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{organizationid})]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape">
+				<reportElement x="0" y="0" width="98" height="61" uuid="701ebc4a-3b08-4eaa-a2cf-22093df4d0b7"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/prima_ics.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="61" width="212" height="25" uuid="f12b429c-eb47-4c14-bde1-06ecb0c50dc4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Dok. No: FRM.WFG.01.02,Rev.01]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="120" y="13" width="313" height="20" uuid="59f303b4-54c7-412e-b550-6ae72be71dfd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Book Antiqua" size="14" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{header_title}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="108" y="91" width="172" height="17" uuid="5b74c4b5-ee76-4a65-bec1-580370b98cdb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documentno_header}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="91" width="98" height="17" uuid="63843126-ae4b-4ba3-b18a-71e28cd330e7"/>
+				<textElement>
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Document No]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="97" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="108" y="17" width="172" height="17" uuid="8abc6b62-4e60-446c-b4dd-5ae862ca7986"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{movementdate_header}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" x="100" y="17" width="8" height="17" uuid="5aee27f0-b06d-4a04-8149-a9e6cd8a9f2c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="2" y="34" width="98" height="17" uuid="d6725b47-af44-4c60-8a2d-c472e879a357"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drivername1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="108" y="34" width="172" height="17" uuid="90dacc17-3d5c-413a-8fb1-c4bf70c1e6d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drivername}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="100" y="34" width="8" height="17" uuid="0959dbd1-9e1d-4e63-90a1-907d5d56a9cb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drivername2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="0" width="98" height="17" uuid="a6928f24-a35a-42c8-ab4e-4f4ceb7f8d49"/>
+				<textElement>
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="100" y="0" width="8" height="17" uuid="1bca26fa-2be6-4450-8dfc-a7c317ba277d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="108" y="0" width="172" height="17" uuid="39715e46-a05c-450c-84b3-9836cd12def3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name_header}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="0" y="68" width="25" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="3b3d34fa-8f50-4307-a833-b312e44fddde"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="26" y="68" width="73" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="e3b13c95-a5e3-4d2d-9515-de48f79cdf32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="100" y="68" width="84" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="44f4dbff-22a7-4f93-8b9e-73dc4c332402"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="185" y="68" width="95" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="d858f080-94c5-441e-8bc4-53dd65e619d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="281" y="68" width="33" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="b08a244c-7bda-4328-ad31-60f86f2c3639"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="315" y="68" width="33" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="c9da3e52-7f9a-4434-9a56-360977e84a21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[UoM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="349" y="68" width="87" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="207caa9a-746f-4d21-a739-b0aaa151008e"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Original Storage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="438" y="68" width="115" height="29" forecolor="#FFFFFF" backcolor="#000080" uuid="d0764036-8d07-45b8-8b72-73a735cd8cbc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Destination Storage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="17" width="98" height="17" uuid="75918c1b-67ed-401f-82f9-bc9fb4b3e92b"/>
+				<textElement>
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="108" y="51" width="172" height="17" uuid="4ba870ab-edd1-4bcb-8419-373bc462e142"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_no_vehicle}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="100" y="51" width="8" height="17" uuid="44d03519-60bd-422e-92e9-e0a9e3cac7f2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drivername2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="51" width="98" height="17" uuid="9dbfe66b-4c5f-4334-a54f-bd0d8f506ae5"/>
+				<textElement>
+					<font fontName="Helvetica-Normal" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No Vehicle]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="97" y="0" width="87" height="15" forecolor="#000000" uuid="a831592c-a243-4fc6-8bd4-ecf5abca5aeb"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="25" height="15" forecolor="#000000" uuid="dd4ff77e-6e63-4745-b714-38aff1ec6a4e"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lineno_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="280" y="0" width="35" height="15" forecolor="#000000" uuid="051a5f80-09a1-438a-959d-cc8de84fa07d"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{movementqty_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="314" y="0" width="35" height="15" forecolor="#000000" uuid="e84fb72c-0cfc-4853-b538-0399143327d8"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="349" y="0" width="89" height="15" forecolor="#000000" uuid="c8a1eb31-a99d-4ee4-ae33-eb09d6965ee2"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{storage_bin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="438" y="0" width="115" height="15" forecolor="#000000" uuid="40f259f5-8886-4c90-be49-8ec64f16ff48"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{new_storage_bin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="184" y="0" width="96" height="15" forecolor="#000000" uuid="a5253794-a091-41f3-96d9-5e0648e6f90e"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="25" y="0" width="72" height="15" forecolor="#000000" uuid="7742307f-92f7-40c1-b113-4844248be6e2"/>
+				<box topPadding="1" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codeproduct}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="18">
+			<staticText>
+				<reportElement key="staticText" style="default" x="0" y="0" width="342" height="17" forecolor="#000000" uuid="1850723d-add1-4631-b8bf-6c8a1d3fb14d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Note : When delivery order out, report to security]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<lastPageFooter>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText" style="default" x="300" y="89" width="117" height="15" forecolor="#000000" uuid="7f057cab-553d-4d3b-8600-97f24150efb3"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(.........................)]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="-270" y="10" width="117" height="92" uuid="2ad15ae9-d66a-4a98-9b77-8c930d15cdc6"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement key="staticText" style="default" x="3" y="89" width="117" height="15" forecolor="#000000" uuid="cde59094-4b69-4281-91ff-9accad2a487e"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(.........................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="147" y="88" width="117" height="15" forecolor="#000000" uuid="fd800fd3-0eee-431d-bb6e-3d99e3e52ca9"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(.........................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="3" y="10" width="117" height="15" forecolor="#000000" uuid="18e95c66-11b4-49b6-8223-e494c07823a5"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Driver]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="147" y="10" width="117" height="15" forecolor="#000000" uuid="2243c87f-6435-46df-9d92-c8976e0bd254"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Received By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="300" y="10" width="117" height="15" forecolor="#000000" uuid="8845a351-44d0-46dd-b577-0633a865ee89"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Security]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="438" y="10" width="117" height="15" forecolor="#000000" uuid="94365ad6-81dd-4a14-a9ac-3740be26321e"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Issued By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="438" y="89" width="117" height="15" forecolor="#000000" uuid="6214d4ce-80dc-4c95-9efa-de804be9d9df"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(Novian Adi Candra)]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Left">
+				<reportElement x="446" y="30" width="110" height="49" uuid="de88645d-8a31-46fe-9421-afd372944602"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/" +$F{ttd2}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Left">
+				<reportElement x="446" y="30" width="107" height="44" uuid="7fa6c570-ded6-4b45-9a39-854e8ac00579"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/" +$F{ttd}]]></imageExpression>
+			</image>
+		</band>
+	</lastPageFooter>
+</jasperReport>

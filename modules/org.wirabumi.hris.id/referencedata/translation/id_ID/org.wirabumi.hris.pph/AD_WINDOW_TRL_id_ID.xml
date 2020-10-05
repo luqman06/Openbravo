@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="0F5FFE01FC024E1989182EB2A6B0889D" trl="N">
+    <value column="Name" isTrl="Y" original="Progressive Income Tax Rate">Tarif PPh 21</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5018FE6FBB4F49249143D9438ADDF08F" trl="N">
+    <value column="Name" isTrl="N" original="Employee A1 1721">Employee A1 1721</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A0B4F295E3C04E489DB8EF86B2EAA978" trl="N">
+    <value column="Name" isTrl="N" original="Employee Income Tax">Employee Income Tax</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D52825CE1C27413BA1426A2BD8FDE44E" trl="N">
+    <value column="Name" isTrl="Y" original="Indonesian Position Cost Rate">Biaya Jabatan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FD7D1D477DE54DCE89B46577DBD0EC75" trl="N">
+    <value column="Name" isTrl="Y" original="Rate of Indonesian Non Taxable Income">Tarif PTKP</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

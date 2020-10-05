@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="OBUISEL_SELECTOR" version="">
+  <row id="C1609801A2C5402F8D8307428F13A025" trl="N">
+    <value column="Name" isTrl="N" original="Attendance Selector">Attendance Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E84C463767514ECF93E10CA94107600E" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potong Cuti">Akumulasi Potong Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

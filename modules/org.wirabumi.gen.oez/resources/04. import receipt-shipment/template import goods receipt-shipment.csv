@@ -1,0 +1,5 @@
+"Document Type Name","Document No.","Warehouse Key","Business Partner Search Key","Address Line 1","Address Line 2","Postal Code","City Name","Country Code","Movement Date","Accounting Date","Ship Address1","Ship Address2","Ship Postal","Ship City Name","Ship Country Code","Description","Line No.","Product Search Key","Movement Quantity","Edicode","Storage Bin Search Key","Line Description"
+"MM Receipt",101,"RN","ES-C1/0001","C\Pescadores, 87",,16537,"La Coruña","ES",2013-02-28,2013-02-28,"C\Pescadores, 87",,16537,"La Coruña","ES","Test",10,"ES/0019",10,"EA","Rn-0-0-0","Test Line"
+"MM Receipt",101,"RN","ES-C1/0001","C\Pescadores, 87",,16537,"La Coruña","ES",2013-01-30,2013-01-30,"C\Pescadores, 87",,16537,"La Coruña","ES","Test",10,"ES/0019",10,"EA","Rn-0-0-0","Test Line"
+"MM Receipt",101,"RN","ES-C1/0001","C\Pescadores, 87",,16537,"La Coruña","ES",2013-02-20,2013-02-20,"C\Pescadores, 87",,16537,"La Coruña","ES","Test",10,"ES/0019",10,"EA","Rn-0-0-0","Test Line"
+"MM Receipt",101,"RN","ES-C1/0001","C\Pescadores, 87",,16537,"La Coruña","ES",2013-06-30,2013-06-30,"C\Pescadores, 87",,16537,"La Coruña","ES","Test",10,"ES/0019",10,"EA","Rn-0-0-0","Test Line"

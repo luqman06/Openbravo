@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELD" version="">
+  <row id="019330B9CB5949619F6C03998706A1A3" trl="N">
+    <value column="Name" isTrl="Y" original="Cost Center">Pusat Biaya</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="11A10B0266414A7DA91B06B38132F0F5" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="187E469E0DD64647AF26B1B6DCDE8026" trl="N">
+    <value column="Name" isTrl="N" original="Date Delay">Date Delay</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1AB26D02BA5947DEAD7BE31F14240465" trl="N">
+    <value column="Name" isTrl="Y" original="Document Action">Add Payment From Journal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1E472B071D964578977429D8E1A981ED" trl="N">
+    <value column="Name" isTrl="N" original="Employee Name">Employee Name</value>
+    <value column="Description" isTrl="N" original="Name of the employee">Name of the employee</value>
+    <value column="Help" isTrl="N" original="Employee full name.">Employee full name.</value>
+  </row>
+  <row id="21A03F6B5E4849D79C84BBA31A0A5C74" trl="N">
+    <value column="Name" isTrl="Y" original="Old Contract">SK Lama</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="29D86DD31F58479B9FDEF62E1FB974B9" trl="N">
+    <value column="Name" isTrl="Y" original="Evaluate Employee Candidate">Evaluasi Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2D0A2CC73A6B4E3A910B35C548E7583D" trl="N">
+    <value column="Name" isTrl="N" original="Department">Department</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2EBD31C3E0BE404480C14B3D4F013225" trl="N">
+    <value column="Name" isTrl="Y" original="Employee ID">Nomor Induk Karyawan</value>
+    <value column="Description" isTrl="Y" original="A fast method for finding a particular record.">Nomor Induk Karyawan</value>
+    <value column="Help" isTrl="N" original="A search key allows for a fast method of finding a particular record. If you leave the search key empty, the system automatically creates a numeric number originating from a document sequence defined in the  &quot;Document Sequence&quot; window. The sequence naming convention follows a rule &quot;DocumentNo_TableName&quot;, where TableName is the actual name of the database table (e.g. C_Order).&#10;&#10;Usually, company's internal identifiers for various records (products, customers, etc) are stored here.">A search key allows for a fast method of finding a particular record. If you leave the search key empty, the system automatically creates a numeric number originating from a document sequence defined in the  "Document Sequence" window. The sequence naming convention follows a rule "DocumentNo_TableName", where TableName is the actual name of the database table (e.g. C_Order).
+
+Usually, company's internal identifiers for various records (products, customers, etc) are stored here.</value>
+  </row>
+  <row id="382C99490C814B4985C4CA202BBB0623" trl="N">
+    <value column="Name" isTrl="Y" original="Job Title">Jabatan Lengkap</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3A91FEC74179432486644DDB73E53BAD" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Name">Nama Karywan</value>
+    <value column="Description" isTrl="N" original="Name of the employee">Name of the employee</value>
+    <value column="Help" isTrl="N" original="Employee full name.">Employee full name.</value>
+  </row>
+  <row id="3B60E8D8D72B4E659C60CC85A2063BF3" trl="N">
+    <value column="Name" isTrl="N" original="Employee ID">Employee ID</value>
+    <value column="Description" isTrl="N" original="A fast method for finding a particular record.">A fast method for finding a particular record.</value>
+    <value column="Help" isTrl="N" original="A search key allows for a fast method of finding a particular record. If you leave the search key empty, the system automatically creates a numeric number originating from a document sequence defined in the  &quot;Document Sequence&quot; window. The sequence naming convention follows a rule &quot;DocumentNo_TableName&quot;, where TableName is the actual name of the database table (e.g. C_Order).&#10;&#10;Usually, company's internal identifiers for various records (products, customers, etc) are stored here.">A search key allows for a fast method of finding a particular record. If you leave the search key empty, the system automatically creates a numeric number originating from a document sequence defined in the  "Document Sequence" window. The sequence naming convention follows a rule "DocumentNo_TableName", where TableName is the actual name of the database table (e.g. C_Order).
+
+Usually, company's internal identifiers for various records (products, customers, etc) are stored here.</value>
+  </row>
+  <row id="413B3E6D22D24567BF19301079887E80" trl="N">
+    <value column="Name" isTrl="Y" original="To Job Title">Jabatan Lengkap Baru</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="486CFBC9DB7347788D41FF429CD186C0" trl="N">
+    <value column="Name" isTrl="N" original="Polaritas Print out">Polaritas Print out</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4E0BC0E73D4C493DAC2F7584F88E7B6D" trl="N">
+    <value column="Name" isTrl="Y" original="To Echelon">Jenjang Jabatan Baru</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="565FC17A93F44553A566FF64709739D9" trl="N">
+    <value column="Name" isTrl="Y" original="To Cost Center">Pusat Biaya Baru</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="59635495809846AE8510D4862B252278" trl="N">
+    <value column="Name" isTrl="N" original="Job Title KPI Version">Job Title KPI Version</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5A06BF2CFC9246E2A91E2F4D5043BC2B" trl="N">
+    <value column="Name" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="Description" isTrl="N" original="Employee who work for this company">Employee who work for this company</value>
+    <value column="Help" isTrl="N" original="Employee who work for this company">Employee who work for this company</value>
+  </row>
+  <row id="5DA0642501B740E9AFE6B172F1E0EE7D" trl="N">
+    <value column="Name" isTrl="Y" original="Document Action">Add Payment From Journal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6BDBF28EE5C34430970D8A9767D27D59" trl="N">
+    <value column="Name" isTrl="N" original="Employee ID">Employee ID</value>
+    <value column="Description" isTrl="N" original="A fast method for finding a particular record.">A fast method for finding a particular record.</value>
+    <value column="Help" isTrl="N" original="A search key allows for a fast method of finding a particular record. If you leave the search key empty, the system automatically creates a numeric number originating from a document sequence defined in the  &quot;Document Sequence&quot; window. The sequence naming convention follows a rule &quot;DocumentNo_TableName&quot;, where TableName is the actual name of the database table (e.g. C_Order).&#10;&#10;Usually, company's internal identifiers for various records (products, customers, etc) are stored here.">A search key allows for a fast method of finding a particular record. If you leave the search key empty, the system automatically creates a numeric number originating from a document sequence defined in the  "Document Sequence" window. The sequence naming convention follows a rule "DocumentNo_TableName", where TableName is the actual name of the database table (e.g. C_Order).
+
+Usually, company's internal identifiers for various records (products, customers, etc) are stored here.</value>
+  </row>
+  <row id="7B7229ED14334511B27598F718754D89" trl="N">
+    <value column="Name" isTrl="N" original="Name">Name</value>
+    <value column="Description" isTrl="N" original="Alphanumeric identifier of the entity">Alphanumeric identifier of the entity</value>
+    <value column="Help" isTrl="N" original="The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.">The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.</value>
+  </row>
+  <row id="82D42927763D4DA99956C2CCAB3DE1E3" trl="N">
+    <value column="Name" isTrl="N" original="Process KPI Measurement">Process KPI Measurement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9BBDEA5AEDFE41969C93F44293289B52" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Name">Nama Karywan</value>
+    <value column="Description" isTrl="N" original="Name of the employee">Name of the employee</value>
+    <value column="Help" isTrl="N" original="Employee full name.">Employee full name.</value>
+  </row>
+  <row id="9D3BBB2E524D4AF9B5501BBD87D835B2" trl="N">
+    <value column="Name" isTrl="N" original="Document Action">Document Action</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A16C16A37ECF4EC589B7A085CD367446" trl="N">
+    <value column="Name" isTrl="N" original="Cost Salary Category">Cost Salary Category</value>
+    <value column="Description" isTrl="N" original="A classification of salaries based on similar characteristics or attributes.">A classification of salaries based on similar characteristics or attributes.</value>
+    <value column="Help" isTrl="N" original="Indicates a salary category">Indicates a salary category</value>
+  </row>
+  <row id="AD7630D667D3479885997F58D0A0940D" trl="N">
+    <value column="Name" isTrl="Y" original="Back Account Holder Name">Nama Pemilik Rekning Bank</value>
+    <value column="Description" isTrl="Y" original="Name on Credit Card or Account holder">Nama Pemilik Rekning Bank</value>
+    <value column="Help" isTrl="Y" original="The Name of the Credit Card or Account holder.">Nama Pemilik Rekning Bank</value>
+  </row>
+  <row id="BCBD592692D24D94B0F3EDE1F605C496" trl="N">
+    <value column="Name" isTrl="N" original="Organisasi">Organisasi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C1DD090A104A48EC8818E32783D00471" trl="Y">
+    <value column="Name" isTrl="Y" original="Lastes Education Dicipline">Disiplin Ilmu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CA5F7CE038914BCF89833551C77714EA" trl="N">
+    <value column="Name" isTrl="N" original="Employee Name">Employee Name</value>
+    <value column="Description" isTrl="N" original="Name of the employee">Name of the employee</value>
+    <value column="Help" isTrl="N" original="Employee full name.">Employee full name.</value>
+  </row>
+  <row id="CB28C00560AC4CED8858E7B8814CC8EB" trl="N">
+    <value column="Name" isTrl="N" original="Job Title">Job Title</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D120F3BE1EC44700A832AFB360804D31" trl="N">
+    <value column="Name" isTrl="N" original="Parent Site">Parent Site</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D19F93FFE1604B59A5F76FF167718281" trl="N">
+    <value column="Name" isTrl="Y" original="Salary Component">Include In</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Sets the visibility of the column:&#10;- Widget view, column is shown on all cases.&#10;- Maximized view, column is shown only in maximized view and included in the exported file.&#10;- Exported file, column is only included in the exported file.">Sets the visibility of the column:
+- Widget view, column is shown on all cases.
+- Maximized view, column is shown only in maximized view and included in the exported file.
+- Exported file, column is only included in the exported file.</value>
+  </row>
+  <row id="D400B90E350E4F96984E33A7E2402617" trl="N">
+    <value column="Name" isTrl="Y" original="Echelon">Jenjang</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DB39DD653C2F44E0A53B796FDB91E998" trl="N">
+    <value column="Name" isTrl="Y" original="To Position">Jabatan Baru</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DB9B0B916B8644ABA8B731126FD77DE4" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Grade">Pangkat/Golongan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DE5A17E8CB6D4BC4B95BEFB52BEFC2F8" trl="N">
+    <value column="Name" isTrl="Y" original="To Organization">Organisasi Baru</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E8A6DFD78206423E9FA73371CF45F21B" trl="N">
+    <value column="Name" isTrl="Y" original="Evaluate Employee Candidate">Evaluasi Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EA158C543E514E6F9498380F946202BD" trl="N">
+    <value column="Name" isTrl="Y" original="To Employee Grade">Jabatan Baru</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FE1EE323B610447884B3460DFB1E3F2A" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="Description" isTrl="N" original="Employee who work for this company">Employee who work for this company</value>
+    <value column="Help" isTrl="N" original="Employee who work for this company">Employee who work for this company</value>
+  </row>
+</compiereTrl>

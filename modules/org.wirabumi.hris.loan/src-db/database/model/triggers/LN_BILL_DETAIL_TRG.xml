@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER LN_BILL_DETAIL_TRG">
+    <trigger name="LN_BILL_DETAIL_TRG" table="LN_BILL_DETAIL" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_total_paid NUMBER;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+    -- definisi trigger
+	:new.total=:new.amount * :new.qty;
+END LN_BILL_DETAIL_TRG
+]]></body>
+    </trigger>
+  </database>

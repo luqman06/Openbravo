@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_BP_BANKACCOUNT">
+    <table name="C_BP_BANKACCOUNT" primaryKey="C_BP_BANKACCOUNT_KEY">
+      <column name="EM_PYR_ISPAYROLL" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

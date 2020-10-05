@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quotation.jrxml" pageWidth="595" pageHeight="842" columnWidth="539" leftMargin="28" rightMargin="28" topMargin="14" bottomMargin="14" uuid="a9d0165e-e609-4154-916f-23a9f3388a59">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("28869437443E4FA59AA23F0034E90991")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT DISTINCT
+	--(SELECT USR.name FROM AD_USER USR INNER JOIN C_ORDER on C_ORDER.createdby = USR.ad_user_id LIMIT 1) as CREATED_BY,
+	I_USER.name as CREATED_BY,
+	I_USER.email as USER_EMAIL,
+	--(SELECT USR.email FROM AD_USER USR INNER JOIN C_ORDER on C_ORDER.createdby = USR.ad_user_id LIMIT 1) as USER_EMAIL,
+	C_BPARTNER.name AS VENDOR_NAME,
+	C_BPARTNER.value AS VENDOR_SEARCHKEY,
+	coalesce(L.address1, '')||coalesce(' '||L.address2,'') as address1,
+	coalesce(l.city,'')||coalesce(' - '||l.postal,'')||coalesce(' - '||r.name,'')||coalesce(' - '||co.name,'') as address2,
+	coalesce(C_BPARTNER_LOCATION.PHONE,'')||coalesce(', Fax : '||C_BPARTNER_LOCATION.FAX,'') as phonefax,
+	C_BPARTNER.URL,
+	C_ORDER.AD_ORG_ID AS ORGANIZATIONID,
+
+	AD_ORG.NAME AS ORG_NAME,
+	ORG_LOC.ADDRESS1 AS ORG_ADDRESS1,
+	ORG_LOC.ADDRESS2 AS ORG_ADDRESS2,
+	ORG_LOC.POSTAL AS ORG_POSTAL,
+	ORG_LOC.CITY AS ORG_CITY,
+	ORG_LOC.C_COUNTRY_ID AS COUNTRY_ID,
+
+	C_ORDER.DESCRIPTION AS DELIVERY,
+	C_ORDER.DATEORDERED,
+	C_ORDER.DELIVERYNOTES,
+	C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+	C_ORDER.docstatus AS STATUS,
+	coalesce(AD_USER.NAME,'')||coalesce(' / Phone : '||AD_USER.PHONE,'') AS VENDOR_CONTACT,
+	AD_USER.EMAIL AS VENDOR_CONTACT_EMAIL,
+	AD_USER.PHONE AS VENDOR_CONTACT_PHONE,
+	DELIVERYRULE.NAME AS DELIVERYTERM,
+	PAYMENTTERM.TERM AS PAYMENTTERM,
+	FIN_PaymentMethod.name AS PAYMENTMETHOD,
+	C_ORDER.VALIDUNTIL AS VALIDUNTIL,
+	C_CURRENCY.ISO_CODE as CURRENCY_ISO,
+	M_PRICELIST.ISTAXINCLUDED,
+	C_ORDER.DOCUMENTNO AS QUOTATION_ORDER_NO,
+	POLINE.Line AS PURCHASE_ORDER_LINE,
+	P.value AS PRODUCT_SEARCHKEY,
+	P.name AS PRODUCT_NAME,
+	coalesce(P.description,'') || coalesce(' ' || POLINE.description,'') AS PRODUCT_DESCRIPTION,
+	POLINE.QTYORDERED AS QTY_ORDERED,
+	UOM.x12de355 AS UOM_CODE,
+	UOM.name AS UOM_NAME,
+	POLINE.priceactual AS PRICE_ACTUAL,
+	POLINE.linenetamt AS LINE_NET_AMOUNT,
+	POLINE.discount AS LINE_DISCOUNT,
+	POLINE.freightamt AS LINE_FREIGHT_AMOUNT,
+	POLINE.datepromised AS LINE_DATE_PROMISED,
+
+	C_ORDER.grandtotal AS TOTAL_ORDER_AMOUNT
+FROM
+C_BPARTNER_LOCATION
+left join C_LOCATION L on C_BPARTNER_LOCATION.C_LOCATION_ID = L.C_LOCATION_ID
+left join C_COUNTRY CO ON L.C_COUNTRY_ID = CO.C_COUNTRY_ID
+
+
+left join  C_REGION R on L.C_REGION_ID = R.C_REGION_ID,
+AD_USER right join C_ORDER on AD_USER.AD_USER_ID = C_ORDER.AD_USER_ID,
+C_BPARTNER,
+AD_ORGINFO left join C_LOCATION ORG_LOC on AD_ORGINFO.C_LOCATION_ID = ORG_LOC.C_LOCATION_ID,
+AD_CLIENT,
+C_UOM UOM,
+M_PRODUCT P,
+AD_ORG,
+C_ORDERLINE POLINE,
+C_CURRENCY,
+M_PRICELIST,
+FIN_PaymentMethod,
+(SELECT VALUE, NAME FROM AD_REF_LIST_V WHERE AD_REFERENCE_ID = '151') DELIVERYRULE,
+(SELECT C_PAYMENTTERM.C_PAYMENTTERM_ID, COALESCE( C_PAYMENTTERM_TRL.NAME, C_PAYMENTTERM.NAME) AS TERM
+	FROM C_PAYMENTTERM LEFT JOIN C_PAYMENTTERM_TRL ON C_PAYMENTTERM.C_PAYMENTTERM_ID = C_PAYMENTTERM_TRL.C_PAYMENTTERM_ID) PAYMENTTERM,
+
+--(select ad_user.ad_user_id, ad_user.name, ad_user.email from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id where c_order.c_order_id ='204C506C678E471C92BF361CAB87D4E7') AS I_USER
+(select ad_user.ad_user_id, ad_user.name, ad_user.email
+	from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id
+		--where c_order.c_order_id = '846F06133C64478BBC548BEACD7B7D5A') AS I_USER
+		where c_order.c_order_id = $P{DOCUMENT_ID}) AS I_USER
+
+
+WHERE
+C_ORDER.C_BPARTNER_LOCATION_ID = C_BPARTNER_LOCATION.C_BPARTNER_LOCATION_ID
+AND C_ORDER.M_PRICELIST_ID = M_PRICELIST.M_PRICELIST_ID
+AND C_ORDER.C_BPARTNER_ID = C_BPARTNER.C_BPARTNER_ID
+AND AD_ORG.ad_org_id = AD_ORGINFO.ad_org_id
+AND AD_ORG.ad_org_id = (SELECT o.AD_ORG_ID FROM AD_ORG o JOIN AD_OrgType t USING (AD_ORGTYPE_ID)
+			WHERE AD_ISORGINCLUDED(C_ORDER.AD_ORG_ID, o.ad_org_id, C_ORDER.ad_client_id)<>-1
+			AND (t.IsLegalEntity='Y' OR t.IsAcctLegalEntity='Y'))
+AND C_ORDER.AD_CLIENT_ID = AD_CLIENT.AD_CLIENT_ID
+AND C_ORDER.DELIVERYRULE = DELIVERYRULE.VALUE
+AND C_ORDER.C_PAYMENTTERM_ID = PAYMENTTERM.C_PAYMENTTERM_ID
+AND C_ORDER.FIN_PaymentMethod_id = FIN_PaymentMethod.FIN_PaymentMethod_id
+AND C_CURRENCY.C_CURRENCY_ID=C_ORDER.C_CURRENCY_ID
+AND C_ORDER.C_ORDER_ID = POLINE.C_ORDER_ID
+AND POLINE.c_uom_id = UOM.c_uom_id
+AND POLINE.m_product_id = P.m_product_id
+AND C_ORDER.createdby = I_USER.ad_user_id
+AND C_ORDER.C_ORDER_ID = $P{DOCUMENT_ID}
+--AND C_ORDER.C_ORDER_ID = 'EC57F614DDD24483A5F084239703AC06'
+--Sample VOIDED document = '16A9AC47B08E469CACEF9907E364A73C'
+--sample Tool&Jig = '5BEB019EE44D4C64A42D04D699E76D0E'
+
+ORDER BY POLINE.line ASC]]>
+	</queryString>
+	<field name="created_by" class="java.lang.String"/>
+	<field name="user_email" class="java.lang.String"/>
+	<field name="vendor_name" class="java.lang.String"/>
+	<field name="vendor_searchkey" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="url" class="java.lang.String"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="country_id" class="java.lang.String"/>
+	<field name="delivery" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="deliverynotes" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="vendor_contact" class="java.lang.String"/>
+	<field name="vendor_contact_email" class="java.lang.String"/>
+	<field name="vendor_contact_phone" class="java.lang.String"/>
+	<field name="deliveryterm" class="java.lang.String"/>
+	<field name="paymentterm" class="java.lang.String"/>
+	<field name="paymentmethod" class="java.lang.String"/>
+	<field name="validuntil" class="java.sql.Timestamp"/>
+	<field name="currency_iso" class="java.lang.String"/>
+	<field name="istaxincluded" class="java.lang.String"/>
+	<field name="quotation_order_no" class="java.lang.String"/>
+	<field name="purchase_order_line" class="java.math.BigDecimal"/>
+	<field name="product_searchkey" class="java.lang.String"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="product_description" class="java.lang.String"/>
+	<field name="qty_ordered" class="java.math.BigDecimal"/>
+	<field name="uom_code" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="price_actual" class="java.math.BigDecimal"/>
+	<field name="line_net_amount" class="java.math.BigDecimal"/>
+	<field name="line_discount" class="java.math.BigDecimal"/>
+	<field name="line_freight_amount" class="java.math.BigDecimal"/>
+	<field name="line_date_promised" class="java.sql.Timestamp"/>
+	<field name="total_order_amount" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="203" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-4" x="11" y="69" width="67" height="15" uuid="a1094887-3f8f-4b95-a5fd-776c5b2f6467"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" x="297" y="68" width="56" height="15" uuid="0ebee681-9820-4272-9125-04447c54f049"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-6" x="11" y="82" width="67" height="15" uuid="a78fc80c-06c1-471b-b068-9f7e590971a7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="298" y="81" width="56" height="15" uuid="35478573-c066-47dd-a6b0-72a01d3b2b89"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" x="355" y="81" width="9" height="15" uuid="507f3543-6b4e-4444-ad08-2038c77d4baf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="79" y="82" width="9" height="15" uuid="38d788e1-768b-488f-80bd-d8fadd923e22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-12" x="354" y="68" width="9" height="15" uuid="064864c6-151d-465c-a78a-62bfabf82eed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-13" x="79" y="69" width="9" height="15" uuid="fae85147-0dbe-4ff0-9a6d-aeff4adad01b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="91" y="69" width="181" height="15" uuid="841893bc-016d-43a3-964b-08404e4ce649"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quotation_order_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" x="362" y="68" width="176" height="15" uuid="ca05f044-f0b1-4c56-b24c-170e69b93f46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateordered}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="91" y="82" width="181" height="15" uuid="56cc904b-ee1a-4230-8d99-c9ecb3b2c408"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{created_by}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="363" y="81" width="174" height="15" uuid="ee49641a-3567-486d-81dc-535c4a3ddd73"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user_email}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-1" x="0" y="99" width="539" height="1" forecolor="#0033FF" uuid="aec4f8dd-8069-4a16-91ed-7135e7764376"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-24" x="79" y="114" width="9" height="15" uuid="05423056-9bc9-4530-999c-b4f9b1c6d844"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-25" x="79" y="100" width="9" height="15" uuid="3001d698-d4c6-486c-98dd-3751efea0fb4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="78" y="155" width="9" height="15" uuid="e277b4ad-8330-42d0-9ebd-78ea0fed9c08"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="8" y="155" width="71" height="15" uuid="c503d7c5-681b-4eda-b3f9-57d6b62ba26e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="8" y="114" width="71" height="15" uuid="8970f7b5-ea71-40b9-99a7-5d6a9b8bad91"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="0" y="100" width="79" height="15" forecolor="#000000" uuid="94456e70-1808-4740-a05f-5580b69fd0b7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-32" x="8" y="168" width="71" height="15" uuid="589c3096-9717-47b0-b402-df3d5738e2da"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Attention]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-33" x="78" y="168" width="9" height="15" uuid="24c392c8-7c43-4b94-8a0d-adb959ab1ee1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="88" y="100" width="224" height="15" uuid="78f04bef-61bf-441d-8e9c-4a3f2e5147b8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="87" y="114" width="235" height="15" uuid="68aaae7c-243a-4a81-9464-783d90b89892"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="86" y="155" width="236" height="15" uuid="694593a4-a506-4fd6-9e14-0a4ae2404fc2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phonefax}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="86" y="128" width="238" height="29" uuid="adbc31d0-4360-48a4-bc72-03f4478b7f25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-6" x="0" y="202" width="538" height="1" forecolor="#0033FF" uuid="05e1fe77-7552-4009-a5ec-220b7f55a79f"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-4" x="86" y="168" width="236" height="15" uuid="652f6779-9ee2-4506-93f8-8d9c36760ee3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_contact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-48" x="8" y="182" width="71" height="15" uuid="fe40d98e-c201-4e36-be4d-2687c5c20ffb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-49" x="78" y="182" width="9" height="15" uuid="98048ef0-b588-4144-b1ba-4debfb30c089"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-5" x="86" y="182" width="236" height="15" uuid="603d4f3c-c1e7-4f20-a42e-3a4b4fdd3cc9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_contact_email}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="426" y="127" width="108" height="15" uuid="270ddee0-e39b-4d5f-a784-446c66b781c0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentterm}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="426" y="113" width="108" height="15" uuid="97d7d5d3-9abe-4571-9aef-c23cf425c539"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currency_iso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-37" x="418" y="127" width="9" height="15" uuid="eb35d732-c71e-4afa-bce7-bb5630d6974a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="330" y="127" width="89" height="15" uuid="53cb07dc-5a19-48ec-800f-66ba56703cf8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Payment Terms]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" x="418" y="113" width="9" height="15" uuid="5ef22cf5-f522-4aa3-ae44-f7b4f5cbc79c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-44" x="330" y="113" width="89" height="15" uuid="8ccbc11f-007c-48e2-bdae-56b44867e156"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" x="324" y="99" width="89" height="15" forecolor="#000000" uuid="e7ba806f-8f79-4375-b75a-0a2dcbc30761"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Basic Terms]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="425" y="156" width="108" height="15" uuid="17cf3293-d306-4cc1-8696-73ab9174f010"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{validuntil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-44" x="329" y="142" width="89" height="15" uuid="39e654f0-bef2-4c73-a206-133b614fe944"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Method]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="425" y="142" width="108" height="15" uuid="20ca3874-c25f-4307-8f3e-ecfe0f8d2666"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentmethod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-37" x="418" y="156" width="9" height="15" uuid="ad78d64b-4f87-44c8-b1a9-5d27c5b291ae"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" x="417" y="142" width="9" height="15" uuid="cbca609b-625a-49fc-af6e-ff1653e9d06f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="329" y="156" width="89" height="15" uuid="b9d8c51c-98c6-4b18-a9a9-f25966131a52"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Valid Until]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="426" y="170" width="108" height="15" uuid="c6fe2798-25b1-412f-aae2-b829c290a75a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delivery}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-37" x="418" y="170" width="9" height="15" uuid="7f3ba4cc-1d38-4ff4-9e58-c6bd662f3ff9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="330" y="170" width="89" height="15" uuid="d54c75ba-9049-404e-8d5f-4cfdd3f1d85e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Delivery]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="2" y="51" width="539" height="1" forecolor="#0033FF" uuid="97d21fc3-d4ab-4b02-803f-7e1c66519b45"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-37" x="418" y="185" width="9" height="15" uuid="709af22d-23d6-4bb8-b467-72d8aee77430"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="330" y="185" width="89" height="15" uuid="1314b33b-20d6-4d00-ab14-1fb9c454f5de"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="425" y="185" width="108" height="15" uuid="1e17e4bf-f25d-47da-ad4e-a7991b17dd03"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendor_searchkey}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField-1" x="501" y="53" width="35" height="14" uuid="171a3d74-9240-48d7-be04-2eefd8305b69"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of "+ $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField-1" x="436" y="53" width="63" height="14" uuid="bbdfb38b-a2c5-4d76-9457-8476a74e3eda"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-31" x="5" y="54" width="86" height="15" forecolor="#000000" uuid="d7b74470-8e53-44ea-9ba9-7cf8c0c785b8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[QUOTATION]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="3" y="0" width="90" height="49" uuid="463e1a8e-1a8c-45b5-b18b-71ff314ffaaf"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal",$F{organizationid})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-44" x="109" y="-2" width="435" height="67" uuid="0ccf6a93-8365-4a2a-9c4e-06a8238dd8c9"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Taman Niaga Blok L-8 Jl. Jendral Ahmad Yani, Sukajadi
+Batam Centre - Indonesia
+Phone : 0778 - 480 - 4615
+Fax   : 0778 - 737 - 2042]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-15" mode="Opaque" x="0" y="2" width="24" height="29" forecolor="#FFFFFF" backcolor="#0033FF" uuid="812d0703-69be-4486-afdf-4c034314d99b"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" mode="Opaque" x="25" y="2" width="245" height="29" forecolor="#FFFFFF" backcolor="#0033FF" uuid="b89dad9f-83aa-49ef-a157-cc737c007add"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[ITEMS
+DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" mode="Opaque" x="271" y="2" width="44" height="29" forecolor="#FFFFFF" backcolor="#0033FF" uuid="67b92a72-3486-427a-b0da-08b32431daf8"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" mode="Opaque" x="316" y="2" width="33" height="29" forecolor="#FFFFFF" backcolor="#0033FF" uuid="695e97de-a51a-4ca6-9447-116388308ad7"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[UOM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-19" mode="Opaque" x="350" y="2" width="92" height="29" forecolor="#FFFFFF" backcolor="#0033FF" uuid="2ea08e67-e5e2-4381-b6e1-7d82f142b6cd"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[UNIT PRICE
+DISCOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" mode="Opaque" x="443" y="2" width="96" height="29" forecolor="#FFFFFF" backcolor="#0033FF" uuid="8c59300a-4897-4b8c-95dd-7e53f5da046b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField pattern="###0" isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="2" width="24" height="17" uuid="b210997a-0f35-4bbf-8c4a-38c03cb6ace0"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_line}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="24" y="2" width="245" height="17" uuid="2c734c78-6282-411f-b06a-a247b5a356f9"/>
+				<textElement>
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_searchkey}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="textField" x="25" y="17" width="245" height="43" uuid="45528115-4b09-4cbb-bf47-574e4b18d134"/>
+				<textElement markup="none">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true">
+				<reportElement key="textField" x="271" y="1" width="44" height="17" uuid="e545eef6-2ebd-415f-b5f0-bc232cdf3ca7"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty_ordered}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="315" y="1" width="34" height="17" uuid="c4ee3032-5a4e-4d3c-852a-987856d63944"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom_code}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00#####" isBlankWhenNull="true">
+				<reportElement key="textField" x="349" y="2" width="93" height="17" uuid="2ff203d2-fd35-43bf-a63b-88dd8868fe21"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price_actual}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" x="349" y="19" width="92" height="14" uuid="a85aacab-2f21-4d46-9805-4b9767fe2458"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line_discount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#####;#,##0.00#####-" isBlankWhenNull="true">
+				<reportElement key="textField" x="445" y="2" width="94" height="17" uuid="91eabaa1-a8c4-492d-9569-e9183028bce9"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line_net_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-55" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="119" width="538" height="15" isRemoveLineWhenBlank="true" uuid="6480ca3e-98eb-419f-86d1-f978dfbd5f2d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" size="11" isBold="false" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[* This quotation is computer generated, No signature is required.]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-3" mode="Transparent" x="391" y="105" width="143" height="1" uuid="cd70da2f-8a59-4574-b8cf-1b2d96e61645"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="false">
+				<reportElement key="txtStatusDRAFT" x="324" y="41" width="204" height="56" forecolor="#0000FF" uuid="83fd9729-6188-4d7b-9e9e-e299dece61b4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="36" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{status}.compareTo("DR")==0) ? "DRAFT" : " ")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="295" y="105" width="241" height="15" uuid="1233300e-3539-4e89-b5d4-82f82c9110a7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{created_by}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Opaque" x="430" y="5" width="108" height="15" forecolor="#FFFFFF" backcolor="#0033FF" uuid="130dd9bf-a406-415f-bd51-5b989b265e6f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_order_amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-14" mode="Opaque" x="0" y="5" width="405" height="15" forecolor="#FFFFFF" backcolor="#0033FF" uuid="a2fc0e52-ea16-4de0-890f-9ed56bf3bd8a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[TOTAL AMOUNT :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-2" mode="Opaque" x="405" y="5" width="26" height="15" forecolor="#FFFFFF" backcolor="#0033FF" uuid="e9f3762b-e5c7-4100-b7a7-18a200e81c4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currency_iso}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="261" y="21" width="281" height="19" uuid="9594e12e-608d-49e1-8237-75a61adfbc78"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="11" isBold="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-6" x="1" y="2" width="538" height="1" forecolor="#0033FF" uuid="07634d07-0f0b-4dbf-9fee-04e641b4b017"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

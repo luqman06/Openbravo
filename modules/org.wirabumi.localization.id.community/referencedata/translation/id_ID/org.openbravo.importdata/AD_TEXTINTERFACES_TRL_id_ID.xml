@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="05DA5C8341E54FE2B5A94CC757E8CE9C" trl="N">
+    <value column="Text" isTrl="N" original="Business Partner import process">Business Partner import process</value>
+  </row>
+  <row id="1DB314FE20D44C3D88718C82A5789A3B" trl="N">
+    <value column="Text" isTrl="N" original="Import file">Import file</value>
+  </row>
+  <row id="269301B152F74AF2909604BEA909000D" trl="N">
+    <value column="Text" isTrl="N" original="Import Tax">Import Tax</value>
+  </row>
+  <row id="3E7D843233FC44B9BE09648DA4058028" trl="N">
+    <value column="Text" isTrl="N" original="Delete previous imports">Delete previous imports</value>
+  </row>
+  <row id="40FD3D39B51C4872B953F63C27061F30" trl="N">
+    <value column="Text" isTrl="N" original="Import Budget">Import Budget</value>
+  </row>
+  <row id="44195AF5B0374E62990A0A75327B7FCC" trl="N">
+    <value column="Text" isTrl="N" original="Header first line">Header first line</value>
+  </row>
+  <row id="62C46CDDD6434D0BB9ECEAF16D0F762F" trl="N">
+    <value column="Text" isTrl="N" original="Import Business Partner">Import Business Partner</value>
+  </row>
+  <row id="6C00A558646A4BF0B530CEE2D2262BCA" trl="N">
+    <value column="Text" isTrl="N" original="Delete previous imports">Delete previous imports</value>
+  </row>
+  <row id="724FE38B23904BE498868EF4C68820AE" trl="N">
+    <value column="Text" isTrl="N" original="Tax import process">Tax import process</value>
+  </row>
+  <row id="79CC16CD7D2C4789883C365AE1A17D3E" trl="N">
+    <value column="Text" isTrl="N" original="Delete previous imports">Delete previous imports</value>
+  </row>
+  <row id="7C9C00D922984A9CBD15576343220FB4" trl="N">
+    <value column="Text" isTrl="N" original="Delete previous imports">Delete previous imports</value>
+  </row>
+  <row id="7DBFAA0B716D4ECF9AD7B7E7C0602558" trl="N">
+    <value column="Text" isTrl="N" original="Create new combination ">Create new combination </value>
+  </row>
+  <row id="8108FB25E5CE4B7DA7E1E184691F3906" trl="N">
+    <value column="Text" isTrl="N" original="Format file">Format file</value>
+  </row>
+  <row id="88079D8789664BA7B2EF7E9B956F02E1" trl="N">
+    <value column="Text" isTrl="N" original="Product import process">Product import process</value>
+  </row>
+  <row id="8CE8F0E69A994E109CD90BB78386AED3" trl="N">
+    <value column="Text" isTrl="N" original="Budget">Budget</value>
+  </row>
+  <row id="9287E8B4C8D74AAFB372D8BF6E87F96F" trl="N">
+    <value column="Text" isTrl="N" original="Update default">Update default</value>
+  </row>
+  <row id="9321020ED65C459A98F91F843D114B83" trl="N">
+    <value column="Text" isTrl="N" original="Complete and process orders automatically">Complete and process orders automatically</value>
+  </row>
+  <row id="B201502A9A1D4423B7D632812F29F697" trl="N">
+    <value column="Text" isTrl="N" original="Delete previous imports">Delete previous imports</value>
+  </row>
+  <row id="B4F2200984BF4A78AD5F3E6073E7BE9B" trl="N">
+    <value column="Text" isTrl="N" original="Import Order">Import Order</value>
+  </row>
+  <row id="C47CF6A3B4BB4400B2B04FBD07F20F7A" trl="N">
+    <value column="Text" isTrl="N" original="Import Account">Import Account</value>
+  </row>
+  <row id="CB9BA896F040494E80AC6D469C0B332F" trl="N">
+    <value column="Text" isTrl="N" original="Import file">Import file</value>
+  </row>
+  <row id="D1E212E7591042E7B2DF43C1C387E666" trl="N">
+    <value column="Text" isTrl="N" original="Import Product">Import Product</value>
+  </row>
+  <row id="D4A83937F8F541DEAEA4C523F987A176" trl="N">
+    <value column="Text" isTrl="N" original="Account import process">Account import process</value>
+  </row>
+  <row id="D4FF879DFF264FB489389D47DD575FC6" trl="N">
+    <value column="Text" isTrl="N" original="Order import process">Order import process</value>
+  </row>
+  <row id="E3B2D5B65A6F4E10B80E55BF1AD37506" trl="N">
+    <value column="Text" isTrl="N" original="Import Result">Import Result</value>
+  </row>
+  <row id="F3722DECD7934590AA46E1FE11806ABF" trl="N">
+    <value column="Text" isTrl="N" original="Delete previous imports">Delete previous imports</value>
+  </row>
+  <row id="FF994C8596DF4797976858B344DE1169" trl="N">
+    <value column="Text" isTrl="N" original="Account element ">Account element </value>
+  </row>
+</compiereTrl>

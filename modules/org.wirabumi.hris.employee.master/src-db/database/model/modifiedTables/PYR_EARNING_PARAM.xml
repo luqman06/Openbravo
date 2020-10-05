@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE PYR_EARNING_PARAM">
+    <table name="PYR_EARNING_PARAM" primaryKey="PYR_EARNING_PARAM_KEY">
+      <column name="EM_HRIS_SITE" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_HRIS_BENEFITS_TYPE" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="HRIS_SITE" name="EM_HRIS_EARNING_PR_SITE">
+        <reference local="EM_HRIS_SITE" foreign="HRIS_SITE_ID"/>
+      </foreign-key>
+    </table>
+  </database>

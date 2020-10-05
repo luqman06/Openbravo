@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="FF8080813151AEE1013151B119D10005" trl="N">
+    <value column="Name" isTrl="N" original="Google Account Association">Google Account Association</value>
+    <value column="Description" isTrl="N" original="Process to associate a Openbravo user with a Google Account">Process to associate a Openbravo user with a Google Account</value>
+  </row>
+  <row id="FF8080813161A3D3013162164AB10038" trl="N">
+    <value column="Name" isTrl="N" original="Google Integration Preferences">Google Integration Preferences</value>
+    <value column="Description" isTrl="N" original="Setup preferences for integration with Google APIs">Setup preferences for integration with Google APIs</value>
+  </row>
+</compiereTrl>

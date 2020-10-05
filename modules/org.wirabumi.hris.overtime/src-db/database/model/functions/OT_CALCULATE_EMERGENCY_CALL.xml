@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION OT_CALCULATE_EMERGENCY_CALL">
+    <function name="OT_CALCULATE_EMERGENCY_CALL" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_checkin timestamp without time zone;
+v_checkout timestamp without time zone;
+v_libur character;
+v_keterangan varchar(32);
+v_position varchar(32);
+v_day NUMBER;
+v_checkinactual NUMBER;
+v_checkoutactual NUMBER;
+v_jam NUMBER;
+v_amount NUMBER;
+v_gajipokok NUMBER;
+v_tunjangantetap NUMBER;
+v_tot_duration NUMBER;
+v_tot_jamkerja NUMBER;
+v_set_tarif NUMBER;
+v_batas_bawah NUMBER;
+v_batas_bawah_sebelum NUMBER;
+v_multiplier NUMBER;
+v_lembur NUMBER;
+v_total NUMBER;
+v_tarif NUMBER;
+v_jam2 NUMBER;
+v_currentdate timestamp without time zone;
+v_enddate timestamp without time zone;
+v_set_overtime_id varchar(32);
+v_shift_id varchar(32);
+v_shiftline_id varchar(32);
+v_shiftline bigint;
+v_shifttmp_id varchar(32);
+
+--Record
+cur_emergencycall Record;
+cur_employee Record;
+
+BEGIN
+alter table ot_emergency_call disable trigger ot_updateduration;
+BEGIN
+v_shifttmp_id := '';
+result:=0;
+
+for cur_employee in 
+(select startdate::date as startdate, enddate::date as enddate, bp.em_hris_position, spe.c_bpartner_id, 
+bp.ad_client_id, bp.ad_org_id, sp.pyr_salarypayment_id, bp.em_hris_position as position, pyr_sp_employee_id
+from pyr_salarypayment sp
+inner join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+inner join c_bpartner bp on bp.c_bpartner_id=spe.c_bpartner_id
+where startdate::date<=now()::date
+and enddate::date>=now()::date
+and exists (select 1 from pyr_spe_earning spee 
+inner join pyr_earning pe on pe.pyr_earning_id=spee.pyr_earning_id
+where pe.value='TCL' and spe.c_bpartner_id=spe.c_bpartner_id)
+and (case when spe.c_bpartner_id is not null then spe.c_bpartner_id=spe.c_bpartner_id else 1=1 end))
+
+Loop
+
+	FOR cur_emergencycall IN
+	(select ot_emergency_call_id, em_hris_position, (extract(hour from checkin)*60 + extract(minute from checkin))/60 as checkin, 
+	(extract(hour from checkout)*60 + extract(minute from checkout))/60 as checkout, datefrom,
+	dateto, ot.ad_client_id, checkin::time as ot_checkin, checkout::time as ot_checkout
+	from ot_emergency_call ot
+	inner join c_bpartner bp on bp.c_bpartner_id=ot.c_bpartner_id
+	where ot.c_bpartner_id=cur_employee.c_bpartner_id
+	and docstatus='CO'
+	and datefrom>=cur_employee.startdate
+	and dateto<=cur_employee.enddate)
+
+	loop
+	
+	--mendapatkan hari libur
+	select keterangan into v_keterangan
+	from ta_indv_attendanceperform_nh(cur_employee.c_bpartner_id, cur_emergencycall.datefrom, cur_emergencycall.dateto);
+ 
+	IF v_keterangan is not null then v_libur='Y'; else v_libur='N'; End If;
+
+        --tambahan
+	--menghasilkan attendance untuk yang lembur saja tidak termasuk yang absensi biasa
+	select (extract(hour from checkin)*60 + extract(minute from checkin))/60, 
+	(extract(hour from checkout)*60 + extract(minute from checkout))/60, 
+	checkin, checkout
+	into v_checkinactual, v_checkoutactual, v_checkin, v_checkout
+	from ta_attendance
+	where c_bpartner_id=cur_employee.c_bpartner_id
+	and checkin>=(cur_emergencycall.datefrom::date||' '||cur_emergencycall.ot_checkin::time)::timestamp - interval '1 hours'
+	and checkout<=(cur_emergencycall.dateto::date||' '||cur_emergencycall.ot_checkout::time)::timestamp + interval '1 hours'
+	and ad_client_id=cur_emergencycall.ad_client_id;
+
+	IF v_checkinactual is null or v_checkoutactual is null then continue; end if;
+
+	--tambahi jika overtime minta 2 jam, di attendance 1 jam, maka yang di pakai 1 jam
+	--tambahi jika overtime minta 2 jam, di attendance 3 jam, maka yang di pakai 2 jam    
+	IF v_checkoutactual>=cur_emergencycall.checkout and v_checkinactual>cur_emergencycall.checkin 
+		then v_tot_duration:=cur_emergencycall.checkout-v_checkinactual;
+	ELSEIF v_checkoutactual<cur_emergencycall.checkout and v_checkinactual>cur_emergencycall.checkin   
+		then v_tot_duration:=v_checkoutactual-v_checkinactual;	
+	ELSEIF v_checkoutactual>=cur_emergencycall.checkout and v_checkinactual<=cur_emergencycall.checkin  
+		then v_tot_duration:=cur_emergencycall.checkout-cur_emergencycall.checkin;	
+	ELSEIF v_checkoutactual<cur_emergencycall.checkout and v_checkinactual<=cur_emergencycall.checkin  
+		then v_tot_duration:=v_checkoutactual-cur_emergencycall.checkin;
+	End if;
+
+	raise notice 'v_employee: %, v_checkinactual: %, v_checkoutactual: %, v_checkin: %', 
+	(select name from c_bpartner where c_bpartner_id=cur_employee.c_bpartner_id), v_checkinactual, v_checkoutactual, v_checkin;
+        raise notice 'v_tot_duration: %', v_tot_duration;
+	raise notice 'v_libur: %', v_libur;
+
+	
+	--mendapatkan tarif lembur
+	--mendapatkan gaji pokok
+	select spee.amount into v_gajipokok
+	from pyr_spe_earning spee
+	inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=spee.pyr_sp_employee_id
+	inner join pyr_earning pe on pe.pyr_earning_id=spee.pyr_earning_id
+	where spe.c_bpartner_id=cur_employee.c_bpartner_id
+	and pe.value='GP'
+	and spe.pyr_salarypayment_id=cur_employee.pyr_salarypayment_id;
+	
+	--mendapatkan Tunjangan Tetap
+	select spee.amount into v_tunjangantetap
+	from pyr_spe_earning spee
+	inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=spee.pyr_sp_employee_id
+	inner join pyr_earning pe on pe.pyr_earning_id=spee.pyr_earning_id
+	where spe.c_bpartner_id=cur_employee.c_bpartner_id
+	and pe.value='TP'
+	and spe.pyr_salarypayment_id=cur_employee.pyr_salarypayment_id;
+
+	--mendapatkan position pada set overtime
+	select position into v_position
+	from ot_set_overtime
+	where ad_client_id=cur_employee.ad_client_id
+	and position=cur_employee.position
+	order by validfrom desc, validto desc limit 1;
+
+	raise notice 'v_position: %', v_position;
+	
+	IF v_position is not null then
+	   --mendapatkan overtime set up
+	   select ot_set_overtime_id, tot_jamkerja, tarif into  v_set_overtime_id, v_tot_jamkerja, v_set_tarif
+	   from ot_set_overtime
+	   where ad_client_id=cur_employee.ad_client_id
+	   and position=v_position
+	   order by validfrom desc, validto desc limit 1;
+	Else
+	   --mendapatkan overtime set up
+	   select ot_set_overtime_id, tot_jamkerja, tarif into  v_set_overtime_id, v_tot_jamkerja, v_set_tarif
+	   from ot_set_overtime
+	   where ad_client_id=cur_employee.ad_client_id
+	   order by validfrom desc, validto desc limit 1;
+	End IF;
+	   
+
+	raise notice 'v_tot_jamkerja: %, v_set_tarif: %', v_tot_jamkerja, v_set_tarif;
+
+	--penentuan tarif lembur
+	if v_set_tarif is not null then
+	v_tarif:=v_set_tarif;
+	Else
+	v_tarif:=round((v_gajipokok+v_tunjangantetap)/v_tot_jamkerja, 2);
+	End IF;
+
+
+	--penentuan gaji
+	v_jam:=v_tot_duration;  v_jam2:=v_tot_duration; v_lembur:=0; v_batas_bawah_sebelum:=0;
+	--menentukan tarif bawah
+	IF V_libur='N' then
+	   select max_hour, multiplier into v_batas_bawah, v_multiplier
+	   from ot_business_rate where  ot_set_overtime_id=v_set_overtime_id 
+	   order by max_hour asc limit 1;
+	Elsif v_libur='Y' then
+	   select max_hour, multiplier into v_batas_bawah, v_multiplier
+	   from ot_nonbusiness_rate where  ot_set_overtime_id=v_set_overtime_id 
+	   order by max_hour asc limit 1;
+	End If;
+  
+  
+  --loop menentukan lembur
+  while (v_jam >= (v_batas_bawah-v_batas_bawah_sebelum))
+  Loop  
+	v_lembur:= v_lembur + (v_multiplier * v_tarif * (v_batas_bawah-v_batas_bawah_sebelum));
+	v_batas_bawah_sebelum:= v_batas_bawah;
+	IF v_libur='N' then
+	  select max_hour, multiplier into v_batas_bawah, v_multiplier 
+			  from ot_business_rate
+			  where  ot_set_overtime_id=v_set_overtime_id  
+	                  and max_hour > v_batas_bawah_sebelum 
+	                  order by max_hour asc limit 1;
+	Elsif v_libur='Y' then
+	  select max_hour, multiplier into v_batas_bawah, v_multiplier
+			  from ot_nonbusiness_rate
+			  where ot_set_overtime_id=v_set_overtime_id  
+	                  and max_hour > v_batas_bawah_sebelum 
+	                  order by max_hour limit 1;
+        End If;
+	v_jam:=v_jam-(v_batas_bawah-v_batas_bawah_sebelum);
+  End Loop; --End loop menentukan lembur
+	v_jam:=v_jam2-v_batas_bawah_sebelum;
+	v_lembur = v_lembur + (v_multiplier * v_tarif * (v_jam));
+
+        v_amount:=round(v_lembur, 2);
+
+        raise notice 'v_amount: %', v_amount;
+
+
+--update amount di window overtime
+IF v_libur='N' then
+   IF v_amount>0 then
+	update ot_emergency_call set updated=now(), amount=v_amount, calculate='Y'
+	where c_bpartner_id=cur_employee.c_bpartner_id
+	and ad_client_id=cur_employee.ad_client_id
+	and checkin::time>=v_checkin::time-interval '1 hours'
+	and checkout::time<=v_checkout::time+interval '1 hours'
+	and datefrom::date>=v_checkin::date
+	and dateto::date<=v_checkout::date
+	and docstatus='CO';
+    End IF;
+Elsif v_libur='Y' then
+    IF v_amount>0 then
+	update ot_emergency_call set updated=now(), amount=v_amount, calculate='Y'
+	where c_bpartner_id=cur_employee.c_bpartner_id
+	and ad_client_id=cur_employee.ad_client_id
+	and checkin::time>=v_checkin::time-interval '1 hours'
+	and checkout::time<=v_checkout::time+interval '1 hours'
+	and datefrom::date>=v_checkin::date
+	and dateto::date<=v_checkout::date
+	and docstatus='CO';
+    End IF;
+End IF;
+
+
+--mengambil amount dari window overtime yang calculate Y
+select (sum(case when amount is not null then amount end)) into v_total
+from ot_emergency_call
+where c_bpartner_id=cur_employee.c_bpartner_id
+and ad_client_id=cur_employee.ad_client_id
+and calculate='Y'
+and datefrom::date>=cur_employee.startdate::date
+and dateto::date<=cur_employee.enddate::date
+and docstatus='CO';
+
+
+raise notice 'v_total: %', v_total;
+
+--update lembur di salary payment
+IF v_total is not null then
+update pyr_spe_earning set updated=now(), amount=v_total
+where pyr_earning_id=(select pyr_earning_id from pyr_earning where value='TCL' and ad_client_id=cur_employee.ad_client_id)
+and ad_client_id=cur_employee.ad_client_id
+and pyr_sp_employee_id=cur_employee.pyr_sp_employee_id;
+else continue;
+end if;
+End Loop;
+
+End loop;
+result:=1;
+alter table ot_emergency_call enable trigger ot_updateduration; 
+RETURN;
+END;
+END OT_CALCULATE_EMERGENCY_CALL
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OEZ_SHIPMENT_PROPOSAL_TRG_1">
+    <trigger name="OEZ_SHIPMENT_PROPOSAL_TRG_1" table="OEZ_SHIPMENT_PROPOSAL" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+
+
+    /*************************************************************************
+    * Contributor(s): AHMAD HADI NUGROHO
+    * Memastikan hanya satu record yang di set SELECTED = Y
+    ************************************************************************/
+    v_Count NUMBER;
+    
+    TYPE RECORD IS REF CURSOR;
+    V_RequiresDescription CHAR(1);
+
+        
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+--  IF(TG_OP = 'INSERT' OR TG_OP = 'UPDATE') then
+  IF (UPDATING) THEN
+
+  	IF(:NEW.isselected ='Y') THEN
+  		SELECT count(sp.oez_shipment_proposal_id) INTO v_Count FROM oez_shipment_proposal sp WHERE sp.isselected='Y' and sp.c_order_id = :OLD.c_order_id;
+  		IF(v_Count > 1) THEN
+  			RAISE_APPLICATION_ERROR(-20000, '@OEZ_ShipmentProposalSelected@');
+  		END IF;
+  	END IF;  	
+  END IF;
+END OEZ_SHIPMENT_PROPOSAL_TRG_1
+]]></body>
+    </trigger>
+  </database>

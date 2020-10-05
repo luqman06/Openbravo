@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="C_RMOrderLinesJR" pageWidth="565" pageHeight="812" columnWidth="565" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" isIgnorePagination="true" uuid="ed28d8ce-8cee-4a66-9809-b422098bf614">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="48"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Column_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#666666"/>
+	<parameter name="C_ORDER_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[new String("0B5C4265B81C415B8C9F9CBAA139FF66")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="defaultValue" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Integer("1")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT 1 AS ISBOM, C_ORDERLINE.LINE, COALESCE(M_PRODUCT.NAME, C_ORDERLINE.DESCRIPTION) AS PRODUCT_NAME, C_ORDERLINE.QTYORDERED AS QUANTITY,
+       TO_CHAR(C_UOM.NAME) AS UOM,  C_ORDERLINE.PRICEACTUAL, TO_NUMBER(NULL) AS BASE, C_ORDERLINE.LINENETAMT, TO_NUMBER(NULL) AS TAXLINE,
+coalesce(TO_CHAR(f.name),'')||coalesce(', '||TO_CHAR(e.documentno),'') as ket,
+       C_ORDER.docstatus AS STATUS, TO_CHAR(M_PRODUCT.VALUE) AS VALUE, TO_CHAR(M_ATTRIBUTESETINSTANCE.DESCRIPTION) AS ATTRIBUTE
+FROM C_ORDERLINE left join M_PRODUCT on C_ORDERLINE.M_PRODUCT_ID = M_PRODUCT.M_PRODUCT_ID
+                 left join C_UOM on C_ORDERLINE.C_UOM_ID = C_UOM.C_UOM_ID
+                 left join M_ATTRIBUTESETINSTANCE on C_ORDERLINE.M_ATTRIBUTESETINSTANCE_ID = M_ATTRIBUTESETINSTANCE.M_ATTRIBUTESETINSTANCE_ID
+left join c_return_reason f on C_ORDERLINE.c_return_reason_id=f.c_return_reason_id
+left join m_inoutline b on C_ORDERLINE.m_inoutline_id=b.m_inoutline_id
+left join m_inout c on b.m_inout_id=c.m_inout_id
+left join c_orderline d on C_ORDERLINE.c_orderline_id=d.ref_orderline_id
+left join C_ORDER e on c.C_ORDER_ID = e.C_ORDER_ID, C_ORDER
+
+
+WHERE C_ORDERLINE.C_ORDER_ID = $P{C_ORDER_ID}
+  AND C_ORDERLINE.C_ORDER_ID=C_ORDER.C_ORDER_ID
+UNION
+SELECT 2 AS ISBOM, C_ORDERLINE.LINE, M_PRODUCT.NAME AS PRODUCT_NAME, C_ORDERLINE.QTYORDERED*M_PRODUCT_BOM.BOMQTY AS QUANTITY,
+       TO_CHAR(C_UOM.NAME) AS UOM, TO_NUMBER(NULL) AS PRICEACTUAL, TO_NUMBER(NULL) AS BASE, TO_NUMBER(NULL) AS LINENETAMT, TO_NUMBER(NULL) AS TAXLINE,
+coalesce(TO_CHAR(NULL),'')||coalesce(', '||TO_CHAR(C_ORDER.documentno),'') as ket,
+       C_ORDER.docstatus AS STATUS, TO_CHAR(M_PRODUCT.VALUE) AS VALUE, TO_CHAR(M_ATTRIBUTESETINSTANCE.DESCRIPTION) AS ATTRIBUTE
+FROM M_PRODUCT_BOM, M_PRODUCT, C_UOM,  C_ORDER,
+     C_ORDERLINE left join M_ATTRIBUTESETINSTANCE on C_ORDERLINE.M_ATTRIBUTESETINSTANCE_ID = M_ATTRIBUTESETINSTANCE.M_ATTRIBUTESETINSTANCE_ID
+
+WHERE  C_ORDERLINE.M_PRODUCT_ID = M_PRODUCT_BOM.M_PRODUCT_ID
+  AND M_PRODUCT_BOM.M_PRODUCTBOM_ID = M_PRODUCT.M_PRODUCT_ID
+  AND M_PRODUCT.C_UOM_ID = C_UOM.C_UOM_ID
+  AND C_ORDERLINE.C_ORDER_ID = $P{C_ORDER_ID}
+  AND C_ORDERLINE.C_ORDER_ID=C_ORDER.C_ORDER_ID
+UNION
+SELECT 3 AS ISBOM, TO_NUMBER(null) AS LINE, C_TAX.NAME AS PRODUCT_NAME, TO_NUMBER(NULL) AS QUANTITY, '' AS UOM, TO_NUMBER(NULL) AS PRICEACTUAL,
+       C_ORDERTAX.TAXBASEAMT AS BASE, C_ORDERTAX.TAXAMT AS LINENETAMT, C_ORDERTAX.LINE AS TAXLINE,
+coalesce(TO_CHAR(NULL),'')||coalesce(', '||TO_CHAR(NULL),'') as ket,C_ORDER.docstatus AS STATUS,
+       '' AS VALUE, '' AS ATTRIBUTE
+FROM C_ORDER, C_ORDERTAX, C_TAX
+WHERE C_ORDER.C_ORDER_ID = C_ORDERTAX.C_ORDER_ID
+  AND C_TAX.C_TAX_ID = C_ORDERTAX.C_TAX_ID
+  AND C_ORDERTAX.TAXAMT <> 0
+  AND C_ORDER.C_ORDER_ID = $P{C_ORDER_ID}
+ORDER BY LINE,ISBOM, TAXLINE]]>
+	</queryString>
+	<field name="isbom" class="java.lang.Integer"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="quantity" class="java.math.BigDecimal"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="priceactual" class="java.math.BigDecimal"/>
+	<field name="base" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<field name="taxline" class="java.math.BigDecimal"/>
+	<field name="ket" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="value" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="attribute" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<variable name="SUM_LINENETAMT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{linenetamt}]]></variableExpression>
+	</variable>
+	<variable name="variableSumQty" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$V{variableQty}]]></variableExpression>
+	</variable>
+	<variable name="variableQty" class="java.lang.Double">
+		<variableExpression><![CDATA[new Double( $F{quantity}.doubleValue()*(-1) )]]></variableExpression>
+	</variable>
+	<variable name="No_Urut" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{No_Urut}]]></variableExpression>
+	</variable>
+	<variable name="variableSUMBeli" class="java.lang.Double">
+		<variableExpression><![CDATA[new Double( $F{priceactual}.doubleValue()*$V{variableQty}.doubleValue())]]></variableExpression>
+	</variable>
+	<variable name="variableGrandBeli" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$V{variableSUMBeli}]]></variableExpression>
+	</variable>
+	<variable name="variableBase" class="java.lang.Double">
+		<variableExpression><![CDATA[new Double( $F{priceactual}.doubleValue()*$V{variableQty}.doubleValue())]]></variableExpression>
+	</variable>
+	<variable name="variableBase1" class="java.lang.Double">
+		<variableExpression><![CDATA[new Double( $F{base}.doubleValue()*(-1) )]]></variableExpression>
+	</variable>
+	<variable name="SumQty" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{quantity}]]></variableExpression>
+	</variable>
+	<group name="C_Order_Id" isResetPageNumber="true">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="22" splitType="Stretch">
+				<staticText>
+					<reportElement key="staticText-1" style="Detail_Header" x="26" y="0" width="90" height="22" uuid="94f9e559-39d8-4cc0-a7b1-69ed7c5354ff"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Product Code]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-4" style="Detail_Header" x="486" y="0" width="79" height="22" forecolor="#FFFFFF" backcolor="#666666" uuid="13f79e3c-bacf-42bd-ac2d-b32cf55ebc73"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Description]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="Detail_Header" x="292" y="0" width="35" height="22" forecolor="#FFFFFF" uuid="917f39e0-fcf7-432c-83ee-650929a9d5d6"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[UOM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" style="Detail_Header" x="0" y="0" width="26" height="22" uuid="54fe1090-5e09-44af-b8f1-abe2c7ce8241"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="false"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="Detail_Header" x="253" y="0" width="39" height="22" forecolor="#FFFFFF" uuid="034bf449-3e57-4516-846c-cbbca0a2ce76"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Qty]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="Detail_Header" mode="Opaque" x="327" y="0" width="80" height="22" forecolor="#FFFFFF" backcolor="#666666" uuid="cec3abaa-feeb-47d8-8a5d-659662a8f55d"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Price]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-2" style="Detail_Header" x="407" y="0" width="79" height="22" forecolor="#FFFFFF" backcolor="#666666" uuid="f047f5f2-91c2-4ee4-b4af-8e81229d1b81"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Total Price]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="Detail_Header" x="116" y="0" width="137" height="22" forecolor="#FFFFFF" uuid="c8c44497-0416-4c43-83f7-d0094064c88b"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Product Name]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="407" y="0" width="79" height="16" forecolor="#000000" uuid="6f2e5881-686d-40ac-a031-1c878ed4badc"/>
+				<box topPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{linenetamt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-6" style="default" stretchType="RelativeToTallestObject" x="26" y="0" width="90" height="16" uuid="6d88a474-63e9-47d4-8eb3-8a9cc6282388"/>
+				<box topPadding="2" leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="253" y="0" width="39" height="16" forecolor="#000000" uuid="91993002-0a57-414d-85d5-a878dab92c71"/>
+				<box topPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-6" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="26" height="16" uuid="7313b17d-fadc-437e-8aec-2b2fa193d09e"/>
+				<box topPadding="2" leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Integer($V{No_Urut}.intValue()+$P{defaultValue}.intValue())]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="486" y="0" width="79" height="16" forecolor="#000000" uuid="0f36eb78-3718-46c5-8c07-5a57e39f13af"/>
+				<box topPadding="2" leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(""+(($F{ket}!=null)?$F{ket}:""))]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="292" y="0" width="35" height="16" forecolor="#000000" uuid="13fd97be-d6ea-4980-883a-bac3dd31553b"/>
+				<box topPadding="2" leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="327" y="0" width="80" height="16" forecolor="#000000" uuid="2dc11875-e67d-4d3b-bc45-5a6c4f8f252b"/>
+				<box topPadding="2" rightPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{priceactual}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="116" y="0" width="137" height="16" forecolor="#000000" uuid="20051ac8-75f0-4cfc-862b-19e17cfd2035"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+				<reportElement key="textField-1" style="Total_Gray" x="407" y="0" width="79" height="16" uuid="5274812a-95d0-438a-b26f-fcf6589cffc0"/>
+				<box rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{SUM_LINENETAMT}!=null)?$P{NUMBERFORMAT}.format($V{SUM_LINENETAMT}.negate()):new String(" ")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-5" x="26" y="0" width="227" height="16" uuid="948a38bc-4637-4fe4-8c01-9bad4c96daa1"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" x="0" y="0" width="26" height="16" uuid="489da24b-74ee-431e-ad34-ffa5c74a9ee4"/>
+				<box leftPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" x="292" y="0" width="115" height="16" uuid="1034256f-730e-42af-bcb9-7016c9f60273"/>
+				<box leftPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" x="486" y="0" width="79" height="16" uuid="2ed0842d-99b1-49ea-835f-428638548892"/>
+				<box leftPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="Total_Gray" mode="Opaque" x="253" y="0" width="39" height="16" forecolor="#000000" backcolor="#CCCCCC" uuid="7bf64a0a-e138-45c1-8ef0-53f4fa37081a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumQty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

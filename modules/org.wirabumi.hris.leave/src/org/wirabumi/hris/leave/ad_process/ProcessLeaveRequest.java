@@ -1,0 +1,84 @@
+package org.wirabumi.hris.leave.ad_process;
+
+import java.math.BigDecimal;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.openbravo.base.secureApp.VariablesSecureApp;
+import org.openbravo.client.kernel.RequestContext;
+import org.openbravo.dal.core.OBContext;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.database.ConnectionProvider;
+import org.openbravo.erpCommon.utility.OBError;
+import org.openbravo.erpCommon.utility.Utility;
+import org.openbravo.scheduling.ProcessBundle;
+import org.openbravo.service.db.DalBaseProcess;
+import org.wirabumi.hris.leave.lv_c_bp_leave;
+import org.wirabumi.hris.leave.lv_leave;
+
+public class ProcessLeaveRequest extends DalBaseProcess {
+
+	@Override
+	protected void doExecute(ProcessBundle bundle) throws Exception {
+		// Recover context and variables
+		ConnectionProvider conectionProvider = bundle.getConnection();
+		VariablesSecureApp varsAux = bundle.getContext().toVars();
+		HttpServletRequest request = RequestContext.get().getRequest();
+		OBContext.setOBContext(varsAux.getUser(), varsAux.getRole(), varsAux.getClient(),
+				varsAux.getOrg());
+		VariablesSecureApp vars = new VariablesSecureApp(request);
+		
+		final String leaveId = (String) bundle.getParams().get("LV_Leave_ID");
+		final String docAction = vars.getStringParameter("inpdocaction");
+		
+		lv_leave leave = OBDal.getInstance().get(lv_leave.class, leaveId);
+		BigDecimal daysInThisLeave=leave.getDaysUsedInThisLeave();
+		
+		//set information message
+		final String docActionName=Utility.getListValueName("All_Document Action", docAction, vars.getLanguage());
+		String message = Utility.parseTranslation(conectionProvider, vars, vars.getLanguage(),
+				"@LV_LeaveRequestDocStatusChanged@ "+docActionName);
+		final OBError msg = new OBError();
+	    msg.setType("Success");
+	    msg.setTitle("Process done successfully");
+	    OBContext.setAdminMode();
+		if (docAction.equals("CO")){
+			//complete leave request
+			//update used leave
+			String employeeLeaveId=leave.getEmployeeleave().getId();
+			lv_c_bp_leave employeeLeave = OBDal.getInstance().get(lv_c_bp_leave.class, employeeLeaveId);
+			BigDecimal currentUsedLeave = employeeLeave.getUsedLeave();
+			currentUsedLeave=currentUsedLeave.add(daysInThisLeave);
+			employeeLeave.setUsedLeave(currentUsedLeave);
+			OBDal.getInstance().save(employeeLeave);
+			
+			//return message
+			message = Utility.parseTranslation(conectionProvider, vars, vars.getLanguage(),
+					"@LV_LeaveRequestApproved@");
+			
+		} else if(docAction.equals("VO")){
+			//void approved leave request
+			String employeeLeaveId=leave.getEmployeeleave().getId();
+			lv_c_bp_leave employeeLeave = OBDal.getInstance().get(lv_c_bp_leave.class, employeeLeaveId);
+			BigDecimal currentUsedLeave = employeeLeave.getUsedLeave();
+			currentUsedLeave=currentUsedLeave.subtract(daysInThisLeave);
+			employeeLeave.setUsedLeave(currentUsedLeave);
+			OBDal.getInstance().save(employeeLeave);
+			
+			//return message
+			message = Utility.parseTranslation(conectionProvider, vars, vars.getLanguage(),
+					"@LV_LeaveRequestVoided@");
+		}
+		
+		//change docstatus to given docaction
+		leave.setDocumentStatus(docAction);
+		OBDal.getInstance().save(leave);
+		OBDal.getInstance().commitAndClose();
+		
+		OBContext.restorePreviousMode();
+		
+		//return message
+	    msg.setMessage(message);
+	    bundle.setResult(msg);
+	}
+}

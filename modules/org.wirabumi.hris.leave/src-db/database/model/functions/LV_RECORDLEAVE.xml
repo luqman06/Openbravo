@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION LV_RECORDLEAVE">
+    <function name="LV_RECORDLEAVE" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_ci_type varchar(60);
+v_ci_duration NUMBER;
+v_bp_type varchar(60);
+v_bp_duration NUMBER;
+v_bp_validfrom timestamp without time zone;
+v_bp_validto timestamp without time zone;
+v_validfrom timestamp without time zone;
+v_validto timestamp without time zone;
+v_validto_update timestamp without time zone;
+v_bp_usedleave NUMBER;
+v_c_bp_leave_id varchar(32);
+v_lv_c_bp_leave_id varchar(32);
+v_bpartner_id varchar(32);
+Cur_Employee Record;
+
+BEGIN
+
+ result:=0;
+FOR Cur_Employee IN
+(select bp.name, bp.c_bpartner_id, bp.created, bp.ad_client_id, type, duration, 
+ bp.createdby, bp.updatedby, bp.ad_org_id, bp.em_hris_year, bp.em_hris_month, validfrom, validto
+from c_Bpartner bp
+inner join lv_set_leave lv on lv.ad_client_id=bp.ad_client_id
+where isemployee='Y'
+and bp.isactive='Y'
+and em_hris_year>=year
+and type='CT'
+and validfrom<=(date_part('year'::text, now())||'-'||01||'-'||01)::date
+and validto>=(date_part('year'::text, now())||'-'||01||'-'||01)::date
+and (case when p_employee_id is not null then c_bpartner_id=p_employee_id else 1=1 end)
+order by validto asc, validfrom asc)
+loop
+
+--cek masa kerja
+IF Cur_Employee.em_hris_year<2 then Cur_Employee.duration:=Cur_Employee.em_hris_month+1;
+else Cur_Employee.duration:=Cur_Employee.duration;
+End If;
+
+--mendapatkan validfrom dan validto
+select (date_part('year'::text, now())||'-'||01||'-'||01)::timestamp,  
+((date_part('year'::text, now())+1::integer)||'-'||06||'-'||30)::timestamp 
+into v_validfrom, v_validto
+FROM c_bpartner bp
+inner join lv_set_leave lv on lv.ad_client_id=bp.ad_client_id
+where c_bpartner_id=Cur_Employee.c_bpartner_id
+order by Cur_Employee.validfrom desc, Cur_Employee.validto desc;
+
+/*
+--mendapatkan validfrom dan validto
+select (date_part('year'::text, em_hris_retirementdate)||'-'||01||'-'||01)::timestamp,  
+((date_part('year'::text, em_hris_retirementdate)+1::integer)||'-'||06||'-'||30)::timestamp 
+into v_validfrom, v_validto
+FROM c_bpartner bp
+inner join lv_set_leave lv on lv.ad_client_id=bp.ad_client_id
+where c_bpartner_id=Cur_Employee.c_bpartner_id
+order by Cur_Employee.validfrom desc, Cur_Employee.validto desc;
+*/
+
+--mengambil data cuti yang sudah ada pada employee
+select lv_c_bp_leave_id, duration, type, validfrom, (date_part('year'::text, validfrom)||'-'||12||'-'||31)::timestamp, validto, usedleave, c_bpartner_id 
+into v_c_bp_leave_id, v_bp_duration, v_bp_type, v_bp_validfrom, v_validto_update, v_bp_validto, v_bp_usedleave, v_bpartner_id 
+from lv_c_bp_leave
+where c_bpartner_id=Cur_Employee.c_bpartner_id
+and type='CT'
+order by validfrom desc, validto desc;
+
+--cek apakah ada utang cuti
+if v_bp_duration<v_bp_usedleave 
+then Cur_Employee.duration:=Cur_Employee.duration+(v_bp_duration-v_bp_usedleave);
+
+update lv_c_bp_leave set validto=v_validto_update
+where c_bpartner_id=v_bpartner_id
+and type=v_bp_type
+and lv_c_bp_leave_id=v_c_bp_leave_id;
+
+else Cur_Employee.duration:=Cur_Employee.duration;
+End IF;
+
+raise notice 'name:%, year:%, month:%, v_bp_usedleave: %, Cur_Employee.duration:%, Cur_Employee.type:%, v_validfrom:%, v_validto:%, ', 
+Cur_Employee.name, Cur_Employee.em_hris_year, Cur_Employee.em_hris_month, v_bp_usedleave, Cur_Employee.duration, Cur_Employee.type, Cur_Employee.validfrom, Cur_Employee.validto;
+
+
+if v_bpartner_id=Cur_Employee.c_bpartner_id and v_bp_validfrom=v_validfrom and v_bp_validto=v_validto and v_bp_type=Cur_Employee.type then continue; 
+Else
+--insert leave for all employee
+select get_uuid() into v_lv_c_bp_leave_id from dual;
+INSERT INTO lv_c_bp_leave(
+            lv_c_bp_leave_id, ad_client_id, ad_org_id, isactive, created, 
+            createdby, updated, updatedby, "type", c_bpartner_id, duration, 
+            validfrom, validto, usedleave)
+    VALUES (v_lv_c_bp_leave_id, Cur_Employee.ad_client_id, Cur_Employee.ad_org_id, 'Y', Cur_Employee.created, 
+            Cur_Employee.createdby, now(), Cur_Employee.updatedby, Cur_Employee.type, Cur_Employee.c_bpartner_id, Cur_Employee.duration, 
+            v_validfrom, v_validto, 0);
+end if;
+End Loop;
+result:=1;
+
+RETURN;
+END LV_RECORDLEAVE
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="32A9EEF8BE08408D954BE0FC0E2175E3" trl="N">
+    <value column="Name" isTrl="N" original="Form Pajak Penghasilan 1721">Form Pajak Penghasilan 1721</value>
+    <value column="Description" isTrl="N" original="Form Pajak Penghasilan 1721">Form Pajak Penghasilan 1721</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AD870F99388C404487034D642E315D97" trl="N">
+    <value column="Name" isTrl="N" original="Laporan PPH 21 Bulanan per Site">Laporan PPH 21 Bulanan per Site</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D7088D427D6A462FBD2DD03C58C4F299" trl="N">
+    <value column="Name" isTrl="N" original="Laporan PPH 21 Bulanan per Orang">Laporan PPH 21 Bulanan per Orang</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

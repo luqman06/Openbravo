@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="OBUISEL_SELECTOR_FIELD" version="">
+  <row id="0C19BCE6B8FD4C8C869EA4F85DDF5150" trl="N">
+    <value column="Name" isTrl="N" original="Search Key">Search Key</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="58293BCE7A7C4260BEBB1383841C333D" trl="N">
+    <value column="Name" isTrl="N" original="Position">Position</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="728B256B850842ED82270FBCEAF9A523" trl="N">
+    <value column="Name" isTrl="N" original="Job Title">Job Title</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AB2CCB296FA44DE6AC94BB3B3DFDC7D5" trl="N">
+    <value column="Name" isTrl="N" original="Name">Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

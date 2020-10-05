@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OEZ_M_INOUT_SHIPMENTDATA_TRG">
+    <trigger name="OEZ_M_INOUT_SHIPMENTDATA_TRG" table="M_INOUT" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+
+    /*************************************************************************
+    * Title: oez_m_inout_shipmentdata_trg
+    * Description:
+    *   Copy Shipment Proposal dari Sales Order ke Goods Shipment
+    ************************************************************************/
+ 
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+  	IF(UPDATING) then
+	  	IF(:new.c_order_id is not null) THEN
+
+			INSERT INTO public.oez_shipmentdata
+				(oez_shipmentdata_id, 
+				ad_client_id, ad_org_id, 
+				isactive, 
+				created, createdby, 
+				updated, updatedby, 
+				m_inout_id, line, 
+				iscancelled, is_direct_shipment, 
+				gate_closing_date, gate_closing_time, 
+				vessel_name, voyage_number, 
+				loading_port_name, loading_port_city, loading_port_etd, loading_port_country_id, 
+				dest_port_name, dest_port_eta, dest_port_city, dest_port_country_id, 
+				connect_vessel_name, connect_port_eta, connect_port_eta_city, connect_port_etd, connect_port_etd_city, 
+				description, 
+				m_shipper_id)
+			(SELECT get_uuid(), 
+				ad_client_id, ad_org_id, 
+				'Y', 
+				now(), :new.updatedby, 		--created, createdby, 
+				now(), :new.updatedby, 		--updated, updatedby,
+				:old.m_inout_id, 
+				1, 					--line, 
+				isselected, is_direct_shipment, 
+				gate_closing_date, gate_closing_time, 
+				vessel_name, voyage_number, 
+				loading_port_name, loading_port_city, loading_port_etd, loading_port_country_id, 
+				dest_port_name, dest_port_eta, dest_port_city, dest_port_country_id, 
+				connect_vessel_name, connect_port_eta, connect_port_eta_city, connect_port_etd, connect_port_etd_city, 
+				description, 
+				m_shipper_id
+				FROM public.oez_shipment_proposal
+				where c_order_id = :new.c_order_id
+					and isselected = 'Y');	
+		
+	  	END IF;
+	  
+	  	IF(:new.c_order_id is null) then
+	  		delete from oez_shipmentdata
+	  		where m_inout_id = :old.m_inout_id;
+	  	end if;
+	  
+ 	END IF;
+ 
+	END OEZ_M_INOUT_SHIPMENTDATA_TRG
+]]></body>
+    </trigger>
+  </database>

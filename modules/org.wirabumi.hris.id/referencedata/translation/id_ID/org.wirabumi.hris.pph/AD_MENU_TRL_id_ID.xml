@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="0CD09D84101B47DB915973FDBEC6BB7A" trl="N">
+    <value column="Name" isTrl="N" original="Laporan PPH 21 Bulanan per Orang">Laporan PPH 21 Bulanan per Orang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0FB5B2B180284710BBB38C43C6D68C4A" trl="N">
+    <value column="Name" isTrl="Y" original="Indonesian Position Cost Rate">Biaya Jabatan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="14BFD6AA9BFE4990B40072C5489C22F2" trl="N">
+    <value column="Name" isTrl="N" original="Laporan PPH 21 Bulanan per Site">Laporan PPH 21 Bulanan per Site</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CBFE531FA4F6470E9E051432B77C6891" trl="N">
+    <value column="Name" isTrl="N" original="Employee Income Tax">Employee Income Tax</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D4179E2D2D3844EBA202F48DA0E1E63C" trl="N">
+    <value column="Name" isTrl="Y" original="Rate of Indonesian Non Taxable Income">Tarif PTKP</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DF7B090EF84D4E9FBCFD3C65C7EB19EF" trl="N">
+    <value column="Name" isTrl="N" original="Employee A1 1721">Employee A1 1721</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E054CB5A14BB4E978A2425CDEE3AB14E" trl="N">
+    <value column="Name" isTrl="Y" original="Progressive Income Tax Rate">Tarif PPh 21</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E48CFBE685574FB6BF0AFFE65096134C" trl="N">
+    <value column="Name" isTrl="N" original="Income Tax">Income Tax</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E54DAE73E4904799A4196486D6702AB8" trl="N">
+    <value column="Name" isTrl="N" original="Income Tax">Income Tax</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

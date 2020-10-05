@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SqlClass id="class" name="AkumulasiPotongGaji45AABF472AA44F8CB0E35F66F61D7014Data" package="org.openbravo.erpWindows.org.wirabumi.hris.timeandattendance.AttendanceEarningDeduction">
+  <SqlClassComment>WAD Generated class</SqlClassComment>
+
+  <SqlMethod name="dummy" type="preparedStatement" return="multiple">
+    <Sql>
+      SELECT '' AS dummy from DUAL
+    </Sql>
+  </SqlMethod>
+
+
+
+
+  <SqlMethod name="updateDocAction" type="preparedStatement" return="rowCount">
+    <Sql><![CDATA[
+        UPDATE ta_akumulasi_pot_gaji
+        SET docaction = ? 
+        WHERE ta_akumulasi_pot_gaji.TA_Akumulasi_Pot_Gaji_ID = ?
+    ]]></Sql>
+    <Parameter name="docaction"></Parameter>
+    <Parameter id="paramKey" name="taAkumulasiPotGajiId"></Parameter>
+  </SqlMethod>
+
+
+
+
+</SqlClass>

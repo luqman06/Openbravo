@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="45B9E9D6BF264556A1B164B11E52653F" trl="N">
+    <value column="Name" isTrl="N" original="Widget Instance">Widget Instance</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="58658C3460FE4CF3B545C3AB10A79AE3" trl="N">
+    <value column="Name" isTrl="N" original="Widget Superclass">Widget Superclass</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="716D04974DCE4559821C8D60D4FA84A1" trl="N">
+    <value column="Name" isTrl="N" original="OBKMO_Country Table ">OBKMO_Country Table </value>
+    <value column="Description" isTrl="N" original="Test for edit parameters">Test for edit parameters</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B0BA46A241B543CF80B4046F080FA9DE" trl="N">
+    <value column="Name" isTrl="N" original="Widget Class">Widget Class</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CB6C648A6CAB4F749CB25EB1EBC4BAB5" trl="N">
+    <value column="Name" isTrl="N" original="List Widget Type">List Widget Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF8080813123BF670131241C2BB30012" trl="N">
+    <value column="Name" isTrl="N" original="OBKMO_Widget in Form Reference">OBKMO_Widget in Form Reference</value>
+    <value column="Description" isTrl="N" original="The base Widget in Form reference">The base Widget in Form reference</value>
+    <value column="Help" isTrl="N" original="Defines the Widget in Form base Reference. Allows placing a Workspace Widget into a generated form.">Defines the Widget in Form base Reference. Allows placing a Workspace Widget into a generated form.</value>
+  </row>
+</compiereTrl>

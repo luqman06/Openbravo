@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="02AE54DF47C54668B6858F508FDCBF56" trl="N">
+    <value column="Text" isTrl="N" original="Hutang">Hutang</value>
+  </row>
+  <row id="0C00A06666604C08B24D5DFA0D92CE9A" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="0F066C5381FC4469B41A6C9730BA8726" trl="N">
+    <value column="Text" isTrl="N" original="NAMA">NAMA</value>
+  </row>
+  <row id="21B3B552B0174BF9AF3E7E0D15A66E17" trl="N">
+    <value column="Text" isTrl="N" original="Paid Amount">Paid Amount</value>
+  </row>
+  <row id="224CF5BE6D2B4A4AA0F1CBB6A9B11E3E" trl="N">
+    <value column="Text" isTrl="N" original="Unit Kerja">Unit Kerja</value>
+  </row>
+  <row id="2AEF1686378B4ADAB75664032DA7C7DD" trl="N">
+    <value column="Text" isTrl="N" original="Employee Loan Report">Employee Loan Report</value>
+  </row>
+  <row id="34CE5B2D2E704384BDC864A4200A18FA" trl="N">
+    <value column="Text" isTrl="N" original="NAMA">NAMA</value>
+  </row>
+  <row id="37B27B229C6D46AEBA88F1288193D4D2" trl="N">
+    <value column="Text" isTrl="N" original="Loan Amount">Loan Amount</value>
+  </row>
+  <row id="68CF017544A147EA91CCF34994FA527A" trl="N">
+    <value column="Text" isTrl="N" original="Paid Amount">Paid Amount</value>
+  </row>
+  <row id="6F7461D91E384A26B708EFBE22467846" trl="N">
+    <value column="Text" isTrl="N" original="Loan Report">Loan Report</value>
+  </row>
+  <row id="8AF7289264844918A0646C726B92464D" trl="N">
+    <value column="Text" isTrl="N" original="Unit Kerja">Unit Kerja</value>
+  </row>
+  <row id="A2C4AB01353E49B1A48AF25D1DEE491B" trl="N">
+    <value column="Text" isTrl="N" original="Tingkat">Tingkat</value>
+  </row>
+  <row id="A57321608CCB4F4DBE19F0B15D48953B" trl="N">
+    <value column="Text" isTrl="N" original="Loan Amount">Loan Amount</value>
+  </row>
+  <row id="AD49491211AE48C5BDC399C8659F2C7C" trl="N">
+    <value column="Text" isTrl="N" original="Hutang+Bunga">Hutang+Bunga</value>
+  </row>
+  <row id="B9091270C0CD469E8318B1FE7C657678" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="C87D91667A3E4B7DBBC5DF2F04BFB491" trl="N">
+    <value column="Text" isTrl="N" original="Potongan">Potongan</value>
+  </row>
+  <row id="DE511B5E57E349FBBF909CF7059B2004" trl="N">
+    <value column="Text" isTrl="N" original="Due Date">Due Date</value>
+  </row>
+  <row id="E18D92C7CF30478AA83666ECCC3B4102" trl="N">
+    <value column="Text" isTrl="N" original="Employee Loan Report">Employee Loan Report</value>
+  </row>
+  <row id="E4CD90B039594E5BBFB406F0351A9854" trl="N">
+    <value column="Text" isTrl="N" original="Total Yang Dibayar">Total Yang Dibayar</value>
+  </row>
+  <row id="E578CD4E129242479764A0D6D5275295" trl="N">
+    <value column="Text" isTrl="N" original="Jangka Waktu">Jangka Waktu</value>
+  </row>
+  <row id="E8396CE9E24F4CA89677686E80264BC4" trl="N">
+    <value column="Text" isTrl="N" original="Tingkat">Tingkat</value>
+  </row>
+  <row id="EC3E8ADD44B34A21B259DAD2DF8961AC" trl="N">
+    <value column="Text" isTrl="N" original="Due Date">Due Date</value>
+  </row>
+  <row id="F0DEDE6E3EE04C4F8497A56BC27D3F4A" trl="N">
+    <value column="Text" isTrl="N" original="Outstanding Amount">Outstanding Amount</value>
+  </row>
+  <row id="F2539D77FCBA4905ADAD97C47692B253" trl="N">
+    <value column="Text" isTrl="N" original="Periode Gaji">Periode Gaji</value>
+  </row>
+  <row id="F2A880468E0D42E68D89A5C8C445A6DD" trl="N">
+    <value column="Text" isTrl="N" original="Bunga">Bunga</value>
+  </row>
+  <row id="FE39BE2BC77B4B86BEECF1B5DDB02B93" trl="N">
+    <value column="Text" isTrl="N" original="Outstanding Amount">Outstanding Amount</value>
+  </row>
+</compiereTrl>

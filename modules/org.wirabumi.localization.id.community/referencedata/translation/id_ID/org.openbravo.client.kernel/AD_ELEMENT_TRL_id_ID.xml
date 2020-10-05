@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="1663D48FCF45475FB6AF23DE940BF7B4" trl="N">
+    <value column="Name" isTrl="N" original="Template">Template</value>
+    <value column="PrintName" isTrl="N" original="Template">Template</value>
+    <value column="Description" isTrl="N" original="The template source code.">The template source code.</value>
+    <value column="Help" isTrl="N" original="The source code of the template. This code gets executed when the template is processed. The language of the source code (freemarker or another) is defined by the template language field. Note that instead of this field it is also possible to use the template class path location field to point to a file containing the source cod">The source code of the template. This code gets executed when the template is processed. The language of the source code (freemarker or another) is defined by the template language field. Note that instead of this field it is also possible to use the template class path location field to point to a file containing the source cod</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1E20B2070A5447D6A31B4A3C95EBD941" trl="N">
+    <value column="Name" isTrl="N" original="Input Mask">Input Mask</value>
+    <value column="PrintName" isTrl="N" original="Input Mask">Input Mask</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original="Input Mask">Input Mask</value>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2EA11B0C11DD465C896EA8D54D6492DB" trl="N">
+    <value column="Name" isTrl="N" original="OBCLKER_Ref_Mask_ID">OBCLKER_Ref_Mask_ID</value>
+    <value column="PrintName" isTrl="N" original="OBCLKER_Ref_Mask_ID">OBCLKER_Ref_Mask_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6F1CAC3037204B29AA6A1BEEEB322DEC" trl="N">
+    <value column="Name" isTrl="N" original="Template">Template</value>
+    <value column="PrintName" isTrl="N" original="Template">Template</value>
+    <value column="Description" isTrl="N" original="The template used to generate the visualization of the component.">The template used to generate the visualization of the component.</value>
+    <value column="Help" isTrl="N" original="Defines the template which is used to generate the (javascript) code to render the component.">Defines the template which is used to generate the (javascript) code to render the component.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="77DBB0D293A34966B10E6AC12F2B4DB9" trl="N">
+    <value column="Name" isTrl="N" original="Obclker_Uidefinition_ID">Obclker_Uidefinition_ID</value>
+    <value column="PrintName" isTrl="N" original="Obclker_Uidefinition_ID">Obclker_Uidefinition_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9E248D010B9949AEA6751C2529385EB6" trl="N">
+    <value column="Name" isTrl="N" original="Template Classpath Location">Template Classpath Location</value>
+    <value column="PrintName" isTrl="N" original="Template Classpath Location">Template Classpath Location</value>
+    <value column="Description" isTrl="N" original="Defines the location in the classpath of the template file">Defines the location in the classpath of the template file</value>
+    <value column="Help" isTrl="N" original="Defines the location in the classpath of the template file. The template is loaded using the classloader. The path must be an absolute path (so start with a /).">Defines the location in the classpath of the template file. The template is loaded using the classloader. The path must be an absolute path (so start with a /).</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CA00B1284F5F4B988C3B578EDFF32E2E" trl="N">
+    <value column="Name" isTrl="N" original="Implementation class name">Implementation class name</value>
+    <value column="PrintName" isTrl="N" original="Implementation class name">Implementation class name</value>
+    <value column="Description" isTrl="N" original="Name of the java class implementing the functionality.">Name of the java class implementing the functionality.</value>
+    <value column="Help" isTrl="N" original="Name of the java class implementing the functionality.">Name of the java class implementing the functionality.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CBF6C0089C3E47899CF0EF6CB5808CA0" trl="N">
+    <value column="Name" isTrl="N" original="Depends On Template ">Depends On Template </value>
+    <value column="PrintName" isTrl="N" original="Depends On Template ">Depends On Template </value>
+    <value column="Description" isTrl="N" original="The template on which the current template depends">The template on which the current template depends</value>
+    <value column="Help" isTrl="N" original="Defines the template on which the current template depends.">Defines the template on which the current template depends.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D5EF1F8B9EBF4639BD6064E551B46B79" trl="N">
+    <value column="Name" isTrl="N" original="Template Language">Template Language</value>
+    <value column="PrintName" isTrl="N" original="Template Language">Template Language</value>
+    <value column="Description" isTrl="N" original="Defines the template language used to process this template.">Defines the template language used to process this template.</value>
+    <value column="Help" isTrl="N" original="Defines the template language used to process this template.">Defines the template language used to process this template.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D9FC90D101014BFCBC33D29EECC65C1D" trl="N">
+    <value column="Name" isTrl="N" original="Component Type">Component Type</value>
+    <value column="PrintName" isTrl="N" original="Component Type">Component Type</value>
+    <value column="Description" isTrl="N" original="A type of component for which the template operates.">A type of component for which the template operates.</value>
+    <value column="Help" isTrl="N" original="A type of component for which the template operates.">A type of component for which the template operates.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F65B59C7313C4FDBA800BFDF404698CA" trl="N">
+    <value column="Name" isTrl="N" original="Template dependency">Template dependency</value>
+    <value column="PrintName" isTrl="N" original="Template dependency">Template dependency</value>
+    <value column="Description" isTrl="N" original="Template dependency">Template dependency</value>
+    <value column="Help" isTrl="N" original="Defines a template dependency, that a template depends on another template, i.e. uses functions from the other template.">Defines a template dependency, that a template depends on another template, i.e. uses functions from the other template.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FBD6AA3EB93549EBBE6067E3FB649A91" trl="N">
+    <value column="Name" isTrl="N" original="Overrides Template">Overrides Template</value>
+    <value column="PrintName" isTrl="N" original="Overrides Template">Overrides Template</value>
+    <value column="Description" isTrl="N" original="Is used to define that this template overrides another template.">Is used to define that this template overrides another template.</value>
+    <value column="Help" isTrl="N" original="Defines that this template overrides the template which is defined in this field. When processing a user interface component request from the browser, the system searches for the template to handle the request. The 'overrides template' field plays an important role in this process. When a template is selected then the system checks if the template is overridden, if this is the case then the overriding template is used. This search step are done multi-level (so if the overriding template is again overridden then the deepest/last overriding template is used).">Defines that this template overrides the template which is defined in this field. When processing a user interface component request from the browser, the system searches for the template to handle the request. The 'overrides template' field plays an important role in this process. When a template is selected then the system checks if the template is overridden, if this is the case then the overriding template is used. This search step are done multi-level (so if the overriding template is again overridden then the deepest/last overriding template is used).</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="04EA581A60534F95BE04954129981453" trl="N">
+    <value column="Name" isTrl="N" original="LV_Tidakmasuk_ID">LV_Tidakmasuk_ID</value>
+    <value column="PrintName" isTrl="N" original="LV_Tidakmasuk_ID">LV_Tidakmasuk_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0D349D5ABE6F441086A326ED1AD5F250" trl="N">
+    <value column="Name" isTrl="N" original="LV_Leave_ID">LV_Leave_ID</value>
+    <value column="PrintName" isTrl="N" original="LV_Leave_ID">LV_Leave_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2091ACA745854D52AEC1E527C9F8B3B0" trl="N">
+    <value column="Name" isTrl="N" original="LV_Mass_Leave_L_ID">LV_Mass_Leave_L_ID</value>
+    <value column="PrintName" isTrl="N" original="LV_Mass_Leave_L_ID">LV_Mass_Leave_L_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="27AE31ED232D4F349F1712AE7D49D68F" trl="N">
+    <value column="Name" isTrl="Y" original="Leave Below One Day">Ishour</value>
+    <value column="PrintName" isTrl="Y" original="Leave Below One Day">Ishour</value>
+    <value column="Description" isTrl="N" original="this flag indicate employee request a leave in hourly manner rather than day.">this flag indicate employee request a leave in hourly manner rather than day.</value>
+    <value column="Help" isTrl="N" original="this flag indicate employee request a leave in hourly manner rather than day. for example, leave for half day (4 hours).">this flag indicate employee request a leave in hourly manner rather than day. for example, leave for half day (4 hours).</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3524EC696A8041D1832D0120C3C54DBE" trl="N">
+    <value column="Name" isTrl="N" original="Employee Leave">Employee Leave</value>
+    <value column="PrintName" isTrl="N" original="Employee Leave">Employee Leave</value>
+    <value column="Description" isTrl="N" original="Employee Leave combined with applicable leave year">Employee Leave combined with applicable leave year</value>
+    <value column="Help" isTrl="N" original="Employee Leave combined with applicable leave year">Employee Leave combined with applicable leave year</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3536662CA763484AB65CBF0BC035B8B7" trl="Y">
+    <value column="Name" isTrl="Y" original="Signature">Tandatangan</value>
+    <value column="PrintName" isTrl="N" original="Signature">Signature</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="41DFB11EC4D74FD493010CDCF9F4541C" trl="N">
+    <value column="Name" isTrl="N" original="Days Used in This Leave">Days Used in This Leave</value>
+    <value column="PrintName" isTrl="N" original="Days Used in This Leave">Days Used in This Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4AB81873098D4AD6B60A357D04BD97FC" trl="N">
+    <value column="Name" isTrl="Y" original="Start Time">Mulai</value>
+    <value column="PrintName" isTrl="Y" original="Start Time">Mulai</value>
+    <value column="Description" isTrl="N" original="begining timestamp for this leave">begining timestamp for this leave</value>
+    <value column="Help" isTrl="N" original="begining timestamp for this leave">begining timestamp for this leave</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="57F3B8C819E846738D08C9BAEF77A3B1" trl="N">
+    <value column="Name" isTrl="N" original="LV_C_Bp_Leave_V_ID">LV_C_Bp_Leave_V_ID</value>
+    <value column="PrintName" isTrl="N" original="LV_C_Bp_Leave_V_ID">LV_C_Bp_Leave_V_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6EB7637144004355B615BE823F72A2F4" trl="N">
+    <value column="Name" isTrl="N" original="Plafond">Plafond</value>
+    <value column="PrintName" isTrl="N" original="Plafond">Plafond</value>
+    <value column="Description" isTrl="N" original="Maximum of employee leave">Maximum of employee leave</value>
+    <value column="Help" isTrl="N" original="Maximum of employee leave (unit of measure: Day)">Maximum of employee leave (unit of measure: Day)</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7BB3331AF51842D9B37718494CCEAF8F" trl="Y">
+    <value column="Name" isTrl="Y" original="Used Leave">Cuti Terpakai</value>
+    <value column="PrintName" isTrl="N" original="Used Leave">Used Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9735B1210F434880B58FBD489B9BF6D9" trl="N">
+    <value column="Name" isTrl="N" original="LV_Mass_Leave_ID">LV_Mass_Leave_ID</value>
+    <value column="PrintName" isTrl="N" original="LV_Mass_Leave_ID">LV_Mass_Leave_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A029F1C3914041A19DC41F439B6AD047" trl="N">
+    <value column="Name" isTrl="N" original="Bp Leave">Bp Leave</value>
+    <value column="PrintName" isTrl="N" original="Bp Leave">Bp Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BC47D42BA1B54FF0AA09CB3902975040" trl="N">
+    <value column="Name" isTrl="Y" original="Leave Catalogue">LV_Set_Leave_ID</value>
+    <value column="PrintName" isTrl="Y" original="Leave Catalogue">LV_Set_Leave_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C39E6FC17D2246A3BB572DAB11ACCECB" trl="N">
+    <value column="Name" isTrl="N" original="Generate Employee">Generate Employee</value>
+    <value column="PrintName" isTrl="N" original="Generate Employee">Generate Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D9EAD466E63943739637A032AC43BD1A" trl="N">
+    <value column="Name" isTrl="Y" original="End Time">Sampai</value>
+    <value column="PrintName" isTrl="Y" original="End Time">Sampai</value>
+    <value column="Description" isTrl="N" original="ending timestamp for this leave">ending timestamp for this leave</value>
+    <value column="Help" isTrl="N" original="ending timestamp for this leave">ending timestamp for this leave</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F97BE580625D4CE788A9A659AD3DB440" trl="N">
+    <value column="Name" isTrl="N" original="Replacement Employee">Replacement Employee</value>
+    <value column="PrintName" isTrl="N" original="Replacement Employee">Replacement Employee</value>
+    <value column="Description" isTrl="N" original="Replacement Employee">Replacement Employee</value>
+    <value column="Help" isTrl="N" original="Replacement Employee">Replacement Employee</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION HRIS_CALCULATE_YEARSOFSERVICE">
+    <function name="HRIS_CALCULATE_YEARSOFSERVICE" type="NULL">
+      <parameter name="p_bpartner_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[--generate product value list that have suspect of duplicity
+  -- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_yearjoin integer:=0;
+  v_monthjoin integer:=0;
+  v_yearnow integer:=0;
+  v_monthnow integer:=0;  
+  v_year integer:=0;
+  v_month integer:=0;  
+  
+  BEGIN
+   
+  BEGIN --BODY
+
+	--function definition here
+	select	date_part('year', em_hris_joindate),date_part('month', em_hris_joindate),
+		date_part('year', now()),date_part('month', now())
+	into v_yearjoin, v_monthjoin, v_yearnow, v_monthnow
+	from c_bpartner where c_bpartner_id=p_bpartner_id;
+
+	if (v_monthnow < v_monthjoin) then
+		v_month=v_monthnow+12-v_monthjoin;
+		v_year=v_yearnow-1-v_yearjoin;
+	else
+		v_month=v_monthnow-v_monthjoin;
+		v_year=v_yearnow-v_yearjoin;
+	end if;
+
+	update c_bpartner
+	set em_hris_year=v_year, em_hris_month=v_month
+	where c_bpartner_id=p_bpartner_id;
+
+    
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= '@ERROR=' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+END HRIS_CALCULATE_YEARSOFSERVICE
+]]></body>
+    </function>
+  </database>

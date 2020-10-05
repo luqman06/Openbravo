@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="163" trl="N">
+    <value column="Name" isTrl="N" original="Import Data">Import Data</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can import data.">Open a folder where you can import data.</value>
+  </row>
+  <row id="185" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner">Import Business Partner</value>
+    <value column="Description" isTrl="N" original="Import business partners in .csv format from previously used databases/applications and past business operations.">Import business partners in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="222" trl="N">
+    <value column="Name" isTrl="N" original="Import Loader Format">Import Loader Format</value>
+    <value column="Description" isTrl="N" original="Define the file layout for product information which will be imported.">Define the file layout for product information which will be imported.</value>
+  </row>
+  <row id="223" trl="N">
+    <value column="Name" isTrl="N" original="Import File Loader">Import File Loader</value>
+    <value column="Description" isTrl="N" original="Import .csv data files into temporary tables according to the parameters and selected format.">Import .csv data files into temporary tables according to the parameters and selected format.</value>
+  </row>
+  <row id="339" trl="N">
+    <value column="Name" isTrl="N" original="Import Account">Import Account</value>
+    <value column="Description" isTrl="N" original="Import accounts in .csv format from previously used databases/applications and past business operations.">Import accounts in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="340" trl="N">
+    <value column="Name" isTrl="N" original="Import Products">Import Products</value>
+    <value column="Description" isTrl="N" original="Import products in .csv format from previously used databases/applications and past business operations.">Import products in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="363" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import inventories in .csv format from previously used databases/applications and past business operations.">Import inventories in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="373" trl="N">
+    <value column="Name" isTrl="N" original="Import Bank Statement">Import Bank Statement</value>
+    <value column="Description" isTrl="N" original="Import Bank Statements">Import Bank Statements</value>
+  </row>
+  <row id="376" trl="N">
+    <value column="Name" isTrl="N" original="Import Orders">Import Orders</value>
+    <value column="Description" isTrl="N" original="Import orders in .csv format from previously used databases/applications and past business operations.">Import orders in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="378" trl="N">
+    <value column="Name" isTrl="N" original="Import G/L Journal">Import G/L Journal</value>
+    <value column="Description" isTrl="N" original="Import G/L jounals in .csv format from previously used databases/applications and past business operations.">Import G/L jounals in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="382" trl="N">
+    <value column="Name" isTrl="N" original="Import Invoices">Import Invoices</value>
+    <value column="Description" isTrl="N" original="Import invoices in .csv format from previously used databases/applications and past business operations.">Import invoices in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="800176" trl="N">
+    <value column="Name" isTrl="N" original="Import EDI File">Import EDI File</value>
+    <value column="Description" isTrl="N" original="Import an EDI (Electronic Data Interchange) file.">Import an EDI (Electronic Data Interchange) file.</value>
+  </row>
+  <row id="800192" trl="N">
+    <value column="Name" isTrl="N" original="Import Budget">Import Budget</value>
+    <value column="Description" isTrl="N" original="Import budgets in .csv format from previously used databases/applications and past business operations.">Import budgets in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+  <row id="800223" trl="N">
+    <value column="Name" isTrl="N" original="Import Taxes">Import Taxes</value>
+    <value column="Description" isTrl="N" original="Import taxes in .csv format from previously used databases/applications and past business operations.">Import taxes in .csv format from previously used databases/applications and past business operations.</value>
+  </row>
+</compiereTrl>

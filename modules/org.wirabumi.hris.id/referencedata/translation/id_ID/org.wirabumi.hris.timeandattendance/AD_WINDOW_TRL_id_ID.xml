@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="37FD441DF73045FC9F4B884D85DEEB6B" trl="N">
+    <value column="Name" isTrl="N" original="Employee Shift">Employee Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7051879C1DDD4B3791400C899F5ABEEC" trl="Y">
+    <value column="Name" isTrl="Y" original="Shift Rule">Katalog Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7C2A70A67C6D44FA9FBB01255B272A1C" trl="N">
+    <value column="Name" isTrl="Y" original="Shift Change Request">Tukar Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8CDF1B5FFEE842D697C3CFE0DAEE357A" trl="N">
+    <value column="Name" isTrl="Y" original="Attendance Disincentive - Leave Deduction">Akumulasi Potong Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A30E1B2354D14497AEE0B38BA4F6A03E" trl="N">
+    <value column="Name" isTrl="N" original="Labour Time Master">Labour Time Master</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F02ECFA96C8C48E1AECD1A6E4264EFF4" trl="Y">
+    <value column="Name" isTrl="Y" original="Attendance">Kehadiran</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FFA4E1934BE94BCEA91C460BF7FF4237" trl="N">
+    <value column="Name" isTrl="Y" original="Attendance Disincentive - Earning Deduction">Akumulasi Potong Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

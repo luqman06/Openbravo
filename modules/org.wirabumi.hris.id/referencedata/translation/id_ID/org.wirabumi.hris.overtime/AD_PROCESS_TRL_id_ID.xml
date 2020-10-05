@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="0C38C76A4E864212B2F8C3C2A685782E" trl="N">
+    <value column="Name" isTrl="N" original="CalculateAmountRequestOvertime">CalculateAmountRequestOvertime</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="352E30ADC17D40C5B922E4B90529B201" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Report">Overtime Report</value>
+    <value column="Description" isTrl="N" original="Overtime Report">Overtime Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4A628366A73C4BBC91AE45F13DAB9CE6" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Background Calculation">Overtime Background Calculation</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4D1E97433C044E648DAE30B05D5AEB45" trl="N">
+    <value column="Name" isTrl="N" original="Perhitungan Tarif Lembur">Perhitungan Tarif Lembur</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5779FA163F6F40EBB956765E0B2AB3D6" trl="N">
+    <value column="Name" isTrl="N" original="Overtime By Date">Overtime By Date</value>
+    <value column="Description" isTrl="N" original="Overtime By Date">Overtime By Date</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6D8D3AFBFD4F43669DCBB78054D15E4A" trl="N">
+    <value column="Name" isTrl="N" original="Overtime By Employee">Overtime By Employee</value>
+    <value column="Description" isTrl="N" original="Overtime By Employee">Overtime By Employee</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E2EFA68131A459294FC8981578A4F16" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Emergency Call">Calculate Emergency Call</value>
+    <value column="Description" isTrl="N" original="Calculate Emergency Call">Calculate Emergency Call</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AAA6E1D9E82A4B9EBA0F4F35A9E0DEA1" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Overtime Allowance">Calculate Overtime Allowance</value>
+    <value column="Description" isTrl="N" original="Calculate Overtime Allowance">Calculate Overtime Allowance</value>
+    <value column="Help" isTrl="N" original="Calculate Overtime Allowance">Calculate Overtime Allowance</value>
+  </row>
+  <row id="AE7FE5ABB6084E0ABAC9A557542F09D8" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Report">Overtime Report</value>
+    <value column="Description" isTrl="N" original="Overtime Report">Overtime Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B59493FCE9754E899518E464D682A77A" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Overtime Before Working">Calculate Overtime Before Working</value>
+    <value column="Description" isTrl="N" original="Calculate Overtime Before Working">Calculate Overtime Before Working</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B5E0AA92D4164B069144CD067EA288F6" trl="N">
+    <value column="Name" isTrl="N" original="Post Emergency Call">Post Emergency Call</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BEAB55BB86D54E49B6D1F0F48A505F12" trl="N">
+    <value column="Name" isTrl="N" original="Post Overtime">Post Overtime</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C2BE96FE06D544FE91FE3DAB95864B03" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Overtime After Working">Calculate Overtime After Working</value>
+    <value column="Description" isTrl="N" original="Calculate Overtime After Working">Calculate Overtime After Working</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C50A83696E96405D8EEAF4C862BE6848" trl="N">
+    <value column="Name" isTrl="N" original="OvertimeCalculationAmount">OvertimeCalculationAmount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C6790B3A3DF24785B25CE94CA4F7CC29" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Calculation">Overtime Calculation</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C76AC67734AE4E359D28BB6AEFCE7FF1" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Overtime Amount ID">Calculate Overtime Amount ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Calculating Overtime Amount Based On Indonesian Regulation">Calculating Overtime Amount Based On Indonesian Regulation</value>
+  </row>
+</compiereTrl>

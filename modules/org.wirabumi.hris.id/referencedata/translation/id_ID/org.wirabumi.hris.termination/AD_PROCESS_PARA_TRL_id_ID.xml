@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS_PARA" version="">
+  <row id="6A25D29E0E2A4EC487F1C60012B09330" trl="N">
+    <value column="Name" isTrl="N" original="Direktur Utama">Direktur Utama</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

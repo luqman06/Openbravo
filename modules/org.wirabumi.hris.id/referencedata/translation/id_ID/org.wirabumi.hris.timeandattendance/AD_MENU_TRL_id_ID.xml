@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="1CA57EBA28B14D4BA3B0C6627EDE47B3" trl="N">
+    <value column="Name" isTrl="Y" original="Shift Report">Report Shift</value>
+    <value column="Description" isTrl="Y" original="Shift Report">Report Shift</value>
+  </row>
+  <row id="2338D5577F684C38A34A40A64CBDF9E3" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Setup For Attendance">Setup For Attendance</value>
+  </row>
+  <row id="244770031CDA434C838EC2A9275CC9F8" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="29F74FE4633C4F199943B8A607FB944F" trl="Y">
+    <value column="Name" isTrl="Y" original="Time and Attendance">Jam Kerja dan Absensi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4B7CBB2A1EE042A4A990B2ACE99FD8A7" trl="N">
+    <value column="Name" isTrl="N" original="Attendance Performance Report">Attendance Performance Report</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="781C22C7C2AF4431A4AA39D78966A98C" trl="Y">
+    <value column="Name" isTrl="Y" original="Attendance">Kehadiran</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7E39E231DA294D0AAB82A676A7CB05B2" trl="N">
+    <value column="Name" isTrl="N" original="Individual Attendance Performance">Individual Attendance Performance</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="ABF29968E729490FBF813103E768A293" trl="N">
+    <value column="Name" isTrl="Y" original="Attendance Disincentive - Leave Deduction">Akumulasi Potong Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B948542739AA43CD85A8DDD3483D9B19" trl="N">
+    <value column="Name" isTrl="N" original="Employee Shift">Employee Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D8D00402236F47BC934CB989BF7E703F" trl="N">
+    <value column="Name" isTrl="Y" original="Shift Change Request">Tukar Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E0FFCBB2DF084D21818F499DC47AFBAF" trl="N">
+    <value column="Name" isTrl="N" original="Attendance Summary Report">Attendance Summary Report</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EB9576DBCF254555B169DB146BDACFB7" trl="N">
+    <value column="Name" isTrl="Y" original="Attendance Disincentive - Earning Deduction">Akumulasi Potong Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F0C31EFCC211462EA2A502C6B85A1BCA" trl="Y">
+    <value column="Name" isTrl="Y" original="Shift Rule">Katalog Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

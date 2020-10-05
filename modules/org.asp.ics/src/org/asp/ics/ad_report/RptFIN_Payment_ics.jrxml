@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptFIN_Payment" pageWidth="612" pageHeight="792" columnWidth="582" leftMargin="15" rightMargin="15" topMargin="15" bottomMargin="15" isFloatColumnFooter="true" isIgnorePagination="true" uuid="bd802b78-4f3c-4bd9-a6b7-1974b3ca5536">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.210000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="366"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="Label" forecolor="#999999" fontSize="14" isBold="true"/>
+	<parameter name="SUBREP_RptFIN_PaymentLines_ics" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DOCUMENT_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ATTACH" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BASE_DESIGN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SHOW_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SHOW_COMPANYDATA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="HEADER_MARGIN" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT p.documentno as PAYMENTNO,
+org.NAME AS ORG_NAME,
+bp.name AS BUSINESSPARTNER,
+p.paymentdate as PAYMENT_DATE,
+p.amount as TOTAL,
+bpl.name as bplocation,
+c.address1,
+fa.name as financialaccountname,
+pm.name as PAYMENT_METHOD,
+ORG_DATA_INFO.name as org_country_header,
+ORG_DATA_INFO.description as org_website, --ambil dari contact di organization
+ORG_DATA_INFO.phone as org_phone, --ambil dari contact di organization
+ORG_DATA_INFO.phone2 as org_phone_al, --ambil dari contact di organization
+ORG_DATA_INFO.fax as org_fax, --ambil dari contact di organization
+ORG_DATA_INFO.city as org_city, --ambil di city contact di organization
+ORG_DATA_INFO.supervisor as org_supervisor,
+ORG_DATA_INFO.title as org_title,
+C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+bank.bank_name as bank_name,
+bank.a_name as bank_an,
+bank.accountno as no_rek,
+cc.name as costcenter,
+cur.cursymbol as CURRENCY, p.isreceipt as ISRECEIPT,
+       org.ad_org_id as legalentity, org.name as LE_NAME, ad_orginfo.taxid as LE_TAXID,
+       c_location_description(ad_orginfo.c_location_id) as LE_LOCATION
+FROM fin_payment p left join c_bpartner bp on (p.c_bpartner_id=bp.c_bpartner_id)
+     left join c_bpartner_location bpl on (bpl.c_bpartner_id=bp.c_bpartner_id)
+  left join c_location c on (c.c_location_id=bpl.c_location_id)
+
+     join c_currency cur on (p.c_currency_id=cur.c_currency_id)
+     left outer join fin_paymentmethod pm on (p.fin_paymentmethod_id=pm.fin_paymentmethod_id)
+ 	left outer join C_BP_BankAccount bank on bp.c_bpartner_id=bank.c_bpartner_id
+left join fin_financial_account fa on fa.fin_financial_account_id=p.fin_financial_account_id
+
+left outer join c_costcenter cc on p.c_costcenter_id=cc.c_costcenter_id, ad_org org,
+ (select d.NAME,e.description,e.email,e.phone,e.phone2,e.fax,c.city,f.name as supervisor,e.title
+     from fin_payment a left join AD_ORGINFO b on a.ad_org_id=b.ad_org_id
+     left join c_location c on b.c_location_id=c.c_location_id
+     left join c_country d on c.c_country_id=d.c_country_id
+     left join ad_user e on b.ad_user_id=e.ad_user_id
+
+	 left join ad_user f on e.supervisor_id=f.ad_user_id
+     where a.fin_payment_id = $P{DOCUMENT_ID}) as ORG_DATA_INFO,
+ad_orginfo
+WHERE p.fin_payment_id=$P{DOCUMENT_ID}
+      and org.ad_org_id = ad_orginfo.ad_org_id
+      and org.ad_org_id = (select o.ad_org_id
+                           from ad_org o join ad_orgtype t on (o.ad_orgtype_id=t.ad_orgtype_id)
+                           where ad_isorgincluded(p.ad_org_id, o.ad_org_id, p.ad_client_id)<>-1
+                                 and (t.islegalentity='Y' OR t.isacctlegalentity='Y'))]]>
+	</queryString>
+	<field name="paymentno" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="businesspartner" class="java.lang.String"/>
+	<field name="payment_date" class="java.sql.Timestamp"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="bplocation" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="financialaccountname" class="java.lang.String"/>
+	<field name="payment_method" class="java.lang.String"/>
+	<field name="org_country_header" class="java.lang.String"/>
+	<field name="org_website" class="java.lang.String"/>
+	<field name="org_phone" class="java.lang.String"/>
+	<field name="org_phone_al" class="java.lang.String"/>
+	<field name="org_fax" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="org_supervisor" class="java.lang.String"/>
+	<field name="org_title" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="bank_name" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="bank_an" class="java.lang.String"/>
+	<field name="no_rek" class="java.lang.String"/>
+	<field name="costcenter" class="java.lang.String"/>
+	<field name="currency" class="java.lang.String"/>
+	<field name="isreceipt" class="java.lang.String"/>
+	<field name="legalentity" class="java.lang.String"/>
+	<field name="le_name" class="java.lang.String"/>
+	<field name="le_taxid" class="java.lang.String"/>
+	<field name="le_location" class="java.lang.String"/>
+	<group name="LargeHeader">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="120" splitType="Stretch">
+				<printWhenExpression><![CDATA[new Boolean($P{HEADER_MARGIN}.equalsIgnoreCase("large"))]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="MediumHeader">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="80" splitType="Stretch">
+				<printWhenExpression><![CDATA[new Boolean($P{HEADER_MARGIN}.equalsIgnoreCase("medium"))]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="SmallHeader">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="34" splitType="Stretch">
+				<printWhenExpression><![CDATA[new Boolean($P{HEADER_MARGIN}.equalsIgnoreCase("small"))]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="Payment">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="147" splitType="Stretch">
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" x="300" y="58" width="125" height="13" forecolor="#000000" uuid="2be49a8f-6ebc-4093-a4df-036bd5020cf3"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Payment Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_receivedfrom" style="Label" x="300" y="83" width="125" height="13" forecolor="#000000" uuid="cc23f02a-d7b5-4a8e-91f9-a787f60e9486">
+						<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Received From]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_paidto" style="Label" x="300" y="83" width="125" height="13" forecolor="#000000" uuid="46231fd1-7f8d-437c-861a-fb02fcd43966">
+						<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("N"))]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Paid To]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_receiveddate" style="Label" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" x="300" y="70" width="125" height="13" forecolor="#000000" uuid="a77b083c-eba8-40fa-b58c-a95ffa5378ae">
+						<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Receipt Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_paymentdate" style="Label" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" x="300" y="70" width="125" height="13" forecolor="#000000" uuid="42ebf0e7-6600-44dd-a1a8-96acb40f6be1">
+						<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("N"))]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Payment Date]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-3" x="429" y="58" width="152" height="13" uuid="f13e8b45-5357-4f90-bff3-f0f14de2f672"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paymentno}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-4" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" x="429" y="70" width="152" height="13" uuid="fd67c56d-13c0-4c06-87d7-747f682e17c5"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.applyCountryDateFormat($F{payment_date},$F{legalentity})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="textField-9" x="429" y="83" width="152" height="13" uuid="4a3a4dcf-d28e-4825-aa80-3fb836d045cb"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{businesspartner}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-11" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" x="429" y="118" width="152" height="13" uuid="dd8ae872-ba77-41af-94a3-6a979cd541b0"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{payment_method}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="196" y="11" width="175" height="34" backcolor="#000000" uuid="454ea0c9-7117-4b93-931e-6cda1b2c1042"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="191" y="6" width="172" height="34" uuid="02e6590b-4f6a-4642-8f9f-cba64ae63d70"/>
+				</rectangle>
+				<staticText>
+					<reportElement key="title_payment" x="191" y="6" width="190" height="34" uuid="6b3db95d-593e-41cb-9ae0-bdc7d984a799">
+						<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("N"))]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Payment Out]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="300" y="118" width="125" height="13" forecolor="#000000" uuid="12d15c35-a50b-4f9e-af3e-69e67a74b3ab"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Payment Method]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" x="424" y="58" width="5" height="13" forecolor="#000000" uuid="4949d80e-03e0-41d8-9ed4-6496361f370a"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" x="424" y="83" width="5" height="13" forecolor="#000000" uuid="9278a8f0-cfee-4e88-b28f-60aa8e462622"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="DejaVu Serif" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="424" y="70" width="5" height="13" forecolor="#000000" uuid="e6b3749b-c1c9-45fb-b284-b09771a2239a"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="424" y="118" width="5" height="13" forecolor="#000000" uuid="3a2d497f-75bd-42f6-bd34-0906c866513e"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<image scaleImage="RetainShape" hAlign="Right" isUsingCache="true">
+					<reportElement key="image-1" x="497" y="0" width="62" height="50" uuid="99cb5294-6698-4837-a50b-23d66c3119c1">
+						<printWhenExpression><![CDATA[new Boolean($P{SHOW_LOGO}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{legalentity})]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="0" y="47" width="300" height="24" uuid="456043c2-3dad-4d7e-9c67-f4e6a0fcd8e4"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+				</textField>
+				<image scaleImage="RetainShape">
+					<reportElement x="0" y="0" width="69" height="45" uuid="1fc64125-2511-45a1-b36b-0e7156186354"/>
+					<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/prima_ics.png"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="71" width="300" height="40" uuid="0b5b5e37-d94b-48f0-8297-9f7d9bf07674"/>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(""+(($F{le_location}!=null)?$F{le_location}:""))+' '+(""+(($F{org_country_header}!=null)?$F{org_country_header}:""))
++'\n'+("Phone. "+(($F{org_phone}!=null)?$F{org_phone}:""))+' '+ (""+(($F{org_website}!=null)?$F{org_website}:""))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="300" y="131" width="125" height="13" forecolor="#000000" uuid="1078ab92-7f78-481a-b70b-81a3ca4ebef1"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Account Name]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-11" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" x="429" y="131" width="152" height="13" uuid="1ffa4170-f573-4601-b2c2-5b79025994a4"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{financialaccountname}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="424" y="131" width="5" height="13" forecolor="#000000" uuid="b8610f9e-24b9-4a46-9719-f8c94632e1fd"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="424" y="97" width="5" height="13" forecolor="#000000" uuid="2e07a356-6dba-4cf9-a15a-3a6d7526a917"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="label_payment_number" style="Label" positionType="FixRelativeToBottom" x="300" y="97" width="125" height="13" forecolor="#000000" uuid="78f9b1bf-8432-4611-9bd8-9fb750a1c486"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<text><![CDATA[Payment Method]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-11" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" x="429" y="97" width="152" height="21" uuid="79070425-8fe2-4f15-b3b0-a75bf3b45969"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{address1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-1" x="0" y="0" width="497" height="20" forecolor="#6666FF" uuid="419fcde7-c943-49ef-b8fe-90a7f56b5b58"/>
+				<subreportParameter name="FIN_PAYMENT_ID">
+					<subreportParameterExpression><![CDATA[$P{DOCUMENT_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="NUMBERFORMAT">
+					<subreportParameterExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.getCountryNumberFormat($F{legalentity},$P{NUMBERFORMAT})]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREP_RptFIN_PaymentLines_ics}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="134">
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="52" y="4" width="5" height="13" forecolor="#000000" uuid="f618f2cc-66dd-48a9-8604-efa5eceb7362"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="0" y="17" width="52" height="13" forecolor="#000000" uuid="7bf03e47-fb08-4b1b-b1f8-da69c0e66825"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[No. REK]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-3" x="57" y="17" width="275" height="13" uuid="842a674e-8cf4-41e7-8ca4-246ab6e6a3cc"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_rek}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="52" y="17" width="5" height="13" forecolor="#000000" uuid="036a01bb-eb31-4954-8576-c9066f4bf9f1"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-3" x="57" y="4" width="275" height="13" uuid="dccad145-92e5-48c9-a06a-aaf8237344bb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-3" x="57" y="30" width="275" height="13" uuid="23d7659d-d6dc-4ff7-b7e8-7ff52030890a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank_an}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="52" y="30" width="5" height="13" forecolor="#000000" uuid="9be8de44-108c-4d17-b931-86f857fc811c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="0" y="4" width="52" height="13" forecolor="#000000" uuid="57c085a5-76af-4d1b-bbb0-f31daac5904f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="0" y="30" width="52" height="13" forecolor="#000000" uuid="d1abeb99-6b5c-4bff-a0fe-00b45e2f5475"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[A/N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" mode="Opaque" x="271" y="50" width="100" height="17" forecolor="#000000" backcolor="#CCCCCC" uuid="24639df6-8676-461b-a37e-e4a798c87684"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[Approved]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="372" y="114" width="100" height="13" forecolor="#000000" uuid="bfa7804a-027a-46ae-83ff-c44a4a558aea"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="471" y="114" width="100" height="12" forecolor="#000000" uuid="1b49f65a-9816-461f-aff1-0558fb213428"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cashier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" mode="Opaque" x="471" y="50" width="102" height="17" forecolor="#000000" backcolor="#CCCCCC" uuid="1bcf5fb8-7eaa-4703-9ea8-2174c2293752"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="10"/>
+				</textElement>
+				<text><![CDATA[Prepared]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="271" y="115" width="100" height="13" forecolor="#000000" uuid="c7ebc286-d606-4e47-88eb-d20cbf32fb23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="48" width="565" height="1" forecolor="#999999" uuid="9d3cf77f-933d-47a7-aed8-676b7c1aebec"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-7" positionType="FixRelativeToBottom" mode="Opaque" x="372" y="50" width="100" height="17" backcolor="#CCCCCC" uuid="dc75d918-66b7-4e0a-aa3b-2f8cd431abef"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Received]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="272" y="67" width="100" height="60" uuid="96dad11b-68fc-4e96-a8a0-8eddabb90167"/>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="473" y="50" width="100" height="17" backcolor="#CCCCCC" uuid="2e686b02-b2a0-49f4-874c-9c4a3c39cb4d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="372" y="67" width="100" height="60" uuid="f279dd66-5da8-4f09-a2d0-8ed870dde7c2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="473" y="67" width="100" height="60" uuid="93e9e18e-8b3c-4d41-b87e-ca2ea1b4a6d8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="372" y="50" width="100" height="17" backcolor="#CCCCCC" uuid="94acd7d2-dc12-4a30-ab98-a5a689ece3cf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="272" y="50" width="100" height="17" backcolor="#CCCCCC" uuid="bb262636-043a-4780-805e-1df75d908790"/>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-7" x="430" y="5" width="95" height="10" uuid="e1ff49e9-af07-4bba-bf91-02399e852d9a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="false">
+				<reportElement key="textField-8" x="529" y="5" width="36" height="10" uuid="e5ced833-39ef-4f4d-b89c-d19ac8fefdf8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" x="196" y="5" width="84" height="10" uuid="68b460da-aeb7-4ca6-9f97-6d31333f663c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Printed on]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="false">
+				<reportElement key="textField-6" x="284" y="5" width="84" height="10" uuid="b4e1e6f6-4451-4ffc-aa36-59ac66397429"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

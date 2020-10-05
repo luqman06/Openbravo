@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELDGROUP" version="">
+  <row id="029F9F916DAC4F2DA77B49E74508E1C9" trl="Y">
+    <value column="Name" isTrl="Y" original="Period of Employement">Masa Kerja</value>
+  </row>
+  <row id="07CD93FFADA2408D85846A30EFD6E372" trl="N">
+    <value column="Name" isTrl="N" original="Marital Detail">Marital Detail</value>
+  </row>
+  <row id="0BBA860F18474D858615B98F5F40B30B" trl="Y">
+    <value column="Name" isTrl="Y" original="Family">Keluarga</value>
+  </row>
+  <row id="11DAD30295774CF7BEE0BA3191DE734E" trl="N">
+    <value column="Name" isTrl="N" original="Last Education">Last Education</value>
+  </row>
+  <row id="160DA1E4A91E4720B5AAE49A248581E5" trl="N">
+    <value column="Name" isTrl="Y" original="Education">Pendidikan</value>
+  </row>
+  <row id="1B15DBDE35B24A01A4742424F01208A1" trl="N">
+    <value column="Name" isTrl="N" original="HR Information">HR Information</value>
+  </row>
+  <row id="1DA2FAB23DC54C65A4F9843514601864" trl="N">
+    <value column="Name" isTrl="Y" original="Contract Detail">Detil Kontrak</value>
+  </row>
+  <row id="2917805B8C1E48EDA4131CEA27795272" trl="N">
+    <value column="Name" isTrl="Y" original="New Contract">SK Baru</value>
+  </row>
+  <row id="2DEF53B2E4D346D9B892B2ACF9632D21" trl="N">
+    <value column="Name" isTrl="N" original="Manufacturing Salary Cost">Manufacturing Salary Cost</value>
+  </row>
+  <row id="5034FACC09C1471AA71808C03AC65A0F" trl="N">
+    <value column="Name" isTrl="N" original="Education Permit">Education Permit</value>
+  </row>
+  <row id="514A2505F3AE46FB86E94BD2CBA87CAC" trl="N">
+    <value column="Name" isTrl="N" original="Ijazah">Ijazah</value>
+  </row>
+  <row id="585394000A4244DFA8B5DE0A343D7A8C" trl="N">
+    <value column="Name" isTrl="N" original="Letter Of Assingment">Letter Of Assingment</value>
+  </row>
+  <row id="5C7A0D09291C4FBFABE83F6B2947A0F5" trl="N">
+    <value column="Name" isTrl="N" original="Attendance">Attendance</value>
+  </row>
+  <row id="6576E10DC4864FBEAB75493ED6B26CAD" trl="N">
+    <value column="Name" isTrl="Y" original="Rule">Aturan</value>
+  </row>
+  <row id="6B01E46CBA0B493FA31045504410A90B" trl="N">
+    <value column="Name" isTrl="N" original="Menjadi">Menjadi</value>
+  </row>
+  <row id="824CD0F89D8E4C5CBD2F944DDDBE6F28" trl="N">
+    <value column="Name" isTrl="N" original="Pemohon">Pemohon</value>
+  </row>
+  <row id="85FACEFEDA1A4B25A1B8F794606D3FFF" trl="N">
+    <value column="Name" isTrl="N" original="Tax Information">Tax Information</value>
+  </row>
+  <row id="8628ED408ADA4946931F9978956A6097" trl="N">
+    <value column="Name" isTrl="N" original="Izin Belajar">Izin Belajar</value>
+  </row>
+  <row id="90A5AFAC9341491EBD135140B4629BDA" trl="N">
+    <value column="Name" isTrl="N" original="Education Detail">Education Detail</value>
+  </row>
+  <row id="916031DA22A24BB7A9E0EF9D4B353750" trl="N">
+    <value column="Name" isTrl="Y" original="Old Contract">SK Lama</value>
+  </row>
+  <row id="9CFCE44709314D03B99A4A9E9E14DBD4" trl="N">
+    <value column="Name" isTrl="Y" original="Employement Candidate">Calon Karyawan</value>
+  </row>
+  <row id="B73F04F510164EFC8CF3081D8CAAA0BB" trl="N">
+    <value column="Name" isTrl="Y" original="Link to Employee Candidate Window">Link ke Window Calon Karyawan</value>
+  </row>
+  <row id="B9BAD1C7AC264B7687A304E848A64D30" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Information">Informasi Cuti</value>
+  </row>
+  <row id="BEE454DC012C4E4F9584C1E50493C095" trl="N">
+    <value column="Name" isTrl="N" original="Saat Ini">Saat Ini</value>
+  </row>
+  <row id="BF8BF58D4D0C4D3392DC4BB6FC401BB8" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+  </row>
+  <row id="C31CC899BD924813A984981E9BA12DD3" trl="N">
+    <value column="Name" isTrl="Y" original="Employment Information">Informasi Kepegawaian</value>
+  </row>
+  <row id="EF9EAD9CCF1642838C2C5F2F492A5CCD" trl="N">
+    <value column="Name" isTrl="N" original="Location">Location</value>
+  </row>
+  <row id="F5F3A6088FF34AD8A7C526B08C196383" trl="N">
+    <value column="Name" isTrl="N" original="Education Certificate">Education Certificate</value>
+  </row>
+  <row id="FEBCE316F33442C8AE970E8843C60035" trl="N">
+    <value column="Name" isTrl="N" original="Biaya Pindah">Biaya Pindah</value>
+  </row>
+</compiereTrl>

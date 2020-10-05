@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER LV_UPDATEDURATION_TDKMASUK">
+    <trigger name="LV_UPDATEDURATION_TDKMASUK" table="LV_TIDAKMASUK" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_checkin timestamp without time zone;
+v_checkout timestamp without time zone;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- definisi trigger
+    
+       :new.duration:=(date_part('day', :new.dateto)-date_part('day', :new.datefrom)+1);
+
+      END LV_UPDATEDURATION_TDKMASUK
+]]></body>
+    </trigger>
+  </database>

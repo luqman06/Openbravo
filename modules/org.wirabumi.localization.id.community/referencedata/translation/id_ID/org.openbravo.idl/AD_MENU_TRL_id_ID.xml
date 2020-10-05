@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="1BB53073A57348F39A68B54A4565CD35" trl="N">
+    <value column="Name" isTrl="N" original="Import">Import</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1D0D0E83CA8549A6A2280971F7F73021" trl="N">
+    <value column="Name" isTrl="N" original="Process">Process</value>
+    <value column="Description" isTrl="N" original="Initial Data Load Process">Initial Data Load Process</value>
+  </row>
+  <row id="3EE1C4F17E2741939BF8E2FA33791A14" trl="N">
+    <value column="Name" isTrl="N" original="Entity Default Values">Entity Default Values</value>
+    <value column="Description" isTrl="N" original="Initial Data Load Window for entities definition">Initial Data Load Window for entities definition</value>
+  </row>
+  <row id="7E95A3300C654484B64A70509C8AA424" trl="N">
+    <value column="Name" isTrl="N" original="Setup">Setup</value>
+    <value column="Description" isTrl="N" original="Setup menu for Initial Data Load">Setup menu for Initial Data Load</value>
+  </row>
+  <row id="E439CD01A1704AF196ECBD6D335A3264" trl="N">
+    <value column="Name" isTrl="N" original="Initial Data Load">Initial Data Load</value>
+    <value column="Description" isTrl="N" original="Utility to speed up the implementation of Openbravo ERP facilitating the process of initial data load needed to go in production.">Utility to speed up the implementation of Openbravo ERP facilitating the process of initial data load needed to go in production.</value>
+  </row>
+</compiereTrl>

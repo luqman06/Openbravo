@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="135" trl="N">
+    <value column="Name" isTrl="N" original="Copy Lines">Copy Lines</value>
+    <value column="Description" isTrl="N" original="Copy Lines from other Import Format">Copy Lines from other Import Format</value>
+    <value column="Help" isTrl="N" original="Select another Import Format on the combo.">Select another Import Format on the combo.</value>
+  </row>
+  <row id="194" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partners">Import Business Partners</value>
+    <value column="Description" isTrl="N" original="Import Business Partners">Import Business Partners</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="196" trl="N">
+    <value column="Name" isTrl="N" original="Import Products">Import Products</value>
+    <value column="Description" isTrl="N" original="Imports products from a file into the application">Imports products from a file into the application</value>
+    <value column="Help" isTrl="N" original="Import Products will bring a file of products, in a predefined format into the application.&lt;p&gt;||The Parameters are default values for null import record values, they do not overwrite any data.">Import Products will bring a file of products, in a predefined format into the application.&lt;p&gt;||The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="197" trl="N">
+    <value column="Name" isTrl="N" original="Import Accounts">Import Accounts</value>
+    <value column="Description" isTrl="N" original="Import Natural Accounts">Import Natural Accounts</value>
+    <value column="Help" isTrl="N" original="Import accounts and their hierarchies and optional update the default accounts.  |Updating the Default Accounts changes the natural account segment of the used account, e.g. account 01-240 becomes 01-300).  If you create a new combination, the old account">Import accounts and their hierarchies and optional update the default accounts.  |Updating the Default Accounts changes the natural account segment of the used account, e.g. account 01-240 becomes 01-300).  If you create a new combination, the old account</value>
+  </row>
+  <row id="206" trl="N">
+    <value column="Name" isTrl="N" original="Import Orders">Import Orders</value>
+    <value column="Description" isTrl="N" original="Import Orders">Import Orders</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="207" trl="N">
+    <value column="Name" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="Description" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="219" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import Physical Inventory">Import Physical Inventory</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="220" trl="N">
+    <value column="Name" isTrl="N" original="Import Journal">Import Journal</value>
+    <value column="Description" isTrl="N" original="Import General Ledger Batch/Journal/Line">Import General Ledger Batch/Journal/Line</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="800139" trl="N">
+    <value column="Name" isTrl="N" original="Import Budget">Import Budget</value>
+    <value column="Description" isTrl="N" original="Import Budget">Import Budget</value>
+    <value column="Help" isTrl="N" original="Import Budget">Import Budget</value>
+  </row>
+  <row id="800167" trl="N">
+    <value column="Name" isTrl="N" original="Import Taxes">Import Taxes</value>
+    <value column="Description" isTrl="N" original="Import Taxes">Import Taxes</value>
+    <value column="Help" isTrl="N" original="Import Taxes from temporary tables to real ones.">Import Taxes from temporary tables to real ones.</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TA_REPORTSHIFT">
+    <function name="TA_REPORTSHIFT" type="VARCHAR">
+      <parameter name="p_org_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_jobtitle_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_startdate" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_enddate" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr varchar(2000);
+  v_currentdate timestamp without time zone;
+  v_enddate timestamp without time zone;
+  v_checkin timestamp without time zone;
+  v_checkout timestamp without time zone;
+  v_keterangan varchar(32);
+  v_bpartner_id varchar(32);
+  r ta_reportshift%rowtype;
+  v_day NUMBER;
+  v_count NUMBER;
+  v_count1 NUMBER;
+  v_count2 NUMBER;
+  v_count3 NUMBER;
+  v_count4 NUMBER;
+  v_count5 NUMBER;
+  v_shift_id varchar(32);
+  v_shiftline_id varchar(32);
+  v_shiftline bigint;
+  v_cuti timestamp without time zone;
+  v_shifttmp_id varchar(32);
+  v_jobtitle_id varchar(32);
+
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+  cur_employee record;
+  v_checkinstatus character varying(32); 
+  v_checkoutstatus character varying(32);
+
+  BEGIN
+ BEGIN --BODY
+
+For cur_employee in (select name, c_bpartner_id, ad_client_id, em_hris_jobtitle_id as hris_jobtitle_id, em_hris_joindate from c_bpartner 
+		     where (case when p_employee_id is not null then c_bpartner_id=p_employee_id else 1=1 end)
+		     and (case when p_jobtitle_id is not null then em_hris_jobtitle_id=p_jobtitle_id else 1=1 end)
+		     and (case when p_org_id is not null then ad_org_id=p_org_id else 1=1 end)
+		     and isactive='Y'
+		     --tambahan validasi karyawan masih aktif
+		     --29 april 2013
+		     --agung tarecha
+		     )
+Loop
+    select ta_shift_id into v_shift_id
+    from ta_c_bp_shift 
+    where c_bpartner_id=cur_employee.c_bpartner_id;
+	
+    IF v_shift_id is null then continue; end if;
+   --raise notice 'employee, v_shift_id: %', cur_employee.name, v_shift_id;
+
+   if p_startdate is null then
+     v_currentdate:=(now()-'3 month'::interval)::date;
+   else
+     v_currentdate:=p_startdate;
+   end if;
+
+   if p_enddate is null then
+     v_enddate:=now()::date;
+   else
+     v_enddate:=p_enddate;
+   end if;
+   v_shifttmp_id := ''; 
+  
+   while v_currentdate<=v_enddate 
+   loop --loop date
+   --cari apakah harus absen
+     --konversi dari tanggal ke hari
+     select ta_shift_id into v_shift_id
+     from ta_c_bp_shift 
+     where c_bpartner_id=cur_employee.c_bpartner_id
+     and v_currentdate>=validfrom
+     and v_currentdate<=validto;
+     
+     if (v_shifttmp_id <> v_shift_id ) then 
+	v_shifttmp_id := v_shift_id;
+     end if;
+     
+     --mendapatkan shift
+     select (v_currentdate::date-s.validfrom::date)%(select count(*) from ta_shiftline where ta_shift_id=s.ta_shift_id) 
+        into v_shiftline
+	from ta_shift s where ta_shift_id=v_shifttmp_id;
+     select ta_shiftline_id, count(*) into v_shiftline_id, v_count1
+        from ta_shiftline where ta_shift_id=v_shifttmp_id and line=v_shiftline and isoff='N'
+        group by ta_shiftline_id;
+
+        
+	 --mengambil data tukar shift
+         select c_bpartner_id into  v_bpartner_id
+	 from ta_tukar_shift
+	 where docstatus='CO'
+	 and c_bpartner_id=cur_employee.c_bpartner_id
+	 and checkin::date=v_currentdate::date;
+
+	
+	 --menentukan tukar Shift
+	 IF v_bpartner_id is not null then
+	   --tukar shift untuk yang mengajukan
+	   select tts.checkin, tts.checkout
+	   into  v_checkin, v_checkout
+	   from ta_tukar_shift tts
+	   where docstatus='CO'
+	   and tts.c_bpartner_id=cur_employee.c_bpartner_id
+	   and tts.checkin::date=v_currentdate::date;
+           
+         Else 
+	   --tukar shift untuk yang menggantikan
+	   select tts.checkin2, tts.checkout2
+	   into v_checkin, v_checkout
+	   from ta_tukar_shift tts
+	   where docstatus='CO'
+	   and tts.pgs_id=cur_employee.c_bpartner_id 
+	   and tts.checkin::date=v_currentdate::date;
+	 End If;
+	
+         IF v_checkin is not null and v_checkout is not null then
+	   v_checkin:=v_checkin; v_checkout:=v_checkout;
+         Else	
+	   --cari data absensi
+           select sl.checkin, sl.checkout, sl.ta_shift_id
+           into v_checkin, v_checkout, v_shift_id
+           from ta_shiftline sl
+           where sl.ta_shiftline_id=v_shiftline_id
+           limit 1;
+         End If;
+
+         IF v_checkin::time>='01:00:00'::time and v_checkin::time<'12:00:00'::time then v_keterangan:='P';
+         ELSIF v_checkin::time>='12:00:00'::time and v_checkin::time<'17:00:00'::time then v_keterangan:='S';
+         ELSIF v_checkin::time>='17:00:00'::time and v_checkin::time<'24:00:00'::time then v_keterangan:='M';
+         END IF;
+
+         --mengambil data jabatan
+	select hris_jobtitle_id into v_jobtitle_id 
+	from hris_exc_jobtitle exc
+	inner join C_NonBusinessDay nbd on nbd.C_NonBusinessDay_id=exc.C_NonBusinessDay_id
+	where hris_jobtitle_id=cur_employee.hris_jobtitle_id
+	and nbd.ad_client_id=cur_employee.ad_client_id 
+	and date1::date=v_currentdate;
+
+	IF v_jobtitle_id is null then
+	   --cek apakah hari libur
+	   select count(*) into v_count2 from C_NonBusinessDay
+           where ad_client_id=cur_employee.ad_client_id and date1::date=v_currentdate;
+	End IF; 
+    
+	--memberikan Keterangan
+	IF v_count2=1  then v_keterangan:='L';
+	ELSIF v_count1 is null then  v_keterangan:='L';
+	End If;
+
+         --raise notice 'employe: %, v_currentdate: %, v_keterangan2: %', cur_employee.name, v_currentdate, v_keterangan;
+         
+         --return per record menggunakan return next
+         r.t_date:=v_currentdate;
+         r.employee:=cur_employee.name;
+         r.checkin:=v_checkin;
+         r.checkout:=v_checkout;
+         r.keterangan:=v_keterangan;
+         return next r;
+         
+	 v_currentdate:=v_currentdate+'1 Day'::interval;
+
+   end loop; --end loop date
+End Loop;
+
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= '@ERROR=' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+END TA_REPORTSHIFT
+]]></body>
+    </function>
+  </database>

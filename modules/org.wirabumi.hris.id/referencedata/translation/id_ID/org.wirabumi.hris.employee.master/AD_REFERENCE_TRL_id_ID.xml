@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="02480D5EDD2B43199EB04EB4003F5276" trl="N">
+    <value column="Name" isTrl="N" original="Selft Employee and its Subordinates">Selft Employee and its Subordinates</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="03AC82DD164B4683A5E9B2A51F044156" trl="N">
+    <value column="Name" isTrl="N" original="Department Reference">Department Reference</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="06B33D24D78B4EE399BCF199AAE4F356" trl="N">
+    <value column="Name" isTrl="N" original="Payment Mode">Payment Mode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="08055D9288174281A829DAEFAC7B6412" trl="N">
+    <value column="Name" isTrl="N" original="Department Type">Department Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0C993A7CC8364E50928B604BEA809028" trl="N">
+    <value column="Name" isTrl="N" original="Dependent Family">Dependent Family</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0F67106E65FC430A999873232DE42B29" trl="Y">
+    <value column="Name" isTrl="Y" original="Blood Group">Golongan Darah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="102AAAF987314A7A898F9B4CC862CDDA" trl="N">
+    <value column="Name" isTrl="N" original="Hris_Contact">Hris_Contact</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1199F86F2D324BA9952B7DAF9B353734" trl="Y">
+    <value column="Name" isTrl="Y" original="Education Level">Tingkat Pendidikan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="126415294B3644F3994D3422BC28517E" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Reference">Deduction Reference</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1969EB61F5DA49E3AB97AF692C023F2E" trl="Y">
+    <value column="Name" isTrl="Y" original="Dicipline">Disiplin</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1ACAC2F8DD93464297F711421498B897" trl="N">
+    <value column="Name" isTrl="N" original="Reimbursment Type">Reimbursment Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1FA50E99609B42A9B79CF3C8C9536751" trl="N">
+    <value column="Name" isTrl="N" original="Education Status">Education Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1FE53E0CE11E49A9BAD1151817251347" trl="N">
+    <value column="Name" isTrl="N" original="hris_employe_acceptance">hris_employe_acceptance</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2631C661B77E429E8BB103998AAE32E3" trl="N">
+    <value column="Name" isTrl="N" original="Time Mode">Time Mode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="332CB3EAF17647E48EAC92F8A4C8DBBA" trl="N">
+    <value column="Name" isTrl="N" original="Training Category">Training Category</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3894BFE690814549806AEB1B6E6DC984" trl="N">
+    <value column="Name" isTrl="N" original="Education Faculty">Education Faculty</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="38F536C5846A4ED8B1F06D5E1D01F875" trl="Y">
+    <value column="Name" isTrl="Y" original="Department">Departemen</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3B467AFFAB4341E3A74D42672D8EFFBB" trl="N">
+    <value column="Name" isTrl="N" original="Education Detail">Education Detail</value>
+    <value column="Description" isTrl="N" original="Selector For Education">Selector For Education</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3D39925151214425AC01097E2DEED5BD" trl="Y">
+    <value column="Name" isTrl="Y" original="Competency">Kompetensi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3E130BA7A8A248BEA23585E6983CA7BB" trl="N">
+    <value column="Name" isTrl="N" original="Department and Job Title Type">Department and Job Title Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="50AA4FC6B97A47A0ACFB8A43DBEF70C5" trl="N">
+    <value column="Name" isTrl="N" original="Earning Reference">Earning Reference</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="51C310FFD28A4689A45DA382123892DD" trl="N">
+    <value column="Name" isTrl="N" original="Training Type">Training Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="52C009C295834D048A038D1BE9DE3808" trl="N">
+    <value column="Name" isTrl="Y" original="Golongan">golonganpns</value>
+    <value column="Description" isTrl="Y" original="Golongan PNS/Perum">Golongan PNS</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="57E8D00FA32E4E969062DC850D285AF1" trl="N">
+    <value column="Name" isTrl="Y" original="Employment Type">Status Kepegawaian</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5A745BCA6F8449C099EB3D6A9F602AFD" trl="N">
+    <value column="Name" isTrl="N" original="KPI">KPI</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="66240B76A5274D808BA4720BBE284560" trl="N">
+    <value column="Name" isTrl="N" original="Benefit Type">Benefit Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E5854302B594D92AF0772AAE404B55B" trl="N">
+    <value column="Name" isTrl="N" original="Paymode">Paymode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="741BA1BF958A4CFDB4A89AD451B05B35" trl="N">
+    <value column="Name" isTrl="N" original="Hris_c_bp_empinfo">Hris_c_bp_empinfo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="746ED0E562D3498298E5E0CAC756A5E6" trl="Y">
+    <value column="Name" isTrl="Y" original="Site">Wilayah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="754B9879785146A4AAFD413C5FF4A069" trl="Y">
+    <value column="Name" isTrl="Y" original="Training">Kepelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7FEDB3A24E1A426986F8E1D6DA68832C" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Echelon">Eselon</value>
+    <value column="Description" isTrl="N" original="Describe Echelon Of Employee">Describe Echelon Of Employee</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8042D989E3B547979F1B2C8B868A1175" trl="N">
+    <value column="Name" isTrl="N" original="Competency Type">Competency Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="87ACEC30CC2E4CB8AA9E78DF2537E10D" trl="Y">
+    <value column="Name" isTrl="Y" original="Certificate/License">Sertifikat/Lisensi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="88059923FB1247059E3D7EEFDFE9E14F" trl="N">
+    <value column="Name" isTrl="N" original="Polaritas KPI">Polaritas KPI</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="94CF6DB1783C4E349AF217758A8BCE5C" trl="N">
+    <value column="Name" isTrl="N" original="Major Challenge">Major Challenge</value>
+    <value column="Description" isTrl="N" original="Major Challenge">Major Challenge</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="99352D4F270B40CEBC57548FF05772FD" trl="N">
+    <value column="Name" isTrl="N" original="Training Location">Training Location</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A0A8B37917904227BACCFDA90F0C7607" trl="Y">
+    <value column="Name" isTrl="Y" original="Sex">Jenis Kelamin</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A6DD5BA7C3794C0FA01947EDB2F4BDE9" trl="N">
+    <value column="Name" isTrl="N" original="Insurance Class">Insurance Class</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A7A8A75184664634A182FC09EEF9C262" trl="N">
+    <value column="Name" isTrl="N" original="Salary Category">Salary Category</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A8863B29DE464EF287AFAA42D329E2CA" trl="N">
+    <value column="Name" isTrl="N" original="Insurance Provider">Insurance Provider</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A98FF6066A6A4D0AAA8DFB0BB387A500" trl="Y">
+    <value column="Name" isTrl="Y" original="Marital Status">Status Perkawinan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AA41FBE13A7846EF9B8FC2C9A9334084" trl="N">
+    <value column="Name" isTrl="N" original="Cost Center Tree Employee">Cost Center Tree Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B1AD36C5548743CC9BD8B41BE1887456" trl="N">
+    <value column="Name" isTrl="N" original="Hris_contact Usulan Perubahan">Hris_contact Usulan Perubahan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B2BF540AE8884A12AC5D86634E7E2AF2" trl="N">
+    <value column="Name" isTrl="N" original="Education Institution List">Education Institution List</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B2FCE0BF500849A29C60E350A079443B" trl="N">
+    <value column="Name" isTrl="N" original="General Assesment Type">General Assesment Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BCD595704A9346FAB69B4AE4462986BB" trl="N">
+    <value column="Name" isTrl="N" original="Orgazation Selector">Orgazation Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BF8F5FEEC9E747E3982C78F4E60BF857" trl="N">
+    <value column="Name" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="Description" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="Help" isTrl="Y" original="Company's Employee">Karyawan/Pegawai Perusahaan</value>
+  </row>
+  <row id="C04D9E5443B0415584C00B86AB8F44D5" trl="N">
+    <value column="Name" isTrl="N" original="Status Kepegawaian">Status Kepegawaian</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C3EB39319DE9499CA4416B865573DD09" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Transfer Type">Contract Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C55C25C0D56C4434A68052725578945F" trl="Y">
+    <value column="Name" isTrl="Y" original="Certificate">Sertifikat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D296E6AEEFD044C8899D3C3C9A7E4B65" trl="N">
+    <value column="Name" isTrl="N" original="Included In">Included In</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D470FB41D82446D282EA65AAE3840AA8" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Position">Posisi Kepegawaian</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E819725F7594408EB8901DCD89805D3E" trl="N">
+    <value column="Name" isTrl="N" original="Transfer Type">Transfer Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EB2997900D2F4F70B7902112668679D9" trl="N">
+    <value column="Name" isTrl="N" original="Hris_Jobtitle">Hris_Jobtitle</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="ECF1E55D7A06477E850DC2E50DB14EE0" trl="N">
+    <value column="Name" isTrl="N" original="Employee Supervised By">Employee Supervised By</value>
+    <value column="Description" isTrl="N" original="Employee Define Reported to ">Employee Define Reported to </value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EDBE412556B44900A66810F069F21B49" trl="N">
+    <value column="Name" isTrl="N" original="Payment Type">Payment Type</value>
+    <value column="Description" isTrl="N" original="Payment Type">Payment Type</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EE11BBEA78E3447C84BC702C7928C8DE" trl="N">
+    <value column="Name" isTrl="N" original="Employee Filter by Job Title">Employee Filter by Job Title</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F24CFE85EB1940D5B6F39202DBAF6849" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Grade">Tingkat Kepegawaian</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F44FC02E5D664F218FDF67F1ECBA86EF" trl="Y">
+    <value column="Name" isTrl="Y" original="Relation">Hubungan</value>
+    <value column="Description" isTrl="N" original="dependent relation">dependent relation</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F6855131D3F642018AA53153232227C0" trl="N">
+    <value column="Name" isTrl="N" original="Religion">Religion</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FA56F3DA7928442FACF8BA8C6F961002" trl="N">
+    <value column="Name" isTrl="N" original="Training Provider">Training Provider</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

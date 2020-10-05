@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="02AAEE46AC52441E84CC3D86CDABEC7C" trl="N">
+    <value column="Text" isTrl="N" original="Due Date To:">Due Date To:</value>
+  </row>
+  <row id="02F7B62B809A4C7994C6661D4150A410" trl="N">
+    <value column="Text" isTrl="N" original="PlannedDSO">PlannedDSO</value>
+  </row>
+  <row id="044881ABF38E44E1BFE3D28F6992587F" trl="N">
+    <value column="Text" isTrl="N" original="Amount From:">Amount From:</value>
+  </row>
+  <row id="07E1DCCF2C364609B69C788D366688C7" trl="N">
+    <value column="Text" isTrl="N" original="Conversion Date:">Conversion Date:</value>
+  </row>
+  <row id="0C17541538FA430595E29E3F31DDC072" trl="N">
+    <value column="Text" isTrl="N" original="Document Date To">Document Date To</value>
+  </row>
+  <row id="0EBE2A7946CE44ABB1095D1176187E6B" trl="N">
+    <value column="Text" isTrl="N" original="APRM_FATS_BPARTNER">APRM_FATS_BPARTNER</value>
+  </row>
+  <row id="0F3DBFADCE4F42279BA1E29291982E43" trl="N">
+    <value column="Text" isTrl="N" original="Financial Account">Financial Account</value>
+  </row>
+  <row id="17234C998EAE47188F5E34F1ECF345C3" trl="N">
+    <value column="Text" isTrl="N" original="Include Sub-Organization">Include Sub-Organization</value>
+  </row>
+  <row id="1A49AE948278471FB82B2CB790B56489" trl="N">
+    <value column="Text" isTrl="N" original="Sales Person">Sales Person</value>
+  </row>
+  <row id="1A6B43E1EAE848338EF1D0D3903E3EBA" trl="N">
+    <value column="Text" isTrl="N" original="Payment Type:">Payment Type:</value>
+  </row>
+  <row id="1BCFC8ED0B9943FEB4823370495875A3" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date">Expected Date</value>
+  </row>
+  <row id="213ED8A057F3406F8746746DA762E2F3" trl="N">
+    <value column="Text" isTrl="N" original="Sales Person">Sales Person</value>
+  </row>
+  <row id="23597E0AA4A841E19A8C046894A0EB4E" trl="N">
+    <value column="Text" isTrl="N" original="Due Date From">Due Date From</value>
+  </row>
+  <row id="287D509836E44802A71F49C9648B3312" trl="N">
+    <value column="Text" isTrl="N" original="Document Date From">Document Date From</value>
+  </row>
+  <row id="28AB1D831E5B413F8CB7065AC7F6C767" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date From:">Expected Date From:</value>
+  </row>
+  <row id="2C6A426EC54343B4ADC17BAEE9689D1E" trl="N">
+    <value column="Text" isTrl="N" original="Grouping Criteria:">Grouping Criteria:</value>
+  </row>
+  <row id="2CB33EC1A0FD45B4939AC5E91DD4D123" trl="N">
+    <value column="Text" isTrl="N" original="Include Sub-Organization:">Include Sub-Organization:</value>
+  </row>
+  <row id="2E1CF9F4C3E94DDF8267520EAE434F8C" trl="N">
+    <value column="Text" isTrl="N" original="INS_CURRENCY">INS_CURRENCY</value>
+  </row>
+  <row id="2FAD31FCFE354886A1DCF184253A833A" trl="N">
+    <value column="Text" isTrl="N" original="Empty Business Partner">Empty Business Partner</value>
+  </row>
+  <row id="30969F03CBFC4DE7BCFBC71FA5D34EDA" trl="N">
+    <value column="Text" isTrl="N" original="Base Currency">Base Currency</value>
+  </row>
+  <row id="317C753E17344F57A2A1C06DF6D8B8C0" trl="N">
+    <value column="Text" isTrl="N" original="Base Amount">Base Amount</value>
+  </row>
+  <row id="3485F342455549D2AEFDDA5C64E65845" trl="N">
+    <value column="Text" isTrl="N" original="PlannedDSO">PlannedDSO</value>
+  </row>
+  <row id="349607F655AB4EF1A366DC3211CA284A" trl="N">
+    <value column="Text" isTrl="N" original="Trans. Amount">Trans. Amount</value>
+  </row>
+  <row id="363CCEC87C164F369A52298905B5624D" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date To">Expected Date To</value>
+  </row>
+  <row id="3650BF4F6BA8473796C8070005DD5C8C" trl="N">
+    <value column="Text" isTrl="N" original="Project:">Project:</value>
+  </row>
+  <row id="380C02FB287545AF86F9F982E5EADD8F" trl="N">
+    <value column="Text" isTrl="N" original="Overdue">Overdue</value>
+  </row>
+  <row id="38EFF62DBAC04FA2A6D78CF45C53F670" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date">Expected Date</value>
+  </row>
+  <row id="3926449F68AD44B59D5244FC7C5419EF" trl="N">
+    <value column="Text" isTrl="N" original="CurrentDSO">CurrentDSO</value>
+  </row>
+  <row id="393EFE8078AF4B3299DBACBF533128F8" trl="N">
+    <value column="Text" isTrl="N" original="Base Currency">Base Currency</value>
+  </row>
+  <row id="3DA0864710A34D3EAE1B35CEB4EA63D6" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date">Expected Date</value>
+  </row>
+  <row id="43C8186236514013ADE1E5C8DB7A043B" trl="N">
+    <value column="Text" isTrl="N" original="Conversion date">Conversion date</value>
+  </row>
+  <row id="4721249AEDFF435C893526F191DCFAF6" trl="N">
+    <value column="Text" isTrl="N" original="Include empty Business Partner">Include empty Business Partner</value>
+  </row>
+  <row id="47D05363EA0A431E94988745BA473BD1" trl="N">
+    <value column="Text" isTrl="N" original="Overdue">Overdue</value>
+  </row>
+  <row id="4A2C074C97E74A55858699F7AC03BBE7" trl="N">
+    <value column="Text" isTrl="N" original="Balance:">Balance:</value>
+  </row>
+  <row id="4AE673493AE240E5A19DB52BA3FECA21" trl="N">
+    <value column="Text" isTrl="N" original="FINPR_BPartner_Category">FINPR_BPartner_Category</value>
+  </row>
+  <row id="4B2C2262F89E45D1945A4DDC2A941571" trl="N">
+    <value column="Text" isTrl="N" original="Due Date To">Due Date To</value>
+  </row>
+  <row id="55A3D8825B094737B9E1479A50AE73B1" trl="N">
+    <value column="Text" isTrl="N" original="Status:">Status:</value>
+  </row>
+  <row id="60C048466A5646679B61AAC6240A697A" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date To:">Expected Date To:</value>
+  </row>
+  <row id="64984571E7EE46B590D617CAB3D28598" trl="N">
+    <value column="Text" isTrl="N" original="Payment Date To:">Payment Date To:</value>
+  </row>
+  <row id="64F1EDBA15314054B3A147A4262B95FE" trl="N">
+    <value column="Text" isTrl="N" original="Document Date From:">Document Date From:</value>
+  </row>
+  <row id="66531E5447774162A53CD03AAEE01C17" trl="N">
+    <value column="Text" isTrl="N" original="Business Partner Category">Business Partner Category</value>
+  </row>
+  <row id="76253D7F006044C3883F7E7B963F9E1D" trl="N">
+    <value column="Text" isTrl="N" original="Convert to currency:">Convert to currency:</value>
+  </row>
+  <row id="7659A6A8A88F4A578E3DD686F2D1FE65" trl="N">
+    <value column="Text" isTrl="N" original="Trans. Currency">Trans. Currency</value>
+  </row>
+  <row id="7C6A82A324CD477F82B8E89EF51D7563" trl="N">
+    <value column="Text" isTrl="N" original="PAYMENT REPORT">PAYMENT REPORT</value>
+  </row>
+  <row id="7F5AB117CCB640BAB9142318F124DDCD" trl="N">
+    <value column="Text" isTrl="N" original="Only empty Business Partner">Only empty Business Partner</value>
+  </row>
+  <row id="7FF75B077A6D4C2CA4752A0F82AD7B39" trl="N">
+    <value column="Text" isTrl="N" original="Due Date From:">Due Date From:</value>
+  </row>
+  <row id="7FFF499FA6DE45D8A60427A22D91165E" trl="N">
+    <value column="Text" isTrl="N" original="Organization:">Organization:</value>
+  </row>
+  <row id="81DD7CAF25BE4F17BF5F04B43BB076E0" trl="N">
+    <value column="Text" isTrl="N" original="ACCS_ACCOUNT_ID_D">ACCS_ACCOUNT_ID_D</value>
+  </row>
+  <row id="8747F91C31704FD0A9EC0C35237158BE" trl="N">
+    <value column="Text" isTrl="N" original="Invoice Date">Invoice Date</value>
+  </row>
+  <row id="8A613E8D2A304FEF9545C2852FC06EF0" trl="N">
+    <value column="Text" isTrl="N" original="Document Date To:">Document Date To:</value>
+  </row>
+  <row id="8B947CC936E44FBCBCE62F4E02A01C63" trl="N">
+    <value column="Text" isTrl="N" original="Payment Report">Payment Report</value>
+  </row>
+  <row id="8DFAF1EEAAE24EE094C0BF142C0BE56A" trl="N">
+    <value column="Text" isTrl="N" original="Payment Date">Payment Date</value>
+  </row>
+  <row id="937AA8C7B9DA4ACF92B9A1ACA7719A65" trl="N">
+    <value column="Text" isTrl="N" original="Amount To:">Amount To:</value>
+  </row>
+  <row id="956DE8D037514B20A7303E122AAD2713" trl="N">
+    <value column="Text" isTrl="N" original="Due Date">Due Date</value>
+  </row>
+  <row id="977F3730B74146ADBB48FCD85218F034" trl="N">
+    <value column="Text" isTrl="N" original="CurrentDSO">CurrentDSO</value>
+  </row>
+  <row id="9896DFF27CCF4AB2A278019CE671DCAC" trl="N">
+    <value column="Text" isTrl="N" original="Payment Method">Payment Method</value>
+  </row>
+  <row id="98F7D068B04548A4B9D8EBEF837C3A96" trl="N">
+    <value column="Text" isTrl="N" original="Financial Account:">Financial Account:</value>
+  </row>
+  <row id="99EA5838DCBE4CECAB864CC3D50B54AD" trl="N">
+    <value column="Text" isTrl="N" original="Due Date">Due Date</value>
+  </row>
+  <row id="9A42E119872F46FDA71FC4FF28C9653E" trl="N">
+    <value column="Text" isTrl="N" original="Grouping Criteria">Grouping Criteria</value>
+  </row>
+  <row id="9BEBF44EF99C4B228D71CFC101710095" trl="N">
+    <value column="Text" isTrl="N" original="Base Amount">Base Amount</value>
+  </row>
+  <row id="A062D2FD534B478CBBDD8BFE94834193" trl="N">
+    <value column="Text" isTrl="N" original="Payment Date From">Payment Date From</value>
+  </row>
+  <row id="A178474701304374BF37B9FFBB6B8E38" trl="N">
+    <value column="Text" isTrl="N" original="Base Currency">Base Currency</value>
+  </row>
+  <row id="A1CC0391770548668172514B0F7D0DDD" trl="N">
+    <value column="Text" isTrl="N" original="Base Amount">Base Amount</value>
+  </row>
+  <row id="AC44B03FF40047059E663CEB9CF49A5A" trl="N">
+    <value column="Text" isTrl="N" original="Transactional Currency">Transactional Currency</value>
+  </row>
+  <row id="AF049D5097F14A79E040007F010149FB" trl="N">
+    <value column="Text" isTrl="N" original="Include Payments Using Credit">Include Payments Using Credit</value>
+  </row>
+  <row id="AF2D1591711675E8E040007F0101337D" trl="N">
+    <value column="Text" isTrl="N" original="Payment Description">Payment Description</value>
+  </row>
+  <row id="AF2E12144150C776E040007F01013C23" trl="N">
+    <value column="Text" isTrl="N" original="Include Payments Using Credit:">Include Payments Using Credit:</value>
+  </row>
+  <row id="AFAA1DE81243FDE8E040007F010159B7" trl="N">
+    <value column="Text" isTrl="N" original="* Invoice paid using a credit payment">* Invoice paid using a credit payment</value>
+  </row>
+  <row id="AFB970D388478761E040007F01012C25" trl="N">
+    <value column="Text" isTrl="N" original="** Several invoices have been paid using the same credit payment">** Several invoices have been paid using the same credit payment</value>
+  </row>
+  <row id="AFBBE094BB53D031E040007F01013B9F" trl="N">
+    <value column="Text" isTrl="N" original="* Invoice paid using a credit payment">* Invoice paid using a credit payment</value>
+  </row>
+  <row id="AFBBE094BB55D031E040007F01013B9F" trl="N">
+    <value column="Text" isTrl="N" original="** Several invoices have been paid using the same credit payment">** Several invoices have been paid using the same credit payment</value>
+  </row>
+  <row id="AFBBE094BB57D031E040007F01013B9F" trl="N">
+    <value column="Text" isTrl="N" original="* Invoice paid using a credit payment">* Invoice paid using a credit payment</value>
+  </row>
+  <row id="AFBBE094BB59D031E040007F01013B9F" trl="N">
+    <value column="Text" isTrl="N" original="** Several invoices have been paid using the same credit payment">** Several invoices have been paid using the same credit payment</value>
+  </row>
+  <row id="B973837A2C334DC49973CEE4179F43B7" trl="N">
+    <value column="Text" isTrl="N" original="Business Partner Category">Business Partner Category</value>
+  </row>
+  <row id="B9CF74E3592E4EF684332D8BD3F34AE2" trl="N">
+    <value column="Text" isTrl="N" original="Financial Account">Financial Account</value>
+  </row>
+  <row id="BA44533ED06A4B73BCE144691D928626" trl="N">
+    <value column="Text" isTrl="N" original="PlannedDSO">PlannedDSO</value>
+  </row>
+  <row id="BA58631F88A74CB1859804387A7AE6B2" trl="N">
+    <value column="Text" isTrl="N" original="Transactional Amount">Transactional Amount</value>
+  </row>
+  <row id="BEB5223AF030406F8680D17D143C3935" trl="N">
+    <value column="Text" isTrl="N" original="Payment Method">Payment Method</value>
+  </row>
+  <row id="BF61E0FF53934902B0CC763EEC48B42B" trl="N">
+    <value column="Text" isTrl="N" original="Convert to Currency">Convert to Currency</value>
+  </row>
+  <row id="C31FF83C82AB49C7AC446FD28B431B3C" trl="N">
+    <value column="Text" isTrl="N" original="Transactional Currency">Transactional Currency</value>
+  </row>
+  <row id="C764993E67B846B4B72165EB26D04BC9" trl="N">
+    <value column="Text" isTrl="N" original="CurrentDSO">CurrentDSO</value>
+  </row>
+  <row id="C851638940504AF69C111133B4FC53FF" trl="N">
+    <value column="Text" isTrl="N" original="Overdue:">Overdue:</value>
+  </row>
+  <row id="C90AC1FF0A6E4D949A89BA6B79B440C1" trl="N">
+    <value column="Text" isTrl="N" original="Invoice Date">Invoice Date</value>
+  </row>
+  <row id="CF7B2971E5954D8C8A0EE48A8479B3B7" trl="N">
+    <value column="Text" isTrl="N" original="Ordering Criteria">Ordering Criteria</value>
+  </row>
+  <row id="D331A2D41B8840838C4708C92DC5E435" trl="N">
+    <value column="Text" isTrl="N" original="Sub Total (Status):">Sub Total (Status):</value>
+  </row>
+  <row id="D3B9E8172CB74CA98A74A6B119612106" trl="N">
+    <value column="Text" isTrl="N" original="Payment Date From:">Payment Date From:</value>
+  </row>
+  <row id="D3DA75B510A54CEDAD7813134FA06BB7" trl="N">
+    <value column="Text" isTrl="N" original="Balance: ">Balance: </value>
+  </row>
+  <row id="D79B532849AC43F09FB38375FB9CBBA2" trl="N">
+    <value column="Text" isTrl="N" original="Payment Date To">Payment Date To</value>
+  </row>
+  <row id="DAFB4AF969704E6A8587DD2F9ED525AD" trl="N">
+    <value column="Text" isTrl="N" original="Sales Person">Sales Person</value>
+  </row>
+  <row id="DB56CD45A93B44B39BC59C39F082D2DA" trl="N">
+    <value column="Text" isTrl="N" original="Sub Total (Status)">Sub Total (Status)</value>
+  </row>
+  <row id="DB68D6BCFE6F482D84785C502FCEEAD2" trl="N">
+    <value column="Text" isTrl="N" original="Payment Method:">Payment Method:</value>
+  </row>
+  <row id="DBBC9E99CD634EC8844BD0AE0E98ED3A" trl="N">
+    <value column="Text" isTrl="N" original="Payment Type">Payment Type</value>
+  </row>
+  <row id="DCE88B13B4A540658783D3CF5E773C4B" trl="N">
+    <value column="Text" isTrl="N" original="Currency:">Currency:</value>
+  </row>
+  <row id="DEE5ED85F85742E0B8F4F000946A3B19" trl="N">
+    <value column="Text" isTrl="N" original="Ordering Criteria:">Ordering Criteria:</value>
+  </row>
+  <row id="DF2CC16AD5894BA7B620A962C4632C27" trl="N">
+    <value column="Text" isTrl="N" original="Exclude empty Business Partner">Exclude empty Business Partner</value>
+  </row>
+  <row id="E460023C097749C5892A9CE255BD6FEB" trl="N">
+    <value column="Text" isTrl="N" original="Payment Report">Payment Report</value>
+  </row>
+  <row id="E748B33C558747D39E79783EC4788B20" trl="N">
+    <value column="Text" isTrl="N" original="Business Partner Category:">Business Partner Category:</value>
+  </row>
+  <row id="E8821FAD1F0548E191F19C25EA803222" trl="N">
+    <value column="Text" isTrl="N" original="Deposit/Withdraw Date">Deposit/Withdraw Date</value>
+  </row>
+  <row id="EA4AB68461A14FEDBB4CA15CAB168555" trl="N">
+    <value column="Text" isTrl="N" original="Expected Date From">Expected Date From</value>
+  </row>
+  <row id="F3ED5198D0DA4B25ABADE68A48905575" trl="N">
+    <value column="Text" isTrl="N" original="Overdue">Overdue</value>
+  </row>
+  <row id="F6F187E77E9C451DAE6B8DD2B1733757" trl="N">
+    <value column="Text" isTrl="N" original="Transactional Amount">Transactional Amount</value>
+  </row>
+  <row id="F8F132DDFDF14ECF8FA7C78CD88A4821" trl="N">
+    <value column="Text" isTrl="N" original="None">None</value>
+  </row>
+  <row id="F931748E59634FB1BA40BCF5FA01EFCC" trl="N">
+    <value column="Text" isTrl="N" original="Invoice Date">Invoice Date</value>
+  </row>
+</compiereTrl>

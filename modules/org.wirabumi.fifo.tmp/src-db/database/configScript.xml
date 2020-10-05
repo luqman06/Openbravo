@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+  <vector>
+    <versionInfo version="3.0.31796"/>
+    <columnDataChange tablename="OBUISEL_SELECTOR" columnname="WHERECLAUSE" pkRow="DE0239D3891D434E889A48916A7CAF88">
+      <oldValue><![CDATA[e.shipmentReceipt.id = @inpmInoutId@]]></oldValue>
+      <newValue><![CDATA[e.businessPartner.id = @inpcBpartnerId@ and e.product.id = @inpmProductId@ and e.shipmentReceipt.processed=true]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="21866B0F60D940F6B7270805A8A2AA0F">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DISPLAYLOGIC" pkRow="B85D90BED9F016AAE040007F01001C8E">
+      <oldValue><![CDATA[(@Costtype@='AVA' | @Costtype@='STA')]]></oldValue>
+      <newValue><![CDATA[(@Costtype@='AVA' | @Costtype@='STA' | @Costtype@='FIFO_FIFO')]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="FD339410474C47CEBEC6D4071EF8FB4A">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUIAPP_PROCESS" columnname="CLASSNAME" pkRow="5E9F9D7EECC24E4FBB2C60840FF613BE">
+      <oldValue><![CDATA[org.openbravo.common.actionhandler.RMInOutPickEditLines]]></oldValue>
+      <newValue><![CDATA[org.wirabumi.fifo.actionhandler.RMInOutPickEditLines]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUIAPP_PROCESS" columnname="CLASSNAME" pkRow="A2C19D0EF6594D14A64BC62E99A89CC3">
+      <oldValue><![CDATA[org.openbravo.common.actionhandler.SRMOPickEditLines]]></oldValue>
+      <newValue><![CDATA[org.wirabumi.fifo.actionhandler.SRMOPickEditLines]]></newValue>
+    </columnDataChange>
+  </vector>

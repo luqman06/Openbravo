@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="93C60A4D594E491BB6274BCBF39713D8" trl="N">
+    <value column="Description" isTrl="N" original="Openbravo ERP managed by Wirabumi Software">Openbravo ERP managed by Wirabumi Software</value>
+    <value column="Help" isTrl="N" original="general improvement for Openbravo ERP, developed by Wirabumi Software">general improvement for Openbravo ERP, developed by Wirabumi Software</value>
+    <value column="License" isTrl="N" original="this module is distributed under GNU GPL v2">this module is distributed under GNU GPL v2</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

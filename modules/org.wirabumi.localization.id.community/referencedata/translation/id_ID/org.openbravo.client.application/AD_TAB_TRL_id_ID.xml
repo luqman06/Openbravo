@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="25EB9212730C4E88B95C75BFCD6F5EBF" trl="N">
+    <value column="Name" isTrl="N" original="Navigation Bar Component">Navigation Bar Component</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Navigation Bar Component">Navigation Bar Component</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6D732D027FFA4FB1BD0140ED3B606C0E" trl="N">
+    <value column="Name" isTrl="N" original="Process Definition">Process Definition</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Access for Process Definitions">Access for Process Definitions</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Grants access to Process Definition. By default, access to process definitions in a window (invoked from a button), is inherited from the permission to the window. To revoke this inherited access and manually decide case by case which are the accessible processes, it is necessary to define a &quot;Secured Process&quot; Preference (at system level or for that specific window) with &quot;Y&quot; as value.">Grants access to Process Definition. By default, access to process definitions in a window (invoked from a button), is inherited from the permission to the window. To revoke this inherited access and manually decide case by case which are the accessible processes, it is necessary to define a "Secured Process" Preference (at system level or for that specific window) with "Y" as value.</value>
+  </row>
+  <row id="6EFD1987E93847DE87AD7B70282FBDF1" trl="N">
+    <value column="Name" isTrl="N" original="Navigation Bar Component Role Access">Navigation Bar Component Role Access</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Maintain access by role to navigation bar components">Maintain access by role to navigation bar components</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Maintain access by role to navigation bar components">Maintain access by role to navigation bar components</value>
+  </row>
+  <row id="7BF1D74F5C60424088416584DFD1EC1F" trl="N">
+    <value column="Name" isTrl="N" original="View Role Access">View Role Access</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Defines the access to views by Role.">Defines the access to views by Role.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Defines the access to views by Role.">Defines the access to views by Role.</value>
+  </row>
+  <row id="D275449FFACC4539A401336214FDBF94" trl="N">
+    <value column="Name" isTrl="N" original="Menu Parameters">Menu Parameters</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Menu Parameters">Menu Parameters</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The menu parameters are used in the new user interface to pass parameters to standard view implementations.">The menu parameters are used in the new user interface to pass parameters to standard view implementations.</value>
+  </row>
+  <row id="F648835984F842AF906FA5F97EF6641B" trl="N">
+    <value column="Name" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.">A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="A view is shown in the user interface as a tab in the multi-tab interface or as a popup. The view can be anything from a grid, form or a popup window. When the view is shown in the multi-tab interface then it must be a Smartclient canvas.&#10;&#10;The view implementation defines the component which is capable of generating the client side javascript to be shown in the browser. A view implementation is a java class which extends the org.openbravo.client.kernel.BaseTemplateComponent class.">A view is shown in the user interface as a tab in the multi-tab interface or as a popup. The view can be anything from a grid, form or a popup window. When the view is shown in the multi-tab interface then it must be a Smartclient canvas.
+
+The view implementation defines the component which is capable of generating the client side javascript to be shown in the browser. A view implementation is a java class which extends the org.openbravo.client.kernel.BaseTemplateComponent class.</value>
+  </row>
+  <row id="FF8080812EFBEA81012EFBED3F58000C" trl="N">
+    <value column="Name" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Edit the selected role's access to specified application view impementations.">Edit the selected role's access to specified application view impementations.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="View implementation tab allows to select customized views.">View implementation tab allows to select customized views.</value>
+  </row>
+  <row id="FF8081813157AED2013157BF6D810023" trl="N">
+    <value column="Name" isTrl="N" original="Window Personalization">Window Personalization</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Maintains window personalization records">Maintains window personalization records</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Window Personalization list and maintains the customized form views.">Window Personalization list and maintains the customized form views.</value>
+  </row>
+  <row id="FF80818132D7FB620132D819C1720046" trl="N">
+    <value column="Name" isTrl="N" original="Process">Process</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF80818132D85DB50132D86374920010" trl="N">
+    <value column="Name" isTrl="N" original="Process Access">Process Access</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF80818132D8C36D0132D8C4936F0006" trl="N">
+    <value column="Name" isTrl="N" original="Parameter">Parameter</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF80818132F27A590132F28008350006" trl="N">
+    <value column="Name" isTrl="N" original="Window Reference">Window Reference</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Window Reference definition">Window Reference definition</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

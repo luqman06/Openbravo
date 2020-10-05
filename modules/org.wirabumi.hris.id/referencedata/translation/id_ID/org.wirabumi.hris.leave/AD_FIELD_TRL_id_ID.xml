@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELD" version="">
+  <row id="783775D0554C4C8EB80F3796DF79A675" trl="N">
+    <value column="Name" isTrl="N" original="Used Leave in The Past">Used Leave in The Past</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

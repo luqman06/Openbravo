@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="ARB_purchase_order.jrxml"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="539"
+		 columnSpacing="0"
+		 leftMargin="28"
+		 rightMargin="28"
+		 topMargin="14"
+		 bottomMargin="14"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="DOCUMENT_ID" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[new String("5BEB019EE44D4C64A42D04D699E76D0E")]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT 
+	--(SELECT USR.name FROM AD_USER USR INNER JOIN C_ORDER on C_ORDER.createdby = USR.ad_user_id LIMIT 1) as CREATED_BY,
+	I_USER.name as CREATED_BY,
+	I_USER.email as USER_EMAIL,
+	--(SELECT USR.email FROM AD_USER USR INNER JOIN C_ORDER on C_ORDER.createdby = USR.ad_user_id LIMIT 1) as USER_EMAIL, 
+	C_BPARTNER.name AS VENDOR_NAME,
+	coalesce(L.address1, '')||coalesce(' '||L.address2,'') as address1,
+	coalesce(l.city,'')||coalesce(' - '||l.postal,'')||coalesce(' - '||r.name,'')||coalesce(' - '||co.name,'') as address2, 
+	coalesce(C_BPARTNER_LOCATION.PHONE,'')||coalesce(', Fax : '||C_BPARTNER_LOCATION.FAX,'') as phonefax,
+	C_BPARTNER.URL,
+	C_ORDER.DESCRIPTION AS HEADER_DESCRIPTION, 
+	C_ORDER.DATEORDERED,
+	C_ORDER.DELIVERYNOTES, 
+	C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,  
+	C_ORDER.docstatus AS STATUS,
+	coalesce(AD_USER.NAME,'')||coalesce(' / Phone : '||AD_USER.PHONE,'') AS VENDOR_CONTACT,
+	AD_USER.EMAIL AS VENDOR_CONTACT_EMAIL,
+	AD_USER.PHONE AS VENDOR_CONTACT_PHONE,
+	DELIVERYRULE.NAME AS DELIVERYTERM, 
+	PAYMENTTERM.TERM AS PAYMENTTERM, 
+	C_CURRENCY.ISO_CODE as CURRENCY_ISO, 
+	M_PRICELIST.ISTAXINCLUDED,
+	C_ORDER.DOCUMENTNO AS PURCHASE_ORDER_NO,
+	POLINE.Line AS PURCHASE_ORDER_LINE,
+	P.value AS PRODUCT_SEARCHKEY,
+	P.name AS PRODUCT_NAME,
+	coalesce(P.description,'') || coalesce(' ' || POLINE.description,'') AS PRODUCT_DESCRIPTION,
+	POLINE.QTYORDERED AS QTY_ORDERED,
+	UOM.x12de355 AS UOM_CODE,
+	UOM.name AS UOM_NAME,
+	POLINE.priceactual AS PRICE_ACTUAL,
+	POLINE.linenetamt AS LINE_NET_AMOUNT,
+	POLINE.discount AS LINE_DISCOUNT,
+	POLINE.freightamt AS LINE_FREIGHT_AMOUNT,
+	POLINE.datepromised AS LINE_DATE_PROMISED,
+	C_ORDER.grandtotal AS TOTAL_ORDER_AMOUNT
+FROM 
+C_BPARTNER_LOCATION 
+left join C_LOCATION L on C_BPARTNER_LOCATION.C_LOCATION_ID = L.C_LOCATION_ID
+left join C_COUNTRY CO ON L.C_COUNTRY_ID = CO.C_COUNTRY_ID
+left join  C_REGION R on L.C_REGION_ID = R.C_REGION_ID,
+AD_USER right join C_ORDER on AD_USER.AD_USER_ID = C_ORDER.AD_USER_ID,
+C_BPARTNER, 
+AD_ORGINFO,
+AD_CLIENT,
+C_UOM UOM,
+M_PRODUCT P,
+AD_ORG,
+C_ORDERLINE POLINE,
+C_CURRENCY, 
+M_PRICELIST,
+(SELECT VALUE, NAME FROM AD_REF_LIST_V WHERE AD_REFERENCE_ID = '151') DELIVERYRULE,
+(SELECT C_PAYMENTTERM.C_PAYMENTTERM_ID, COALESCE( C_PAYMENTTERM_TRL.NAME, C_PAYMENTTERM.NAME) AS TERM
+	FROM C_PAYMENTTERM LEFT JOIN C_PAYMENTTERM_TRL ON C_PAYMENTTERM.C_PAYMENTTERM_ID = C_PAYMENTTERM_TRL.C_PAYMENTTERM_ID) PAYMENTTERM,
+
+--(select ad_user.ad_user_id, ad_user.name, ad_user.email from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id where c_order.c_order_id ='204C506C678E471C92BF361CAB87D4E7') AS I_USER
+(select ad_user.ad_user_id, ad_user.name, ad_user.email 
+	from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id 
+		where c_order.c_order_id = $P{DOCUMENT_ID}) AS I_USER
+
+WHERE 
+C_ORDER.C_BPARTNER_LOCATION_ID = C_BPARTNER_LOCATION.C_BPARTNER_LOCATION_ID
+AND C_ORDER.M_PRICELIST_ID = M_PRICELIST.M_PRICELIST_ID
+AND C_ORDER.C_BPARTNER_ID = C_BPARTNER.C_BPARTNER_ID
+AND AD_ORG.ad_org_id = AD_ORGINFO.ad_org_id
+AND AD_ORG.ad_org_id = (SELECT o.AD_ORG_ID FROM AD_ORG o JOIN AD_OrgType t USING (AD_ORGTYPE_ID)
+			WHERE AD_ISORGINCLUDED(C_ORDER.AD_ORG_ID, o.ad_org_id, C_ORDER.ad_client_id)<>-1
+			AND (t.IsLegalEntity='Y' OR t.IsAcctLegalEntity='Y'))
+AND C_ORDER.AD_CLIENT_ID = AD_CLIENT.AD_CLIENT_ID
+AND C_ORDER.DELIVERYRULE = DELIVERYRULE.VALUE
+AND C_ORDER.C_PAYMENTTERM_ID = PAYMENTTERM.C_PAYMENTTERM_ID
+AND C_CURRENCY.C_CURRENCY_ID=C_ORDER.C_CURRENCY_ID
+AND C_ORDER.C_ORDER_ID = POLINE.C_ORDER_ID
+AND POLINE.c_uom_id = UOM.c_uom_id
+AND POLINE.m_product_id = P.m_product_id
+AND C_ORDER.createdby = I_USER.ad_user_id
+AND C_ORDER.C_ORDER_ID = $P{DOCUMENT_ID}
+--AND C_ORDER.C_ORDER_ID = '3CFBD977FB5642D7B03CC5A9043DA92B'
+--Sample VOIDED document = '16A9AC47B08E469CACEF9907E364A73C'
+--sample Tool&Jig = '5BEB019EE44D4C64A42D04D699E76D0E'
+
+ORDER BY POLINE.line ASC]]></queryString>
+
+	<field name="created_by" class="java.lang.String"/>
+	<field name="user_email" class="java.lang.String"/>
+	<field name="vendor_name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="url" class="java.lang.String"/>
+	<field name="header_description" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="deliverynotes" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="vendor_contact" class="java.lang.String"/>
+	<field name="vendor_contact_email" class="java.lang.String"/>
+	<field name="vendor_contact_phone" class="java.lang.String"/>
+	<field name="deliveryterm" class="java.lang.String"/>
+	<field name="paymentterm" class="java.lang.String"/>
+	<field name="currency_iso" class="java.lang.String"/>
+	<field name="istaxincluded" class="java.lang.String"/>
+	<field name="purchase_order_no" class="java.lang.String"/>
+	<field name="purchase_order_line" class="java.math.BigDecimal"/>
+	<field name="product_searchkey" class="java.lang.String"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="product_description" class="java.lang.String"/>
+	<field name="qty_ordered" class="java.math.BigDecimal"/>
+	<field name="uom_code" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="price_actual" class="java.math.BigDecimal"/>
+	<field name="line_net_amount" class="java.math.BigDecimal"/>
+	<field name="line_discount" class="java.math.BigDecimal"/>
+	<field name="line_freight_amount" class="java.math.BigDecimal"/>
+	<field name="line_date_promised" class="java.sql.Timestamp"/>
+	<field name="total_order_amount" class="java.math.BigDecimal"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="330"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Transparent"
+						x="256"
+						y="30"
+						width="283"
+						height="79"
+						key="rectangle-PO-Header"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						x="264"
+						y="35"
+						width="89"
+						height="15"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[PURCHASE ORDER]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="269"
+						height="25"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[PT.ASIARAYA Batamindo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="15"
+						y="27"
+						width="240"
+						height="81"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier" size="10"/>
+					</textElement>
+				<text><![CDATA[EXECUTIVE INDUSTRIAL PARK
+BLOK C2 N0. 12-12A
+Jl. Engku Putri, Batam Centre
+Batam, Kepualuan Riau, Indonesia, 29400
+TEL. 62-778-7482061
+FAX. 62-778-7482063]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="280"
+						y="49"
+						width="50"
+						height="15"
+						key="staticText-4"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="280"
+						y="63"
+						width="50"
+						height="15"
+						key="staticText-5"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="280"
+						y="77"
+						width="50"
+						height="15"
+						key="staticText-6"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Contact]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="280"
+						y="91"
+						width="50"
+						height="15"
+						key="staticText-7"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="329"
+						y="91"
+						width="9"
+						height="15"
+						key="staticText-10"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="329"
+						y="77"
+						width="9"
+						height="15"
+						key="staticText-11"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="329"
+						y="63"
+						width="9"
+						height="15"
+						key="staticText-12"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="329"
+						y="49"
+						width="9"
+						height="15"
+						key="staticText-13"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="337"
+						y="49"
+						width="202"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{purchase_order_no}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd-MMM-yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="337"
+						y="63"
+						width="202"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{dateordered}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="337"
+						y="77"
+						width="202"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{created_by}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="337"
+						y="91"
+						width="202"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{user_email}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="115"
+						width="539"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="87"
+						y="142"
+						width="9"
+						height="15"
+						key="staticText-24"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="87"
+						y="128"
+						width="9"
+						height="15"
+						key="staticText-25"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="87"
+						y="170"
+						width="9"
+						height="15"
+						key="staticText-26"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="17"
+						y="170"
+						width="71"
+						height="15"
+						key="staticText-29"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Telephone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="17"
+						y="142"
+						width="71"
+						height="15"
+						key="staticText-30"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Address]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="128"
+						width="87"
+						height="15"
+						key="staticText-31"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Vendor Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="17"
+						y="184"
+						width="71"
+						height="15"
+						key="staticText-32"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Attention]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="87"
+						y="184"
+						width="9"
+						height="15"
+						key="staticText-33"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="95"
+						y="128"
+						width="348"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{vendor_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="95"
+						y="142"
+						width="348"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{address1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="95"
+						y="170"
+						width="348"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{phonefax}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="95"
+						y="156"
+						width="348"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{address2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="275"
+						y="241"
+						width="259"
+						height="63"
+						key="staticText-35"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" size="10"/>
+					</textElement>
+				<text><![CDATA[EXECUTIVE INDUSTRIAL PARK
+BLOK C2 N0. 12-12A
+Jl. Engku Putri - Batam Centre
+Batam, Indonesia, 29400
+TEL. 62-778-7482061 FAX. 62-778-7482063]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="259"
+						y="230"
+						width="74"
+						height="15"
+						key="staticText-36"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DELIVER TO :]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="222"
+						width="538"
+						height="0"
+						key="line-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="113"
+						y="241"
+						width="137"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{currency_iso}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="113"
+						y="255"
+						width="137"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{paymentterm}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="105"
+						y="255"
+						width="9"
+						height="15"
+						key="staticText-37"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="105"
+						y="241"
+						width="9"
+						height="15"
+						key="staticText-38"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="17"
+						y="255"
+						width="89"
+						height="15"
+						key="staticText-43"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Payment Terms]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="17"
+						y="241"
+						width="89"
+						height="15"
+						key="staticText-44"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Currency]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="230"
+						width="250"
+						height="15"
+						key="staticText-45"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Basic Terms :]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="325"
+						width="538"
+						height="0"
+						key="line-7"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="0"
+						y="276"
+						width="250"
+						height="15"
+						key="staticText-47"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Delivery Notes:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="15"
+						y="290"
+						width="235"
+						height="30"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{deliverynotes}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="95"
+						y="184"
+						width="348"
+						height="15"
+						key="textField-4"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{vendor_contact}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="198"
+						width="71"
+						height="15"
+						key="staticText-48"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[Email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="87"
+						y="198"
+						width="9"
+						height="15"
+						key="staticText-49"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="95"
+						y="198"
+						width="348"
+						height="15"
+						key="textField-5"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{vendor_contact_email}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.##" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="409"
+						y="10"
+						width="130"
+						height="18"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="367"
+						y="156"
+						width="172"
+						height="56"
+						forecolor="#FF0000"
+						key="txtStatusVOIDED-1"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="36"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(($F{status}.compareTo("VO")==0) ? "VOIDED" : " ")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="367"
+						y="155"
+						width="172"
+						height="56"
+						forecolor="#0000FF"
+						key="txtStatusDRAFT-1"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Courier" size="36"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(($F{status}.compareTo("DR")==0) ? "DRAFT" : " ")]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="45"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="5"
+						width="25"
+						height="15"
+						key="staticText-15"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[NO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="24"
+						y="5"
+						width="190"
+						height="15"
+						key="staticText-16"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ITEMS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="213"
+						y="5"
+						width="84"
+						height="15"
+						key="staticText-17"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[QUANTITY]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="296"
+						y="5"
+						width="45"
+						height="15"
+						key="staticText-18"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[UOM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="347"
+						y="5"
+						width="87"
+						height="15"
+						key="staticText-19"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[UNIT PRICE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="434"
+						y="5"
+						width="105"
+						height="15"
+						key="staticText-20"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="347"
+						y="21"
+						width="87"
+						height="15"
+						key="staticText-21"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DISCOUNT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="24"
+						y="21"
+						width="189"
+						height="15"
+						key="staticText-22"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DESCRIPTION]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="3"
+						width="538"
+						height="0"
+						key="line-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="42"
+						width="538"
+						height="0"
+						key="line-8"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="65"  isSplitAllowed="false" >
+				<staticText>
+					<reportElement
+						x="43"
+						y="43"
+						width="170"
+						height="15"
+						key="staticText-46"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Delivery Requested DATE :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="###0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="5"
+						width="24"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{purchase_order_line}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="24"
+						y="5"
+						width="190"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{product_searchkey}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="24"
+						y="18"
+						width="266"
+						height="25"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{product_description}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="213"
+						y="5"
+						width="83"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{qty_ordered}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="296"
+						y="5"
+						width="45"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{uom_code}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="289"
+						y="18"
+						width="52"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{uom_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.0000" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="347"
+						y="5"
+						width="86"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{price_actual}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="347"
+						y="18"
+						width="86"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{line_discount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="434"
+						y="5"
+						width="105"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{line_net_amount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd-MMM-yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="213"
+						y="43"
+						width="83"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{line_date_promised}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="25"
+						y="62"
+						width="514"
+						height="0"
+						key="line-12"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.5"/>
+</graphicElement>
+				</line>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="145"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="434"
+						y="5"
+						width="105"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{total_order_amount}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="251"
+						y="5"
+						width="154"
+						height="15"
+						key="staticText-14"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TOTAL AMOUNT :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="406"
+						y="5"
+						width="26"
+						height="15"
+						key="textField-2"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{currency_iso}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="82"
+						width="538"
+						height="15"
+						key="staticText-54"
+						stretchType="RelativeToBandHeight"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier" size="10" isBold="false"/>
+					</textElement>
+				<text><![CDATA[* Each material delivered should indicate "Purchase Order number - items".]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="110"
+						width="538"
+						height="15"
+						key="staticText-55"
+						stretchType="RelativeToBandHeight"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier" size="10" isBold="false"/>
+					</textElement>
+				<text><![CDATA[* This order is computer generated, No signature is required.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="96"
+						width="538"
+						height="15"
+						key="staticText-56"
+						stretchType="RelativeToBandHeight"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier" size="10" isBold="false"/>
+					</textElement>
+				<text><![CDATA[  (e.g. 21000199 - 10) in the Delivery Order.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="68"
+						width="538"
+						height="15"
+						key="staticText-57"
+						stretchType="RelativeToBandHeight"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier-Bold" size="10" isBold="true" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[Important Notes:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="124"
+						width="538"
+						height="15"
+						key="staticText-58"
+						stretchType="RelativeToBandHeight"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier" size="10" isBold="false"/>
+					</textElement>
+				<text><![CDATA[* Kindly provide order acknowledgement by return fax / email.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="22"
+						width="538"
+						height="15"
+						key="staticText-60"
+						stretchType="RelativeToBandHeight"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Courier 10 Pitch" pdfFontName="Courier-Bold" size="10" isBold="true" isItalic="false"/>
+					</textElement>
+				<text><![CDATA[Purchase Order Notes :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="36"
+						width="524"
+						height="30"
+						key="textField-6"/>
+					<box></box>
+					<textElement>
+						<font fontName="Courier 10 Pitch"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{header_description}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="2"
+						width="538"
+						height="0"
+						key="line-13"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="19"
+						width="538"
+						height="0"
+						key="line-14"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

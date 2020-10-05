@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="232E04612F9847C080A9393F93607629" trl="N">
+    <value column="Name" isTrl="N" original="Izin Tidak Masuk">Izin Tidak Masuk</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="32D48225A861442C9D15513D72B56FD8" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave">Cuti</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="38A68BA888F24972B4B568D6EE3C4DFA" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Request">Permohonan Cuti</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="59574BBC197845978C10EDB51B4730B2" trl="N">
+    <value column="Name" isTrl="N" original="Line">Line</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BC3FD3B0EB1E4A9C8F5A871994E17D8C" trl="N">
+    <value column="Name" isTrl="Y" original="Leave Rule">Leave Catalogue</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D695908C80FA4A6781850E9E77338326" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave">Cuti</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F4F95A2CDD2A4526ACB033DA714CECBC" trl="N">
+    <value column="Name" isTrl="N" original="Header">Header</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

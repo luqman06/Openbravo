@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Summary_Card_ICS.jrxml" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="553" leftMargin="21" rightMargin="21" topMargin="21" bottomMargin="21" isFloatColumnFooter="true" isIgnorePagination="true" uuid="2fb3b37e-df65-4798-aaaa-895a7b66e15c">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="201"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Column_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#666666"/>
+	<parameter name="DateTo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["31-09-2018"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="C_AcctSchema_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["01A182182CAF4186B9768D8A78949FC0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DateFrom" class="java.lang.String">
+		<defaultValueExpression><![CDATA["01-08-2018"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="AD_Org_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["B27B21DFAAC945588EC93410821223F5"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="reportType" class="java.lang.String">
+		<defaultValueExpression><![CDATA["ven"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT trunc(f.dateacct) as dateacct, trunc(f.dateacct) >= TO_DATE($P{DateFrom}) as dateType,
+        CASE WHEN f.c_doctype_id IS NOT NULL THEN (SELECT MIN(name)
+                                       FROM c_doctype
+                                       WHERE c_doctype_id = f.c_doctype_id)
+        ELSE (SELECT MIN(name)
+              FROM ad_ref_list
+              WHERE ad_reference_id = '183'
+              AND value = f.docbasetype)
+        END as documenttype,
+
+    f.description,
+	f.isactive,
+    f.amtacctdr as debit,
+    f.amtacctcr as credit,
+    (f.amtacctdr-f.amtacctcr) as net,
+    bp.name as bpname, bp.value as skey, o.ad_org_id as organizationid,
+    loc.address1 || ' ' || COALESCE(TO_CHAR(loc.address2), TO_CHAR('')) as org_address,
+    loc.city || ', ' || ad_column_identifier('C_Region', loc.c_region_id, 'en_US') || ' ' || loc.postal
+    || ' ' || ad_column_identifier('C_Country', loc.c_country_id, 'en_US') AS org_postal,
+    (SELECT MAX(email) FROM ad_user WHERE ad_user_id=oinfo.ad_user_id) as email,
+    (SELECT MAX(phone) FROM ad_user WHERE ad_user_id=oinfo.ad_user_id) as phone,
+    issotrx.issotrx
+FROM fact_acct f
+    LEFT JOIN c_acctschema acct ON (f.c_acctschema_id=acct.c_acctschema_id)
+    LEFT JOIN c_bpartner bp ON (f.c_bpartner_id=bp.c_bpartner_id)
+    JOIN (SELECT ad_org_id
+          FROM ad_org
+          WHERE ad_isorgincluded(ad_org_id, $P{AD_Org_ID}, ad_client_id) <> -1) org ON (f.ad_org_id=org.ad_org_id), ad_org o
+    LEFT JOIN ad_orginfo oinfo ON (o.ad_org_id=oinfo.ad_org_id)
+    LEFT JOIN c_location loc ON (oinfo.c_location_id=loc.c_location_id), (SELECT CASE WHEN value=1 THEN 'Y' ELSE 'N' END AS issotrx
+                                                                          FROM ad_integer
+                                                                          WHERE value < 3) issotrx
+WHERE o.ad_org_id=$P{AD_Org_ID}
+    AND (($P{reportType} IN ('cus','both')
+    AND account_id IN
+        (SELECT account_id
+         FROM c_validcombination
+         WHERE c_acctschema_id = $P{C_AcctSchema_ID}
+             AND (c_validcombination_id IN
+                (SELECT c_receivable_acct
+                 FROM c_bp_customer_acct
+                 WHERE c_acctschema_id = $P{C_AcctSchema_ID})
+             OR c_validcombination_id IN
+                (SELECT c_prepayment_acct
+                 FROM c_bp_customer_acct
+                 WHERE c_acctschema_id = $P{C_AcctSchema_ID})))
+    AND issotrx.issotrx='Y')
+   OR ($P{reportType} IN ('ven','both')
+   AND account_id IN
+        (SELECT account_id
+         FROM c_validcombination
+         WHERE c_acctschema_id = $P{C_AcctSchema_ID}
+             AND (c_validcombination_id IN
+                (SELECT v_liability_acct
+                 FROM c_bp_vendor_acct
+                 WHERE c_acctschema_id = $P{C_AcctSchema_ID})
+             OR c_validcombination_id IN
+                (SELECT v_prepayment_acct
+                 FROM c_bp_vendor_acct
+                 WHERE c_acctschema_id = $P{C_AcctSchema_ID})))
+    AND issotrx.issotrx='N'))
+    AND f.c_acctschema_id = $P{C_AcctSchema_ID}
+    --AND trunc(f.dateacct) >= (CASE WHEN ('2018-07-31' IS NULL OR '2018-07-31'='') THEN TO_DATE('01-01-0001')
+        --ELSE TO_DATE('01-08-2018') END)
+    AND trunc(f.dateacct) <= (CASE WHEN ($P{DateTo} IS NULL OR $P{DateTo}='') THEN TO_DATE('09-09-9999')
+        ELSE TO_DATE($P{DateTo}) END)
+    AND f.ad_table_id not IN ('145')
+ORDER BY f.c_bpartner_id, f.dateacct, f.created]]>
+	</queryString>
+	<field name="dateacct" class="java.sql.Date"/>
+	<field name="datetype" class="java.lang.Boolean"/>
+	<field name="documenttype" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="isactive" class="java.lang.String"/>
+	<field name="debit" class="java.math.BigDecimal"/>
+	<field name="credit" class="java.math.BigDecimal"/>
+	<field name="net" class="java.math.BigDecimal"/>
+	<field name="bpname" class="java.lang.String"/>
+	<field name="skey" class="java.lang.String"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="org_address" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="issotrx" class="java.lang.String"/>
+	<variable name="sumEndingBalanceDebit" class="java.math.BigDecimal" resetType="Group" resetGroup="pRODUCT" calculation="Sum">
+		<variableExpression><![CDATA[$F{debit}]]></variableExpression>
+	</variable>
+	<variable name="sumBeginningBalanceDebit" class="java.math.BigDecimal" resetType="Group" resetGroup="pRODUCT" calculation="Sum">
+		<variableExpression><![CDATA[($F{datetype}.equals(false))? $F{debit}  : 0]]></variableExpression>
+	</variable>
+	<variable name="CountNumber" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<variable name="countProduct" class="java.math.BigDecimal" incrementType="Group" incrementGroup="pRODUCT" calculation="Count">
+		<variableExpression><![CDATA[$F{isactive}=="Y" ? 1 : 0]]></variableExpression>
+	</variable>
+	<variable name="debitSum" class="java.math.BigDecimal" resetType="Group" resetGroup="pRODUCT" calculation="Sum">
+		<variableExpression><![CDATA[$F{datetype}==Boolean.TRUE ? $F{debit} : 0]]></variableExpression>
+	</variable>
+	<variable name="creditSum" class="java.math.BigDecimal" resetType="Group" resetGroup="pRODUCT" calculation="Sum">
+		<variableExpression><![CDATA[$F{datetype}==Boolean.TRUE ? $F{credit} : 0]]></variableExpression>
+	</variable>
+	<variable name="sumEndingBalanceCredit" class="java.math.BigDecimal" resetType="Group" resetGroup="pRODUCT" calculation="Sum">
+		<variableExpression><![CDATA[$F{credit}]]></variableExpression>
+	</variable>
+	<variable name="sumBeginningBalanceCredit" class="java.math.BigDecimal" resetType="Group" resetGroup="pRODUCT" calculation="Sum">
+		<variableExpression><![CDATA[($F{datetype}.equals(false))? $F{credit}  : 0]]></variableExpression>
+	</variable>
+	<group name="pRODUCT">
+		<groupExpression><![CDATA[$F{bpname}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="265" y="0" width="81" height="15" forecolor="#000000" uuid="8a35fa1c-fa13-47d1-a554-234cd6dbcd6c"/>
+					<box leftPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumBeginningBalanceDebit}.intValue() - $V{sumBeginningBalanceCredit}.intValue()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="346" y="0" width="63" height="15" forecolor="#000000" uuid="0fd3a30b-6e64-4d3c-a862-2337c0d41684"/>
+					<box leftPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{debitSum}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="409" y="0" width="63" height="15" forecolor="#000000" uuid="06837b8e-c579-4a1e-986c-86719003b0ee"/>
+					<box rightPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{creditSum}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="472" y="0" width="81" height="15" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="b4b20342-9ebf-412f-8741-c8779f79d0d8"/>
+					<box rightPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+						<rightPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumEndingBalanceDebit}.intValue() - $V{sumEndingBalanceCredit}.intValue()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="76" y="0" width="189" height="15" forecolor="#000000" uuid="f81d013c-bfbb-4633-81fb-db760605e6a0"/>
+					<box leftPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{bpname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="25" y="0" width="51" height="15" forecolor="#000000" uuid="582de948-7c51-4231-9e00-a9dcd6842f0b"/>
+					<box leftPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{skey}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="25" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="455ae154-773c-4c8d-b993-782fdae81f6a"/>
+					<box leftPadding="2">
+						<leftPen lineWidth="0.5" lineColor="#000080"/>
+						<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="DejaVu Sans" size="7" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{countProduct}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-10" x="70" y="98" width="5" height="13" uuid="8804d53d-37da-4c6f-9f32-9e2d3ed39955"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="85" width="68" height="13" uuid="94a9e4fe-a3bd-4890-8b99-6c7b2a3106d0"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Start Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" x="70" y="85" width="5" height="13" uuid="62a25b2d-7c8e-4de0-bc32-11a1fbbcbd75"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="68" height="13" uuid="82f0bfed-57a8-4e3a-8197-8533356050ed"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[End Date]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="76" y="85" width="151" height="13" uuid="6c143800-8d0e-4af0-b0ca-5387cf0094cf"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DateFrom}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="350" y="85" width="203" height="13" uuid="e66f97b7-4afc-4e2f-a8d8-ac8e0739822c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="76" y="98" width="151" height="13" uuid="58c84a75-a76b-49c1-a763-8d5a2a4f81b0"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DateTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="34" width="421" height="20" uuid="8d99a5a2-4092-42fc-9611-a9bc3aa6d844"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((($P{reportType}.equals("ven"))? "VENDOR":"CUSTOMER")+" SUMMARY ACCOUNT")]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText" style="default" x="0" y="15" width="25" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="c8c6e66d-c21c-494b-a7af-2d1c26cba0dd"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" x="409" y="15" width="63" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="275c9638-aa96-4eeb-a270-793e475a606f"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Credit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="265" y="15" width="81" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="db9bba66-b44a-47fd-b1be-629f345f33e5"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Beginning Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="76" y="15" width="189" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="5eca6a6f-a187-43db-9893-c047b588b736"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Customer / Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="25" y="15" width="51" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="06d68ee6-b294-458b-bba0-bc6418b845ba"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="472" y="15" width="81" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="820f8042-5344-4d98-8228-57f5b04a8712"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ending Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="346" y="15" width="63" height="15" forecolor="#0033CC" backcolor="#FFFFFF" uuid="de1dbdc0-9e9a-41ad-89d7-3890c3e51aa0"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Debit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Prevent">
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="25" y="0" width="51" height="15" forecolor="#000000" uuid="30683bdc-1000-4e27-a997-e2aac2df81f6">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skey}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="409" y="0" width="63" height="15" forecolor="#000000" uuid="5981d70f-75e0-4146-9561-777e37e3b428">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{credit}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="25" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="b1734182-1ace-4873-86e2-32a1ce3ed64c">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{CountNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="472" y="0" width="81" height="15" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="e4aab595-db7c-4612-a406-4e04bc981b66">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="346" y="0" width="63" height="15" forecolor="#000000" uuid="272606c9-bafd-4643-8b2a-1dbb40f6c0c6">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{debit}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="76" y="0" width="189" height="15" forecolor="#000000" uuid="267e4d63-fae6-4cd2-8373-de811f195f28">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bpname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="265" y="0" width="81" height="15" forecolor="#000000" uuid="739ae662-8000-4ca9-bd42-58bff6f408a1">
+					<printWhenExpression><![CDATA[$F{isactive}=="Y"]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="7" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19"/>
+	</columnFooter>
+	<lastPageFooter>
+		<band height="24">
+			<staticText>
+				<reportElement key="staticText-3" style="default" x="11" y="8" width="78" height="14" uuid="0f5caa03-cb5d-4e46-92e0-2bef22500c0c"/>
+				<box topPadding="2" leftPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<text><![CDATA[Generated on]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" style="default" x="91" y="8" width="79" height="14" uuid="1e1cd5e4-3957-4c11-8d4d-e01a6d3e0f12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Untitled_report_1" pageWidth="595" pageHeight="421" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="569" leftMargin="13" rightMargin="13" topMargin="13" bottomMargin="13" uuid="6414d4ae-acf7-4133-9f37-12db95e88a03">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.3636363636363635"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["default"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT distinct
+(select printname from c_doctype where c_doctype_id=a.c_doctype_id) as documenttype,
+AD_ORG.NAME as ORG_NAME,
+a.created as date_created,
+I_USER.name as CREATED_BY,
+I_USER.email as USER_EMAIL,
+a.AD_ORG_ID as ORGANIZATIONID,
+a.documentno as DOCUMENT_NO,
+a.quantity as QTY_HEADER,
+c.name as PROCESSPLAN_NAME,
+a.launchdate as WA_CREATED_DATE,
+a.startdate as START_DATE,
+a.enddate as END_DATE,
+a.estimatedtime as ESTIMATED_TIME,
+
+b.seqno as WR_LINE_NO,
+b.quantity as QTY_LINE,
+b.startdate as startdate_line,
+b.enddate as enddate_line,
+b.estimatedtime as estimatedtime_line,
+e."name" as SEQUENCE_NAME_LINE,
+f.name as AVTIVITY_NAME_LINE
+
+from ma_workrequirement a --header WA
+left join MA_WRPhase b on b.ma_workrequirement_id=b.ma_workrequirement_id
+left join MA_ProcessPlan c on a.ma_processplan_id=c.ma_processplan_id
+left join MA_ProcessPlan_Version d on d.ma_processplan_id=c.ma_processplan_id
+left join MA_Sequence e on e.ma_process_id=b.ma_process_id
+left join MA_Process f on b.ma_process_id=f.ma_process_id,
+AD_CLIENT,
+AD_ORG,
+(select b.ad_user_id, b.name, b.email
+	from ma_workrequirement a left join ad_user b on a.createdby=b.ad_user_id
+		where a.ma_workrequirement_id=$P{DOCUMENT_ID}) as I_USER
+where ad_org.ad_org_id=a.ad_org_id
+AND a.ad_client_id = AD_CLIENT.AD_CLIENT_ID
+and a.ma_workrequirement_id=b.ma_workrequirement_id
+AND a.createdby = I_USER.ad_user_id
+and e.ma_processplan_version_id=d.ma_processplan_version_id
+AND a.ma_workrequirement_id = $P{DOCUMENT_ID}
+
+ORDER BY b.seqno asc]]>
+	</queryString>
+	<field name="documenttype" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="date_created" class="java.sql.Timestamp"/>
+	<field name="created_by" class="java.lang.String"/>
+	<field name="user_email" class="java.lang.String"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="document_no" class="java.lang.String"/>
+	<field name="qty_header" class="java.math.BigDecimal"/>
+	<field name="processplan_name" class="java.lang.String"/>
+	<field name="wa_created_date" class="java.sql.Timestamp"/>
+	<field name="start_date" class="java.sql.Timestamp"/>
+	<field name="end_date" class="java.sql.Timestamp"/>
+	<field name="estimated_time" class="java.math.BigDecimal"/>
+	<field name="wr_line_no" class="java.math.BigDecimal"/>
+	<field name="qty_line" class="java.math.BigDecimal"/>
+	<field name="startdate_line" class="java.sql.Timestamp"/>
+	<field name="enddate_line" class="java.sql.Timestamp"/>
+	<field name="estimatedtime_line" class="java.math.BigDecimal"/>
+	<field name="sequence_name_line" class="java.lang.String"/>
+	<field name="avtivity_name_line" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="117" y="20" width="413" height="29" uuid="16344f7a-aced-4f4c-a6b3-24da6bc587af"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Jl. Rawa Bogo No.123 RT.001/RW.003, Kel.Padurenan - Kec.Mustika Jaya
+Bekasi Timur - Jawa Barat]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="52" width="569" height="1" uuid="cf846013-3019-44c9-9391-f723ed9a9f89"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="117" y="0" width="413" height="20" uuid="d9545f39-4e43-439e-b308-e38db3f4a0b0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="0" y="0" width="108" height="49" uuid="ab8bf796-db02-4371-b7bf-252d6a9e3178"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{organizationid})]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="90" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="98" y="21" width="211" height="18" uuid="fb1d1463-dba7-4010-97be-2a83f05bf93c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{document_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="98" y="54" width="210" height="18" uuid="19297401-2661-4f09-b489-4affa71de0a5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{qty_header}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="0" width="308" height="20" uuid="76fbb1c1-c432-4cb3-9d6c-8ef0762ce347"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documenttype}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" x="89" y="21" width="9" height="18" uuid="ffe3d76b-1ec1-4a31-8744-b667ac3fd090"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="89" y="54" width="9" height="18" uuid="0558752b-3df1-4c1e-9e17-0ae5aed30ad2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="89" y="37" width="9" height="18" uuid="94cae80e-61f7-439c-b40f-c31c506942bf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="98" y="37" width="211" height="18" uuid="f6d0fe65-25be-4888-a3e7-4313adf07f3d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{processplan_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-29" x="1" y="54" width="88" height="18" uuid="5794be67-2b3b-4bcf-bc32-3c52ea6fb94e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Quantity Process]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="1" y="37" width="88" height="18" uuid="c6c7e06e-69f4-4f55-be83-edf6d400cf46"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Process Plan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="1" y="21" width="88" height="18" uuid="d6e60ee3-a20d-4408-893c-d2f967bc603c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Document No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="1" y="72" width="88" height="18" uuid="e599eaa0-c5b4-4b8f-ae93-2e6707cacc3a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="89" y="72" width="9" height="18" uuid="b6ae8066-4930-4e97-8155-e55891c63b98"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy" isBlankWhenNull="true">
+				<reportElement x="98" y="72" width="297" height="18" uuid="2014933c-6fb8-4086-93d6-8bc42a3f031b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date_created}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-15" x="1" y="0" width="25" height="18" forecolor="#000000" uuid="1e3cba66-b51c-4a85-afe8-65c29729c12a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="311" y="0" width="93" height="18" forecolor="#000000" uuid="473d85fb-04eb-45c1-8fd1-e11c994c12ea"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Starting Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" x="176" y="0" width="70" height="18" forecolor="#000000" uuid="46487101-d1df-43cf-8bb2-ecd8ea52096d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="26" y="0" width="150" height="18" forecolor="#000000" uuid="038a3d5e-69e7-4291-9f06-42f09ba3d8af"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[MA Sequence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" x="246" y="0" width="66" height="18" forecolor="#000000" uuid="4317fbe5-42ed-4f2f-8543-858c01c65a4b"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="404" y="0" width="81" height="18" forecolor="#000000" uuid="49c8c1ef-802a-4625-9ae3-460a1a6065a4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Ending Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="18" width="569" height="1" uuid="f1fdcb8f-071f-459a-a177-5827fa8f5d3b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="569" height="1" uuid="59b2979f-b64d-4c88-b113-7d0dc2dfa304"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-17" x="485" y="0" width="84" height="18" forecolor="#000000" uuid="aef0dad9-4211-437a-8b9f-fc9afb1d39d3"/>
+				<box rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Qty Progress]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1" y="0" width="25" height="18" uuid="f01c719b-deb7-473a-92e5-e245592808c2"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{wr_line_no}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="176" y="0" width="70" height="18" uuid="ef7b4445-8b7f-4434-90c8-6f5d965a4c07"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{avtivity_name_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="311" y="0" width="93" height="18" uuid="96d651c1-13d5-4c25-9194-5ac3ae77907a"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{startdate_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="246" y="0" width="66" height="18" uuid="fb6fd57b-ce91-4870-ba05-229e557f8fbd"/>
+				<box rightPadding="2">
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{qty_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="404" y="0" width="81" height="18" uuid="6b32795c-a8a4-4b38-bfc3-33221904e43f"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{enddate_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="26" y="0" width="150" height="18" uuid="46fd6bcb-6754-4a97-946c-f427bc56cd16"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sequence_name_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="485" y="0" width="84" height="18" uuid="1baa1529-76ec-43ad-9982-ff684c14144c"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="228" y="0" width="80" height="20" uuid="11655cd1-5519-412e-a1e8-330a25f436ba"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="308" y="0" width="40" height="20" uuid="93466789-83c9-409e-a431-d0133684c0c9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

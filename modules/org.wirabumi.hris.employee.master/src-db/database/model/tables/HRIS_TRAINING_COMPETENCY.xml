@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+  <database name="TABLE HRIS_TRAINING_COMPETENCY">
+    <table name="HRIS_TRAINING_COMPETENCY" primaryKey="HRIS_TRACOMP_KEY">
+      <column name="HRIS_TRAINING_COMPETENCY_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="HRIS_TRAINING_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="HRIS_COMPETENCY_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="COMMENT" primaryKey="false" required="false" type="VARCHAR" size="255" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="AD_CLIENT" name="HRIS_TRACOMP_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="HRIS_COMPETENCY" name="HRIS_TRACOMP_COMPETENCY">
+        <reference local="HRIS_COMPETENCY_ID" foreign="HRIS_COMPETENCY_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="HRIS_TRACOMP_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="HRIS_TRAINING" name="HRIS_TRACOMP_TRAINING">
+        <reference local="HRIS_TRAINING_ID" foreign="HRIS_TRAINING_ID"/>
+      </foreign-key>
+      <index name="HRIS_TRAINING_COMPETENCY_IDX" unique="false">
+        <index-column name="HRIS_TRAINING_ID"/>
+        <index-column name="HRIS_COMPETENCY_ID"/>
+      </index>
+    </table>
+  </database>

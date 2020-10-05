@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="175682FA8C9C43F2A0358C81A523273E" trl="Y">
+    <value column="Name" isTrl="Y" original="Department">Departemen</value>
+    <value column="PrintName" isTrl="N" original="Department">Department</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3D555B48EAF642CC97354CB6DEA2FC88" trl="Y">
+    <value column="Name" isTrl="Y" original="Interest">Bunga</value>
+    <value column="PrintName" isTrl="N" original="Interest">Interest</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3EB16F792D2744ACA56F38A15F30B872" trl="Y">
+    <value column="Name" isTrl="Y" original="Bill Request">Pengajuan Tagihan</value>
+    <value column="PrintName" isTrl="N" original="Bill Request">Bill Request</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="50BA61D4578848DD8FB0C262D89F1D80" trl="Y">
+    <value column="Name" isTrl="Y" original="Bill Total">Jumlah Tagihan</value>
+    <value column="PrintName" isTrl="N" original="Bill Total">Bill Total</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="52F427F1AC7D4D7BA8A4B45BC99AA3D1" trl="Y">
+    <value column="Name" isTrl="Y" original="Loan Request">Pengajuan Pinjaman</value>
+    <value column="PrintName" isTrl="N" original="Loan Request">Loan Request</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="86D445942E39401D85CC0333074B9BEA" trl="Y">
+    <value column="Name" isTrl="Y" original="Loan Statement">Laporan Pinjaman</value>
+    <value column="PrintName" isTrl="N" original="Loan Statement">Loan Statement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="982F91D983474D3185782096FD812BD1" trl="Y">
+    <value column="Name" isTrl="Y" original="Paid">di Bayar</value>
+    <value column="PrintName" isTrl="N" original="Paid">Paid</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A4A64D1745824FA28839A812DA45C932" trl="N">
+    <value column="Name" isTrl="N" original="LN_Bill_Detail_ID">LN_Bill_Detail_ID</value>
+    <value column="PrintName" isTrl="N" original="LN_Bill_Detail_ID">LN_Bill_Detail_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C46AEA7446424F6AA1A7C1DA9C1383DE" trl="Y">
+    <value column="Name" isTrl="Y" original="Duration">Durasi</value>
+    <value column="PrintName" isTrl="N" original="Duration">Duration</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E94DB1921FC34BDE9594439A755094FD" trl="N">
+    <value column="Name" isTrl="N" original="Installments">Installments</value>
+    <value column="PrintName" isTrl="N" original="Installments">Installments</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="170105CCEBBA4EDBA38C09695FB03E70" trl="N">
+    <value column="Text" isTrl="N" original="amount">amount</value>
+  </row>
+  <row id="18295F4CB539441B9859C29C8189396A" trl="N">
+    <value column="Text" isTrl="N" original="Bonus">Bonus</value>
+  </row>
+  <row id="1D179F347E0D4D65AE03319B6B5111C7" trl="N">
+    <value column="Text" isTrl="N" original="Terbilang :">Terbilang :</value>
+  </row>
+  <row id="1D41393521E94E7A8599108707916339" trl="N">
+    <value column="Text" isTrl="N" original="NIK/Nama">NIK/Nama</value>
+  </row>
+  <row id="1FCA883A78D842E994963F1CBC83D1FB" trl="N">
+    <value column="Text" isTrl="N" original="Golongan">Golongan</value>
+  </row>
+  <row id="225B12B03B2741B09686A3A79FE695F6" trl="N">
+    <value column="Text" isTrl="N" original="Total Potongan">Total Potongan</value>
+  </row>
+  <row id="2477E55ADECF431F9D93F193D0517014" trl="N">
+    <value column="Text" isTrl="N" original="Take Home Pay">Take Home Pay</value>
+  </row>
+  <row id="283D6C0742AB428892D8C0298C6E33C3" trl="N">
+    <value column="Text" isTrl="N" original="SLIP GAJI">SLIP GAJI</value>
+  </row>
+  <row id="2F305FCBECC241CC9FB9ACAE57EC4046" trl="N">
+    <value column="Text" isTrl="N" original="Total Penerimaan">Total Penerimaan</value>
+  </row>
+  <row id="395EDD579F144A4C85FB5F0548A591A6" trl="N">
+    <value column="Text" isTrl="N" original="Golongan">Golongan</value>
+  </row>
+  <row id="3A48D97FF8AF42D4B75C3E0F0BCB1FA8" trl="N">
+    <value column="Text" isTrl="N" original="Effective Date">Effective Date</value>
+  </row>
+  <row id="40633B97B5C24006BFA71BD64953B323" trl="N">
+    <value column="Text" isTrl="N" original="Payroll Master">Payroll Master</value>
+  </row>
+  <row id="4B40DBA2903B4CA4973A84ECA65B63A8" trl="N">
+    <value column="Text" isTrl="N" original="SLIP GAJI">SLIP GAJI</value>
+  </row>
+  <row id="4DDADCE3254F4F7F8031D229730C736E" trl="N">
+    <value column="Text" isTrl="N" original="Other Disinsentive">Other Disinsentive</value>
+  </row>
+  <row id="53AC899FDB2445479959117BA820B543" trl="N">
+    <value column="Text" isTrl="N" original="Ditransfer Ke :">Ditransfer Ke :</value>
+  </row>
+  <row id="6DD474D9DB414BFFAD5ABC8706B50C0D" trl="N">
+    <value column="Text" isTrl="N" original="Diterima Oleh :">Diterima Oleh :</value>
+  </row>
+  <row id="7C595169367347AAAEA4E1E1C8E1DDA2" trl="N">
+    <value column="Text" isTrl="N" original="name">name</value>
+  </row>
+  <row id="7D7B8F3D77244D55A4C9B8FBD471224C" trl="N">
+    <value column="Text" isTrl="N" original="Unit Kerja">Unit Kerja</value>
+  </row>
+  <row id="85355BABDB3F4481886E26D9458D01F8" trl="N">
+    <value column="Text" isTrl="N" original="Performance Disinsentive">Performance Disinsentive</value>
+  </row>
+  <row id="91584CA3E78F407C97560E189C9EB3EE" trl="N">
+    <value column="Text" isTrl="N" original="Total Penerimaan">Total Penerimaan</value>
+  </row>
+  <row id="9301E3FB12264BB8A7F3DAF60479AAD6" trl="N">
+    <value column="Text" isTrl="N" original="Monthly">Monthly</value>
+  </row>
+  <row id="9516F1DF3511478A8E6EFBD12ED426C4" trl="N">
+    <value column="Text" isTrl="N" original="Salary Payment Summary Report">Salary Payment Summary Report</value>
+  </row>
+  <row id="963E48FC08C348D3A7798D8141D9D8A8" trl="N">
+    <value column="Text" isTrl="N" original="Dibuat Oleh :">Dibuat Oleh :</value>
+  </row>
+  <row id="A116B1B52E9942EABAF9693FFA0BB3FF" trl="N">
+    <value column="Text" isTrl="N" original="name">name</value>
+  </row>
+  <row id="AB24C4DABB604FE8945AB0A7A19C1691" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="AED38ABAE5BA47E5B127CEF5E7FF89AC" trl="N">
+    <value column="Text" isTrl="N" original="Departemen">Departemen</value>
+  </row>
+  <row id="BE47D859F82645BB9588DA702A798CC5" trl="N">
+    <value column="Text" isTrl="N" original="Take Home Pay">Take Home Pay</value>
+  </row>
+  <row id="C39A21CAB6C743AD9D86BCE898233DAE" trl="N">
+    <value column="Text" isTrl="N" original="Total Potongan">Total Potongan</value>
+  </row>
+  <row id="C812E60EE3954CC6B0F72C864D8D84F8" trl="N">
+    <value column="Text" isTrl="N" original="Ending Date">Ending Date</value>
+  </row>
+  <row id="CC85234FD90940A597A9E6CB26D6E61F" trl="N">
+    <value column="Text" isTrl="N" original="Take Home Pay">Take Home Pay</value>
+  </row>
+  <row id="D4840240C1644660A997DA79EB51633E" trl="N">
+    <value column="Text" isTrl="N" original="Performance Insentive">Performance Insentive</value>
+  </row>
+  <row id="D6FEC3D37014408D9DE9719DAD51DD2A" trl="N">
+    <value column="Text" isTrl="N" original="amount">amount</value>
+  </row>
+  <row id="D7872A0D9B5C421CB7945CF85CE8464F" trl="N">
+    <value column="Text" isTrl="N" original="Accounting Date">Accounting Date</value>
+  </row>
+  <row id="EB33D25508294905A8E66A234AD3E590" trl="N">
+    <value column="Text" isTrl="N" original="Other Insentive">Other Insentive</value>
+  </row>
+  <row id="FE3F97EC4F7D4BD1BD6DCDD57293FE57" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="FE8B64C410BE4CA194378848815B6DB5" trl="N">
+    <value column="Text" isTrl="N" original="NIK/Nama">NIK/Nama</value>
+  </row>
+</compiereTrl>

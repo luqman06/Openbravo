@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_C_BP_DEPARTMENT_TRG">
+    <trigger name="HRIS_C_BP_DEPARTMENT_TRG" table="HRIS_C_BP_DEPARTMENT" fires="before" insert="true" update="false" delete="false" foreach="row">
+      <body><![CDATA[
+v_xTree_ID varchar;
+v_xParent_ID varchar;
+v_clientname varchar;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+    
+    select name into v_clientname from ad_client where ad_client_id = :new.ad_client_id;
+
+    -- definisi trigger
+    IF (TG_OP='INSERT') THEN
+	--get tree type
+	select b.em_hris_tree_department, a.node_id
+		INTO  v_xTree_ID, v_xParent_ID
+		from ad_treenode a
+        inner join ad_clientinfo b on b.ad_client_id=a.ad_client_id
+        where a.parent_id is null
+        and b.em_hris_tree_department=a.ad_tree_id
+        and b.ad_client_id=:new.AD_Client_ID;
+        
+    if (v_xTree_ID is null) then
+		RAISE EXCEPTION '%', 'Company '||v_clientname||' has no setting for Department Tree Type.'||
+		' Please set department tree type at client information window. ';
+	end if;
+
+	--insert tree node
+	INSERT INTO ad_treenode
+         (ad_treenode_id, AD_Client_ID, AD_Org_ID,
+         IsActive, Created, CreatedBy, Updated, UpdatedBy,
+         AD_Tree_ID, Node_ID,
+         Parent_ID, SeqNo)
+	VALUES
+         (get_uuid(), :new.AD_Client_ID, :new.AD_Org_ID,
+         :new.IsActive, :new.Created, :new.CreatedBy, :new.Updated, :new.UpdatedBy,
+         v_xTree_ID, :new.hris_c_bp_department_id,
+         v_xParent_ID, (CASE :new.IsSummary WHEN 'Y' THEN 100 ELSE 999 END));     -- Summary Nodes first
+      
+    END IF;
+    
+    
+END HRIS_C_BP_DEPARTMENT_TRG
+]]></body>
+    </trigger>
+  </database>

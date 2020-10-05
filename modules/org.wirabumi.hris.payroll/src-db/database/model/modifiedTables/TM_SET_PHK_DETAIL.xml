@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE TM_SET_PHK_DETAIL">
+    <table name="TM_SET_PHK_DETAIL" primaryKey="TM_SET_PHK_DETAIL_KEY">
+      <column name="EM_PYR_EARNING_PARAM_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="PYR_EARNING_PARAM" name="EM_PYR_PHKDETAIL_EARNINGPARAM">
+        <reference local="EM_PYR_EARNING_PARAM_ID" foreign="PYR_EARNING_PARAM_ID"/>
+      </foreign-key>
+    </table>
+  </database>

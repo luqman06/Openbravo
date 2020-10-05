@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_EMPLOYEEDEFAULT_TRG">
+    <trigger name="HRIS_EMPLOYEEDEFAULT_TRG" table="C_BPARTNER" fires="before" insert="true" update="false" delete="false" foreach="row">
+      <body><![CDATA[v_employeebpgroup VARCHAR;
+
+
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- set business partner category and isemployee='Y'
+    if :new.em_hris_iswindowemployee='Y' then
+	select c_bp_group_id into v_employeebpgroup from c_bp_group where ad_client_id=:new.ad_client_id
+	and em_hris_isemployee='Y'
+	limit 1;
+
+	:new.c_bp_group_id=v_employeebpgroup;
+	:new.isemployee='Y';
+    end if;
+
+    --set validto
+    if :new.em_hris_retirementdate is not null then :new.em_hris_validto:=:new.em_hris_retirementdate; end IF;
+    
+END HRIS_EMPLOYEEDEFAULT_TRG
+]]></body>
+    </trigger>
+  </database>

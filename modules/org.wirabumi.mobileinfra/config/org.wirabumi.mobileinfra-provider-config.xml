@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider>
+  <bean>
+      <name>validateUserAccount</name>
+      <class>org.wirabumi.mobileinfra.service.UserAccountService.ValidateUserAccount</class>
+      <singleton>true</singleton>
+  </bean>
+  <bean>
+      <name>getPrintPDF</name>
+      <class>org.wirabumi.mobileinfra.service.PrintService.PrintDocumentService</class>
+      <singleton>true</singleton>
+  </bean>
+</provider>

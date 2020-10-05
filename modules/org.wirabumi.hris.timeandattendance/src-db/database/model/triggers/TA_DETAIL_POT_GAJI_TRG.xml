@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER TA_DETAIL_POT_GAJI_TRG">
+    <trigger name="TA_DETAIL_POT_GAJI_TRG" table="TA_DETAIL_POT_GAJI" fires="before" insert="true" update="true" delete="true" foreach="row">
+      <body><![CDATA[
+/*************************************************************************
+* The contents of this file are subject to the Openbravo  Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+* Version 1.1  with a permitted attribution clause; you may not  use this
+* file except in compliance with the License. You  may  obtain  a copy of
+* the License at http://www.openbravo.com/legal/license.html
+* Software distributed under the License  is  distributed  on  an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+* License for the specific  language  governing  rights  and  limitations
+* under the License.
+* The Original Code is Openbravo ERP.
+* The Initial Developer of the Original Code is Openbravo SLU
+* All portions are Copyright (C) 2008-2009 Openbravo SLU
+* All Rights Reserved.
+* Contributor(s):  ______________________________________.
+************************************************************************/
+  v_DocStatus VARCHAR(60);
+      
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+  IF INSERTING THEN
+    select docstatus into v_DocStatus 
+    from ta_akumulasi_pot_gaji where ta_akumulasi_pot_gaji_id=:new.ta_akumulasi_pot_gaji_id;
+  ELSE
+    select docstatus into v_DocStatus 
+    from ta_akumulasi_pot_gaji where ta_akumulasi_pot_gaji_id=:old.ta_akumulasi_pot_gaji_id;
+  END IF;
+
+
+  IF (v_DocStatus = 'CL') THEN
+    RAISE_APPLICATION_ERROR(-20527, 'It is not possible to modify a closed Potong Gaji');
+  END IF;
+  
+  IF (v_DocStatus = 'CO' AND INSERTING) THEN
+    RAISE_APPLICATION_ERROR(-20525, 'It is not possible insert a new line in a completed Potong Gaji');
+  END IF;
+  
+  IF (v_DocStatus = 'CO' AND DELETING) THEN
+    RAISE_APPLICATION_ERROR(-20000, '@20501@');
+  END IF;
+
+  IF UPDATING THEN
+    IF ((COALESCE(:old.c_bpartner_id, '.') <> COALESCE(:new.c_bpartner_id,'.'))
+       OR (COALESCE(:old.ta_akumulasi_pot_gaji_id, '0') <> COALESCE(:new.ta_akumulasi_pot_gaji_id, '0'))
+       OR (COALESCE(:old.Dayminutes, -1) <> COALESCE(:new.Dayminutes, -1 ))
+       OR (COALESCE(:old.date, TO_DATE('31-12-9999', 'DD-MM-YYYY')) <> COALESCE(:new.date, TO_DATE('31-12-9999', 'DD-MM-YYYY')))
+       ) THEN
+    IF (v_DocStatus = 'CO') THEN
+       RAISE_APPLICATION_ERROR(-20522, 'It is not possible to modify a Detail when the Potong Gaji is completed');
+
+     END IF;
+    END IF;
+  END IF;
+
+END TA_DETAIL_POT_GAJI_TRG
+]]></body>
+    </trigger>
+  </database>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="14CF71E6C96D4216ACA0F62D229D3391" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Termination)">Tarif PHK</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3965452986874368B6A74394E0BFFA6A" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Pension)">Tarif Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4F3D1449ECC343E6B47AA5CE5A7CCAE8" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Resign)">Tarif Uang Pisah</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="55BC32EE412448DBBF61C4FED619B3F1" trl="N">
+    <value column="Name" isTrl="Y" original="Termination and Retirement">Pemberhentian dan Pensiun</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6A3572AECBAC4DF4B780F93AEEFFB408" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Setup For Termination">Setup For Termination</value>
+  </row>
+  <row id="7F96C0684BD14C769D3CF34DF3343C3E" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Payment">Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8E7D1497DB3B49DF8D0D1F422A0D5C5A" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Termination">Pemutusan Hubungan Kerja</value>
+    <value column="Description" isTrl="Y" original="Employee Termination">Pemutusan Hubungan Kerja</value>
+  </row>
+  <row id="9CBEF97E7D6E4FB682BE6E3E5F4E991E" trl="N">
+    <value column="Name" isTrl="N" original="Print Death Certificate">Print Death Certificate</value>
+    <value column="Description" isTrl="N" original="Print Death Certificate">Print Death Certificate</value>
+  </row>
+</compiereTrl>

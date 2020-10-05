@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="028FC2BD7DF94734B7AADFEEA5838650" trl="N">
+    <value column="Name" isTrl="N" original="Punishment">Punishment</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="02F3F3FEFA5540778B97D098E1F5C867" trl="N">
+    <value column="Name" isTrl="Y" original="Punishment Classification">Klasifikasi Hukuman</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="02FD063295004374818343A44E4A2E65" trl="N">
+    <value column="Name" isTrl="Y" original="Insurance Provider">Penyedia Jasa Asuransi</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0342A4B740E6441FAFAA1DF8E0EFDA3E" trl="N">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="05ABF10D84FD4626977C701DBED12800" trl="N">
+    <value column="Name" isTrl="Y" original="Education">Tingkat Pendidikan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="09D3E10FFF884665AE0755F8FDA5165C" trl="N">
+    <value column="Name" isTrl="N" original="Violation">Violation</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0B2EB787E51F4C98BB23E9528FF39BD5" trl="N">
+    <value column="Name" isTrl="N" original="Achievement">Achievement</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0BD4AAC95D8C4E7BBD47D380ED4D86B2" trl="N">
+    <value column="Name" isTrl="N" original="Education Exam">Education Exam</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="104077DD28984CF1AE33569DE7524B34" trl="N">
+    <value column="Name" isTrl="Y" original="Salary">Template Gaji</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="10BF8B886AE84413803C70591178CBD8" trl="N">
+    <value column="Name" isTrl="Y" original="Punishment">Disciplinary</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="12D2A092744744E2840B4DB0BC73D806" trl="N">
+    <value column="Name" isTrl="Y" original="KPI Measurement">Pengukuran KPI</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="KPI measurement, define a target for selected period, and put the actual achievement.">Pengukuran KPI, menentukan taget per periode (biasanya bulanan), kemudian memasukkan pencapaian aktual.</value>
+  </row>
+  <row id="13A147E167144EDCAFF6CED1FABB2F6D" trl="N">
+    <value column="Name" isTrl="N" original="Header">Header</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1596835870E84B6FB43FF74F274EF2F2" trl="N">
+    <value column="Name" isTrl="Y" original="Dependent">Anggota Keluarga</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="16C9B2A900B042C29096FE29C33A5809" trl="N">
+    <value column="Name" isTrl="Y" original="Term Loan">Pinjaman Berjangka</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="17058A8D984C4658A663468E871149DF" trl="N">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="18BD2DCF35C34ECB9C54E16EC0A6B1FF" trl="N">
+    <value column="Name" isTrl="N" original="General Exam">General Exam</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="19D57AF84677431CB0BF77C77181CD8A" trl="N">
+    <value column="Name" isTrl="Y" original="Punishment">Hukuman</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="19EC2E4831334347AB9A16427DA37AAC" trl="N">
+    <value column="Name" isTrl="N" original="Employee Case">Employee Case</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1BEB3AACD1F84DF8B6011BA3DA7B307E" trl="N">
+    <value column="Name" isTrl="Y" original="Pay Slip">Slip Gaji</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1BF83A9DD38B40B8AE3297E104351672" trl="N">
+    <value column="Name" isTrl="N" original="Department">Department</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1CBA9F095B3A45ED87D522982EC09AB2" trl="N">
+    <value column="Name" isTrl="N" original="Detail">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1D38E4152C80474893229A572CF008AE" trl="N">
+    <value column="Name" isTrl="N" original="Withholding">Withholding</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="22ABCE1E5F64429DA8D481FABA2082DA" trl="N">
+    <value column="Name" isTrl="Y" original="Dependent">Anggota Keluarga</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="279A50ACCCD04BBF9F9D8FEFC4B08A7B" trl="N">
+    <value column="Name" isTrl="N" original="Inform">Inform</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="29A7EA0199144225884EFA812F8E487A" trl="N">
+    <value column="Name" isTrl="Y" original="Job Title">Jabatan Lengkap</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="">Jabatan Lengkap</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="">Kombinasi antara jabatan dan organisasi, membentu sebuah jabatan lengkap.
+contohnya:
+organisasi: Divisi Regional Jawa Timur
+jabatan: Kepala Seksi Anggaran
+jabatan lengkap: Kepala Seksi Anggaran Jawa Timur</value>
+  </row>
+  <row id="2AE11C1933864D93A21019D16C9150E9" trl="N">
+    <value column="Name" isTrl="N" original="Lines">Lines</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2CA61B1C84AC47909019821DABA7F65B" trl="N">
+    <value column="Name" isTrl="N" original="Usulan Perubahan Data Keluarga">Usulan Perubahan Data Keluarga</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2D277EEC1D4A4B05BD442B8E89B3B937" trl="N">
+    <value column="Name" isTrl="Y" original="Premium">Premi Asuransi</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2F58CF1AABC9491D8F4A36F076DFD7FE" trl="N">
+    <value column="Name" isTrl="N" original="Competency">Competency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="305AD2D760F84EBC97F43A7DDD6D496D" trl="N">
+    <value column="Name" isTrl="N" original="Certificate/License">Certificate/License</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3290AE4BFF19456F968B5A56B71533D3" trl="N">
+    <value column="Name" isTrl="N" original="Consult">Consult</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="32B074A9E5A14786A19A2DD3976314F1" trl="N">
+    <value column="Name" isTrl="N" original="Violation Catalogue">Violation Catalogue</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="33642B8BBEF948EE8F46BE291C7D38FB" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="359E09AD556D40D2BD4D90FEB35DC182" trl="N">
+    <value column="Name" isTrl="N" original="Training">Training</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="36BC7A0B077B4BA4A07944D3D75D1CB0" trl="N">
+    <value column="Name" isTrl="N" original="KPI Measurement">KPI Measurement</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="37DA431D962C4657B6DCE318474F6C36" trl="N">
+    <value column="Name" isTrl="N" original="Certificate/License">Certificate/License</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3C674032524E45019CEF9CD701B86E99" trl="N">
+    <value column="Name" isTrl="N" original="Exc. Job Title">Exc. Job Title</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3F3F6BB2D81741CB95595D47D13C7D32" trl="N">
+    <value column="Name" isTrl="Y" original="Benefits">Benefit</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="447946494706428DBAEEE75AE836F6F0" trl="N">
+    <value column="Name" isTrl="Y" original="Training Plan">Usulan Pelatihan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4D4B1DA5EAC84EB19D0F60E5E8B88065" trl="N">
+    <value column="Name" isTrl="N" original="Job Title">Job Title</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Job Title">Job Title</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4D93F18EDAA2448DA8E83500800E66CD" trl="N">
+    <value column="Name" isTrl="N" original="Achievement">Achievement</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4F6A92139C0F437D9ED4BB6033674360" trl="N">
+    <value column="Name" isTrl="N" original="User Roles">User Roles</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Edit roles for the selected user.">Edit roles for the selected user.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Roles are the connection between users and access rights. Each user can have more than one role assigned,  however a user can only log into Openbravo by using just one role. ">Roles are the connection between users and access rights. Each user can have more than one role assigned,  however a user can only log into Openbravo by using just one role. </value>
+  </row>
+  <row id="51893B76A6AE4A25B3ADF3B0EF8DF9F0" trl="N">
+    <value column="Name" isTrl="Y" original="Bank Account">Rekening Bank</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="51DC4FD650DE4DCB8786B501F77CE357" trl="N">
+    <value column="Name" isTrl="Y" original="Resignation Request">Permohonan Pengunuduran Diri</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5397BF2F238B482388E8E8CFACED2BBF" trl="N">
+    <value column="Name" isTrl="Y" original="Competency">Kompetensi</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="">Kompetensi</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="">Kompetensi yang harus dikuasai seoarang karyawan jika ingin menduduki jabatan ini.</value>
+  </row>
+  <row id="5568265411214E85A1FA88717737C41D" trl="N">
+    <value column="Name" isTrl="N" original="Education Permit">Education Permit</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="55757235859C4BD9B144AE70E45EF4D8" trl="N">
+    <value column="Name" isTrl="N" original="Education">Education</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="56F288E5C2664B399FA17D4737F9B952" trl="N">
+    <value column="Name" isTrl="N" original="Training Dependency">Training Dependency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="57F3695C35DA44F18B9B5C2DB7AE721C" trl="N">
+    <value column="Name" isTrl="N" original="Competency">Competency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Competency">Competency</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="">daftar kompetensi</value>
+  </row>
+  <row id="594722934F3B44AF98E1325C7159888B" trl="N">
+    <value column="Name" isTrl="N" original="Certificate/License">Certificate/License</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5985DF8DDC394995B357A26C5A4D82C5" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Template">Deduction Template</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5CBDEB56A56E41C9A6D544E7EFE9B505" trl="N">
+    <value column="Name" isTrl="N" original="Contract">Contract</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5E122245905847EB9BF42CA9F73A4D0A" trl="N">
+    <value column="Name" isTrl="Y" original="Major Challenge">Tangangan Utama</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="600CAE81D90A4BFD92E567B1F3646C83" trl="N">
+    <value column="Name" isTrl="N" original="Earning Template">Earning Template</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="62940FD573F748C786ECE2D39CA55221" trl="N">
+    <value column="Name" isTrl="N" original="Salary">Salary</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="64103AE3A9834E2B91C9DAB765613FBF" trl="N">
+    <value column="Name" isTrl="Y" original="Competency Dependency">Prasyarat Kompetensi</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="employee should be grant for required competencies before attend this training.">karyawan harus memiliki serangkaian kompetensi sebelum bisa mengikuti pelatihan ini.</value>
+  </row>
+  <row id="66A501261DF545E5BF3207E311863E5C" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Case">Pelanggaran Kepegawaian</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6B18191025684022BA413BE804A0E9B2" trl="N">
+    <value column="Name" isTrl="N" original="KPI Jobtitle">KPI Jobtitle</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6B76DFBB2D75484FBCB352DE4411836D" trl="N">
+    <value column="Name" isTrl="Y" original="Position Rule">Aturan Jabatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="rule to assign an employee to a position">aturan menempatkan karyawan pada jabatan tertentu.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="rule to assign an employee to a position. A Position is subject to certain echelon and employee grade.">aturan menempatkan karyawan pada jabatan tertentu. sebuah jabatan hanya bisa ditempati oleh karyawan dengan jenjang jabatan dan pangkat/golongan tertentu</value>
+  </row>
+  <row id="6B81683579C64E46BD126D18A60E5DFD" trl="N">
+    <value column="Name" isTrl="N" original="Location/Address">Location/Address</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6B98966933B54FC0A2A3ACB140BBD23C" trl="N">
+    <value column="Name" isTrl="N" original="Job Experience">Job Experience</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6DF776924B3049FCB41C16BC3B5B44C3" trl="N">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E82898F514346199DA0594A3BC6640C" trl="N">
+    <value column="Name" isTrl="N" original="OpenID Identifier">OpenID Identifier</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="763A74859CAA47E08957F0B807E0B559" trl="N">
+    <value column="Name" isTrl="Y" original="Dependent">Anggota Keluarga</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7E00DB4333F34C788791E536D1C1D659" trl="N">
+    <value column="Name" isTrl="N" original="Achievement">Achievement</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7FED992BAA7547B783165760542636E0" trl="N">
+    <value column="Name" isTrl="N" original="KPI Version">KPI Version</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="KPI version for a job title, we can used to compare between KPI version.">KPI version for a job title, we can used to compare between KPI version.</value>
+  </row>
+  <row id="80CE2F0BE44943BC892B8956D4EEFF9F" trl="N">
+    <value column="Name" isTrl="N" original="Bank Account">Bank Account</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="88C3316EFC4A4A73B6089D1B46F470B2" trl="N">
+    <value column="Name" isTrl="N" original="Competency">Competency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="88CD5303FC344B82A69A69C20D66E80D" trl="N">
+    <value column="Name" isTrl="N" original="Training">Training</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8A5D8182F63A4294B641AE3FAFF15EE3" trl="N">
+    <value column="Name" isTrl="N" original="ARCI Matrix">ARCI Matrix</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8B4F3A42D1B4430CA639C57D95B98425" trl="N">
+    <value column="Name" isTrl="N" original="Job Experience">Job Experience</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="917B914B20B94D5890C99770C92725BE" trl="N">
+    <value column="Name" isTrl="Y" original="Insurance Payee">Claimed From</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="927422ED5C3343218829D257813B5627" trl="N">
+    <value column="Name" isTrl="N" original="Competency">Competency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="92EDBA30BC784ADEAC05BDB562BBB7F3" trl="N">
+    <value column="Name" isTrl="N" original="Accountable">Accountable</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="959697916ACF4460B60D9AAC43062D51" trl="N">
+    <value column="Name" isTrl="N" original="Achievement">Achievement</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="991C05CEDD06434F9C38BCDD9F816651" trl="N">
+    <value column="Name" isTrl="N" original="Key Performance Indicator">Key Performance Indicator</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Key Performance Indicator master data">Key Performance Indicator master data</value>
+  </row>
+  <row id="9C9914E7660644619BB8BE8F31740FC1" trl="N">
+    <value column="Name" isTrl="Y" original="Import Employee Candidate">Import Calon Pegawai</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9ED27EBED14F40B88235B9555A1113CE" trl="N">
+    <value column="Name" isTrl="N" original="Diciplinary">Diciplinary</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A09A7392EB9A482790E6317645EA7CB2" trl="N">
+    <value column="Name" isTrl="N" original="Training">Training</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A245340A455F4B89B74BB0A03975AF61" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Transfer">Mutasi Karyawan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Transfer employee to another region, site or department.">Mutasi karyawan ke daerah, wilayah, atau departemen lain.</value>
+  </row>
+  <row id="A486C197E15F43E5AF9CB9EB100D6039" trl="N">
+    <value column="Name" isTrl="N" original="Training">Training</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A73B5127487F4537BAFFF13149999D86" trl="N">
+    <value column="Name" isTrl="N" original="User Account">User Account</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Create users of the application.">Create users of the application.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="User window allows to create as many Openbravo users as required. Each person accessing Openbravo can have a different user assigned.">User window allows to create as many Openbravo users as required. Each person accessing Openbravo can have a different user assigned.</value>
+  </row>
+  <row id="A7EDE60874D549F98F2EBD263C9ACAF7" trl="N">
+    <value column="Name" isTrl="Y" original="Job Description">Deskripsi Pekerjaan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="ABC370229FF74B32B7E112A347DF565D" trl="N">
+    <value column="Name" isTrl="N" original="Location/Address">Location/Address</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AF09725F432445CBA28C2B5F8B57D818" trl="N">
+    <value column="Name" isTrl="N" original="Education Dicipline">Education Dicipline</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AF4EF786B0BE435398074096C7519D10" trl="N">
+    <value column="Name" isTrl="Y" original="Working Experience">Pengalaman Kerja</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B07FD79418714283960722FDCDE6CF14" trl="N">
+    <value column="Name" isTrl="N" original="Education">Education</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B3A69D109B744D5F98A4025C0E84028C" trl="N">
+    <value column="Name" isTrl="N" original="Responsible">Responsible</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B4FB58D869DD444B857A5A862473F7AF" trl="N">
+    <value column="Name" isTrl="N" original="Submit New Employee Contact">Submit New Employee Contact</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BA06CC2649B742869B8508367FBC117B" trl="N">
+    <value column="Name" isTrl="N" original="Competency">Competency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BB521B3479F84BEF957019ECC793794A" trl="N">
+    <value column="Name" isTrl="Y" original="Reimbursment">Uang Pengganti</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="reimbursment request">Uang Pengganti</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Reimbursment request">klaim Uang Pengganti</value>
+  </row>
+  <row id="BDBAF35B10E94490B075E5EB0D46DC6B" trl="N">
+    <value column="Name" isTrl="N" original="Education">Education</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C0B706C272C04896A6F4BC73169A4653" trl="N">
+    <value column="Name" isTrl="N" original="Job Experience">Job Experience</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C1EA1E95EC0C4708B4659908CBCA7CAE" trl="N">
+    <value column="Name" isTrl="N" original="My Information">My Information</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C4BEF67940924793A8BBFB1A2669BE5E" trl="N">
+    <value column="Name" isTrl="Y" original="Retirment Lines">Rincian</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C73AC62DDE5E45ECA1261977A149970D" trl="N">
+    <value column="Name" isTrl="Y" original="Cost Center Rule">Aturan Pusat Biaya Karyawan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="Cost Center Rule">Aturan Pusat Biaya Karyawan</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="rule to assign an Employee to a Job Title. A Job title is subject to certain employee cost center.">aturan menempatkan karyawan pada jabatan lengkap. jabatan lengkap hanya bisa diduki oleh karyawan dengan pusat biaya tertentu.</value>
+  </row>
+  <row id="C75328E55DA848E4957D1CD132FB0ED8" trl="N">
+    <value column="Name" isTrl="N" original="General Exam Line">General Exam Line</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CBB0C41182C94E9A8199EE7ED5A8DD2B" trl="N">
+    <value column="Name" isTrl="Y" original="Salary Back Payment">Rapel Gaji</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CDA4B3B683DE42FEB272113481910244" trl="N">
+    <value column="Name" isTrl="N" original="Job Experience">Job Experience</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CEA3F04F716E4DE9804D3415A1B754B5" trl="N">
+    <value column="Name" isTrl="N" original="Calendar">Calendar</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CF4A21976ABF48A593D9D77670496765" trl="N">
+    <value column="Name" isTrl="Y" original="Contract">Kontrak Kerja</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D012D8D3BEF94C8B9126D69369F176A5" trl="N">
+    <value column="Name" isTrl="Y" original="Contract">Kontrak Kerja</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D07D79692A714EB2B1AEFA56EDFE62FE" trl="N">
+    <value column="Name" isTrl="Y" original="Retirement">Pensiun Karyawan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D0CEA9817FD64D90B2A58015BF32025B" trl="N">
+    <value column="Name" isTrl="Y" original="Violation">Pelanggaran</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D3D8F60BB06443A68D180F25D3609687" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D3FA0BCD78554D5D95526C2504EB0D35" trl="N">
+    <value column="Name" isTrl="Y" original="Lines">Rincian</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D3FF289E5CC147E5BAE63BCE6BD7A70E" trl="N">
+    <value column="Name" isTrl="Y" original="Training Attendee">Peserta Pelatihan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D59E56D86EAA4CFCA3B7F3A621F49026" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D6EE167C442F4734AB867F5672FE2544" trl="N">
+    <value column="Name" isTrl="N" original="Employee Grade Rule">Employee Grade Rule</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D9A15C0A4093472A89741A6A44A1E735" trl="N">
+    <value column="Name" isTrl="N" original="KPI">KPI</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="a set of KPI for a job title">serangkaian KPI pada jabatan lengkap.</value>
+  </row>
+  <row id="D9F14D1211D14AE896DCB2F2EF635D26" trl="N">
+    <value column="Name" isTrl="Y" original="KPI Category">Kategori KPI</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="KPI Category">Kategori KPI</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="group of KPI, considered as KPI outcome">kelompok KPI, bisa dikatakan sebagai output KPI.</value>
+  </row>
+  <row id="DC87B092D5A74729B510925B0EDFDBDF" trl="N">
+    <value column="Name" isTrl="N" original="Site">Site</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E2B82B1AFA294E90BE6ECD557587623C" trl="N">
+    <value column="Name" isTrl="N" original="Employee Membership">Employee Membership</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E9130C1D656741E5BAFC0418530A1FB0" trl="N">
+    <value column="Name" isTrl="N" original="Header">Header</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F266829515AA4809A33E96514FE2D460" trl="N">
+    <value column="Name" isTrl="N" original="Certificate/License">Certificate/License</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F48E4340CEDB49E7AFF85A2581B5B45F" trl="N">
+    <value column="Name" isTrl="Y" original="Address">Alamat</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F4F8100264F241A6A78218CA59016363" trl="N">
+    <value column="Name" isTrl="Y" original="Cost Center Rule">Aturan Pusat Biaya</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="rule to assign employee to this cost center">Aturan penempatan karyawan pada suatu pusat biaya.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="rule to assign employee to this cost center">Aturan penempatan karyawan pada suatu pusat biaya.</value>
+  </row>
+  <row id="F56B27ED1FA643F5BB0C73A4581C9D3E" trl="N">
+    <value column="Name" isTrl="N" original="Training">Training</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F5C1AC06C6184EBB8611DBE193CA8D32" trl="N">
+    <value column="Name" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FAC4B95CAAF14789B534898D81645F61" trl="N">
+    <value column="Name" isTrl="N" original="Education">Education</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FEDADDFC3628482AB96F2AAA4F390887" trl="N">
+    <value column="Name" isTrl="Y" original="Dependency">Prasyarat</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="competency dependency">kompetensi apa saja yang menjadi syarat untuk mendapatkan kompetensi ini.</value>
+  </row>
+</compiereTrl>

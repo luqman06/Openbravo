@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SqlClass id="class" name="Header926492335E9A4DE58465DBB747A5B2A0Data" package="org.openbravo.erpWindows.org.wirabumi.hris.loan.IncidentalLoan">
+  <SqlClassComment>WAD Generated class</SqlClassComment>
+
+  <SqlMethod name="dummy" type="preparedStatement" return="multiple">
+    <Sql>
+      SELECT '' AS dummy from DUAL
+    </Sql>
+  </SqlMethod>
+
+
+
+
+  <SqlMethod name="updateDocAction" type="preparedStatement" return="rowCount">
+    <Sql><![CDATA[
+        UPDATE ln_bill_register
+        SET docaction = ? 
+        WHERE ln_bill_register.LN_Bill_Register_ID = ?
+    ]]></Sql>
+    <Parameter name="docaction"></Parameter>
+    <Parameter id="paramKey" name="lnBillRegisterId"></Parameter>
+  </SqlMethod>
+
+
+
+
+</SqlClass>

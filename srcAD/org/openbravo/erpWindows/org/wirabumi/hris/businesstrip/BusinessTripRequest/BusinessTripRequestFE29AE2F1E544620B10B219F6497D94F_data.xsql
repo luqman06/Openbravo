@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SqlClass id="class" name="BusinessTripRequestFE29AE2F1E544620B10B219F6497D94FData" package="org.openbravo.erpWindows.org.wirabumi.hris.businesstrip.BusinessTripRequest">
+  <SqlClassComment>WAD Generated class</SqlClassComment>
+
+  <SqlMethod name="dummy" type="preparedStatement" return="multiple">
+    <Sql>
+      SELECT '' AS dummy from DUAL
+    </Sql>
+  </SqlMethod>
+
+
+
+
+  <SqlMethod name="updateDocAction" type="preparedStatement" return="rowCount">
+    <Sql><![CDATA[
+        UPDATE bt_businesstrip
+        SET docaction = ? 
+        WHERE bt_businesstrip.BT_Businesstrip_ID = ?
+    ]]></Sql>
+    <Parameter name="docaction"></Parameter>
+    <Parameter id="paramKey" name="btBusinesstripId"></Parameter>
+  </SqlMethod>
+
+
+
+
+</SqlClass>

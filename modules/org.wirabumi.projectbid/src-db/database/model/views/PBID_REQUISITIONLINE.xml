@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+  <database name="VIEW PBID_REQUISITIONLINE">
+    <view name="PBID_REQUISITIONLINE"><![CDATA[SELECT a.m_requisitionline_id AS pbid_requisitionline_id, a.ad_client_id, a.ad_org_id, a.isactive, a.created, a.createdby, a.updated, a.updatedby, a.m_requisition_id, b.name AS productname FROM m_requisitionline a JOIN m_product b ON b.m_product_id = a.m_product_id]]></view>
+  </database>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptM_Requisition.jrxml" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="553" leftMargin="21" rightMargin="21" topMargin="21" bottomMargin="21" uuid="2fb3b37e-df65-4798-aaaa-895a7b66e15c">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.464100000000007"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="109"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Column_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#666666"/>
+	<parameter name="REQUISITION_ID" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new String("A4F95EB23A604E37B4A26F4891AA3495")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("A4F95EB23A604E37B4A26F4891AA3495")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+a.ad_org_id,
+a.m_requisition_id,
+a.ad_client_id,
+e.ad_user_id as user_header,
+AD_ORG.NAME as ORG_NAME,
+a.isactive,
+a.created as date_careat_header,
+a.DOCUMENTNO,
+a.description as description_header,
+b.qty,
+b.pricelist,
+b.linenetamt,
+b.needbydate,
+b.line as number,
+d.name as uomname,
+c.value,
+e.name as createdby,
+c.name,
+f.name as warehouse_name,
+g.name as costcenter_name,
+c.value as search_key,
+c.DESCRIPTION AS PRODUCT_DESCRIPTION,
+b.DESCRIPTION As LINE_DESCRIPTION,
+b.priceactual AS priceactual,
+C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+ORG_DATA_INFO.name as org_country_header,
+ORG_DATA_INFO.description as org_website, --ambil dari contact di organization
+ORG_DATA_INFO.phone as org_phone, --ambil dari contact di organization
+ORG_DATA_INFO.phone2 as org_phone_al, --ambil dari contact di organization
+ORG_DATA_INFO.fax as org_fax, --ambil dari contact di organization
+ORG_DATA_INFO.city as org_city, --ambil di city contact di organization
+ORG_DATA_INFO.supervisor as org_supervisor,
+ORG_DATA_INFO.title as org_title,
+ORG_DATA_INFO.org_address1 as org_address1,
+ORG_DATA_INFO.org_address2 as org_address2,
+h.deliverytime_promised as leadtime,
+coalesce(i.address1,'')||coalesce(' '||i.address2,'') as wrh_address1,
+coalesce(i.postal,'')||coalesce(' - '||i.city,'')||coalesce(' ('||k.name,'')||coalesce(') - '||j.name,'') as wrh_address2
+from m_requisition a
+inner join m_requisitionline b on a.M_REQUISITION_ID=b.M_REQUISITION_ID
+left join m_product c on c.m_product_id=b.m_product_id
+left join c_uom d on b.c_uom_id=d.c_uom_id
+left join ad_user e on a.ad_user_id=e.ad_user_id
+left join m_warehouse f on a.em_pbid_warehouse_id=f.m_warehouse_id
+left join C_Costcenter g on a.em_pbid_costcenter_id=g.c_costcenter_id
+left join M_Product_PO h on a.c_bpartner_id=h.c_bpartner_id and b.m_product_id=h.m_product_id
+left join c_location i on f.c_location_id=i.c_location_id
+left join c_country j on i.c_country_id=j.c_country_id
+left join c_region k on i.c_region_id=k.c_region_id,
+AD_ORG, AD_CLIENT,AD_ORGINFO,
+(select  d.name, e.description,e.email,e.phone,e.phone2,e.fax,c.city,f.name as supervisor,e.title,c.address1 as org_address1,c.address2 as org_address2 from m_requisition a left join ad_orginfo b on a.ad_org_id=b.ad_org_id
+left join c_location c on b.c_location_id=c.c_location_id
+left join c_country d on c.c_country_id=d.c_country_id
+left join ad_user e on b.ad_user_id=e.ad_user_id
+left join ad_user f on e.supervisor_id=f.ad_user_id
+where a.M_REQUISITION_ID = $P{DOCUMENT_ID}) as ORG_DATA_INFO
+WHERE a.M_REQUISITION_ID = $P{DOCUMENT_ID}
+and ad_org.ad_org_id=a.ad_org_id
+and a.ad_client_id = AD_CLIENT.AD_CLIENT_ID
+and AD_ORG.ad_org_id = AD_ORGINFO.ad_org_id
+
+order by b.line asc]]>
+	</queryString>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="m_requisition_id" class="java.lang.String"/>
+	<field name="ad_client_id" class="java.lang.String"/>
+	<field name="user_header" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="isactive" class="java.lang.String"/>
+	<field name="date_careat_header" class="java.sql.Timestamp"/>
+	<field name="documentno" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="description_header" class="java.lang.String"/>
+	<field name="qty" class="java.math.BigDecimal"/>
+	<field name="pricelist" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<field name="needbydate" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[--OBTG:ONCREATEDEFAULT:SELECT DATEPLANNED FROM M_REQUISITIONLINE_ WHERE M_REQUISITIONLINE_.M_REQUISITIONLINE_ID = M_REQUISITIONLINE.M_REQUISITIONLINE_ID--]]></fieldDescription>
+	</field>
+	<field name="number" class="java.math.BigDecimal"/>
+	<field name="uomname" class="java.lang.String"/>
+	<field name="value" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="createdby" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="warehouse_name" class="java.lang.String"/>
+	<field name="costcenter_name" class="java.lang.String"/>
+	<field name="search_key" class="java.lang.String"/>
+	<field name="product_description" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="line_description" class="java.lang.String"/>
+	<field name="priceactual" class="java.math.BigDecimal"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="org_country_header" class="java.lang.String"/>
+	<field name="org_website" class="java.lang.String"/>
+	<field name="org_phone" class="java.lang.String"/>
+	<field name="org_phone_al" class="java.lang.String"/>
+	<field name="org_fax" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="org_supervisor" class="java.lang.String"/>
+	<field name="org_title" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="leadtime" class="java.math.BigDecimal"/>
+	<field name="wrh_address1" class="java.lang.String"/>
+	<field name="wrh_address2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-10" x="424" y="87" width="5" height="13" uuid="66e24fb4-9ac9-417f-8224-57f1c166ad70"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="170" y="18" width="212" height="20" uuid="8d6ea107-fe83-42fd-8f45-78db56b0a1d3"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Book Antiqua" size="14" isBold="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/BKANT.TTF" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PURCHASE REQUISITION]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a" isBlankWhenNull="true">
+				<reportElement key="textField" x="430" y="98" width="123" height="13" uuid="ab901e70-34a1-4169-8694-2edfd749ba83"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date_careat_header}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-10" x="424" y="98" width="5" height="13" uuid="04a6491f-8679-414b-8541-5ae2af17b17e"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="396" y="98" width="27" height="13" uuid="0323661b-ed03-4046-8af8-e1089fcf4e0c"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" x="97" y="98" width="5" height="13" uuid="8804d53d-37da-4c6f-9f32-9e2d3ed39955"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="212" height="25" uuid="e55e4d45-b4fd-4ff2-a348-a7a8666bafdd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Doc. No: FRM.PROC.02.01,Rev.01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="87" width="85" height="13" uuid="94a9e4fe-a3bd-4890-8b99-6c7b2a3106d0"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" x="97" y="87" width="5" height="13" uuid="62a25b2d-7c8e-4de0-bc32-11a1fbbcbd75"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="99" height="13" uuid="82f0bfed-57a8-4e3a-8197-8533356050ed"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[Delivery Address]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="103" y="87" width="151" height="13" uuid="6c143800-8d0e-4af0-b0ca-5387cf0094cf"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{createdby}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="430" y="87" width="123" height="13" uuid="e66f97b7-4afc-4e2f-a8d8-ac8e0739822c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="396" y="87" width="27" height="13" uuid="ac9653b2-cfa4-4889-a72c-c0651eaaa021"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="103" y="98" width="256" height="13" uuid="58c84a75-a76b-49c1-a763-8d5a2a4f81b0"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wrh_address1}+ "\n" +$F{wrh_address2}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape">
+				<reportElement x="0" y="0" width="98" height="61" uuid="0df8eb02-2b44-4bd0-a8cd-06a64a6fbb30"/>
+				<imageExpression><![CDATA["home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/prima_ics.png"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="4" width="212" height="15" uuid="d964e1b9-b420-4f50-8a9e-e4625b048ed5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Helvetica IT" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/BKANT.TTF" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Right" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="436" y="-22" width="117" height="83" uuid="43765fb2-cfb1-4564-8835-1905c77f9c0b"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{ad_org_id})]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="553" height="29" forecolor="#000080" backcolor="#000080" uuid="adcf9e9f-e69e-4fe3-aff8-4d4aa9290b2e"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-17" x="366" y="0" width="47" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="275c9638-aa96-4eeb-a270-793e475a606f"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="413" y="0" width="45" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="0f0efc3e-ebd2-43b3-a958-5108cbd161ee"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[UoM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="105" y="0" width="107" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="5eca6a6f-a187-43db-9893-c047b588b736"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Item/Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="288" y="0" width="78" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="de1dbdc0-9e9a-41ad-89d7-3890c3e51aa0"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="458" y="0" width="65" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="48bf6442-4671-4ff9-b1a1-8341871a8c65"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Need by
+Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="0" y="0" width="25" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="c8c6e66d-c21c-494b-a7af-2d1c26cba0dd"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="25" y="0" width="80" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="cf6eb684-d841-43ed-b686-1bf09261c4f0"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Material Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="212" y="0" width="76" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="f8126862-7e8c-4fda-b34a-6565fc33f737"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Specification]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="523" y="0" width="30" height="29" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a7dd97aa-67a3-4575-97e9-8312c74efa8c"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lead
+Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Prevent">
+			<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="25" height="15" forecolor="#000000" uuid="466e5c25-a055-466b-bb3a-719419ff84f5"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="105" y="0" width="107" height="15" forecolor="#000000" uuid="267e4d63-fae6-4cd2-8373-de811f195f28"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="25" y="0" width="80" height="15" forecolor="#000000" uuid="30683bdc-1000-4e27-a997-e2aac2df81f6"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{search_key}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="288" y="0" width="78" height="15" forecolor="#000000" uuid="272606c9-bafd-4643-8b2a-1dbb40f6c0c6"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line_description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="366" y="0" width="47" height="15" forecolor="#000000" uuid="5981d70f-75e0-4146-9561-777e37e3b428"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="413" y="0" width="45" height="15" forecolor="#000000" uuid="952cc3a4-4814-431b-891c-0f86f06a6f82"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uomname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="212" y="0" width="76" height="15" forecolor="#000000" uuid="a96f5db7-fd6c-4387-a07b-59bbcb561d9d"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="523" y="0" width="30" height="15" forecolor="#000000" uuid="2e38e0a4-4c3a-4dfe-9635-3ff07a9d76fa"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leadtime}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="458" y="0" width="65" height="15" forecolor="#000000" uuid="b17f1ebe-4bc7-4c01-82aa-45db9c7afd2e"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{needbydate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="98">
+			<frame>
+				<reportElement x="293" y="4" width="117" height="92" uuid="0487952a-17a8-4657-90f1-bbf0dd5f8005"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="76" width="117" height="15" forecolor="#000000" uuid="2fae73cd-8ec1-462f-964e-d047cb2612bf"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Control Manager]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="146" y="4" width="117" height="92" uuid="a97699c1-708f-4c58-af1e-5e5f87d0ed2d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="76" width="117" height="15" forecolor="#000000" uuid="98f84239-86a4-48d4-b3cc-711eb45b267c"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Manager]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="0" width="117" height="20" forecolor="#000000" uuid="dc1b208c-4018-4607-a8f0-9d534d10ec87"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Acknowledge by:]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement key="staticText" style="default" x="293" y="5" width="117" height="20" forecolor="#000000" uuid="25e12c9e-f8cd-4903-97d9-ee372c492b1f"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Check by:]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="436" y="4" width="117" height="92" uuid="14e2b317-1836-453b-8a17-c59d0cd4e967"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="76" width="117" height="15" forecolor="#000000" uuid="cbd85f64-8089-4257-b975-b9452a8cb138"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Spv]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="1" width="117" height="20" forecolor="#000000" uuid="9c32752f-2c4b-45f5-a3f4-196794fafac1"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Prepare by:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="4" width="117" height="92" uuid="c9571336-0e14-4d46-9500-72f0e1424122"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="76" width="117" height="15" forecolor="#000000" uuid="74bf8554-e847-49eb-88b4-bc72c5ae8d5c"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="11" isBold="true" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Opr. Manager]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="1" width="117" height="20" forecolor="#000000" uuid="bc0ed9c7-80f0-4b46-a464-a87058cd4e93"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/zaien_aji/appl/tomcat8/webapps/infinite/src-loc/design/org/openbravo/erpReports/HelveticaExt.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Approval:]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

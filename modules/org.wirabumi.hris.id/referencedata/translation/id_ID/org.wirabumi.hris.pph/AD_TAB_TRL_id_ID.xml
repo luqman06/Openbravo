@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="160DFCB4009A40D3B474B735B12852BB" trl="N">
+    <value column="Name" isTrl="N" original="Tarif Progresif">Tarif Progresif</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="331C9EDFB2DC4B5AAA939A28AB2C47B8" trl="N">
+    <value column="Name" isTrl="N" original="A1 1721">A1 1721</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="41B44B5EF44148DDB8E7BBBD0D016777" trl="N">
+    <value column="Name" isTrl="N" original="PPh 21">PPh 21</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="49E26426C62C4CEF8CCD18070FF41DCA" trl="N">
+    <value column="Name" isTrl="N" original="PTKP">PTKP</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7382CD738687470793196E9120B92A11" trl="N">
+    <value column="Name" isTrl="N" original="Biaya Jabatan">Biaya Jabatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8795C88A7B514000904764AC488F7517" trl="N">
+    <value column="Name" isTrl="N" original="PPh 21">PPh 21</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C397F84A7FEE41B5975C0A3AA552ECE1" trl="N">
+    <value column="Name" isTrl="N" original="A1 1721">A1 1721</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

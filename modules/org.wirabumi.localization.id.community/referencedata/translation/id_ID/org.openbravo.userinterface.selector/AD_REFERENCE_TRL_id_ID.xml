@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="08500AA6E7F5411EA0B03DD1CB645DF6" trl="N">
+    <value column="Name" isTrl="N" original="Multi Business Partner Selector">Multi Business Partner Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="37BA0878B5494179AB05545C9B9805B7" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_Selector Display/Value Field">OBUISEL_Selector Display/Value Field</value>
+    <value column="Description" isTrl="N" original="Selector Display/Value Field">Selector Display/Value Field</value>
+    <value column="Help" isTrl="N" original="Selector Display/Value Field">Selector Display/Value Field</value>
+  </row>
+  <row id="45B39681AFBC4808A64C9B776A290BA4" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_SelectorFieldPropertySelector">OBUISEL_SelectorFieldPropertySelector</value>
+    <value column="Description" isTrl="N" original="Selector used for the selector field definition">Selector used for the selector field definition</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="61F24136C58741C182F784020E2B2C25" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_TextMatchStyleType">OBUISEL_TextMatchStyleType</value>
+    <value column="Description" isTrl="N" original="Text match logic used when filtering data in the database">Text match logic used when filtering data in the database</value>
+    <value column="Help" isTrl="N" original="The text match logic used when filtering data in the database">The text match logic used when filtering data in the database</value>
+  </row>
+  <row id="80B1630792EA46F298A3FBF81E77EF9C" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_SelectorAsLink Reference">OBUISEL_SelectorAsLink Reference</value>
+    <value column="Description" isTrl="N" original="The base selector reference">The base selector reference</value>
+    <value column="Help" isTrl="N" original="Defines the selector reference types. Reuses must of the logic, but it renders a Link instead of a input/suggestion box">Defines the selector reference types. Reuses must of the logic, but it renders a Link instead of a input/suggestion box</value>
+  </row>
+  <row id="87E6CFF8F71548AFA33F181C317970B5" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_Multi Selector Reference">OBUISEL_Multi Selector Reference</value>
+    <value column="Description" isTrl="N" original="The base multi selector reference">The base multi selector reference</value>
+    <value column="Help" isTrl="N" original="Defines the multi selector reference types.">Defines the multi selector reference types.</value>
+  </row>
+  <row id="95A596F08D1D45E1A36C84832920A6B3" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_Model Selector ">OBUISEL_Model Selector </value>
+    <value column="Description" isTrl="N" original="Model Selector">Model Selector</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="95E2A8B50A254B2AAE6774B8C2F28120" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_Selector Reference">OBUISEL_Selector Reference</value>
+    <value column="Description" isTrl="N" original="The base selector reference">The base selector reference</value>
+    <value column="Help" isTrl="N" original="Defines the selector reference types.">Defines the selector reference types.</value>
+  </row>
+  <row id="D30C26E6452843B4BA4F8D71A651EB80" trl="N">
+    <value column="Name" isTrl="N" original="OBUISEL_Selector Out Field">OBUISEL_Selector Out Field</value>
+    <value column="Description" isTrl="N" original="Selector Out Field">Selector Out Field</value>
+    <value column="Help" isTrl="N" original="Selector Out Field">Selector Out Field</value>
+  </row>
+</compiereTrl>

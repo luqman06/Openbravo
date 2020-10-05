@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptM_Requisition.jrxml" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="553" leftMargin="21" rightMargin="21" topMargin="21" bottomMargin="0" isFloatColumnFooter="true" isIgnorePagination="true" uuid="2fb3b37e-df65-4798-aaaa-895a7b66e15c">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="0.9558924531310702"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="22"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Column_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#666666"/>
+	<parameter name="REQUISITION_ID" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new String("B6F6B43B3EA44019BC21B6E3D74F2C54")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("7250137D505048319C1828B9CFCB5482")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+--signature_preparedby
+(select c.em_lv_signature
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='19375715EB854A8F9C2520D384D77DA5' order by b.event_time desc limit 1) as test_release1,
+
+(select c.em_lv_signature
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='44706BD39DFB41F0B6DB15D3877B37F9' order by b.event_time desc limit 1) as test_release1_bwi,
+
+(select c.em_lv_signature
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' and b.ad_org_id='4EB9820638B64BEDB3CB446BCB5F629E' order by b.event_time desc limit 1) as test_waitingcomplate,
+
+--nama
+
+(select c.name
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='19375715EB854A8F9C2520D384D77DA5' order by b.event_time desc limit 1) as name_test_release1,
+
+(select c.name
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='44706BD39DFB41F0B6DB15D3877B37F9' order by b.event_time desc limit 1) as name_test_release1_bwi,
+
+(select c.name
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' and b.ad_org_id='4EB9820638B64BEDB3CB446BCB5F629E' order by b.event_time desc limit 1) as name_test_waitingcomplate,
+
+--title
+
+(select c.title
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='19375715EB854A8F9C2520D384D77DA5' order by b.event_time desc limit 1) as title_test_release1,
+
+(select c.title
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='44706BD39DFB41F0B6DB15D3877B37F9' order by b.event_time desc limit 1) as title_test_release1_bwi,
+
+(select c.title
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' and b.ad_org_id='4EB9820638B64BEDB3CB446BCB5F629E' order by b.event_time desc limit 1) as title_test_waitingcomplate,
+
+
+
+case
+    when AD_ORG.ad_org_id = a.ad_org_id then
+	(select c.em_lv_signature
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='F491E9D9028148C3BC74E3D085A63DB9'  order by b.event_time desc limit 1 )
+
+    else
+	(select c.em_lv_signature
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' and b.ad_org_id='9661DB929D6442998E308A168A7813AB' order by b.event_time desc limit 1 )
+
+end  as release1,
+
+case
+    when AD_ORG.ad_org_id = a.ad_org_id then
+	(select c.name
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1'  and b.ad_org_id='F491E9D9028148C3BC74E3D085A63DB9' order by b.event_time desc limit 1 )
+
+    else
+	(select c.name
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' and b.ad_org_id='9661DB929D6442998E308A168A7813AB' order by b.event_time desc limit 1 )
+
+end  as name_release1,
+
+case
+    when AD_ORG.ad_org_id = a.ad_org_id then
+	(select c.title
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease1' and b.ad_org_id='F491E9D9028148C3BC74E3D085A63DB9' order by b.event_time desc limit 1 )
+
+    else
+	(select c.title
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' and b.ad_org_id='9661DB929D6442998E308A168A7813AB' order by b.event_time desc limit 1 )
+
+end  as title_release1,
+
+
+(select c.em_lv_signature
+from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+left join ad_user c on b.ad_user_id=c.ad_user_id
+where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease2' order by b.event_time desc limit 1 )as release2,
+
+(select c.name
+from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+left join ad_user c on b.ad_user_id=c.ad_user_id
+where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease2' order by b.event_time desc limit 1 )as name_release2,
+
+(select c.title
+from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+left join ad_user c on b.ad_user_id=c.ad_user_id
+where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingrelease2' order by b.event_time desc limit 1 )as title_release2,
+
+
+case
+    when AD_ORG.ad_org_id = '4EB9820638B64BEDB3CB446BCB5F629E' then
+	NULL
+    else (select c.em_lv_signature
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' order by b.event_time desc limit 1)
+
+end  as waitingcomplete,
+
+case
+    when AD_ORG.ad_org_id = '4EB9820638B64BEDB3CB446BCB5F629E' then
+	NULL
+    else (select c.name
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' order by b.event_time desc limit 1 )
+
+
+end  as name_waitingcomplete,
+
+case
+    when AD_ORG.ad_org_id = '4EB9820638B64BEDB3CB446BCB5F629E' then
+	NULL
+    else (select c.title
+	from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+	left join ad_user c on b.ad_user_id=c.ad_user_id
+	where b.record_id = $P{DOCUMENT_ID} and b.new_value='oez_waitingcomplete' order by b.event_time desc limit 1 )
+
+end  as title_waitingcomplete,
+
+(select c.em_lv_signature
+from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+left join ad_user c on b.ad_user_id=c.ad_user_id
+where b.record_id = $P{DOCUMENT_ID} and b.new_value='CO' and b.ad_column_id='1004400026' order by b.event_time desc limit 1 )as complete,
+
+(select c.name
+from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+left join ad_user c on b.ad_user_id=c.ad_user_id
+where b.record_id = $P{DOCUMENT_ID} and b.new_value='CO' and b.ad_column_id='1004400026' order by b.event_time desc limit 1 )as name_complete,
+
+(select c.title
+from m_requisition a left join AD_Audit_Trail_V b on a.M_REQUISITION_ID=b.record_id
+left join ad_user c on b.ad_user_id=c.ad_user_id
+where b.record_id = $P{DOCUMENT_ID} and b.new_value='CO' and b.ad_column_id='1004400026' order by b.event_time desc limit 1 )as title_complete,
+
+a.ad_org_id,
+a.m_requisition_id,
+a.ad_client_id,
+e.ad_user_id as user_header,
+AD_ORG.NAME as ORG_NAME,
+a.isactive,
+a.created as date_careat_header,
+a.DOCUMENTNO,
+a.description as description_header,
+b.qty,
+b.pricelist,
+b.linenetamt,
+b.needbydate,
+b.line as number,
+d.name as uomname,
+c.value,
+e.name as createdby,
+c.name,
+f.name as warehouse_name,
+g.name as costcenter_name,
+c.value as search_key,
+c.DESCRIPTION AS PRODUCT_DESCRIPTION,
+b.DESCRIPTION As LINE_DESCRIPTION,
+b.priceactual AS priceactual,
+C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+ORG_DATA_INFO.name as org_country_header,
+ORG_DATA_INFO.description as org_website, --ambil dari contact di organization
+ORG_DATA_INFO.phone as org_phone, --ambil dari contact di organization
+ORG_DATA_INFO.phone2 as org_phone_al, --ambil dari contact di organization
+ORG_DATA_INFO.fax as org_fax, --ambil dari contact di organization
+ORG_DATA_INFO.city as org_city, --ambil di city contact di organization
+ORG_DATA_INFO.supervisor as org_supervisor,
+ORG_DATA_INFO.title as org_title,
+ORG_DATA_INFO.org_address1 as org_address1,
+ORG_DATA_INFO.org_address2 as org_address2,
+h.deliverytime_promised as leadtime,
+coalesce(i.address1,'')||coalesce(' '||i.address2,'') as wrh_address1,
+coalesce(i.postal,'')||coalesce(' - '||i.city,'')||coalesce(' ('||k.name,'')||coalesce(') - '||j.name,'') as wrh_address2
+from m_requisition a
+inner join m_requisitionline b on a.M_REQUISITION_ID=b.M_REQUISITION_ID
+left join m_product c on c.m_product_id=b.m_product_id
+left join c_uom d on b.c_uom_id=d.c_uom_id
+left join ad_user e on a.ad_user_id=e.ad_user_id
+left join m_warehouse f on a.em_pbid_warehouse_id=f.m_warehouse_id
+left join C_Costcenter g on a.em_pbid_costcenter_id=g.c_costcenter_id
+left join M_Product_PO h on a.c_bpartner_id=h.c_bpartner_id and b.m_product_id=h.m_product_id
+left join c_location i on f.c_location_id=i.c_location_id
+left join c_country j on i.c_country_id=j.c_country_id
+left join c_region k on i.c_region_id=k.c_region_id,
+AD_ORG, AD_CLIENT,AD_ORGINFO,
+
+(select  d.name, e.description,e.email,e.phone,e.phone2,e.fax,c.city,f.name as supervisor,e.title,c.address1 as org_address1,c.address2 as org_address2 from m_requisition a left join ad_orginfo b on a.ad_org_id=b.ad_org_id
+left join c_location c on b.c_location_id=c.c_location_id
+left join c_country d on c.c_country_id=d.c_country_id
+left join ad_user e on b.ad_user_id=e.ad_user_id
+left join ad_user f on e.supervisor_id=f.ad_user_id
+where a.M_REQUISITION_ID = $P{DOCUMENT_ID}) as ORG_DATA_INFO
+
+WHERE a.M_REQUISITION_ID = $P{DOCUMENT_ID}
+and ad_org.ad_org_id=a.ad_org_id
+and a.ad_client_id = AD_CLIENT.AD_CLIENT_ID
+and AD_ORG.ad_org_id = AD_ORGINFO.ad_org_id
+--AND AD_ORG.ad_org_id = (SELECT o.AD_ORG_ID FROM AD_ORG o JOIN AD_OrgType t USING --(AD_ORGTYPE_ID)
+--WHERE AD_ISORGINCLUDED(a.AD_ORG_ID, o.ad_org_id, a.ad_client_id)<>-1
+--AND (t.IsLegalEntity='Y' OR t.IsAcctLegalEntity='Y'))
+
+order by b.line asc]]>
+	</queryString>
+	<field name="test_release1" class="java.lang.String"/>
+	<field name="test_release1_bwi" class="java.lang.String"/>
+	<field name="test_waitingcomplate" class="java.lang.String"/>
+	<field name="name_test_release1" class="java.lang.String"/>
+	<field name="name_test_release1_bwi" class="java.lang.String"/>
+	<field name="name_test_waitingcomplate" class="java.lang.String"/>
+	<field name="title_test_release1" class="java.lang.String"/>
+	<field name="title_test_release1_bwi" class="java.lang.String"/>
+	<field name="title_test_waitingcomplate" class="java.lang.String"/>
+	<field name="release1" class="java.lang.String"/>
+	<field name="name_release1" class="java.lang.String"/>
+	<field name="title_release1" class="java.lang.String"/>
+	<field name="release2" class="java.lang.String"/>
+	<field name="name_release2" class="java.lang.String"/>
+	<field name="title_release2" class="java.lang.String"/>
+	<field name="waitingcomplete" class="java.lang.String"/>
+	<field name="name_waitingcomplete" class="java.lang.String"/>
+	<field name="title_waitingcomplete" class="java.lang.String"/>
+	<field name="complete" class="java.lang.String"/>
+	<field name="name_complete" class="java.lang.String"/>
+	<field name="title_complete" class="java.lang.String"/>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="m_requisition_id" class="java.lang.String"/>
+	<field name="ad_client_id" class="java.lang.String"/>
+	<field name="user_header" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="isactive" class="java.lang.String"/>
+	<field name="date_careat_header" class="java.sql.Timestamp"/>
+	<field name="documentno" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="description_header" class="java.lang.String"/>
+	<field name="qty" class="java.math.BigDecimal"/>
+	<field name="pricelist" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<field name="needbydate" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[--OBTG:ONCREATEDEFAULT:SELECT DATEPLANNED FROM M_REQUISITIONLINE_ WHERE M_REQUISITIONLINE_.M_REQUISITIONLINE_ID = M_REQUISITIONLINE.M_REQUISITIONLINE_ID--]]></fieldDescription>
+	</field>
+	<field name="number" class="java.math.BigDecimal"/>
+	<field name="uomname" class="java.lang.String"/>
+	<field name="value" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="createdby" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="warehouse_name" class="java.lang.String"/>
+	<field name="costcenter_name" class="java.lang.String"/>
+	<field name="search_key" class="java.lang.String"/>
+	<field name="product_description" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="line_description" class="java.lang.String"/>
+	<field name="priceactual" class="java.math.BigDecimal"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="org_country_header" class="java.lang.String"/>
+	<field name="org_website" class="java.lang.String"/>
+	<field name="org_phone" class="java.lang.String"/>
+	<field name="org_phone_al" class="java.lang.String"/>
+	<field name="org_fax" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="org_supervisor" class="java.lang.String"/>
+	<field name="org_title" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="leadtime" class="java.math.BigDecimal"/>
+	<field name="wrh_address1" class="java.lang.String"/>
+	<field name="wrh_address2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="150" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a" isBlankWhenNull="true">
+				<reportElement key="textField" x="57" y="129" width="121" height="13" uuid="ab901e70-34a1-4169-8694-2edfd749ba83"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date_careat_header}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-10" x="305" y="133" width="5" height="13" uuid="8804d53d-37da-4c6f-9f32-9e2d3ed39955"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="341" y="90" width="212" height="21" backcolor="#CCCCCC" uuid="e55e4d45-b4fd-4ff2-a348-a7a8666bafdd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Doc. No: FRM.PROC.02.01,Rev.01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="207" y="117" width="85" height="13" uuid="94a9e4fe-a3bd-4890-8b99-6c7b2a3106d0"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" x="305" y="117" width="5" height="13" uuid="62a25b2d-7c8e-4de0-bc32-11a1fbbcbd75"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="133" width="99" height="13" uuid="82f0bfed-57a8-4e3a-8197-8533356050ed"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Delivery Address]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="310" y="117" width="243" height="13" uuid="6c143800-8d0e-4af0-b0ca-5387cf0094cf"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{createdby}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="57" y="111" width="121" height="13" uuid="e66f97b7-4afc-4e2f-a8d8-ac8e0739822c"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="310" y="133" width="243" height="13" uuid="58c84a75-a76b-49c1-a763-8d5a2a4f81b0"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wrh_address1}+ "\n" +$F{wrh_address2}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Right" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="436" y="-22" width="117" height="83" uuid="9c671653-9479-4966-a348-743ff43d3d90"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{ad_org_id})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-7" x="2" y="50" width="551" height="29" uuid="a30c016c-b103-4677-b610-407888f87758"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="24" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[PURCHASE REQUISITION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="-1" y="19" width="253" height="42" uuid="b9f6261c-b6c8-4b55-a820-34803a9420b6"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Jl. Raya Waru 30 A 61256 - Sidoarjo
+(East Java)- Indonesia
+Phone. 62-31-8532200]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="0" y="1" width="300" height="19" forecolor="#000000" uuid="26ed1735-67b3-491a-8687-39964ef5021b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="12" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[PT. ISTANA CIPTA SEMBADA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="126" width="177" height="1" uuid="e41c304d-6a93-4e1d-aeea-b5b6124d6757"/>
+			</line>
+			<line>
+				<reportElement x="1" y="144" width="177" height="1" uuid="ca78818f-3a11-419c-a6bd-ec7d6e3e5763"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="130" width="51" height="12" uuid="f7474a82-e3a7-4bd0-9cb7-97eeb8a06410"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="112" width="51" height="12" uuid="8c943a08-8106-4ab4-936b-e574ca1e9834"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="112" width="10" height="12" uuid="4d38a72f-4cf9-4329-a455-95599cb8c282"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="130" width="10" height="12" uuid="92a6a0f6-519d-4283-9ae9-30538e3202e2"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="553" height="15" forecolor="#FFFFFF" backcolor="#000080" uuid="adcf9e9f-e69e-4fe3-aff8-4d4aa9290b2e"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-17" x="327" y="0" width="45" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="275c9638-aa96-4eeb-a270-793e475a606f"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="372" y="0" width="45" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="0f0efc3e-ebd2-43b3-a958-5108cbd161ee"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[UoM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="103" y="0" width="76" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="5eca6a6f-a187-43db-9893-c047b588b736"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Item/Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="254" y="0" width="73" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="de1dbdc0-9e9a-41ad-89d7-3890c3e51aa0"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="417" y="0" width="83" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="48bf6442-4671-4ff9-b1a1-8341871a8c65"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Need by Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="0" y="0" width="25" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="c8c6e66d-c21c-494b-a7af-2d1c26cba0dd"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="179" y="0" width="75" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="f8126862-7e8c-4fda-b34a-6565fc33f737"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Specification]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="500" y="0" width="53" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a7dd97aa-67a3-4575-97e9-8312c74efa8c"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lead Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="25" y="0" width="78" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="06d68ee6-b294-458b-bba0-bc6418b845ba"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#000080"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Material Code]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Prevent">
+			<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="25" height="15" forecolor="#000000" uuid="466e5c25-a055-466b-bb3a-719419ff84f5"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="103" y="0" width="76" height="15" forecolor="#000000" uuid="267e4d63-fae6-4cd2-8373-de811f195f28"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="25" y="0" width="78" height="15" forecolor="#000000" uuid="30683bdc-1000-4e27-a997-e2aac2df81f6"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{search_key}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="254" y="0" width="73" height="15" forecolor="#000000" uuid="272606c9-bafd-4643-8b2a-1dbb40f6c0c6"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line_description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="327" y="0" width="45" height="15" forecolor="#000000" uuid="5981d70f-75e0-4146-9561-777e37e3b428"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="372" y="0" width="45" height="15" forecolor="#000000" uuid="952cc3a4-4814-431b-891c-0f86f06a6f82"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uomname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="179" y="0" width="75" height="15" forecolor="#000000" uuid="a96f5db7-fd6c-4387-a07b-59bbcb561d9d"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="500" y="0" width="53" height="15" forecolor="#000000" uuid="2e38e0a4-4c3a-4dfe-9635-3ff07a9d76fa"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leadtime}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" mode="Transparent" x="417" y="0" width="83" height="15" forecolor="#000000" uuid="b17f1ebe-4bc7-4c01-82aa-45db9c7afd2e"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{needbydate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="195">
+			<frame>
+				<reportElement x="294" y="4" width="117" height="96" uuid="2c9463d5-d8a6-4323-8c1d-8131a8296980"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="1" width="114" height="20" forecolor="#000000" uuid="25e12c9e-f8cd-4903-97d9-ee372c492b1f"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Check by:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="144" y="4" width="117" height="96" uuid="a97699c1-708f-4c58-af1e-5e5f87d0ed2d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="1" width="117" height="20" forecolor="#000000" uuid="dc1b208c-4018-4607-a8f0-9d534d10ec87"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Acknowledge by:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="436" y="4" width="117" height="98" uuid="14e2b317-1836-453b-8a17-c59d0cd4e967"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="1" width="117" height="20" forecolor="#000000" uuid="9c32752f-2c4b-45f5-a3f4-196794fafac1"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Approval by:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="79" width="115" height="16" uuid="7534785b-fcfe-4d75-bcf9-bd09320ded62"/>
+					<textElement textAlignment="Center">
+						<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{title_complete}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="3" width="117" height="96" uuid="c9571336-0e14-4d46-9500-72f0e1424122"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText" style="default" x="0" y="1" width="117" height="20" forecolor="#000000" uuid="bc0ed9c7-80f0-4b46-a464-a87058cd4e93"/>
+					<box leftPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Prepare by:]]></text>
+				</staticText>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="66" width="118" height="15" uuid="f373d02e-09c5-4db1-8209-660a7c0c325e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{name_test_release1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="81" width="117" height="16" uuid="4e66677c-4f44-4985-8ad0-d6b0f408e6ec"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{title_test_release1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="144" y="66" width="118" height="15" uuid="4d6695f2-86b6-4186-add4-53da273e19bd"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name_release2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="145" y="80" width="115" height="16" uuid="eab4f00a-6058-4166-87ea-99017121ebc1"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title_release2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="435" y="67" width="118" height="15" uuid="af6d7ae7-765f-4222-b170-eb21468a5f5f"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name_complete}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="293" y="67" width="118" height="15" uuid="f8f253bd-f961-4be0-89a8-987f069da61d"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name_waitingcomplete}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="294" y="83" width="115" height="16" uuid="a0dd989d-d367-4172-a28e-9272e8cdd3a9"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title_waitingcomplete}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Bottom" isUsingCache="false">
+				<reportElement key="image-1" x="2" y="25" width="116" height="40" uuid="744f5c91-2649-4aba-9619-e31f1fa19eae"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImage($F{test_release1})]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Bottom" isUsingCache="false">
+				<reportElement key="image-1" x="145" y="24" width="117" height="41" uuid="5ebb7473-2c1c-4a9d-9ad1-7692d2ffaafd"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImage($F{release2})]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Bottom" isUsingCache="false">
+				<reportElement key="image-1" x="296" y="24" width="112" height="43" uuid="53c48869-fe91-4ebf-a6e3-3918def6f3c6"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImage($F{waitingcomplete})]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Bottom" isUsingCache="false">
+				<reportElement key="image-1" x="438" y="24" width="113" height="41" uuid="52ad4130-25ce-4f21-83b0-a0e65832d62e"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImage($F{complete})]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="66" width="118" height="15" uuid="ffa51b36-c3e0-4939-8209-23f0d6a13877"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{name_test_waitingcomplate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="80" width="117" height="16" uuid="9f1ba9f8-f236-4dd9-b653-4b4e8b93d2b7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{title_test_waitingcomplate}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Bottom" isUsingCache="false">
+				<reportElement key="image-1" x="2" y="24" width="116" height="41" uuid="01a9dc70-a9a8-46c3-8532-ee6bd71f357d"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImage($F{test_release1_bwi})]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="66" width="118" height="15" uuid="feee24f1-1169-44aa-9c25-3995eff993d3"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name_test_release1_bwi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="80" width="117" height="16" uuid="f451ae26-e0d3-48e0-b866-84c041c08237"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title_test_release1_bwi}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" vAlign="Middle">
+				<reportElement x="-21" y="97" width="595" height="98" uuid="901c7da6-2c96-42b5-aeed-e7f44ce7d572"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/footer.png"]]></imageExpression>
+			</image>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

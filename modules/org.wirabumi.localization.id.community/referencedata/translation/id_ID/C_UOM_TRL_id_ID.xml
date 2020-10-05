@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="C_UOM" version="">
+  <row id="100" trl="N">
+    <value column="Name" isTrl="Y" original="Each">Unit</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="Ud ">Ud </value>
+  </row>
+  <row id="101" trl="N">
+    <value column="Name" isTrl="N" original="Hour">Hour</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="h  ">h  </value>
+  </row>
+  <row id="102" trl="N">
+    <value column="Name" isTrl="N" original="Day">Day</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="d  ">d  </value>
+  </row>
+  <row id="103" trl="N">
+    <value column="Name" isTrl="N" original="Minutes">Minutes</value>
+    <value column="Description" isTrl="N" original="(lowest unit for resorce assigments)">(lowest unit for resorce assigments)</value>
+    <value column="UOMSymbol" isTrl="N" original="min">min</value>
+  </row>
+  <row id="104" trl="N">
+    <value column="Name" isTrl="N" original="Labour day">Labour day</value>
+    <value column="Description" isTrl="N" original="8 hours">8 hours</value>
+    <value column="UOMSymbol" isTrl="N" original="D  ">D  </value>
+  </row>
+  <row id="105" trl="N">
+    <value column="Name" isTrl="N" original="Week">Week</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="w  ">w  </value>
+  </row>
+  <row id="106" trl="N">
+    <value column="Name" isTrl="N" original="Month">Month</value>
+    <value column="Description" isTrl="N" original="30 days">30 days</value>
+    <value column="UOMSymbol" isTrl="N" original="m  ">m  </value>
+  </row>
+  <row id="107" trl="N">
+    <value column="Name" isTrl="N" original="Labour month">Labour month</value>
+    <value column="Description" isTrl="N" original="20 days">20 days</value>
+    <value column="UOMSymbol" isTrl="N" original="M  ">M  </value>
+  </row>
+  <row id="108" trl="N">
+    <value column="Name" isTrl="N" original="Year">Year</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="Y  ">Y  </value>
+  </row>
+  <row id="2EBC93C05D75431E9EEFB29CEC76F244" trl="N">
+    <value column="Name" isTrl="N" original="Ounce">Ounce</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="oz ">oz </value>
+  </row>
+  <row id="6FA87C4EE1FD4C86940A5F2E47C429DA" trl="N">
+    <value column="Name" isTrl="N" original="Pound">Pound</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="Lb ">Lb </value>
+  </row>
+  <row id="72BA247D31F745F3AF11F74A5E2CCBEF" trl="N">
+    <value column="Name" isTrl="N" original="Kilogram">Kilogram</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="kg ">kg </value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER TM_CALCULATETOTAL">
+    <trigger name="TM_CALCULATETOTAL" table="TM_DETAIL_PESANGON" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_value varchar(40);
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+       --mendapatkan data dari detail
+       select value into v_value
+       from tm_detail_pesangon where value='UPH3'
+       and tm_detail_pesangon_id=:new.tm_detail_pesangon_id;
+
+       --raise exception '%', v_value;
+       -- definisi trigger
+       If v_value is not null then :new.total:=(:new.multiplier/100)*:new.amount;
+       else
+	  IF :new.calculate>0 then :new.total:=:new.multiplier*:new.amount*:new.calculate;
+	  Else :new.total:=:new.multiplier*:new.amount;
+	  End IF;
+       End If;
+
+      END TM_CALCULATETOTAL
+]]></body>
+    </trigger>
+  </database>

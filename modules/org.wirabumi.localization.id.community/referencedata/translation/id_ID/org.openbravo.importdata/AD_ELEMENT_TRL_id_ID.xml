@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="1000600004" trl="N">
+    <value column="Name" isTrl="N" original="Operands">Operands</value>
+    <value column="PrintName" isTrl="N" original="Operands">Operands</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1005500001" trl="N">
+    <value column="Name" isTrl="N" original="Acctschemaident">Acctschemaident</value>
+    <value column="PrintName" isTrl="N" original="Acctschemaident">Acctschemaident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1005500002" trl="N">
+    <value column="Name" isTrl="N" original="Elementvalueident">Elementvalueident</value>
+    <value column="PrintName" isTrl="N" original="Elementvalueident">Elementvalueident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1311" trl="N">
+    <value column="Name" isTrl="N" original="Import Format">Import Format</value>
+    <value column="PrintName" isTrl="N" original="Import Format">Import Format</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The ID identifies a unique import format">The ID identifies a unique import format</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1312" trl="N">
+    <value column="Name" isTrl="N" original="Format Field">Format Field</value>
+    <value column="PrintName" isTrl="N" original="Format Field">Format Field</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The ID identifies a unique format field">The ID identifies a unique format field</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1314" trl="N">
+    <value column="Name" isTrl="N" original="Data Format">Data Format</value>
+    <value column="PrintName" isTrl="N" original="Data Format">Data Format</value>
+    <value column="Description" isTrl="N" original="Format String in Java Notation, e.g. ddMMyy">Format String in Java Notation, e.g. ddMMyy</value>
+    <value column="Help" isTrl="N" original="The Date Format indicates how dates are defined on the record to be imported.  It must be in Java Notation">The Date Format indicates how dates are defined on the record to be imported.  It must be in Java Notation</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1315" trl="N">
+    <value column="Name" isTrl="N" original="Data Type">Data Type</value>
+    <value column="PrintName" isTrl="N" original="Data Type">Data Type</value>
+    <value column="Description" isTrl="N" original="Type of data">Type of data</value>
+    <value column="Help" isTrl="N" original="Type of data">Type of data</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1316" trl="N">
+    <value column="Name" isTrl="N" original="Decimal Point">Decimal Point</value>
+    <value column="PrintName" isTrl="N" original="Decimal Point">Decimal Point</value>
+    <value column="Description" isTrl="N" original="Decimal Point in the data file">Decimal Point in the data file</value>
+    <value column="Help" isTrl="N" original="Decimal Point in the data file">Decimal Point in the data file</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1317" trl="N">
+    <value column="Name" isTrl="N" original="Divide by 100">Divide by 100</value>
+    <value column="PrintName" isTrl="N" original="Divide by 100">Divide by 100</value>
+    <value column="Description" isTrl="N" original="Divide number by 100 to get correct amount">Divide number by 100 to get correct amount</value>
+    <value column="Help" isTrl="N" original="Divide number by 100 to get correct amount">Divide number by 100 to get correct amount</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1318" trl="N">
+    <value column="Name" isTrl="N" original="End No">End No</value>
+    <value column="PrintName" isTrl="N" original="End No">End No</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1319" trl="N">
+    <value column="Name" isTrl="N" original="Format">Format</value>
+    <value column="PrintName" isTrl="N" original="Format">Format</value>
+    <value column="Description" isTrl="N" original="Format of the data">Format of the data</value>
+    <value column="Help" isTrl="N" original="The Format is a drop down list box for selecting the format type (text, tab delimited, XML, etc) of the file to be imported">The Format is a drop down list box for selecting the format type (text, tab delimited, XML, etc) of the file to be imported</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1322" trl="N">
+    <value column="Name" isTrl="N" original="Constant Value">Constant Value</value>
+    <value column="PrintName" isTrl="N" original="Constant">Constant</value>
+    <value column="Description" isTrl="N" original="Constant value">Constant value</value>
+    <value column="Help" isTrl="N" original="Constant value">Constant value</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1457" trl="N">
+    <value column="Name" isTrl="N" original="Interest Amount">Interest Amount</value>
+    <value column="PrintName" isTrl="N" original="Interest">Interest</value>
+    <value column="Description" isTrl="N" original="Interest Amount">Interest Amount</value>
+    <value column="Help" isTrl="N" original="The Interest Amount indicates any interest charged or received on a Bank Statement.">The Interest Amount indicates any interest charged or received on a Bank Statement.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1837" trl="N">
+    <value column="Name" isTrl="N" original="BP Contact Greeting">BP Contact Greeting</value>
+    <value column="PrintName" isTrl="N" original="BP Contact Greeting">BP Contact Greeting</value>
+    <value column="Description" isTrl="N" original="Greeting for Business Partner Contact">Greeting for Business Partner Contact</value>
+    <value column="Help" isTrl="N" original="Greeting for Business Partner Contact">Greeting for Business Partner Contact</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1839" trl="N">
+    <value column="Name" isTrl="N" original="Contact Name">Contact Name</value>
+    <value column="PrintName" isTrl="N" original="Contact Name">Contact Name</value>
+    <value column="Description" isTrl="N" original="The name of the person to get in touch with.">The name of the person to get in touch with.</value>
+    <value column="Help" isTrl="N" original="Business Partner Contact Name">Business Partner Contact Name</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1906" trl="N">
+    <value column="Name" isTrl="N" original="Business Partner Search Key">Business Partner Search Key</value>
+    <value column="PrintName" isTrl="N" original="Partner Key">Partner Key</value>
+    <value column="Description" isTrl="N" original="An abbreviated name (or a code) to help find a business partner.">An abbreviated name (or a code) to help find a business partner.</value>
+    <value column="Help" isTrl="N" original="An abbreviated name (or a code) to help find a business partner. Usually, a company's internal idenfitier is used here.">An abbreviated name (or a code) to help find a business partner. Usually, a company's internal idenfitier is used here.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1907" trl="N">
+    <value column="Name" isTrl="N" original="Contact Description">Contact Description</value>
+    <value column="PrintName" isTrl="N" original="Contact Description">Contact Description</value>
+    <value column="Description" isTrl="N" original="Description of Contact">Description of Contact</value>
+    <value column="Help" isTrl="N" original="Description of Contact">Description of Contact</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1908" trl="N">
+    <value column="Name" isTrl="N" original="Default Account">Default Account</value>
+    <value column="PrintName" isTrl="N" original="Default Account">Default Account</value>
+    <value column="Description" isTrl="N" original="Name of the Default Account Column">Name of the Default Account Column</value>
+    <value column="Help" isTrl="N" original="Name of the Default Account Column">Name of the Default Account Column</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1909" trl="N">
+    <value column="Name" isTrl="N" original="Element Name">Element Name</value>
+    <value column="PrintName" isTrl="N" original="Element Name">Element Name</value>
+    <value column="Description" isTrl="N" original="Name of the Element">Name of the Element</value>
+    <value column="Help" isTrl="N" original="Name of the Element">Name of the Element</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1911" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner">Import Business Partner</value>
+    <value column="PrintName" isTrl="N" original="Import B.Partner">Import B.Partner</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The ID identifies a unique business partner to import">The ID identifies a unique business partner to import</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1912" trl="N">
+    <value column="Name" isTrl="N" original="Import Account">Import Account</value>
+    <value column="PrintName" isTrl="N" original="Import Account">Import Account</value>
+    <value column="Description" isTrl="N" original="Import Account Value">Import Account Value</value>
+    <value column="Help" isTrl="N" original="Import Account Value">Import Account Value</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1913" trl="N">
+    <value column="Name" isTrl="N" original="Import Product">Import Product</value>
+    <value column="PrintName" isTrl="N" original="Import Product">Import Product</value>
+    <value column="Description" isTrl="N" original="Import Item or Service">Import Item or Service</value>
+    <value column="Help" isTrl="N" original="The ID identifies a unique product">The ID identifies a unique product</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1916" trl="N">
+    <value column="Name" isTrl="N" original="Product Category Key">Product Category Key</value>
+    <value column="PrintName" isTrl="N" original="Product Category Key">Product Category Key</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The value of the product category. This value is the short name for the group. If before inserting it doesn't exists in the table M_Product_Category_Id, it won't work">The value of the product category. This value is the short name for the group. If before inserting it doesn't exists in the table M_Product_Category_Id, it won't work</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1923" trl="N">
+    <value column="Name" isTrl="N" original="Group Key">Group Key</value>
+    <value column="PrintName" isTrl="N" original="Group Key">Group Key</value>
+    <value column="Description" isTrl="N" original="Business Partner Group Key">Business Partner Group Key</value>
+    <value column="Help" isTrl="N" original="The value of the business partner group. This value is the short name for the group. If before inserting it doesn't exists in the table C_BP_Group, it won't work">The value of the business partner group. This value is the short name for the group. If before inserting it doesn't exists in the table C_BP_Group, it won't work</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1924" trl="N">
+    <value column="Name" isTrl="N" original="Parent Account">Parent Account</value>
+    <value column="PrintName" isTrl="N" original="Parent Account">Parent Account</value>
+    <value column="Description" isTrl="N" original="The parent (summary) account">The parent (summary) account</value>
+    <value column="Help" isTrl="N" original="The parent (summary) account">The parent (summary) account</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1925" trl="N">
+    <value column="Name" isTrl="N" original="Parent Key">Parent Key</value>
+    <value column="PrintName" isTrl="N" original="Parent Key">Parent Key</value>
+    <value column="Description" isTrl="N" original="Key if the Parent">Key if the Parent</value>
+    <value column="Help" isTrl="N" original="Key if the Parent">Key if the Parent</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1926" trl="N">
+    <value column="Name" isTrl="N" original="Update Default Accounts">Update Default Accounts</value>
+    <value column="PrintName" isTrl="N" original="Update Default Accounts">Update Default Accounts</value>
+    <value column="Description" isTrl="N" original="Update Default Accounts">Update Default Accounts</value>
+    <value column="Help" isTrl="N" original="Update Default Accounts">Update Default Accounts</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1927" trl="N">
+    <value column="Name" isTrl="N" original="Create New Combination">Create New Combination</value>
+    <value column="PrintName" isTrl="N" original="Create New Combination">Create New Combination</value>
+    <value column="Description" isTrl="N" original="Create New Account Combination">Create New Account Combination</value>
+    <value column="Help" isTrl="N" original="Create New Account Combination">Create New Account Combination</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2043" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="PrintName" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import Inventory Transactions">Import Inventory Transactions</value>
+    <value column="Help" isTrl="N" original="Import Inventory Transactions">Import Inventory Transactions</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2070" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Key">Warehouse Key</value>
+    <value column="PrintName" isTrl="N" original="Warehouse Key">Warehouse Key</value>
+    <value column="Description" isTrl="N" original="Key of the Warehouse">Key of the Warehouse</value>
+    <value column="Help" isTrl="N" original="Key to identify the Warehouse">Key to identify the Warehouse</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2083" trl="N">
+    <value column="Name" isTrl="N" original="Account Key">Account Key</value>
+    <value column="PrintName" isTrl="N" original="Account Key">Account Key</value>
+    <value column="Description" isTrl="N" original="Key of Account Element">Key of Account Element</value>
+    <value column="Help" isTrl="N" original="Key of Account Element">Key of Account Element</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2084" trl="N">
+    <value column="Name" isTrl="N" original="Account Schema Name">Account Schema Name</value>
+    <value column="PrintName" isTrl="N" original="AcctSchema Name">AcctSchema Name</value>
+    <value column="Description" isTrl="N" original="Name of the Accounting Schema">Name of the Accounting Schema</value>
+    <value column="Help" isTrl="N" original="Name of the Accounting Schema">Name of the Accounting Schema</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2091" trl="N">
+    <value column="Name" isTrl="N" original="Bank Account No">Bank Account No</value>
+    <value column="PrintName" isTrl="N" original="Bank Account No">Bank Account No</value>
+    <value column="Description" isTrl="N" original="Bank Account Number">Bank Account Number</value>
+    <value column="Help" isTrl="N" original="Bank Account Number">Bank Account Number</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2092" trl="N">
+    <value column="Name" isTrl="N" original="Batch Description">Batch Description</value>
+    <value column="PrintName" isTrl="N" original="Batch Description">Batch Description</value>
+    <value column="Description" isTrl="N" original="Description of the Batch">Description of the Batch</value>
+    <value column="Help" isTrl="N" original="Description of the Batch">Description of the Batch</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2093" trl="N">
+    <value column="Name" isTrl="N" original="Batch Document No">Batch Document No</value>
+    <value column="PrintName" isTrl="N" original="Batch Document No">Batch Document No</value>
+    <value column="Description" isTrl="N" original="Document Number of the Batch">Document Number of the Batch</value>
+    <value column="Help" isTrl="N" original="Document Number of the Batch">Document Number of the Batch</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2094" trl="N">
+    <value column="Name" isTrl="N" original="Business Partner Search Key">Business Partner Search Key</value>
+    <value column="PrintName" isTrl="N" original="Business Partner Key">Business Partner Key</value>
+    <value column="Description" isTrl="N" original="An abbreviated name (or a code) to help find a business partner.">An abbreviated name (or a code) to help find a business partner.</value>
+    <value column="Help" isTrl="N" original="An abbreviated name (or a code) to help find a business partner. Usually, a company's internal identifier is entered here.">An abbreviated name (or a code) to help find a business partner. Usually, a company's internal identifier is entered here.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2095" trl="N">
+    <value column="Name" isTrl="N" original="Category Name">Category Name</value>
+    <value column="PrintName" isTrl="N" original="Category Name">Category Name</value>
+    <value column="Description" isTrl="N" original="Name of the Category">Name of the Category</value>
+    <value column="Help" isTrl="N" original="Name of the Category">Name of the Category</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2096" trl="N">
+    <value column="Name" isTrl="N" original="Charge Name">Charge Name</value>
+    <value column="PrintName" isTrl="N" original="Charge Name">Charge Name</value>
+    <value column="Description" isTrl="N" original="Name of the Charge">Name of the Charge</value>
+    <value column="Help" isTrl="N" original="Name of the Charge">Name of the Charge</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2097" trl="N">
+    <value column="Name" isTrl="N" original="New Client Identifier">New Client Identifier</value>
+    <value column="PrintName" isTrl="N" original="New Client Identifier">New Client Identifier</value>
+    <value column="Description" isTrl="N" original="New Client Identifier">New Client Identifier</value>
+    <value column="Help" isTrl="N" original="New Client Identifier">New Client Identifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2098" trl="N">
+    <value column="Name" isTrl="N" original="Document Type Name">Document Type Name</value>
+    <value column="PrintName" isTrl="N" original="DocType Name">DocType Name</value>
+    <value column="Description" isTrl="N" original="A value defining what sequence and process setup are used to handle this document.">A value defining what sequence and process setup are used to handle this document.</value>
+    <value column="Help" isTrl="N" original="A value defining what sequence and process setup are used to handle this document.">A value defining what sequence and process setup are used to handle this document.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2102" trl="N">
+    <value column="Name" isTrl="N" original="Import Bank Statement">Import Bank Statement</value>
+    <value column="PrintName" isTrl="N" original="Import Bank Statement">Import Bank Statement</value>
+    <value column="Description" isTrl="N" original="Import of the Bank Statement">Import of the Bank Statement</value>
+    <value column="Help" isTrl="N" original="Import of the Bank Statement">Import of the Bank Statement</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2103" trl="N">
+    <value column="Name" isTrl="N" original="Import GL Journal">Import GL Journal</value>
+    <value column="PrintName" isTrl="N" original="Import GL Journal">Import GL Journal</value>
+    <value column="Description" isTrl="N" original="Import General Ledger Journal">Import General Ledger Journal</value>
+    <value column="Help" isTrl="N" original="Import General Ledger Journal">Import General Ledger Journal</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2104" trl="N">
+    <value column="Name" isTrl="N" original="Import Order">Import Order</value>
+    <value column="PrintName" isTrl="N" original="Import Order">Import Order</value>
+    <value column="Description" isTrl="N" original="Import Orders">Import Orders</value>
+    <value column="Help" isTrl="N" original="Import Orders">Import Orders</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2106" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Document No">Invoice Document No</value>
+    <value column="PrintName" isTrl="N" original="Invoice Document No">Invoice Document No</value>
+    <value column="Description" isTrl="N" original="Document Number of the Invoice">Document Number of the Invoice</value>
+    <value column="Help" isTrl="N" original="Document Number of the Invoice">Document Number of the Invoice</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2108" trl="N">
+    <value column="Name" isTrl="N" original="Line Description">Line Description</value>
+    <value column="PrintName" isTrl="N" original="Line Description">Line Description</value>
+    <value column="Description" isTrl="N" original="An additional detail regarding one item or charge.">An additional detail regarding one item or charge.</value>
+    <value column="Help" isTrl="N" original="An additional detail regarding one item or charge.">An additional detail regarding one item or charge.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2109" trl="N">
+    <value column="Name" isTrl="N" original="Locator Key">Locator Key</value>
+    <value column="PrintName" isTrl="N" original="Locator Key">Locator Key</value>
+    <value column="Description" isTrl="N" original="Key of the Warehouse Locator">Key of the Warehouse Locator</value>
+    <value column="Help" isTrl="N" original="Key of the Warehouse Locator">Key of the Warehouse Locator</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2114" trl="N">
+    <value column="Name" isTrl="N" original="Trx Org Key">Trx Org Key</value>
+    <value column="PrintName" isTrl="N" original="Trx Org Key">Trx Org Key</value>
+    <value column="Description" isTrl="N" original="Key of the Transaction Organization">Key of the Transaction Organization</value>
+    <value column="Help" isTrl="N" original="Key of the Transaction Organization">Key of the Transaction Organization</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2115" trl="N">
+    <value column="Name" isTrl="N" original="Org Key">Org Key</value>
+    <value column="PrintName" isTrl="N" original="Org Key">Org Key</value>
+    <value column="Description" isTrl="N" original="Key of the Organization">Key of the Organization</value>
+    <value column="Help" isTrl="N" original="Key of the Organization">Key of the Organization</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2116" trl="N">
+    <value column="Name" isTrl="N" original="Payment Term Key">Payment Term Key</value>
+    <value column="PrintName" isTrl="N" original="Payment Term Key">Payment Term Key</value>
+    <value column="Description" isTrl="N" original="Key of the Payment Term">Key of the Payment Term</value>
+    <value column="Help" isTrl="N" original="Key of the Payment Term">Key of the Payment Term</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2118" trl="N">
+    <value column="Name" isTrl="N" original="Project Key">Project Key</value>
+    <value column="PrintName" isTrl="N" original="Project Key">Project Key</value>
+    <value column="Description" isTrl="N" original="Key of the Project">Key of the Project</value>
+    <value column="Help" isTrl="N" original="Key of the Project">Key of the Project</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2128" trl="N">
+    <value column="Name" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="PrintName" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="Description" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="Help" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2168" trl="N">
+    <value column="Name" isTrl="N" original="Only Validate Data">Only Validate Data</value>
+    <value column="PrintName" isTrl="N" original="Validate Only">Validate Only</value>
+    <value column="Description" isTrl="N" original="Validate the date and do not process">Validate the date and do not process</value>
+    <value column="Help" isTrl="N" original="Validate the date and do not process">Validate the date and do not process</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2169" trl="N">
+    <value column="Name" isTrl="N" original="Import only if No Errors">Import only if No Errors</value>
+    <value column="PrintName" isTrl="N" original="Import No Errors">Import No Errors</value>
+    <value column="Description" isTrl="N" original="Only start the import, if there are no validation Errors">Only start the import, if there are no validation Errors</value>
+    <value column="Help" isTrl="N" original="Only start the import, if there are no validation Errors">Only start the import, if there are no validation Errors</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2170" trl="N">
+    <value column="Name" isTrl="N" original="Document Org">Document Org</value>
+    <value column="PrintName" isTrl="N" original="Document Org">Document Org</value>
+    <value column="Description" isTrl="N" original="Document Organization (independent from account organization)">Document Organization (independent from account organization)</value>
+    <value column="Help" isTrl="N" original="Document Organization (independent from account organization)">Document Organization (independent from account organization)</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2171" trl="N">
+    <value column="Name" isTrl="N" original="Journal Document No">Journal Document No</value>
+    <value column="PrintName" isTrl="N" original="Journal Doc No">Journal Doc No</value>
+    <value column="Description" isTrl="N" original="Document number of the Journal">Document number of the Journal</value>
+    <value column="Help" isTrl="N" original="Document number of the Journal">Document number of the Journal</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="308" trl="N">
+    <value column="Name" isTrl="N" original="Budget">Budget</value>
+    <value column="PrintName" isTrl="N" original="Budget">Budget</value>
+    <value column="Description" isTrl="N" original="A group of planned expenses for a task.">A group of planned expenses for a task.</value>
+    <value column="Help" isTrl="N" original="The General Ledger Budget identifies a user defined budget.  These can be used in reporting as a comparison against your actual amounts.">The General Ledger Budget identifies a user defined budget.  These can be used in reporting as a comparison against your actual amounts.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="584A0583033F4C58E040A8C054666A78" trl="N">
+    <value column="Name" isTrl="N" original="Paymentamount1">Paymentamount1</value>
+    <value column="PrintName" isTrl="N" original="Paymentamount1">Paymentamount1</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="584A058303414C58E040A8C054666A78" trl="N">
+    <value column="Name" isTrl="N" original="Paymentamount2">Paymentamount2</value>
+    <value column="PrintName" isTrl="N" original="Paymentamount2">Paymentamount2</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="584A058303424C58E040A8C054666A78" trl="N">
+    <value column="Name" isTrl="N" original="Paymentrule2">Paymentrule2</value>
+    <value column="PrintName" isTrl="N" original="Paymentrule2">Paymentrule2</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="584A058303434C58E040A8C054666A78" trl="N">
+    <value column="Name" isTrl="N" original="Paymentrule1">Paymentrule1</value>
+    <value column="PrintName" isTrl="N" original="Paymentrule1">Paymentrule1</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6A859170F5A64BF18E4B6E807D9B76F5" trl="N">
+    <value column="Name" isTrl="N" original="Attributeset Identification">Attributeset Identification</value>
+    <value column="PrintName" isTrl="N" original="Attributesetident">Attributesetident</value>
+    <value column="Description" isTrl="N" original="The identifier for the attribute set. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the attribute set. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800508" trl="N">
+    <value column="Name" isTrl="N" original="Bill to UPC">Bill to UPC</value>
+    <value column="PrintName" isTrl="N" original="Billto_Upc">Billto_Upc</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800509" trl="N">
+    <value column="Name" isTrl="N" original="Business Partner UPC">Business Partner UPC</value>
+    <value column="PrintName" isTrl="N" original="Bpartnerupc">Bpartnerupc</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800510" trl="N">
+    <value column="Name" isTrl="N" original="UPC Address">UPC Address</value>
+    <value column="PrintName" isTrl="N" original="C_Bpartner_Location_Upc">C_Bpartner_Location_Upc</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800511" trl="N">
+    <value column="Name" isTrl="N" original="Order Reference No.">Order Reference No.</value>
+    <value column="PrintName" isTrl="N" original="Order_Referenceno">Order_Referenceno</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800558" trl="N">
+    <value column="Name" isTrl="N" original="Vendor UPC">Vendor UPC</value>
+    <value column="PrintName" isTrl="N" original="Vendor_Upc">Vendor_Upc</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800612" trl="N">
+    <value column="Name" isTrl="N" original="Activity Identification">Activity Identification</value>
+    <value column="PrintName" isTrl="N" original="Activity ident.">Activity ident.</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800613" trl="N">
+    <value column="Name" isTrl="N" original="BP Group Identitification">BP Group Identitification</value>
+    <value column="PrintName" isTrl="N" original="Bp group ident">Bp group ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the business partner group. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the business partner group. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800614" trl="N">
+    <value column="Name" isTrl="N" original="Campaign Identification">Campaign Identification</value>
+    <value column="PrintName" isTrl="N" original="Campaign ident">Campaign ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Campaign. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Campaign. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800615" trl="N">
+    <value column="Name" isTrl="N" original="I_Budgetline_ID">I_Budgetline_ID</value>
+    <value column="PrintName" isTrl="N" original="I_Budgetline_ID">I_Budgetline_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The ID identifies a unique record">The ID identifies a unique record</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800616" trl="N">
+    <value column="Name" isTrl="N" original="Organization Trx Identification">Organization Trx Identification</value>
+    <value column="PrintName" isTrl="N" original="Org Trx ident">Org Trx ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Organization. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Organization. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800617" trl="N">
+    <value column="Name" isTrl="N" original="Partner Identification">Partner Identification</value>
+    <value column="PrintName" isTrl="N" original="Partner ident">Partner ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Partner. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Partner. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800618" trl="N">
+    <value column="Name" isTrl="N" original="Period Identification">Period Identification</value>
+    <value column="PrintName" isTrl="N" original="Period ident">Period ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Period. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Period. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800619" trl="N">
+    <value column="Name" isTrl="N" original="Product Category ID">Product Category ID</value>
+    <value column="PrintName" isTrl="N" original="Prod category ident">Prod category ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the product category. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the product category. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800620" trl="N">
+    <value column="Name" isTrl="N" original="Product Identification">Product Identification</value>
+    <value column="PrintName" isTrl="N" original="Product ident">Product ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Product. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Product. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800621" trl="N">
+    <value column="Name" isTrl="N" original="Project Identification">Project Identification</value>
+    <value column="PrintName" isTrl="N" original="Project ident">Project ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Project. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Project. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800622" trl="N">
+    <value column="Name" isTrl="N" original="Sales Region Identification">Sales Region Identification</value>
+    <value column="PrintName" isTrl="N" original="Sales region ident">Sales region ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Sales region. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Sales region. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800631" trl="N">
+    <value column="Name" isTrl="N" original="Currency Identification">Currency Identification</value>
+    <value column="PrintName" isTrl="N" original="Currency ident">Currency ident</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The identifier for the Currency. This identifier is the result of all the columns that are marked as isidentifier">The identifier for the Currency. This identifier is the result of all the columns that are marked as isidentifier</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800776" trl="N">
+    <value column="Name" isTrl="N" original="Commodity Code">Commodity Code</value>
+    <value column="PrintName" isTrl="N" original="TC_Commoditycode">TC_Commoditycode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800777" trl="N">
+    <value column="Name" isTrl="N" original="Tax Name">Tax Name</value>
+    <value column="PrintName" isTrl="N" original="Tax Name">Tax Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800778" trl="N">
+    <value column="Name" isTrl="N" original="BP Tax Category Name">BP Tax Category Name</value>
+    <value column="PrintName" isTrl="N" original="BP Tax Cat Name">BP Tax Cat Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800779" trl="N">
+    <value column="Name" isTrl="N" original="Tax Description">Tax Description</value>
+    <value column="PrintName" isTrl="N" original="Tax Description">Tax Description</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800780" trl="N">
+    <value column="Name" isTrl="N" original="Tax Category Name">Tax Category Name</value>
+    <value column="PrintName" isTrl="N" original="Tax Category Name">Tax Category Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800781" trl="N">
+    <value column="Name" isTrl="N" original="I_Tax_ID">I_Tax_ID</value>
+    <value column="PrintName" isTrl="N" original="I_Tax_ID">I_Tax_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800782" trl="N">
+    <value column="Name" isTrl="N" original="Tax Cat. Description">Tax Cat. Description</value>
+    <value column="PrintName" isTrl="N" original="Tax Cat. Description">Tax Cat. Description</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800783" trl="N">
+    <value column="Name" isTrl="N" original="BP Tax Category Description">BP Tax Category Description</value>
+    <value column="PrintName" isTrl="N" original="BP Tax Category Description">BP Tax Category Description</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800784" trl="N">
+    <value column="Name" isTrl="N" original="Country to Code">Country to Code</value>
+    <value column="PrintName" isTrl="N" original="Code Country To">Code Country To</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800785" trl="N">
+    <value column="Name" isTrl="N" original="Region to Code">Region to Code</value>
+    <value column="PrintName" isTrl="N" original="Code Region To">Code Region To</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800786" trl="N">
+    <value column="Name" isTrl="N" original="Parent Tax Name">Parent Tax Name</value>
+    <value column="PrintName" isTrl="N" original="Parent Tax Name">Parent Tax Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800787" trl="N">
+    <value column="Name" isTrl="N" original="Country from Code">Country from Code</value>
+    <value column="PrintName" isTrl="N" original="Code Country From">Code Country From</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="800788" trl="N">
+    <value column="Name" isTrl="N" original="Region from Code">Region from Code</value>
+    <value column="PrintName" isTrl="N" original="Code Region From">Code Region From</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="912" trl="N">
+    <value column="Name" isTrl="N" original="Import Error Message">Import Error Message</value>
+    <value column="PrintName" isTrl="N" original="Import Error Message">Import Error Message</value>
+    <value column="Description" isTrl="N" original="A message that appears when errors occur during the importing process.">A message that appears when errors occur during the importing process.</value>
+    <value column="Help" isTrl="N" original="The Import Error Message displays any error messages generated during the import process.">The Import Error Message displays any error messages generated during the import process.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="913" trl="N">
+    <value column="Name" isTrl="N" original="Import Process Complete">Import Process Complete</value>
+    <value column="PrintName" isTrl="N" original="Imported">Imported</value>
+    <value column="Description" isTrl="N" original="A indication that the desired process has been completed successfully.">A indication that the desired process has been completed successfully.</value>
+    <value column="Help" isTrl="N" original="The Imported check box indicates if this import has been processed.">The Imported check box indicates if this import has been processed.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FF80818131998506013199A229D70018" trl="N">
+    <value column="Name" isTrl="N" original="Synchronized">Synchronized</value>
+    <value column="PrintName" isTrl="N" original="Syncrhonized">Syncrhonized</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

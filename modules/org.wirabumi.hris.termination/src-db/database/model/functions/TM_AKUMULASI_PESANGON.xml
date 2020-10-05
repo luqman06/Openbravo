@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TM_AKUMULASI_PESANGON">
+    <function name="TM_AKUMULASI_PESANGON" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_retirement NUMBER;
+v_client varchar(60);
+v_org varchar(60);
+v_set_pesangon varchar(60);
+v_salarypayment varchar(60);
+
+--variable untuk upah pesangon
+v_multiplier1 NUMBER;
+v_year1 NUMBER;
+v_description1 character varying(255);
+v_batas_bawah1 NUMBER;
+v_batas_bawah_sebelum1 NUMBER;
+v_upah NUMBER;
+
+--variable untuk upah penghargaan
+v_batas_bawah2 NUMBER;
+v_batas_bawah_sebelum2 NUMBER;
+v_description2 character varying(255);
+v_multiplier2 NUMBER;
+v_year2 NUMBER;
+v_penghargaan NUMBER;
+
+-- variable untuk upah pisah
+v_uangpisah NUMBER;
+v_set_uangpisah varchar(32);
+v_batas_bawah3 NUMBER;
+v_batas_bawah_sebelum3 NUMBER;
+v_multiplier3 NUMBER;
+v_year3 NUMBER;
+v_year4 NUMBER;
+
+--variable umum
+v_gajitotal NUMBER;
+v_multiplier NUMBER;
+v_gajipokok NUMBER;
+v_tunjangantetap NUMBER;
+v_total NUMBER;
+v_yearofemployee NUMBER;
+v_pesangon NUMBER;
+v_totalamt NUMBER;
+v_startdate timestamp without time zone;
+v_enddate timestamp without time zone;
+v_fp_employee varchar(60);
+v_fp_date timestamp without time zone;
+v_form_pesangon varchar(60);
+v_dp_pesangon_id varchar(60);
+v_description character varying(255);
+v_calculate NUMBER;
+v_amount NUMBER;
+v_amountcuti NUMBER;
+v_sisacuti NUMBER;
+v_workday NUMBER;
+v_dp_value varchar(40);
+v_dp_name varchar(60);
+v_dp_multiplier NUMBER;
+v_dp_amount NUMBER;
+
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+  cur_employee record;
+  cur_penghargaan record;
+  cur_upah record;
+  cur_pisah record;
+  Cur_detail record;
+
+ 
+begin
+ result:=0;
+ v_totalamt:=0;
+
+ alter table tm_detail_pesangon disable trigger tm_calculatetotal;
+
+select tm_set_pesangon_id, age_retirement, ad_client_id, ad_org_id into v_set_pesangon, v_retirement, v_client, v_org
+from tm_set_pesangon
+order by validfrom desc, validto desc limit 1;
+   
+for cur_employee in (select c_bpartner_id, ad_client_id, ad_org_id, em_hris_year as year, em_hris_retirementdate as retirementdate, em_tm_set_phk_id as tm_set_phk_id, createdby, updatedby
+        	     from c_bpartner
+		     where ad_client_id=v_client
+                     and em_tm_set_phk_id is not null
+                     and date_part('month', em_hris_retirementdate)=date_part('month', now())		
+		     and (case when p_employee_id is not null then c_bpartner_id=p_employee_id else 1=1 end))
+loop
+raise notice 'employee: %, em_hris_year: %', 
+(select name from c_bpartner where c_bpartner_id=cur_employee.c_bpartner_id), cur_employee.year;
+
+v_yearofemployee:=cur_employee.year;
+--mengambil salary pada 1 bulan sebelumnya
+select sp.pyr_salarypayment_id, startdate, enddate into v_salarypayment, v_startdate, v_enddate
+from pyr_salarypayment sp
+inner join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+where c_bpartner_id=cur_employee.c_bpartner_id
+order by startdate desc, enddate desc, valutadate desc
+limit 1;
+
+--mengambil gaji pokok
+select spee.amount into v_gajipokok
+from pyr_spe_earning spee
+inner join pyr_earning sp on sp.pyr_earning_id=spee.pyr_earning_id
+inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=spee.pyr_sp_employee_id
+where spe.c_bpartner_id=cur_employee.c_bpartner_id
+and sp.value='GP'
+and spe.pyr_salarypayment_id=v_salarypayment;
+
+--mengambil tunjangan tetap
+select spee.amount into v_tunjangantetap
+from pyr_spe_earning spee
+inner join pyr_earning sp on sp.pyr_earning_id=spee.pyr_earning_id
+inner join pyr_sp_employee spe on spe.pyr_sp_employee_id=spee.pyr_sp_employee_id
+where spe.c_bpartner_id=cur_employee.c_bpartner_id
+and sp.value='TP'
+and spe.pyr_salarypayment_id=v_salarypayment;
+
+v_gajitotal:=v_gajipokok+v_tunjangantetap;
+
+IF v_gajitotal is null then continue; end if;
+
+raise notice 'v_gajipokok: %, v_gajitotal: %', v_gajipokok, v_gajitotal;
+
+--penentuan upah pesangon
+v_year1:=v_yearofemployee; v_upah:=0; v_batas_bawah_sebelum1:=0;
+raise notice 'year1: %', v_year1;
+--menentukan tarif bawah
+for cur_upah in (select max_year, multiplier, description
+			from tm_set_upah 
+			where  tm_set_pesangon_id=v_set_pesangon
+			and ad_client_id=v_client 
+			order by max_year desc)
+  Loop
+  if (v_year1<=cur_upah.max_year) then   
+    v_multiplier1 := cur_upah.multiplier;
+    v_batas_bawah1:=cur_upah.max_year;
+    v_description1:=cur_upah.description;
+  Else Exit;
+  end if;
+  End Loop; --End loop menentukan lembur
+	v_upah = round(v_multiplier1 * v_gajitotal, 2);
+raise notice 'v_batas_bawah1: %,  v_multiplier1: %, v_upah: %', 
+v_batas_bawah1, v_multiplier1, v_upah;
+
+--penentuan upah Penghargaan
+v_year2:=v_yearofemployee; v_penghargaan:=0; v_batas_bawah_sebelum2:=0;
+raise notice 'year2: %', v_year2;
+--menentukan tarif bawah
+for cur_penghargaan in (select max_year, multiplier, description 
+                from tm_set_penghargaan 
+                where  tm_set_pesangon_id=v_set_pesangon
+                and ad_client_id=v_client
+                order by max_year desc)
+loop
+  if (v_year2<=cur_penghargaan.max_year) then   
+    v_multiplier2 :=cur_penghargaan.multiplier;
+    v_batas_bawah2:=cur_penghargaan.max_year;
+    v_description2:=cur_penghargaan.description;
+  Else Exit;
+  end if;
+end loop;
+	v_penghargaan = round(v_multiplier2 * v_gajitotal, 2);
+
+
+raise notice 'v_batas_bawah2: %,  v_multiplier2: %, v_penghargaan: %', 
+v_batas_bawah2, v_multiplier2, v_penghargaan;
+
+
+--mengambil data uang pisah
+select tm_set_uangpisah_id into v_set_uangpisah 
+from tm_set_phk where tm_set_phk_id=cur_employee.tm_set_phk_id;
+
+IF v_set_uangpisah is not null then
+	v_year3:=v_yearofemployee; v_year4:=v_yearofemployee; v_uangpisah:=0; v_batas_bawah_sebelum3:=0;
+	--penentuan Uang Pisah
+	select max_year, multiplier into v_batas_bawah3, v_multiplier3
+	from tm_set_uangpisah_detail where  tm_set_uangpisah_id=v_set_uangpisah
+	order by max_year asc limit 1;
+
+	
+	raise notice 'year3: %', v_year3;
+	--menentukan tarif bawah
+	while (v_year3 >= (v_batas_bawah3-v_batas_bawah_sebelum3))
+        Loop 
+	v_batas_bawah_sebelum3:= v_batas_bawah3;
+	select max_year, multiplier into v_batas_bawah3, v_multiplier3
+			  from tm_set_uangpisah_detail 
+			  where  tm_set_uangpisah_id=v_set_uangpisah 
+	                  and max_year > v_batas_bawah_sebelum3 
+	                  order by max_year asc limit 1;
+	end loop;
+	v_uangpisah = round(v_multiplier3 * v_gajitotal, 2);
+else v_uangpisah=0;
+End IF;
+
+raise notice 'v_batas_bawah3: %,  v_multiplier3: %, v_uangpisah: %', 
+v_batas_bawah3, v_multiplier3, v_uangpisah;
+
+--menghitung total upah + penghargaan
+v_pesangon:=round(v_penghargaan+v_upah, 2);
+
+--mengambil jumlah hari kerja
+select sht.em_dild_businessday into v_workday 
+from ta_c_bp_shift bps
+inner join ta_shift sht on sht.ta_shift_id=bps.ta_shift_id
+where c_bpartner_id=cur_employee.c_bpartner_id
+and bps.validfrom<=cur_employee.retirementdate
+and bps.validto>=cur_employee.retirementdate
+order by bps.validfrom desc, bps.validto desc limit 1;
+
+--mengambil sisa cuti
+select duration-usedleave into v_sisacuti
+from lv_c_bp_leave
+where c_bpartner_id=cur_employee.c_bpartner_id
+and validfrom<=cur_employee.retirementdate
+and validto>=cur_employee.retirementdate
+and type='CT'
+order by validfrom desc, validto desc limit 1;
+
+if v_sisacuti is null or v_sisacuti<=0 then v_sisacuti:=0;
+else v_sisacuti:=v_sisacuti;
+End If;
+
+v_amountcuti:=round((v_gajipokok/v_workday)*v_sisacuti, 2);
+
+
+raise notice 'v_workday: %, v_sisacuti: %, v_amountcuti: %', v_workday, v_sisacuti, v_amountcuti;
+
+raise notice 'v_batas_bawah: %,  v_multiplier1: %, v_penghargaan: %', 
+v_batas_bawah2, v_multiplier2, v_penghargaan;
+raise notice 'v_pesangon: %', v_pesangon;
+
+--mengambil data Form Pesangon yang sudah masuk
+select c_bpartner_id, dateacct, tm_form_pesangon_id 
+into v_fp_employee, v_fp_date, v_form_pesangon
+from tm_form_pesangon
+where c_bpartner_id=cur_employee.c_bpartner_id
+and dateacct=cur_employee.retirementdate
+and tm_set_phk_id=cur_employee.tm_set_phk_id;
+
+--validasi untuk form pesangon yang sudah ada
+IF v_fp_employee=cur_employee.c_bpartner_id and v_fp_date=cur_employee.retirementdate Then
+    Update tm_form_pesangon set c_bpartner_id=cur_employee.c_bpartner_id, 
+        dateacct=cur_employee.retirementdate, tm_set_phk_id=cur_employee.tm_set_phk_id, 
+        gajipokok=v_gajipokok, tunjangantetap=v_tunjangantetap, gajitotal=v_gajitotal
+    where c_bpartner_id=cur_employee.c_bpartner_id
+    and dateacct=cur_employee.retirementdate;
+Else
+--memasukkan data pada form pesangon
+    INSERT INTO tm_form_pesangon(
+            tm_form_pesangon_id, ad_client_id, ad_org_id, isactive, created, 
+            createdby, updated, updatedby, 
+            dateacct, c_bpartner_id, "name", 
+            totalamt, docaction, docstatus, tm_set_phk_id, gajipokok, tunjangantetap, gajitotal)
+    VALUES (get_uuid(), cur_employee.ad_client_id, cur_employee.ad_org_id, 'Y', now(),
+	    cur_employee.createdby, now(), cur_employee.updatedby, 
+	    cur_employee.retirementdate, cur_employee.c_bpartner_id, 'Pesangon'||' '||to_char(cur_employee.retirementdate, 'Month YYYY'),
+	    v_totalamt, 'CO', 'DR', cur_employee.tm_set_phk_id, v_gajipokok, v_tunjangantetap, v_gajitotal);
+End IF;
+
+    FOR Cur_detail in (select ear.param_name as name, ear.value as value, det.multiplier 
+       		       from tm_set_phk_detail det
+       		       inner join  pyr_earning_param ear on ear.pyr_earning_param_id=det.em_pyr_earning_param_id
+       		       where tm_set_phk_id=cur_employee.tm_set_phk_id)
+    Loop
+	--mendapatkan spesifik pesangon
+	IF Cur_detail.value='UP' and cur_detail.multiplier > 0 and v_multiplier1>0 then 
+	   v_calculate:=v_multiplier1; v_amount:=v_gajitotal; v_description:=v_description1;
+	   v_multiplier:=cur_detail.multiplier; v_total:=v_upah*cur_detail.multiplier;		   
+	Elsif Cur_detail.value='UP' and (cur_detail.multiplier<= 0 or v_multiplier1<=0) then 
+	   v_calculate:=0; v_amount:=0; v_description:=v_description1;
+	   v_multiplier:=cur_detail.multiplier; v_total:=0;	
+	Elsif Cur_detail.value='UPMK' and cur_detail.multiplier > 0 and v_multiplier2>0 then 
+	      v_calculate:=v_multiplier2; v_amount:=v_gajitotal; v_description:=v_description2;
+	      v_multiplier:=cur_detail.multiplier; v_total:=v_penghargaan*cur_detail.multiplier;
+        Elsif Cur_detail.value='UPMK' and (cur_detail.multiplier <= 0 or v_multiplier2<=0) then 
+	      v_calculate:=0; v_amount:=0; v_description:=v_description2;
+	      v_multiplier:=cur_detail.multiplier; v_total:=0; v_description:=v_description2;
+        Elsif Cur_detail.value='UPH1' and v_amountcuti>0 and cur_detail.multiplier>0 then 
+	      v_calculate:=null; v_amount:=v_amountcuti; v_description:=null;
+	      v_multiplier:=cur_detail.multiplier; v_total:=v_amountcuti*cur_detail.multiplier;
+        Elsif Cur_detail.value='UPH1' and v_amountcuti<=0 then 
+	      v_calculate:=null; v_amount:=0; 
+	      v_multiplier:=cur_detail.multiplier; v_total:=0; v_description:=null;	       
+	Elsif Cur_detail.value='UPH3' and cur_detail.multiplier > 0 then 
+	      v_amount:=v_pesangon; v_calculate:=null;
+	      v_multiplier:=cur_detail.multiplier; v_total:=v_pesangon*(cur_detail.multiplier/100); v_description:=null;
+	Elsif Cur_detail.value='UPH3' and (cur_detail.multiplier is null or cur_detail.multiplier<=0) then 
+	      v_amount:=0; v_calculate:=null;
+	      v_multiplier:=cur_detail.multiplier; v_total:=0; v_description:=null;       
+	Elsif Cur_detail.value='UPIS' and cur_detail.multiplier > 0 and v_multiplier3>0 then 
+	      v_amount:=v_gajitotal; v_calculate:=v_multiplier3;
+	      v_multiplier:=cur_detail.multiplier; v_total:=v_uangpisah; v_description:=null;
+	Elsif Cur_detail.value='UPIS' and (v_multiplier3<=0 or cur_detail.multiplier<=0) then 
+	      v_amount:=0; v_calculate:=0;
+	      v_multiplier:=cur_detail.multiplier; v_total:=0; v_description:=null;
+	Else  v_multiplier:=cur_detail.multiplier; v_amount:=0; v_total:=0; v_calculate:=null; v_description:=null;
+	End IF;
+
+	raise notice 'v_value: %, v_name: %, v_calculate: %, v_multiplier: %, v_description: %', 
+	Cur_detail.value, Cur_detail.name, v_calculate, v_multiplier, v_description;
+
+	raise notice 'v_amount: %, v_total: %', v_amount, v_total;
+       
+	select c_bpartner_id, dateacct, tm_form_pesangon_id 
+	into v_fp_employee, v_fp_date, v_form_pesangon
+	from tm_form_pesangon
+	where c_bpartner_id=cur_employee.c_bpartner_id
+	and dateacct=cur_employee.retirementdate;
+
+	select dp.value, dp.name, dp.multiplier, dp.amount, dp.tm_form_pesangon_id 
+	into v_dp_value, v_dp_name, v_dp_multiplier, v_dp_amount, v_dp_pesangon_id
+	from tm_detail_pesangon dp
+	inner join tm_form_pesangon fp on fp.tm_form_pesangon_id=dp.tm_form_pesangon_id
+	where fp.c_bpartner_id=cur_employee.c_bpartner_id
+	and dateacct=cur_employee.retirementdate
+	and dp.name=Cur_detail.name
+	and dp.value=Cur_detail.value
+	and tm_set_phk_id=cur_employee.tm_set_phk_id;
+        
+	IF v_dp_pesangon_id=v_form_pesangon and v_dp_value=Cur_detail.value and v_dp_name=Cur_detail.name 
+	then
+	  -- IF v_amount<=0 then continue; 
+	  -- else
+	     Update tm_detail_pesangon set name=Cur_detail.name, value=Cur_detail.value, multiplier=cur_detail.multiplier, 
+	            amount=v_amount, total=v_total, calculate=v_calculate, c_bpartner_id=cur_employee.c_bpartner_id,
+	            description=v_description
+	     where name=Cur_detail.name
+	     and value=Cur_detail.value
+	     and tm_form_pesangon_id=v_form_pesangon;
+	  -- end IF;
+	Else
+	   INSERT INTO tm_detail_pesangon(
+		tm_detail_pesangon_id, tm_form_pesangon_id, ad_client_id, ad_org_id, 
+		isactive, created, createdby, updated, updatedby, c_bpartner_id, 
+		"value", "name", amount, multiplier, calculate, total, description)
+           VALUES
+                (get_uuid(), v_form_pesangon, cur_employee.ad_client_id, cur_employee.ad_org_id,
+	         'Y', now(), cur_employee.createdby, now(), cur_employee.updatedby, cur_employee.c_bpartner_id,
+	         Cur_detail.value, Cur_detail.name, v_amount, cur_detail.multiplier, v_calculate, v_total, v_description);
+	End If;
+         
+    End Loop;
+	
+end loop;
+result:=1;
+ alter table tm_detail_pesangon enable trigger tm_calculatetotal;
+
+   
+RETURN;
+END TM_AKUMULASI_PESANGON
+]]></body>
+    </function>
+  </database>

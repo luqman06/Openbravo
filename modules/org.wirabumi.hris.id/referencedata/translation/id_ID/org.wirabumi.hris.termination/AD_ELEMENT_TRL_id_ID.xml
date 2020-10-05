@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="08AC6811C36B48F5904E22401EDB96D0" trl="N">
+    <value column="Name" isTrl="N" original="TM_Set_Phk_Detail_ID">TM_Set_Phk_Detail_ID</value>
+    <value column="PrintName" isTrl="N" original="TM_Set_Phk_Detail_ID">TM_Set_Phk_Detail_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1B8DF99567C440AAB816BE6BB8AE74A4" trl="N">
+    <value column="Name" isTrl="Y" original="Used for Employee Termination Benefit">Digunakan untuk Perhitungan Benefit Pemeberhentian Karyawan</value>
+    <value column="PrintName" isTrl="Y" original="Used for Employee Termination Benefit">Digunakan untuk Perhitungan Benefit Pemeberhentian Karyawan</value>
+    <value column="Description" isTrl="Y" original="Used for Employee Termination Benefit">Digunakan untuk Perhitungan Benefit Pemeberhentian Karyawan</value>
+    <value column="Help" isTrl="Y" original="this salary earning parameter is Used for Employee Termination Benefit calculation.">Parameter gaji ini digunakan untuk perhitungan benefit pemeberhentian karyawan</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="291766BFFDE240219C5ADDCF135E066E" trl="N">
+    <value column="Name" isTrl="N" original="Postcontractno">Postcontractno</value>
+    <value column="PrintName" isTrl="N" original="Postcontractno">Postcontractno</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2E544A1C8C1A41C19FD97661536DE6B0" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Earning_Param_ID">PYR_Earning_Param_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Earning_Param_ID">PYR_Earning_Param_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="39ABC16052FE46B3BA8B24DA4FF8659F" trl="N">
+    <value column="Name" isTrl="N" original="Gaji Total">Gaji Total</value>
+    <value column="PrintName" isTrl="N" original="Gajitotal">Gajitotal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3BA9C546FCB642BF84FF5D64B2582533" trl="N">
+    <value column="Name" isTrl="N" original="Death Date">Death Date</value>
+    <value column="PrintName" isTrl="N" original="Death Date">Death Date</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3E11721149604D66B6D5713C4CF55001" trl="N">
+    <value column="Name" isTrl="N" original="TM_Detail_Pesangon_ID">TM_Detail_Pesangon_ID</value>
+    <value column="PrintName" isTrl="N" original="TM_Detail_Pesangon_ID">TM_Detail_Pesangon_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4D7712A77F3D4F2BBCEDA5B474713729" trl="N">
+    <value column="Name" isTrl="N" original="TM_Set_Uangpisah_Detail_ID">TM_Set_Uangpisah_Detail_ID</value>
+    <value column="PrintName" isTrl="N" original="TM_Set_Uangpisah_Detail_ID">TM_Set_Uangpisah_Detail_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4FEA74DD8BD24DD08C3EE68902B335D5" trl="N">
+    <value column="Name" isTrl="N" original="Gaji Pokok">Gaji Pokok</value>
+    <value column="PrintName" isTrl="N" original="Gajipokok">Gajipokok</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="60E0CB4F516A4785B56EC4AFB3C0CE7B" trl="N">
+    <value column="Name" isTrl="N" original="Set Penghargaan">Set Penghargaan</value>
+    <value column="PrintName" isTrl="N" original="Set Penghargaan">Set Penghargaan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="67D2A03EC25B4A2DBB739962C9C51ADF" trl="N">
+    <value column="Name" isTrl="N" original="TM_Termination_ID">TM_Termination_ID</value>
+    <value column="PrintName" isTrl="N" original="TM_Termination_ID">TM_Termination_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7805D9FD26BF44E6B133A024E85396B2" trl="N">
+    <value column="Name" isTrl="N" original="Form Pesangon">Form Pesangon</value>
+    <value column="PrintName" isTrl="N" original="Form Pesangon">Form Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7CA19A8E1848435BA9E7F50FAE93551F" trl="N">
+    <value column="Name" isTrl="N" original="Release_Contract">Release_Contract</value>
+    <value column="PrintName" isTrl="N" original="Release_Contract">Release_Contract</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8FC3BDC80465470AB3B56262BCD34073" trl="N">
+    <value column="Name" isTrl="N" original="Tunjangan Tetap">Tunjangan Tetap</value>
+    <value column="PrintName" isTrl="N" original="Tunjangantetap">Tunjangantetap</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="93FC02E8DE0840339666F8F3B3354DD3" trl="N">
+    <value column="Name" isTrl="N" original="PHK">PHK</value>
+    <value column="PrintName" isTrl="N" original="PHK">PHK</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9AAB20D90457447691831D41E0CDE4C9" trl="N">
+    <value column="Name" isTrl="N" original="Set Pesangon">Set Pesangon</value>
+    <value column="PrintName" isTrl="N" original="Set Pesangon">Set Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="AE83FCFBDD524A54B347F503228B8E3D" trl="N">
+    <value column="Name" isTrl="N" original="Direksi Kadiv SDM">Direksi Kadiv SDM</value>
+    <value column="PrintName" isTrl="N" original="Direksi Kadiv SDM">Direksi Kadiv SDM</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B85F54216D5D43AA8780EE9A469B50C5" trl="N">
+    <value column="Name" isTrl="N" original="Direktur Utama">Direktur Utama</value>
+    <value column="PrintName" isTrl="N" original="Direktur Utama">Direktur Utama</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BF5D93A66EFF4C869FD097387DB508A3" trl="N">
+    <value column="Name" isTrl="N" original="Tarif Uang Pisah">Tarif Uang Pisah</value>
+    <value column="PrintName" isTrl="N" original="Tarif Uang Pisah">Tarif Uang Pisah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C988DE692A18495482936F6202DA7992" trl="N">
+    <value column="Name" isTrl="N" original="Set Upah">Set Upah</value>
+    <value column="PrintName" isTrl="N" original="Set Upah">Set Upah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D00E355204E440629EBC2FE2774A4293" trl="N">
+    <value column="Name" isTrl="Y" original="Termination Information">PHK</value>
+    <value column="PrintName" isTrl="Y" original="Termination Information">PHK</value>
+    <value column="Description" isTrl="N" original="Termination Information">Termination Information</value>
+    <value column="Help" isTrl="N" original="Link Employee Termination Information Window">Link Employee Termination Information Window</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DAB0CFE68E024F60926AB103698E5183" trl="N">
+    <value column="Name" isTrl="N" original="Status Dead">Status Dead</value>
+    <value column="PrintName" isTrl="N" original="Status Dead">Status Dead</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DC4C60B686FC40B4B1AAC1B554FCBDB4" trl="N">
+    <value column="Name" isTrl="N" original="No. Dead Letter">No. Dead Letter</value>
+    <value column="PrintName" isTrl="N" original="No. Dead Letter">No. Dead Letter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F16B3F30F7304F979AC8B142186E7C98" trl="N">
+    <value column="Name" isTrl="N" original="Max Year">Max Year</value>
+    <value column="PrintName" isTrl="N" original="Max Year">Max Year</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F9CE21B4259549C1BF899F594D3A0DD1" trl="N">
+    <value column="Name" isTrl="Y" original="Approve">Setujui Dokumen Ini</value>
+    <value column="PrintName" isTrl="Y" original="Approve">Setujui Dokumen Ini</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

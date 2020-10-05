@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELD" version="">
+  <row id="9439856AE391AF17E040007F0100403D" trl="N">
+    <value column="Name" isTrl="N" original="Relative Priority">Relative Priority</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Defines the priority of the widgets if more than one instance have the same column and row. Lowest priority appears upper on the dashboard.">Defines the priority of the widgets if more than one instance have the same column and row. Lowest priority appears upper on the dashboard.</value>
+  </row>
+  <row id="94BFCEEC820140C397FA557C7E88BED6" trl="N">
+    <value column="Name" isTrl="N" original="Title">Title</value>
+    <value column="Description" isTrl="N" original="Title for the menu option">Title for the menu option</value>
+    <value column="Help" isTrl="N" original="The label to show in the menu option">The label to show in the menu option</value>
+  </row>
+  <row id="978A538A886E0294E040007F01002F2B" trl="N">
+    <value column="Name" isTrl="N" original="Title">Title</value>
+    <value column="Description" isTrl="N" original="The label to show in the menu option">The label to show in the menu option</value>
+    <value column="Help" isTrl="N" original="The label to show in the menu option">The label to show in the menu option</value>
+  </row>
+  <row id="E98898257CEA414CAEB5A4049CC8DB19" trl="N">
+    <value column="Name" isTrl="N" original="Action">Action</value>
+    <value column="Description" isTrl="N" original="Name of the method defined in the widget ">Name of the method defined in the widget </value>
+    <value column="Help" isTrl="N" original="Name of the method in the widget that need to be executed when clicking the menu item">Name of the method in the widget that need to be executed when clicking the menu item</value>
+  </row>
+</compiereTrl>

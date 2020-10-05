@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="05E40B28405B422AAE70BE5B78B54048" trl="N">
+    <value column="Name" isTrl="N" original="Set PHK">Set PHK</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B9A5824CE4FF451D8DC647EC444A3160" trl="N">
+    <value column="Name" isTrl="N" original="Status Meninggal ">Status Meninggal </value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

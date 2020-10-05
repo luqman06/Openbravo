@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="2680DB8FDE3F4626BF1FAA53D2F73C6E" trl="N">
+    <value column="Name" isTrl="N" original="Contains">Contains</value>
+    <value column="Description" isTrl="N" original="Filters records by checking if the filter is contained in the value in the record">Filters records by checking if the filter is contained in the value in the record</value>
+  </row>
+  <row id="5A623E16A16742CA940F8F82E4535D0D" trl="N">
+    <value column="Name" isTrl="N" original="Starts with">Starts with</value>
+    <value column="Description" isTrl="N" original="Filters records by comparing the entered filter from the start of the record value">Filters records by comparing the entered filter from the start of the record value</value>
+  </row>
+  <row id="9CA0544E6B04479EB23013801D31BAEA" trl="N">
+    <value column="Name" isTrl="N" original="Selector">Selector</value>
+    <value column="Description" isTrl="N" original="The selector component type.">The selector component type.</value>
+  </row>
+</compiereTrl>

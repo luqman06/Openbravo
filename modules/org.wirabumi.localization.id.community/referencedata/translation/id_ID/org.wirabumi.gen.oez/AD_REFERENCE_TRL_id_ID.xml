@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="5C2DAFC152EA4E06A4957E81AB2ACF20" trl="N">
+    <value column="Name" isTrl="N" original="OEZ_Currency">OEZ_Currency</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6F291E313C0B4A57BA512F621A8363B6" trl="N">
+    <value column="Name" isTrl="N" original="OEZ_Acct Schema">OEZ_Acct Schema</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9967183DA7164174B7F5CC8604456FAA" trl="N">
+    <value column="Name" isTrl="N" original="Force Document Routing">Force Document Routing</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

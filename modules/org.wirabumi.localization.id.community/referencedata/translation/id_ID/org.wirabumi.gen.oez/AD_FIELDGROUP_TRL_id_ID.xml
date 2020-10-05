@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELDGROUP" version="">
+  <row id="02A52627314841B19765C1F8491BE3CB" trl="N">
+    <value column="Name" isTrl="N" original="Fiscal Calendar and Accounting Period Creation Wizard">Fiscal Calendar and Accounting Period Creation Wizard</value>
+  </row>
+  <row id="501BD79FCE2C41469C6E2D114C4764C0" trl="N">
+    <value column="Name" isTrl="N" original="Financial Statement Report Creation Wizard">Financial Statement Report Creation Wizard</value>
+  </row>
+  <row id="6D0CD4CA6D7D45EC95AE9D7097744799" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Creation Wizard">Warehouse Creation Wizard</value>
+  </row>
+  <row id="A05E4E83064D4A59856D88793932A7A4" trl="N">
+    <value column="Name" isTrl="N" original="Bank Account and Cashbook Creation Wizard">Bank Account and Cashbook Creation Wizard</value>
+  </row>
+  <row id="BAA0A5685D4C4510A6DC63762EA03504" trl="N">
+    <value column="Name" isTrl="N" original="Run Process">Run Process</value>
+  </row>
+  <row id="D270A341F3514AEEB03935DA284DC5D9" trl="N">
+    <value column="Name" isTrl="N" original="Document Routing">Document Routing</value>
+  </row>
+</compiereTrl>

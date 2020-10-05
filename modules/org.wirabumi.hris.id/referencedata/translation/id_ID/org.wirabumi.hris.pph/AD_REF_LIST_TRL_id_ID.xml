@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="16497CFA997A49F5ABF23B3AE6C16278" trl="N">
+    <value column="Name" isTrl="N" original="TK/0">TK/0</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="27D8828A265645E18D7D9022887FDA8E" trl="N">
+    <value column="Name" isTrl="N" original="K/3">K/3</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="336F4FCF97984E72A4FF84AFFF1C5E0E" trl="N">
+    <value column="Name" isTrl="N" original="TK">TK</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="47356F94DBE54CFBA3C388DEB22E5998" trl="N">
+    <value column="Name" isTrl="Y" original="PENGHASILAN LAIN SAJA">Gross Up</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4D9804EE4AA244EF9E951706B41AA3EE" trl="N">
+    <value column="Name" isTrl="N" original="Non Deductable">Non Deductable</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6579B524951B436C854B885FB8A43DB0" trl="N">
+    <value column="Name" isTrl="N" original="K/2">K/2</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6943314D0B54471FB421C44FC41E82DE" trl="N">
+    <value column="Name" isTrl="N" original="TK/1">TK/1</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="69D0E92D04214A36AC585B4715A8F428" trl="N">
+    <value column="Name" isTrl="N" original="TK/2">TK/2</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="871C7891A4244AE4B18B95271AFAA168" trl="N">
+    <value column="Name" isTrl="N" original="PAJAK RAMPUNG">PAJAK RAMPUNG</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9D6748224283423590D077D93612B9D9" trl="N">
+    <value column="Name" isTrl="Y" original="CAMPUR (RUTIN DAN PENGHASILAN LAIN)">Nett</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A1B185D0F72D47828BDE8C7F943465B7" trl="N">
+    <value column="Name" isTrl="Y" original="Tax Exempt">Tidak Kena Pajak</value>
+    <value column="Description" isTrl="N" original="free of tax">free of tax</value>
+  </row>
+  <row id="B32A173DFB7C41B6826FFC4654DAEF07" trl="N">
+    <value column="Name" isTrl="N" original="K/1">K/1</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D13FB2383C1B4B279232E5554E9E5B9F" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Up">Taxable</value>
+    <value column="Description" isTrl="N" original="income tax bared by employeer">income tax bared by employeer</value>
+  </row>
+  <row id="E0AE0D2B481140DD9EB0C491A5B53630" trl="N">
+    <value column="Name" isTrl="N" original="TK/3">TK/3</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="EA8AEB7BBDBF4A00B1325085D6DB7E14" trl="N">
+    <value column="Name" isTrl="Y" original="Nett">Non Tax</value>
+    <value column="Description" isTrl="N" original="income tax paid by employee">income tax paid by employee</value>
+  </row>
+  <row id="F0C473FE72AE4BA6801E64CD19181E1C" trl="N">
+    <value column="Name" isTrl="N" original="K/0">K/0</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FB82A7E21EDD45D5A6CFB788A7A35139" trl="N">
+    <value column="Name" isTrl="N" original="Deductable">Deductable</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

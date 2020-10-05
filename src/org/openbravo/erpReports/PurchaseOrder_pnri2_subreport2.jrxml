@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ARB_purchase_order.jrxml" pageWidth="595" pageHeight="842" columnWidth="539" leftMargin="28" rightMargin="28" topMargin="14" bottomMargin="14" uuid="70c1e9f1-82c6-4f08-a0f6-859b82859daa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("9BBD41D5224B4F67B7E824A200AEECD8")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/home/infinite-hendra/Desktop/"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+b.name as taxname,
+a.taxamt,
+e.grandtotal,
+d.linenetamt,
+d.linenetamt
+
+
+from c_orderlinetax a
+inner join c_tax b on a.c_tax_id=b.c_tax_id
+inner join ad_org c on a.ad_org_id=c.ad_org_id
+left join c_orderline d on d.c_orderline_id=a.c_orderline_id
+inner join c_order e on a.c_order_id=e.c_order_id
+where e.c_order_id=$P{DOCUMENT_ID}]]>
+	</queryString>
+	<field name="taxname" class="java.lang.String"/>
+	<field name="taxamt" class="java.math.BigDecimal"/>
+	<field name="grandtotal" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<variable name="SUM" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{taxamt}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="3" splitType="Stretch"/>
+	</title>
+	<lastPageFooter>
+		<band height="63">
+			<textField pattern="#,##0.00#####;#,##0.00#####-" isBlankWhenNull="false">
+				<reportElement key="textField" x="415" y="16" width="105" height="13" uuid="9f2af5aa-112c-4bfb-b476-987785de1b75"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{taxamt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#####;#,##0.00#####-" isBlankWhenNull="false">
+				<reportElement key="textField" x="310" y="16" width="105" height="13" uuid="6aaed0d5-b5f9-4193-91f7-7e1e717bbdf6"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{taxname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-14" x="310" y="45" width="105" height="13" forecolor="#000000" uuid="c3988332-5410-4a57-8aa9-8cfe8f6ba2c3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField pattern="#,##0.00#####;#,##0.00#####-" isBlankWhenNull="false">
+				<reportElement key="textField" x="415" y="45" width="105" height="13" uuid="fafac7f6-2e34-4b2e-ac4e-934da0c24115"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUM}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#####;#,##0.00#####-" isBlankWhenNull="false">
+				<reportElement key="textField" x="415" y="3" width="105" height="13" uuid="d8f49161-e8d1-4570-8e0b-e0b190989faa"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{linenetamt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-14" x="310" y="2" width="105" height="13" forecolor="#000000" uuid="cbe41379-6d42-4f5d-9c21-ffc6fe63c562"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

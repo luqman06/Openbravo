@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="0515E6559C31478E92703A3D10E6783B" trl="N">
+    <value column="Name" isTrl="N" original="Schedule Process">Schedule Process</value>
+    <value column="Description" isTrl="N" original="Request a process to be run in the background or scheduled.">Request a process to be run in the background or scheduled.</value>
+    <value column="Help" isTrl="N" original="Request a process to be run in the background or scheduled.">Request a process to be run in the background or scheduled.</value>
+  </row>
+  <row id="100" trl="N">
+    <value column="Name" isTrl="N" original="Create Periods">Create Periods</value>
+    <value column="Description" isTrl="N" original="Create 12 standard calendar periods (Jan-Dec) and an optional 13th period">Create 12 standard calendar periods (Jan-Dec) and an optional 13th period</value>
+    <value column="Help" isTrl="N" original="Create 12 standard calendar periods (Jan-Dec) and an optional 13th period for adjustments">Create 12 standard calendar periods (Jan-Dec) and an optional 13th period for adjustments</value>
+  </row>
+  <row id="1000500000" trl="N">
+    <value column="Name" isTrl="N" original="Pareto Product Report Legacy">Pareto Product Report Legacy</value>
+    <value column="Description" isTrl="N" original="Pareto Product Report Legacy">Pareto Product Report Legacy</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000500001" trl="N">
+    <value column="Name" isTrl="N" original="M_UPDATE_PARETO_PRODUCT_LEGACY">M_UPDATE_PARETO_PRODUCT_LEGACY</value>
+    <value column="Description" isTrl="N" original="Updates a Org specific column of the product depending on the Pareto distribution">Updates a Org specific column of the product depending on the Pareto distribution</value>
+    <value column="Help" isTrl="N" original="Updates a Org specific column of the product depending on the Pareto distribution">Updates a Org specific column of the product depending on the Pareto distribution</value>
+  </row>
+  <row id="1000500002" trl="N">
+    <value column="Name" isTrl="N" original="Print orders process">Print orders process</value>
+    <value column="Description" isTrl="N" original="Process to print orders or send them through email to the client">Process to print orders or send them through email to the client</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000500003" trl="N">
+    <value column="Name" isTrl="N" original="Print invoices process">Print invoices process</value>
+    <value column="Description" isTrl="N" original="Process to print invoices or send them through email to the client">Process to print invoices or send them through email to the client</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000500004" trl="N">
+    <value column="Name" isTrl="N" original="Print shipments process">Print shipments process</value>
+    <value column="Description" isTrl="N" original="Process to print shipments or send them through email to the client">Process to print shipments or send them through email to the client</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1002100000" trl="N">
+    <value column="Name" isTrl="N" original="Create Vat Registers">Create Vat Registers</value>
+    <value column="Description" isTrl="N" original="Create Vat Registers">Create Vat Registers</value>
+    <value column="Help" isTrl="N" original="Create Vat Registers">Create Vat Registers</value>
+  </row>
+  <row id="1002100001" trl="N">
+    <value column="Name" isTrl="N" original="Report VAT Register">Report VAT Register</value>
+    <value column="Description" isTrl="N" original="Report VAT Register">Report VAT Register</value>
+    <value column="Help" isTrl="N" original="Report VAT Register">Report VAT Register</value>
+  </row>
+  <row id="1002100002" trl="N">
+    <value column="Name" isTrl="N" original="Report Tax Payment">Report Tax Payment</value>
+    <value column="Description" isTrl="N" original="Report Tax Payment">Report Tax Payment</value>
+    <value column="Help" isTrl="N" original="Report Tax Payment">Report Tax Payment</value>
+  </row>
+  <row id="1002100003" trl="N">
+    <value column="Name" isTrl="N" original="Withholding Report">Withholding Report</value>
+    <value column="Description" isTrl="N" original="Withholding Report">Withholding Report</value>
+    <value column="Help" isTrl="N" original="Withholding Report">Withholding Report</value>
+  </row>
+  <row id="1003900000" trl="N">
+    <value column="Name" isTrl="N" original="TaxPayment Post">TaxPayment Post</value>
+    <value column="Description" isTrl="N" original="TaxPayment Post">TaxPayment Post</value>
+    <value column="Help" isTrl="N" original="Post the TaxPayment">Post the TaxPayment</value>
+  </row>
+  <row id="1004400000" trl="N">
+    <value column="Name" isTrl="N" original="Create Purchase Order">Create Purchase Order</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="In order to create a Purchase Order from selected Requisition Lines, it is necessary to set some values:&lt;br/&gt;&#10;Order Date: The date of the Purchase Order&lt;br/&gt;&#10;Business Partner, Price List and Organization: If all the selected requisition lines have a common Business Partner, Price List or Organization, then the common value is shown in the appropriate field.&lt;br/&gt;&#10;For other required values the corresponding default values are used.&lt;br/&gt;&#10;Once the Purchase Order is created, it is marked as Completed and its Document Number is shown in the success message.">In order to create a Purchase Order from selected Requisition Lines, it is necessary to set some values:&lt;br/&gt;
+Order Date: The date of the Purchase Order&lt;br/&gt;
+Business Partner, Price List and Organization: If all the selected requisition lines have a common Business Partner, Price List or Organization, then the common value is shown in the appropriate field.&lt;br/&gt;
+For other required values the corresponding default values are used.&lt;br/&gt;
+Once the Purchase Order is created, it is marked as Completed and its Document Number is shown in the success message.</value>
+  </row>
+  <row id="1004400002" trl="N">
+    <value column="Name" isTrl="N" original="Change status">Change status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process changes the status of the requisition. If it is open an has purchase order lines assigned it is set to closed, in case it hasn't any purchase order it is set as canceled. When the requisition is closed or canceled the process set it as open.">This process changes the status of the requisition. If it is open an has purchase order lines assigned it is set to closed, in case it hasn't any purchase order it is set as canceled. When the requisition is closed or canceled the process set it as open.</value>
+  </row>
+  <row id="1004400003" trl="N">
+    <value column="Name" isTrl="N" original="Post Requisition">Post Requisition</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1004400004" trl="N">
+    <value column="Name" isTrl="N" original="Print Requisition">Print Requisition</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005400001" trl="N">
+    <value column="Name" isTrl="N" original="TestHeartbeat">TestHeartbeat</value>
+    <value column="Description" isTrl="N" original="Test the Heartbeat Configuration">Test the Heartbeat Configuration</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005400002" trl="N">
+    <value column="Name" isTrl="N" original="Update Registration">Update Registration</value>
+    <value column="Description" isTrl="N" original="Register with Openbravo">Register with Openbravo</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005500000" trl="N">
+    <value column="Name" isTrl="N" original="Payment Aging Balance">Payment Aging Balance</value>
+    <value column="Description" isTrl="N" original="Payment Aging Balance">Payment Aging Balance</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005800000" trl="N">
+    <value column="Name" isTrl="N" original="Heartbeat Process">Heartbeat Process</value>
+    <value column="Description" isTrl="N" original="Heartbeat Process">Heartbeat Process</value>
+    <value column="Help" isTrl="N" original="Heartbeat Process">Heartbeat Process</value>
+  </row>
+  <row id="1005900000" trl="N">
+    <value column="Name" isTrl="N" original="Project Progress">Project Progress</value>
+    <value column="Description" isTrl="N" original="Report that shows the progress of the projects.">Report that shows the progress of the projects.</value>
+    <value column="Help" isTrl="N" original="The Project Progress report permits to track the progress of projects with useful indicators such as the time burned or the completion percentage.">The Project Progress report permits to track the progress of projects with useful indicators such as the time burned or the completion percentage.</value>
+  </row>
+  <row id="101" trl="N">
+    <value column="Name" isTrl="N" original="Renumber">Renumber</value>
+    <value column="Description" isTrl="N" original="Renumber Discount entries">Renumber Discount entries</value>
+    <value column="Help" isTrl="N" original="Renumber Discount entries">Renumber Discount entries</value>
+  </row>
+  <row id="103" trl="N">
+    <value column="Name" isTrl="N" original="Create Price List">Create Price List</value>
+    <value column="Description" isTrl="N" original="Create Prices based on parameters of this version">Create Prices based on parameters of this version</value>
+    <value column="Help" isTrl="N" original="Create Prices for this pricelist version in the sequence of the Discount Schema Price List.|Lines with a higher sequence overwrite existing prices.  The sequence should be from generic to specific.">Create Prices for this pricelist version in the sequence of the Discount Schema Price List.|Lines with a higher sequence overwrite existing prices.  The sequence should be from generic to specific.</value>
+  </row>
+  <row id="104" trl="N">
+    <value column="Name" isTrl="N" original="Process Order">Process Order</value>
+    <value column="Description" isTrl="N" original="Process Order">Process Order</value>
+    <value column="Help" isTrl="N" original="Process Order">Process Order</value>
+  </row>
+  <row id="105" trl="N">
+    <value column="Name" isTrl="N" original="Create Inventory Count List">Create Inventory Count List</value>
+    <value column="Description" isTrl="N" original="Create Inventory Count List">Create Inventory Count List</value>
+    <value column="Help" isTrl="N" original="The inventory count lines are generated.  You can add new lines or delete lines.">The inventory count lines are generated.  You can add new lines or delete lines.</value>
+  </row>
+  <row id="106" trl="N">
+    <value column="Name" isTrl="N" original="Update Quantity">Update Quantity</value>
+    <value column="Description" isTrl="N" original="The Book Quantity is updated with current book quantity">The Book Quantity is updated with current book quantity</value>
+    <value column="Help" isTrl="N" original="The Update Quantity Process will update the book quantity with the current book quantity.">The Update Quantity Process will update the book quantity with the current book quantity.</value>
+  </row>
+  <row id="107" trl="N">
+    <value column="Name" isTrl="N" original="Process Inventory Count">Process Inventory Count</value>
+    <value column="Description" isTrl="N" original="Process Inventory count and update Inventory">Process Inventory count and update Inventory</value>
+    <value column="Help" isTrl="N" original="Process Inventory count and update Inventory">Process Inventory count and update Inventory</value>
+  </row>
+  <row id="108" trl="N">
+    <value column="Name" isTrl="N" original="Copy Accounts">Copy Accounts</value>
+    <value column="Description" isTrl="N" original="Copy and overwrite all accounts to system defaults (DANGEROUS!!!)">Copy and overwrite all accounts to system defaults (DANGEROUS!!!)</value>
+    <value column="Help" isTrl="N" original="Copy and overwrite all accounts to system defaults (DANGEROUS!!!)">Copy and overwrite all accounts to system defaults (DANGEROUS!!!)</value>
+  </row>
+  <row id="109" trl="N">
+    <value column="Name" isTrl="N" original="Process Shipment">Process Shipment</value>
+    <value column="Description" isTrl="N" original="Process Shipment (Update Inventory)">Process Shipment (Update Inventory)</value>
+    <value column="Help" isTrl="N" original="Process Shipment will move products out of inventory and mark line items as shipped.">Process Shipment will move products out of inventory and mark line items as shipped.</value>
+  </row>
+  <row id="110" trl="N">
+    <value column="Name" isTrl="N" original="Order Print">Order Print</value>
+    <value column="Description" isTrl="N" original="** Special **">** Special **</value>
+    <value column="Help" isTrl="N" original="** Special **">** Special **</value>
+  </row>
+  <row id="111" trl="N">
+    <value column="Name" isTrl="N" original="Process Invoice">Process Invoice</value>
+    <value column="Description" isTrl="N" original="Process Invoice">Process Invoice</value>
+    <value column="Help" isTrl="N" original="Process Invoice">Process Invoice</value>
+  </row>
+  <row id="112" trl="N">
+    <value column="Name" isTrl="N" original="Copy Accounts">Copy Accounts</value>
+    <value column="Description" isTrl="N" original="Copy and overwrite Accounts to Business Partners of this group">Copy and overwrite Accounts to Business Partners of this group</value>
+    <value column="Help" isTrl="N" original="This process allows the business partners accounting accounts configuration. Its rewrites the business partner's accounts with the business partner group's accounts">This process allows the business partners accounting accounts configuration. Its rewrites the business partner's accounts with the business partner group's accounts</value>
+  </row>
+  <row id="113" trl="N">
+    <value column="Name" isTrl="N" original="Copy Window Tabs">Copy Window Tabs</value>
+    <value column="Description" isTrl="N" original="Copy all Tabs and Fields from other Window">Copy all Tabs and Fields from other Window</value>
+    <value column="Help" isTrl="N" original="Copy tabs and fields from a selected window to the current window.">Copy tabs and fields from a selected window to the current window.</value>
+  </row>
+  <row id="114" trl="N">
+    <value column="Name" isTrl="N" original="Copy Tab Fields">Copy Tab Fields</value>
+    <value column="Description" isTrl="N" original="Copy Fields from other Tab">Copy Fields from other Tab</value>
+    <value column="Help" isTrl="N" original="Copy fields and tab configuration from other selected tab to the current tab.">Copy fields and tab configuration from other selected tab to the current tab.</value>
+  </row>
+  <row id="115" trl="N">
+    <value column="Name" isTrl="N" original="Vendor Selection">Vendor Selection</value>
+    <value column="Description" isTrl="N" original="Products with more than one vendor">Products with more than one vendor</value>
+    <value column="Help" isTrl="N" original="Vendor Selection is initiated when there is a product that is supplied by more than one vendor.  It allows the selection of a specific vendor for a Purchase Order.">Vendor Selection is initiated when there is a product that is supplied by more than one vendor.  It allows the selection of a specific vendor for a Purchase Order.</value>
+  </row>
+  <row id="116" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Print">Invoice Print</value>
+    <value column="Description" isTrl="N" original="** Special **">** Special **</value>
+    <value column="Help" isTrl="N" original="** Special **">** Special **</value>
+  </row>
+  <row id="117" trl="N">
+    <value column="Name" isTrl="N" original="Delivery Note / Shipment Print">Delivery Note / Shipment Print</value>
+    <value column="Description" isTrl="N" original="** Special **">** Special **</value>
+    <value column="Help" isTrl="N" original="** Special **">** Special **</value>
+  </row>
+  <row id="118" trl="N">
+    <value column="Name" isTrl="N" original="Generate Shipments">Generate Shipments</value>
+    <value column="Description" isTrl="N" original="Generate shipment">Generate shipment</value>
+    <value column="Help" isTrl="N" original="Creates shipments from the selected organization and all its descends">Creates shipments from the selected organization and all its descends</value>
+  </row>
+  <row id="119" trl="N">
+    <value column="Name" isTrl="N" original="Generate Invoices">Generate Invoices</value>
+    <value column="Description" isTrl="N" original="Generate Invoices">Generate Invoices</value>
+    <value column="Help" isTrl="N" original="Generate Invoices">Generate Invoices</value>
+  </row>
+  <row id="120" trl="N">
+    <value column="Name" isTrl="N" original="Order Transactions">Order Transactions</value>
+    <value column="Description" isTrl="N" original="Sales Order Transaction Report">Sales Order Transaction Report</value>
+    <value column="Help" isTrl="N" original="Sales Order Transaction Report">Sales Order Transaction Report</value>
+  </row>
+  <row id="121" trl="N">
+    <value column="Name" isTrl="N" original="Open Orders">Open Orders</value>
+    <value column="Description" isTrl="N" original="Open Orders">Open Orders</value>
+    <value column="Help" isTrl="N" original="Open Orders">Open Orders</value>
+  </row>
+  <row id="122" trl="N">
+    <value column="Name" isTrl="N" original="Process Movements">Process Movements</value>
+    <value column="Description" isTrl="N" original="Process Inventory Movements">Process Inventory Movements</value>
+    <value column="Help" isTrl="N" original="Process Inventory Movements will update inventory quantities based on the defined movements between warehouses or locations.">Process Inventory Movements will update inventory quantities based on the defined movements between warehouses or locations.</value>
+  </row>
+  <row id="123" trl="N">
+    <value column="Name" isTrl="N" original="Generate Commission">Generate Commission</value>
+    <value column="Description" isTrl="N" original="Generate Commission">Generate Commission</value>
+    <value column="Help" isTrl="N" original="Generate Commission">Generate Commission</value>
+  </row>
+  <row id="124" trl="N">
+    <value column="Name" isTrl="N" original="Product Transaction Summary">Product Transaction Summary</value>
+    <value column="Description" isTrl="N" original="Product Transaction Summary">Product Transaction Summary</value>
+    <value column="Help" isTrl="N" original="The report shows transaction summary for stored products">The report shows transaction summary for stored products</value>
+  </row>
+  <row id="127" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Transactions">Invoice Transactions</value>
+    <value column="Description" isTrl="N" original="Invoice Transactions">Invoice Transactions</value>
+    <value column="Help" isTrl="N" original="Invoice Transactions">Invoice Transactions</value>
+  </row>
+  <row id="128" trl="N">
+    <value column="Name" isTrl="N" original="Daily Invoice">Daily Invoice</value>
+    <value column="Description" isTrl="N" original="Daily Invoice">Daily Invoice</value>
+    <value column="Help" isTrl="N" original="Daily Invoice">Daily Invoice</value>
+  </row>
+  <row id="129" trl="N">
+    <value column="Name" isTrl="N" original="Monthly Invoice">Monthly Invoice</value>
+    <value column="Description" isTrl="N" original="Monthly Invoice">Monthly Invoice</value>
+    <value column="Help" isTrl="N" original="Monthly Invoice">Monthly Invoice</value>
+  </row>
+  <row id="130" trl="N">
+    <value column="Name" isTrl="N" original="Weekly Invoice">Weekly Invoice</value>
+    <value column="Description" isTrl="N" original="Weekly Invoice">Weekly Invoice</value>
+    <value column="Help" isTrl="N" original="Weekly Invoice">Weekly Invoice</value>
+  </row>
+  <row id="131" trl="N">
+    <value column="Name" isTrl="N" original="Weekly Product Invoice">Weekly Product Invoice</value>
+    <value column="Description" isTrl="N" original="Weekly Product Invoice">Weekly Product Invoice</value>
+    <value column="Help" isTrl="N" original="Weekly Product Invoice">Weekly Product Invoice</value>
+  </row>
+  <row id="132" trl="N">
+    <value column="Name" isTrl="N" original="Monthly Product Invoice">Monthly Product Invoice</value>
+    <value column="Description" isTrl="N" original="Monthly Product Invoice">Monthly Product Invoice</value>
+    <value column="Help" isTrl="N" original="Monthly Product Invoice">Monthly Product Invoice</value>
+  </row>
+  <row id="133" trl="N">
+    <value column="Name" isTrl="N" original="Monthly Vendor Invoice Report">Monthly Vendor Invoice Report</value>
+    <value column="Description" isTrl="N" original="Monthly Vendor Invoice Report">Monthly Vendor Invoice Report</value>
+    <value column="Help" isTrl="N" original="Monthly Vendor Invoice Report">Monthly Vendor Invoice Report</value>
+  </row>
+  <row id="134" trl="N">
+    <value column="Name" isTrl="N" original="Generate Invoices (manual)">Generate Invoices (manual)</value>
+    <value column="Description" isTrl="N" original="Generate and print Invoices manually">Generate and print Invoices manually</value>
+    <value column="Help" isTrl="N" original="This process generates invoices from completed sales shipments. It also has filter utilities">This process generates invoices from completed sales shipments. It also has filter utilities</value>
+  </row>
+  <row id="136" trl="N">
+    <value column="Name" isTrl="N" original="Verify BOM">Verify BOM</value>
+    <value column="Description" isTrl="N" original="Verify BOM Structure">Verify BOM Structure</value>
+    <value column="Help" isTrl="N" original="The Verify BOM Structure checks the elements and steps which comprise a Bill of Materials.">The Verify BOM Structure checks the elements and steps which comprise a Bill of Materials.</value>
+  </row>
+  <row id="137" trl="N">
+    <value column="Name" isTrl="N" original="Create/Process Production">Create/Process Production</value>
+    <value column="Description" isTrl="N" original="Create production lines, if not created - otherwise process the production">Create production lines, if not created - otherwise process the production</value>
+    <value column="Help" isTrl="N" original="Create/Post Production will generate the production lines and process the production.  If the production lines already exists, the production will be processed">Create/Post Production will generate the production lines and process the production.  If the production lines already exists, the production will be processed</value>
+  </row>
+  <row id="138" trl="N">
+    <value column="Name" isTrl="N" original="Quarterly Customer Invoice by Product">Quarterly Customer Invoice by Product</value>
+    <value column="Description" isTrl="N" original="Quarterly Customer Invoice by Product">Quarterly Customer Invoice by Product</value>
+    <value column="Help" isTrl="N" original="Quarterly Customer Invoice by Product">Quarterly Customer Invoice by Product</value>
+  </row>
+  <row id="139" trl="N">
+    <value column="Name" isTrl="N" original="Quarterly Customer Invoice by Vendor">Quarterly Customer Invoice by Vendor</value>
+    <value column="Description" isTrl="N" original="Quarterly Customer Invoice by Vendor">Quarterly Customer Invoice by Vendor</value>
+    <value column="Help" isTrl="N" original="Quarterly Customer Invoice by Vendor">Quarterly Customer Invoice by Vendor</value>
+  </row>
+  <row id="140" trl="N">
+    <value column="Name" isTrl="N" original="Copy Accounts">Copy Accounts</value>
+    <value column="Description" isTrl="N" original="Copy and overwrite Accounts to Products of this category">Copy and overwrite Accounts to Products of this category</value>
+    <value column="Help" isTrl="N" original="The Copy Accounts Process will take the accounts defined for a product category and copy them to any product that references this category.  If an account exists at the product level it will be overwritten.">The Copy Accounts Process will take the accounts defined for a product category and copy them to any product that references this category.  If an account exists at the product level it will be overwritten.</value>
+  </row>
+  <row id="142" trl="N">
+    <value column="Name" isTrl="N" original="Generate Receipt from Invoice">Generate Receipt from Invoice</value>
+    <value column="Description" isTrl="N" original="Create and process delivery Receipt from this invoice.  The invoice should be correct and completed.">Create and process delivery Receipt from this invoice.  The invoice should be correct and completed.</value>
+    <value column="Help" isTrl="N" original="Create and process delivery Receipt from this invoice.  The invoice should be correct and completed.">Create and process delivery Receipt from this invoice.  The invoice should be correct and completed.</value>
+  </row>
+  <row id="144" trl="N">
+    <value column="Name" isTrl="N" original="Process Cash">Process Cash</value>
+    <value column="Description" isTrl="N" original="Process Cash">Process Cash</value>
+    <value column="Help" isTrl="N" original="Process Cash">Process Cash</value>
+  </row>
+  <row id="147" trl="N">
+    <value column="Name" isTrl="N" original="Process Statement">Process Statement</value>
+    <value column="Description" isTrl="N" original="Process Statement">Process Statement</value>
+    <value column="Help" isTrl="N" original="Process Statement">Process Statement</value>
+  </row>
+  <row id="151" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Summary">Invoice Summary</value>
+    <value column="Description" isTrl="N" original="Invoice Summary">Invoice Summary</value>
+    <value column="Help" isTrl="N" original="Invoice Summary">Invoice Summary</value>
+  </row>
+  <row id="154" trl="N">
+    <value column="Name" isTrl="N" original="Generate Invoice from Receipt">Generate Invoice from Receipt</value>
+    <value column="Description" isTrl="N" original="Create and process Invoice from this receipt. The receipt should be correct and completed.">Create and process Invoice from this receipt. The receipt should be correct and completed.</value>
+    <value column="Help" isTrl="N" original="Generate Invoice from Receipt will create an invoice based on the selected receipt and match the invoice to that receipt. If the receipt line is related to an existing order line, then the price of the invoice line is taken from that order line. In other case, it uses the retrieved price from the price list selected in the below drop-down list.">Generate Invoice from Receipt will create an invoice based on the selected receipt and match the invoice to that receipt. If the receipt line is related to an existing order line, then the price of the invoice line is taken from that order line. In other case, it uses the retrieved price from the price list selected in the below drop-down list.</value>
+  </row>
+  <row id="155" trl="N">
+    <value column="Name" isTrl="N" original="Create Payment">Create Payment</value>
+    <value column="Description" isTrl="N" original="Create Payment">Create Payment</value>
+    <value column="Help" isTrl="N" original="Create Payment">Create Payment</value>
+  </row>
+  <row id="159" trl="N">
+    <value column="Name" isTrl="N" original="Dunning Letter">Dunning Letter</value>
+    <value column="Description" isTrl="N" original="Dunning Letter">Dunning Letter</value>
+    <value column="Help" isTrl="N" original="Dunning Letter">Dunning Letter</value>
+  </row>
+  <row id="160" trl="N">
+    <value column="Name" isTrl="N" original="Tire Letter">Tire Letter</value>
+    <value column="Description" isTrl="N" original="Tire Letter">Tire Letter</value>
+    <value column="Help" isTrl="N" original="Tire Letter">Tire Letter</value>
+  </row>
+  <row id="161" trl="N">
+    <value column="Name" isTrl="N" original="Product Transaction Value">Product Transaction Value</value>
+    <value column="Description" isTrl="N" original="Product Transaction Value">Product Transaction Value</value>
+    <value column="Help" isTrl="N" original="The report shows product transactions with valuation">The report shows product transactions with valuation</value>
+  </row>
+  <row id="162" trl="N">
+    <value column="Name" isTrl="N" original="Project Status Summary">Project Status Summary</value>
+    <value column="Description" isTrl="N" original="Project Status of Project Cycle">Project Status of Project Cycle</value>
+    <value column="Help" isTrl="N" original="Project Status of Project Cycle">Project Status of Project Cycle</value>
+  </row>
+  <row id="164" trl="N">
+    <value column="Name" isTrl="N" original="Generate Order">Generate Order</value>
+    <value column="Description" isTrl="N" original="Generate Order from Project">Generate Order from Project</value>
+    <value column="Help" isTrl="N" original="The Generate Order process will generate a new Order document based on the project phase. A price list and warehouse/service point must be defined on the project.">The Generate Order process will generate a new Order document based on the project phase. A price list and warehouse/service point must be defined on the project.</value>
+  </row>
+  <row id="165" trl="N">
+    <value column="Name" isTrl="N" original="Copy Lines">Copy Lines</value>
+    <value column="Description" isTrl="N" original="Copy Commission Lines from other Commission">Copy Commission Lines from other Commission</value>
+    <value column="Help" isTrl="N" original="Copy Commission Lines from other Commission">Copy Commission Lines from other Commission</value>
+  </row>
+  <row id="166" trl="N">
+    <value column="Name" isTrl="N" original="Create Invoice">Create Invoice</value>
+    <value column="Description" isTrl="N" original="Create Invoice from Commission Calculation">Create Invoice from Commission Calculation</value>
+    <value column="Help" isTrl="N" original="Create Invoice from Commission Calculation">Create Invoice from Commission Calculation</value>
+  </row>
+  <row id="167" trl="N">
+    <value column="Name" isTrl="N" original="Open/Close All">Open/Close All</value>
+    <value column="Description" isTrl="N" original="Open/Close all Base Document Types">Open/Close all Base Document Types</value>
+    <value column="Help" isTrl="N" original="Open/Close all Base Document Types.&#10;NOTE: You will not be able to close the fiscal year if you close all its periods permanently. Maybe you should close it before changing the last period from closed to permanently closed.">Open/Close all Base Document Types.
+NOTE: You will not be able to close the fiscal year if you close all its periods permanently. Maybe you should close it before changing the last period from closed to permanently closed.</value>
+  </row>
+  <row id="168" trl="N">
+    <value column="Name" isTrl="N" original="Open/Close">Open/Close</value>
+    <value column="Description" isTrl="N" original="Open/Close">Open/Close</value>
+    <value column="Help" isTrl="N" original="Open/Close">Open/Close</value>
+  </row>
+  <row id="169" trl="N">
+    <value column="Name" isTrl="N" original="Process Journal">Process Journal</value>
+    <value column="Description" isTrl="N" original="Process Journal">Process Journal</value>
+    <value column="Help" isTrl="N" original="Process Journal">Process Journal</value>
+  </row>
+  <row id="172" trl="N">
+    <value column="Name" isTrl="N" original="Synchronize Terminology">Synchronize Terminology</value>
+    <value column="Description" isTrl="N" original="Synchronize the terminology within the system.">Synchronize the terminology within the system.</value>
+    <value column="Help" isTrl="N" original="Based on the entries in Window Element, the fields in windows, parameters, etc. are synchronized, if they are centrally maintained.">Based on the entries in Window Element, the fields in windows, parameters, etc. are synchronized, if they are centrally maintained.</value>
+  </row>
+  <row id="173" trl="N">
+    <value column="Name" isTrl="N" original="Create Columns from DB">Create Columns from DB</value>
+    <value column="Description" isTrl="N" original="Create Dictionary Columns of Table not existing as a Column but in the Database">Create Dictionary Columns of Table not existing as a Column but in the Database</value>
+    <value column="Help" isTrl="N" original="If you have added columns in the database to this table, this procedure creates the Column records in the Dictionary.  Please be aware, that they may deleted, if the entity type is not set to User.">If you have added columns in the database to this table, this procedure creates the Column records in the Dictionary.  Please be aware, that they may deleted, if the entity type is not set to User.</value>
+  </row>
+  <row id="174" trl="N">
+    <value column="Name" isTrl="N" original="Create Fields">Create Fields</value>
+    <value column="Description" isTrl="N" original="Create Field from Table, which do not exist in the Tab yet">Create Field from Table, which do not exist in the Tab yet</value>
+    <value column="Help" isTrl="N" original="Based on the Table of this Tab, this procedure creates the missing Fields">Based on the Table of this Tab, this procedure creates the missing Fields</value>
+  </row>
+  <row id="175" trl="N">
+    <value column="Name" isTrl="N" original="Resubmit Posting">Resubmit Posting</value>
+    <value column="Description" isTrl="N" original="Resubmit posting of documents with posting errors">Resubmit posting of documents with posting errors</value>
+    <value column="Help" isTrl="N" original="Documents with posting errors are reset to be posted by the next run of the accounting engine - after fixing the cause (e.g. opening period).">Documents with posting errors are reset to be posted by the next run of the accounting engine - after fixing the cause (e.g. opening period).</value>
+  </row>
+  <row id="176" trl="N">
+    <value column="Name" isTrl="Y" original="Reset Accounting Old">Reset Accounting</value>
+    <value column="Description" isTrl="N" original="Reset Accounting Entries">Reset Accounting Entries</value>
+    <value column="Help" isTrl="N" original="The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the &quot;Accounting Server Process&quot; or the &quot;G/L Posting by DB Tables&quot; process. ">The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the "Accounting Server Process" or the "G/L Posting by DB Tables" process. </value>
+  </row>
+  <row id="179" trl="N">
+    <value column="Name" isTrl="N" original="Verify Languages">Verify Languages</value>
+    <value column="Description" isTrl="N" original="Verify existence of language translation in system (required after creating a new language)">Verify existence of language translation in system (required after creating a new language)</value>
+    <value column="Help" isTrl="N" original="Verify the translation creates missing translation records. Start this process after creating a new language. It will create new records by copying the base language entries.">Verify the translation creates missing translation records. Start this process after creating a new language. It will create new records by copying the base language entries.</value>
+  </row>
+  <row id="180" trl="N">
+    <value column="Name" isTrl="N" original="Inventory Valuation Report">Inventory Valuation Report</value>
+    <value column="Description" isTrl="N" original="Inventory Valuation Report">Inventory Valuation Report</value>
+    <value column="Help" isTrl="N" original="Report lists products with their on-hand quantity and values at the valuation date">Report lists products with their on-hand quantity and values at the valuation date</value>
+  </row>
+  <row id="182" trl="N">
+    <value column="Name" isTrl="N" original="Product Cost Update">Product Cost Update</value>
+    <value column="Description" isTrl="N" original="Sets future cost price and standard cost price">Sets future cost price and standard cost price</value>
+    <value column="Help" isTrl="N" original="For Standard Costing you can|- update the future cost price|- set the standard cost price to the future cost price">For Standard Costing you can|- update the future cost price|- set the standard cost price to the future cost price</value>
+  </row>
+  <row id="184" trl="N">
+    <value column="Name" isTrl="N" original="Process/Unprocess Expenses">Process/Unprocess Expenses</value>
+    <value column="Description" isTrl="N" original="Process/Unprocess Expenses">Process/Unprocess Expenses</value>
+    <value column="Help" isTrl="N" original="Process/Unprocess expense sheet.">Process/Unprocess expense sheet.</value>
+  </row>
+  <row id="185" trl="N">
+    <value column="Name" isTrl="N" original="Recompile DB Objects">Recompile DB Objects</value>
+    <value column="Description" isTrl="N" original="Recompile Database Objects">Recompile Database Objects</value>
+    <value column="Help" isTrl="N" original="Recompile Functions, Procedures, Triggers, Views, etc.">Recompile Functions, Procedures, Triggers, Views, etc.</value>
+  </row>
+  <row id="186" trl="N">
+    <value column="Name" isTrl="N" original="Create Sales Orders from Expenses">Create Sales Orders from Expenses</value>
+    <value column="Description" isTrl="N" original="Create Sales Orders for Customers from Expense Reports">Create Sales Orders for Customers from Expense Reports</value>
+    <value column="Help" isTrl="N" original="Create Sales Orders for Customers from Expense Reports">Create Sales Orders for Customers from Expense Reports</value>
+  </row>
+  <row id="187" trl="N">
+    <value column="Name" isTrl="N" original="Create AP Expense Invoices">Create AP Expense Invoices</value>
+    <value column="Description" isTrl="N" original="Create AP Invoices from Expenses to be paid to employees">Create AP Invoices from Expenses to be paid to employees</value>
+    <value column="Help" isTrl="N" original="Create AP Invoices from Expenses to be paid to employees">Create AP Invoices from Expenses to be paid to employees</value>
+  </row>
+  <row id="188" trl="N">
+    <value column="Name" isTrl="N" original="Process Batch old">Process Batch old</value>
+    <value column="Description" isTrl="N" original="Process Batch old. Do not use this one">Process Batch old. Do not use this one</value>
+    <value column="Help" isTrl="N" original="Process Batch">Process Batch</value>
+  </row>
+  <row id="189" trl="N">
+    <value column="Name" isTrl="N" original="Copy Columns">Copy Columns</value>
+    <value column="Description" isTrl="N" original="Copy Report Columns from other Column Set">Copy Report Columns from other Column Set</value>
+    <value column="Help" isTrl="N" original="Copy columns at the end of this Column Set">Copy columns at the end of this Column Set</value>
+  </row>
+  <row id="190" trl="N">
+    <value column="Name" isTrl="N" original="Copy Lines">Copy Lines</value>
+    <value column="Description" isTrl="N" original="Copy Report Lines from other Line Set">Copy Report Lines from other Line Set</value>
+    <value column="Help" isTrl="N" original="Copy lines at the end of this Line Set">Copy lines at the end of this Line Set</value>
+  </row>
+  <row id="192" trl="N">
+    <value column="Name" isTrl="N" original="Copy/Create">Copy/Create</value>
+    <value column="Description" isTrl="N" original="Copy existing OR create Print Format from Table">Copy existing OR create Print Format from Table</value>
+    <value column="Help" isTrl="N" original="Select either a table to create a print format [creates initial rough layout]|OR a print format to copy into the current print format [copies layout].">Select either a table to create a print format [creates initial rough layout]|OR a print format to copy into the current print format [copies layout].</value>
+  </row>
+  <row id="193" trl="N">
+    <value column="Name" isTrl="N" original="Generate PO from Sales Order">Generate PO from Sales Order</value>
+    <value column="Description" isTrl="N" original="Create Purchase Order from Sales Orders">Create Purchase Order from Sales Orders</value>
+    <value column="Help" isTrl="N" original="After completing sales orders, you can create one or more purchase orders for each sales order. A purchase order references always only one sales order (i.e. no consolidation of sales orders).||POs are created for all sales order lines where the product h">After completing sales orders, you can create one or more purchase orders for each sales order. A purchase order references always only one sales order (i.e. no consolidation of sales orders).||POs are created for all sales order lines where the product h</value>
+  </row>
+  <row id="198" trl="N">
+    <value column="Name" isTrl="N" original="Import Report Line Set">Import Report Line Set</value>
+    <value column="Description" isTrl="N" original="Import Report Line Set information">Import Report Line Set information</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="199" trl="N">
+    <value column="Name" isTrl="N" original="Generate Shipments (manual)">Generate Shipments (manual)</value>
+    <value column="Description" isTrl="N" original="Generate shipments manually">Generate shipments manually</value>
+    <value column="Help" isTrl="N" original="This process generates shipments from completed sale orders. It also has filter utilities.">This process generates shipments from completed sale orders. It also has filter utilities.</value>
+  </row>
+  <row id="200" trl="N">
+    <value column="Name" isTrl="N" original="Print Invoices">Print Invoices</value>
+    <value column="Description" isTrl="N" original="Print Invoices to paper or send PDF">Print Invoices to paper or send PDF</value>
+    <value column="Help" isTrl="N" original="Remark: If you enter just a Document No FROM value, all invoices greater or equal to that document number are printed; alternatively, you may use the % character as a wildcard.">Remark: If you enter just a Document No FROM value, all invoices greater or equal to that document number are printed; alternatively, you may use the % character as a wildcard.</value>
+  </row>
+  <row id="202" trl="N">
+    <value column="Name" isTrl="N" original="Create Report">Create Report</value>
+    <value column="Description" isTrl="N" original="Create Financial Report">Create Financial Report</value>
+    <value column="Help" isTrl="N" original="The default period is the current period. You can optionally enter other restrictions.">The default period is the current period. You can optionally enter other restrictions.</value>
+  </row>
+  <row id="203" trl="N">
+    <value column="Name" isTrl="N" original="Update Accounting Balance">Update Accounting Balance</value>
+    <value column="Description" isTrl="N" original="Update Daily Accounting Balances">Update Daily Accounting Balances</value>
+    <value column="Help" isTrl="N" original="This process is run automatically">This process is run automatically</value>
+  </row>
+  <row id="204" trl="N">
+    <value column="Name" isTrl="N" original="Statement of Accounts">Statement of Accounts</value>
+    <value column="Description" isTrl="N" original="Report Account Statement Beginning Balance and Transactions">Report Account Statement Beginning Balance and Transactions</value>
+    <value column="Help" isTrl="N" original="Select a Period (current period if empty) or enter a Account Date Range">Select a Period (current period if empty) or enter a Account Date Range</value>
+  </row>
+  <row id="205" trl="N">
+    <value column="Name" isTrl="N" original="Cache Reset">Cache Reset</value>
+    <value column="Description" isTrl="N" original="Reset Cache of the System ** Close all Windows before proceeding **">Reset Cache of the System ** Close all Windows before proceeding **</value>
+    <value column="Help" isTrl="N" original="To increase performance, Openbravo caches repeatedly used data. This process clears the local cache.">To increase performance, Openbravo caches repeatedly used data. This process clears the local cache.</value>
+  </row>
+  <row id="208" trl="N">
+    <value column="Name" isTrl="N" original="Start Replication Run">Start Replication Run</value>
+    <value column="Description" isTrl="N" original="Start Replication with Remote Host">Start Replication with Remote Host</value>
+    <value column="Help" isTrl="N" original="Start Replication with Remote Host">Start Replication with Remote Host</value>
+  </row>
+  <row id="210" trl="N">
+    <value column="Name" isTrl="N" original="Copy Lines">Copy Lines</value>
+    <value column="Description" isTrl="N" original="Copy lines (products) from an existing Invoice.">Copy lines (products) from an existing Invoice.</value>
+    <value column="Help" isTrl="N" original="Copy lines (products) from an existing Invoice. By selecting any existing past  invoice, the process will copy all lines (products) from it to the one currently  being edited. This process can be used repetitively to copy lines (products) from several invoices into a new one.">Copy lines (products) from an existing Invoice. By selecting any existing past  invoice, the process will copy all lines (products) from it to the one currently  being edited. This process can be used repetitively to copy lines (products) from several invoices into a new one.</value>
+  </row>
+  <row id="211" trl="N">
+    <value column="Name" isTrl="N" original="Copy Lines">Copy Lines</value>
+    <value column="Description" isTrl="N" original="Browse history of this particular document type for the selected business partner to be able to select lines (products) from these.">Browse history of this particular document type for the selected business partner to be able to select lines (products) from these.</value>
+    <value column="Help" isTrl="N" original="Browse history of this particular document type for the selected business partner to be able to select lines (products) from these. For example, if you are creating a new sales order for business partner A, Copy Lines window will give you the history of products ordered and the prices given to business partner A within the last X days. X can be set within the business partner window. Consider this as a tiny CRM window.">Browse history of this particular document type for the selected business partner to be able to select lines (products) from these. For example, if you are creating a new sales order for business partner A, Copy Lines window will give you the history of products ordered and the prices given to business partner A within the last X days. X can be set within the business partner window. Consider this as a tiny CRM window.</value>
+  </row>
+  <row id="212" trl="N">
+    <value column="Name" isTrl="N" original="Copy Details">Copy Details</value>
+    <value column="Description" isTrl="N" original="Copy Lines/Phases/Tasks from another existing project">Copy Lines/Phases/Tasks from another existing project</value>
+    <value column="Help" isTrl="N" original="Copy Lines/Phases/Tasks from another existing project">Copy Lines/Phases/Tasks from another existing project</value>
+  </row>
+  <row id="213" trl="N">
+    <value column="Name" isTrl="N" original="Start Process">Start Process</value>
+    <value column="Description" isTrl="N" original="Start Recurring Run">Start Recurring Run</value>
+    <value column="Help" isTrl="N" original="Start Recurring Run">Start Recurring Run</value>
+  </row>
+  <row id="214" trl="N">
+    <value column="Name" isTrl="N" original="Copy Details">Copy Details</value>
+    <value column="Description" isTrl="N" original="Copy Journal/Lines from other Journal Batch">Copy Journal/Lines from other Journal Batch</value>
+    <value column="Help" isTrl="N" original="Copy Journal/Lines from other Journal Batch">Copy Journal/Lines from other Journal Batch</value>
+  </row>
+  <row id="215" trl="N">
+    <value column="Name" isTrl="N" original="Set Project Type">Set Project Type</value>
+    <value column="Description" isTrl="N" original="Set Project Type and for Service Projects copy Phases and Tasks of Project Type into Project">Set Project Type and for Service Projects copy Phases and Tasks of Project Type into Project</value>
+    <value column="Help" isTrl="N" original="Set Project Type and for Service Projects copy Phases and Tasks of Project Type into Project">Set Project Type and for Service Projects copy Phases and Tasks of Project Type into Project</value>
+  </row>
+  <row id="216" trl="N">
+    <value column="Name" isTrl="N" original="Generate Order from Project Phase">Generate Order from Project Phase</value>
+    <value column="Description" isTrl="N" original="Generate Order from Project Phase">Generate Order from Project Phase</value>
+    <value column="Help" isTrl="N" original="The Generate Order process will generate a new Order document based on the project phase or tasks. A price list and warehouse/service point must be defined on the project.  If a product is defined on phase level, the Phase information is used as the basis">The Generate Order process will generate a new Order document based on the project phase or tasks. A price list and warehouse/service point must be defined on the project.  If a product is defined on phase level, the Phase information is used as the basis</value>
+  </row>
+  <row id="217" trl="N">
+    <value column="Name" isTrl="N" original="Project Print">Project Print</value>
+    <value column="Description" isTrl="N" original="** Special **">** Special **</value>
+    <value column="Help" isTrl="N" original="** Special **">** Special **</value>
+  </row>
+  <row id="218" trl="N">
+    <value column="Name" isTrl="N" original="Project Cycle Report">Project Cycle Report</value>
+    <value column="Description" isTrl="N" original="Report Projects based on Project Cycle">Report Projects based on Project Cycle</value>
+    <value column="Help" isTrl="N" original="The Project Cycle reports on common project phases of a Cycle Step/Phase. All Report information is weighted by the relative weight of the Cycle Step and converted to the currency of the Project Cycle (e.g. for Sales Funnel Reporting).&lt;p&gt;|The Projects mus">The Project Cycle reports on common project phases of a Cycle Step/Phase. All Report information is weighted by the relative weight of the Cycle Step and converted to the currency of the Project Cycle (e.g. for Sales Funnel Reporting).&lt;p&gt;|The Projects mus</value>
+  </row>
+  <row id="221" trl="N">
+    <value column="Name" isTrl="N" original="Import Bank Statement">Import Bank Statement</value>
+    <value column="Description" isTrl="N" original="Import Bank Statement">Import Bank Statement</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="222" trl="N">
+    <value column="Name" isTrl="N" original="Customer Assets">Customer Assets</value>
+    <value column="Description" isTrl="N" original="Report Customer Assets with Delivery Count">Report Customer Assets with Delivery Count</value>
+    <value column="Help" isTrl="N" original="Report Customer Assets with Delivery Count">Report Customer Assets with Delivery Count</value>
+  </row>
+  <row id="223" trl="N">
+    <value column="Name" isTrl="N" original="Asset Delivery">Asset Delivery</value>
+    <value column="Description" isTrl="N" original="Report Asset Deliveries">Report Asset Deliveries</value>
+    <value column="Help" isTrl="N" original="Report Asset Deliveries">Report Asset Deliveries</value>
+  </row>
+  <row id="224" trl="N">
+    <value column="Name" isTrl="N" original="Issue to Project">Issue to Project</value>
+    <value column="Description" isTrl="N" original="Issue Material to Project from Receipt or manual Inventory Location">Issue Material to Project from Receipt or manual Inventory Location</value>
+    <value column="Help" isTrl="N" original="Select a Project and either|&lt;BR&gt;- Material Receipt|&lt;BR&gt;- Expense Report|&lt;br&lt;- Inventory Location and Project Line not issued yet|&lt;BR&gt;- Inventory Location, Product and Quantity|The default Movement Date is today's date.">Select a Project and either|&lt;BR&gt;- Material Receipt|&lt;BR&gt;- Expense Report|&lt;br&lt;- Inventory Location and Project Line not issued yet|&lt;BR&gt;- Inventory Location, Product and Quantity|The default Movement Date is today's date.</value>
+  </row>
+  <row id="225" trl="N">
+    <value column="Name" isTrl="N" original="Generate PO from Project">Generate PO from Project</value>
+    <value column="Description" isTrl="N" original="Generate PO from Project Line(s)">Generate PO from Project Line(s)</value>
+    <value column="Help" isTrl="N" original="|">|</value>
+  </row>
+  <row id="226" trl="N">
+    <value column="Name" isTrl="N" original="Project Detail Accounting Report">Project Detail Accounting Report</value>
+    <value column="Description" isTrl="N" original="Project Detail Accounting Report">Project Detail Accounting Report</value>
+    <value column="Help" isTrl="N" original="Project Detail Accounting Report">Project Detail Accounting Report</value>
+  </row>
+  <row id="227" trl="N">
+    <value column="Name" isTrl="N" original="Close Project">Close Project</value>
+    <value column="Description" isTrl="N" original="Close Project">Close Project</value>
+    <value column="Help" isTrl="N" original="Close Project">Close Project</value>
+  </row>
+  <row id="228" trl="N">
+    <value column="Name" isTrl="N" original="Project Lines not Issued">Project Lines not Issued</value>
+    <value column="Description" isTrl="N" original="Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project">Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project</value>
+    <value column="Help" isTrl="N" original="Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project">Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project</value>
+  </row>
+  <row id="229" trl="N">
+    <value column="Name" isTrl="N" original="Project POs not Issued">Project POs not Issued</value>
+    <value column="Description" isTrl="N" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project</value>
+    <value column="Help" isTrl="N" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project</value>
+  </row>
+  <row id="230" trl="N">
+    <value column="Name" isTrl="N" original="Get Price">Get Price</value>
+    <value column="Description" isTrl="N" original="Get Price for Project Line based on Project Price List">Get Price for Project Line based on Project Price List</value>
+    <value column="Help" isTrl="N" original="Get Price for Project Line based on Project Price List">Get Price for Project Line based on Project Price List</value>
+  </row>
+  <row id="23D1B163EC0B41F790CE39BF01DA320E" trl="N">
+    <value column="Name" isTrl="N" original="Insert Orphan Line">Insert Orphan Line</value>
+    <value column="Description" isTrl="N" original="Process to insert orphan lines not related to shipments in return material orders">Process to insert orphan lines not related to shipments in return material orders</value>
+    <value column="Help" isTrl="N" original="Inserts a return order line not related to any shipment line. It has to be set the product with attribute if necessary and the quantity desired to return. Alternatively it can be set the price and tax to be used if values different than default are desired.">Inserts a return order line not related to any shipment line. It has to be set the product with attribute if necessary and the quantity desired to return. Alternatively it can be set the price and tax to be used if values different than default are desired.</value>
+  </row>
+  <row id="3C386BC12832466790E50F2F8C5EBD85" trl="N">
+    <value column="Name" isTrl="N" original="Create Variants">Create Variants</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Process that creates all the Variants Products of the Generic Product based on the combination of its Variant Characteristics' Values. Only values that are active in the Characteristic Configuration tab are considered.&#10;&#10;In case there is any characteristic configured with the Defines Price or Defines Image flag checked this process also sets the Price or an Image to the created Product Variants.&#10;&#10;If the Generic Product already has any Variant created the process returns an error message and no new Variant is created.">Process that creates all the Variants Products of the Generic Product based on the combination of its Variant Characteristics' Values. Only values that are active in the Characteristic Configuration tab are considered.
+
+In case there is any characteristic configured with the Defines Price or Defines Image flag checked this process also sets the Price or an Image to the created Product Variants.
+
+If the Generic Product already has any Variant created the process returns an error message and no new Variant is created.</value>
+  </row>
+  <row id="3F2B4AAC707B4CE7B98D2005CF7310B5" trl="N">
+    <value column="Name" isTrl="N" original="Costing Background process">Costing Background process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4062D3F4448547C3A2BCDFB09D062BA2" trl="N">
+    <value column="Name" isTrl="N" original="Register Module">Register Module</value>
+    <value column="Description" isTrl="N" original="This process registers a module in the central repository">This process registers a module in the central repository</value>
+    <value column="Help" isTrl="N" original="This process registers a module in the central repository checking the name, javaname, db_prefix etc. are available to be used. To register a module you must have a valid username and password in Openbravo Central Repository. You should register into &lt;a href=&quot;http://forge.openbravo.com&quot; target=&quot;_blank&quot;&gt;Openbravo Forge&lt;/a&gt; to obtain these credentials">This process registers a module in the central repository checking the name, javaname, db_prefix etc. are available to be used. To register a module you must have a valid username and password in Openbravo Central Repository. You should register into &lt;a href="http://forge.openbravo.com" target="_blank"&gt;Openbravo Forge&lt;/a&gt; to obtain these credentials</value>
+  </row>
+  <row id="406CFC3A1DE144FF855DA10A987C057C" trl="N">
+    <value column="Name" isTrl="N" original="Payment Monitor for Openbravo 2.50">Payment Monitor for Openbravo 2.50</value>
+    <value column="Description" isTrl="N" original="Payment Monitor for Openbravo 2.50">Payment Monitor for Openbravo 2.50</value>
+    <value column="Help" isTrl="N" original="Background process to update payment monitor info of invoices">Background process to update payment monitor info of invoices</value>
+  </row>
+  <row id="462033447A1548F09BBFB0683FA976CC" trl="N">
+    <value column="Name" isTrl="N" original="Asset report for depreciation schedule">Asset report for depreciation schedule</value>
+    <value column="Description" isTrl="N" original="Asset report for depreciation schedule">Asset report for depreciation schedule</value>
+    <value column="Help" isTrl="N" original="Asset report for depreciation schedule">Asset report for depreciation schedule</value>
+  </row>
+  <row id="468156B616E04DB39CBAD3592316FD50" trl="N">
+    <value column="Name" isTrl="N" original="Reschedule Process">Reschedule Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="49DEE812BF0545269781FCEBF2235924" trl="N">
+    <value column="Name" isTrl="N" original="Process Shipment Java">Process Shipment Java</value>
+    <value column="Description" isTrl="N" original="Process Shipment (Update Inventory)">Process Shipment (Update Inventory)</value>
+    <value column="Help" isTrl="N" original="Process Shipment will move products out of inventory and mark line items as shipped.">Process Shipment will move products out of inventory and mark line items as shipped.</value>
+  </row>
+  <row id="53863D4359114ADE92133F772135AEEB" trl="N">
+    <value column="Name" isTrl="N" original="Set as Ready">Set as Ready</value>
+    <value column="Description" isTrl="N" original="Set an organization as ready">Set an organization as ready</value>
+    <value column="Help" isTrl="N" original="This procedure checks if the organization fulfills every requirement before setting it as ready.">This procedure checks if the organization fulfills every requirement before setting it as ready.</value>
+  </row>
+  <row id="58591E3E0F7648E4A09058E037CE49FC" trl="N">
+    <value column="Name" isTrl="N" original="Update Product Characteristics Description">Update Product Characteristics Description</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="58763832F5F3485CAD33B8B9FCD6C640" trl="N">
+    <value column="Name" isTrl="N" original="Update Audit Trail Infrastructure">Update Audit Trail Infrastructure</value>
+    <value column="Description" isTrl="N" original="Update Audit Trail Infrastructure">Update Audit Trail Infrastructure</value>
+    <value column="Help" isTrl="N" original="This process updates the infrastructure for a complete audit of the selected tables.&lt;br/&gt;&#10;This process:&lt;br/&gt;&#10;- Will Stop the background process scheduler during process execution&lt;br/&gt;&#10;- Can take several minutes. Do not close the browser during execution.">This process updates the infrastructure for a complete audit of the selected tables.&lt;br/&gt;
+This process:&lt;br/&gt;
+- Will Stop the background process scheduler during process execution&lt;br/&gt;
+- Can take several minutes. Do not close the browser during execution.</value>
+  </row>
+  <row id="5A2A0AF88AF54BB085DCC52FCC9B17B7" trl="N">
+    <value column="Name" isTrl="N" original="Reservation Process">Reservation Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="645271C57F8C4DA4A1F64C7ACE37B101" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Payment Monitor">Invoice Payment Monitor</value>
+    <value column="Description" isTrl="N" original="Invoice Payment Monitor">Invoice Payment Monitor</value>
+    <value column="Help" isTrl="N" original="Updates payment monitor info">Updates payment monitor info</value>
+  </row>
+  <row id="64B3FF29AC174F4B94538BD0A3CE1CD3" trl="N">
+    <value column="Name" isTrl="N" original="Costing Migration Process">Costing Migration Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="The costing migration process initializes the new costing engine.&lt;br&gt;&lt;br&gt;&#10;This process creates a costing rule which uses the &quot;Average&quot; costing algorithm for each legal entity of the instance. &lt;br&gt;&lt;br&gt;&#10;The costing migration process is done in three steps:&lt;br&gt;&#10;&#10;1st step:&lt;br&gt;&#10;this process generates the closing and the opening balances of the inventory per each organization and warehouse with stocked products. The opening inventory balances are left in draft status therefore can be reviewed and the unit costs set are based on the &quot;legacy&quot; costs.&lt;br&gt;&lt;br&gt;&#10;&#10;2nd step:&lt;br&gt;&#10;the user can review the opening inventories to set up the proper stock and cost if needed. Once done the opening inventories can be processed.&lt;br&gt;&lt;br&gt;&#10;&#10;3rd step:&lt;br&gt;&#10;the migration process is launched once again to validate all the costing rules set once all the opening inventories have been processed.&lt;br&gt;&lt;br&gt;&#10;When the process is finished it is recommended to schedule the &quot;Costing Background&quot; process to automatically calculate the cost of all material transactions.">The costing migration process initializes the new costing engine.&lt;br&gt;&lt;br&gt;
+This process creates a costing rule which uses the "Average" costing algorithm for each legal entity of the instance. &lt;br&gt;&lt;br&gt;
+The costing migration process is done in three steps:&lt;br&gt;
+1st step:&lt;br&gt;
+this process generates the closing and the opening balances of the inventory per each organization and warehouse with stocked products. The opening inventory balances are left in draft status therefore can be reviewed and the unit costs set are based on the "legacy" costs.&lt;br&gt;&lt;br&gt;
+2nd step:&lt;br&gt;
+the user can review the opening inventories to set up the proper stock and cost if needed. Once done the opening inventories can be processed.&lt;br&gt;&lt;br&gt;
+3rd step:&lt;br&gt;
+the migration process is launched once again to validate all the costing rules set once all the opening inventories have been processed.&lt;br&gt;&lt;br&gt;
+When the process is finished it is recommended to schedule the "Costing Background" process to automatically calculate the cost of all material transactions.</value>
+  </row>
+  <row id="65D1E895C7FD47B48F3D18BC9E28BE9F" trl="N">
+    <value column="Name" isTrl="N" original="Update Audit Trail Infrastructure (PL)">Update Audit Trail Infrastructure (PL)</value>
+    <value column="Description" isTrl="N" original="Update Audit Trail Infrastructure">Update Audit Trail Infrastructure</value>
+    <value column="Help" isTrl="N" original="This process updates the required infrastructure to track complete audit for the tables selected as Fully Audited.">This process updates the required infrastructure to track complete audit for the tables selected as Fully Audited.</value>
+  </row>
+  <row id="69DFD737ACC74499A44574B046F8983C" trl="N">
+    <value column="Name" isTrl="N" original="Unschedule Process">Unschedule Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6D3B1C36BF594A51878281B505F6CECF" trl="N">
+    <value column="Name" isTrl="N" original="Sales Invoice Dimensional Report">Sales Invoice Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Sales Invoice Dimensional Report">Sales Invoice Dimensional Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E1ADD5C8B6B4ACB82237DAA8114451E" trl="N">
+    <value column="Name" isTrl="N" original="Explode">Explode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process will explode the product of the selected line.">This process will explode the product of the selected line.</value>
+  </row>
+  <row id="6FBD65B0FDB74D1AB07F0EADF18D48AE" trl="N">
+    <value column="Name" isTrl="N" original="Process Manufacturing Plan">Process Manufacturing Plan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Process Manufacturing Plan">Process Manufacturing Plan</value>
+  </row>
+  <row id="75F83D534E764C7C8781FFA6C08E87ED" trl="N">
+    <value column="Name" isTrl="N" original="Pareto Product Report">Pareto Product Report</value>
+    <value column="Description" isTrl="N" original="Pareto Product Report">Pareto Product Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7CB6B4D1ECCF4036B3F111D2CF11AADE" trl="N">
+    <value column="Name" isTrl="N" original="Create Reservations">Create Reservations</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7E9E0E62BF1341B796A57F3AC4A2D861" trl="N">
+    <value column="Name" isTrl="N" original="Display Jasper Report">Display Jasper Report</value>
+    <value column="Description" isTrl="N" original="Display Jasper Report">Display Jasper Report</value>
+    <value column="Help" isTrl="N" original="Display Jasper Report">Display Jasper Report</value>
+  </row>
+  <row id="7EDBFEC35BDA4FF4AF05ED516CDAFB90" trl="N">
+    <value column="Name" isTrl="N" original="Create Custom Module">Create Custom Module</value>
+    <value column="Description" isTrl="N" original="Create Custom Module">Create Custom Module</value>
+    <value column="Help" isTrl="N" original="Creates standard module for customizations">Creates standard module for customizations</value>
+  </row>
+  <row id="800000" trl="N">
+    <value column="Name" isTrl="N" original="Journal Entries Report">Journal Entries Report</value>
+    <value column="Description" isTrl="N" original="Journal Entries Report">Journal Entries Report</value>
+    <value column="Help" isTrl="N" original="The journal entries report is a list of all the journal vouchers of an organization and general ledger shown in a chronological order.">The journal entries report is a list of all the journal vouchers of an organization and general ledger shown in a chronological order.</value>
+  </row>
+  <row id="800001" trl="N">
+    <value column="Name" isTrl="N" original="General Ledger Report">General Ledger Report</value>
+    <value column="Description" isTrl="N" original="Report general ledger">Report general ledger</value>
+    <value column="Help" isTrl="N" original="The General Ledger report lists every ledger &quot;subaccount&quot; and its debit and credit ledger entries within a given period of time.">The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.</value>
+  </row>
+  <row id="800002" trl="N">
+    <value column="Name" isTrl="N" original="Change Project Status">Change Project Status</value>
+    <value column="Description" isTrl="N" original="Change project status">Change project status</value>
+    <value column="Help" isTrl="N" original="Change project status to be able to generate orders.">Change project status to be able to generate orders.</value>
+  </row>
+  <row id="800003" trl="N">
+    <value column="Name" isTrl="N" original="Copy Project Lines">Copy Project Lines</value>
+    <value column="Description" isTrl="N" original="Copy lines from the project assign to the proposal as proposal lines">Copy lines from the project assign to the proposal as proposal lines</value>
+    <value column="Help" isTrl="N" original="Copy lines from the project assign to the proposal as proposal lines">Copy lines from the project assign to the proposal as proposal lines</value>
+  </row>
+  <row id="800004" trl="N">
+    <value column="Name" isTrl="N" original="OrderPO Print">OrderPO Print</value>
+    <value column="Description" isTrl="N" original="** Special **">** Special **</value>
+    <value column="Help" isTrl="N" original="** Special **">** Special **</value>
+  </row>
+  <row id="800005" trl="N">
+    <value column="Name" isTrl="N" original="Create Sales Order from Project">Create Sales Order from Project</value>
+    <value column="Description" isTrl="N" original="Generate Sales Order From Project">Generate Sales Order From Project</value>
+    <value column="Help" isTrl="N" original="This process will create a new Sales Order, both header and lines, with the Business Partner of the project and the newly created price list.">This process will create a new Sales Order, both header and lines, with the Business Partner of the project and the newly created price list.</value>
+  </row>
+  <row id="800006" trl="N">
+    <value column="Name" isTrl="N" original="Create Purchase Order from Project">Create Purchase Order from Project</value>
+    <value column="Description" isTrl="N" original="Generate Purchase Order From Project">Generate Purchase Order From Project</value>
+    <value column="Help" isTrl="N" original="Generate Purchase Order From Project">Generate Purchase Order From Project</value>
+  </row>
+  <row id="800010" trl="N">
+    <value column="Name" isTrl="N" original="Update Attributes from Shipment">Update Attributes from Shipment</value>
+    <value column="Description" isTrl="N" original="Update attributes from shipment">Update attributes from shipment</value>
+    <value column="Help" isTrl="N" original="Update attributes from shipment">Update attributes from shipment</value>
+  </row>
+  <row id="800018" trl="N">
+    <value column="Name" isTrl="N" original="Material Transaction Report">Material Transaction Report</value>
+    <value column="Description" isTrl="N" original="Report Material Transaction">Report Material Transaction</value>
+    <value column="Help" isTrl="N" original="Report Material Transaction">Report Material Transaction</value>
+  </row>
+  <row id="800020" trl="N">
+    <value column="Name" isTrl="N" original="Total Product Template Report">Total Product Template Report</value>
+    <value column="Description" isTrl="N" original="Report Total Product Template">Report Total Product Template</value>
+    <value column="Help" isTrl="N" original="Report Total Product Template">Report Total Product Template</value>
+  </row>
+  <row id="800021" trl="N">
+    <value column="Name" isTrl="N" original="Balance sheet and P&amp;L structure">Balance sheet and P&amp;L structure</value>
+    <value column="Description" isTrl="N" original="Balance sheet and P&amp;L structure">Balance sheet and P&amp;L structure</value>
+    <value column="Help" isTrl="N" original="The Balance sheet and P&amp;L structure report engine allows to launch the Balance Sheet and P&amp;L which need to be previously configured.">The Balance sheet and P&amp;L structure report engine allows to launch the Balance Sheet and P&amp;L which need to be previously configured.</value>
+  </row>
+  <row id="800022" trl="N">
+    <value column="Name" isTrl="N" original="Copy Product Template">Copy Product Template</value>
+    <value column="Description" isTrl="N" original="Copy products from the business partner's template of that sales order.">Copy products from the business partner's template of that sales order.</value>
+    <value column="Help" isTrl="N" original="Copy products from the business partner's template of that sales order.">Copy products from the business partner's template of that sales order.</value>
+  </row>
+  <row id="800023" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Taxes Report">Invoice Taxes Report</value>
+    <value column="Description" isTrl="N" original="Report Tax Invoice">Report Tax Invoice</value>
+    <value column="Help" isTrl="N" original="The invoice taxes report provides invoice tax related information per each tax rate.">The invoice taxes report provides invoice tax related information per each tax rate.</value>
+  </row>
+  <row id="800024" trl="N">
+    <value column="Name" isTrl="N" original="Change Debt Payment">Change Debt Payment</value>
+    <value column="Description" isTrl="N" original="Take this Debt/Payment out of the settlement">Take this Debt/Payment out of the settlement</value>
+    <value column="Help" isTrl="N" original="Take this Debt/Payment out of the settlement">Take this Debt/Payment out of the settlement</value>
+  </row>
+  <row id="800025" trl="N">
+    <value column="Name" isTrl="N" original="Post Settlement">Post Settlement</value>
+    <value column="Description" isTrl="N" original="Post Settlement">Post Settlement</value>
+    <value column="Help" isTrl="N" original="Post Settlement">Post Settlement</value>
+  </row>
+  <row id="800026" trl="N">
+    <value column="Name" isTrl="N" original="Payment Report">Payment Report</value>
+    <value column="Description" isTrl="N" original="Report debt payment">Report debt payment</value>
+    <value column="Help" isTrl="N" original="Report debt payment">Report debt payment</value>
+  </row>
+  <row id="800027" trl="N">
+    <value column="Name" isTrl="N" original="Create File">Create File</value>
+    <value column="Description" isTrl="N" original="Create File">Create File</value>
+    <value column="Help" isTrl="N" original="Create File">Create File</value>
+  </row>
+  <row id="800030" trl="N">
+    <value column="Name" isTrl="N" original="Service Project Report">Service Project Report</value>
+    <value column="Description" isTrl="N" original="Service Project Report">Service Project Report</value>
+    <value column="Help" isTrl="N" original="Service Project Report">Service Project Report</value>
+  </row>
+  <row id="800032" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Control Report">Warehouse Control Report</value>
+    <value column="Description" isTrl="N" original="Report Warehouse Control">Report Warehouse Control</value>
+    <value column="Help" isTrl="N" original="Report Warehouse Control">Report Warehouse Control</value>
+  </row>
+  <row id="800033" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Consignment Report">Invoice Consignment Report</value>
+    <value column="Description" isTrl="N" original="Report To Invoice Consignment">Report To Invoice Consignment</value>
+    <value column="Help" isTrl="N" original="Report To Invoice Consignment">Report To Invoice Consignment</value>
+  </row>
+  <row id="800036" trl="N">
+    <value column="Name" isTrl="N" original="Close Year">Close Year</value>
+    <value column="Description" isTrl="N" original="This proces creates the closing transactions and the corresponding opening transactions for the following year.">This proces creates the closing transactions and the corresponding opening transactions for the following year.</value>
+    <value column="Help" isTrl="N" original="This proces creates the closing transactions and the corresponding opening transactions for the following year.&#10;The following year must already exist in the system and the first period must be open.&#10;The ledger accounting entries created by the Fiscal Year closing process are:&#10;     1. P&amp;L Closing: Resets all revenue and costs accounts and posts P&amp;L transaction. Currently posted into last day of last period of closing year.&#10;     2. Closing entry or Balance Sheet Closing: Creates closing transactions for asset and liabilities. Currently posted into last day of last period of closing year.&#10;     3. Opening entry: Posts opposite entry of closing entry. First day of first period of new year">This proces creates the closing transactions and the corresponding opening transactions for the following year.
+The following year must already exist in the system and the first period must be open.
+The ledger accounting entries created by the Fiscal Year closing process are:
+     1. P&amp;L Closing: Resets all revenue and costs accounts and posts P&amp;L transaction. Currently posted into last day of last period of closing year.
+     2. Closing entry or Balance Sheet Closing: Creates closing transactions for asset and liabilities. Currently posted into last day of last period of closing year.
+     3. Opening entry: Posts opposite entry of closing entry. First day of first period of new year</value>
+  </row>
+  <row id="800038" trl="N">
+    <value column="Name" isTrl="N" original="Undo Close Year">Undo Close Year</value>
+    <value column="Description" isTrl="N" original="This process undo all what was done by the closing year process; all the accounting entries which were generated are undo or reverted.">This process undo all what was done by the closing year process; all the accounting entries which were generated are undo or reverted.</value>
+    <value column="Help" isTrl="N" original="This process undo all what was done by the closing year process; all the accounting entries which were generated are undo or reverted.">This process undo all what was done by the closing year process; all the accounting entries which were generated are undo or reverted.</value>
+  </row>
+  <row id="800039" trl="N">
+    <value column="Name" isTrl="N" original="Trial Balance">Trial Balance</value>
+    <value column="Description" isTrl="N" original="Trial Balance Report">Trial Balance Report</value>
+    <value column="Help" isTrl="N" original="The trial balance helps to check that the total amount of debits are equal to the total amount of credits.">The trial balance helps to check that the total amount of debits are equal to the total amount of credits.</value>
+  </row>
+  <row id="800040" trl="N">
+    <value column="Name" isTrl="N" original="Create All Price Lists">Create All Price Lists</value>
+    <value column="Description" isTrl="N" original="Create price list version for a price list">Create price list version for a price list</value>
+    <value column="Help" isTrl="N" original="Create price list version for a price list">Create price list version for a price list</value>
+  </row>
+  <row id="800046" trl="N">
+    <value column="Name" isTrl="N" original="Product Movements Report">Product Movements Report</value>
+    <value column="Description" isTrl="N" original="Report product movement">Report product movement</value>
+    <value column="Help" isTrl="N" original="Report product movement">Report product movement</value>
+  </row>
+  <row id="800048" trl="N">
+    <value column="Name" isTrl="N" original="Move a Storage Bin">Move a Storage Bin</value>
+    <value column="Description" isTrl="N" original="Move a Storage Bin">Move a Storage Bin</value>
+    <value column="Help" isTrl="N" original="Move a Storage Bin">Move a Storage Bin</value>
+  </row>
+  <row id="800050" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse movement">Warehouse movement</value>
+    <value column="Description" isTrl="N" original="**Special**">**Special**</value>
+    <value column="Help" isTrl="N" original="**Special**">**Special**</value>
+  </row>
+  <row id="800058" trl="N">
+    <value column="Name" isTrl="N" original="Shipments Dimensional Report">Shipments Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Shipment dimensional analyze">Shipment dimensional analyze</value>
+    <value column="Help" isTrl="Y" original="This report shows information about goods shipped to the customers (Goods Shipments in a status Completed or Voided) during a selected period of time. ">Shipment dimensional analyze JR</value>
+  </row>
+  <row id="800061" trl="N">
+    <value column="Name" isTrl="N" original="Expense Report">Expense Report</value>
+    <value column="Description" isTrl="N" original="Report expense">Report expense</value>
+    <value column="Help" isTrl="N" original="Report expense">Report expense</value>
+  </row>
+  <row id="800062" trl="N">
+    <value column="Name" isTrl="N" original="Create From Multiple">Create From Multiple</value>
+    <value column="Description" isTrl="N" original="Create From Multiple">Create From Multiple</value>
+    <value column="Help" isTrl="N" original="Create From Multiple">Create From Multiple</value>
+  </row>
+  <row id="800064" trl="N">
+    <value column="Name" isTrl="N" original="Acct Server Process">Acct Server Process</value>
+    <value column="Description" isTrl="N" original="Acct Server Process">Acct Server Process</value>
+    <value column="Help" isTrl="N" original="Acct Server Process">Acct Server Process</value>
+  </row>
+  <row id="800067" trl="N">
+    <value column="Name" isTrl="N" original="Price List Report">Price List Report</value>
+    <value column="Description" isTrl="N" original="Price List Report">Price List Report</value>
+    <value column="Help" isTrl="N" original="Price List Report is a report which shows Price List information which can filtered for a specif &quot;Product Category&quot; or a set of selected &quot;Products&quot;.">Price List Report is a report which shows Price List information which can filtered for a specif "Product Category" or a set of selected "Products".</value>
+  </row>
+  <row id="800068" trl="N">
+    <value column="Name" isTrl="N" original="Create Invoice  (Volume Discount)">Create Invoice  (Volume Discount)</value>
+    <value column="Description" isTrl="N" original="Create invoice">Create invoice</value>
+    <value column="Help" isTrl="N" original="Create invoice">Create invoice</value>
+  </row>
+  <row id="800069" trl="N">
+    <value column="Name" isTrl="N" original="Create Price List Version">Create Price List Version</value>
+    <value column="Description" isTrl="N" original="Create Price List Version">Create Price List Version</value>
+    <value column="Help" isTrl="N" original="Create Price List Version">Create Price List Version</value>
+  </row>
+  <row id="800070" trl="N">
+    <value column="Name" isTrl="N" original="Settlement printed">Settlement printed</value>
+    <value column="Description" isTrl="N" original="** special **">** special **</value>
+    <value column="Help" isTrl="N" original="** special **">** special **</value>
+  </row>
+  <row id="800073" trl="N">
+    <value column="Name" isTrl="N" original="Sales Rep Pricelist">Sales Rep Pricelist</value>
+    <value column="Description" isTrl="N" original="Sales Rep Pricelist">Sales Rep Pricelist</value>
+    <value column="Help" isTrl="N" original="Sales Rep Pricelist">Sales Rep Pricelist</value>
+  </row>
+  <row id="800074" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Returns Dimensional Report">Sales Order Returns Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Report refund sales order dimensional analyses">Report refund sales order dimensional analyses</value>
+    <value column="Help" isTrl="N" original="Report refund sales order dimensional analyses">Report refund sales order dimensional analyses</value>
+  </row>
+  <row id="800075" trl="N">
+    <value column="Name" isTrl="N" original="Create Purchase Invoices from Deliveries">Create Purchase Invoices from Deliveries</value>
+    <value column="Description" isTrl="N" original="Create purchase invoices from deliveries">Create purchase invoices from deliveries</value>
+    <value column="Help" isTrl="N" original="This window helps you to create purchase invoices from goods shipments.">This window helps you to create purchase invoices from goods shipments.</value>
+  </row>
+  <row id="800076" trl="N">
+    <value column="Name" isTrl="N" original="Payment Tracker">Payment Tracker</value>
+    <value column="Description" isTrl="N" original="Payment Tracker">Payment Tracker</value>
+    <value column="Help" isTrl="N" original="Payment Tracker">Payment Tracker</value>
+  </row>
+  <row id="800077" trl="N">
+    <value column="Name" isTrl="N" original="Replace Balances">Replace Balances</value>
+    <value column="Description" isTrl="N" original="Replace Balances">Replace Balances</value>
+    <value column="Help" isTrl="N" original="Replace Balances">Replace Balances</value>
+  </row>
+  <row id="800079" trl="N">
+    <value column="Name" isTrl="N" original="Traceability Report">Traceability Report</value>
+    <value column="Description" isTrl="N" original="Traceability Report">Traceability Report</value>
+    <value column="Help" isTrl="N" original="Traceability Report">Traceability Report</value>
+  </row>
+  <row id="800081" trl="N">
+    <value column="Name" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+    <value column="Description" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+    <value column="Help" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+  </row>
+  <row id="800082" trl="N">
+    <value column="Name" isTrl="N" original="Funds Transfer">Funds Transfer</value>
+    <value column="Description" isTrl="N" original="Make transfers between cash and bank">Make transfers between cash and bank</value>
+    <value column="Help" isTrl="N" original="Make transfers between cash and bank">Make transfers between cash and bank</value>
+  </row>
+  <row id="800083" trl="N">
+    <value column="Name" isTrl="N" original="Copy from Settlement">Copy from Settlement</value>
+    <value column="Description" isTrl="N" original="Generates a manual settlement">Generates a manual settlement</value>
+    <value column="Help" isTrl="N" original="Generates a manual settlement copying an existing one.">Generates a manual settlement copying an existing one.</value>
+  </row>
+  <row id="800085" trl="N">
+    <value column="Name" isTrl="N" original="Generate Average Costs">Generate Average Costs</value>
+    <value column="Description" isTrl="N" original="Generates raw materials average costs.">Generates raw materials average costs.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800087" trl="N">
+    <value column="Name" isTrl="N" original="Update Table Identifiers">Update Table Identifiers</value>
+    <value column="Description" isTrl="N" original="Update all the table identifiers SQL">Update all the table identifiers SQL</value>
+    <value column="Help" isTrl="N" original="Update all the table identifiers SQL">Update all the table identifiers SQL</value>
+  </row>
+  <row id="800088" trl="N">
+    <value column="Name" isTrl="N" original="Valued Stock Report Legacy">Valued Stock Report Legacy</value>
+    <value column="Description" isTrl="N" original="Valued Stock Report Legacy">Valued Stock Report Legacy</value>
+    <value column="Help" isTrl="Y" original="Valued Stock Report Legacy shows the stock for a particular warehouse and the value of that stock.">Valued Stock Report Legacy</value>
+  </row>
+  <row id="800089" trl="N">
+    <value column="Name" isTrl="N" original="Grant Access">Grant Access</value>
+    <value column="Description" isTrl="N" original="Inserts access to module and window, process, task, workflow and forms.">Inserts access to module and window, process, task, workflow and forms.</value>
+    <value column="Help" isTrl="N" original="Inserts access to module and window, process, task, workflow and forms.">Inserts access to module and window, process, task, workflow and forms.</value>
+  </row>
+  <row id="800091" trl="N">
+    <value column="Name" isTrl="N" original="ReportTrialBalanceDetail">ReportTrialBalanceDetail</value>
+    <value column="Description" isTrl="N" original="ReportTrialBalanceDetail">ReportTrialBalanceDetail</value>
+    <value column="Help" isTrl="N" original="ReportTrialBalanceDetail">ReportTrialBalanceDetail</value>
+  </row>
+  <row id="800092" trl="N">
+    <value column="Name" isTrl="N" original="Proposal Report">Proposal Report</value>
+    <value column="Description" isTrl="N" original="Report proposal query">Report proposal query</value>
+    <value column="Help" isTrl="N" original="Report proposal query">Report proposal query</value>
+  </row>
+  <row id="800094" trl="N">
+    <value column="Name" isTrl="N" original="Process a Winning Bid">Process a Winning Bid</value>
+    <value column="Description" isTrl="N" original="Award contract to project">Award contract to project</value>
+    <value column="Help" isTrl="N" original="Award contract to project. Project Lines will be deleted and replaced by Proposal Lines.">Award contract to project. Project Lines will be deleted and replaced by Proposal Lines.</value>
+  </row>
+  <row id="800098" trl="N">
+    <value column="Name" isTrl="N" original="Create Document">Create Document</value>
+    <value column="Description" isTrl="N" original="Creates a apliccation test.">Creates a apliccation test.</value>
+    <value column="Help" isTrl="N" original="Select a test group or a single test. A apliccation testing text file will be generated.">Select a test group or a single test. A apliccation testing text file will be generated.</value>
+  </row>
+  <row id="800099" trl="N">
+    <value column="Name" isTrl="N" original="Bpartner print">Bpartner print</value>
+    <value column="Description" isTrl="N" original="** special **">** special **</value>
+    <value column="Help" isTrl="N" original="** special **">** special **</value>
+  </row>
+  <row id="800100" trl="N">
+    <value column="Name" isTrl="N" original="Business Partner Contract">Business Partner Contract</value>
+    <value column="Description" isTrl="N" original="Creates business partner contract">Creates business partner contract</value>
+    <value column="Help" isTrl="N" original="Creates a PDF report containing the business partner name, address,... And the price list for the customer.">Creates a PDF report containing the business partner name, address,... And the price list for the customer.</value>
+  </row>
+  <row id="800101" trl="N">
+    <value column="Name" isTrl="N" original="Promissory Note">Promissory Note</value>
+    <value column="Description" isTrl="N" original="** special **">** special **</value>
+    <value column="Help" isTrl="N" original="** special **">** special **</value>
+  </row>
+  <row id="800102" trl="N">
+    <value column="Name" isTrl="N" original="Applied Discounts in Invoices">Applied Discounts in Invoices</value>
+    <value column="Description" isTrl="N" original="Applied Discounts in Invoices">Applied Discounts in Invoices</value>
+    <value column="Help" isTrl="N" original="Applied Discounts in Invoices">Applied Discounts in Invoices</value>
+  </row>
+  <row id="800103" trl="N">
+    <value column="Name" isTrl="N" original="Process Work Requirement">Process Work Requirement</value>
+    <value column="Description" isTrl="N" original="Process to create, if explodePhases is checked, the phases and all the products of the phases.">Process to create, if explodePhases is checked, the phases and all the products of the phases.</value>
+    <value column="Help" isTrl="N" original="With this process the operations and the products will be generated from the selected production plan. If the plan is not of type &quot;explodeOperations&quot;, only the products from the previously registered operations will be generated.">With this process the operations and the products will be generated from the selected production plan. If the plan is not of type "explodeOperations", only the products from the previously registered operations will be generated.</value>
+  </row>
+  <row id="800105" trl="N">
+    <value column="Name" isTrl="N" original="Create Standards">Create Standards</value>
+    <value column="Description" isTrl="N" original="Inserts the standard values for the selected Work Requirement Phase and Cost Center version">Inserts the standard values for the selected Work Requirement Phase and Cost Center version</value>
+    <value column="Help" isTrl="N" original="With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.&#10;This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.&#10;If the Activity of the Work Requirement Phase uses toolsets they are also inserted.&#10;Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.">With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.
+This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.
+If the Activity of the Work Requirement Phase uses toolsets they are also inserted.
+Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.</value>
+  </row>
+  <row id="800106" trl="N">
+    <value column="Name" isTrl="N" original="Validate Work Effort">Validate Work Effort</value>
+    <value column="Description" isTrl="N" original="Process to validate and actualize stocks of all production runs.">Process to validate and actualize stocks of all production runs.</value>
+    <value column="Help" isTrl="N" original="With this process the work effort is closed. Stocks are actualized and average costs are calculated">With this process the work effort is closed. Stocks are actualized and average costs are calculated</value>
+  </row>
+  <row id="800109" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Standard Costs">Calculate Standard Costs</value>
+    <value column="Description" isTrl="N" original="Calculates the standard cost of manufactured products.">Calculates the standard cost of manufactured products.</value>
+    <value column="Help" isTrl="N" original="Calculates the standard cost of manufactured products.">Calculates the standard cost of manufactured products.</value>
+  </row>
+  <row id="800112" trl="N">
+    <value column="Name" isTrl="N" original="Copy Version">Copy Version</value>
+    <value column="Description" isTrl="N" original="Process to copy the structure of the selected version.">Process to copy the structure of the selected version.</value>
+    <value column="Help" isTrl="N" original="Process to copy the structure of the selected version.">Process to copy the structure of the selected version.</value>
+  </row>
+  <row id="800114" trl="N">
+    <value column="Name" isTrl="N" original="Input Time Measurement">Input Time Measurement</value>
+    <value column="Description" isTrl="N" original="With this process are inserted all the Control Points of the selected group to fill with taken measurements.">With this process are inserted all the Control Points of the selected group to fill with taken measurements.</value>
+    <value column="Help" isTrl="N" original="With this process are inserted all the Control Points of the selected group to fill with taken measurements.">With this process are inserted all the Control Points of the selected group to fill with taken measurements.</value>
+  </row>
+  <row id="800115" trl="N">
+    <value column="Name" isTrl="N" original="CCP sheet">CCP sheet</value>
+    <value column="Description" isTrl="N" original="Print of the critical control points of selected groups.">Print of the critical control points of selected groups.</value>
+    <value column="Help" isTrl="N" original="Print of the critical control points of selected groups.">Print of the critical control points of selected groups.</value>
+  </row>
+  <row id="800117" trl="N">
+    <value column="Name" isTrl="N" original="Close Work Requirement">Close Work Requirement</value>
+    <value column="Description" isTrl="N" original="With this process are closed the work requirement and all its phases">With this process are closed the work requirement and all its phases</value>
+    <value column="Help" isTrl="N" original="With this process are closed the work requirement and all its phases">With this process are closed the work requirement and all its phases</value>
+  </row>
+  <row id="800118" trl="N">
+    <value column="Name" isTrl="N" original="Close Phase">Close Phase</value>
+    <value column="Description" isTrl="N" original="With this process it will be closed the work requirement phase. If all the phases are closed the work requirement will also be closed.">With this process it will be closed the work requirement phase. If all the phases are closed the work requirement will also be closed.</value>
+    <value column="Help" isTrl="N" original="With this process it will be closed the work requirement phase. If all the phases are closed the work requirement will also be closed.">With this process it will be closed the work requirement phase. If all the phases are closed the work requirement will also be closed.</value>
+  </row>
+  <row id="800119" trl="N">
+    <value column="Name" isTrl="N" original="CCP Measures sheet">CCP Measures sheet</value>
+    <value column="Description" isTrl="N" original="Print of the selected critical control points measures.">Print of the selected critical control points measures.</value>
+    <value column="Help" isTrl="N" original="Print of the selected critical control points measures.">Print of the selected critical control points measures.</value>
+  </row>
+  <row id="800120" trl="N">
+    <value column="Name" isTrl="N" original="Run Periodic Control">Run Periodic Control</value>
+    <value column="Description" isTrl="N" original="With this process are planed all the gatherings of the periodic control selected.">With this process are planed all the gatherings of the periodic control selected.</value>
+    <value column="Help" isTrl="N" original="With this process are planed all the gatherings of the periodic control selected.">With this process are planed all the gatherings of the periodic control selected.</value>
+  </row>
+  <row id="800123" trl="N">
+    <value column="Name" isTrl="N" original="G/L Items Report">G/L Items Report</value>
+    <value column="Description" isTrl="N" original="G/L Items Report">G/L Items Report</value>
+    <value column="Help" isTrl="N" original="G/L Items Report">G/L Items Report</value>
+  </row>
+  <row id="800124" trl="N">
+    <value column="Name" isTrl="N" original="Performance Scorecard">Performance Scorecard</value>
+    <value column="Description" isTrl="N" original="Performance Scorecard">Performance Scorecard</value>
+    <value column="Help" isTrl="N" original="Performance Scorecard">Performance Scorecard</value>
+  </row>
+  <row id="800125" trl="N">
+    <value column="Name" isTrl="N" original="Create Amortization">Create Amortization</value>
+    <value column="Description" isTrl="N" original="Create Amortization">Create Amortization</value>
+    <value column="Help" isTrl="N" original="Create Amortization">Create Amortization</value>
+  </row>
+  <row id="800126" trl="N">
+    <value column="Name" isTrl="N" original="Create Payment">Create Payment</value>
+    <value column="Description" isTrl="N" original="Create Payment">Create Payment</value>
+    <value column="Help" isTrl="N" original="Create Payment">Create Payment</value>
+  </row>
+  <row id="800127" trl="N">
+    <value column="Name" isTrl="N" original="Explode Measure Shift">Explode Measure Shift</value>
+    <value column="Description" isTrl="N" original="Explode Measure Shift">Explode Measure Shift</value>
+    <value column="Help" isTrl="N" original="Explode Measure Shift">Explode Measure Shift</value>
+  </row>
+  <row id="800128" trl="N">
+    <value column="Name" isTrl="N" original="Edit CCP Measured Values">Edit CCP Measured Values</value>
+    <value column="Description" isTrl="N" original="Edit CCP Measured Values">Edit CCP Measured Values</value>
+    <value column="Help" isTrl="N" original="Edit CCP Measured Values">Edit CCP Measured Values</value>
+  </row>
+  <row id="800129" trl="N">
+    <value column="Name" isTrl="N" original="Create from Maintenance Part">Create from Maintenance Part</value>
+    <value column="Description" isTrl="N" original="Create from Maintenance Part">Create from Maintenance Part</value>
+    <value column="Help" isTrl="N" original="Create from Maintenance Part">Create from Maintenance Part</value>
+  </row>
+  <row id="800130" trl="N">
+    <value column="Name" isTrl="N" original="Insert Maintenances">Insert Maintenances</value>
+    <value column="Description" isTrl="N" original="Insert Maintenances">Insert Maintenances</value>
+    <value column="Help" isTrl="N" original="Insert Maintenances">Insert Maintenances</value>
+  </row>
+  <row id="800131" trl="N">
+    <value column="Name" isTrl="N" original="Process Internal Consumption">Process Internal Consumption</value>
+    <value column="Description" isTrl="N" original="Process Internal Consumption">Process Internal Consumption</value>
+    <value column="Help" isTrl="N" original="Process Internal Consumption">Process Internal Consumption</value>
+  </row>
+  <row id="800133" trl="N">
+    <value column="Name" isTrl="N" original="Journal Entries Report Detail">Journal Entries Report Detail</value>
+    <value column="Description" isTrl="N" original="Journal Entries Report detail">Journal Entries Report detail</value>
+    <value column="Help" isTrl="N" original="Journal Entries Report detail">Journal Entries Report detail</value>
+  </row>
+  <row id="800134" trl="N">
+    <value column="Name" isTrl="N" original="Post Amortization">Post Amortization</value>
+    <value column="Description" isTrl="N" original="Post Amortization">Post Amortization</value>
+    <value column="Help" isTrl="N" original="Post Amortization">Post Amortization</value>
+  </row>
+  <row id="800135" trl="N">
+    <value column="Name" isTrl="N" original="Copy Budget">Copy Budget</value>
+    <value column="Description" isTrl="N" original="Copy Budget">Copy Budget</value>
+    <value column="Help" isTrl="N" original="Copy Budget">Copy Budget</value>
+  </row>
+  <row id="800136" trl="N">
+    <value column="Name" isTrl="N" original="Copy Accounts">Copy Accounts</value>
+    <value column="Description" isTrl="N" original="Copy and overwrite Accounts">Copy and overwrite Accounts</value>
+    <value column="Help" isTrl="N" original="The Copy Accounts Process will take the accounts defined for a asset group and copy them to any asset that references this group.  If an account exists at the product level it will be overwritten.">The Copy Accounts Process will take the accounts defined for a asset group and copy them to any asset that references this group.  If an account exists at the product level it will be overwritten.</value>
+  </row>
+  <row id="800137" trl="N">
+    <value column="Name" isTrl="N" original="Create Budget Reports in Excel">Create Budget Reports in Excel</value>
+    <value column="Description" isTrl="N" original="Create Budget Reports in Excel">Create Budget Reports in Excel</value>
+    <value column="Help" isTrl="N" original="Create Budget Reports in Excel">Create Budget Reports in Excel</value>
+  </row>
+  <row id="800138" trl="N">
+    <value column="Name" isTrl="N" original="Export Budget to Excel">Export Budget to Excel</value>
+    <value column="Description" isTrl="N" original="Export Budget to Excel">Export Budget to Excel</value>
+    <value column="Help" isTrl="N" original="Export Budget to Excel">Export Budget to Excel</value>
+  </row>
+  <row id="800140" trl="N">
+    <value column="Name" isTrl="N" original="Post Payment Management">Post Payment Management</value>
+    <value column="Description" isTrl="N" original="Post Payment Management">Post Payment Management</value>
+    <value column="Help" isTrl="N" original="Post Payment Management">Post Payment Management</value>
+  </row>
+  <row id="800141" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Freight Amount">Calculate Freight Amount</value>
+    <value column="Description" isTrl="N" original="Calculate Freight Amount">Calculate Freight Amount</value>
+    <value column="Help" isTrl="N" original="Calculate Freight Amount">Calculate Freight Amount</value>
+  </row>
+  <row id="800142" trl="N">
+    <value column="Name" isTrl="N" original="Process">Process</value>
+    <value column="Description" isTrl="N" original="Process">Process</value>
+    <value column="Help" isTrl="N" original="Process">Process</value>
+  </row>
+  <row id="800143" trl="N">
+    <value column="Name" isTrl="N" original="Shipper Report">Shipper Report</value>
+    <value column="Description" isTrl="N" original="Shipper Report">Shipper Report</value>
+    <value column="Help" isTrl="N" original="Shipper Report">Shipper Report</value>
+  </row>
+  <row id="800144" trl="N">
+    <value column="Name" isTrl="N" original="User Defined Accounting Report">User Defined Accounting Report</value>
+    <value column="Description" isTrl="N" original="Selects an accounting model to obtain its report.">Selects an accounting model to obtain its report.</value>
+    <value column="Help" isTrl="N" original="Selects an accounting model to obtain its report.">Selects an accounting model to obtain its report.</value>
+  </row>
+  <row id="800145" trl="N">
+    <value column="Name" isTrl="N" original="Remittance printed">Remittance printed</value>
+    <value column="Description" isTrl="N" original="Remittance printed">Remittance printed</value>
+    <value column="Help" isTrl="N" original="Remittance printed">Remittance printed</value>
+  </row>
+  <row id="800146" trl="N">
+    <value column="Name" isTrl="N" original="Remittance printed">Remittance printed</value>
+    <value column="Description" isTrl="N" original="Remittance printed">Remittance printed</value>
+    <value column="Help" isTrl="N" original="Remittance printed">Remittance printed</value>
+  </row>
+  <row id="800147" trl="N">
+    <value column="Name" isTrl="N" original="Delete Client">Delete Client</value>
+    <value column="Description" isTrl="N" original="This process deletes a client">This process deletes a client</value>
+    <value column="Help" isTrl="N" original="This process deletes a client and all of its data. This operation cannot be undone so please exercise caution.&#10;Under certain circumstances, this process fails to complete successfully, leaving the system in an inconsistent state that prevents it from working correctly. We strongly advise to backup your system before initiating this operation.&#10;This operation can take a long time to complete.">This process deletes a client and all of its data. This operation cannot be undone so please exercise caution.
+Under certain circumstances, this process fails to complete successfully, leaving the system in an inconsistent state that prevents it from working correctly. We strongly advise to backup your system before initiating this operation.
+This operation can take a long time to complete.</value>
+  </row>
+  <row id="800148" trl="N">
+    <value column="Name" isTrl="N" original="Offers Report">Offers Report</value>
+    <value column="Description" isTrl="N" original="Offers Report">Offers Report</value>
+    <value column="Help" isTrl="N" original="Offers Report">Offers Report</value>
+  </row>
+  <row id="800151" trl="N">
+    <value column="Name" isTrl="N" original="Create Production Costs">Create Production Costs</value>
+    <value column="Description" isTrl="N" original="Create Production Costs">Create Production Costs</value>
+    <value column="Help" isTrl="N" original="Create Production Costs">Create Production Costs</value>
+  </row>
+  <row id="800152" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Indirect Cost">Calculate Indirect Cost</value>
+    <value column="Description" isTrl="N" original="Calculates the unitary indirect cost for the given period time.">Calculates the unitary indirect cost for the given period time.</value>
+    <value column="Help" isTrl="N" original="This process will recalculate the cost if it's allready calculated">This process will recalculate the cost if it's allready calculated</value>
+  </row>
+  <row id="800153" trl="N">
+    <value column="Name" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+    <value column="Description" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+    <value column="Help" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+  </row>
+  <row id="800155" trl="N">
+    <value column="Name" isTrl="N" original="Production Cost Report">Production Cost Report</value>
+    <value column="Description" isTrl="N" original="Production Cost Report">Production Cost Report</value>
+    <value column="Help" isTrl="N" original="Production Cost Report">Production Cost Report</value>
+  </row>
+  <row id="800156" trl="N">
+    <value column="Name" isTrl="N" original="Rpt M_Product">Rpt M_Product</value>
+    <value column="Description" isTrl="N" original="**Special**">**Special**</value>
+    <value column="Help" isTrl="N" original="**Special**">**Special**</value>
+  </row>
+  <row id="800159" trl="N">
+    <value column="Name" isTrl="N" original="Generate Material Requisitions">Generate Material Requisitions</value>
+    <value column="Description" isTrl="N" original="Generate Material Requisitions">Generate Material Requisitions</value>
+    <value column="Help" isTrl="N" original="Generate Material Requisitions">Generate Material Requisitions</value>
+  </row>
+  <row id="800160" trl="N">
+    <value column="Name" isTrl="N" original="Generate Work Requirements">Generate Work Requirements</value>
+    <value column="Description" isTrl="N" original="Generate Work Requirements">Generate Work Requirements</value>
+    <value column="Help" isTrl="N" original="Generate Work Requirements">Generate Work Requirements</value>
+  </row>
+  <row id="800161" trl="N">
+    <value column="Name" isTrl="N" original="Recalculate Dates/Quantities">Recalculate Dates/Quantities</value>
+    <value column="Description" isTrl="N" original="Recalculate Dates/Quantities">Recalculate Dates/Quantities</value>
+    <value column="Help" isTrl="N" original="Recalculate Dates/Quantities">Recalculate Dates/Quantities</value>
+  </row>
+  <row id="800162" trl="N">
+    <value column="Name" isTrl="N" original="Process Manufacturing Plan Old">Process Manufacturing Plan Old</value>
+    <value column="Description" isTrl="N" original="Process Manufacturing Plan">Process Manufacturing Plan</value>
+    <value column="Help" isTrl="N" original="Process Manufacturing Plan. Old process using stored procedure.">Process Manufacturing Plan. Old process using stored procedure.</value>
+  </row>
+  <row id="800163" trl="N">
+    <value column="Name" isTrl="N" original="Create Purchase Orders">Create Purchase Orders</value>
+    <value column="Description" isTrl="N" original="Create Purchase Orders">Create Purchase Orders</value>
+    <value column="Help" isTrl="N" original="Create Purchase Orders">Create Purchase Orders</value>
+  </row>
+  <row id="800164" trl="N">
+    <value column="Name" isTrl="N" original="Process Purchase Plan">Process Purchase Plan</value>
+    <value column="Description" isTrl="N" original="Process Purchase Plan">Process Purchase Plan</value>
+    <value column="Help" isTrl="N" original="Process Purchase Plan">Process Purchase Plan</value>
+  </row>
+  <row id="800165" trl="N">
+    <value column="Name" isTrl="N" original="Copy from Order">Copy from Order</value>
+    <value column="Description" isTrl="N" original="Copy From Order">Copy From Order</value>
+    <value column="Help" isTrl="N" original="Copies lines from Order">Copies lines from Order</value>
+  </row>
+  <row id="800168" trl="N">
+    <value column="Name" isTrl="N" original="Not Posted Transaction Report">Not Posted Transaction Report</value>
+    <value column="Description" isTrl="N" original="Not Posted Transaction Report">Not Posted Transaction Report</value>
+    <value column="Help" isTrl="N" original="Not Posted Transaction Report list the transactions and/or documents in status &quot;Complete&quot; which are not already posted.">Not Posted Transaction Report list the transactions and/or documents in status "Complete" which are not already posted.</value>
+  </row>
+  <row id="800169" trl="N">
+    <value column="Name" isTrl="N" original="Create Tax Report">Create Tax Report</value>
+    <value column="Description" isTrl="N" original="Create Tax Report">Create Tax Report</value>
+    <value column="Help" isTrl="N" original="Create Tax Report">Create Tax Report</value>
+  </row>
+  <row id="800170" trl="N">
+    <value column="Name" isTrl="N" original="Alert Process">Alert Process</value>
+    <value column="Description" isTrl="N" original="Alert Process">Alert Process</value>
+    <value column="Help" isTrl="N" original="AlertProcess">AlertProcess</value>
+  </row>
+  <row id="800171" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Order Report">Purchase Order Report</value>
+    <value column="Description" isTrl="N" original="Purchase Order Report">Purchase Order Report</value>
+    <value column="Help" isTrl="N" original="This report displays a detailed list of the purchase orders issued to the suppliers.">This report displays a detailed list of the purchase orders issued to the suppliers.</value>
+  </row>
+  <row id="800172" trl="N">
+    <value column="Name" isTrl="N" original="Sales Report by Partner and Product">Sales Report by Partner and Product</value>
+    <value column="Description" isTrl="N" original="Report Sales by partner and Product">Report Sales by partner and Product</value>
+    <value column="Help" isTrl="N" original="Report Sales by partner and Product">Report Sales by partner and Product</value>
+  </row>
+  <row id="800173" trl="N">
+    <value column="Name" isTrl="N" original="Production Run Status Report">Production Run Status Report</value>
+    <value column="Description" isTrl="N" original="Production Run Status Report">Production Run Status Report</value>
+    <value column="Help" isTrl="N" original="Production Run Status Report JR">Production Run Status Report JR</value>
+  </row>
+  <row id="800174" trl="N">
+    <value column="Name" isTrl="Y" original="BOM Production Report">Production Report</value>
+    <value column="Description" isTrl="Y" original="BOM Report Production">Report Production</value>
+    <value column="Help" isTrl="N" original="Report Production">Report Production</value>
+  </row>
+  <row id="800175" trl="N">
+    <value column="Name" isTrl="N" original="Customer Invoice Report">Customer Invoice Report</value>
+    <value column="Description" isTrl="N" original="Customer Invoice Report">Customer Invoice Report</value>
+    <value column="Help" isTrl="N" original="Customer Invoice Report JR">Customer Invoice Report JR</value>
+  </row>
+  <row id="800176" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Report">Sales Order Report</value>
+    <value column="Description" isTrl="N" original="Sales Order Report">Sales Order Report</value>
+    <value column="Help" isTrl="N" original="Sales Order Report JR">Sales Order Report JR</value>
+  </row>
+  <row id="800177" trl="N">
+    <value column="Name" isTrl="N" original="Pending Work Requirement">Pending Work Requirement</value>
+    <value column="Description" isTrl="N" original="In this report are all the open work requirement phases and the quantities done and that left to do.">In this report are all the open work requirement phases and the quantities done and that left to do.</value>
+    <value column="Help" isTrl="N" original="In this report are all the open work requirement phases and the quantities done and that left to do.">In this report are all the open work requirement phases and the quantities done and that left to do.</value>
+  </row>
+  <row id="800178" trl="N">
+    <value column="Name" isTrl="N" original="Orders Awaiting Invoice Report">Orders Awaiting Invoice Report</value>
+    <value column="Description" isTrl="N" original="Orders Awaiting Invoice Report">Orders Awaiting Invoice Report</value>
+    <value column="Help" isTrl="N" original="Orders Awaiting Invoice Report JR">Orders Awaiting Invoice Report JR</value>
+  </row>
+  <row id="800179" trl="N">
+    <value column="Name" isTrl="N" original="Expiration Date Report">Expiration Date Report</value>
+    <value column="Description" isTrl="N" original="Expiration Date Report">Expiration Date Report</value>
+    <value column="Help" isTrl="N" original="Expiration Date Report JR">Expiration Date Report JR</value>
+  </row>
+  <row id="800180" trl="N">
+    <value column="Name" isTrl="N" original="Vendor Invoice Report">Vendor Invoice Report</value>
+    <value column="Description" isTrl="N" original="Report Invoice Vendor">Report Invoice Vendor</value>
+    <value column="Help" isTrl="N" original="This report provides information about the total amount invoiced by each supplier within a given time period and for a given currency.">This report provides information about the total amount invoiced by each supplier within a given time period and for a given currency.</value>
+  </row>
+  <row id="800181" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Dimensional Report">Purchase Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Purchase dimensional analyses">Purchase dimensional analyses</value>
+    <value column="Help" isTrl="N" original="This report displays information about the purchase orders issued and sent to the suppliers.">This report displays information about the purchase orders issued and sent to the suppliers.</value>
+  </row>
+  <row id="800182" trl="N">
+    <value column="Name" isTrl="N" original="Goods Receipts Dimensional Report">Goods Receipts Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Goods receipt dimensional analyses">Goods receipt dimensional analyses</value>
+    <value column="Help" isTrl="N" original="This report displays information about the goods received in the organization. ">This report displays information about the goods received in the organization. </value>
+  </row>
+  <row id="800183" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Invoice Dimensional Report">Purchase Invoice Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Invoice vendor dimensional analyses">Invoice vendor dimensional analyses</value>
+    <value column="Help" isTrl="N" original="This report displays information about the purchase invoices received in the organization.&#10;">This report displays information about the purchase invoices received in the organization.
+</value>
+  </row>
+  <row id="800184" trl="N">
+    <value column="Name" isTrl="N" original="Sales Dimensional Report">Sales Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Sales dimensional analyze">Sales dimensional analyze</value>
+    <value column="Help" isTrl="N" original="Sales dimensional analyze JR">Sales dimensional analyze JR</value>
+  </row>
+  <row id="800185" trl="N">
+    <value column="Name" isTrl="N" original="Stock Report">Stock Report</value>
+    <value column="Description" isTrl="N" original="Customer Stock Report">Customer Stock Report</value>
+    <value column="Help" isTrl="Y" original="Stock Report shows a stock level of all products (that have quantity on hand different from zero) and their location (warehouse and storage bin) grouped by product category. For each row product, quantity, unit, attribute, shelves, column, height and warehouse">Customer Stock Report JR</value>
+  </row>
+  <row id="800187" trl="N">
+    <value column="Name" isTrl="N" original="ReportShipmentEdition">ReportShipmentEdition</value>
+    <value column="Description" isTrl="N" original="ReportShipmentEdition">ReportShipmentEdition</value>
+    <value column="Help" isTrl="N" original="ReportShipmentEditionJR">ReportShipmentEditionJR</value>
+  </row>
+  <row id="800188" trl="N">
+    <value column="Name" isTrl="N" original="Proposal print Jr">Proposal print Jr</value>
+    <value column="Description" isTrl="N" original="Proposal print Jr">Proposal print Jr</value>
+    <value column="Help" isTrl="N" original="Proposal print Jr">Proposal print Jr</value>
+  </row>
+  <row id="800189" trl="N">
+    <value column="Name" isTrl="N" original="Shipment Report">Shipment Report</value>
+    <value column="Description" isTrl="N" original="Shipment Report">Shipment Report</value>
+    <value column="Help" isTrl="N" original="Shipment Report JR">Shipment Report JR</value>
+  </row>
+  <row id="800190" trl="N">
+    <value column="Name" isTrl="N" original="Invoiced Sales Order Report">Invoiced Sales Order Report</value>
+    <value column="Description" isTrl="N" original="Invoiced Sales Order Report">Invoiced Sales Order Report</value>
+    <value column="Help" isTrl="N" original="Invoiced Sales Order Report JR">Invoiced Sales Order Report JR</value>
+  </row>
+  <row id="800191" trl="N">
+    <value column="Name" isTrl="N" original="Cash Report">Cash Report</value>
+    <value column="Description" isTrl="N" original="Report cash">Report cash</value>
+    <value column="Help" isTrl="N" original="Report cash JR">Report cash JR</value>
+  </row>
+  <row id="800192" trl="N">
+    <value column="Name" isTrl="N" original="Delivered Sales Order Report">Delivered Sales Order Report</value>
+    <value column="Description" isTrl="N" original="Delivered Sales Order Report">Delivered Sales Order Report</value>
+    <value column="Help" isTrl="N" original="Delivered Sales Order Report JR">Delivered Sales Order Report JR</value>
+  </row>
+  <row id="800194" trl="N">
+    <value column="Name" isTrl="N" original="Print Process plan">Print Process plan</value>
+    <value column="Description" isTrl="N" original="Print of the selected Process Plans with all the sequences and products.">Print of the selected Process Plans with all the sequences and products.</value>
+    <value column="Help" isTrl="N" original="Print of the selected Process Plans with all the sequences and products.">Print of the selected Process Plans with all the sequences and products.</value>
+  </row>
+  <row id="800195" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Open Item">Sales Order Open Item</value>
+    <value column="Description" isTrl="N" original="SalesOrderOpenItem">SalesOrderOpenItem</value>
+    <value column="Help" isTrl="N" original="SalesOrderOpenItemJR">SalesOrderOpenItemJR</value>
+  </row>
+  <row id="800196" trl="N">
+    <value column="Name" isTrl="N" original="Discount Invoice Report">Discount Invoice Report</value>
+    <value column="Description" isTrl="N" original="ReportInvoiceDiscount">ReportInvoiceDiscount</value>
+    <value column="Help" isTrl="N" original="ReportInvoiceDiscountJR">ReportInvoiceDiscountJR</value>
+  </row>
+  <row id="800197" trl="N">
+    <value column="Name" isTrl="N" original="Daily Work Requirements Report">Daily Work Requirements Report</value>
+    <value column="Description" isTrl="N" original="In this report are showed the work requirements of type ramp. By default only from actual date.">In this report are showed the work requirements of type ramp. By default only from actual date.</value>
+    <value column="Help" isTrl="N" original="In this report are showed the work requirements of type ramp. By default only from actual date.">In this report are showed the work requirements of type ramp. By default only from actual date.</value>
+  </row>
+  <row id="800198" trl="N">
+    <value column="Name" isTrl="N" original="Stock for Open Orders">Stock for Open Orders</value>
+    <value column="Description" isTrl="N" original="Show the lines of the pending orders with the actual stock of each product.">Show the lines of the pending orders with the actual stock of each product.</value>
+    <value column="Help" isTrl="N" original="Show the lines of the pending orders with the actual stock of each product.">Show the lines of the pending orders with the actual stock of each product.</value>
+  </row>
+  <row id="800199" trl="N">
+    <value column="Name" isTrl="N" original="Project Profitability">Project Profitability</value>
+    <value column="Description" isTrl="N" original="Project Profitability">Project Profitability</value>
+    <value column="Help" isTrl="N" original="Project Profitability JR">Project Profitability JR</value>
+  </row>
+  <row id="800200" trl="N">
+    <value column="Name" isTrl="N" original="Bank Report">Bank Report</value>
+    <value column="Description" isTrl="N" original="Report bank">Report bank</value>
+    <value column="Help" isTrl="N" original="Report bank JR">Report bank JR</value>
+  </row>
+  <row id="800201" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Detail">Invoice Detail</value>
+    <value column="Description" isTrl="N" original="Invoice Detail">Invoice Detail</value>
+    <value column="Help" isTrl="N" original="Invoice Detail JR">Invoice Detail JR</value>
+  </row>
+  <row id="800204" trl="N">
+    <value column="Name" isTrl="N" original="Standard Costs Report">Standard Costs Report</value>
+    <value column="Description" isTrl="N" original="Manufacturing Standard Cost">Manufacturing Standard Cost</value>
+    <value column="Help" isTrl="N" original="Manufacturing Standard Cost">Manufacturing Standard Cost</value>
+  </row>
+  <row id="800205" trl="N">
+    <value column="Name" isTrl="N" original="Sales Invoice Dimensional Report Legacy">Sales Invoice Dimensional Report Legacy</value>
+    <value column="Description" isTrl="N" original="Sales Invoice Dimensional Report">Sales Invoice Dimensional Report</value>
+    <value column="Help" isTrl="Y" original="Sales Invoice Dimensional Report  shows information about registered sales invoices (Sales Invoices in a status Completed or Voided) during a selected period of time. ">Sales Invoice Dimensional Report JR</value>
+  </row>
+  <row id="800206" trl="N">
+    <value column="Name" isTrl="N" original="Cash Flow Statement">Cash Flow Statement</value>
+    <value column="Description" isTrl="N" original="Cash Flow Statement">Cash Flow Statement</value>
+    <value column="Help" isTrl="N" original="Cash Flow Statement">Cash Flow Statement</value>
+  </row>
+  <row id="800207" trl="N">
+    <value column="Name" isTrl="N" original="Generate Cash Flow Statement">Generate Cash Flow Statement</value>
+    <value column="Description" isTrl="N" original="Generate Cash Flow Statement">Generate Cash Flow Statement</value>
+    <value column="Help" isTrl="N" original="Generate Cash Flow Statement">Generate Cash Flow Statement</value>
+  </row>
+  <row id="85601427EAEE401FA0250FF0A6DD62EF" trl="N">
+    <value column="Name" isTrl="N" original="Generate Amortization Plan">Generate Amortization Plan</value>
+    <value column="Description" isTrl="N" original="Generate Amortization Plan">Generate Amortization Plan</value>
+    <value column="Help" isTrl="N" original="This process will generate the amortization plan based on the depreciation method selected in the asset.">This process will generate the amortization plan based on the depreciation method selected in the asset.</value>
+  </row>
+  <row id="970EAD9B846648A7AB1F0CCA5058356C" trl="N">
+    <value column="Name" isTrl="N" original="Import Client">Import Client</value>
+    <value column="Description" isTrl="N" original="Import a client from xml">Import a client from xml</value>
+    <value column="Help" isTrl="N" original="Import a client and its data from a xml file">Import a client and its data from a xml file</value>
+  </row>
+  <row id="9CD67D41E43242CDA034FB994B75812A" trl="N">
+    <value column="Name" isTrl="N" original="M_UPDATE_PARETO_PRODUCT">M_UPDATE_PARETO_PRODUCT</value>
+    <value column="Description" isTrl="N" original="Updates a Org specific column of the product depending on the Pareto distribution">Updates a Org specific column of the product depending on the Pareto distribution</value>
+    <value column="Help" isTrl="N" original="Updates a Org specific column of the product depending on the Pareto distribution">Updates a Org specific column of the product depending on the Pareto distribution</value>
+  </row>
+  <row id="9DB4D30BFC5144B9B431CB49DDE9270D" trl="N">
+    <value column="Name" isTrl="N" original="Kill Session">Kill Session</value>
+    <value column="Description" isTrl="N" original="Kill the selected session">Kill the selected session</value>
+    <value column="Help" isTrl="N" original="Kills the selected session and logs the user out.">Kills the selected session and logs the user out.</value>
+  </row>
+  <row id="9EB2228A60684C0DBEC12D5CD8D85218" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Promotions">Calculate Promotions</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Calculates and applies the promotions that can valid for the current document modifying final prices if any of them is applicable.">Calculates and applies the promotions that can valid for the current document modifying final prices if any of them is applicable.</value>
+  </row>
+  <row id="A269DCA4DE114E438695B66E166999B4" trl="N">
+    <value column="Name" isTrl="N" original="Validate Costing Rule">Validate Costing Rule</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Validate and initialize the Costing Rule. It automatically creates and process the Close and Opening Physical inventories to overwrite an existing Costing Rule. If the instance is using the legacy engine costs it is mandatory to run the Cost Migration Process in advance with System Administrator role.">Validate and initialize the Costing Rule. It automatically creates and process the Close and Opening Physical inventories to overwrite an existing Costing Rule. If the instance is using the legacy engine costs it is mandatory to run the Cost Migration Process in advance with System Administrator role.</value>
+  </row>
+  <row id="A34A85C161B342E0916642E86842086F" trl="N">
+    <value column="Name" isTrl="N" original="Export Reference Data">Export Reference Data</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A3FE1F9892394386A49FB707AA50A0FA" trl="N">
+    <value column="Name" isTrl="N" original="Create Order">Create Order</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="A firm quote establishes a commitment to the customer at a quoted price for a indicated quantity. If the firm quote check box is not selected and the price list is modified after the quotation then the new prices will be reflected in the sales order or invoice">A firm quote establishes a commitment to the customer at a quoted price for a indicated quantity. If the firm quote check box is not selected and the price list is modified after the quotation then the new prices will be reflected in the sales order or invoice</value>
+  </row>
+  <row id="ABDFC8131D964936AD2EF7E0CED97FD9" trl="N">
+    <value column="Name" isTrl="N" original="Update Actuals">Update Actuals</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="ACD33F81B247441B8659BECF10D7A808" trl="N">
+    <value column="Name" isTrl="N" original="Print payments process">Print payments process</value>
+    <value column="Description" isTrl="N" original="Process to print payments or send them through email to the client">Process to print payments or send them through email to the client</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BB35E1D5CE2648EB8C955DD022E994DA" trl="N">
+    <value column="Name" isTrl="N" original="Instance Purpose Configuration">Instance Purpose Configuration</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BDB3B6FCA0AB453DB4E83503BAB82470" trl="N">
+    <value column="Name" isTrl="N" original="Apply Modules">Apply Modules</value>
+    <value column="Description" isTrl="N" original="This process apply all the installed modules">This process apply all the installed modules</value>
+    <value column="Help" isTrl="N" original="This process applies all the installed modules. It loads the module definition in the database and generate and compiles the corresponding code.">This process applies all the installed modules. It loads the module definition in the database and generate and compiles the corresponding code.</value>
+  </row>
+  <row id="CD7283DF804B449C97DA09446669EEEF" trl="N">
+    <value column="Name" isTrl="N" original="Process Batch">Process Batch</value>
+    <value column="Description" isTrl="N" original="GL Journal Batch Process">GL Journal Batch Process</value>
+    <value column="Help" isTrl="N" original="GL Journal Batch Process">GL Journal Batch Process</value>
+  </row>
+  <row id="D234AE084F7040DCB66E281A4237FF99" trl="N">
+    <value column="Name" isTrl="N" original="Customer Statement">Customer Statement</value>
+    <value column="Description" isTrl="N" original="Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period">Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period</value>
+    <value column="Help" isTrl="N" original="Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period">Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period</value>
+  </row>
+  <row id="D56220370A774B7FA51323BE3C6E0F22" trl="N">
+    <value column="Name" isTrl="N" original="Create Payment in Advance">Create Payment in Advance</value>
+    <value column="Description" isTrl="N" original="Create Payment in Advance">Create Payment in Advance</value>
+    <value column="Help" isTrl="N" original="Create Payment in Advance">Create Payment in Advance</value>
+  </row>
+  <row id="D85D5B5E368A49B1A6293BA4AE15F0F9" trl="N">
+    <value column="Name" isTrl="N" original="Export Client">Export Client</value>
+    <value column="Description" isTrl="N" original="Export a client to xml">Export a client to xml</value>
+    <value column="Help" isTrl="N" original="Export a client to a xml file">Export a client to a xml file</value>
+  </row>
+  <row id="DAE719940FE9463F8A3E3C401BBAFC53" trl="N">
+    <value column="Name" isTrl="N" original="Explode">Explode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process will explode the product of the selected line.">This process will explode the product of the selected line.</value>
+  </row>
+  <row id="DFC78024B1F54CBB95DC73425BA6687F" trl="N">
+    <value column="Name" isTrl="N" original="Explode">Explode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process will explode the product of the selected line.">This process will explode the product of the selected line.</value>
+  </row>
+  <row id="E264309FF8244A94936502BF51829109" trl="N">
+    <value column="Name" isTrl="N" original="Reset Accounting">Reset Accounting</value>
+    <value column="Description" isTrl="N" original="Reset Accounting Entries">Reset Accounting Entries</value>
+    <value column="Help" isTrl="N" original="The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the &quot;Accounting Server Process&quot; or the &quot;G/L Posting by DB Tables&quot; process. The manual changes done for the accounting entries description will obviously be lost after running this process">The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the "Accounting Server Process" or the "G/L Posting by DB Tables" process. The manual changes done for the accounting entries description will obviously be lost after running this process</value>
+  </row>
+  <row id="E5BE98DCF4514A18B571F21183B397DD" trl="N">
+    <value column="Name" isTrl="N" original="Valued Stock Report">Valued Stock Report</value>
+    <value column="Description" isTrl="N" original="Valued Stock Report">Valued Stock Report</value>
+    <value column="Help" isTrl="N" original="Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.">Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.</value>
+  </row>
+  <row id="EFDBF909811544DAAE4E876AA781E5DC" trl="N">
+    <value column="Name" isTrl="N" original="Year Close">Year Close</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F9DFC02162B0473B9676870117DF61FE" trl="N">
+    <value column="Name" isTrl="N" original="ApplyModulesCallServlet">ApplyModulesCallServlet</value>
+    <value column="Description" isTrl="N" original="This process is called by AJAX calls from the main ApplyModules process">This process is called by AJAX calls from the main ApplyModules process</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FB5E34FD1398452095C7B9C471233910" trl="N">
+    <value column="Name" isTrl="N" original="StaticCommunityBranding">StaticCommunityBranding</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FB740AB61B0E42B198D2C88D3A0D0CE6" trl="N">
+    <value column="Name" isTrl="N" original="Update Payment Plan">Update Payment Plan</value>
+    <value column="Description" isTrl="N" original="This process will update some details of the payment plan.">This process will update some details of the payment plan.</value>
+    <value column="Help" isTrl="N" original="This process will update some details of the payment plan.">This process will update some details of the payment plan.</value>
+  </row>
+  <row id="FF80808133362F6A013336781FCE0066" trl="N">
+    <value column="Name" isTrl="N" original="Create Invoice">Create Invoice</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813219E68E013219ECFE930004" trl="N">
+    <value column="Name" isTrl="N" original="Create Product Copy">Create Product Copy</value>
+    <value column="Description" isTrl="N" original="Create a product copied from the line product and insert a new line in the sequence using this new product created">Create a product copied from the line product and insert a new line in the sequence using this new product created</value>
+    <value column="Help" isTrl="N" original="Create a product copied from the line product and insert a new line in the sequence using this new product created">Create a product copied from the line product and insert a new line in the sequence using this new product created</value>
+  </row>
+  <row id="FF808181324D007801324D2AE1130066" trl="N">
+    <value column="Name" isTrl="N" original="Create Work Effort">Create Work Effort</value>
+    <value column="Description" isTrl="N" original="Create all Work Effort for a specific day">Create all Work Effort for a specific day</value>
+    <value column="Help" isTrl="N" original="Create all Work Effort for a specific day">Create all Work Effort for a specific day</value>
+  </row>
+  <row id="FF808181326CD80501326CE906D70042" trl="N">
+    <value column="Name" isTrl="N" original="Validate Work Effort">Validate Work Effort</value>
+    <value column="Description" isTrl="N" original="Process to validate and actualize stocks of production run.">Process to validate and actualize stocks of production run.</value>
+    <value column="Help" isTrl="N" original="Process to validate the work effort in Production Run Window. With this process the work effort is closed. Stocks are actualized and average costs are calculated">Process to validate the work effort in Production Run Window. With this process the work effort is closed. Stocks are actualized and average costs are calculated</value>
+  </row>
+  <row id="FF80818132A4F6AD0132A573DD7A0021" trl="N">
+    <value column="Name" isTrl="N" original="Create Standards">Create Standards</value>
+    <value column="Description" isTrl="N" original="Inserts the standard values for the selected Work Requirement Phase and Cost Center version">Inserts the standard values for the selected Work Requirement Phase and Cost Center version</value>
+    <value column="Help" isTrl="N" original="With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.&#10;This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.&#10;If the Activity of the Work Requirement Phase uses toolsets they are also inserted.&#10;Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.">With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.
+This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.
+If the Activity of the Work Requirement Phase uses toolsets they are also inserted.
+Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.</value>
+  </row>
+  <row id="FF80818132C964E30132C9747257002E" trl="N">
+    <value column="Name" isTrl="N" original="Get Stock">Get Stock</value>
+    <value column="Description" isTrl="N" original="Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.">Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.</value>
+    <value column="Help" isTrl="N" original="Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.">Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.</value>
+  </row>
+</compiereTrl>

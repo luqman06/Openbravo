@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_PROJECTPHASE">
+    <table name="C_PROJECTPHASE" primaryKey="C_PROJECTPHASE_KEY">
+      <column name="EM_OEZ_DOCUMENTSTATUS" primaryKey="false" required="true" type="VARCHAR" size="60" autoIncrement="false">
+        <default><![CDATA[DR]]></default>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

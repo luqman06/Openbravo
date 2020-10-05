@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<!--0AA8363CE297425E8A782FEB30BD42C7--><OBCQL_WIDGET_QUERY>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[0AA8363CE297425E8A782FEB30BD42C7]]></OBCQL_WIDGET_QUERY_ID>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[14BF045C36C24CEF9598B2563481B713]]></OBKMO_WIDGET_CLASS_ID>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <HQL><![CDATA[select a.name as product_name, a.searchKey as product_key, b.minQuantity as min_qty, b.maxQuantity as max_qty, b.storageBin.searchKey as bin_key, b.storageBin.warehouse.name as warehouse_name, c.quantityOnHand as current_qty
+from Product a
+left join a.productOrgList b, MaterialMgmtStorageDetail c
+where c.product.id=a.id and c.storageBin.id=b.storageBin.id
+and a.client.id = :client
+and c.organization.id IN (:organizationList)
+and a.productCategory.searchKey = :productCategory
+and @optional_filters@
+order by a.productCategory.name, a.searchKey, a.name, b.storageBin.searchKey]]></HQL>
+<!--0AA8363CE297425E8A782FEB30BD42C7-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--0AA8363CE297425E8A782FEB30BD42C7--></OBCQL_WIDGET_QUERY>
+
+</data>

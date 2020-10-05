@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_BPARTNER">
+    <table name="C_BPARTNER" primaryKey="C_BPARTNER_KEY">
+      <column name="EM_TM_SET_PHK_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="TM_SET_PHK" name="EM_TM_SET_PHK_FK">
+        <reference local="EM_TM_SET_PHK_ID" foreign="TM_SET_PHK_ID"/>
+      </foreign-key>
+    </table>
+  </database>

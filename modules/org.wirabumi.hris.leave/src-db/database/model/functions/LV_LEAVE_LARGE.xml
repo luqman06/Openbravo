@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION LV_LEAVE_LARGE">
+    <function name="LV_LEAVE_LARGE" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[declare
+v_c_bp_leave_id varchar (32);
+v_bp_type varchar (60);
+v_lv_bp_type  varchar (60);
+v_bpartner_id varchar(32);
+v_yearsofservice NUMBER;
+v_bp_validto timestamp without time zone;
+v_bp_validfrom timestamp without time zone;
+v_validfrom timestamp without time zone;
+v_validto timestamp without time zone;
+v_bp_usedleave NUMBER;
+v_bp_duration NUMBER;
+v_test varchar(32);
+Cur_Employee record;
+
+begin
+ result:=0;
+
+--loop employee
+for Cur_Employee in 
+(select bp.name, bp.c_bpartner_id, bp.created, bp.ad_client_id, type, duration, 
+ bp.createdby, bp.updatedby, bp.ad_org_id, bp.em_hris_year as yearsofservice, 
+ bp.em_hris_month, validfrom, validto, lv.year
+from c_Bpartner bp
+left join lv_set_leave lv on lv.ad_client_id=bp.ad_client_id
+where isemployee='Y'
+and bp.isactive='Y'
+and em_hris_year>0
+and type='CBS'
+and validfrom<=(date_part('year'::text, now())||'-'||01||'-'||01)::date
+and validto>=(date_part('year'::text, now())||'-'||01||'-'||01)::date
+and (case when p_employee_id is not null then c_bpartner_id=p_employee_id else 1=1 end))
+loop  --loop get leave large
+/*
+raise notice 'employee: %, v_yearsofservice: %, v_year: %, v_type: %, v_validfrom: %, v_validto: %', 
+Cur_Employee.name, Cur_Employee.yearsofservice, Cur_Employee.year, Cur_Employee.type, v_validfrom, v_validto;
+
+--menentukan validfrom dan validto
+if (Cur_Employee.yearsofservice%Cur_Employee.year=0) then
+select (date_part('year'::text, em_hris_retirementdate)||'-'||01||'-'||01)::timestamp, ((date_part('year'::text, em_hris_retirementdate)+ 2::integer)||'-'||12||'-'||31)::timestamp 
+into v_validfrom, v_validto
+FROM c_bpartner bp
+where c_bpartner_id=Cur_Employee.c_bpartner_id;
+else continue;
+End If;
+*/
+
+if (Cur_Employee.yearsofservice%Cur_Employee.year=0) then
+   select (date_part('year'::text, now())||'-'||01||'-'||01)::timestamp, ((date_part('year'::text, now())+ 2::integer)||'-'||12||'-'||31)::timestamp 
+   into v_validfrom, v_validto
+   FROM c_bpartner
+   where c_bpartner_id=Cur_Employee.c_bpartner_id;
+else continue;
+End If;
+
+raise notice 'v_employee: %, v_yearsofservice: %, v_year: %, v_type: %, v_validfrom: %, v_validto: %', 
+Cur_Employee.name, Cur_Employee.yearsofservice, Cur_Employee.year, Cur_Employee.type, v_validfrom, v_validto;
+
+--mengambil data cuti yang sudah ada pada employee
+select duration, type, validfrom, validto, usedleave, c_bpartner_id 
+into v_bp_duration, v_bp_type, v_bp_validfrom, v_bp_validto, v_bp_usedleave, v_bpartner_id 
+from lv_c_bp_leave
+where c_bpartner_id=Cur_Employee.c_bpartner_id
+and type='CBS'
+order by validfrom desc, validto desc;
+
+if v_bpartner_id=Cur_Employee.c_bpartner_id and v_bp_validfrom=v_validfrom and v_bp_validto=v_validto and v_bp_type=Cur_Employee.type then continue; 
+end if;
+
+
+if (Cur_Employee.yearsofservice%Cur_Employee.year=0) then
+select get_uuid() into v_c_bp_leave_id from dual;
+INSERT INTO lv_c_bp_leave(
+            lv_c_bp_leave_id, ad_client_id, ad_org_id, isactive, created, 
+            createdby, updated, updatedby, "type", c_bpartner_id, duration, 
+            validfrom, validto, usedleave)
+VALUES (v_c_bp_leave_id, Cur_Employee.ad_client_id, Cur_Employee.ad_org_id, 'Y', now(), 
+            Cur_Employee.createdby, now(), Cur_Employee.updatedby, Cur_Employee.type, Cur_Employee.c_bpartner_id, Cur_Employee.duration,
+            v_validfrom, v_validto, 0);
+End If;
+
+end loop; --loop get leave large
+
+result:=1;
+
+return;
+end
+]]></body>
+    </function>
+  </database>

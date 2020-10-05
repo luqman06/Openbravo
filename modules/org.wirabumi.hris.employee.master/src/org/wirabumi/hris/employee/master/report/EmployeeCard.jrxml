@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="EmployeeCard"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Landscape"
+		 pageWidth="842"
+		 pageHeight="595"
+		 columnWidth="782"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["/home/fahri/Application/EmployeeCard/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="C_BPartner_ID" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[new String ("4B280B26C3D547DE8F7BA50E1996DFF2")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BASE_DESIGN" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[new String("/home/zaien/workspace/openbravo/modules/org.wirabumi.hris.employee.master/src")]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select bp.c_bpartner_id
+from c_bpartner bp
+where bp.isemployee='Y'
+and bp.c_bpartner_id=$P{C_BPartner_ID}]]></queryString>
+
+	<field name="c_bpartner_id" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="44"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="3"
+						y="0"
+						width="171"
+						height="42"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-1"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Employee Card]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="398"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="30"
+						width="782"
+						height="30"
+						key="subreport-1"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport0.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="633"
+						y="98"
+						width="131"
+						height="1"
+						key="subreport-3"/>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="0"
+						width="782"
+						height="30"
+						key="subreport-4"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport2.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="90"
+						width="782"
+						height="30"
+						key="subreport-5"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport3.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="60"
+						width="782"
+						height="30"
+						key="subreport-6"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport1.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="121"
+						width="782"
+						height="30"
+						key="subreport-7"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport4.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="151"
+						width="782"
+						height="30"
+						key="subreport-8"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport5.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="181"
+						width="782"
+						height="30"
+						key="subreport-9"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport6.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="211"
+						width="782"
+						height="30"
+						key="subreport-10"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport7.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="271"
+						width="782"
+						height="30"
+						key="subreport-12"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport9.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="301"
+						width="782"
+						height="30"
+						key="subreport-13"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport10.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="361"
+						width="782"
+						height="30"
+						key="subreport-15"
+						positionType="Float"/>
+					<subreportParameter  name="C_BPartner_ID">
+						<subreportParameterExpression><![CDATA[$P{C_BPartner_ID}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + java.io.File.separator + "org" + java.io.File.separator + "wirabumi" + java.io.File.separator + "hris" + java.io.File.separator + "employee" + java.io.File.separator + "master" + java.io.File.separator + "report" + java.io.File.separator + "EmployeeCard_subreport12.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="27"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="325"
+						y="4"
+						width="170"
+						height="19"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Right">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="503"
+						y="4"
+						width="36"
+						height="19"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="3"
+						width="782"
+						height="0"
+						key="line"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="6"
+						width="209"
+						height="19"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

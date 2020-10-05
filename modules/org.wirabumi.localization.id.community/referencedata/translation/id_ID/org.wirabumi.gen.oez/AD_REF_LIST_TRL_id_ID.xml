@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="B4FA8DF60DEE4A859D9408175D09AA7F" trl="N">
+    <value column="Name" isTrl="N" original="Apply standard rule if no document rule defined">Apply standard rule if no document rule defined</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E2CD8079297A4E31880EABB4E0DDBB0E" trl="N">
+    <value column="Name" isTrl="N" original="Always use document routing rule">Always use document routing rule</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

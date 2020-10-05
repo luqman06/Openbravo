@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="C182CBC899C44A2F8F3B6916CB7E74E1" trl="N">
+    <value column="Name" isTrl="N" original="Jamsostek Pension Funds Report">Jamsostek Pension Funds Report</value>
+    <value column="Description" isTrl="N" original="Pension Funds Report">Pension Funds Report</value>
+  </row>
+  <row id="CED0C0E18BD84D25818C8AD12DDDBA4F" trl="N">
+    <value column="Name" isTrl="N" original="Jamsostek Paymet Report">Jamsostek Paymet Report</value>
+    <value column="Description" isTrl="N" original="Jamsostek Paymet Report">Jamsostek Paymet Report</value>
+  </row>
+</compiereTrl>

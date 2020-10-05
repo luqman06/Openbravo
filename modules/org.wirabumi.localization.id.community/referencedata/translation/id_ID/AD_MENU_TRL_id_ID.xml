@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="04B49FB13913462C8ACE2E3906440E3F" trl="Y">
+    <value column="Name" isTrl="Y" original="Module">Modul</value>
+    <value column="Description" isTrl="N" original="Module management">Module management</value>
+  </row>
+  <row id="08B67705E5B44C5DB2196B9A1CD1ABD7" trl="Y">
+    <value column="Name" isTrl="Y" original="Costing Algorithm">Algoritma Perhitungan HPP</value>
+    <value column="Description" isTrl="N" original="A costing algorithm defines the method to use to calculate the cost of the transactions.">A costing algorithm defines the method to use to calculate the cost of the transactions.</value>
+  </row>
+  <row id="1000001" trl="N">
+    <value column="Name" isTrl="N" original="Openbravo ERP">Openbravo ERP</value>
+    <value column="Description" isTrl="N" original="Openbravo Homepage">Openbravo Homepage</value>
+  </row>
+  <row id="1000500000" trl="N">
+    <value column="Name" isTrl="N" original="Pareto Product Report Legacy">Pareto Product Report Legacy</value>
+    <value column="Description" isTrl="N" original="Pareto Product Report Legacy">Pareto Product Report Legacy</value>
+  </row>
+  <row id="1002100000" trl="Y">
+    <value column="Name" isTrl="Y" original="Withholding">Potongan Pajak</value>
+    <value column="Description" isTrl="N" original="Withholding Rules">Withholding Rules</value>
+  </row>
+  <row id="1002100003" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax Register Type">Tipe Setoran Pajak</value>
+    <value column="Description" isTrl="N" original="Tax Register Type">Tax Register Type</value>
+  </row>
+  <row id="1002100004" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax Payment">Pembayaran Pajak</value>
+    <value column="Description" isTrl="N" original="Tax Payment/Tax Register">Tax Payment/Tax Register</value>
+  </row>
+  <row id="1002100006" trl="N">
+    <value column="Name" isTrl="N" original="Withholding Report">Withholding Report</value>
+    <value column="Description" isTrl="N" original="Withholding Report">Withholding Report</value>
+  </row>
+  <row id="1003100000" trl="N">
+    <value column="Name" isTrl="N" original="Session Preferences">Session Preferences</value>
+    <value column="Description" isTrl="N" original="View session information and set certain system settings.">View session information and set certain system settings.</value>
+  </row>
+  <row id="1003100001" trl="N">
+    <value column="Name" isTrl="N" original="Session Variables">Session Variables</value>
+    <value column="Description" isTrl="N" original="View and set session variables.">View and set session variables.</value>
+  </row>
+  <row id="1004400000" trl="Y">
+    <value column="Name" isTrl="Y" original="Manage Requisitions">Mengelola Permintaan Pembelian</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1004400001" trl="N">
+    <value column="Name" isTrl="N" original="Requisition To Order">Requisition To Order</value>
+    <value column="Description" isTrl="N" original="Create a Purchase Order from Requisition lines.">Create a Purchase Order from Requisition lines.</value>
+  </row>
+  <row id="1004400006" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Intelligence">Kecerdasan Bisnis</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1005400001" trl="Y">
+    <value column="Name" isTrl="Y" original="Heartbeat Configuration">Konfigurasi Heartbeat</value>
+    <value column="Description" isTrl="N" original="Enable or disable the heartbeat process and configure internet connection proxy information ">Enable or disable the heartbeat process and configure internet connection proxy information </value>
+  </row>
+  <row id="1005500000" trl="N">
+    <value column="Name" isTrl="N" original="Payment Aging Balance">Payment Aging Balance</value>
+    <value column="Description" isTrl="N" original="Payment Aging Balance">Payment Aging Balance</value>
+  </row>
+  <row id="102" trl="Y">
+    <value column="Name" isTrl="Y" original="Currency">Mata Uang</value>
+    <value column="Description" isTrl="N" original="Define currencies and conversion rates to be used in the application.">Define currencies and conversion rates to be used in the application.</value>
+  </row>
+  <row id="103" trl="Y">
+    <value column="Name" isTrl="Y" original="Conversion Rates">Nilai Tukar</value>
+    <value column="Description" isTrl="N" original="Define conversion rates to be used for currencies defined in the application.">Define conversion rates to be used for currencies defined in the application.</value>
+  </row>
+  <row id="104" trl="Y">
+    <value column="Name" isTrl="Y" original="Fiscal Calendar">Kalender Fiskal</value>
+    <value column="Description" isTrl="N" original="Create multiple fiscal calendars and periods for accounting purposes.">Create multiple fiscal calendars and periods for accounting purposes.</value>
+  </row>
+  <row id="105" trl="Y">
+    <value column="Name" isTrl="Y" original="Account Tree">Struktur Akun</value>
+    <value column="Description" isTrl="N" original="Create and edit account elements and add them to your defined chart of accounts or account trees.">Create and edit account elements and add them to your defined chart of accounts or account trees.</value>
+  </row>
+  <row id="106" trl="Y">
+    <value column="Name" isTrl="Y" original="Account Combination">Kombinasi Akun</value>
+    <value column="Description" isTrl="N" original="Create accounting combinations to be used in Openbravo's accounting process.">Create accounting combinations to be used in Openbravo's accounting process.</value>
+  </row>
+  <row id="107" trl="Y">
+    <value column="Name" isTrl="Y" original="Unit of Measure">Satuan</value>
+    <value column="Description" isTrl="N" original="Create units of measure and conversions rates to be applied to products.">Create units of measure and conversions rates to be applied to products.</value>
+  </row>
+  <row id="108" trl="Y">
+    <value column="Name" isTrl="Y" original="Location">Lokasi</value>
+    <value column="Description" isTrl="N" original="Define addresses or service points of your organizations.">Define addresses or service points of your organizations.</value>
+  </row>
+  <row id="109" trl="Y">
+    <value column="Name" isTrl="Y" original="Country and Region">Negara dan Wilayah</value>
+    <value column="Description" isTrl="N" original="Define countries with regions to be used in the application.">Define countries with regions to be used in the application.</value>
+  </row>
+  <row id="110" trl="N">
+    <value column="Name" isTrl="N" original="Business Partner">Business Partner</value>
+    <value column="Description" isTrl="N" original="Create and edit business partner information, templates, and bank accounts.">Create and edit business partner information, templates, and bank accounts.</value>
+  </row>
+  <row id="111" trl="Y">
+    <value column="Name" isTrl="Y" original="General Ledger Configuration">Konfigurasi Buku Besar</value>
+    <value column="Description" isTrl="N" original="Create and edit general ledger including dimensions and default accounts.">Create and edit general ledger including dimensions and default accounts.</value>
+  </row>
+  <row id="115" trl="Y">
+    <value column="Name" isTrl="Y" original="Preference">Preferensi</value>
+    <value column="Description" isTrl="N" original="Create and edit extremely restrictive values for a specified user, window, or for the entire application.">Create and edit extremely restrictive values for a specified user, window, or for the entire application.</value>
+  </row>
+  <row id="116" trl="Y">
+    <value column="Name" isTrl="Y" original="Multiphase Project">Proyek Multifase</value>
+    <value column="Description" isTrl="N" original="Create and edit projects and tasks potentially requiring sales invoicing.">Create and edit projects and tasks potentially requiring sales invoicing.</value>
+  </row>
+  <row id="117" trl="Y">
+    <value column="Name" isTrl="Y" original="G/L Category">Kategori Buku Besar</value>
+    <value column="Description" isTrl="N" original="Define G/L Categories to be used in the General Ledger.">Define G/L Categories to be used in the General Ledger.</value>
+  </row>
+  <row id="118" trl="Y">
+    <value column="Name" isTrl="Y" original="G/L Journal">Jurnal Memorial</value>
+    <value column="Description" isTrl="N" original="Create and edit manual G/L journal entries.">Create and edit manual G/L journal entries.</value>
+  </row>
+  <row id="120" trl="Y">
+    <value column="Name" isTrl="Y" original="ABC Activity">Aktivitas ABC</value>
+    <value column="Description" isTrl="N" original="Define activities for which you are interested in managing costs.">Define activities for which you are interested in managing costs.</value>
+  </row>
+  <row id="121" trl="Y">
+    <value column="Name" isTrl="Y" original="Document Type">Tipe Dokumen</value>
+    <value column="Description" isTrl="N" original="Create and manage document types to be used for all application transactions.">Create and manage document types to be used for all application transactions.</value>
+  </row>
+  <row id="123" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax Rate">Tarif Pajak</value>
+    <value column="Description" isTrl="N" original="Create tax rates to be used in application transactions.">Create tax rates to be used in application transactions.</value>
+  </row>
+  <row id="1230E15C39394C2DBBB745EF282479F0" trl="N">
+    <value column="Name" isTrl="N" original="Extension Points">Extension Points</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="124" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax Category">Kategori Pajak</value>
+    <value column="Description" isTrl="N" original="Create tax categories to manage tax rates with similar characteristics or attributes.">Create tax categories to manage tax rates with similar characteristics or attributes.</value>
+  </row>
+  <row id="125" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse and Storage Bins">Gudang dan Rak</value>
+    <value column="Description" isTrl="N" original="Create warehouses and organize them using storage bins.">Create warehouses and organize them using storage bins.</value>
+  </row>
+  <row id="126" trl="Y">
+    <value column="Name" isTrl="Y" original="Product">Produk</value>
+    <value column="Description" isTrl="N" original="Create products and manage the related costing, purchasing, and pricing setup.">Create products and manage the related costing, purchasing, and pricing setup.</value>
+  </row>
+  <row id="127" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Term">Termin Pembayaran</value>
+    <value column="Description" isTrl="N" original="Define payment terms to be used for business partners taking part in transactions.">Define payment terms to be used for business partners taking part in transactions.</value>
+  </row>
+  <row id="128" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipping Company">Perusahaan Ekspedisi</value>
+    <value column="Description" isTrl="N" original="Create shipping companies and define freight costs to be used in products logistics.">Create shipping companies and define freight costs to be used in products logistics.</value>
+  </row>
+  <row id="129" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Order">Pesanan Penjualan</value>
+    <value column="Description" isTrl="N" original="Create orders tracking product sales to customers.">Create orders tracking product sales to customers.</value>
+  </row>
+  <row id="130" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Category">Kategori Produk</value>
+    <value column="Description" isTrl="N" original="Create product categories to better organize your products and create more powerful reports.">Create product categories to better organize your products and create more powerful reports.</value>
+  </row>
+  <row id="132" trl="Y">
+    <value column="Name" isTrl="Y" original="Price List">Daftar Harga</value>
+    <value column="Description" isTrl="N" original="Create and edit price lists and versions to optionally apply specified product prices to individual business partners.">Create and edit price lists and versions to optionally apply specified product prices to individual business partners.</value>
+  </row>
+  <row id="133" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Schedule">Jadwal Penerbitan Faktur</value>
+    <value column="Description" isTrl="N" original="Define invoice schedules to be used for business partners.">Define invoice schedules to be used for business partners.</value>
+  </row>
+  <row id="134" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Campaign">Promosi</value>
+    <value column="Description" isTrl="N" original="Create specific sales campaigns to be used in sales operations.">Create specific sales campaigns to be used in sales operations.</value>
+  </row>
+  <row id="134C41C58C8945FAB0C18D88B33C08FE" trl="Y">
+    <value column="Name" isTrl="Y" original="Organization Type">Tipe Organisasi</value>
+    <value column="Description" isTrl="N" original="Defines an organization type which will be available into the system">Defines an organization type which will be available into the system</value>
+  </row>
+  <row id="136" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Channel">Lini Penjualan</value>
+    <value column="Description" isTrl="N" original="Create specific sales channels to be used in sales operations.">Create specific sales channels to be used in sales operations.</value>
+  </row>
+  <row id="137" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Region">Area Penjualan</value>
+    <value column="Description" isTrl="N" original="Create sales regions to be used in sales operations.">Create sales regions to be used in sales operations.</value>
+  </row>
+  <row id="138" trl="Y">
+    <value column="Name" isTrl="Y" original="Element">Elemen</value>
+    <value column="Description" isTrl="N" original="Edit the central repository of application elements to update field name descriptions and help/comments.">Edit the central repository of application elements to update field name descriptions and help/comments.</value>
+  </row>
+  <row id="139" trl="Y">
+    <value column="Name" isTrl="Y" original="Tables and Columns">Tabel dan Kolom</value>
+    <value column="Description" isTrl="N" original="Edit tables and columns so that Openbravo can access the database, as well as control the role access.">Edit tables and columns so that Openbravo can access the database, as well as control the role access.</value>
+  </row>
+  <row id="140" trl="Y">
+    <value column="Name" isTrl="Y" original="Reference">Referensi</value>
+    <value column="Description" isTrl="N" original="Edit standard data types such as strings, integers, lists as well as custom data types.">Edit standard data types such as strings, integers, lists as well as custom data types.</value>
+  </row>
+  <row id="141" trl="Y">
+    <value column="Name" isTrl="Y" original="Windows, Tabs, and Fields">Window, Tab, dan Field</value>
+    <value column="Description" isTrl="N" original="Create and edit windows, tabs, and fields according to your business preferences.">Create and edit windows, tabs, and fields according to your business preferences.</value>
+  </row>
+  <row id="142" trl="Y">
+    <value column="Name" isTrl="Y" original="Validation Setup">Kode Validasi</value>
+    <value column="Description" isTrl="N" original="Create and edit the validation setup to be used for columns of tables.">Create and edit the validation setup to be used for columns of tables.</value>
+  </row>
+  <row id="143" trl="Y">
+    <value column="Name" isTrl="Y" original="Message">Pesan</value>
+    <value column="Description" isTrl="N" original="Create and edit application initiated information and error messages.">Create and edit application initiated information and error messages.</value>
+  </row>
+  <row id="144" trl="N">
+    <value column="Name" isTrl="N" original="Menu">Menu</value>
+    <value column="Description" isTrl="N" original="Edit the application menu tree structure according to your business necessities.">Edit the application menu tree structure according to your business necessities.</value>
+  </row>
+  <row id="145" trl="Y">
+    <value column="Name" isTrl="Y" original="Language">Bahasa</value>
+    <value column="Description" isTrl="N" original="Define multiple languages to be used in the application.">Define multiple languages to be used in the application.</value>
+  </row>
+  <row id="147" trl="N">
+    <value column="Name" isTrl="N" original="User">User</value>
+    <value column="Description" isTrl="N" original="Create users and manage user roles to give access permissions.">Create users and manage user roles to give access permissions.</value>
+  </row>
+  <row id="148" trl="Y">
+    <value column="Name" isTrl="Y" original="Client">Perusahaan</value>
+    <value column="Description" isTrl="N" original="Define client characteristics, additional information, and defaults.">Define client characteristics, additional information, and defaults.</value>
+  </row>
+  <row id="149" trl="Y">
+    <value column="Name" isTrl="Y" original="Organization">Organisasi</value>
+    <value column="Description" isTrl="N" original="Create organizations and manage the organizational structure according to your business necessities.">Create organizations and manage the organizational structure according to your business necessities.</value>
+  </row>
+  <row id="150" trl="Y">
+    <value column="Name" isTrl="Y" original="Role">Hak Akses</value>
+    <value column="Description" isTrl="N" original="Create roles with assigned users, and edit roles access to organizations, windows, processes, etc.">Create roles with assigned users, and edit roles access to organizations, windows, processes, etc.</value>
+  </row>
+  <row id="151" trl="Y">
+    <value column="Name" isTrl="Y" original="Document Sequence">No. Urut Dokumen</value>
+    <value column="Description" isTrl="N" original="Define an auto numbering system to uniquely identify document types.">Define an auto numbering system to uniquely identify document types.</value>
+  </row>
+  <row id="153" trl="N">
+    <value column="Name" isTrl="N" original="Application Dictionary">Application Dictionary</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can customize, modify, and adapt the application to your needs.">Open a folder where you can customize, modify, and adapt the application to your needs.</value>
+  </row>
+  <row id="155" trl="Y">
+    <value column="Name" isTrl="Y" original="General Setup">Pengaturan Umum</value>
+    <value column="Description" isTrl="N" original="General Setup is the place where to configure basic Openbravo settings such as the enterprise model, users and roles  as well as other more advance setting such as alerts, preferences and processes.">General Setup is the place where to configure basic Openbravo settings such as the enterprise model, users and roles  as well as other more advance setting such as alerts, preferences and processes.</value>
+  </row>
+  <row id="156" trl="Y">
+    <value column="Name" isTrl="Y" original="Client">Perusahaan</value>
+    <value column="Description" isTrl="N" original="Client folder collects client configuration as well as the role of the client to be assigned to those Openbravo users do not linked to a Google account.">Client folder collects client configuration as well as the role of the client to be assigned to those Openbravo users do not linked to a Google account.</value>
+  </row>
+  <row id="157" trl="N">
+    <value column="Name" isTrl="N" original="Data">Data</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can import data and edit functionalities.">Open a folder where you can import data and edit functionalities.</value>
+  </row>
+  <row id="158" trl="Y">
+    <value column="Name" isTrl="Y" original="Performance Measurement">Pengukuran Performa</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="159" trl="Y">
+    <value column="Name" isTrl="Y" original="Utility">Utilitas</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can edit some additional application features.">Open a folder where you can edit some additional application features.</value>
+  </row>
+  <row id="160" trl="Y">
+    <value column="Name" isTrl="Y" original="Project and Service Management">Manajemen Proyek dan Jasa</value>
+    <value column="Description" isTrl="N" original="Project and Services Management addresses services and multiphase projects and helps on analyzing project related reports.">Project and Services Management addresses services and multiphase projects and helps on analyzing project related reports.</value>
+  </row>
+  <row id="161" trl="Y">
+    <value column="Name" isTrl="Y" original="Application">Aplikasi</value>
+    <value column="Description" isTrl="N" original="Application folder gathers multi-data settings, attributes values or specific properties settings at different levels as well as alerts configuration. ">Application folder gathers multi-data settings, attributes values or specific properties settings at different levels as well as alerts configuration. </value>
+  </row>
+  <row id="164" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="165" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner Rules">Pengaturan Business Partner</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="166" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Management">Manajemen Penjualan</value>
+    <value column="Description" isTrl="N" original="Sales Management  addresses the life-cycle of a sales process and besides provides the tools to analyze sales related information.">Sales Management  addresses the life-cycle of a sales process and besides provides the tools to analyze sales related information.</value>
+  </row>
+  <row id="167" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="169" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting Transaction Details">Rincian Transaksi Akuntansi</value>
+    <value column="Description" isTrl="N" original="View detailed general ledger entries for a specified time period.">View detailed general ledger entries for a specified time period.</value>
+  </row>
+  <row id="170" trl="Y">
+    <value column="Name" isTrl="Y" original="Tree and Node Image">Tree dan Node Image</value>
+    <value column="Description" isTrl="N" original="Defines the descriptions and images that will be used when a tree is displayed.">Defines the descriptions and images that will be used when a tree is displayed.</value>
+  </row>
+  <row id="171" trl="N">
+    <value column="Name" isTrl="N" original="Bank">Bank</value>
+    <value column="Description" isTrl="N" original="Define banks and the related accounts.">Define banks and the related accounts.</value>
+  </row>
+  <row id="175" trl="Y">
+    <value column="Name" isTrl="Y" original="Enterprise Model">Organisasi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create and edit enterprise items such as organizations.">Open a folder where you can create and edit enterprise items such as organizations.</value>
+  </row>
+  <row id="176" trl="Y">
+    <value column="Name" isTrl="Y" original="Report and Process">Laporan dan Proses</value>
+    <value column="Description" isTrl="N" original="Define and edit reports and processes (database or Java).">Define and edit reports and processes (database or Java).</value>
+  </row>
+  <row id="178" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Invoice">Faktur Penjualan</value>
+    <value column="Description" isTrl="N" original="Create and edit sales invoices for your customers.">Create and edit sales invoices for your customers.</value>
+  </row>
+  <row id="179" trl="Y">
+    <value column="Name" isTrl="Y" original="Physical Inventory">Perhitungan Fisik Persediaan</value>
+    <value column="Description" isTrl="N" original="Create and edit inventory counts and update your stock quantities.">Create and edit inventory counts and update your stock quantities.</value>
+  </row>
+  <row id="180" trl="Y">
+    <value column="Name" isTrl="Y" original="Goods Shipment">Pengiriman Pesanan Penjualan</value>
+    <value column="Description" isTrl="N" original="Create and manage goods shipments to your customers.">Create and manage goods shipments to your customers.</value>
+  </row>
+  <row id="181" trl="Y">
+    <value column="Name" isTrl="Y" original="Goods Movements">Transfer Antar Gudang</value>
+    <value column="Description" isTrl="N" original="Create and edit internal inventory movements among warehouses and storage bins.">Create and edit internal inventory movements among warehouses and storage bins.</value>
+  </row>
+  <row id="183" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Management">Manajemen Produk</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="190" trl="Y">
+    <value column="Name" isTrl="Y" original="Title">Gelar dan Panggilan</value>
+    <value column="Description" isTrl="N" original="Define titles to be used to address a business partner.">Define titles to be used to address a business partner.</value>
+  </row>
+  <row id="192" trl="N">
+    <value column="Name" isTrl="N" original="Generate Invoices">Generate Invoices</value>
+    <value column="Description" isTrl="N" original="Generate Invoices">Generate Invoices</value>
+  </row>
+  <row id="193" trl="N">
+    <value column="Name" isTrl="N" original="Generate Shipments">Generate Shipments</value>
+    <value column="Description" isTrl="N" original="Generate shipment">Generate shipment</value>
+  </row>
+  <row id="194" trl="N">
+    <value column="Name" isTrl="N" original="Order Transactions">Order Transactions</value>
+    <value column="Description" isTrl="N" original="Sales Order Transaction Report">Sales Order Transaction Report</value>
+  </row>
+  <row id="195" trl="N">
+    <value column="Name" isTrl="N" original="Open Orders">Open Orders</value>
+    <value column="Description" isTrl="N" original="Open Orders">Open Orders</value>
+  </row>
+  <row id="197" trl="N">
+    <value column="Name" isTrl="N" original="Product Transaction Summary">Product Transaction Summary</value>
+    <value column="Description" isTrl="N" original="Product Transaction Summary">Product Transaction Summary</value>
+  </row>
+  <row id="1C00140BAFA946E3A63F1AD557A35F45" trl="Y">
+    <value column="Name" isTrl="Y" original="Period Control Log">Buka/Tutup Periode Akuntansi</value>
+    <value column="Description" isTrl="Y" original="This windows shows the log for period control. ">Open or close periods for the allowed organizations</value>
+  </row>
+  <row id="1E5FB50EFD5D43BDA4AB1879707D9003" trl="N">
+    <value column="Name" isTrl="N" original="Import Client">Import Client</value>
+    <value column="Description" isTrl="N" original="Import a client from xml">Import a client from xml</value>
+  </row>
+  <row id="202" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Transactions">Invoice Transactions</value>
+    <value column="Description" isTrl="N" original="Invoice Transactions">Invoice Transactions</value>
+  </row>
+  <row id="203" trl="Y">
+    <value column="Name" isTrl="Y" original="Procurement Management">Manajemen Pengadaan</value>
+    <value column="Description" isTrl="N" original="Procurement Management supports the management of the orders, goods receipts and purchase invoices as well as the analysis of purchase related data.">Procurement Management supports the management of the orders, goods receipts and purchase invoices as well as the analysis of purchase related data.</value>
+  </row>
+  <row id="204" trl="Y">
+    <value column="Name" isTrl="Y" original="Goods Receipt">Terima Barang/Jasa</value>
+    <value column="Description" isTrl="N" original="Create and edit goods receipts from your vendors and create invoices from these receipts.">Create and edit goods receipts from your vendors and create invoices from these receipts.</value>
+  </row>
+  <row id="205" trl="Y">
+    <value column="Name" isTrl="Y" original="Purchase Order">Pesanan Pembelian</value>
+    <value column="Description" isTrl="N" original="Create and edit orders to buy products from suppliers.">Create and edit orders to buy products from suppliers.</value>
+  </row>
+  <row id="206" trl="Y">
+    <value column="Name" isTrl="Y" original="Purchase Invoice">Faktur Pembelian</value>
+    <value column="Description" isTrl="N" original="Purchase invoice window allows to register and manage suppliers invoices.">Purchase invoice window allows to register and manage suppliers invoices.</value>
+  </row>
+  <row id="20C210B5BE7846819385A70F23F5118C" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting Process">Proses Akuntansi</value>
+    <value column="Description" isTrl="N" original="Accounting process to be launched at posting time">Accounting process to be launched at posting time</value>
+  </row>
+  <row id="20FCC3606573406A9242358C3E4A3585" trl="Y">
+    <value column="Name" isTrl="Y" original="Return Reasons">Alasan Retur</value>
+    <value column="Description" isTrl="N" original="Here you define the return reason">Here you define the return reason</value>
+  </row>
+  <row id="210" trl="N">
+    <value column="Name" isTrl="N" original="Daily Invoice">Daily Invoice</value>
+    <value column="Description" isTrl="N" original="Daily Invoice">Daily Invoice</value>
+  </row>
+  <row id="211" trl="N">
+    <value column="Name" isTrl="N" original="Monthly Invoice">Monthly Invoice</value>
+    <value column="Description" isTrl="N" original="Monthly Invoice">Monthly Invoice</value>
+  </row>
+  <row id="212" trl="N">
+    <value column="Name" isTrl="N" original="Monthly Product Invoice">Monthly Product Invoice</value>
+    <value column="Description" isTrl="N" original="Monthly Product Invoice">Monthly Product Invoice</value>
+  </row>
+  <row id="213" trl="N">
+    <value column="Name" isTrl="N" original="Weekly Product Invoice">Weekly Product Invoice</value>
+    <value column="Description" isTrl="N" original="Weekly Product Invoice">Weekly Product Invoice</value>
+  </row>
+  <row id="214" trl="N">
+    <value column="Name" isTrl="N" original="Monthly Vendor Invoice Report">Monthly Vendor Invoice Report</value>
+    <value column="Description" isTrl="N" original="Monthly Vendor Invoice Report">Monthly Vendor Invoice Report</value>
+  </row>
+  <row id="215" trl="N">
+    <value column="Name" isTrl="N" original="Weekly Invoice">Weekly Invoice</value>
+    <value column="Description" isTrl="N" original="Weekly Invoice">Weekly Invoice</value>
+  </row>
+  <row id="216" trl="N">
+    <value column="Name" isTrl="N" original="Form">Form</value>
+    <value column="Description" isTrl="N" original="Create and edit forms (manual windows) to be used in the application.">Create and edit forms (manual windows) to be used in the application.</value>
+  </row>
+  <row id="217" trl="N">
+    <value column="Name" isTrl="N" original="Create Invoices from Orders">Create Invoices from Orders</value>
+    <value column="Description" isTrl="N" original="Create invoices for all processed sales orders/goods shipments that have not been invoiced.">Create invoices for all processed sales orders/goods shipments that have not been invoiced.</value>
+  </row>
+  <row id="218" trl="Y">
+    <value column="Name" isTrl="Y" original="System Admin">Admin Sistem</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="225" trl="N">
+    <value column="Name" isTrl="N" original="Initial Client Setup">Initial Client Setup</value>
+    <value column="Description" isTrl="N" original="Create a new empty client from scratch.">Create a new empty client from scratch.</value>
+  </row>
+  <row id="227" trl="N">
+    <value column="Name" isTrl="N" original="Vendor Selection">Vendor Selection</value>
+    <value column="Description" isTrl="N" original="Products with more than one vendor">Products with more than one vendor</value>
+  </row>
+  <row id="228" trl="Y">
+    <value column="Name" isTrl="Y" original="Bill of Materials Production">Produksi Bill of Materials</value>
+    <value column="Description" isTrl="N" original="Create and run production processes using the previously defined bills of materials.">Create and run production processes using the previously defined bills of materials.</value>
+  </row>
+  <row id="230" trl="N">
+    <value column="Name" isTrl="N" original="Quarterly Customer Invoice by Product">Quarterly Customer Invoice by Product</value>
+    <value column="Description" isTrl="N" original="Quarterly Customer Invoice by Product">Quarterly Customer Invoice by Product</value>
+  </row>
+  <row id="231" trl="N">
+    <value column="Name" isTrl="N" original="Quarterly Customer Invoice by Vendor">Quarterly Customer Invoice by Vendor</value>
+    <value column="Description" isTrl="N" original="Quarterly Customer Invoice by Vendor">Quarterly Customer Invoice by Vendor</value>
+  </row>
+  <row id="232" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner Category">Kategori Business Partner</value>
+    <value column="Description" isTrl="Y" original="Business partners can be grouped into different categories with the aim of helping their management and analysis.">Create and edit information related to similar business partners at one time by grouping them.</value>
+  </row>
+  <row id="234" trl="Y">
+    <value column="Name" isTrl="Y" original="Bank Statement">Transaksi Bank</value>
+    <value column="Description" isTrl="N" original="View your bank statements against transactions created and edited in the application.">View your bank statements against transactions created and edited in the application.</value>
+  </row>
+  <row id="2345D54C6D044A999C7FDD5C504008A6" trl="N">
+    <value column="Name" isTrl="N" original="Update Audit Trail Infrastructure">Update Audit Trail Infrastructure</value>
+    <value column="Description" isTrl="N" original="Update Audit Trail Infrastructure">Update Audit Trail Infrastructure</value>
+  </row>
+  <row id="236" trl="Y">
+    <value column="Name" isTrl="Y" original="Receivables and Payables">Utang Piutang</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create and edit settlements, debt payments, bank operations, remittances, and analyze reports.">Open a folder where you can create and edit settlements, debt payments, bank operations, remittances, and analyze reports.</value>
+  </row>
+  <row id="240" trl="Y">
+    <value column="Name" isTrl="Y" original="Cashbook">Buku Kas</value>
+    <value column="Description" isTrl="N" original="Create cashbooks to manage all cash movements which occur in the cash journal.">Create cashbooks to manage all cash movements which occur in the cash journal.</value>
+  </row>
+  <row id="241" trl="Y">
+    <value column="Name" isTrl="Y" original="Cash Journal">Kas Keluar/Masuk</value>
+    <value column="Description" isTrl="N" original="Add individual cash transactions to be managed and viewed in the cashbook.">Add individual cash transactions to be managed and viewed in the cashbook.</value>
+  </row>
+  <row id="241C75FEC4C243BC8E71A4F358157F2D" trl="N">
+    <value column="Name" isTrl="N" original="Initial organization setup">Initial organization setup</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="249" trl="Y">
+    <value column="Name" isTrl="Y" original="Field Category">Kelompok Field</value>
+    <value column="Description" isTrl="N" original="Edit the subsection field group properties of tabs.">Edit the subsection field group properties of tabs.</value>
+  </row>
+  <row id="252" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Summary">Invoice Summary</value>
+    <value column="Description" isTrl="N" original="Invoice Summary">Invoice Summary</value>
+  </row>
+  <row id="256" trl="N">
+    <value column="Name" isTrl="N" original="Product Transaction Value">Product Transaction Value</value>
+    <value column="Description" isTrl="N" original="Product Transaction Value">Product Transaction Value</value>
+  </row>
+  <row id="257" trl="Y">
+    <value column="Name" isTrl="Y" original="Commission">Komisi Penjualan</value>
+    <value column="Description" isTrl="N" original="Define how and when you want commissions to be calculated and to whom they are to be paid.">Define how and when you want commissions to be calculated and to whom they are to be paid.</value>
+  </row>
+  <row id="260" trl="N">
+    <value column="Name" isTrl="N" original="Project Status Summary">Project Status Summary</value>
+    <value column="Description" isTrl="N" original="Project Status of Project Cycle">Project Status of Project Cycle</value>
+  </row>
+  <row id="263" trl="Y">
+    <value column="Name" isTrl="Y" original="Partner Relations">Relasi Partner</value>
+    <value column="Description" isTrl="N" original="Customer Relations and Partner Management">Customer Relations and Partner Management</value>
+  </row>
+  <row id="264" trl="Y">
+    <value column="Name" isTrl="Y" original="Commission Payment">Pembayaran Komisi Penjualan</value>
+    <value column="Description" isTrl="N" original="Create commissions and create corresponding invoices.">Create commissions and create corresponding invoices.</value>
+  </row>
+  <row id="26BF4F6D476E4D0CAF5E62EBC63E440E" trl="N">
+    <value column="Name" isTrl="N" original="Sales Invoice Dimensional Report">Sales Invoice Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Sales Invoice Dimensional Report">Sales Invoice Dimensional Report</value>
+  </row>
+  <row id="271" trl="Y">
+    <value column="Name" isTrl="Y" original="Service">Jasa</value>
+    <value column="Description" isTrl="N" original="Service Management">Service Management</value>
+  </row>
+  <row id="272" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="278" trl="Y">
+    <value column="Name" isTrl="Y" original="Financial Management">Manajemen Finansial</value>
+    <value column="Description" isTrl="N" original="The &quot;Financial Management&quot; area supports daily accounting activities such as payable and receivable accounts management, assets amortization as well as the opening and closing of the accounting year.">The "Financial Management" area supports daily accounting activities such as payable and receivable accounts management, assets amortization as well as the opening and closing of the accounting year.</value>
+  </row>
+  <row id="280" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="292" trl="Y">
+    <value column="Name" isTrl="Y" original="Goods Transaction">Transaksi Inventori</value>
+    <value column="Description" isTrl="N" original="Goods Transactions window provides a read only view with extensive filtering capabilities that shows all inventory transactions.">Goods Transactions window provides a read only view with extensive filtering capabilities that shows all inventory transactions.</value>
+  </row>
+  <row id="296" trl="Y">
+    <value column="Name" isTrl="Y" original="Application Image">Gambar Aplikasi</value>
+    <value column="Description" isTrl="N" original="Create and edit images that later will be used in other windows.">Create and edit images that later will be used in other windows.</value>
+  </row>
+  <row id="303" trl="N">
+    <value column="Name" isTrl="N" original="Synchronize Terminology">Synchronize Terminology</value>
+    <value column="Description" isTrl="N" original="Synchronize the terminology within the system.">Synchronize the terminology within the system.</value>
+  </row>
+  <row id="306" trl="N">
+    <value column="Name" isTrl="N" original="Resubmit Posting">Resubmit Posting</value>
+    <value column="Description" isTrl="N" original="Resubmit posting of documents with posting errors">Resubmit posting of documents with posting errors</value>
+  </row>
+  <row id="307" trl="N">
+    <value column="Name" isTrl="Y" original="Reset Accounting Old">Reset Accounting</value>
+    <value column="Description" isTrl="N" original="Reset Accounting Entries">Reset Accounting Entries</value>
+  </row>
+  <row id="310" trl="Y">
+    <value column="Name" isTrl="Y" original="Price List Schema">Formula Daftar Harga</value>
+    <value column="Description" isTrl="N" original="Define a Price List Schema to be assigned to business partners.">Define a Price List Schema to be assigned to business partners.</value>
+  </row>
+  <row id="315" trl="Y">
+    <value column="Name" isTrl="Y" original="Matched Invoices">Faktur untuk Pesanan Pembelian</value>
+    <value column="Description" isTrl="N" original="Track matching between purchase invoice lines and the corresponding shipment/receipt lines.">Track matching between purchase invoice lines and the corresponding shipment/receipt lines.</value>
+  </row>
+  <row id="316" trl="Y">
+    <value column="Name" isTrl="Y" original="Matched Purchase Orders">Realisasi Permintaan Pembelian</value>
+    <value column="Description" isTrl="N" original="Track matching between purchase order lines and the corresponding shipment/receipt or invoice lines. ">Track matching between purchase order lines and the corresponding shipment/receipt or invoice lines. </value>
+  </row>
+  <row id="317" trl="Y">
+    <value column="Name" isTrl="Y" original="Expense Type">Tipe Biaya</value>
+    <value column="Description" isTrl="N" original="Maintain Expense Report Types">Maintain Expense Report Types</value>
+  </row>
+  <row id="318" trl="Y">
+    <value column="Name" isTrl="Y" original="Expense Sheet">Pencatatan Biaya Kerja</value>
+    <value column="Description" isTrl="N" original="Create a time or expense sheet in order to submit employee or invoicable expenses.">Create a time or expense sheet in order to submit employee or invoicable expenses.</value>
+  </row>
+  <row id="319" trl="Y">
+    <value column="Name" isTrl="Y" original="Resource">Sumber Daya</value>
+    <value column="Description" isTrl="N" original="Maintain Resources">Maintain Resources</value>
+  </row>
+  <row id="31D7EC462DD7401EA90200C393B3EB9B" trl="Y">
+    <value column="Name" isTrl="Y" original="Discounts and Promotions Types">Tipe Diskon dan Promosi</value>
+    <value column="Description" isTrl="N" original="Discounts and Promotions Types">Discounts and Promotions Types</value>
+  </row>
+  <row id="320" trl="Y">
+    <value column="Name" isTrl="Y" original="Resource Type">Tipe Sumber Daya</value>
+    <value column="Description" isTrl="N" original="Maintain Resource Types">Maintain Resource Types</value>
+  </row>
+  <row id="321" trl="N">
+    <value column="Name" isTrl="N" original="Recompile DB Objects">Recompile DB Objects</value>
+    <value column="Description" isTrl="N" original="Recompile Database Objects">Recompile Database Objects</value>
+  </row>
+  <row id="326" trl="Y">
+    <value column="Name" isTrl="Y" original="Printing Options">Opsi Pencetakan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define printing formats .">Open a folder where you can define printing formats .</value>
+  </row>
+  <row id="327" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoiceable Expenses">Biaya yang Dapat Difakturkan</value>
+    <value column="Description" isTrl="N" original="View expenses before invoicing them to customers.">View expenses before invoicing them to customers.</value>
+  </row>
+  <row id="328" trl="N">
+    <value column="Name" isTrl="N" original="Create Sales Orders from Expenses">Create Sales Orders from Expenses</value>
+    <value column="Description" isTrl="N" original="Create Sales Orders for Customers from Expense Reports">Create Sales Orders for Customers from Expense Reports</value>
+  </row>
+  <row id="329" trl="N">
+    <value column="Name" isTrl="N" original="Create AP Expense Invoices">Create AP Expense Invoices</value>
+    <value column="Description" isTrl="N" original="Create AP Invoices from Expenses to be paid to employees">Create AP Invoices from Expenses to be paid to employees</value>
+  </row>
+  <row id="334" trl="Y">
+    <value column="Name" isTrl="Y" original="System">Sistem</value>
+    <value column="Description" isTrl="N" original="System Definition">System Definition</value>
+  </row>
+  <row id="335" trl="N">
+    <value column="Name" isTrl="N" original="Generate PO from Sales Order">Generate PO from Sales Order</value>
+    <value column="Description" isTrl="N" original="Create Purchase Order from Sales Orders">Create Purchase Order from Sales Orders</value>
+  </row>
+  <row id="343" trl="Y">
+    <value column="Name" isTrl="Y" original="Asset Group">Kelompok Aset</value>
+    <value column="Description" isTrl="Y" original="Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.">Create and edit categories to group assets with similar characteristics together.</value>
+  </row>
+  <row id="345" trl="Y">
+    <value column="Name" isTrl="Y" original="Assets">Aset</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create and edit the value and accounting of items and property.">Open a folder where you can create and edit the value and accounting of items and property.</value>
+  </row>
+  <row id="346" trl="N">
+    <value column="Name" isTrl="N" original="Create Shipments from Orders">Create Shipments from Orders</value>
+    <value column="Description" isTrl="N" original="Create shipments for all processed sales orders that fit the criteria and the parameters specified.">Create shipments for all processed sales orders that fit the criteria and the parameters specified.</value>
+  </row>
+  <row id="347" trl="N">
+    <value column="Name" isTrl="N" original="Print Invoices">Print Invoices</value>
+    <value column="Description" isTrl="N" original="Print Invoices to paper or send PDF">Print Invoices to paper or send PDF</value>
+  </row>
+  <row id="349" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Expenses">Biaya Karyawan</value>
+    <value column="Description" isTrl="N" original="View internal employee expenses before processing them.">View internal employee expenses before processing them.</value>
+  </row>
+  <row id="350" trl="N">
+    <value column="Name" isTrl="N" original="Statement of Accounts">Statement of Accounts</value>
+    <value column="Description" isTrl="N" original="Report Account Statement Beginning Balance and Transactions">Report Account Statement Beginning Balance and Transactions</value>
+  </row>
+  <row id="353" trl="N">
+    <value column="Name" isTrl="N" original="Attribute Set">Attribute Set</value>
+    <value column="Description" isTrl="N" original="Define a group of attributes to apply to specific products.">Define a group of attributes to apply to specific products.</value>
+  </row>
+  <row id="354" trl="Y">
+    <value column="Name" isTrl="Y" original="Serial Number Sequence">Urutan No. Seri</value>
+    <value column="Description" isTrl="N" original="Define a serial number sequence to assign serial numbers to products.">Define a serial number sequence to assign serial numbers to products.</value>
+  </row>
+  <row id="355" trl="Y">
+    <value column="Name" isTrl="Y" original="Lot Number Sequence">Urutan No. Lot</value>
+    <value column="Description" isTrl="N" original="Define a number sequence to assign lot numbers to products.">Define a number sequence to assign lot numbers to products.</value>
+  </row>
+  <row id="356" trl="N">
+    <value column="Name" isTrl="N" original="Lot">Lot</value>
+    <value column="Description" isTrl="N" original="Create and edit lots for your products.">Create and edit lots for your products.</value>
+  </row>
+  <row id="357" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Attributes">Atribut Produk</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define product attributes, and create and edit products lots and serial numbers.">Open a folder where you can define product attributes, and create and edit products lots and serial numbers.</value>
+  </row>
+  <row id="359" trl="Y">
+    <value column="Name" isTrl="Y" original="Attribute">Atribut</value>
+    <value column="Description" isTrl="N" original="Create and edit attributes to be combined into attribute sets and subsequently added to products.">Create and edit attributes to be combined into attribute sets and subsequently added to products.</value>
+  </row>
+  <row id="362" trl="Y">
+    <value column="Name" isTrl="Y" original="Role Access">Hak Akses Terhadap Tabel</value>
+    <value column="Description" isTrl="N" original="Define access to DB tables and columns for selected roles.">Define access to DB tables and columns for selected roles.</value>
+  </row>
+  <row id="364" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Type">Tipe Proyek</value>
+    <value column="Description" isTrl="N" original="Define projects types with typical phases and tasks to be used in projects.">Define projects types with typical phases and tasks to be used in projects.</value>
+  </row>
+  <row id="366" trl="N">
+    <value column="Name" isTrl="N" original="Session">Session</value>
+    <value column="Description" isTrl="N" original="View all login's made in the application.">View all login's made in the application.</value>
+  </row>
+  <row id="367" trl="Y">
+    <value column="Name" isTrl="Y" original="Security">Keamanan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can see session logs and monitor modifications made by each user.">Open a folder where you can see session logs and monitor modifications made by each user.</value>
+  </row>
+  <row id="372" trl="N">
+    <value column="Name" isTrl="N" original="Web">Web</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="381" trl="Y">
+    <value column="Name" isTrl="Y" original="Freight Category">Kategori Pengangkutan</value>
+    <value column="Description" isTrl="N" original="Define freight categories to be used by shippers.">Define freight categories to be used by shippers.</value>
+  </row>
+  <row id="383" trl="N">
+    <value column="Name" isTrl="N" original="Cache Reset">Cache Reset</value>
+    <value column="Description" isTrl="N" original="Reset Cache of the System ** Close all Windows before proceeding **">Reset Cache of the System ** Close all Windows before proceeding **</value>
+  </row>
+  <row id="383A3256E1CD4839A8AE36B3077FF071" trl="Y">
+    <value column="Name" isTrl="Y" original="Stock Reservation">Reservasi Stok</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="384" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting Dimension">Dimensi Akuntansi</value>
+    <value column="Description" isTrl="N" original="Create and edit accounting dimensions to be used in dimensional reports.">Create and edit accounting dimensions to be used in dimensional reports.</value>
+  </row>
+  <row id="392" trl="Y">
+    <value column="Name" isTrl="Y" original="Knowledge">Informasi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="392A7B0601FA42F9AFC41FD8E576610D" trl="N">
+    <value column="Name" isTrl="N" original="Asset report for depreciation schedule">Asset report for depreciation schedule</value>
+    <value column="Description" isTrl="N" original="Asset report for depreciation schedule">Asset report for depreciation schedule</value>
+  </row>
+  <row id="393" trl="N">
+    <value column="Name" isTrl="N" original="Update Accounting Balance">Update Accounting Balance</value>
+    <value column="Description" isTrl="N" original="Update Daily Accounting Balances">Update Daily Accounting Balances</value>
+  </row>
+  <row id="394" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner Info">Informasi Business Partner</value>
+    <value column="Description" isTrl="N" original="View information related to business partner orders, receipts/shipments, invoices, and assets.">View information related to business partner orders, receipts/shipments, invoices, and assets.</value>
+  </row>
+  <row id="3942B34C83C74EFF8A9CC51AC3B003D3" trl="N">
+    <value column="Name" isTrl="N" original="Costing Migration Process">Costing Migration Process</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="398" trl="N">
+    <value column="Name" isTrl="N" original="Project Cycle Report">Project Cycle Report</value>
+    <value column="Description" isTrl="N" original="Report Projects based on Project Cycle">Report Projects based on Project Cycle</value>
+  </row>
+  <row id="399" trl="N">
+    <value column="Name" isTrl="N" original="Customer Assets">Customer Assets</value>
+    <value column="Description" isTrl="N" original="Report Customer Assets with Delivery Count">Report Customer Assets with Delivery Count</value>
+  </row>
+  <row id="3BADF832BEAE46DBAE7A2C370353050D" trl="N">
+    <value column="Name" isTrl="N" original="Audit Trail">Audit Trail</value>
+    <value column="Description" isTrl="N" original="Display historical information about data changes of record via the audit trail system">Display historical information about data changes of record via the audit trail system</value>
+  </row>
+  <row id="3CC69F84B2524A69B53D1BD90FC7D0B9" trl="Y">
+    <value column="Name" isTrl="Y" original="User Defined Dimension 2">Dimensi yang didefinisikan user 2</value>
+    <value column="Description" isTrl="N" original="User Defined Dimension 2 is an accounting dimension which can be customized and used while posting documents to the ledger.">User Defined Dimension 2 is an accounting dimension which can be customized and used while posting documents to the ledger.</value>
+  </row>
+  <row id="400" trl="N">
+    <value column="Name" isTrl="N" original="Asset Delivery">Asset Delivery</value>
+    <value column="Description" isTrl="N" original="Report Asset Deliveries">Report Asset Deliveries</value>
+  </row>
+  <row id="401" trl="N">
+    <value column="Name" isTrl="N" original="Issue to Project">Issue to Project</value>
+    <value column="Description" isTrl="N" original="Issue Material to Project from Receipt or manual Inventory Location">Issue Material to Project from Receipt or manual Inventory Location</value>
+  </row>
+  <row id="402" trl="N">
+    <value column="Name" isTrl="N" original="Generate PO from Project">Generate PO from Project</value>
+    <value column="Description" isTrl="N" original="Generate PO from Project Line(s)">Generate PO from Project Line(s)</value>
+  </row>
+  <row id="403" trl="N">
+    <value column="Name" isTrl="N" original="Project Detail Accounting Report">Project Detail Accounting Report</value>
+    <value column="Description" isTrl="N" original="Project Detail Accounting Report">Project Detail Accounting Report</value>
+  </row>
+  <row id="404" trl="N">
+    <value column="Name" isTrl="N" original="Project Lines not Issued">Project Lines not Issued</value>
+    <value column="Description" isTrl="N" original="Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project">Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project</value>
+  </row>
+  <row id="405" trl="N">
+    <value column="Name" isTrl="N" original="Project POs not Issued">Project POs not Issued</value>
+    <value column="Description" isTrl="N" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project</value>
+  </row>
+  <row id="4ACC59DA7DAB48FFAEB9128B7D803A15" trl="Y">
+    <value column="Name" isTrl="Y" original="User Defined Dimension 1">Dimensi yang didefinisikan user 1</value>
+    <value column="Description" isTrl="N" original="User Defined Dimension 1 is an accounting dimension which can be customized and used while posting documents to the ledger.">User Defined Dimension 1 is an accounting dimension which can be customized and used while posting documents to the ledger.</value>
+  </row>
+  <row id="53C26F9057764F6DA861E00B14758E53" trl="Y">
+    <value column="Name" isTrl="Y" original="Return Material Receipt">Terima Retur Penjualan</value>
+    <value column="Description" isTrl="N" original="Return material receipt">Return material receipt</value>
+  </row>
+  <row id="564E152A45684CFC82BFB5B132C8F828" trl="Y">
+    <value column="Name" isTrl="Y" original="Dimensions Mapping">Pemetaan Dimensi</value>
+    <value column="Description" isTrl="N" original="This window defines at system administrator level  the accounting dimensions that are mandatory for each document category, table and level. ">This window defines at system administrator level  the accounting dimensions that are mandatory for each document category, table and level. </value>
+  </row>
+  <row id="5DFCDFE962144B12A6279E9A1E9DC0AC" trl="N">
+    <value column="Name" isTrl="N" original="Enterprise module management">Enterprise module management</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="648F02DE454D41CB90BBE4F66F5813A2" trl="N">
+    <value column="Name" isTrl="N" original="Product Characteristic">Product Characteristic</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6787A809DB364371B797ECED5E9262BF" trl="Y">
+    <value column="Name" isTrl="Y" original="Reject Reason">Alasan Ditolak</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="75B726735EA7497C9DB06E35B1CBFD86" trl="N">
+    <value column="Name" isTrl="N" original="Open/Close Period Control">Open/Close Period Control</value>
+    <value column="Description" isTrl="N" original="Open/Close Period Control for the allowed organizations">Open/Close Period Control for the allowed organizations</value>
+  </row>
+  <row id="800002" trl="N">
+    <value column="Name" isTrl="N" original="Auxiliary Input">Auxiliary Input</value>
+    <value column="Description" isTrl="N" original="Define values of a selected field, depending on the tab that is being edited.">Define values of a selected field, depending on the tab that is being edited.</value>
+  </row>
+  <row id="800005" trl="N">
+    <value column="Name" isTrl="N" original="Journal Entries Report">Journal Entries Report</value>
+    <value column="Description" isTrl="N" original="Journal Entries Report">Journal Entries Report</value>
+  </row>
+  <row id="800006" trl="N">
+    <value column="Name" isTrl="N" original="General Ledger Report">General Ledger Report</value>
+    <value column="Description" isTrl="N" original="Report general ledger">Report general ledger</value>
+  </row>
+  <row id="800007" trl="Y">
+    <value column="Name" isTrl="Y" original="Service Project">Proyek Jasa</value>
+    <value column="Description" isTrl="N" original="Create and edit potential projects which your business partner's are bidding on.  Create plans to purchase and proposals to your products if a business partner bid is won.">Create and edit potential projects which your business partner's are bidding on.  Create plans to purchase and proposals to your products if a business partner bid is won.</value>
+  </row>
+  <row id="800008" trl="N">
+    <value column="Name" isTrl="N" original="Incoterm">Incoterm</value>
+    <value column="Description" isTrl="N" original="Define international commercial terms (Incoterms) to be used in sales transactions.">Define international commercial terms (Incoterms) to be used in sales transactions.</value>
+  </row>
+  <row id="800010" trl="N">
+    <value column="Name" isTrl="N" original="Bank Report">Bank Report</value>
+    <value column="Description" isTrl="N" original="Report bank">Report bank</value>
+  </row>
+  <row id="800011" trl="N">
+    <value column="Name" isTrl="N" original="Cash Report">Cash Report</value>
+    <value column="Description" isTrl="N" original="Report cash">Report cash</value>
+  </row>
+  <row id="800015" trl="N">
+    <value column="Name" isTrl="N" original="Shipment Report">Shipment Report</value>
+    <value column="Description" isTrl="N" original="Shipment Report">Shipment Report</value>
+  </row>
+  <row id="800020" trl="N">
+    <value column="Name" isTrl="N" original="Material Transaction Report">Material Transaction Report</value>
+    <value column="Description" isTrl="N" original="Report Material Transaction">Report Material Transaction</value>
+  </row>
+  <row id="800023" trl="N">
+    <value column="Name" isTrl="N" original="Total Product Template Report">Total Product Template Report</value>
+    <value column="Description" isTrl="N" original="Report Total Product Template">Report Total Product Template</value>
+  </row>
+  <row id="800024" trl="Y">
+    <value column="Name" isTrl="Y" original="Volume Discount">Dikon Volume</value>
+    <value column="Description" isTrl="N" original="Create volume discounts related to products and product categories to be assigned to selected business partners.">Create volume discounts related to products and product categories to be assigned to selected business partners.</value>
+  </row>
+  <row id="800025" trl="N">
+    <value column="Name" isTrl="N" original="Balance sheet and P&amp;L structure">Balance sheet and P&amp;L structure</value>
+    <value column="Description" isTrl="N" original="Balance sheet and P&amp;L structure">Balance sheet and P&amp;L structure</value>
+  </row>
+  <row id="800027" trl="N">
+    <value column="Name" isTrl="N" original="Settlement">Settlement</value>
+    <value column="Description" isTrl="N" original="Edit payments by summing one or many into one or by dividing one into many.  Here you manage payments that come from invoices generated in the application.">Edit payments by summing one or many into one or by dividing one into many.  Here you manage payments that come from invoices generated in the application.</value>
+  </row>
+  <row id="800028" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Taxes Report">Invoice Taxes Report</value>
+    <value column="Description" isTrl="N" original="Report Tax Invoice">Report Tax Invoice</value>
+  </row>
+  <row id="800029" trl="N">
+    <value column="Name" isTrl="N" original="Payment Report">Payment Report</value>
+    <value column="Description" isTrl="N" original="Report debt payment">Report debt payment</value>
+  </row>
+  <row id="800031" trl="N">
+    <value column="Name" isTrl="N" original="Delivered Sales Order Report">Delivered Sales Order Report</value>
+    <value column="Description" isTrl="N" original="Delivered Sales Order Report">Delivered Sales Order Report</value>
+  </row>
+  <row id="800032" trl="N">
+    <value column="Name" isTrl="N" original="Service Project Report">Service Project Report</value>
+    <value column="Description" isTrl="N" original="Service Project Report">Service Project Report</value>
+  </row>
+  <row id="800033" trl="N">
+    <value column="Name" isTrl="N" original="Manual Settlement">Manual Settlement</value>
+    <value column="Description" isTrl="N" original="Create and edit payments with no corresponding document/transaction in the application.">Create and edit payments with no corresponding document/transaction in the application.</value>
+  </row>
+  <row id="800034" trl="N">
+    <value column="Name" isTrl="N" original="G/L Item">G/L Item</value>
+    <value column="Description" isTrl="N" original="Create and edit accounting items to be used in manual settlements.">Create and edit accounting items to be used in manual settlements.</value>
+  </row>
+  <row id="800037" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Proposal Tracker">Penelusuran Proposal Proyek</value>
+    <value column="Description" isTrl="N" original="View all proposals made to you during a Budget Project.">View all proposals made to you during a Budget Project.</value>
+  </row>
+  <row id="800038" trl="N">
+    <value column="Name" isTrl="N" original="GL Posting by DB Tables">GL Posting by DB Tables</value>
+    <value column="Description" isTrl="N" original="Recreate accounting information and add transactions for the General Ledger, grouped by defined database tables.">Recreate accounting information and add transactions for the General Ledger, grouped by defined database tables.</value>
+  </row>
+  <row id="800039" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Control Report">Warehouse Control Report</value>
+    <value column="Description" isTrl="N" original="Report Warehouse Control">Report Warehouse Control</value>
+  </row>
+  <row id="800040" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Consignment Report">Invoice Consignment Report</value>
+    <value column="Description" isTrl="N" original="Report To Invoice Consignment">Report To Invoice Consignment</value>
+  </row>
+  <row id="800042" trl="N">
+    <value column="Name" isTrl="N" original="Trial Balance">Trial Balance</value>
+    <value column="Description" isTrl="N" original="Trial Balance Report">Trial Balance Report</value>
+  </row>
+  <row id="800043" trl="N">
+    <value column="Name" isTrl="N" original="Create All Price Lists">Create All Price Lists</value>
+    <value column="Description" isTrl="N" original="Create price list version for a price list">Create price list version for a price list</value>
+  </row>
+  <row id="800052" trl="N">
+    <value column="Name" isTrl="N" original="Product Movements Report">Product Movements Report</value>
+    <value column="Description" isTrl="N" original="Report product movement">Report product movement</value>
+  </row>
+  <row id="800060" trl="N">
+    <value column="Name" isTrl="N" original="Sales Invoice Dimensional Report Legacy">Sales Invoice Dimensional Report Legacy</value>
+    <value column="Description" isTrl="N" original="Sales Invoice Dimensional Report">Sales Invoice Dimensional Report</value>
+  </row>
+  <row id="800062" trl="Y">
+    <value column="Name" isTrl="Y" original="Incoming Shipment">Penerimaan Barang Logistik</value>
+    <value column="Description" isTrl="N" original="Create and manage goods shipments from our vendors">Create and manage goods shipments from our vendors</value>
+  </row>
+  <row id="800063" trl="Y">
+    <value column="Name" isTrl="Y" original="Outgoing Shipment">Pengeluaran Barang Logistik</value>
+    <value column="Description" isTrl="N" original="Create and manage goods shipments to your customers.">Create and manage goods shipments to your customers.</value>
+  </row>
+  <row id="800067" trl="N">
+    <value column="Name" isTrl="N" original="Shipments Dimensional Report">Shipments Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Shipment dimensional analyze">Shipment dimensional analyze</value>
+  </row>
+  <row id="800069" trl="N">
+    <value column="Name" isTrl="N" original="Invoiced Sales Order Report">Invoiced Sales Order Report</value>
+    <value column="Description" isTrl="N" original="Invoiced Sales Order Report">Invoiced Sales Order Report</value>
+  </row>
+  <row id="800070" trl="N">
+    <value column="Name" isTrl="N" original="Expense Report">Expense Report</value>
+    <value column="Description" isTrl="N" original="Report expense">Report expense</value>
+  </row>
+  <row id="800071" trl="Y">
+    <value column="Name" isTrl="Y" original="Data File Type">Tipe File Data</value>
+    <value column="Description" isTrl="N" original="Create and edit formats for attached files (.pdf, .html)">Create and edit formats for attached files (.pdf, .html)</value>
+  </row>
+  <row id="800074" trl="N">
+    <value column="Name" isTrl="N" original="Price List Report">Price List Report</value>
+    <value column="Description" isTrl="N" original="Price List Report">Price List Report</value>
+  </row>
+  <row id="800075" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800076" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800077" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800078" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800079" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800080" trl="Y">
+    <value column="Name" isTrl="Y" original="Reports">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="800081" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800084" trl="N">
+    <value column="Name" isTrl="N" original="Sales Rep Pricelist">Sales Rep Pricelist</value>
+    <value column="Description" isTrl="N" original="Sales Rep Pricelist">Sales Rep Pricelist</value>
+  </row>
+  <row id="800085" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Returns Dimensional Report">Sales Order Returns Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Report refund sales order dimensional analyses">Report refund sales order dimensional analyses</value>
+  </row>
+  <row id="800086" trl="N">
+    <value column="Name" isTrl="N" original="Create Purchase Invoices from Deliveries">Create Purchase Invoices from Deliveries</value>
+    <value column="Description" isTrl="N" original="Create purchase invoices from deliveries">Create purchase invoices from deliveries</value>
+  </row>
+  <row id="800087" trl="N">
+    <value column="Name" isTrl="N" original="Payment Tracker">Payment Tracker</value>
+    <value column="Description" isTrl="N" original="Payment Tracker">Payment Tracker</value>
+  </row>
+  <row id="800089" trl="N">
+    <value column="Name" isTrl="N" original="Traceability Report">Traceability Report</value>
+    <value column="Description" isTrl="N" original="Traceability Report">Traceability Report</value>
+  </row>
+  <row id="800091" trl="N">
+    <value column="Name" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+    <value column="Description" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+  </row>
+  <row id="800093" trl="N">
+    <value column="Name" isTrl="N" original="Funds Transfer">Funds Transfer</value>
+    <value column="Description" isTrl="N" original="Make transfers between cash and bank">Make transfers between cash and bank</value>
+  </row>
+  <row id="800095" trl="N">
+    <value column="Name" isTrl="N" original="Generate Average Costs">Generate Average Costs</value>
+    <value column="Description" isTrl="N" original="Generates raw materials average costs.">Generates raw materials average costs.</value>
+  </row>
+  <row id="800096" trl="Y">
+    <value column="Name" isTrl="Y" original="Basic Discount">Diskon Dasar</value>
+    <value column="Description" isTrl="N" original="Create and edit product price percentage Basic Discounts.">Create and edit product price percentage Basic Discounts.</value>
+  </row>
+  <row id="800097" trl="Y">
+    <value column="Name" isTrl="Y" original="Remittance Type">Tipe Remitansi</value>
+    <value column="Description" isTrl="N" original="Create and edit remittance types with corresponding parameters according to your business needs.">Create and edit remittance types with corresponding parameters according to your business needs.</value>
+  </row>
+  <row id="800099" trl="N">
+    <value column="Name" isTrl="N" original="Pending Goods Receipts">Pending Goods Receipts</value>
+    <value column="Description" isTrl="N" original="This window provides a view of the order lines pending to be received and a process to automatically create goods receipt/s for the ones received.">This window provides a view of the order lines pending to be received and a process to automatically create goods receipt/s for the ones received.</value>
+  </row>
+  <row id="800100" trl="N">
+    <value column="Name" isTrl="N" original="Update Table Identifiers">Update Table Identifiers</value>
+    <value column="Description" isTrl="N" original="Update all the table identifiers SQL">Update all the table identifiers SQL</value>
+  </row>
+  <row id="800101" trl="N">
+    <value column="Name" isTrl="N" original="Valued Stock Report Legacy">Valued Stock Report Legacy</value>
+    <value column="Description" isTrl="N" original="Valued Stock Report Legacy">Valued Stock Report Legacy</value>
+  </row>
+  <row id="800103" trl="N">
+    <value column="Name" isTrl="N" original="Proposal Report">Proposal Report</value>
+    <value column="Description" isTrl="N" original="Report proposal query">Report proposal query</value>
+  </row>
+  <row id="800105" trl="Y">
+    <value column="Name" isTrl="Y" original="Month">Bulan</value>
+    <value column="Description" isTrl="N" original="Create and edit names of the month, assigning them to your quarterly and yearly calendar.">Create and edit names of the month, assigning them to your quarterly and yearly calendar.</value>
+  </row>
+  <row id="800106" trl="Y">
+    <value column="Name" isTrl="Y" original="Dimension">Dimensi</value>
+    <value column="Description" isTrl="N" original="Define parameters to be used in making reports.">Define parameters to be used in making reports.</value>
+  </row>
+  <row id="800108" trl="Y">
+    <value column="Name" isTrl="Y" original="Automated Test">Tes Otomatis</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define information related to business partners, prices, and products.">Open a folder where you can define information related to business partners, prices, and products.</value>
+  </row>
+  <row id="800113" trl="N">
+    <value column="Name" isTrl="N" original="Create Document">Create Document</value>
+    <value column="Description" isTrl="N" original="Creates a apliccation test.">Creates a apliccation test.</value>
+  </row>
+  <row id="800114" trl="Y">
+    <value column="Name" isTrl="Y" original="Assets">Aset</value>
+    <value column="Description" isTrl="N" original="Define amortization characteristics for assets owned by your company.">Define amortization characteristics for assets owned by your company.</value>
+  </row>
+  <row id="800115" trl="Y">
+    <value column="Name" isTrl="Y" original="Amortization">Amortisasi</value>
+    <value column="Description" isTrl="N" original="Create and edit amortization for a selected year.">Create and edit amortization for a selected year.</value>
+  </row>
+  <row id="800117" trl="Y">
+    <value column="Name" isTrl="Y" original="Discounts and Promotions">Diskon dan Promosi</value>
+    <value column="Description" isTrl="N" original="Definition of Discounts and Promotions">Definition of Discounts and Promotions</value>
+  </row>
+  <row id="800118" trl="N">
+    <value column="Name" isTrl="N" original="Business Partner Contract">Business Partner Contract</value>
+    <value column="Description" isTrl="N" original="Creates business partner contract">Creates business partner contract</value>
+  </row>
+  <row id="800119" trl="N">
+    <value column="Name" isTrl="N" original="SQL Query">SQL Query</value>
+    <value column="Description" isTrl="N" original="Execute SQL query and view results within the Openbravo application.">Execute SQL query and view results within the Openbravo application.</value>
+  </row>
+  <row id="800121" trl="Y">
+    <value column="Name" isTrl="Y" original="Production Management">Manajemen Produksi</value>
+    <value column="Description" isTrl="N" original="Production Management monitors the production processes and activities as well as support the analysis of production related data.">Production Management monitors the production processes and activities as well as support the analysis of production related data.</value>
+  </row>
+  <row id="800123" trl="Y">
+    <value column="Name" isTrl="Y" original="Section">Area Produksi</value>
+    <value column="Description" isTrl="N" original="Edit the production area by dividing them into multiple sections.">Edit the production area by dividing them into multiple sections.</value>
+  </row>
+  <row id="800124" trl="Y">
+    <value column="Name" isTrl="Y" original="Manufacturing Cost Center">Pusat Biaya Produksi</value>
+    <value column="Description" isTrl="N" original="Create and edit cost centers related to production to sum up charges associated with a specific transaction.">Create and edit cost centers related to production to sum up charges associated with a specific transaction.</value>
+  </row>
+  <row id="800125" trl="Y">
+    <value column="Name" isTrl="Y" original="Machine">Mesin</value>
+    <value column="Description" isTrl="N" original="Create machines to be used in production.">Create machines to be used in production.</value>
+  </row>
+  <row id="800126" trl="Y">
+    <value column="Name" isTrl="Y" original="Work Center">Area Kerja</value>
+    <value column="Description" isTrl="N" original="Create and add machines to be used in a work center.">Create and add machines to be used in a work center.</value>
+  </row>
+  <row id="800128" trl="Y">
+    <value column="Name" isTrl="Y" original="Toolset">Peralatan</value>
+    <value column="Description" isTrl="N" original="Define tools and groups of tools to be used in the production process.">Define tools and groups of tools to be used in the production process.</value>
+  </row>
+  <row id="800133" trl="Y">
+    <value column="Name" isTrl="Y" original="Work Incidence">Kecelakaan Kerja</value>
+    <value column="Description" isTrl="N" original="Define types of work incidences that may occur during production.">Define types of work incidences that may occur during production.</value>
+  </row>
+  <row id="800137" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Plan">Komposisi dan Tahapan Produksi</value>
+    <value column="Description" isTrl="N" original="Define the steps and processes to be completed for an intermediate or finished good, taking into account available resources.">Define the steps and processes to be completed for an intermediate or finished good, taking into account available resources.</value>
+  </row>
+  <row id="800138" trl="Y">
+    <value column="Name" isTrl="Y" original="Work Requirement">Rencana Produksi</value>
+    <value column="Description" isTrl="N" original="Create and manage an order for a process plan to be executed a certain number of times to satisfy the production requirements.">Create and manage an order for a process plan to be executed a certain number of times to satisfy the production requirements.</value>
+  </row>
+  <row id="800139" trl="Y">
+    <value column="Name" isTrl="Y" original="Work Effort">Realisasi Produksi</value>
+    <value column="Description" isTrl="N" original="Edit precisely what has been produced from a selected product order.">Edit precisely what has been produced from a selected product order.</value>
+  </row>
+  <row id="800141" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports and tools to analyze data.">Open a folder where you can find reports and tools to analyze data.</value>
+  </row>
+  <row id="800159" trl="Y">
+    <value column="Name" isTrl="Y" original="Activity">Aktivitas</value>
+    <value column="Description" isTrl="N" original="Define activities (processes) to be performed as part of a process plan and their characteristics .">Define activities (processes) to be performed as part of a process plan and their characteristics .</value>
+  </row>
+  <row id="800160" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Standard Costs">Calculate Standard Costs</value>
+    <value column="Description" isTrl="N" original="Calculates the standard cost of manufactured products.">Calculates the standard cost of manufactured products.</value>
+  </row>
+  <row id="800168" trl="Y">
+    <value column="Name" isTrl="Y" original="Quality Control Point">Titik Kritis (CCP)</value>
+    <value column="Description" isTrl="N" original="Define quality control check points to be used for testing the product quality at any point in the production process.">Define quality control check points to be used for testing the product quality at any point in the production process.</value>
+  </row>
+  <row id="800169" trl="Y">
+    <value column="Name" isTrl="Y" original="Quality Control Report">Pengukuran Titik Kritis (CCP)</value>
+    <value column="Description" isTrl="N" original="Create and edit measurements and report findings at predefined checkpoints.  The goal is to ensure output quality during production.">Create and edit measurements and report findings at predefined checkpoints.  The goal is to ensure output quality during production.</value>
+  </row>
+  <row id="800172" trl="Y">
+    <value column="Name" isTrl="Y" original="Periodic Quality Control">Kontrol Rutin</value>
+    <value column="Description" isTrl="N" original="Define checkpoints to be used for quality control of a produced product.">Define checkpoints to be used for quality control of a produced product.</value>
+  </row>
+  <row id="800173" trl="Y">
+    <value column="Name" isTrl="Y" original="Periodic Quality Control Data">Data Kontrol Rutin</value>
+    <value column="Description" isTrl="N" original="Create and edit data collection and measurements related to quality control.  This is done at predefined checkpoints for a produced product.">Create and edit data collection and measurements related to quality control.  This is done at predefined checkpoints for a produced product.</value>
+  </row>
+  <row id="800177" trl="N">
+    <value column="Name" isTrl="N" original="G/L Items Report">G/L Items Report</value>
+    <value column="Description" isTrl="N" original="G/L Items Report">G/L Items Report</value>
+  </row>
+  <row id="800178" trl="N">
+    <value column="Name" isTrl="N" original="Performance Scorecard">Performance Scorecard</value>
+    <value column="Description" isTrl="N" original="Performance Scorecard">Performance Scorecard</value>
+  </row>
+  <row id="800179" trl="N">
+    <value column="Name" isTrl="N" original="Text Interfaces">Text Interfaces</value>
+    <value column="Description" isTrl="N" original="Edit translations of forms and reports.">Edit translations of forms and reports.</value>
+  </row>
+  <row id="800180" trl="N">
+    <value column="Name" isTrl="N" original="Callout">Callout</value>
+    <value column="Description" isTrl="N" original="Define callouts of  the application, their classes, and their mapping plan.">Define callouts of  the application, their classes, and their mapping plan.</value>
+  </row>
+  <row id="800181" trl="Y">
+    <value column="Name" isTrl="Y" original="Promissory Note Format">Format Cetak Cek</value>
+    <value column="Description" isTrl="N" original="Create and edit the structure of how to print a promissory note.">Create and edit the structure of how to print a promissory note.</value>
+  </row>
+  <row id="800182" trl="Y">
+    <value column="Name" isTrl="Y" original="Machine Category">Kategori Mesin</value>
+    <value column="Description" isTrl="N" original="Create machine categories based on your desired characteristics.">Create machine categories based on your desired characteristics.</value>
+  </row>
+  <row id="800183" trl="Y">
+    <value column="Name" isTrl="Y" original="Maintenance Task">Operasi Pemeliharaan Mesin</value>
+    <value column="Description" isTrl="N" original="Define a scheduled maintenance task to be completed during the production process.">Define a scheduled maintenance task to be completed during the production process.</value>
+  </row>
+  <row id="800184" trl="Y">
+    <value column="Name" isTrl="Y" original="Maintenance Plan">Rencana Pemeliharaan Mesin</value>
+    <value column="Description" isTrl="N" original="Add and edit predefined maintenance plans.">Add and edit predefined maintenance plans.</value>
+  </row>
+  <row id="800185" trl="Y">
+    <value column="Name" isTrl="Y" original="Maintenance Order">Permintaan Perbaikan Mesin</value>
+    <value column="Description" isTrl="N" original="Create and edit the results of a scheduled maintenance order.">Create and edit the results of a scheduled maintenance order.</value>
+  </row>
+  <row id="800186" trl="N">
+    <value column="Name" isTrl="N" original="Insert Maintenances">Insert Maintenances</value>
+    <value column="Description" isTrl="N" original="Insert Maintenances">Insert Maintenances</value>
+  </row>
+  <row id="800188" trl="Y">
+    <value column="Name" isTrl="Y" original="Internal Consumption">Pemakaian Produk untuk keperluan Internal</value>
+    <value column="Description" isTrl="N" original="Define products which are only to be used inside the enterprise.">Define products which are only to be used inside the enterprise.</value>
+  </row>
+  <row id="800189" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800190" trl="Y">
+    <value column="Name" isTrl="Y" original="Budget">Anggaran</value>
+    <value column="Description" isTrl="N" original="Create and edit budgets to be used for informative purposes.">Create and edit budgets to be used for informative purposes.</value>
+  </row>
+  <row id="800191" trl="N">
+    <value column="Name" isTrl="N" original="Create Budget Reports in Excel">Create Budget Reports in Excel</value>
+    <value column="Description" isTrl="N" original="Create Budget Reports in Excel">Create Budget Reports in Excel</value>
+  </row>
+  <row id="800193" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Status Management">Manajemen Status Pembayaran</value>
+    <value column="Description" isTrl="N" original="Edit the status of payments for the accounting purposes.">Edit the status of payments for the accounting purposes.</value>
+  </row>
+  <row id="800194" trl="Y">
+    <value column="Name" isTrl="Y" original="User Defined Accounting Report Setup">Pengaturan Laporan Akuntansi yang didefinisikan pengguna</value>
+    <value column="Description" isTrl="N" original="Define parameters and methods of showing reports.">Define parameters and methods of showing reports.</value>
+  </row>
+  <row id="800195" trl="Y">
+    <value column="Name" isTrl="Y" original="Remittance">Remitansi</value>
+    <value column="Description" isTrl="N" original="Edit payments by using remittances to cancel or return them.">Edit payments by using remittances to cancel or return them.</value>
+  </row>
+  <row id="800197" trl="N">
+    <value column="Name" isTrl="N" original="Shipper Report">Shipper Report</value>
+    <value column="Description" isTrl="N" original="Shipper Report">Shipper Report</value>
+  </row>
+  <row id="800198" trl="N">
+    <value column="Name" isTrl="N" original="User Defined Accounting Report">User Defined Accounting Report</value>
+    <value column="Description" isTrl="N" original="Selects an accounting model to obtain its report.">Selects an accounting model to obtain its report.</value>
+  </row>
+  <row id="800199" trl="Y">
+    <value column="Name" isTrl="Y" original="External Point of Sales">POS Eksternal</value>
+    <value column="Description" isTrl="N" original="Define and synchonize Openbravo to your points of sales and their respective attributes.">Define and synchonize Openbravo to your points of sales and their respective attributes.</value>
+  </row>
+  <row id="800200" trl="N">
+    <value column="Name" isTrl="N" original="Import/Export Translations">Import/Export Translations</value>
+    <value column="Description" isTrl="N" original="Import or export localizations.">Import or export localizations.</value>
+  </row>
+  <row id="800201" trl="N">
+    <value column="Name" isTrl="N" original="Delete Client">Delete Client</value>
+    <value column="Description" isTrl="N" original="This process deletes a client">This process deletes a client</value>
+  </row>
+  <row id="800202" trl="N">
+    <value column="Name" isTrl="N" original="Offers Report">Offers Report</value>
+    <value column="Description" isTrl="N" original="Offers Report">Offers Report</value>
+  </row>
+  <row id="800203" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Category">Kategori Gaji</value>
+    <value column="Description" isTrl="N" original="Create salary categories to be applied to your employees/workers.">Create salary categories to be applied to your employees/workers.</value>
+  </row>
+  <row id="800204" trl="Y">
+    <value column="Name" isTrl="Y" original="Indirect Cost">Biaya Tidak Langsung</value>
+    <value column="Description" isTrl="N" original="Create and edit indirect costs to be used in production.">Create and edit indirect costs to be used in production.</value>
+  </row>
+  <row id="800205" trl="N">
+    <value column="Name" isTrl="N" original="Create Production Costs">Create Production Costs</value>
+    <value column="Description" isTrl="N" original="Create Production Costs">Create Production Costs</value>
+  </row>
+  <row id="800206" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner Tax Category">Kategori Pajak Business Partner</value>
+    <value column="Description" isTrl="N" original="Create a tax category to be added to each business partner.">Create a tax category to be added to each business partner.</value>
+  </row>
+  <row id="800207" trl="N">
+    <value column="Name" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+    <value column="Description" isTrl="N" original="Cashflow Forecast">Cashflow Forecast</value>
+  </row>
+  <row id="800208" trl="N">
+    <value column="Name" isTrl="N" original="Project Profitability">Project Profitability</value>
+    <value column="Description" isTrl="N" original="Project Profitability">Project Profitability</value>
+  </row>
+  <row id="800210" trl="N">
+    <value column="Name" isTrl="N" original="Production Cost Report">Production Cost Report</value>
+    <value column="Description" isTrl="N" original="Production Cost Report">Production Cost Report</value>
+  </row>
+  <row id="800212" trl="N">
+    <value column="Name" isTrl="N" original="Material Requirement Planning">Material Requirement Planning</value>
+    <value column="Description" isTrl="N" original="MRP provides the tools to plan and monitor purchase and production planning by tracking several inputs such as sales forecast and current stock levels.">MRP provides the tools to plan and monitor purchase and production planning by tracking several inputs such as sales forecast and current stock levels.</value>
+  </row>
+  <row id="800213" trl="Y">
+    <value column="Name" isTrl="Y" original="Planner">Pembuat Rencana</value>
+    <value column="Description" isTrl="N" original="Define the entity in charge of managing the purchase or production of specific products.">Define the entity in charge of managing the purchase or production of specific products.</value>
+  </row>
+  <row id="800214" trl="Y">
+    <value column="Name" isTrl="Y" original="MRP Forecast">Prediksi MRP</value>
+    <value column="Description" isTrl="N" original="Create and edit MRP forecasts over a specified time period in order to help plan necessary purchases.">Create and edit MRP forecasts over a specified time period in order to help plan necessary purchases.</value>
+  </row>
+  <row id="800216" trl="Y">
+    <value column="Name" isTrl="Y" original="Requisition">Permintaan Pembelian</value>
+    <value column="Description" isTrl="N" original="Create requests for the procurement department to buy necessary items based on your defined plan.">Create requests for the procurement department to buy necessary items based on your defined plan.</value>
+  </row>
+  <row id="800218" trl="Y">
+    <value column="Name" isTrl="Y" original="Planning Method">Metode Perencanaan</value>
+    <value column="Description" isTrl="N" original="Define how transaction types will be dealt with in the application.">Define how transaction types will be dealt with in the application.</value>
+  </row>
+  <row id="800220" trl="Y">
+    <value column="Name" isTrl="Y" original="Manufacturing Plan">Rencana Pra-Produksi</value>
+    <value column="Description" isTrl="N" original="Create a comprehensive work requirement in order to request materials over a specified time period.">Create a comprehensive work requirement in order to request materials over a specified time period.</value>
+  </row>
+  <row id="800221" trl="Y">
+    <value column="Name" isTrl="Y" original="Purchasing Plan">Rencana Pembelian</value>
+    <value column="Description" isTrl="N" original="Create a comprehensive and organized plan to request purchases over a specified time period.">Create a comprehensive and organized plan to request purchases over a specified time period.</value>
+  </row>
+  <row id="800224" trl="Y">
+    <value column="Name" isTrl="Y" original="Balance sheet and P&amp;L structure Setup">Pengaturan Neraca dan Laporan Rugi/Laba</value>
+    <value column="Description" isTrl="N" original="Balance Sheet and P&amp;L structure setup allows to configure the two main financial reports which are the Balance Sheet and the P&amp;L.">Balance Sheet and P&amp;L structure setup allows to configure the two main financial reports which are the Balance Sheet and the P&amp;L.</value>
+  </row>
+  <row id="800225" trl="N">
+    <value column="Name" isTrl="N" original="Not Posted Transaction Report">Not Posted Transaction Report</value>
+    <value column="Description" isTrl="N" original="Not Posted Transaction Report">Not Posted Transaction Report</value>
+  </row>
+  <row id="800226" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax Report Setup">Pengaturan Laporan Pajak</value>
+    <value column="Description" isTrl="N" original="Define parameters and methods of showing reports.">Define parameters and methods of showing reports.</value>
+  </row>
+  <row id="800227" trl="N">
+    <value column="Name" isTrl="N" original="Create Tax Report">Create Tax Report</value>
+    <value column="Description" isTrl="N" original="Create Tax Report">Create Tax Report</value>
+  </row>
+  <row id="800228" trl="Y">
+    <value column="Name" isTrl="Y" original="Alert">Notifikasi</value>
+    <value column="Description" isTrl="N" original="Create and edit alerts that will inform you about any critical or important situation in the application.">Create and edit alerts that will inform you about any critical or important situation in the application.</value>
+  </row>
+  <row id="800229" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Order Report">Purchase Order Report</value>
+    <value column="Description" isTrl="N" original="Purchase Order Report">Purchase Order Report</value>
+  </row>
+  <row id="800230" trl="N">
+    <value column="Name" isTrl="N" original="Alert Management">Alert Management</value>
+    <value column="Description" isTrl="N" original="Edit predefined alerts made by the user.">Edit predefined alerts made by the user.</value>
+  </row>
+  <row id="800231" trl="N">
+    <value column="Name" isTrl="N" original="Sales Report by Partner and Product">Sales Report by Partner and Product</value>
+    <value column="Description" isTrl="N" original="Report Sales by partner and Product">Report Sales by partner and Product</value>
+  </row>
+  <row id="800233" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800234" trl="Y">
+    <value column="Name" isTrl="Y" original="Maintenance">Pemeliharaan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="800237" trl="Y">
+    <value column="Name" isTrl="Y" original="Master Data Management">Manajemen Master Data</value>
+    <value column="Description" isTrl="N" original="Mater Data is a central repository of data where  key information such as business partners and products can be created, configured and therefore shared accross other Openbravo application areas.">Mater Data is a central repository of data where  key information such as business partners and products can be created, configured and therefore shared accross other Openbravo application areas.</value>
+  </row>
+  <row id="800238" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner Setup">Pengaturan Business Partner</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800239" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Setup">Pengaturan Product</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="800240" trl="Y">
+    <value column="Name" isTrl="Y" original="Pricing">Pengaturan Harga</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can edit prices related to your products.">Open a folder where you can edit prices related to your products.</value>
+  </row>
+  <row id="800242" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800243" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse Management">Manajemen Gudang</value>
+    <value column="Description" isTrl="N" original="Warehouses and storage bins can be created and manage in this application area, as well as inventory count and inventory valuation.">Warehouses and storage bins can be created and manage in this application area, as well as inventory count and inventory valuation.</value>
+  </row>
+  <row id="800244" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800245" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800247" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800248" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800249" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800250" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800251" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800252" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting">Akuntansi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define accounting settings such as the fiscal calendar, account elements, accounting schemas, and document types.">Open a folder where you can define accounting settings such as the fiscal calendar, account elements, accounting schemas, and document types.</value>
+  </row>
+  <row id="800253" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800254" trl="Y">
+    <value column="Name" isTrl="Y" original="Transactions">Transaksi</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can create, edit, and add data to be used to complete a given transaction.">Open a folder where you can create, edit, and add data to be used to complete a given transaction.</value>
+  </row>
+  <row id="800255" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800256" trl="Y">
+    <value column="Name" isTrl="Y" original="Setup">Pengaturan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can define all information to be used in this module.">Open a folder where you can define all information to be used in this module.</value>
+  </row>
+  <row id="800257" trl="Y">
+    <value column="Name" isTrl="Y" original="Deprecated">Sudah Tidak Digunakan</value>
+    <value column="Description" isTrl="N" original="Open a folder where you can find reports , windows, forms that are going to be deprecated">Open a folder where you can find reports , windows, forms that are going to be deprecated</value>
+  </row>
+  <row id="800258" trl="N">
+    <value column="Name" isTrl="N" original="Production Run Status Report">Production Run Status Report</value>
+    <value column="Description" isTrl="N" original="Production Run Status Report">Production Run Status Report</value>
+  </row>
+  <row id="800259" trl="N">
+    <value column="Name" isTrl="Y" original="BOM Production Report">Production Report</value>
+    <value column="Description" isTrl="Y" original="BOM Report Production">Report Production</value>
+  </row>
+  <row id="800260" trl="N">
+    <value column="Name" isTrl="N" original="Customer Invoice Report">Customer Invoice Report</value>
+    <value column="Description" isTrl="N" original="Customer Invoice Report">Customer Invoice Report</value>
+  </row>
+  <row id="800261" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Report">Sales Order Report</value>
+    <value column="Description" isTrl="N" original="Sales Order Report">Sales Order Report</value>
+  </row>
+  <row id="800262" trl="N">
+    <value column="Name" isTrl="N" original="Pending Work Requirement">Pending Work Requirement</value>
+    <value column="Description" isTrl="N" original="In this report are all the open work requirement phases and the quantities done and that left to do.">In this report are all the open work requirement phases and the quantities done and that left to do.</value>
+  </row>
+  <row id="800263" trl="N">
+    <value column="Name" isTrl="N" original="Orders Awaiting Invoice Report">Orders Awaiting Invoice Report</value>
+    <value column="Description" isTrl="N" original="Orders Awaiting Invoice Report">Orders Awaiting Invoice Report</value>
+  </row>
+  <row id="800264" trl="N">
+    <value column="Name" isTrl="N" original="Expiration Date Report">Expiration Date Report</value>
+    <value column="Description" isTrl="N" original="Expiration Date Report">Expiration Date Report</value>
+  </row>
+  <row id="800265" trl="N">
+    <value column="Name" isTrl="N" original="Vendor Invoice Report">Vendor Invoice Report</value>
+    <value column="Description" isTrl="N" original="Report Invoice Vendor">Report Invoice Vendor</value>
+  </row>
+  <row id="800266" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Dimensional Report">Purchase Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Purchase dimensional analyses">Purchase dimensional analyses</value>
+  </row>
+  <row id="800267" trl="N">
+    <value column="Name" isTrl="N" original="Goods Receipts Dimensional Report">Goods Receipts Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Goods receipt dimensional analyses">Goods receipt dimensional analyses</value>
+  </row>
+  <row id="800268" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Invoice Dimensional Report">Purchase Invoice Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Invoice vendor dimensional analyses">Invoice vendor dimensional analyses</value>
+  </row>
+  <row id="800269" trl="N">
+    <value column="Name" isTrl="N" original="Sales Dimensional Report">Sales Dimensional Report</value>
+    <value column="Description" isTrl="N" original="Sales dimensional analyze">Sales dimensional analyze</value>
+  </row>
+  <row id="800270" trl="N">
+    <value column="Name" isTrl="N" original="Stock Report">Stock Report</value>
+    <value column="Description" isTrl="N" original="Customer Stock Report">Customer Stock Report</value>
+  </row>
+  <row id="800279" trl="N">
+    <value column="Name" isTrl="N" original="Discount Invoice Report">Discount Invoice Report</value>
+    <value column="Description" isTrl="N" original="ReportInvoiceDiscount">ReportInvoiceDiscount</value>
+  </row>
+  <row id="800281" trl="N">
+    <value column="Name" isTrl="N" original="Daily Work Requirements Report">Daily Work Requirements Report</value>
+    <value column="Description" isTrl="N" original="In this report are showed the work requirements of type ramp. By default only from actual date.">In this report are showed the work requirements of type ramp. By default only from actual date.</value>
+  </row>
+  <row id="800282" trl="N">
+    <value column="Name" isTrl="N" original="Stock for Open Orders">Stock for Open Orders</value>
+    <value column="Description" isTrl="N" original="Show the lines of the pending orders with the actual stock of each product.">Show the lines of the pending orders with the actual stock of each product.</value>
+  </row>
+  <row id="800285" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Detail">Invoice Detail</value>
+    <value column="Description" isTrl="N" original="Invoice Detail">Invoice Detail</value>
+  </row>
+  <row id="800287" trl="N">
+    <value column="Name" isTrl="N" original="Standard Costs Report">Standard Costs Report</value>
+    <value column="Description" isTrl="N" original="Manufacturing Standard Cost">Manufacturing Standard Cost</value>
+  </row>
+  <row id="800288" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Open Item">Sales Order Open Item</value>
+    <value column="Description" isTrl="N" original="SalesOrderOpenItem">SalesOrderOpenItem</value>
+  </row>
+  <row id="800289" trl="N">
+    <value column="Name" isTrl="N" original="Cash Flow Statement">Cash Flow Statement</value>
+    <value column="Description" isTrl="N" original="Cash Flow Statement">Cash Flow Statement</value>
+  </row>
+  <row id="800290" trl="N">
+    <value column="Name" isTrl="N" original="Generate Cash Flow Statement">Generate Cash Flow Statement</value>
+    <value column="Description" isTrl="N" original="Generate Cash Flow Statement">Generate Cash Flow Statement</value>
+  </row>
+  <row id="8521FBEB13094CE1B80F1F9326C847E8" trl="N">
+    <value column="Name" isTrl="N" original="Pareto Product Report">Pareto Product Report</value>
+    <value column="Description" isTrl="N" original="Pareto Product Report">Pareto Product Report</value>
+  </row>
+  <row id="8BA14A552EA84AB19A33F3F2C3002790" trl="N">
+    <value column="Name" isTrl="N" original="Export Client">Export Client</value>
+    <value column="Description" isTrl="N" original="Export a client to xml">Export a client to xml</value>
+  </row>
+  <row id="8BA9DEA4CA5F4AFE84A60C9EB5BF1A66" trl="N">
+    <value column="Name" isTrl="N" original="Valued Stock Report">Valued Stock Report</value>
+    <value column="Description" isTrl="N" original="Valued Stock Report">Valued Stock Report</value>
+  </row>
+  <row id="A519EEB1C1994CCF8208E5B73B5A04C6" trl="Y">
+    <value column="Name" isTrl="Y" original="Costing Rules">Aturan Penentuan HPP</value>
+    <value column="Description" isTrl="N" original="A costing rule can be applied during cost calculation.  Each costing rule requires a costing algorithm and a valid from date to properly calculate the  cost of material's transactions. The &quot;Warehouse&quot; can be configured as a dimension to take into account ">A costing rule can be applied during cost calculation.  Each costing rule requires a costing algorithm and a valid from date to properly calculate the  cost of material's transactions. The "Warehouse" can be configured as a dimension to take into account </value>
+  </row>
+  <row id="A5A76D4C0D084A80AFB9A2A8F4A0A8AE" trl="Y">
+    <value column="Name" isTrl="Y" original="Return to Vendor Shipment">Pengiriman Retur Pembelian</value>
+    <value column="Description" isTrl="N" original="Return to vendor shipment">Return to vendor shipment</value>
+  </row>
+  <row id="A89F0CBA7D174B0C83F51F2ED9801383" trl="N">
+    <value column="Name" isTrl="N" original="Brand">Brand</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AA912A0ED1EB4967B6A220291C7C118A" trl="N">
+    <value column="Name" isTrl="N" original="Instance Activation">Instance Activation</value>
+    <value column="Description" isTrl="N" original="Manage current instance">Manage current instance</value>
+  </row>
+  <row id="B73A1BE38C6F4F4BB17A3B6FA8C3293E" trl="N">
+    <value column="Name" isTrl="N" original="Module Management">Module Management</value>
+    <value column="Description" isTrl="N" original="Mangament for installed modules">Mangament for installed modules</value>
+  </row>
+  <row id="B902D95D3F654C7096C428F50381E38A" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Monitor">Monitor Eksekusi Background Process</value>
+    <value column="Description" isTrl="N" original="Monitor the results, run time, start and finish times of execution of process requests.">Monitor the results, run time, start and finish times of execution of process requests.</value>
+  </row>
+  <row id="B98CC98DABEE409DB43A0A224CA140EA" trl="N">
+    <value column="Name" isTrl="N" original="End Year Close">End Year Close</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BC399BACA2F34B968C54555D79ED66A7" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse Rules">Procedure pada Gudang</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BE86736DF4AB4568A316A3922E6D6B7B" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Request">Penjadwalan Background Process</value>
+    <value column="Description" isTrl="N" original="Request processes and reports to be scheduled and executed in the background.">Request processes and reports to be scheduled and executed in the background.</value>
+  </row>
+  <row id="BECE8640090B45A7B92AA8329742FB6B" trl="N">
+    <value column="Name" isTrl="N" original="Update Product Characteristics Description">Update Product Characteristics Description</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C073633F0AFF4A93B17C13F239DE9613" trl="N">
+    <value column="Name" isTrl="N" original="Customer Statement">Customer Statement</value>
+    <value column="Description" isTrl="N" original="Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period">Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period</value>
+  </row>
+  <row id="C14426B2503546788BE2BAEBA2BE81DC" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting templates">Template Akuntansi</value>
+    <value column="Description" isTrl="N" original="Accounting templates to overwrite default accounting behavior">Accounting templates to overwrite default accounting behavior</value>
+  </row>
+  <row id="C62EBC52C8DF463B9B720D52F250A8CF" trl="Y">
+    <value column="Name" isTrl="Y" original="Condition of the goods">Kondisi Barang</value>
+    <value column="Description" isTrl="N" original="Condition of the goods to be used in window RM receipt">Condition of the goods to be used in window RM receipt</value>
+  </row>
+  <row id="CC8E287A0B0743D69C53D8F678F9AD41" trl="N">
+    <value column="Name" isTrl="N" original="Reset Accounting">Reset Accounting</value>
+    <value column="Description" isTrl="N" original="Reset Accounting Entries">Reset Accounting Entries</value>
+  </row>
+  <row id="D13B4DBDCBF747BB9A91B17CBC6D1AA5" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Scheduling">Penjadwalan Proses</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D4A88451E7F64130A1998567B5E0C68F" trl="N">
+    <value column="Name" isTrl="N" original="Project Progress">Project Progress</value>
+    <value column="Description" isTrl="N" original="Report that shows the progress of the projects.">Report that shows the progress of the projects.</value>
+  </row>
+  <row id="DF55818A579B448AAF0CE64736E20E45" trl="N">
+    <value column="Name" isTrl="N" original="Dataset">Dataset</value>
+    <value column="Description" isTrl="N" original="Dataset">Dataset</value>
+  </row>
+  <row id="EEC07584F29040388C9BAA388BC4C2D0" trl="Y">
+    <value column="Name" isTrl="Y" original="System Info">Informasi Sistem</value>
+    <value column="Description" isTrl="N" original="System Info">System Info</value>
+  </row>
+  <row id="EFC616EE0EA04A9ABB47E793A0D8F671" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Quotation">Penawaran Penjualan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F2F2F35AF85A456A98B59EAD137C1DB6" trl="Y">
+    <value column="Name" isTrl="Y" original="Cost Center">Pusat Biaya</value>
+    <value column="Description" isTrl="N" original="Cost Center is an accounting dimension which can be used while posting documents to the ledger.">Cost Center is an accounting dimension which can be used while posting documents to the ledger.</value>
+  </row>
+  <row id="F5C274DEAE9048DCAD48473D2F622CEC" trl="Y">
+    <value column="Name" isTrl="Y" original="Return to Vendor">Retur Pembelian</value>
+    <value column="Description" isTrl="N" original="Return to vendor (RTV). Here you enter the goods you want to return to the vendor">Return to vendor (RTV). Here you enter the goods you want to return to the vendor</value>
+  </row>
+  <row id="FC127CE8582944C0AA664A35C890AAD5" trl="N">
+    <value column="Name" isTrl="N" original="AD Implementation Mapping">AD Implementation Mapping</value>
+    <value column="Description" isTrl="N" original="Displays the AD-implementation mappings">Displays the AD-implementation mappings</value>
+  </row>
+  <row id="FF8080813302598D0133026072770003" trl="Y">
+    <value column="Name" isTrl="Y" original="Return from Customer">Retur Penjualan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FF808181323E504701323E5E20F10063" trl="Y">
+    <value column="Name" isTrl="Y" original="Production Run">Produksi Berjalan</value>
+    <value column="Description" isTrl="N" original="Edit precisely what has been produced from a selected product order.">Edit precisely what has been produced from a selected product order.</value>
+  </row>
+</compiereTrl>

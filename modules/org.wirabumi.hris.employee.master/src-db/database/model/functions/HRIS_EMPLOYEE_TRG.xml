@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION HRIS_EMPLOYEE_TRG">
+    <function name="HRIS_EMPLOYEE_TRG" type="VARCHAR">
+      <body><![CDATA[v_count integer:=0; 
+v_supervisor_id varchar(32);
+BEGIN
+
+   IF AD_isTriggerEnabled()='N' THEN 
+IF TG_OP = 'DELETE' THEN RETURN OLD;
+ELSE RETURN NEW;
+END IF; 
+   END IF;
+
+   --update current position
+   if new.iscurrentpos ='Y' then
+select count(*) into v_count from hris_c_bp_empinfo
+where c_bpartner_id=new.c_bpartner_id
+and iscurrentpos='Y'
+and hris_c_bp_empinfo_id<>new.hris_c_bp_empinfo_id;
+if v_count=0 then -- no others current position
+   update c_bpartner set em_hris_c_bp_department_id = new.hris_c_bp_department_id,
+em_hris_employementtype = new.employementtype,
+em_hris_validto = new.validto,
+em_hris_validfrom = new.validfrom,
+em_hris_contractno = new.contractno,
+em_hris_level = new.level,
+em_hris_position = new.position, 
+em_hris_report_to = new.report_to,
+em_hris_jobtitle_id = new.hris_jobtitle_id,
+issalesrep = new.issalesrep,
+em_pyr_ispayrollmaster = new.em_pyr_ispayrollmaster,
+em_hris_costcenter_id=new.ma_costcenter_id
+
+   where c_bpartner_id = new.c_bpartner_id;
+else
+  raise exception 'There are other current position exists, please make them not current position before make this employment information as current position';
+end if;
+    end if;
+
+    --update site
+    UPDATE C_BPARTNER SET EM_HRIS_SITE = NEW.SITE
+    WHERE C_BPARTNER_ID = NEW.C_BPARTNER_ID;
+
+    --update supervisor_id
+    select ad_user_id into v_supervisor_id
+    from ad_user
+    where c_bpartner_id=new.report_to limit 1;
+
+    update ad_user
+    set supervisor_id=v_supervisor_id
+    where c_bpartner_id=new.c_bpartner_id;
+   
+    IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;
+END HRIS_EMPLOYEE_TRG
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+  <database name="TABLE TA_I_MANUALSCHEDULE">
+    <table name="TA_I_MANUALSCHEDULE" primaryKey="TA_I_MANUALSCHEDULE_KEY">
+      <column name="TA_I_MANUALSCHEDULE_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EMPLOYEEKEY" primaryKey="false" required="false" type="VARCHAR" size="40" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="C_BPARTNER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="YEAR" primaryKey="false" required="false" type="VARCHAR" size="10" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="MONTH" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="I_ISIMPORTED" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="I_ERRORMSG" primaryKey="false" required="false" type="VARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="PROCESSING" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP1" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP1_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP2" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP2_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP3" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP3_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP4" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP4_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP5" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP5_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP6" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP6_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP7" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP7_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP8" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP8_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP9" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP9_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP10" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP10_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP11" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP11_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP12" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP12_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP13" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP13_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP14" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP14_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP15" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP15_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP16" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP16_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP17" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP17_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP18" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP18_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP19" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP19_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP20" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP20_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP21" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP21_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP22" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP22_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP23" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP23_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP24" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP24_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP25" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP25_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP26" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP26_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP27" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP27_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP28" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP28_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP29" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP29_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP30" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP30_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP31" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SCHEDULEGROUP31_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="AD_CLIENT" name="TA_I_MANUALSCHEDULE_AD_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="TA_I_MANUALSCHEDULE_AD_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_BPARTNER" name="TA_I_MS_BP_FK">
+        <reference local="C_BPARTNER_ID" foreign="C_BPARTNER_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_1">
+        <reference local="SCHEDULEGROUP1_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_10">
+        <reference local="SCHEDULEGROUP10_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_11">
+        <reference local="SCHEDULEGROUP11_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_12">
+        <reference local="SCHEDULEGROUP12_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_13">
+        <reference local="SCHEDULEGROUP13_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_14">
+        <reference local="SCHEDULEGROUP14_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_15">
+        <reference local="SCHEDULEGROUP15_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_16">
+        <reference local="SCHEDULEGROUP16_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_17">
+        <reference local="SCHEDULEGROUP17_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_18">
+        <reference local="SCHEDULEGROUP18_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_19">
+        <reference local="SCHEDULEGROUP19_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_2">
+        <reference local="SCHEDULEGROUP2_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_20">
+        <reference local="SCHEDULEGROUP20_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_21">
+        <reference local="SCHEDULEGROUP21_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_22">
+        <reference local="SCHEDULEGROUP22_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_23">
+        <reference local="SCHEDULEGROUP23_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_24">
+        <reference local="SCHEDULEGROUP24_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_25">
+        <reference local="SCHEDULEGROUP25_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_26">
+        <reference local="SCHEDULEGROUP26_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_27">
+        <reference local="SCHEDULEGROUP27_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_28">
+        <reference local="SCHEDULEGROUP28_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_29">
+        <reference local="SCHEDULEGROUP29_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_3">
+        <reference local="SCHEDULEGROUP3_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_30">
+        <reference local="SCHEDULEGROUP30_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_31">
+        <reference local="SCHEDULEGROUP31_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_4">
+        <reference local="SCHEDULEGROUP4_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_5">
+        <reference local="SCHEDULEGROUP5_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_6">
+        <reference local="SCHEDULEGROUP6_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_7">
+        <reference local="SCHEDULEGROUP7_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_8">
+        <reference local="SCHEDULEGROUP8_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="TA_MANUALSCHEDULEGROUP" name="TA_I_MSG_9">
+        <reference local="SCHEDULEGROUP9_ID" foreign="TA_MANUALSCHEDULEGROUP_ID"/>
+      </foreign-key>
+      <check name="TA_I_MANUALSCHEDULE_ACTIVE_CHK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+    </table>
+  </database>

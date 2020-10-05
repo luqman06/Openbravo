@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="00B16015177C4A1E9139DE51AE500AB5" trl="N">
+    <value column="Name" isTrl="N" original="Control KPI">Control KPI</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="00F6A69B3C8B4277A1A2A3B2D98C7121" trl="N">
+    <value column="Name" isTrl="Y" original="Retirement">Pensiun Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="060FAB0B68F34794A28C31FF16AA1DFC" trl="N">
+    <value column="Name" isTrl="Y" original="KPI Category">Kategori KPI</value>
+    <value column="Description" isTrl="Y" original="KPI Category">Kategori KPI</value>
+    <value column="Help" isTrl="Y" original="group of KPI, considered as KPI outcome">Kelompok KPI, bisa dikatakan sebagai ouput dari KPI.</value>
+  </row>
+  <row id="0BAD3ACFA6554BF9BADD6F964B57BC56" trl="N">
+    <value column="Name" isTrl="N" original="Employee Transfer">Employee Transfer</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1096B2F37757402AA8F9D2E07979FFC4" trl="N">
+    <value column="Name" isTrl="N" original="Employee Grade Rule">Employee Grade Rule</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="10C374CD35184D41A0BC8F87493F627F" trl="N">
+    <value column="Name" isTrl="Y" original="Resignation Request">Permohonan Pengunduran Diri</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="192E9C30FE5F432CBA2DE2680E4FC1B6" trl="Y">
+    <value column="Name" isTrl="Y" original="Department">Departemen</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1A37B2C3A3D94416B93E2A462E03E624" trl="N">
+    <value column="Name" isTrl="N" original="Employee Achievement">Employee Achievement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1FC960B042F0440492AA013F13E0A005" trl="Y">
+    <value column="Name" isTrl="Y" original="Site">Wilayah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="202D8D1AE05442DFB16F4D2BA762CBCC" trl="N">
+    <value column="Name" isTrl="Y" original="Update Employee Contact Request">Pengajuan Data Keluarga</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="318A38AFC4A3420FAA6317F852BB5474" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Candidate">Calon Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3368E8A2061F441FA95B9A9CB60EBB56" trl="N">
+    <value column="Name" isTrl="N" original="Education Permit">Education Permit</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="38CEAB2F540F4289B209999FD9D62DB1" trl="N">
+    <value column="Name" isTrl="Y" original="Achievement Catalogue">Achivments</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3C2E63984B08402B92D9C9E7DB3EB52B" trl="N">
+    <value column="Name" isTrl="N" original="General Exam">General Exam</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="401316DC85BB47BF9C7C9143FA38F479" trl="N">
+    <value column="Name" isTrl="Y" original="Pay Slip">Slip Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4933EC8DAA4A497A8D248951B3120AAA" trl="N">
+    <value column="Name" isTrl="Y" original="Term Loan">Pinjaman Berjangka</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4D26E44245394F20A232A6B4185C8EC1" trl="N">
+    <value column="Name" isTrl="Y" original="Import Employee Candidate">Import Calon Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4E41DB4F32424F45B9C6A3767BB07F07" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Transfer (OLD)">Mutasi Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Transfer employee to another region, site or department.">Mutasi karyawan ke daerah, wilayah, atau departemen lainnya.</value>
+  </row>
+  <row id="51BC2F45125544458B939C3040B69A43" trl="N">
+    <value column="Name" isTrl="Y" original="Job Title">Jabatan Lengkap</value>
+    <value column="Description" isTrl="Y" original="Job Title">Jabatan Lengkap</value>
+    <value column="Help" isTrl="N" original="">Kombinasi antara jabatan dan organisasi, membentu sebuah jabatan lengkap.
+contohnya:
+organisasi: Divisi Regional Jawa Timur
+jabatan: Kepala Seksi Anggaran
+jabatan lengkap: Kepala Seksi Anggaran Jawa Timur</value>
+  </row>
+  <row id="61B7E50DC50946BB9B9F9554B3EFA2FC" trl="N">
+    <value column="Name" isTrl="N" original="Employee Training">Employee Training</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6A7C36AFEF574A93AFE54E811916BA18" trl="N">
+    <value column="Name" isTrl="N" original="Education Admission">Education Admission</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6AC924794F864213B7575DA0E3A5C660" trl="N">
+    <value column="Name" isTrl="N" original="Employee Job Experience">Employee Job Experience</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="740754A8DE014B86A87A18100707D318" trl="N">
+    <value column="Name" isTrl="Y" original="Training Calendar">Jadwal Pelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="76184D9A52F246C2977A7D609445C49F" trl="Y">
+    <value column="Name" isTrl="Y" original="Education Dicipline">Disiplin Ilmu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7AD8365CD77B48BCA2D641E35E294ED5" trl="N">
+    <value column="Name" isTrl="N" original="Employee Education">Employee Education</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7FD62F31F5634FF5BD3617E9A1FA8B6C" trl="N">
+    <value column="Name" isTrl="Y" original="Salary Back Payment">Rapel Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="85C0F38EB78F44CCBCBA96750E077709" trl="N">
+    <value column="Name" isTrl="Y" original="Training Plan">Usulan Pelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8BD2CE9C7A1849E78C6AF75F57FA7BEB" trl="N">
+    <value column="Name" isTrl="N" original="Insurance Payee">Insurance Payee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="969A9247C47547A88A724B0B82EB5B6D" trl="Y">
+    <value column="Name" isTrl="Y" original="Certificate/License Catalogue">Sertifikat/Lisensi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A14581C13597471EB281EE4277BC6712" trl="N">
+    <value column="Name" isTrl="Y" original="Insurance Provider">Penyedia Asuransi</value>
+    <value column="Description" isTrl="Y" original="Insurance provider">Asuransi</value>
+    <value column="Help" isTrl="Y" original="Insurance provider">Asuransi</value>
+  </row>
+  <row id="A6D70038F3014112A5EB4460FDF70FE5" trl="N">
+    <value column="Name" isTrl="N" original="KPI Measurement">KPI Measurement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AC61DC9576D64230A032BB3324FDAD23" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Profile">Profil Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AC9D6644B7B242FFB0AA7471DE11A636" trl="N">
+    <value column="Name" isTrl="N" original="KPI">KPI</value>
+    <value column="Description" isTrl="Y" original="Key Performance Indicator">KPI</value>
+    <value column="Help" isTrl="N" original="Key Performance Indicator master data">Key Performance Indicator master data</value>
+  </row>
+  <row id="BE792B7473504EF091C93ED8CB647037" trl="N">
+    <value column="Name" isTrl="N" original="Employee Competency">Employee Competency</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BFD9AFB6CC094205BD92318F875D5FE6" trl="Y">
+    <value column="Name" isTrl="Y" original="My Information">Informasi Saya</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C549CEAFE6294E0EB17FB45B6A8F17B7" trl="Y">
+    <value column="Name" isTrl="Y" original="Job Competency Catalogue">Kompetensi</value>
+    <value column="Description" isTrl="N" original="Competency">Competency</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CB34CF8E36F248C1BE7B258319F53874" trl="N">
+    <value column="Name" isTrl="Y" original="Punishment Classification">Klasifikasi Hukuman</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CB4DA7909FF04ECD9730B325127D272E" trl="N">
+    <value column="Name" isTrl="N" original="Employee Supervisor Management">Employee Supervisor Management</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CF764C8FE1744043A1355CECFA3C0EF0" trl="N">
+    <value column="Name" isTrl="N" original="Employee Certificate/License">Employee Certificate/License</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D4EF0CA107C04FB096D439C2DF0A43A7" trl="N">
+    <value column="Name" isTrl="N" original="Violation Catalogue">Violation Catalogue</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DA244CFE8DDC45399F2263ADAE9A4C99" trl="N">
+    <value column="Name" isTrl="Y" original="Training Catalogue">Katalog Pelatihan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F1C7BD2153B84DBE9D9C30FD9281611F" trl="N">
+    <value column="Name" isTrl="N" original="Education Exam">Education Exam</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F4F354C55D7F435581506736C95C38DA" trl="N">
+    <value column="Name" isTrl="N" original="ARCI Matrix">ARCI Matrix</value>
+    <value column="Description" isTrl="N" original="ARCI Matrix">ARCI Matrix</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F6C2A66D5D7D42EAA324E2105C24BCEC" trl="N">
+    <value column="Name" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F71F1E2860D94878AF710DDF5530A9D9" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Case">Pelanggaran Kepegawaian</value>
+    <value column="Description" isTrl="Y" original="Employee Case History">Pelanggaran Kepegawaian</value>
+    <value column="Help" isTrl="Y" original="Capture Employee Case, violation and punishment for his violation">pelanggaran karyawan, merupakan dasar diterbitkannya surat peringatan (SP) dan hukuman.s</value>
+  </row>
+  <row id="F7E1DB9C4BE04C08A6FDEC1BF2C677DB" trl="N">
+    <value column="Name" isTrl="Y" original="Position Rule">Aturan Jabatan</value>
+    <value column="Description" isTrl="Y" original="Position rule">aturan menempatkan karyawan pada jabatan tertentu. sebuah jabatan hanya bisa ditempati oleh karyawan dengan jenjang jabatan dan pangkat/golongan tertentu</value>
+    <value column="Help" isTrl="Y" original="define a rule to assign an employee to an position">aturan menempatkan karyawan pada jabatan tertentu. sebuah jabatan hanya bisa ditempati oleh karyawan dengan jenjang jabatan dan pangkat/golongan tertentu</value>
+  </row>
+  <row id="FDDFAABC04134C15B1CC1F52E0C725D6" trl="N">
+    <value column="Name" isTrl="Y" original="Benefits Claim">Klaim Manfaat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FE4E14F938BC40DA842779AD7A826685" trl="N">
+    <value column="Name" isTrl="Y" original="Reimbursment">Uang Pengganti</value>
+    <value column="Description" isTrl="Y" original="Reimbursment request">Uang Pengganti</value>
+    <value column="Help" isTrl="Y" original="Reimbursment request">klaim Uang Pengganti</value>
+  </row>
+  <row id="FF10269006494B1F971010036D75B39E" trl="N">
+    <value column="Name" isTrl="Y" original="Family Information Change Request">Usulan Perubahan Data Keluarga</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

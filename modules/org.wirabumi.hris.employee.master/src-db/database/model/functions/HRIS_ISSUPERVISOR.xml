@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION HRIS_ISSUPERVISOR">
+    <function name="HRIS_ISSUPERVISOR" type="CHAR">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_supervisor_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_supervisor_id varchar(32);
+  v_ResultStr varchar(2000);
+ 
+  BEGIN
+
+  BEGIN --BODY
+    
+    select em_hris_report_to into v_supervisor_id
+    from c_bpartner where c_bpartner_id=p_employee_id;
+
+    --karyawan tidak memiliki supervisor, atasan tertinggi, kemungkinan bukan 1 path dalam hirarki jabatan, return -1
+    if (v_supervisor_id is null) then return 'N'; end if;
+
+    --supervisor sudah ketemu, return 1
+    if (v_supervisor_id=p_supervisor_id) then return 'Y'; end if;
+
+    --supervisor belum ketemu, rekursif
+    return hris_issupervisor(v_supervisor_id, p_supervisor_id);
+    
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= '@ERROR=' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+END HRIS_ISSUPERVISOR
+]]></body>
+    </function>
+  </database>

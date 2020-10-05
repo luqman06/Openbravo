@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="209" trl="N">
+    <value column="Name" isTrl="N" original="AD_ImpFormat FormatType">AD_ImpFormat FormatType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="272" trl="N">
+    <value column="Name" isTrl="N" original="I_ElementValue Column">I_ElementValue Column</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="1DEF8E0B1E814096AE1DB75FDD818260" trl="N">
+    <value column="Text" isTrl="N" original="Unit Kerja">Unit Kerja</value>
+  </row>
+  <row id="1F44959C71F04ECA9349824B50EF6234" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="21E5F479900D43E4A047E1832C890E7D" trl="N">
+    <value column="Text" isTrl="N" original="PEMBAYARAN BULAN:">PEMBAYARAN BULAN:</value>
+  </row>
+  <row id="2754E90864D74FB1B3ED18B3020FC400" trl="N">
+    <value column="Text" isTrl="N" original="alasan">alasan</value>
+  </row>
+  <row id="27F3E8ED1AF64E3986825DC0204AFEA0" trl="N">
+    <value column="Text" isTrl="N" original="Overtime By Date">Overtime By Date</value>
+  </row>
+  <row id="2AFD13D63D75486CB387480ABBC70AEE" trl="N">
+    <value column="Text" isTrl="N" original="NIK / Nama">NIK / Nama</value>
+  </row>
+  <row id="2B0A3C3564864AA8810E1A057F1AA4D2" trl="N">
+    <value column="Text" isTrl="N" original="Checkout">Checkout</value>
+  </row>
+  <row id="3D3B24A02A7443C5886BFC64FAF282B1" trl="N">
+    <value column="Text" isTrl="N" original="Valid Mulai">Valid Mulai</value>
+  </row>
+  <row id="519C7BA5F12E4835AFAD2D16C79E7344" trl="N">
+    <value column="Text" isTrl="N" original="Alasan">Alasan</value>
+  </row>
+  <row id="60CCD86338CB4295991E104A89C50FEA" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="62B503FE37E14199A5A5120A512D3D48" trl="N">
+    <value column="Text" isTrl="N" original="Valid Sampai">Valid Sampai</value>
+  </row>
+  <row id="6AF5C942D7C249418CF8375B3D4E7E90" trl="N">
+    <value column="Text" isTrl="N" original="Mulai">Mulai</value>
+  </row>
+  <row id="72EAC6B3FD5A44E4B2AAAEBD48696BFA" trl="N">
+    <value column="Text" isTrl="N" original="Tarif">Tarif</value>
+  </row>
+  <row id="7CD86FFA396E48CCA0B6A7F61EEE4B4E" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="800CF5C76D604BB6B952CA4AA8B9D4D9" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="81BD3E1AF65842E38D511225F837962B" trl="N">
+    <value column="Text" isTrl="N" original="hadir">hadir</value>
+  </row>
+  <row id="8776A7323C164B3AACF705A681C4D4F8" trl="N">
+    <value column="Text" isTrl="N" original="Tingkat">Tingkat</value>
+  </row>
+  <row id="87FC5877173F4B93B2AACC48D01FABEA" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="8B39046C42D64C0F89809DCBA5D0592E" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="8C8C45F17ADD439B8711AC01CACDE24E" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="949F32DF0C1049FBBA2548755BD8C471" trl="N">
+    <value column="Text" isTrl="N" original="Tarif">Tarif</value>
+  </row>
+  <row id="96152866A03E477CBA6CFF23B80D8DA7" trl="N">
+    <value column="Text" isTrl="N" original="Total Tarif">Total Tarif</value>
+  </row>
+  <row id="966A58AC61BA45DF9EBA5499BDD25C71" trl="N">
+    <value column="Text" isTrl="N" original="Total Tarif">Total Tarif</value>
+  </row>
+  <row id="96789E36F7BF4048A6F6BCDD6489C1DD" trl="N">
+    <value column="Text" isTrl="N" original="BULAN :">BULAN :</value>
+  </row>
+  <row id="96F1FECA6E704FC6A2E60F479190A415" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="9B1072C814A549519784C4B94C1181ED" trl="N">
+    <value column="Text" isTrl="N" original="Berakhir">Berakhir</value>
+  </row>
+  <row id="9CEC32630F654B9A883896ABC004FD07" trl="N">
+    <value column="Text" isTrl="N" original="NAMA">NAMA</value>
+  </row>
+  <row id="AE9E7A38377644DC9F31F4F1D158C32C" trl="N">
+    <value column="Text" isTrl="N" original="Checkin">Checkin</value>
+  </row>
+  <row id="B0DD0A21E14947A8976A9A6B939A12D6" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="B0F745AA47FC4105A107F3194B3A7114" trl="N">
+    <value column="Text" isTrl="N" original="status">status</value>
+  </row>
+  <row id="BA381FF3B6514983A5DDEAB81D52E4F8" trl="N">
+    <value column="Text" isTrl="N" original="Tarif">Tarif</value>
+  </row>
+  <row id="C94D72842059497EA29ED4697F60E579" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="CBA80CD3D6F44CF38EFAA621CD5817D1" trl="N">
+    <value column="Text" isTrl="N" original="Overtime By Employee">Overtime By Employee</value>
+  </row>
+  <row id="CF51D043C16E458CA9D4EDD5BEB55CA4" trl="N">
+    <value column="Text" isTrl="N" original="pulang">pulang</value>
+  </row>
+  <row id="D13BAAB1D0A14C018C0DC7EFD83ECA94" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="D190E930469A42FFA2D1B636BD096FB0" trl="N">
+    <value column="Text" isTrl="N" original="Actual">Actual</value>
+  </row>
+  <row id="DBE6C172CA954BEC929C575958642DEE" trl="N">
+    <value column="Text" isTrl="N" original="Checkin">Checkin</value>
+  </row>
+  <row id="DF903DF07DFA41E2A7DE87B47459397E" trl="N">
+    <value column="Text" isTrl="N" original="Alasan">Alasan</value>
+  </row>
+  <row id="EC03E4E3DF7C418ABFA706400D37E375" trl="N">
+    <value column="Text" isTrl="N" original="SURAT PANGGILAN(CALL OUT)">SURAT PANGGILAN(CALL OUT)</value>
+  </row>
+  <row id="ED6FFCA962FE4D40B384E6D8E0E78B3E" trl="N">
+    <value column="Text" isTrl="N" original="Actual">Actual</value>
+  </row>
+  <row id="F8FB5F3030114A44A4680FEE544C975B" trl="N">
+    <value column="Text" isTrl="N" original="Checkout">Checkout</value>
+  </row>
+</compiereTrl>

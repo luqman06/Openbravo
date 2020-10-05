@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_VALIDATE_INSURE">
+    <trigger name="HRIS_VALIDATE_INSURE" table="AD_USER" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+V_CHILD NUMBER;
+V_WIFE NUMBER;
+
+BEGIN
+	IF AD_ISTRIGGERENABLED()='N' THEN 
+		IF TG_OP='DELETE' THEN RETURN OLD;
+		ELSE RETURN NEW;
+		END IF;
+	END IF;
+
+SELECT COUNT(*) FROM AD_USER INTO V_CHILD 
+WHERE C_BPARTNER_ID=:NEW.C_BPARTNER_ID
+AND EM_HRIS_RELATION='ANAK'
+AND EM_HRIS_ISTERTANGGUNG='Y'
+AND EM_HRIS_MARITALSTATUS='BK';
+
+SELECT COUNT(*) FROM AD_USER INTO V_WIFE 
+WHERE C_BPARTNER_ID=:NEW.C_BPARTNER_ID
+AND EM_HRIS_RELATION='ISTRI'
+AND EM_HRIS_ISTERTANGGUNG='Y';
+
+IF V_CHILD > 2 THEN
+RAISE EXCEPTION 'There are maximum insured child,please check them';
+END IF ;
+
+IF :NEW.EM_HRIS_MARITALSTATUS ='KAWIN' AND :NEW.EM_HRIS_RELATION = 'ANAK' THEN
+RAISE EXCEPTION 'the company do not insured marital child';
+END IF;
+
+
+IF V_WIFE > 1 THEN
+RAISE EXCEPTION 'the company only insured one wife';
+END IF ;
+
+IF DELETING THEN RETURN OLD;
+ ELSE RETURN NEW; END IF; 
+
+END HRIS_VALIDATE_INSURE
+]]></body>
+    </trigger>
+  </database>

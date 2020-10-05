@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SqlClass id="class" name="UsulanPerubahanDataKeluarga2CA61B1C84AC47909019821DABA7F65BData" package="org.openbravo.erpWindows.org.wirabumi.hris.employee.master.FamilyInformationChangeRequest">
+  <SqlClassComment>WAD Generated class</SqlClassComment>
+
+  <SqlMethod name="dummy" type="preparedStatement" return="multiple">
+    <Sql>
+      SELECT '' AS dummy from DUAL
+    </Sql>
+  </SqlMethod>
+
+
+
+
+  <SqlMethod name="updateDocaction" type="preparedStatement" return="rowCount">
+    <Sql><![CDATA[
+        UPDATE hris_change_family
+        SET docaction = ? 
+        WHERE hris_change_family.Hris_Change_Family_ID = ?
+    ]]></Sql>
+    <Parameter name="docaction"></Parameter>
+    <Parameter id="paramKey" name="hrisChangeFamilyId"></Parameter>
+  </SqlMethod>
+
+
+
+
+</SqlClass>

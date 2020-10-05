@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELDGROUP" version="">
+  <row id="135B0EA41A294FF6887C4398ACABF46B" trl="Y">
+    <value column="Name" isTrl="Y" original="Days Of Week">Hari Dari Minggu</value>
+  </row>
+  <row id="5073DA1319E94E44A265D5B28A76DDA4" trl="N">
+    <value column="Name" isTrl="N" original="Replacement Employee">Replacement Employee</value>
+  </row>
+</compiereTrl>

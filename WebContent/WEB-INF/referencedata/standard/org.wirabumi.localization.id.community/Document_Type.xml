@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8"?><ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DocumentType id="030A53EE14E0457EAF1F0BF62B36FBFB" identifier="Memo Kredit Piutang">
+    <id>030A53EE14E0457EAF1F0BF62B36FBFB</id>
+    <active>true</active>
+    <name>Memo Kredit Piutang</name>
+    <printText>Memo Kredit Piutang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>ARC</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="7E140FD3FFE547BE8C5E4B825B7DD268" entity-name="ADSequence" identifier="AR Credit Memo"/>
+    <gLCategory id="71AA143E81B447E88B8D524374F61FF2" entity-name="FinancialMgmtGLCategory" identifier="AR Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>true</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="C2A55D8B6ACD4171AA807E164295F6D8" identifier="AR Credit Memo Report template">
+        <id>C2A55D8B6ACD4171AA807E164295F6D8</id>
+        <active>true</active>
+        <documentType id="030A53EE14E0457EAF1F0BF62B36FBFB" entity-name="DocumentType" identifier="Memo Kredit Piutang"/>
+        <name>AR Credit Memo Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur Penjualan - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="F570A37889D54E049F8E9822BB35D10C" identifier="AR Credit Memo Report template - ">
+            <id>F570A37889D54E049F8E9822BB35D10C</id>
+            <active>true</active>
+            <pocDocumentType id="C2A55D8B6ACD4171AA807E164295F6D8" entity-name="DocumentTemplate" identifier="AR Credit Memo Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="1A4293B5986241509AC2F67EAF599AEF" identifier="Proposal">
+    <id>1A4293B5986241509AC2F67EAF599AEF</id>
+    <active>false</active>
+    <name>Proposal</name>
+    <printText>Proposal</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>ON</sOSubType>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="1A3E126F44BB4D35B9BCB7D0F728C0DE" entity-name="ADSequence" identifier="Proposal"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="C1977FC487EC4EDD8716C9AEB506DA19" identifier="Proposal Report template">
+        <id>C1977FC487EC4EDD8716C9AEB506DA19</id>
+        <active>true</active>
+        <documentType id="1A4293B5986241509AC2F67EAF599AEF" entity-name="DocumentType" identifier="Proposal"/>
+        <name>Proposal Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="628931EB1E364C589592925107B1CE37" identifier="Proposal Report template - ">
+            <id>628931EB1E364C589592925107B1CE37</id>
+            <active>true</active>
+            <pocDocumentType id="C1977FC487EC4EDD8716C9AEB506DA19" entity-name="DocumentTemplate" identifier="Proposal Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="1B3A3DE8115C4994B7504C09E494F256" identifier="Piutang Ragu-ragu">
+    <id>1B3A3DE8115C4994B7504C09E494F256</id>
+    <active>true</active>
+    <name>Piutang Ragu-ragu</name>
+    <printText>Piutang Ragu-ragu</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>DDB</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="20E3AB01919541E0AF1D0E40C12443A0" entity-name="ADSequence" identifier="Doubtful Debt Sequence"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table id="30721072789F410E9606D2235CB2A226" entity-name="ADTable" identifier="FIN_Doubtful_Debt"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="1CDA7358488E408E860001719B175FCD" identifier="Terima RFC">
+    <id>1CDA7358488E408E860001719B175FCD</id>
+    <active>true</active>
+    <name>Terima RFC</name>
+    <printText>Terima RFC</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMS</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="CAF90DA0905A4716872DF1657545328B" entity-name="ADSequence" identifier="RFC Receipt"/>
+    <gLCategory id="466B5660188643F0B9A2C065A4328FB5" entity-name="FinancialMgmtGLCategory" identifier="Material Management"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table id="319" entity-name="ADTable" identifier="M_InOut"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="9988555E9E254A1E87A9447D8DC42C1A" identifier="RFC Receipt Template">
+        <id>9988555E9E254A1E87A9447D8DC42C1A</id>
+        <active>true</active>
+        <documentType id="1CDA7358488E408E860001719B175FCD" entity-name="DocumentType" identifier="Terima RFC"/>
+        <name>RFC Receipt Template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Terima RTV - @our_ref@</reportFilename>
+        <templateFilename>RptM_RMInOut.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="BD35D8DDA9EC4925A393B15C3DBB7D7F" identifier="RFC Receipt Template - ">
+            <id>BD35D8DDA9EC4925A393B15C3DBB7D7F</id>
+            <active>true</active>
+            <pocDocumentType id="9988555E9E254A1E87A9447D8DC42C1A" entity-name="DocumentTemplate" identifier="RFC Receipt Template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="1EFFEB7933E14035986D99FA6003BC31" identifier="Manual Settlement">
+    <id>1EFFEB7933E14035986D99FA6003BC31</id>
+    <active>true</active>
+    <name>Manual Settlement</name>
+    <printText>Manual Settlement</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>STM</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="682E838A35094398ABBEB87DC11F6BDB" entity-name="ADSequence" identifier="Manual Settlement"/>
+    <gLCategory id="C0D396EED4484C6282E7CAC24303B5ED" entity-name="FinancialMgmtGLCategory" identifier="Settlement"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="800019" entity-name="ADTable" identifier="C_Settlement"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="2C0CD033F26A4161B7ADBFA9C16E58EC" identifier="MM Shipment Indirect">
+    <id>2C0CD033F26A4161B7ADBFA9C16E58EC</id>
+    <active>false</active>
+    <name>MM Shipment Indirect</name>
+    <printText>MM Shipment Indirect</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMS</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="93F370AF95304DF780CCF7C8A5115888" entity-name="ADSequence" identifier="MM Shipment Indirect"/>
+    <gLCategory id="466B5660188643F0B9A2C065A4328FB5" entity-name="FinancialMgmtGLCategory" identifier="Material Management"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="319" entity-name="ADTable" identifier="M_InOut"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="CBFC30B52C8D475FA701BAED69A38938" identifier="MM Shipment Indirect Report template">
+        <id>CBFC30B52C8D475FA701BAED69A38938</id>
+        <active>true</active>
+        <documentType id="2C0CD033F26A4161B7ADBFA9C16E58EC" entity-name="DocumentType" identifier="MM Shipment Indirect"/>
+        <name>MM Shipment Indirect Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Kirim Barang - @our_ref@</reportFilename>
+        <templateFilename>RptM_InOut_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="9772EEDC0FC24836998B49F1915762DF" identifier="MM Shipment Indirect Report template - ">
+            <id>9772EEDC0FC24836998B49F1915762DF</id>
+            <active>true</active>
+            <pocDocumentType id="CBFC30B52C8D475FA701BAED69A38938" entity-name="DocumentTemplate" identifier="MM Shipment Indirect Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="2FDE7BDEE06D463289EFDAE8D11AA497" identifier="Standard Order">
+    <id>2FDE7BDEE06D463289EFDAE8D11AA497</id>
+    <active>true</active>
+    <name>Standard Order</name>
+    <printText>Standard Order</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>SO</sOSubType>
+    <documentTypeForShipment id="B12D338242BE404596AEDE2D4842F019" entity-name="DocumentType" identifier="Pengiriman Barang"/>
+    <documentTypeForInvoice id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="67262EC6CAB14409B30FBB66F80956AD" entity-name="ADSequence" identifier="Standard Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="2F6B579629644B7CA316E809125CF9B3" identifier="Standard order report template">
+        <id>2F6B579629644B7CA316E809125CF9B3</id>
+        <active>true</active>
+        <documentType id="2FDE7BDEE06D463289EFDAE8D11AA497" entity-name="DocumentType" identifier="Standard Order"/>
+        <name>Standard order report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="637EEAE2AA494FE1A1A54EA6FA375EFB" identifier="Standard order report template - ">
+            <id>637EEAE2AA494FE1A1A54EA6FA375EFB</id>
+            <active>true</active>
+            <pocDocumentType id="2F6B579629644B7CA316E809125CF9B3" entity-name="DocumentTemplate" identifier="Standard order report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="32FBFDD4FF7743DBA6689F7E355DB463" identifier="Penjualan Toko (Retail)">
+    <id>32FBFDD4FF7743DBA6689F7E355DB463</id>
+    <active>true</active>
+    <name>Penjualan Toko (Retail)</name>
+    <printText>Penjualan Toko (Retail)</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>WR</sOSubType>
+    <documentTypeForShipment id="2C0CD033F26A4161B7ADBFA9C16E58EC" entity-name="DocumentType" identifier="MM Shipment Indirect"/>
+    <documentTypeForInvoice id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="4BE6B8981ACE4AD985EC0BBABFDDE07C" entity-name="ADSequence" identifier="POS Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="37251A7262814948A44B532B0618F746" identifier="POS Order Report template">
+        <id>37251A7262814948A44B532B0618F746</id>
+        <active>true</active>
+        <documentType id="32FBFDD4FF7743DBA6689F7E355DB463" entity-name="DocumentType" identifier="Penjualan Toko (Retail)"/>
+        <name>POS Order Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="6E68A4B6EEDA424F86F0DCAB0ED7B318" identifier="POS Order Report template - ">
+            <id>6E68A4B6EEDA424F86F0DCAB0ED7B318</id>
+            <active>true</active>
+            <pocDocumentType id="37251A7262814948A44B532B0618F746" entity-name="DocumentTemplate" identifier="POS Order Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="3FA9D762C261419A97C235ACABF43F5A" identifier="Pembayaran Utang">
+    <id>3FA9D762C261419A97C235ACABF43F5A</id>
+    <active>true</active>
+    <name>Pembayaran Utang</name>
+    <printText>Pembayaran Utang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>APP</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="C398842BECE8457CA43BB13F9FC767EC" entity-name="ADSequence" identifier="AP Payment"/>
+    <gLCategory id="47BBF0FBE680434EA716C7E4C1B98727" entity-name="FinancialMgmtGLCategory" identifier="AP Payment"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="D1A97202E832470285C9B1EB026D54E2" entity-name="ADTable" identifier="FIN_Payment"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="766572322BBC4E97A7BBA0DFE4047934" identifier="AP Payment Report template">
+        <id>766572322BBC4E97A7BBA0DFE4047934</id>
+        <active>true</active>
+        <documentType id="3FA9D762C261419A97C235ACABF43F5A" entity-name="DocumentType" identifier="Pembayaran Utang"/>
+        <name>AP Payment Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pembayaran Vendor-Supplier - @our_ref@</reportFilename>
+        <templateFilename>RptFIN_Payment.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="A9E1639DA35E41DBB076133D6F8FC214" identifier="AP Payment Report template - ">
+            <id>A9E1639DA35E41DBB076133D6F8FC214</id>
+            <active>true</active>
+            <pocDocumentType id="766572322BBC4E97A7BBA0DFE4047934" entity-name="DocumentTemplate" identifier="AP Payment Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="42541F02F1A64965A43D10B1DF7A0E59" identifier="Retur">
+    <id>42541F02F1A64965A43D10B1DF7A0E59</id>
+    <active>false</active>
+    <name>Retur</name>
+    <printText>Retur</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>RM</sOSubType>
+    <documentTypeForShipment id="B12D338242BE404596AEDE2D4842F019" entity-name="DocumentType" identifier="Pengiriman Barang"/>
+    <documentTypeForInvoice id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="39C2C77170A14D06ADBDBCF3CEEB53C7" entity-name="ADSequence" identifier="Return Material"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="69F0BDB6B11F4EC7928125068DA0FCBF" identifier="Return Material Report template">
+        <id>69F0BDB6B11F4EC7928125068DA0FCBF</id>
+        <active>true</active>
+        <documentType id="42541F02F1A64965A43D10B1DF7A0E59" entity-name="DocumentType" identifier="Retur"/>
+        <name>Return Material Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="AA7144490F8A4148BA205AD729E893DA" identifier="Return Material Report template - ">
+            <id>AA7144490F8A4148BA205AD729E893DA</id>
+            <active>true</active>
+            <pocDocumentType id="69F0BDB6B11F4EC7928125068DA0FCBF" entity-name="DocumentTemplate" identifier="Return Material Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="47513D9A8AB2408B82BC7E2EDCAF530F" identifier="Penawaran">
+    <id>47513D9A8AB2408B82BC7E2EDCAF530F</id>
+    <active>true</active>
+    <name>Penawaran</name>
+    <printText>Penawaran</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>OB</sOSubType>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="E80B3FA585404ABD8CC221D79C005FBA" entity-name="ADSequence" identifier="Quotation"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder id="2FDE7BDEE06D463289EFDAE8D11AA497" entity-name="DocumentType" identifier="Standard Order"/>
+    <documentTemplateList>
+      <DocumentTemplate id="9A8F8138BF6442D7B8E627C10A28384B" identifier="Quotation Report template">
+        <id>9A8F8138BF6442D7B8E627C10A28384B</id>
+        <active>true</active>
+        <documentType id="47513D9A8AB2408B82BC7E2EDCAF530F" entity-name="DocumentType" identifier="Penawaran"/>
+        <name>Quotation Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Penawaran Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_QuotationJR.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="C27CA56D38F8459BA6C2744D5AE4B481" identifier="Quotation Report template - ">
+            <id>C27CA56D38F8459BA6C2744D5AE4B481</id>
+            <active>true</active>
+            <pocDocumentType id="9A8F8138BF6442D7B8E627C10A28384B" entity-name="DocumentTemplate" identifier="Quotation Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="484547424F284C0394270CD57A18285F" identifier="Faktur Pembelian - Dokumen Pembalik">
+    <id>484547424F284C0394270CD57A18285F</id>
+    <active>true</active>
+    <name>Faktur Pembelian - Dokumen Pembalik</name>
+    <printText>Faktur Pembelian - Dokumen Pembalik</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>API</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="FF18113D2D894D55B57E45D7D04179AF" entity-name="ADSequence" identifier="Reversed Purchase Invoice"/>
+    <gLCategory id="8DDF265E79BF4460A4FED62C954E47D3" entity-name="FinancialMgmtGLCategory" identifier="AP Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="9B57E195FB1E48C8B036E597B0D2823F" identifier="Reversed Purchase Invoice Report template">
+        <id>9B57E195FB1E48C8B036E597B0D2823F</id>
+        <active>true</active>
+        <documentType id="484547424F284C0394270CD57A18285F" entity-name="DocumentType" identifier="Faktur Pembelian - Dokumen Pembalik"/>
+        <name>Reversed Purchase Invoice Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur Pembalik - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="09041400E0EF41D5AB97FD6451DA0FBD" identifier="Reversed Purchase Invoice Report template - ">
+            <id>09041400E0EF41D5AB97FD6451DA0FBD</id>
+            <active>true</active>
+            <pocDocumentType id="9B57E195FB1E48C8B036E597B0D2823F" entity-name="DocumentTemplate" identifier="Reversed Purchase Invoice Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="4878B11262F54A5D9D37DC3AB356B125" identifier="Terima Barang">
+    <id>4878B11262F54A5D9D37DC3AB356B125</id>
+    <active>true</active>
+    <name>Terima Barang</name>
+    <printText>Terima Barang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMR</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>false</sequencedDocument>
+    <documentSequence xsi:nil="true"/>
+    <gLCategory id="466B5660188643F0B9A2C065A4328FB5" entity-name="FinancialMgmtGLCategory" identifier="Material Management"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="319" entity-name="ADTable" identifier="M_InOut"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="6E54D2795817417B89CF90CA0D8D176C" identifier="MM Receipt Report template">
+        <id>6E54D2795817417B89CF90CA0D8D176C</id>
+        <active>true</active>
+        <documentType id="4878B11262F54A5D9D37DC3AB356B125" entity-name="DocumentType" identifier="Terima Barang"/>
+        <name>MM Receipt Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Terima Barang - @our_ref@</reportFilename>
+        <templateFilename>RptM_InOut_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="43C0ADBDDB3E4C49BADE64C01F1E18E7" identifier="MM Receipt Report template - ">
+            <id>43C0ADBDDB3E4C49BADE64C01F1E18E7</id>
+            <active>true</active>
+            <pocDocumentType id="6E54D2795817417B89CF90CA0D8D176C" entity-name="DocumentTemplate" identifier="MM Receipt Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="49136D215D6E4B768FC7FADC55B70ADE" identifier="Pelunasan Piutang">
+    <id>49136D215D6E4B768FC7FADC55B70ADE</id>
+    <active>true</active>
+    <name>Pelunasan Piutang</name>
+    <printText>Pelunasan Piutang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>ARR</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="859ADC632FCF46D888D74D0E0C18DF22" entity-name="ADSequence" identifier="AR Receipt"/>
+    <gLCategory id="3284AE417CEA4654A369F3C7E491526B" entity-name="FinancialMgmtGLCategory" identifier="AR Receipt"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="D1A97202E832470285C9B1EB026D54E2" entity-name="ADTable" identifier="FIN_Payment"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="E0176461442647F0B931E1E9A0320FF9" identifier="AR Receipt Report template">
+        <id>E0176461442647F0B931E1E9A0320FF9</id>
+        <active>true</active>
+        <documentType id="49136D215D6E4B768FC7FADC55B70ADE" entity-name="DocumentType" identifier="Pelunasan Piutang"/>
+        <name>AR Receipt Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Terima Pembayaran - @our_ref@</reportFilename>
+        <templateFilename>RptFIN_Payment.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="41A26A12392B40BDAC737D3C2CD0C15C" identifier="AR Receipt Report template - ">
+            <id>41A26A12392B40BDAC737D3C2CD0C15C</id>
+            <active>true</active>
+            <pocDocumentType id="E0176461442647F0B931E1E9A0320FF9" entity-name="DocumentTemplate" identifier="AR Receipt Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="5600D84210124CEBAB51533844D8DEB1" identifier="Faktur Penjualan - Dokumen Pembalik">
+    <id>5600D84210124CEBAB51533844D8DEB1</id>
+    <active>true</active>
+    <name>Faktur Penjualan - Dokumen Pembalik</name>
+    <printText>Faktur Penjualan - Dokumen Pembalik</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>ARI</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="0A6644D977F84B748468C08E36CDECBE" entity-name="ADSequence" identifier="Reversed Sales Invoice"/>
+    <gLCategory id="71AA143E81B447E88B8D524374F61FF2" entity-name="FinancialMgmtGLCategory" identifier="AR Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="4BDDE98F8E6E467595BE37A6A59BC301" identifier="Reversed Sales Invoice Report template">
+        <id>4BDDE98F8E6E467595BE37A6A59BC301</id>
+        <active>true</active>
+        <documentType id="5600D84210124CEBAB51533844D8DEB1" entity-name="DocumentType" identifier="Faktur Penjualan - Dokumen Pembalik"/>
+        <name>Reversed Sales Invoice Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur Penjualan - Pembalik - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="68ADEA761608401899D872F81B3D61FA" identifier="Reversed Sales Invoice Report template - ">
+            <id>68ADEA761608401899D872F81B3D61FA</id>
+            <active>true</active>
+            <pocDocumentType id="4BDDE98F8E6E467595BE37A6A59BC301" entity-name="DocumentTemplate" identifier="Reversed Sales Invoice Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="575F5C3A7AB74D4E91B5A9B309810078" identifier="Produksi">
+    <id>575F5C3A7AB74D4E91B5A9B309810078</id>
+    <active>true</active>
+    <name>Produksi</name>
+    <printText>Produksi</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMP</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="24CA05643CAD45B083EB4FF5277684FF" entity-name="ADSequence" identifier="Production"/>
+    <gLCategory id="8632EDAFB8FB4264B5BB6A4F20CA785B" entity-name="FinancialMgmtGLCategory" identifier="Production"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="325" entity-name="ADTable" identifier="M_Production"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="7C30F8B18E634DF9990158511DDD6679" identifier="Depresiasi">
+    <id>7C30F8B18E634DF9990158511DDD6679</id>
+    <active>true</active>
+    <name>Depresiasi</name>
+    <printText>Depresiasi</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>AMZ</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="9C5B3EF6AC0146428861BCF04BBDF780" entity-name="ADSequence" identifier="Depreciation"/>
+    <gLCategory id="479E78F6CDC54323BE200707FEC4AE35" entity-name="FinancialMgmtGLCategory" identifier="Standard"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="800060" entity-name="ADTable" identifier="A_Amortization"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="82A6EF22D1E94A8C89F87C027CBD89A9" identifier="Faktur Pembelian">
+    <id>82A6EF22D1E94A8C89F87C027CBD89A9</id>
+    <active>true</active>
+    <name>Faktur Pembelian</name>
+    <printText>Faktur Pembelian</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>API</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>false</sequencedDocument>
+    <documentSequence xsi:nil="true"/>
+    <gLCategory id="8DDF265E79BF4460A4FED62C954E47D3" entity-name="FinancialMgmtGLCategory" identifier="AP Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled id="484547424F284C0394270CD57A18285F" entity-name="DocumentType" identifier="Faktur Pembelian - Dokumen Pembalik"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="A8FE0CE4A5BD4D25A2E4763D191150E1" identifier="AP Invoice Report template">
+        <id>A8FE0CE4A5BD4D25A2E4763D191150E1</id>
+        <active>true</active>
+        <documentType id="82A6EF22D1E94A8C89F87C027CBD89A9" entity-name="DocumentType" identifier="Faktur Pembelian"/>
+        <name>AP Invoice Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="0EDC57CA0F6642D6A5DF41B4CBD66E69" identifier="AP Invoice Report template - ">
+            <id>0EDC57CA0F6642D6A5DF41B4CBD66E69</id>
+            <active>true</active>
+            <pocDocumentType id="A8FE0CE4A5BD4D25A2E4763D191150E1" entity-name="DocumentTemplate" identifier="AP Invoice Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="86391F46519E467180D2F39D1EDA874A" identifier="Pesanan Pembelian">
+    <id>86391F46519E467180D2F39D1EDA874A</id>
+    <active>true</active>
+    <name>Pesanan Pembelian</name>
+    <printText>Pesanan Pembelian</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>POO</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="A5312B7EEDAE4F9A9020519F1BD47358" entity-name="ADSequence" identifier="Purchase Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="7D4C7BDB342149BC90BB7C34B0BAFDED" identifier="Purchase Order Report template">
+        <id>7D4C7BDB342149BC90BB7C34B0BAFDED</id>
+        <active>true</active>
+        <documentType id="86391F46519E467180D2F39D1EDA874A" entity-name="DocumentType" identifier="Pesanan Pembelian"/>
+        <name>Purchase Order Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Pembelian - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="193E17BA3A0049E8BB722D455BAE76E7" identifier="Purchase Order Report template - ">
+            <id>193E17BA3A0049E8BB722D455BAE76E7</id>
+            <active>true</active>
+            <pocDocumentType id="7D4C7BDB342149BC90BB7C34B0BAFDED" entity-name="DocumentTemplate" identifier="Purchase Order Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="8917EA99C96745A9BC59BE36D278B2E7" identifier="Faktur Penjualan">
+    <id>8917EA99C96745A9BC59BE36D278B2E7</id>
+    <active>true</active>
+    <name>Faktur Penjualan</name>
+    <printText>Faktur Penjualan</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>ARI</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="67DBC05CB6F1473784B8EDCAF00F7685" entity-name="ADSequence" identifier="AR Invoice"/>
+    <gLCategory id="71AA143E81B447E88B8D524374F61FF2" entity-name="FinancialMgmtGLCategory" identifier="AR Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled id="5600D84210124CEBAB51533844D8DEB1" entity-name="DocumentType" identifier="Faktur Penjualan - Dokumen Pembalik"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="CE1E9A908940498F9F7BAA8E17DC0A11" identifier="AR Invoice Report template">
+        <id>CE1E9A908940498F9F7BAA8E17DC0A11</id>
+        <active>true</active>
+        <documentType id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+        <name>AR Invoice Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur Penjualan - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="032A8A36E9F04189AE4975E0F31823B9" identifier="AR Invoice Report template - ">
+            <id>032A8A36E9F04189AE4975E0F31823B9</id>
+            <active>true</active>
+            <pocDocumentType id="CE1E9A908940498F9F7BAA8E17DC0A11" entity-name="DocumentTemplate" identifier="AR Invoice Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="8CD2017F78824813A7EF4352229DC91D" identifier="Jurnal Memorial">
+    <id>8CD2017F78824813A7EF4352229DC91D</id>
+    <active>true</active>
+    <name>Jurnal Memorial</name>
+    <printText>Jurnal Memorial</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>GLJ</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="18D67F2679D3455793D7DE5BDE19028C" entity-name="ADSequence" identifier="GL Journal"/>
+    <gLCategory id="F50DCBB5900D43E68090E4F790DB4126" entity-name="FinancialMgmtGLCategory" identifier="Manual"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="224" entity-name="ADTable" identifier="GL_Journal"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="8F9B2FA24A60475A8DC5B3EE7F567CCA" identifier="Return Material Sales Invoice">
+    <id>8F9B2FA24A60475A8DC5B3EE7F567CCA</id>
+    <active>true</active>
+    <name>Return Material Sales Invoice</name>
+    <printText>Return Material Sales Invoice</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>ARI_RM</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="020015B8DC704E63920604B93E288CC9" entity-name="ADSequence" identifier="Return Material Sales Invoice"/>
+    <gLCategory id="71AA143E81B447E88B8D524374F61FF2" entity-name="FinancialMgmtGLCategory" identifier="AR Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="6ACB70AF048A46C0AE4D98D42B922229" identifier="Return Material Sales Invoice Report template">
+        <id>6ACB70AF048A46C0AE4D98D42B922229</id>
+        <active>true</active>
+        <documentType id="8F9B2FA24A60475A8DC5B3EE7F567CCA" entity-name="DocumentType" identifier="Return Material Sales Invoice"/>
+        <name>Return Material Sales Invoice Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur Retur - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList/>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="99F3568932EF4059AA5DBAF516339D8C" identifier="Pengiriman RTV">
+    <id>99F3568932EF4059AA5DBAF516339D8C</id>
+    <active>true</active>
+    <name>Pengiriman RTV</name>
+    <printText>Pengiriman RTV</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMR</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="BA986123453B457DB7D6021204B32DE5" entity-name="ADSequence" identifier="RTV Shipment"/>
+    <gLCategory id="466B5660188643F0B9A2C065A4328FB5" entity-name="FinancialMgmtGLCategory" identifier="Material Management"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table id="319" entity-name="ADTable" identifier="M_InOut"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="BC6B8C0E5BC247CA8FB821977AE7B7CB" identifier="RTV Shipment template">
+        <id>BC6B8C0E5BC247CA8FB821977AE7B7CB</id>
+        <active>true</active>
+        <documentType id="99F3568932EF4059AA5DBAF516339D8C" entity-name="DocumentType" identifier="Pengiriman RTV"/>
+        <name>RTV Shipment template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pengiriman RTV - @our_ref@</reportFilename>
+        <templateFilename>RptM_RMInOut.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="B1EC7E5B37094CE49DAA5C6690970961" identifier="RTV Shipment template - ">
+            <id>B1EC7E5B37094CE49DAA5C6690970961</id>
+            <active>true</active>
+            <pocDocumentType id="BC6B8C0E5BC247CA8FB821977AE7B7CB" entity-name="DocumentTemplate" identifier="RTV Shipment template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>false</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="9B39789155C64F9A97325DF770C84D72" identifier="Koreksi Faktur Pembelian">
+    <id>9B39789155C64F9A97325DF770C84D72</id>
+    <active>true</active>
+    <name>Koreksi Faktur Pembelian</name>
+    <printText>Koreksi Faktur Pembelian</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MXI</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="2E2B3B2EBAC74615B582E90C19FC7E0F" entity-name="ADSequence" identifier="Matched Invoices"/>
+    <gLCategory id="D7760D100E714A0994C3621DA7177E1E" entity-name="FinancialMgmtGLCategory" identifier="MatchInv"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="472" entity-name="ADTable" identifier="M_MatchInv"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="9D028278ADC24B2DB67D18B7A91D67C2" identifier="Perhitungan Fisik Persediaan">
+    <id>9D028278ADC24B2DB67D18B7A91D67C2</id>
+    <active>true</active>
+    <name>Perhitungan Fisik Persediaan</name>
+    <printText>Perhitungan Fisik Persediaan</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMI</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="46330D8FCFC94D108AD201FFF5992776" entity-name="ADSequence" identifier="Physical Inventory"/>
+    <gLCategory id="E4F6C44754DA4145ADB02E763D2B8E28" entity-name="FinancialMgmtGLCategory" identifier="Inventory"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="321" entity-name="ADTable" identifier="M_Inventory"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="B12D338242BE404596AEDE2D4842F019" identifier="Pengiriman Barang">
+    <id>B12D338242BE404596AEDE2D4842F019</id>
+    <active>true</active>
+    <name>Pengiriman Barang</name>
+    <printText>Pengiriman Barang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMS</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="F7C7F6036B134E28BD5B0C676BF50CEC" entity-name="ADSequence" identifier="MM Shipment"/>
+    <gLCategory id="466B5660188643F0B9A2C065A4328FB5" entity-name="FinancialMgmtGLCategory" identifier="Material Management"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="319" entity-name="ADTable" identifier="M_InOut"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="900484DB82D14E30A8DDA5CB96358DB8" identifier="MM Shipment Report template">
+        <id>900484DB82D14E30A8DDA5CB96358DB8</id>
+        <active>true</active>
+        <documentType id="B12D338242BE404596AEDE2D4842F019" entity-name="DocumentType" identifier="Pengiriman Barang"/>
+        <name>MM Shipment Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pengiriman Barang - @our_ref@</reportFilename>
+        <templateFilename>RptM_InOut_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="9E971F0209584632B4B12386DD4B8B3D" identifier="MM Shipment Report template - ">
+            <id>9E971F0209584632B4B12386DD4B8B3D</id>
+            <active>true</active>
+            <pocDocumentType id="900484DB82D14E30A8DDA5CB96358DB8" entity-name="DocumentTemplate" identifier="MM Shipment Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="B3D01C568C044C3BA602BAD3C11A6267" identifier="Memo Kredit Utang">
+    <id>B3D01C568C044C3BA602BAD3C11A6267</id>
+    <active>true</active>
+    <name>Memo Kredit Utang</name>
+    <printText>Memo Kredit Utang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>APC</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>false</sequencedDocument>
+    <documentSequence xsi:nil="true"/>
+    <gLCategory id="8DDF265E79BF4460A4FED62C954E47D3" entity-name="FinancialMgmtGLCategory" identifier="AP Invoice"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="318" entity-name="ADTable" identifier="C_Invoice"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>true</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="CE4AAC876BBB4016A3D2D67345433C4C" identifier="AP Credit Report template">
+        <id>CE4AAC876BBB4016A3D2D67345433C4C</id>
+        <active>true</active>
+        <documentType id="B3D01C568C044C3BA602BAD3C11A6267" entity-name="DocumentType" identifier="Memo Kredit Utang"/>
+        <name>AP Credit Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Faktur Pembelian - @our_ref@</reportFilename>
+        <templateFilename>RptC_Invoice_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="F7DC9A0ECAF84DEF946E8E8AD1765280" identifier="AP Credit Report template - ">
+            <id>F7DC9A0ECAF84DEF946E8E8AD1765280</id>
+            <active>true</active>
+            <pocDocumentType id="CE4AAC876BBB4016A3D2D67345433C4C" entity-name="DocumentTemplate" identifier="AP Credit Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="B509ADADC8484A6A9598645BF4C97581" identifier="Settlement">
+    <id>B509ADADC8484A6A9598645BF4C97581</id>
+    <active>true</active>
+    <name>Settlement</name>
+    <printText>Settlement</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>STT</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="33D3B87905064462A9C686150B13F725" entity-name="ADSequence" identifier="Settlement"/>
+    <gLCategory id="C0D396EED4484C6282E7CAC24303B5ED" entity-name="FinancialMgmtGLCategory" identifier="Settlement"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="800019" entity-name="ADTable" identifier="C_Settlement"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="B8D907627FBA41E39F6F25589B949429" identifier="Transaksi Kas">
+    <id>B8D907627FBA41E39F6F25589B949429</id>
+    <active>true</active>
+    <name>Transaksi Kas</name>
+    <printText>Transaksi Kas</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>CMC</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="399ADF8580374CE7ADE1AE895E557DB5" entity-name="ADSequence" identifier="Cash Journal"/>
+    <gLCategory id="7FF1939F9FF844818E1E595CE87ED1C7" entity-name="FinancialMgmtGLCategory" identifier="Cash"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="407" entity-name="ADTable" identifier="C_Cash"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="B8F792F39794430F9BE0737B166DC424" identifier="Penjualan dengan Uang Muka">
+    <id>B8F792F39794430F9BE0737B166DC424</id>
+    <active>false</active>
+    <name>Penjualan dengan Uang Muka</name>
+    <printText>Penjualan dengan Uang Muka</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>PR</sOSubType>
+    <documentTypeForShipment id="B12D338242BE404596AEDE2D4842F019" entity-name="DocumentType" identifier="Pengiriman Barang"/>
+    <documentTypeForInvoice id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="D19F9B0B6C2C48BE82AA606A1F540277" entity-name="ADSequence" identifier="Prepay Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="624C4C0785F94C74A0BC1A9734F7D306" identifier="Prepay Order Report template">
+        <id>624C4C0785F94C74A0BC1A9734F7D306</id>
+        <active>true</active>
+        <documentType id="B8F792F39794430F9BE0737B166DC424" entity-name="DocumentType" identifier="Penjualan dengan Uang Muka"/>
+        <name>Prepay Order Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="9A690FE0C5AC4B17802A4776531F5646" identifier="Prepay Order Report template - ">
+            <id>9A690FE0C5AC4B17802A4776531F5646</id>
+            <active>true</active>
+            <pocDocumentType id="624C4C0785F94C74A0BC1A9734F7D306" entity-name="DocumentTemplate" identifier="Prepay Order Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="C68B1BD5B37B42C4B3553C51E73E1806" identifier="Pesanan RTV">
+    <id>C68B1BD5B37B42C4B3553C51E73E1806</id>
+    <active>true</active>
+    <name>Pesanan RTV</name>
+    <printText>Pesanan RTV</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>POO</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="99F3568932EF4059AA5DBAF516339D8C" entity-name="DocumentType" identifier="Pengiriman RTV"/>
+    <documentTypeForInvoice id="484547424F284C0394270CD57A18285F" entity-name="DocumentType" identifier="Faktur Pembelian - Dokumen Pembalik"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="72AD21C83BBA466BAE967BA571432815" entity-name="ADSequence" identifier="RTV Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="69C388B8463143AF9C79C3B690524595" identifier="RTV Order template">
+        <id>69C388B8463143AF9C79C3B690524595</id>
+        <active>true</active>
+        <documentType id="C68B1BD5B37B42C4B3553C51E73E1806" entity-name="DocumentType" identifier="Pesanan RTV"/>
+        <name>RTV Order template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan RTV - @our_ref@</reportFilename>
+        <templateFilename>C_RMOrderJR.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="60186C0164D341C89D82FF59A425AA84" identifier="RTV Order template - ">
+            <id>60186C0164D341C89D82FF59A425AA84</id>
+            <active>true</active>
+            <pocDocumentType id="69C388B8463143AF9C79C3B690524595" entity-name="DocumentTemplate" identifier="RTV Order template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="CB806F32B0C442BBABA7B7CA42850D5F" identifier="Manajemen Pembayaran Utang/Piutang">
+    <id>CB806F32B0C442BBABA7B7CA42850D5F</id>
+    <active>true</active>
+    <name>Manajemen Pembayaran Utang/Piutang</name>
+    <printText>Manajemen Pembayaran Utang/Piutang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>DPM</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="6D5790D2990F4AF9ABA3F7EF7A447729" entity-name="ADSequence" identifier="Debt Payment Management"/>
+    <gLCategory id="479E78F6CDC54323BE200707FEC4AE35" entity-name="FinancialMgmtGLCategory" identifier="Standard"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="800176" entity-name="ADTable" identifier="C_DP_Management"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="D4E6EA71FED74042BF6350166D9A5C35" identifier="Realisasi Pesanan Pembelian">
+    <id>D4E6EA71FED74042BF6350166D9A5C35</id>
+    <active>true</active>
+    <name>Realisasi Pesanan Pembelian</name>
+    <printText>Realisasi Pesanan Pembelian</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MXP</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="8D09777FBB9D4C989BB151CCFD6B03AC" entity-name="ADSequence" identifier="Matched Purchase Orders"/>
+    <gLCategory id="1CD66CB297E14400B63F20105A7A8781" entity-name="FinancialMgmtGLCategory" identifier="MatchPO"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="473" entity-name="ADTable" identifier="M_MatchPO"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="DB45E1E0EE05497B81C43A2FAF003291" identifier="Pesanan RFC">
+    <id>DB45E1E0EE05497B81C43A2FAF003291</id>
+    <active>true</active>
+    <name>Pesanan RFC</name>
+    <printText>Pesanan RFC</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>SO</sOSubType>
+    <documentTypeForShipment id="1CDA7358488E408E860001719B175FCD" entity-name="DocumentType" identifier="Terima RFC"/>
+    <documentTypeForInvoice id="8F9B2FA24A60475A8DC5B3EE7F567CCA" entity-name="DocumentType" identifier="Return Material Sales Invoice"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="B84C7B04F1584A0781863EA283CC32B7" entity-name="ADSequence" identifier="RFC Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>true</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="9D27E882CEB54FBCA7777BD52C9047CC" identifier="RFC Order template">
+        <id>9D27E882CEB54FBCA7777BD52C9047CC</id>
+        <active>true</active>
+        <documentType id="DB45E1E0EE05497B81C43A2FAF003291" entity-name="DocumentType" identifier="Pesanan RFC"/>
+        <name>RFC Order template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan RFC - @our_ref@</reportFilename>
+        <templateFilename>C_RMOrderJR.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="A9BF5C03CEFD4942AFDEF20D752BA357" identifier="RFC Order template - ">
+            <id>A9BF5C03CEFD4942AFDEF20D752BA357</id>
+            <active>true</active>
+            <pocDocumentType id="9D27E882CEB54FBCA7777BD52C9047CC" entity-name="DocumentTemplate" identifier="RFC Order template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="E655BFF88E68467F80EFB511273A2A87" identifier="Pesanan Penjualan secara Kredit">
+    <id>E655BFF88E68467F80EFB511273A2A87</id>
+    <active>false</active>
+    <name>Pesanan Penjualan secara Kredit</name>
+    <printText>Pesanan Penjualan secara Kredit</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>WI</sOSubType>
+    <documentTypeForShipment id="2C0CD033F26A4161B7ADBFA9C16E58EC" entity-name="DocumentType" identifier="MM Shipment Indirect"/>
+    <documentTypeForInvoice id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="7AFCEC5F23894A6BB688EBF021F32309" entity-name="ADSequence" identifier="Credit Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="427A42C2690E4C18A58781237765B231" identifier="On Credit Order Report template">
+        <id>427A42C2690E4C18A58781237765B231</id>
+        <active>true</active>
+        <documentType id="E655BFF88E68467F80EFB511273A2A87" entity-name="DocumentType" identifier="Pesanan Penjualan secara Kredit"/>
+        <name>On Credit Order Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="1602C6C0EFA54B15950C9580AE992351" identifier="On Credit Order Report template - ">
+            <id>1602C6C0EFA54B15950C9580AE992351</id>
+            <active>true</active>
+            <pocDocumentType id="427A42C2690E4C18A58781237765B231" entity-name="DocumentTemplate" identifier="On Credit Order Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="E68464C34A4F45FD9303FFF99A4D9C35" identifier="Transaksi Bank">
+    <id>E68464C34A4F45FD9303FFF99A4D9C35</id>
+    <active>true</active>
+    <name>Transaksi Bank</name>
+    <printText>Transaksi Bank</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>CMB</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="7845933D939341DDB59618B351BBCA86" entity-name="ADSequence" identifier="Bank Statement"/>
+    <gLCategory id="6C55C62BFF564196B700F5F1D635900F" entity-name="FinancialMgmtGLCategory" identifier="Bank Statement"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="392" entity-name="ADTable" identifier="C_BankStatement"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="E92A61693B3F476385B97C11A9D364B2" identifier="Pesanan Penjualan dari Gudang">
+    <id>E92A61693B3F476385B97C11A9D364B2</id>
+    <active>true</active>
+    <name>Pesanan Penjualan dari Gudang</name>
+    <printText>Pesanan Penjualan dari Gudang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>SOO</documentCategory>
+    <salesTransaction>true</salesTransaction>
+    <sOSubType>WP</sOSubType>
+    <documentTypeForShipment id="B12D338242BE404596AEDE2D4842F019" entity-name="DocumentType" identifier="Pengiriman Barang"/>
+    <documentTypeForInvoice id="8917EA99C96745A9BC59BE36D278B2E7" entity-name="DocumentType" identifier="Faktur Penjualan"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="A5364BA37E76447BBAC39AA2E1C72D5F" entity-name="ADSequence" identifier="Warehouse Order"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList>
+      <DocumentTemplate id="9F36AC17C70F4F218BD0045624D41972" identifier="Warehouse Order Memo Report template">
+        <id>9F36AC17C70F4F218BD0045624D41972</id>
+        <active>true</active>
+        <documentType id="E92A61693B3F476385B97C11A9D364B2" entity-name="DocumentType" identifier="Pesanan Penjualan dari Gudang"/>
+        <name>Warehouse Order Memo Report template</name>
+        <templateLocation>@basedesign@/org/openbravo/erpReports</templateLocation>
+        <reportFilename>Pesanan Penjualan - @our_ref@</reportFilename>
+        <templateFilename>C_OrderJR_new.jrxml</templateFilename>
+        <showcompanydata>true</showcompanydata>
+        <showlogo>true</showlogo>
+        <headermargin xsi:nil="true"/>
+        <emailTemplateList>
+          <EmailTemplate id="E6F06AE4E0EF460A9F449EA14044E460" identifier="Warehouse Order Memo Report template - ">
+            <id>E6F06AE4E0EF460A9F449EA14044E460</id>
+            <active>true</active>
+            <pocDocumentType id="9F36AC17C70F4F218BD0045624D41972" entity-name="DocumentTemplate" identifier="Warehouse Order Memo Report template"/>
+            <subject xsi:nil="true"/>
+            <body xsi:nil="true"/>
+            <default>true</default>
+            <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+          </EmailTemplate>
+        </emailTemplateList>
+      </DocumentTemplate>
+    </documentTemplateList>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="F691EAEB1C6C430DBA0C5F1D86304B3A" identifier="Transfer Antar Gudang">
+    <id>F691EAEB1C6C430DBA0C5F1D86304B3A</id>
+    <active>true</active>
+    <name>Transfer Antar Gudang</name>
+    <printText>Transfer Antar Gudang</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>MMM</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="74A5BCA92FFF40BAB08D7E64E2AF19F8" entity-name="ADSequence" identifier="Inventory Move"/>
+    <gLCategory id="F37A3644F1DC473AA10447D805B713DD" entity-name="FinancialMgmtGLCategory" identifier="Movement"/>
+    <comments xsi:nil="true"/>
+    <default>true</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="323" entity-name="ADTable" identifier="M_Movement"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+  <DocumentType id="FF4A0F8DEFD54BECA6491A7059DB8F31" identifier="Permintaan Pembelian">
+    <id>FF4A0F8DEFD54BECA6491A7059DB8F31</id>
+    <active>false</active>
+    <name>Permintaan Pembelian</name>
+    <printText>Permintaan Pembelian</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>POR</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment id="0" entity-name="DocumentType" identifier="** New **"/>
+    <documentTypeForInvoice id="0" entity-name="DocumentType" identifier="** New **"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="85D7760CD05145B0895A22F41D0B98D1" entity-name="ADSequence" identifier="Purchase Requisition"/>
+    <gLCategory id="30D4765446B44602ABE0D5F790471925" entity-name="FinancialMgmtGLCategory" identifier="None"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>0</numberOfCopies>
+    <table id="259" entity-name="ADTable" identifier="C_Order"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+    <documentTemplateList/>
+    <documentTypeTrlList/>
+    <fINDoubtfulDebtList/>
+  </DocumentType>
+</ob:Openbravo>

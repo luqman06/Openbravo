@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="3FF818C395E34B9BAC35420CDFED467A" trl="N">
+    <value column="MsgText" isTrl="N" original="Salary Template Created Succesfuly">Salary Template Created Succesfuly</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F34692BA3AB94232947E81EC7D8C8C18" trl="N">
+    <value column="MsgText" isTrl="N" original="Salary Category">Salary Category</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

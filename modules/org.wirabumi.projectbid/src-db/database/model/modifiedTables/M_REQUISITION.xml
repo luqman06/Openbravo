@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_REQUISITION">
+    <table name="M_REQUISITION" primaryKey="M_REQUISITION_KEY">
+      <column name="EM_PBID_WAREHOUSE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PBID_COSTCENTER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="M_WAREHOUSE" name="EM_PBID_REQISITIONWAREHOUSE">
+        <reference local="EM_PBID_WAREHOUSE_ID" foreign="M_WAREHOUSE_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_COSTCENTER" name="EM_PBID_REQUISITIONCOSTCENTER">
+        <reference local="EM_PBID_COSTCENTER_ID" foreign="C_COSTCENTER_ID"/>
+      </foreign-key>
+    </table>
+  </database>

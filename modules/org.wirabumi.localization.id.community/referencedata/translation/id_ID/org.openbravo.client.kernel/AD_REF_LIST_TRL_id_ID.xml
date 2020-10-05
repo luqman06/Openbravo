@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="632BBEE009DF4704996CCDC0B8C46FDA" trl="N">
+    <value column="Name" isTrl="N" original="Freemarker">Freemarker</value>
+    <value column="Description" isTrl="N" original="Adds the Freemarker template language to the system">Adds the Freemarker template language to the system</value>
+  </row>
+  <row id="6B6540830B6C4EE2ACAEA0997E96254A" trl="N">
+    <value column="Name" isTrl="N" original="Kernel Component">Kernel Component</value>
+    <value column="Description" isTrl="N" original="Kernel Component">Kernel Component</value>
+  </row>
+</compiereTrl>

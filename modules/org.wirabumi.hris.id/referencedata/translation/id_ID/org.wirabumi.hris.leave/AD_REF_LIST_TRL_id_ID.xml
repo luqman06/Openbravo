@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="048157CCDBF742D581E5E02B5C3CEF3C" trl="N">
+    <value column="Name" isTrl="N" original="Leave Released">Leave Released</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="583A2B2BB488440BBACED6F23AEDD8FE" trl="N">
+    <value column="Name" isTrl="N" original="Periodic">Periodic</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5E42799184134B46A225491A5A59CF9C" trl="N">
+    <value column="Name" isTrl="N" original="Non-Periodic">Non-Periodic</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8F5692C379E24724AA97143F70788912" trl="N">
+    <value column="Name" isTrl="N" original="Release Leave">Release Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

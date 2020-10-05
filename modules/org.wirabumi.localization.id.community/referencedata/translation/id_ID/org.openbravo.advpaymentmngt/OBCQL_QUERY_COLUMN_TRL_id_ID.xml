@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="OBCQL_QUERY_COLUMN" version="">
+  <row id="FF80808133186ADD01331B407CE5001D" trl="N">
+    <value column="Name" isTrl="N" original="Item Type">Item Type</value>
+  </row>
+  <row id="FF80808133186ADD01331B41475B0022" trl="N">
+    <value column="Name" isTrl="N" original="Item No">Item No</value>
+  </row>
+  <row id="FF80808133186ADD01331B41D7830027" trl="N">
+    <value column="Name" isTrl="N" original="Item Amount">Item Amount</value>
+  </row>
+</compiereTrl>

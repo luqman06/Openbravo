@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ARB_DO" pageWidth="612" pageHeight="792" columnWidth="552" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="0db49da0-c58b-4df0-8d6a-f15a902d698e">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("F34841079DBF4A6597145BFA2AF7A5C5")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select DISTINCT
+a.ad_org_id,
+a.ad_client_id,
+a.m_inout_id,
+---a.created,
+a.documentno as delivery_no,
+a.docstatus as status,
+ad_org.name as ORG_name,
+ad_orginfo.c_Location_id,
+c_location.ADDRESS1 AS ORG_ADDRESS1,
+c_location.ADDRESS2 AS ORG_ADDRESS2,
+c_location.POSTAL AS ORG_POSTAL,
+c_location.C_COUNTRY_ID AS COUNTRY_ID,
+
+(CASE WHEN coalesce(a.docstatus)='DR' THEN ('DRAFT')
+	WHEN coalesce(a.docstatus)='CO' THEN ('COMPLETED')
+		ELSE coalesce(a.docstatus) END) as document_status,
+movementdate as delivery_date,
+a.created as date_created,
+c.name as customer_name,
+coalesce(j.address1,'')||coalesce(' '||j.address2,'') as address1,
+coalesce(j.city,'')||coalesce(' '||j.postal,'')||coalesce(' '||k.name,'')||coalesce(' '||l.name,'') as address2,
+coalesce('Tel. '||d.phone,'')||coalesce(' Fax. '||d.fax,'') as phonefax,
+coalesce(g.name,'') as customer_contact,
+coalesce(h.poreference, '') as po_reference,
+b.line as delivery_line,
+e.name as productname,
+e.value as productcode,
+coalesce(e.description, '') || coalesce(b.description, '') as productdescription,
+--b.description as linedescription,
+b.movementqty as delivery_qty,
+f.x12de355 as uom,
+f.name as uom_name,
+b.description as line_description,
+i.qtyordered-i.qtydelivered as po_balance_qty,
+i.priceactual,
+i.priceactual*b.movementqty as totalamt
+
+
+from m_inout a
+
+left join ad_org on ad_org.ad_org_id=a.ad_org_id
+left join ad_orginfo on AD_ORGINFO.ad_org_id=a.ad_org_id
+left join c_location on c_location.c_location_id=ad_orginfo.c_location_id
+--left join c_orderline ol on ol.c_order_id=a.c_order_id
+left join m_inoutline b on a.m_inout_id=b.m_inout_id
+left join c_bpartner c on b.c_bpartner_id=c.c_bpartner_id
+left join c_bpartner_location d on a.delivery_location_id=d.c_bpartner_location_id
+--left join c_bpartner_location d on a.c_bpartner_location_id=d.c_bpartner_location_id
+left join m_product e on b.m_product_id=e.m_product_id
+left join c_uom f on f.c_uom_id=b.c_uom_id
+left join ad_user g on a.ad_user_id=g.ad_user_id
+left join c_orderline i on b.c_orderline_id=i.c_orderline_id
+left join c_order h on i.c_order_id = h.c_order_id
+left join c_location j on d.c_location_id=j.c_location_id
+left join c_region k on j.c_region_id=k.c_region_id
+left join c_country l on k.c_country_id=l.c_country_id
+
+where
+-- sample VOID Document = a.m_inout_id='321D982178FF48B0A23DEF1D1DA119C0'
+-- sample General Sales = a.m_inout_id = 'A15348D66334403F851D17E824CF3C20'
+--AND a.docstatus <> 'DR'
+a.m_inout_id=$P{DOCUMENT_ID}
+--'8B740B95DF084D619EFD8368476357F0'
+
+order by b.line ASC]]>
+	</queryString>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="ad_client_id" class="java.lang.String"/>
+	<field name="m_inout_id" class="java.lang.String"/>
+	<field name="delivery_no" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="c_location_id" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="country_id" class="java.lang.String"/>
+	<field name="document_status" class="java.lang.String"/>
+	<field name="delivery_date" class="java.sql.Timestamp"/>
+	<field name="date_created" class="java.sql.Timestamp"/>
+	<field name="customer_name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="address2" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="customer_contact" class="java.lang.String"/>
+	<field name="po_reference" class="java.lang.String"/>
+	<field name="delivery_line" class="java.math.BigDecimal"/>
+	<field name="productname" class="java.lang.String"/>
+	<field name="productcode" class="java.lang.String"/>
+	<field name="productdescription" class="java.lang.String"/>
+	<field name="delivery_qty" class="java.math.BigDecimal"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="line_description" class="java.lang.String"/>
+	<field name="po_balance_qty" class="java.math.BigDecimal"/>
+	<field name="priceactual" class="java.math.BigDecimal"/>
+	<field name="totalamt" class="java.math.BigDecimal"/>
+	<variable name="SUM_QTY" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{delivery_qty}]]></variableExpression>
+	</variable>
+	<variable name="SUM_TOTAL" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalamt}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="125" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="378" y="21" width="165" height="15" uuid="f7c3888a-85b9-4fae-a8f7-070848063e82"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delivery_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="378" y="35" width="165" height="15" uuid="87565ea4-a047-4dd9-9927-43ad7626cb20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date_created}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-21" x="263" y="1" width="289" height="19" uuid="5c05dedf-b025-423b-b6b7-4d32c4d211ed"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Surat Jalan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="263" y="35" width="113" height="15" uuid="1a234693-4d5e-40c7-b829-f2693dc55328"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" x="263" y="21" width="113" height="15" uuid="b70afb68-6322-4d80-bb8c-a7568e01becf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[No SJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="366" y="21" width="18" height="15" uuid="e7273c7c-1a7c-4265-a9fb-642094157636"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-27" x="366" y="35" width="18" height="15" uuid="50982ff3-3523-41cc-82d1-2b14072a33bd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-28" x="372" y="-110" width="80" height="15" uuid="3063c0fb-3d72-4eae-a0e2-9c3d38972c82"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="372" y="-80" width="80" height="15" uuid="26f62b7d-4eb2-4deb-b71e-d8ef0aa09375"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="372" y="-95" width="80" height="15" uuid="e3e657ec-8a8b-46cf-bde3-4b72326c12c8"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="372" y="-65" width="80" height="15" uuid="300b6257-d22c-4fa2-89b6-50de89259c2f"/>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-32" x="372" y="-50" width="80" height="15" uuid="545d39da-4452-477a-93ab-5073ba2d143a"/>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-33" x="451" y="-110" width="7" height="15" uuid="50b57b3a-2334-4d77-a32b-d89f81140960"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-34" x="451" y="-80" width="7" height="15" uuid="8f98b111-4c52-477d-864b-0375936cd0e4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-35" x="451" y="-95" width="7" height="15" uuid="fef3c7e4-d89c-4b16-99cc-7ed790e14437"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-36" x="451" y="-65" width="7" height="15" uuid="104a45e2-d8b8-48f4-8533-8eb11e3d538a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-37" x="451" y="-50" width="7" height="15" uuid="acdba25c-79b8-4d45-ad6f-45213cf96d6c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" x="372" y="-110" width="80" height="15" uuid="19f34254-76ae-4838-bc8f-833045deb006"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-39" x="372" y="-80" width="80" height="15" uuid="972580ce-5c1d-4a9b-9981-a205362293b3"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-40" x="372" y="-95" width="80" height="15" uuid="bd12d567-6393-4ea0-959f-d613718aadbf"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-41" x="372" y="-65" width="80" height="15" uuid="3aa42b4a-e393-4420-afc1-731359cb487b"/>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-42" x="372" y="-50" width="80" height="15" uuid="3a492064-dbf5-428c-9ca0-1481b7b16859"/>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="451" y="-110" width="7" height="15" uuid="81c30f6a-08c7-4a9d-b346-8a24ccb4061a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-44" x="451" y="-80" width="7" height="15" uuid="27ab193a-a596-4016-a62b-f85b0c95c371"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" x="451" y="-95" width="7" height="15" uuid="6fbb14ae-1a6a-4fbe-b85c-bc910b266cbe"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-46" x="451" y="-65" width="7" height="15" uuid="c3e00703-a448-4309-918d-8fd69b8f49df"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-47" x="451" y="-50" width="7" height="15" uuid="3bfa781e-8346-4e52-b1f4-3566cdebf242"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-48" x="372" y="-110" width="80" height="15" uuid="308a742d-cba3-4ff6-9fd3-9e1a5d3db4ca"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-49" x="372" y="-80" width="80" height="15" uuid="e16552f9-3f7b-4e31-9ff9-b828d2529d7b"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-50" x="372" y="-95" width="80" height="15" uuid="063c0e31-694a-458b-ac2d-790989f679c6"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-51" x="451" y="-110" width="7" height="15" uuid="7bfca0e5-07d6-4284-a71a-e13cab9611ca"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-52" x="451" y="-80" width="7" height="15" uuid="0f114a1c-d367-44c6-8b19-a953c301ee3f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-53" x="451" y="-95" width="7" height="15" uuid="ffa1828f-90bb-4d46-913d-82e05eaf6519"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-54" x="372" y="-110" width="80" height="15" uuid="9d131354-cddf-4929-b168-152c1e7dde85"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-55" x="451" y="-110" width="7" height="15" uuid="27f42268-8302-47fb-9945-ff21d0ea467e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-56" x="372" y="-110" width="80" height="15" uuid="2dc6dfdd-5853-4b90-a135-9cdb13fd9124"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-57" x="372" y="-110" width="80" height="15" uuid="e276a72a-0636-4cfa-90b7-4c73ba8516ad"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="1" width="234" height="19" uuid="01a32277-a9e5-47a3-9d3d-b5abf2476326"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="4" y="21" width="228" height="59" uuid="9d70a708-d0e1-4c9b-a386-c89368e0de1a"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_address1} + ' '+$F{org_address2}+ ' '+$F{org_postal}+ ' '+$F{country_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-27" x="366" y="50" width="18" height="15" uuid="a6943790-69b0-4051-b4f3-a10926a9d224"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="263" y="50" width="113" height="15" uuid="42e44195-e7ee-4203-a488-4b80081c1797"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Idolmart Outlet]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="378" y="50" width="165" height="15" uuid="9bab289f-10ca-4897-acaa-5aac8627e6dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-27" x="366" y="79" width="18" height="15" uuid="1fdbe21e-3d49-4f47-9b68-7651cd26db4c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="263" y="79" width="113" height="15" uuid="5266e443-d4e1-49ca-a8c6-04c69a27dd69"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="378" y="81" width="167" height="28" uuid="a7f7c9be-8084-4048-bbd0-de8879eb8e58"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="9" isStrikeThrough="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" x="263" y="107" width="113" height="15" uuid="fb2da834-c97a-44f2-8ed5-5d722aa1603e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Telephon/ Fax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-27" x="366" y="107" width="18" height="15" uuid="b4865781-065d-48ca-a075-d6a70e3e4972"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="378" y="107" width="163" height="15" uuid="d8b96f14-c726-4b14-8543-40f48d4ec643"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phonefax}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" x="263" y="65" width="113" height="15" uuid="ad849ed9-620c-4eb5-a4d5-47de27ad3ebf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-27" x="366" y="65" width="18" height="15" uuid="0a6686d4-29fb-483f-86f4-1915f04ea828"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="378" y="65" width="167" height="15" uuid="dcca3375-336d-4b6f-a7a1-56c57ff53fcd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="txtStatusVOIDED" x="108" y="80" width="139" height="38" forecolor="#FF0000" uuid="340597ab-671d-4aa8-9f1e-86b873175509"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="36"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{status}.compareTo("VO")==0) ? "VOIDED" : " ")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="txtStatusDRAFT" x="108" y="79" width="139" height="38" forecolor="#0000FF" uuid="0b55a2aa-99ae-45e6-9a87-eed5fb0b54a9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="36" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{status}.compareTo("DR")==0) ? "DRAFT" : " ")]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-8" x="0" y="5" width="31" height="15" uuid="8c0d7458-39bc-4967-bf65-ab98b93d49a6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-9" x="31" y="5" width="87" height="15" uuid="54398d7c-7185-453e-b04f-c143eba3b424"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[No Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="288" y="5" width="33" height="15" uuid="0855629f-a338-45b1-9e4a-d35fa8ebd301"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-12" x="324" y="5" width="74" height="15" uuid="bb9c8da8-2829-4747-8d3e-8c2aeb281435"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Hrg Jual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-13" x="398" y="5" width="84" height="15" uuid="376e485e-8c33-49c4-92ab-2e3a0f10f617"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Tot.Hrg.Jual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-14" x="482" y="4" width="69" height="15" uuid="16cff881-a7ba-403c-b498-d0e570f1d5eb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-5" x="0" y="3" width="552" height="1" uuid="f2407846-0389-4739-a5b9-35373e5b1dfe"/>
+			</line>
+			<line>
+				<reportElement key="line-6" x="0" y="22" width="552" height="1" uuid="32b97998-77f8-47aa-aa93-73fadc03e15e"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-9" x="118" y="5" width="168" height="15" uuid="e9b8ba3c-97e3-4d19-922e-d524b8b13a12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="0" width="31" height="15" uuid="3eca3991-06b1-48ab-99c8-a76f21c0a1cc"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delivery_line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" x="290" y="0" width="33" height="15" uuid="bdec19f5-0fd2-46d5-bb0b-dc2f9abc1ab1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delivery_qty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" x="323" y="0" width="75" height="15" uuid="07def290-1782-4951-a023-9f08777ae62d"/>
+				<textElement textAlignment="Right">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{priceactual}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-11" x="120" y="0" width="166" height="15" uuid="ff867655-0d6b-4ddd-a63d-0495fbc802bd"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-11" x="31" y="0" width="87" height="15" uuid="2102fb80-c537-4daf-bd39-6bfcf7aae19f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productcode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" x="398" y="0" width="83" height="15" uuid="257675f3-bcad-4fcd-9e9f-11aa00b0ccfa"/>
+				<textElement textAlignment="Right">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalamt}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="529" y="1" width="21" height="14" uuid="9a634a9d-ac78-4786-8bca-7f2f12099ee7"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-15" x="149" y="23" width="92" height="18" uuid="a2d0225f-d97b-49e2-9699-df385554631f"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Diterima Oleh :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="149" y="98" width="92" height="18" uuid="707c6368-d4c2-423e-a22b-0724fd960bee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama Jelas]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="149" y="96" width="92" height="1" uuid="5774ab44-4c7e-4c2f-aba6-82475c5abf39"/>
+			</line>
+			<line>
+				<reportElement key="line-4" x="1" y="2" width="548" height="1" uuid="a8b2f285-5c10-410b-b492-4f7ac3ca94bf"/>
+			</line>
+			<line>
+				<reportElement key="line-4" x="2" y="20" width="548" height="1" uuid="1a8aeda1-1aa7-4b13-94e2-722b8e03eda4"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-7" x="121" y="3" width="68" height="15" uuid="9c2f5092-2981-4310-a718-260516b7fd60"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" x="263" y="2" width="58" height="15" uuid="5b2434d4-af22-4417-a8de-8c1c82e08460"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUM_QTY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" x="398" y="3" width="83" height="15" uuid="85a90e89-8904-47a7-afdb-ffde99d2cd0d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUM_TOTAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-15" x="255" y="22" width="92" height="18" uuid="a38ed4e9-e844-4a15-8359-d3951fd1f175"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Dikirim Oleh :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="257" y="98" width="92" height="18" uuid="8eb8678a-2ed2-4540-86f3-255e3c890c3a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama Jelas]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="258" y="96" width="92" height="1" uuid="c77c8aef-0ae1-4f53-bb81-094f752dc237"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-15" x="360" y="22" width="87" height="18" uuid="8c252dd7-e1a8-4eb3-9329-19ac6b264886"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Mengetahui :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="362" y="98" width="87" height="18" uuid="c54aaea6-06b8-420c-ad87-17f49c8301de"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama Jelas]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="362" y="96" width="87" height="1" uuid="af97238b-aa5a-4d67-ba22-a899a49b2f4e"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-16" x="459" y="98" width="93" height="18" uuid="13461e8a-8a2a-4c95-aae2-0aa23d13a1f8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama Jelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-15" x="458" y="22" width="93" height="18" uuid="b6e310b4-ffc9-4a3f-b68c-ab71de438961"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Hormat kami :]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="458" y="96" width="93" height="1" uuid="1af0fd89-cf55-4c5f-b31e-e7b12657bc5d"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-15" x="4" y="22" width="130" height="57" backcolor="#333333" uuid="d75dfbbf-b76b-4615-8126-c1b62e7d192c"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="9" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Pelaporan barang masuk
+diterima 1 x 24 jam
+sejak barang diterima
+melalui ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="2" y="23" width="132" height="56" backcolor="#00FF00" uuid="ff58b117-df45-4af2-b612-fcc9bf00943a"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

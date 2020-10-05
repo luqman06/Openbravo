@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="008A541A83264A18B7600B23293C87C7" trl="N">
+    <value column="Name" isTrl="N" original="Payment Group">Payment Group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="32D9770BD96B490588C503D11A7D2655" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning Type">Jenis Pendapatan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="458D295618814F01BA3D6C205F0802FD" trl="N">
+    <value column="Name" isTrl="N" original="pyr_tax_invoice">pyr_tax_invoice</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="50401EFCCF09478DB729638DB61A9F4E" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Sp_Employee">PYR_Sp_Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="56154CC700A44BD780D817B7DE245FD7" trl="N">
+    <value column="Name" isTrl="N" original="pyr_salarypayment">pyr_salarypayment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="959D4458A7D04953AC2FCEA03C9FC207" trl="N">
+    <value column="Name" isTrl="N" original="pyr_paymentterm">pyr_paymentterm</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B070103D6C2B434A92F7089F95F421A6" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction Type">Jenis Potongan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D15C3FBEFDE241F6AE7483EADBB79FD2" trl="N">
+    <value column="Name" isTrl="N" original="Earning Parameter">Earning Parameter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

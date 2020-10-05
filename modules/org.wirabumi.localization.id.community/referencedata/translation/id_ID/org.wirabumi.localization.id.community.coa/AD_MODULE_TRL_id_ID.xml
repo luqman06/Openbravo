@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="934051A6DFE243008952C623392EE26A" trl="N">
+    <value column="Description" isTrl="N" original="Chart of Accounts for Communityv version of Indonesia Localization (PSAK)">Chart of Accounts for Communityv version of Indonesia Localization (PSAK)</value>
+    <value column="Help" isTrl="N" original="Chart of Accounts for Communityv version of Indonesia Localization (PSAK)">Chart of Accounts for Communityv version of Indonesia Localization (PSAK)</value>
+    <value column="License" isTrl="N" original="By installing this module, you are indicating acceptance of the GNU General Public License.">By installing this module, you are indicating acceptance of the GNU General Public License.</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

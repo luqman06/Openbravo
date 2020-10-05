@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="0E7B87FE7F194CAB9F0970E238681177" trl="N">
+    <value column="Name" isTrl="N" original="Post Pesangon">Post Pesangon</value>
+    <value column="Description" isTrl="N" original="Post Pesangon">Post Pesangon</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3800D291C19F4336B0EF5094667022D1" trl="N">
+    <value column="Name" isTrl="N" original="Print Death Certificate">Print Death Certificate</value>
+    <value column="Description" isTrl="N" original="Print Death Certificate">Print Death Certificate</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8549948A3FE54E9CA94473ADB4BA8C50" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Pesangon">Akumulasi Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="86B5E33837F94FC9BC0B3CF63517F803" trl="N">
+    <value column="Name" isTrl="N" original="Form Pesangon Report">Form Pesangon Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B09E5B973E414409A0E55691E489D358" trl="N">
+    <value column="Name" isTrl="N" original="Copy Earning Param">Copy Earning Param</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CBCA1AE8F1F54A258EC83AA48D143DD5" trl="N">
+    <value column="Name" isTrl="Y" original="Create Employee Termination Letter">Buat SK Pemberhentian</value>
+    <value column="Description" isTrl="Y" original="Create Employee Termination Letter">Buat SK Pemberhentian</value>
+    <value column="Help" isTrl="Y" original="Create Employee Termination Letter in Employee Information window">Buat SK Pemberhentian di window informasi karyawan.</value>
+  </row>
+  <row id="E7E538CE3A624CCDA1C14C7CA8A0AEF4" trl="N">
+    <value column="Name" isTrl="N" original="Tunjangan Pesangon Salary Payment">Tunjangan Pesangon Salary Payment</value>
+    <value column="Description" isTrl="N" original="Tunjangan Pesangon Salary Payment">Tunjangan Pesangon Salary Payment</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

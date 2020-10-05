@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+  <vector>
+    <versionInfo version="3.0.27099"/>
+    <columnDataChange tablename="AD_PROCESS_PARA" columnname="DESCRIPTION" pkRow="810ADF0079EC4BE2BA89BB628D065A9E">
+      <oldValue/>
+      <newValue><![CDATA[A unique and often automatically generated identifier for a sales order.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_PROCESS_PARA" columnname="HELP" pkRow="810ADF0079EC4BE2BA89BB628D065A9E">
+      <oldValue/>
+      <newValue><![CDATA[Unique identifier and a reference to a Sales Order originating from the document sequence defined for this document type.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISIDENTIFIER" pkRow="2901">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7822">
+      <oldValue><![CDATA[x not implemented]]></oldValue>
+      <newValue><![CDATA[The date that this record was last updated]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7829">
+      <oldValue><![CDATA[x not implemented]]></oldValue>
+      <newValue><![CDATA[The Classification can be used to optionally group products.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7843">
+      <oldValue><![CDATA[The official price of a product in a specified currency.]]></oldValue>
+      <newValue><![CDATA[The official net price of a product in a specified currency.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="7843">
+      <oldValue><![CDATA[The List Price is the official price stated by the selected pricelist and the currency of the document.]]></oldValue>
+      <newValue><![CDATA[The Net List Price is the official price stated by the selected pricelist and the currency of the document.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="7845">
+      <oldValue><![CDATA[The type of product also determines accounting consequences.]]></oldValue>
+      <newValue><![CDATA[There are four types of products available. Item type can be used to configure any product such as raw materials or finished products ready to be sold. An item can be flagged as Socked or not, can be part of a production process and/or can be a bill of materials. Item type is the only one for which a cost type calculation can be configured.  Service type can be used to configure consultancy, transport or insurance services. Service type can be purchased or sold but can not be stocked. A service can be a bill of materials. Finally Resource and Expense are product types which can be used to distinguish between different types of products which can be purchased or sold but make not sense to stock. Expense type can be used to configure travel expenses fto be used while reporting Employee Expenses.
+The fact of using a given product type does not mean a different accounting. All product types account same way while being purchased, stocked or sold. All of them use the ledger accounts defined in the Accounting tab of the Product window.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7885">
+      <oldValue><![CDATA[x not implemented]]></oldValue>
+      <newValue><![CDATA[The date that this record was last updated]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7922">
+      <oldValue><![CDATA[x not implemented]]></oldValue>
+      <newValue><![CDATA[The date that this record was last updated]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7924">
+      <oldValue><![CDATA[A unique identifier for an account type.]]></oldValue>
+      <newValue><![CDATA[A unique identifier of the Account Tree.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="7924">
+      <oldValue><![CDATA[The Account Element uniquely identifies an Account Type.  These are commonly known as a Chart of Accounts.]]></oldValue>
+      <newValue><![CDATA[The Account Tree uniquely identifies the Account Tree, also known as Chart of Accounts, linked to the Accounting Schema.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="9282">
+      <oldValue><![CDATA[The structure used in accounting including costing methods, currencies, and the calendar.]]></oldValue>
+      <newValue><![CDATA[The book containing all financial transactions recorded for the legal entity.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="9282">
+      <oldValue><![CDATA[An Accounting Schema defines the rules used in accounting such as costing method, currency and calendar]]></oldValue>
+      <newValue><![CDATA[The book containing all financial transactions recorded for the legal entity.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="9295">
+      <oldValue><![CDATA[x not implemented]]></oldValue>
+      <newValue><![CDATA[The date that this record was last updated]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="83200279C37F45D79538E12C741C78AD">
+      <oldValue><![CDATA[Insurance Provider]]></oldValue>
+      <newValue><![CDATA[Employee who work for this company]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="83200279C37F45D79538E12C741C78AD">
+      <oldValue><![CDATA[institution that provide insurance service]]></oldValue>
+      <newValue><![CDATA[Employee who work for this company]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="B108A87BC7D64558A16441E3059EE277">
+      <oldValue/>
+      <newValue><![CDATA[A unique and often automatically generated identifier for a sales order line.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="B108A87BC7D64558A16441E3059EE277">
+      <oldValue/>
+      <newValue><![CDATA[A unique identifier and a reference to a sales order line (product).]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="NAME" pkRow="218589E266C8452EB5B138CF6E9EC3FA">
+      <oldValue><![CDATA[Document No]]></oldValue>
+      <newValue><![CDATA[Document No.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="DESCRIPTION" pkRow="218589E266C8452EB5B138CF6E9EC3FA">
+      <oldValue/>
+      <newValue><![CDATA[An often automatically generated identifier for all documents.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="HELP" pkRow="218589E266C8452EB5B138CF6E9EC3FA">
+      <oldValue/>
+      <newValue><![CDATA[The document number is usually automatically generated by the system and determined by the document type of the document. If the document is not saved, the preliminary number is displayed in "<>". If the document type of your document has no automatic document sequence defined, the field will be empty when creating a new document. This is for documents which usually have an external number (like vendor invoice).  If you leave the field empty, the system will generate a document number for you. The document sequence used for this fallback number is defined in the "Document Sequence" window with the name "DocumentNo_<TableName>", where TableName is the actual name of the table inside the database (e.g. C_Order).]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="NAME" pkRow="851A9CA0F81E43649DA78664D9C6D020">
+      <oldValue><![CDATA[Date Ordered]]></oldValue>
+      <newValue><![CDATA[Order Date]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="DESCRIPTION" pkRow="851A9CA0F81E43649DA78664D9C6D020">
+      <oldValue/>
+      <newValue><![CDATA[The time listed on the order.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="HELP" pkRow="851A9CA0F81E43649DA78664D9C6D020">
+      <oldValue/>
+      <newValue><![CDATA[Indicates the Date an item was ordered.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="DESCRIPTION" pkRow="868FDABF3E1F4873A416585A654BB5D1">
+      <oldValue/>
+      <newValue><![CDATA[Anyone who takes part in daily business operations by acting as a customer, employee, etc.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBUISEL_SELECTOR_FIELD" columnname="HELP" pkRow="868FDABF3E1F4873A416585A654BB5D1">
+      <oldValue/>
+      <newValue><![CDATA[A Business Partner is anyone with whom you transact.  This can include a customer, vendor, employee or any combination of these.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="5982">
+      <oldValue><![CDATA[The official price of a product in a specified currency.]]></oldValue>
+      <newValue><![CDATA[The official net price of a product in a specified currency.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="5982">
+      <oldValue><![CDATA[The List Price is the official price stated by the selected pricelist and the currency of the document.]]></oldValue>
+      <newValue><![CDATA[The Net List Price is the official price stated by the selected pricelist and the currency of the document.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="5984">
+      <oldValue><![CDATA[The type of product also determines accounting consequences.]]></oldValue>
+      <newValue><![CDATA[There are four types of products available. Item type can be used to configure any product such as raw materials or finished products ready to be sold. An item can be flagged as Socked or not, can be part of a production process and/or can be a bill of materials. Item type is the only one for which a cost type calculation can be configured.  Service type can be used to configure consultancy, transport or insurance services. Service type can be purchased or sold but can not be stocked. A service can be a bill of materials. Finally Resource and Expense are product types which can be used to distinguish between different types of products which can be purchased or sold but make not sense to stock. Expense type can be used to configure travel expenses fto be used while reporting Employee Expenses.
+The fact of using a given product type does not mean a different accounting. All product types account same way while being purchased, stocked or sold. All of them use the ledger accounts defined in the Accounting tab of the Product window.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="6018">
+      <oldValue><![CDATA[Accounting Element]]></oldValue>
+      <newValue><![CDATA[Account Tree]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="6018">
+      <oldValue><![CDATA[A unique identifier for an account type.]]></oldValue>
+      <newValue><![CDATA[A unique identifier of the Account Tree.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="6018">
+      <oldValue><![CDATA[The Account Element uniquely identifies an Account Type.  These are commonly known as a Chart of Accounts.]]></oldValue>
+      <newValue><![CDATA[The Account Tree uniquely identifies the Account Tree, also known as Chart of Accounts, linked to the Accounting Schema.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="7138">
+      <oldValue><![CDATA[Import Journal]]></oldValue>
+      <newValue><![CDATA[Process Import G/L Journal]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="7138">
+      <oldValue><![CDATA[Import General Ledger Batch/Journal/Line]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="7138">
+      <oldValue><![CDATA[The Parameters are default values for null import record values, they do not overwrite any data.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="7152">
+      <oldValue><![CDATA[Accounting Schema]]></oldValue>
+      <newValue><![CDATA[General Ledger]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="7152">
+      <oldValue><![CDATA[The structure used in accounting including costing methods, currencies, and the calendar.]]></oldValue>
+      <newValue><![CDATA[The book containing all financial transactions recorded for the legal entity.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="7152">
+      <oldValue><![CDATA[An Accounting Schema defines the rules used in accounting such as costing method, currency and calendar]]></oldValue>
+      <newValue><![CDATA[The book containing all financial transactions recorded for the legal entity.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="7247">
+      <oldValue><![CDATA[Import Invoice]]></oldValue>
+      <newValue><![CDATA[Process Import Invoice]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="7247">
+      <oldValue><![CDATA[The Parameters are default values for null import record values, they do not overwrite any data.]]></oldValue>
+      <newValue><![CDATA[import invoice from temporary table (originally from CSV) into Sales/Purchase Invoice.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="803233">
+      <oldValue><![CDATA[Import Budget]]></oldValue>
+      <newValue><![CDATA[Process Import Budget]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="803233">
+      <oldValue><![CDATA[Import Budget]]></oldValue>
+      <newValue><![CDATA[Import budget from temporary table (origanally from CSV) to Budget.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="1005500004">
+      <oldValue><![CDATA[Accounting Schema]]></oldValue>
+      <newValue><![CDATA[General Ledger]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="1005500004">
+      <oldValue><![CDATA[The structure used in accounting including costing methods, currencies, and the calendar.]]></oldValue>
+      <newValue><![CDATA[The book containing all financial transactions recorded for the legal entity.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="1005500004">
+      <oldValue><![CDATA[An Accounting Schema defines the rules used in accounting such as costing method, currency and calendar]]></oldValue>
+      <newValue><![CDATA[The book containing all financial transactions recorded for the legal entity.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="0684FCC7CA4A4367ADBB3116C6953465">
+      <oldValue><![CDATA[Document Date]]></oldValue>
+      <newValue><![CDATA[Docdate]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="081F9015AD9548649201BEA4E9229CA4">
+      <oldValue><![CDATA[Insurance Provider]]></oldValue>
+      <newValue><![CDATA[Employee who work for this company]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="081F9015AD9548649201BEA4E9229CA4">
+      <oldValue><![CDATA[institution that provide insurance service]]></oldValue>
+      <newValue><![CDATA[Employee who work for this company]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="2B19C5C0D9B54E3491553BB439E51616">
+      <oldValue><![CDATA[Sales Order Line]]></oldValue>
+      <newValue><![CDATA[Purchase Order Line]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="2B19C5C0D9B54E3491553BB439E51616">
+      <oldValue/>
+      <newValue><![CDATA[A unique and often automatically generated identifier for a purchase order line.]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="2B19C5C0D9B54E3491553BB439E51616">
+      <oldValue/>
+      <newValue><![CDATA[A unique identifier and a reference to a purchase order line (product).]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="2C3B28510C0544BC8BDA4461AE88C486">
+      <oldValue><![CDATA[Navigation Bar Classname]]></oldValue>
+      <newValue><![CDATA[Java Classname]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="C235F2EA76704EEAA429D2A9097954F3">
+      <oldValue><![CDATA[Leave Request]]></oldValue>
+      <newValue><![CDATA[LV_Leave_ID]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="D8CD2F90DAB844889C9419CD1189FF33">
+      <oldValue><![CDATA[Copy form SO]]></oldValue>
+      <newValue><![CDATA[Copy from SO to Requisition]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="D8CD2F90DAB844889C9419CD1189FF33">
+      <oldValue/>
+      <newValue><![CDATA[Copy from SO to Requisition]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="D8CD2F90DAB844889C9419CD1189FF33">
+      <oldValue/>
+      <newValue><![CDATA[Copy sales order line to selected requisition]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_ELEMENT" columnname="NAME" pkRow="1891">
+      <oldValue><![CDATA[Birthday]]></oldValue>
+      <newValue><![CDATA[Date of Birth]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_ELEMENT" columnname="PRINTNAME" pkRow="1891">
+      <oldValue><![CDATA[Birthday]]></oldValue>
+      <newValue><![CDATA[Date of Birth]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_ELEMENT" columnname="DESCRIPTION" pkRow="1891">
+      <oldValue><![CDATA[An anniversary of birth for a business partner.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_ELEMENT" columnname="HELP" pkRow="1891">
+      <oldValue><![CDATA[Birthday or Anniversary day]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="7878">
+      <oldValue><![CDATA[An anniversary of birth for a business partner.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="7878">
+      <oldValue><![CDATA[Birthday or Anniversary day]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DESCRIPTION" pkRow="8745">
+      <oldValue><![CDATA[An anniversary of birth for a business partner.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="HELP" pkRow="8745">
+      <oldValue><![CDATA[Birthday or Anniversary day]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_ID" pkRow="1005100008">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[95E2A8B50A254B2AAE6774B8C2F28120]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_VALUE_ID" pkRow="1005100008">
+      <oldValue/>
+      <newValue><![CDATA[BF8F5FEEC9E747E3982C78F4E60BF857]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_ELEMENT_ID" pkRow="1005100008">
+      <oldValue><![CDATA[187]]></oldValue>
+      <newValue><![CDATA[0C1AF7CC23474A3E8C2C553BD1CEE47D]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="5930">
+      <oldValue><![CDATA[An anniversary of birth for a business partner.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="5930">
+      <oldValue><![CDATA[Birthday or Anniversary day]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="6515">
+      <oldValue><![CDATA[An anniversary of birth for a business partner.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="6515">
+      <oldValue><![CDATA[Birthday or Anniversary day]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DESCRIPTION" pkRow="7022">
+      <oldValue><![CDATA[An anniversary of birth for a business partner.]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="HELP" pkRow="7022">
+      <oldValue><![CDATA[Birthday or Anniversary day]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+  </vector>

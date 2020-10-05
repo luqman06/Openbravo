@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_SITE_TRG2">
+    <trigger name="HRIS_SITE_TRG2" table="HRIS_SITE" fires="before" insert="false" update="false" delete="true" foreach="row">
+      <body><![CDATA[
+    
+BEGIN
+    
+	IF AD_isTriggerEnabled()='N' THEN RETURN;
+	END IF;
+ 
+	DELETE FROM ad_treenode WHERE AD_Client_ID = :old.AD_Client_ID AND Node_ID = :old.hris_site_id;
+     
+END HRIS_SITE_TRG2
+]]></body>
+    </trigger>
+  </database>

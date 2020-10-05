@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER ICS_REQUISITIONLINE_STOCK_TRG">
+    <trigger name="ICS_REQUISITIONLINE_STOCK_TRG" table="M_REQUISITIONLINE" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+
+    /*************************************************************************
+    * Title: ics_requisitionline_stock_trg
+    * Description:
+    *   Requisition Line Trigger to fill onhand stock field when insert/update
+    ************************************************************************/
+ v_OnhandStock NUMBER;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+  	if (INSERTING) then
+  	
+		SELECT sum(sd_1.qtyonhand) AS OnhandStock
+			into v_OnhandStock
+           FROM m_storage_detail sd_1
+--             JOIN m_locator l ON sd_1.m_locator_id = l.m_locator_id
+             JOIN m_attributesetinstance a ON sd_1.m_attributesetinstance_id = a.m_attributesetinstance_id
+--             join m_product mp on sd_1.m_product_id = mp.m_product_id
+          	WHERE sd_1.ad_client_id = :new.ad_client_id
+--          		and sd_1.ad_org_id = '19375715EB854A8F9C2520D384D77DA5'		--new.ad_org_id
+          		and sd_1.m_product_id = :new.m_product_id
+          		and COALESCE(sd_1.qtyonhand, 0) <> 0 OR COALESCE(sd_1.qtyorderonhand, 0) <> 0
+        	 		HAVING sum(sd_1.qtyonhand) <> 0 OR sum(sd_1.qtyorderonhand) <> 0;
+        	 	
+		update m_requisitionline
+			set em_ics_onhand_stock = coalesce(v_OnhandStock, 0)
+			where m_requisitionline_id = :new.m_requisitionline_id;
+		
+	elseif (UPDATING) then
+		
+		if (:old.qty <> :new.qty or :old.m_product_id <> :new.m_product_id or :old.needbydate <> :new.needbydate) then
+		
+			SELECT sum(sd_1.qtyonhand) AS OnhandStock
+				into v_OnhandStock
+	           FROM m_storage_detail sd_1
+	             JOIN m_attributesetinstance a ON sd_1.m_attributesetinstance_id = a.m_attributesetinstance_id
+	--             join m_product mp on sd_1.m_product_id = mp.m_product_id
+	          	WHERE sd_1.ad_client_id = :old.ad_client_id
+	--          		and sd_1.ad_org_id = '19375715EB854A8F9C2520D384D77DA5'		--new.ad_org_id
+	          		and sd_1.m_product_id = :new.m_product_id
+	          		and COALESCE(sd_1.qtyonhand, 0) <> 0 OR COALESCE(sd_1.qtyorderonhand, 0) <> 0
+	        	 		HAVING sum(sd_1.qtyonhand) <> 0 OR sum(sd_1.qtyorderonhand) <> 0;
+	        	 	
+			update m_requisitionline
+				set em_ics_onhand_stock = coalesce(v_OnhandStock, 0)
+				where m_requisitionline_id = :old.m_requisitionline_id;
+		
+		end if;
+	  
+ 	END IF;
+ 
+	END ICS_REQUISITIONLINE_STOCK_TRG
+]]></body>
+    </trigger>
+  </database>

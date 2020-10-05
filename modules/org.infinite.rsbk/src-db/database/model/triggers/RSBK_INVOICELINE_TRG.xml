@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER RSBK_INVOICELINE_TRG">
+    <trigger name="RSBK_INVOICELINE_TRG" table="C_ORDERLINE" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+    v_DateNull DATE := TO_DATE('31-12-9999','DD-MM-YYYY');
+    v_issotrx char(1);
+    v_jumlahline NUMBER;
+        
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- trigger defintion here:
+    /*
+     * mencegah PO lines di RSBK duplicated item produknya
+     * */
+    
+    if :new.ad_client_id='269A8F22C1064EBBAABAC212CE6C6764' then --khusus RSBK
+      select issotrx into v_issotrx from c_order where c_order_id=:new.c_order_id;
+      if v_issotrx='N' then --khusus PO
+        select count(*) into v_jumlahline
+        from c_orderline 
+        where c_order_id=:new.c_order_id 
+        and m_product_id=:new.m_product_id 
+        and c_orderline_id!=:new.c_orderline_id;
+        if (v_jumlahline>0) then
+           RAISE NO_DATA_FOUND ;
+        end if;
+      end if;
+    end if;
+    
+    
+    END RSBK_INVOICELINE_TRG
+]]></body>
+    </trigger>
+  </database>

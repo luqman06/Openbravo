@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="04967EF13ABB4339AD3271C6392C0EA1" trl="N">
+    <value column="Name" isTrl="N" original="Leave Report">Leave Report</value>
+    <value column="Description" isTrl="N" original="Leave Report">Leave Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="445E881C6633427284DF28650DB8D6C6" trl="N">
+    <value column="Name" isTrl="N" original="Generate Leave Dari Window Client">Generate Leave Dari Window Client</value>
+    <value column="Description" isTrl="N" original="Generate Leave Dari Window Client">Generate Leave Dari Window Client</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CA694C8FCAD144889F0C58730D53758C" trl="N">
+    <value column="Name" isTrl="N" original="Background Process Cuti Besar">Background Process Cuti Besar</value>
+    <value column="Description" isTrl="N" original="Background Process Cuti Besar">Background Process Cuti Besar</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D06D41A3C96B42D484834CC1CAD85E5C" trl="N">
+    <value column="Name" isTrl="Y" original="Process Leave Request">Post Leave</value>
+    <value column="Description" isTrl="N" original="Process Leave Request">Process Leave Request</value>
+    <value column="Help" isTrl="N" original="Process leave request approval">Process leave request approval</value>
+  </row>
+  <row id="D755875FCAAA4E5F94DCB9A823EC4B12" trl="N">
+    <value column="Name" isTrl="N" original="Complete Izin Tidak Masuk">Complete Izin Tidak Masuk</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DCB42D1AA1C546A6811C46BE10686CF0" trl="N">
+    <value column="Name" isTrl="N" original="Laporan Sisa Cuti Pegawai">Laporan Sisa Cuti Pegawai</value>
+    <value column="Description" isTrl="N" original="Laporan Sisa Cuti Pegawai">Laporan Sisa Cuti Pegawai</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

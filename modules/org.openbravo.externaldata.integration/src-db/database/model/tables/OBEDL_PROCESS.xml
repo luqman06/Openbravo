@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+  <database name="TABLE OBEDL_PROCESS">
+    <table name="OBEDL_PROCESS" primaryKey="OBEDL_PROCESS_KEY">
+      <column name="OBEDL_PROCESS_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="NAME" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="RECORDSIZE" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="HASOUTPUT" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="STORAGELOCATION" primaryKey="false" required="true" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="HASINPUT" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="VALUE" primaryKey="false" required="true" type="NVARCHAR" size="40" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_MODULE_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SYNCHRONOUS" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="COMMITITEMS" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="TYPEOFDATA" primaryKey="false" required="true" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault><![CDATA['JSON']]></onCreateDefault>
+      </column>
+      <column name="HASDIRECTRESPONSE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <column name="ENABLE_OUTPUT_RETRY" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <foreign-key foreignTable="AD_CLIENT" name="OBEDL_PROCESS_AD_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="OBEDL_PROCESS_AD_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_MODULE" name="OBEDL_PROCESS_MODULE">
+        <reference local="AD_MODULE_ID" foreign="AD_MODULE_ID"/>
+      </foreign-key>
+      <index name="OBEDL_PROCESS_VALUE_INDEX" unique="true">
+        <index-column name="VALUE"/>
+      </index>
+      <check name="OBEDL_PROCESS_ACTIVE_CHECK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+      <check name="OBEDL_PROCESS_ASYNCH_CHK"><![CDATA[SYNCHRONOUS = 'Y' OR COMMITITEMS IS NOT NULL AND RECORDSIZE IS NOT NULL]]></check>
+      <check name="OBEDL_PROCESS_DIRECTRESPONSE"><![CDATA[HASDIRECTRESPONSE IN ('Y', 'N')]]></check>
+      <check name="OBEDL_PROCESS_DPROCESS_CHECK"><![CDATA[SYNCHRONOUS IN ('Y', 'N')]]></check>
+      <check name="OBEDL_PROCESS_ENABLEOUTRET_CHK"><![CDATA[ENABLE_OUTPUT_RETRY IN ('Y', 'N')]]></check>
+      <check name="OBEDL_PROCESS_HASINPUT_CHECK"><![CDATA[HASINPUT IN ('Y', 'N')]]></check>
+      <check name="OBEDL_PROCESS_OUTPUT_CHECK"><![CDATA[HASOUTPUT IN ('Y', 'N')]]></check>
+    </table>
+  </database>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELD" version="">
+  <row id="2CBBF400951C42CD98E8B494BF202B97" trl="N">
+    <value column="Name" isTrl="N" original="Note">Note</value>
+    <value column="Description" isTrl="N" original="A non-unique identifier for a record/document often used as a search tool.">A non-unique identifier for a record/document often used as a search tool.</value>
+    <value column="Help" isTrl="N" original="A more descriptive identifier (that does need to be unique) of a record/document that is used as a default search option along with the search key (that is unique and mostly shorter). It is up to 60 characters in length.">A more descriptive identifier (that does need to be unique) of a record/document that is used as a default search option along with the search key (that is unique and mostly shorter). It is up to 60 characters in length.</value>
+  </row>
+  <row id="7B9388CEC8764E5589447700F347551B" trl="N">
+    <value column="Name" isTrl="N" original="Document Action">Document Action</value>
+    <value column="Description" isTrl="N" original="A means of changing the transaction status of the document.">A means of changing the transaction status of the document.</value>
+    <value column="Help" isTrl="N" original="&#10;You find the current status in the Document Status field. The options are listed in a popup">
+You find the current status in the Document Status field. The options are listed in a popup</value>
+  </row>
+</compiereTrl>

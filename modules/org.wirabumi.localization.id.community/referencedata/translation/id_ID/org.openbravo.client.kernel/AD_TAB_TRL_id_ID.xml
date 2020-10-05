@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="0424D6B4F7FF46A6A4B4960F410144B6" trl="N">
+    <value column="Name" isTrl="N" original="Template">Template</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Maintaining templates for user interface components">Maintaining templates for user interface components</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Templates are used to convert server side components into client side representations, to javascript. In its basic form the template reads data from the database and processes this data to create a javascript string which is sent to the server. A template is called by the Openbravo client framework when a request for a component is received. ">Templates are used to convert server side components into client side representations, to javascript. In its basic form the template reads data from the database and processes this data to create a javascript string which is sent to the server. A template is called by the Openbravo client framework when a request for a component is received. </value>
+  </row>
+  <row id="33550B504F454C518E487AF4BC81376F" trl="N">
+    <value column="Name" isTrl="N" original="Mask Reference">Mask Reference</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9BC8881FA26C4609BEC7571F55CA053C" trl="N">
+    <value column="Name" isTrl="N" original="User Interface Definition ">User Interface Definition </value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Defines user interface specific properties ">Defines user interface specific properties </value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Defines user interface specific properties on type level.">Defines user interface specific properties on type level.</value>
+  </row>
+  <row id="9CEA7BCAB01844EEBA8D254796B9BCA3" trl="N">
+    <value column="Name" isTrl="N" original="Template Dependency">Template Dependency</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Defines dependencies between the templates">Defines dependencies between the templates</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Defines a dependency relation between this template and another template. When processing, templates on which this template depends are loaded first into the template processor.">Defines a dependency relation between this template and another template. When processing, templates on which this template depends are loaded first into the template processor.</value>
+  </row>
+</compiereTrl>

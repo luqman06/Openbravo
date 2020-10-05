@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="27445C8270364452BEB29669FBB21CED" trl="N">
+    <value column="Description" isTrl="N" original="Make openbravo easier to use by providing import data process, fast configuration, and approval routing.">Make openbravo easier to use by providing import data process, fast configuration, and approval routing.</value>
+    <value column="Help" isTrl="N" original="General improvement of Openbravo ERP, developed by Wirabumi Software. This module will provide you:&#10;1. additional alert&#10;2. import file format&#10;3. approval rule and threshold amount restriction rule&#10;4. configuration wizard&#10;5. improvement of requisition to order form&#10;6. additional reporting&#10;7. bug fix">General improvement of Openbravo ERP, developed by Wirabumi Software. This module will provide you:
+1. additional alert
+2. import file format
+3. approval rule and threshold amount restriction rule
+4. configuration wizard
+5. improvement of requisition to order form
+6. additional reporting
+7. bug fix</value>
+    <value column="License" isTrl="N" original="Wirabumi General Enhancement - Openbravo EZ">Wirabumi General Enhancement - Openbravo EZ</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

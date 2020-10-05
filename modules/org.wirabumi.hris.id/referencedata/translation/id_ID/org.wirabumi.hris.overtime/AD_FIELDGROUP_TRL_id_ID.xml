@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELDGROUP" version="">
+  <row id="776DBB952F97461F9C9440C9B64DAE7F" trl="N">
+    <value column="Name" isTrl="N" original="Overtime">Overtime</value>
+  </row>
+</compiereTrl>

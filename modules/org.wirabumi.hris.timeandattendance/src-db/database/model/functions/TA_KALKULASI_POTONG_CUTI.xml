@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TA_KALKULASI_POTONG_CUTI">
+    <function name="TA_KALKULASI_POTONG_CUTI" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_effectivedate" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[declare
+v_month NUMBER;
+v_year NUMBER;
+v_payments NUMBER;
+v_akumulasi_pot_cuti varchar(32);
+v_bpartner_id varchar(32);
+v_startdate timestamp without time zone;
+v_enddate timestamp without time zone;
+v_date timestamp without time zone;
+v_checkin time without time zone;
+v_checkout time without time zone;
+v_checkinactual timestamp without time zone;
+v_checkoutactual timestamp without time zone;
+v_in_business time without time zone;
+v_out_business time without time zone; 
+v_late NUMBER;
+v_early NUMBER;
+v_lateatt NUMBER;
+v_totallate NUMBER;
+v_tunjangan NUMBER;
+v_type_ct varchar(60);
+v_duration_ct NUMBER;
+v_usedleave_ct NUMBER;
+v_sisacuti_ct NUMBER;
+v_type_cbs varchar(60);
+v_duration_cbs NUMBER; 
+v_usedleave_cbs NUMBER;
+v_sisacuti_cbs NUMBER;
+v_utangcuti NUMBER;
+v_count3 NUMBER;
+v_count4 NUMBER;
+v_count5 NUMBER;
+v_cuti NUMBER;
+v_workday NUMBER;
+v_cutitotal NUMBER;
+v_cutiharian NUMBER;
+v_lateshift NUMBER;
+v_client_id varchar(32);
+v_org_id varchar(32);
+v_createdby varchar(32);
+v_employee_id varchar(32);
+v_updatedby varchar(32);
+v_shift_id varchar(32);
+v_keterangan varchar(32);
+v_hour NUMBER;
+
+--record
+cur_header record;
+cur_late record;
+cur_early record;
+
+
+
+begin
+ result:=0;
+ v_totallate:=0;
+ --memberikan parameter berupa tahun dan bulan
+ if p_effectivedate is null then
+   select date_part('year', now()), date_part('month', now()) into v_year, v_month
+   from dual;
+ else
+   v_year:=date_part('year',p_effectivedate);
+   v_month:=date_part('month', p_effectivedate);
+ end if;
+
+
+--loop employee
+for cur_header in 
+	(select distinct spe.c_bpartner_id, spe.pyr_sp_employee_id, sp.name, sp.startdate, sp.enddate,
+	sp.ad_client_id, to_char(sp.valutadate, 'month') as valutadate
+	from pyr_salarypayment sp
+	inner join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+	where date_part('year',sp.valutadate)=v_year
+	and date_part('month',sp.valutadate)=v_month
+	and exists (select 1 from lv_c_bp_leave where c_bpartner_id=spe.c_bpartner_id)
+	and (case when p_employee_id is not null then spe.c_bpartner_id=p_employee_id else 1=1 end))
+
+loop  --loop ta_kalkulasi_potong_cuti
+ --mengambil data utang cuti
+ select amount::integer into v_utangcuti 
+ from pyr_sal_variable
+ where ad_client_id=cur_header.ad_client_id
+ and value='UC'
+ and cur_header.startdate>=validfrom
+ and cur_header.enddate<=validto
+ order by validfrom desc, validto desc limit 1;
+
+ 
+ --mengambil data cuti 
+ select type, duration, usedleave, (duration-usedleave) into v_type_ct, v_duration_ct, v_usedleave_ct, v_sisacuti_ct
+ from lv_c_bp_leave 
+ where c_bpartner_id=cur_header.c_bpartner_id
+ and type='CT'
+ and cur_header.startdate>=validfrom
+ and cur_header.enddate<=validto
+ order by validfrom desc, validto desc limit 1;
+/*
+ raise exception 'v_duration_ct: %, v_usedleave_ct: %, v_utangcuti: %',
+ v_duration_ct, v_usedleave_ct, v_utangcuti;
+*/
+ 
+ select type, duration, usedleave, (duration-usedleave) into v_type_cbs, v_duration_cbs, v_usedleave_cbs, v_sisacuti_cbs
+ from lv_c_bp_leave 
+ where c_bpartner_id=cur_header.c_bpartner_id
+ and type='CBS'
+ and cur_header.startdate>=validfrom
+ and cur_header.enddate<=validto
+ order by validfrom desc, validto desc limit 1;
+
+ --validasi cuti
+ If (v_utangcuti+v_sisacuti_ct)<=0 then v_cuti:=v_sisacuti_cbs;
+ 	if  v_sisacuti_cbs is null then continue; End If;
+ Else
+    v_cuti:=v_sisacuti_ct;
+ end if;
+ 
+ /*
+ raise notice 'employee: %, v_cuti: %, v_utangcuti: %, v_sisacuti_ct: %', 
+ (select name from c_bpartner where c_bpartner_id=cur_header.c_bpartner_id), v_cuti,
+ v_utangcuti, v_sisacuti_ct;
+ */
+ --mengambil data pada window employee  
+ select ad_client_id, ad_org_id, createdby, updatedby
+ into v_client_id, v_org_id, v_createdby, v_updatedby
+ from c_bpartner
+ where c_bpartner_id=cur_header.c_bpartner_id;
+
+  --mengambil jumlah hari kerja
+ select count(*) into v_workday
+ from ta_indv_attendanceperformance(cur_header.c_bpartner_id, cur_header.startdate, cur_header.enddate);
+
+ 
+  --mengambil data akumulasi potongan cuti yang sudah ada
+ select ta_akumulasi_pot_cuti_id, c_bpartner_id, startdate, enddate
+ into v_akumulasi_pot_cuti, v_bpartner_id, v_startdate, v_enddate
+ from ta_akumulasi_pot_cuti
+ where c_bpartner_id=cur_header.c_bpartner_id
+ and docstatus='CO'
+ order by startdate desc, enddate desc;
+
+ IF v_akumulasi_pot_cuti is not null and v_bpartner_id is not null then continue; end if;
+
+ --mengambil data akumulasi potongan cuti yang sudah ada
+ select ta_akumulasi_pot_cuti_id, c_bpartner_id, startdate, enddate
+ into v_akumulasi_pot_cuti, v_bpartner_id, v_startdate, v_enddate
+ from ta_akumulasi_pot_cuti
+ where c_bpartner_id=cur_header.c_bpartner_id
+ and docstatus='DR'
+ order by startdate desc, enddate desc;
+
+    
+    --validasi potongan cuti
+    IF v_bpartner_id=cur_header.c_bpartner_id and v_startdate=cur_header.startdate and v_enddate=cur_header.enddate then 
+	update ta_akumulasi_pot_cuti set Monthday=v_totallate
+	where c_bpartner_id=cur_header.c_bpartner_id
+	and startdate=cur_header.startdate 
+	and enddate=cur_header.enddate;
+  
+    Else
+	select get_uuid() into v_akumulasi_pot_cuti from dual;
+	INSERT INTO ta_akumulasi_pot_cuti(
+            ta_akumulasi_pot_cuti_id, ad_client_id, ad_org_id, isactive, 
+            created, createdby, updated, updatedby, "type", c_bpartner_id, 
+            Dayhours, description, docstatus, docaction, Monthday, startdate, 
+            enddate, "name")
+	VALUES (v_akumulasi_pot_cuti, v_client_id, v_org_id, 'Y', 
+            now(), v_createdby, now(), v_updatedby, null, cur_header.c_bpartner_id,
+            0, null, 'DR', 'CO', v_totallate, cur_header.startdate, 
+            cur_header.enddate, 'Potong Cuti Bulan'||' '||cur_header.valutadate); 
+    End If;
+ 
+    --mendapatkan data untuk detail potongan cuti
+    --karena Terlambat
+    FOR cur_late in  (select t_date as DATE, employee_id, keterangan, checkin, checkout 
+	from ta_indv_attendanceperformance
+	(cur_header.c_bpartner_id, cur_header.startdate, cur_header.enddate))
+    Loop --loop detail potongan cuti
+	--mengambil data checkin yang paling awal
+	select checkin, (date_part('hour', late)*60 + date_part('minute', late))
+	into v_checkinactual, v_lateatt
+	from ta_attendance
+	where c_bpartner_id=cur_late.employee_id
+	and checkin::date=cur_late.date 
+	order by checkin asc limit 1;
+
+	--mengambil data shift per employee
+	select ta_shift_id into v_shift_id
+        from ta_c_bp_shift
+        where c_bpartner_id=cur_header.c_bpartner_id
+        and v_startdate>=validfrom::date
+        and v_enddate<=validto::date;
+
+       	if v_shift_id is null then continue; end if;     
+       	
+        --mengambil data durasi dalam 1 hari kerja dalam menit
+	select (extract(hour from checkout)*60 + extract(minute from checkout)-(extract(hour from checkin)*60 + extract(minute from checkin))), (extract(hour from checkout)-extract(hour from checkin)) 
+	into v_late, v_hour 
+	from ta_shiftline sl
+	where sl.ta_shift_id=v_shift_id and line=1;
+
+	--cek apakah cuti
+	select count(*) into v_count3 from lv_leave
+		where c_bpartner_id=cur_header.c_bpartner_id
+		and datefrom=cur_late.date
+		and docstatus='CO';
+ 
+	--cek apakah perjalanan dinas
+	select count(*) into v_count4 from bt_businesstrip
+		where c_bpartner_id=cur_header.c_bpartner_id
+		and datefrom=cur_late.date
+		and docstatus='CO';
+	
+	--cek apakah izin tidak masuk
+	select count(*) into v_count5 from lv_tidakmasuk
+		where c_bpartner_id=cur_header.c_bpartner_id
+		and datefrom=cur_late.date
+		and docstatus='CO';
+
+	--terlambat dengan izin
+	IF v_count3=1 then v_late:=0; 
+	ELSIF v_count4=1 then v_late:=0; 
+	ELSIF v_count5=1 then v_late:=0; 
+	ELSE  v_late:=v_late;
+	End If;
+
+	--raise notice 'date: %', cur_late.date;
+
+	--validasi untuk late
+	IF v_checkinactual is null then
+	   v_late:=v_late; 
+	Else
+	   v_late:=v_lateatt; 
+	End If;
+
+	--memberikan keterangan untuk detail
+	IF v_checkinactual is null and cur_late.keterangan is null then
+	   v_keterangan:='Tidak Masuk';
+	elsif v_checkinactual is not null and cur_late.keterangan is null then
+	   v_keterangan:='Telat'||' '||v_late||' '|| ' Menit';
+	else
+	   v_keterangan:=cur_late.keterangan;
+	End If;
+
+	if v_late<=0 then continue; end if; 
+
+	
+	--mengambil data yang sudah diinsert
+	select DATE, c_bpartner_id into v_date, v_employee_id
+	from ta_detail_pot_cuti
+	where c_bpartner_id=cur_header.c_bpartner_id
+	and ta_akumulasi_pot_cuti_id=v_akumulasi_pot_cuti
+	and date=cur_late.date
+	and Dayminutes=v_late;
+
+	raise notice 'v_akumulasi_pot_cuti: %, v_late: %, v_keterangan: %', 
+	v_akumulasi_pot_cuti, v_late, v_keterangan;
+
+        
+	--validasi untuk date yang sudah diinsert
+	IF v_date=cur_late.date and v_employee_id=cur_late.employee_id then 
+		update ta_detail_pot_cuti set Dayminutes=v_late, description=v_keterangan, 
+		c_bpartner_id=cur_late.employee_id, date=cur_late.date
+		where c_bpartner_id=cur_header.c_bpartner_id
+		and date=cur_late.date
+		and Dayminutes=v_late;
+	Else
+		INSERT INTO ta_detail_pot_cuti(
+		ta_detail_pot_cuti_id, ad_client_id, ad_org_id, isactive, created, 
+		createdby, updated, updatedby, c_bpartner_id, DATE, Dayminutes, ta_akumulasi_pot_cuti_id, description)
+		VALUES (get_uuid(), v_client_id, v_org_id, 'Y', now(), 
+		v_createdby, now(), v_updatedby, cur_header.c_bpartner_id, cur_late.date, v_late, v_akumulasi_pot_cuti, v_keterangan);
+	End IF;
+	
+    End Loop; --loop detail potongan cuti karena terlambat
+
+
+    --mendapatkan data untuk detail potongan cuti
+    --karena pulang awal
+    FOR cur_early in  (select t_date as DATE, employee_id, keterangan, checkin, checkout 
+	from ta_indv_attendanceperformance
+	(cur_header.c_bpartner_id, cur_header.startdate, cur_header.enddate))
+    Loop --loop detail potongan cuti
+	--mengambil data checkout yang paling Akhir
+	select checkout, (date_part('hour', early)*60 + date_part('minute', early))
+	into v_checkoutactual, v_early
+	from ta_attendance
+	where c_bpartner_id=cur_early.employee_id
+	and checkin::date=cur_early.date
+	and (case when cur_early.checkout is not null then checkin::time<=cur_early.checkout::time else 1=1 end)
+	order by checkout desc limit 1;
+		
+	--mengambil data shift per employee
+	select ta_shift_id into v_shift_id
+        from ta_c_bp_shift
+        where c_bpartner_id=cur_header.c_bpartner_id
+        and v_startdate>=validfrom::date
+        and v_enddate<=validto::date;
+
+       	if v_shift_id is null then continue; end if;     
+       	
+        --validasi untuk Early
+	IF v_checkoutactual is not null then
+	   v_early:=v_early; 
+	End If;
+
+	--memberikan keterangan untuk detail
+	IF v_checkoutactual is not null and cur_early.keterangan is null then
+	   v_keterangan:='Pulang Awal'||' '||v_early||' '|| ' Menit';
+	else
+	   v_keterangan:=cur_early.keterangan;
+	End If;
+
+	if v_early is null or v_early<=0 then continue; end if; 
+	
+        --mengambil data yang sudah diinsert
+	select DATE, c_bpartner_id into v_date, v_employee_id
+	from ta_detail_pot_cuti
+	where c_bpartner_id=cur_header.c_bpartner_id
+	and ta_akumulasi_pot_cuti_id=v_akumulasi_pot_cuti
+	and date=cur_early.date
+	and Dayminutes=v_early;
+
+	raise notice 'v_akumulasi_pot_cuti: %, v_early: %, v_keterangan: %', 
+	v_akumulasi_pot_cuti, v_early, v_keterangan;
+        
+	
+	--validasi untuk date yang sudah diinsert
+	IF v_date=cur_early.date and v_employee_id=cur_early.employee_id then 
+		update ta_detail_pot_cuti set Dayminutes=v_early, description=v_keterangan, c_bpartner_id=cur_early.employee_id, date=cur_early.date
+		where c_bpartner_id=cur_header.c_bpartner_id
+		and date=cur_early.date
+		and Dayminutes=v_early;
+	Else
+		INSERT INTO ta_detail_pot_cuti(
+		ta_detail_pot_cuti_id, ad_client_id, ad_org_id, isactive, created, 
+		createdby, updated, updatedby, c_bpartner_id, DATE, Dayminutes, ta_akumulasi_pot_cuti_id, description)
+		VALUES (get_uuid(), v_client_id, v_org_id, 'Y', now(), 
+		v_createdby, now(), v_updatedby, cur_header.c_bpartner_id, cur_early.date, v_early, v_akumulasi_pot_cuti, v_keterangan);
+	End IF;
+	
+    End Loop; --loop detail potongan cuti karena pulang awal   
+
+--menghitung total durasi    
+select (sum(det.Dayminutes)/60) into v_totallate 
+from ta_akumulasi_pot_cuti pot 
+inner join ta_detail_pot_cuti det on det.ta_akumulasi_pot_cuti_id=pot.ta_akumulasi_pot_cuti_id
+where pot.c_bpartner_id=cur_header.c_bpartner_id
+and cur_header.startdate=startdate
+and cur_header.enddate=enddate;
+
+    
+update ta_akumulasi_pot_cuti set Dayhours=v_totallate, Monthday=v_totallate/v_hour
+where c_bpartner_id=cur_header.c_bpartner_id
+and startdate=cur_header.startdate 
+and enddate=cur_header.enddate;  
+
+end loop; --loop ta_kalkulasi_potong_cuti
+
+
+result:=1;
+
+return;
+end
+]]></body>
+    </function>
+  </database>

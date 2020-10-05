@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER PYR_UPDATE_PAYROLLMASTER_TRG">
+    <trigger name="PYR_UPDATE_PAYROLLMASTER_TRG" table="HRIS_C_BP_EMPINFO" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[v_count integer:=0; 
+BEGIN
+
+   IF AD_isTriggerEnabled()='N' THEN 
+IF DELETING THEN RETURN OLD;
+ELSE RETURN NEW;
+END IF; 
+   END IF;
+
+     update c_bpartner set em_pyr_payrollmaster_id = :new.em_pyr_payrollmaster_id
+     where c_bpartner_id = :new.c_bpartner_id;
+
+	
+   
+    END PYR_UPDATE_PAYROLLMASTER_TRG
+]]></body>
+    </trigger>
+  </database>

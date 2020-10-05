@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="383" trl="N">
+    <value column="Name" isTrl="N" original="Fixed Position">Fixed Position</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="384" trl="N">
+    <value column="Name" isTrl="N" original="Comma Separated">Comma Separated</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="385" trl="N">
+    <value column="Name" isTrl="N" original="Tab Separated">Tab Separated</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="386" trl="N">
+    <value column="Name" isTrl="N" original="XML">XML</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="800085" trl="N">
+    <value column="Name" isTrl="N" original="Plus separated">Plus separated</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="800149" trl="N">
+    <value column="Name" isTrl="N" original="Semicolon Separated">Semicolon Separated</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

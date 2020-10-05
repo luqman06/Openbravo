@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="0152939CA0F946B9BD550E3AAFD15D7B" trl="N">
+    <value column="Name" isTrl="Y" original="Copy Salary Template">Salin Template Gaji</value>
+    <value column="PrintName" isTrl="Y" original="EM_Pyr_Copy_Salary_Template">Salin Template Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="01D87BF5A07E4D00919D9DAB9D48AA1E" trl="N">
+    <value column="Name" isTrl="N" original="Bonus">Bonus</value>
+    <value column="PrintName" isTrl="N" original="Bonus">Bonus</value>
+    <value column="Description" isTrl="N" original="Bonus from company">Bonus from company</value>
+    <value column="Help" isTrl="N" original="Bonus from company to be given to employee">Bonus from company to be given to employee</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0BA5F17DC72C416D94F8F54C8B34BB19" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Employee Salary Payment">Bentuk Pembayaran Gaji</value>
+    <value column="PrintName" isTrl="Y" original="Generate Employee Salary Payment">Generate Salary Payment</value>
+    <value column="Description" isTrl="N" original="Generate Salary Payment">Generate Salary Payment</value>
+    <value column="Help" isTrl="Y" original="Lookup employee master data for valid employee to be paid in this salary payment batch. This proses also populating salary component, both earing and deduction. At this point, all salary component amount are zero. You may run salary formula calculation process later, to get exact salary component amount.">Generate employee and its salary component to be paid</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0BCAF409A0AE4001A906FB529458B2D2" trl="N">
+    <value column="Name" isTrl="Y" original="Java Class Name">Nama Java Class</value>
+    <value column="PrintName" isTrl="Y" original="Java_Class_Name">Nama Java Class</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0DDDA2D238F542858B0EFADCF2AEA220" trl="N">
+    <value column="Name" isTrl="N" original="MAX Year">MAX Year</value>
+    <value column="PrintName" isTrl="N" original="MAX Year">MAX Year</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0FCFC33ADA284A9E8C1530C6459EB96F" trl="Y">
+    <value column="Name" isTrl="Y" original="Amount">Jumlah</value>
+    <value column="PrintName" isTrl="N" original="Amount">Amount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0FD66C80703B445F8BE4EC989A813472" trl="N">
+    <value column="Name" isTrl="Y" original="Calculate Salary Formula">Hitung Formula Gaji</value>
+    <value column="PrintName" isTrl="Y" original="Calculate Salary Formula">Hitung Formula Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="10862A6637BE4FB7B6EDACF2F4951788" trl="N">
+    <value column="Name" isTrl="N" original="Employee Salary Payment">Employee Salary Payment</value>
+    <value column="PrintName" isTrl="N" original="Employee Salary Payment">Employee Salary Payment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1D77850A1B4D4BD086B7D5E543D105EA" trl="N">
+    <value column="Name" isTrl="N" original="Earning Key">Earning Key</value>
+    <value column="PrintName" isTrl="N" original="Earning Key">Earning Key</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="221BE45E1D864F9EA1A44FA53304F39E" trl="Y">
+    <value column="Name" isTrl="Y" original="Age Of Retirement">Usia Pansiun</value>
+    <value column="PrintName" isTrl="N" original="Age Of Retirement">Age Of Retirement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2B90180A80834DAB9AEA377E9215FBBD" trl="N">
+    <value column="Name" isTrl="N" original="Name">Name</value>
+    <value column="PrintName" isTrl="N" original="Name">Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3487B825329B41558FA29D0C558ECC9C" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Earning">Pendapatan Karywan</value>
+    <value column="PrintName" isTrl="N" original="Employee Earning">Employee Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="40C2E5A9F2AC454FBF6A6C3A51DE3AF1" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment">Transaksi Pembayaran Gaji</value>
+    <value column="PrintName" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="Description" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="Help" isTrl="N" original="Salary Payment, a.k.a salary period.">Salary Payment, a.k.a salary period.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="420F38DE0D684DBD81CFB77DD9AFA2A7" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Salary Component">Salin Komponen Gaji</value>
+    <value column="PrintName" isTrl="N" original="Copy Salary Component">Copy Salary Component</value>
+    <value column="Description" isTrl="N" original="Copy Earning/Dedution From Salary Category">Copy Earning/Dedution From Salary Category</value>
+    <value column="Help" isTrl="N" original="Copy earning/dedution inside Salary Category into employee earning/deduction">Copy earning/dedution inside Salary Category into employee earning/deduction</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="423F7E4D88C34D20BAA19196B24BB5D1" trl="N">
+    <value column="Name" isTrl="N" original="Other Disinsentive">Other Disinsentive</value>
+    <value column="PrintName" isTrl="N" original="Other Disinsentive">Other Disinsentive</value>
+    <value column="Description" isTrl="N" original="Other disinsentive wiht specific formula">Other disinsentive wiht specific formula</value>
+    <value column="Help" isTrl="N" original="Other disinsentive wiht specific formula, not given in every month.">Other disinsentive wiht specific formula, not given in every month.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="43D2B221674749E1BABA4ACB49819A71" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="PrintName" isTrl="N" original="Earning">Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6C25BEA10AC4494AA2CE8A19329944DB" trl="N">
+    <value column="Name" isTrl="N" original="Performance Disinsentive">Performance Disinsentive</value>
+    <value column="PrintName" isTrl="N" original="Performance Disinsentive">Performance Disinsentive</value>
+    <value column="Description" isTrl="N" original="Performance Disinsentive with specific formula">Performance Disinsentive with specific formula</value>
+    <value column="Help" isTrl="N" original="Performance Disinsentive with specific formula, not given in every month.">Performance Disinsentive with specific formula, not given in every month.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="71F7733310AB456F95E6BE116FDE5B90" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Key">Deduction Key</value>
+    <value column="PrintName" isTrl="N" original="Deduction Key">Deduction Key</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="734098C1660449B1BE21A0A6417F7445" trl="N">
+    <value column="Name" isTrl="N" original="Formula">Formula</value>
+    <value column="PrintName" isTrl="N" original="Formula">Formula</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="77394D09ECE44C4C8E6968A667172359" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Deduction">Import Incidental Deduction</value>
+    <value column="PrintName" isTrl="N" original="Import Incidental Deduction">Import Incidental Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="78BE65B02DC144FEBBBED5530B50B7E6" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Incidental_Deduction_ID">PYR_Incidental_Deduction_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Incidental_Deduction_ID">PYR_Incidental_Deduction_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7A4A0BD551324ECBBBB8C39A1BD66435" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Javaclass_Formula_ID">PYR_Javaclass_Formula_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Javaclass_Formula_ID">PYR_Javaclass_Formula_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8177C9EC1213491C8060772C11B5B7C5" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Sal_Variable_ID">PYR_Sal_Variable_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Sal_Variable_ID">PYR_Sal_Variable_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="81FE38C4AF23470098B9B6CE15772BE2" trl="N">
+    <value column="Name" isTrl="N" original="Summary">Summary</value>
+    <value column="PrintName" isTrl="N" original="Summary">Summary</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="83534317B2DC41168339E0CE73FC5B8A" trl="N">
+    <value column="Name" isTrl="Y" original="Calculate Income Tax">BRP_Doincometax</value>
+    <value column="PrintName" isTrl="Y" original="Calculate Income Tax">BRP_Doincometax</value>
+    <value column="Description" isTrl="N" original="Calculate Income Tax">Calculate Income Tax</value>
+    <value column="Help" isTrl="N" original="Calculate Income Tax (SMBR Specific)">Calculate Income Tax (SMBR Specific)</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8D1B49DFC5064651B4A848AF5127E6D5" trl="N">
+    <value column="Name" isTrl="N" original="Performance Insentive">Performance Insentive</value>
+    <value column="PrintName" isTrl="N" original="Performance Insentive">Performance Insentive</value>
+    <value column="Description" isTrl="N" original="Performance Insentive with specific formula">Performance Insentive with specific formula</value>
+    <value column="Help" isTrl="N" original="Performance Insentive with specific formula, not given in every month.">Performance Insentive with specific formula, not given in every month.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9F772FCB9E8446918F589C3AD5F64594" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Deduction">Potongan Karyawan</value>
+    <value column="PrintName" isTrl="N" original="Employee Deduction">Employee Deduction</value>
+    <value column="Description" isTrl="N" original="Deduction part of employee salary component ">Deduction part of employee salary component </value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A0F6B37ED4C84510AA86593D68E34816" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="PrintName" isTrl="N" original="Deduction">Deduction</value>
+    <value column="Description" isTrl="N" original="Deduction part of employee salary">Deduction part of employee salary</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A1161AB2FC244EE1859ABC9302A8AA46" trl="N">
+    <value column="Name" isTrl="N" original="Fix Salary Amount">Fix Salary Amount</value>
+    <value column="PrintName" isTrl="N" original="Fix Salary Amount">Fix Salary Amount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A26C35BD61C947C39747434A1D4D161B" trl="N">
+    <value column="Name" isTrl="N" original="Employee Salary Payment - Earning">Employee Salary Payment - Earning</value>
+    <value column="PrintName" isTrl="N" original="Employee Salary Payment - Earning">Employee Salary Payment - Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B0DBCAAE53C14D36AEBBC9583C1809A0" trl="N">
+    <value column="Name" isTrl="N" original="Earning Group">Earning Group</value>
+    <value column="PrintName" isTrl="N" original="Earning Group">Earning Group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B156AA2231084B5EB6DAA9251C4437AA" trl="Y">
+    <value column="Name" isTrl="Y" original="Payroll Master">Penanggung Jawab Gaji</value>
+    <value column="PrintName" isTrl="Y" original="Payroll Master">Penanggung Jawab Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B95862929BE2449E86E59035D63E9CE8" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Salary Invoice">Bentuk Tagihan Pembayaran</value>
+    <value column="PrintName" isTrl="N" original="Generate Salary Invoice">Generate Salary Invoice</value>
+    <value column="Description" isTrl="N" original="Generate purchase for each employee to pay salary">Generate purchase for each employee to pay salary</value>
+    <value column="Help" isTrl="N" original="Generate purchase for each employee to pay salary">Generate purchase for each employee to pay salary</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BA4191CBC33C415B8EDDF855A9F063AB" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Incidental_Earning_ID">PYR_Incidental_Earning_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Incidental_Earning_ID">PYR_Incidental_Earning_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BC4898C714034A72939FF2806108519D" trl="N">
+    <value column="Name" isTrl="Y" original="Is Payroll Master">Sebagai Penanggung Jawab Gaji</value>
+    <value column="PrintName" isTrl="Y" original="Is Payroll Master">Sebagai Penanggung Jawab Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BF7D404B529841EFA2C687CA5C1F2622" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Inc_I_Deduction_ID">PYR_Inc_I_Deduction_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Inc_I_Deduction_ID">PYR_Inc_I_Deduction_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C1A8C1B5AE274A6F97FC3E7E857679D6" trl="N">
+    <value column="Name" isTrl="N" original="Other Insentive">Other Insentive</value>
+    <value column="PrintName" isTrl="N" original="Other Insentive">Other Insentive</value>
+    <value column="Description" isTrl="N" original="Other Insentive with specific calculation">Other Insentive with specific calculation</value>
+    <value column="Help" isTrl="N" original="Other Insentive with specific calculation, not given in every month">Other Insentive with specific calculation, not given in every month</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CE4073B40FE047F4A4EE2575D427ABF1" trl="N">
+    <value column="Name" isTrl="N" original="Earning Parameter">Earning Parameter</value>
+    <value column="PrintName" isTrl="N" original="Earning Parameter">Earning Parameter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CEA265F29CF04A9EA4315315E4A76AFF" trl="N">
+    <value column="Name" isTrl="N" original="Paid">Paid</value>
+    <value column="PrintName" isTrl="N" original="Paid">Paid</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CFAEA633593644F5B5DBCEBC7A25B467" trl="N">
+    <value column="Name" isTrl="N" original="Tax For Payroll Invoice">Tax For Payroll Invoice</value>
+    <value column="PrintName" isTrl="N" original="Tax For Payroll Invoice">Tax For Payroll Invoice</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D23B202110664AD882C1EF1869A411D5" trl="N">
+    <value column="Name" isTrl="N" original="Payment Term For Payroll Invoice">Payment Term For Payroll Invoice</value>
+    <value column="PrintName" isTrl="N" original="Payment Term For Payroll Invoice">Payment Term For Payroll Invoice</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D3DC249047F447A98F38491B7B35649D" trl="N">
+    <value column="Name" isTrl="N" original="Actual Fix Salary">Actual Fix Salary</value>
+    <value column="PrintName" isTrl="N" original="Actual Fix Salary">Actual Fix Salary</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D8701A52A89645AB9CB1A350129977BB" trl="Y">
+    <value column="Name" isTrl="Y" original="Maximum Range">Batas Tetinggi</value>
+    <value column="PrintName" isTrl="N" original="Maximum Range">Maximum Range</value>
+    <value column="Description" isTrl="N" original="Maximum range for applied salary parameter.">Maximum range for applied salary parameter.</value>
+    <value column="Help" isTrl="N" original="Maximum range for applied salary parameter.">Maximum range for applied salary parameter.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D97CECCC05E24978B72C29AE59CB52E4" trl="Y">
+    <value column="Name" isTrl="Y" original="Minimun Range">Batas Terendah</value>
+    <value column="PrintName" isTrl="N" original="Minimun Range">Minimun Range</value>
+    <value column="Description" isTrl="N" original="Minimun ranga applied for salary parameter.">Minimun ranga applied for salary parameter.</value>
+    <value column="Help" isTrl="N" original="Minimun ranga applied for salary parameter.">Minimun ranga applied for salary parameter.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DBB98ABF7CA24ADA9B4C56AFA3A789E3" trl="N">
+    <value column="Name" isTrl="N" original="Employee Salary Payment - Deduction">Employee Salary Payment - Deduction</value>
+    <value column="PrintName" isTrl="N" original="Employee Salary Payment - Deduction">Employee Salary Payment - Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DBFE672AF4854A4F88CAAD33D6438F10" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Inc_I_Earning_ID">PYR_Inc_I_Earning_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Inc_I_Earning_ID">PYR_Inc_I_Earning_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DEE45120C2924A648CB023E6630F6C98" trl="N">
+    <value column="Name" isTrl="N" original="Earning Parameter">Earning Parameter</value>
+    <value column="PrintName" isTrl="N" original="Earning Parameter">Earning Parameter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E1266528AE3B4F53BFE188F796CC189E" trl="N">
+    <value column="Name" isTrl="N" original="Payment Group">Payment Group</value>
+    <value column="PrintName" isTrl="N" original="Payment Group">Payment Group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E6953C8B3EBE4D90BE7C0C63FBB733B4" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Earning">Import Incidental Earning</value>
+    <value column="PrintName" isTrl="N" original="Import Incidental Earning">Import Incidental Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EE66665101F94430A39A942FAF8CE498" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Deduction_Param_ID">PYR_Deduction_Param_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Deduction_Param_ID">PYR_Deduction_Param_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F199A72A0A614B2C9B1B9260606E7EA3" trl="Y">
+    <value column="Name" isTrl="Y" original="Monthly">Bulanan</value>
+    <value column="PrintName" isTrl="N" original="Monthly">Monthly</value>
+    <value column="Description" isTrl="N" original="Monthly salary component">Monthly salary component</value>
+    <value column="Help" isTrl="N" original="Salary component to be calculated in every month">Salary component to be calculated in every month</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F4927B870EC8412C9DC2E7ADC13E40D7" trl="N">
+    <value column="Name" isTrl="N" original="Bank for Payroll">Bank for Payroll</value>
+    <value column="PrintName" isTrl="N" original="Bank for Payroll">Bank for Payroll</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FBE52EAAAD884C9C96D95C7696A7E4F8" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Group">Deduction Group</value>
+    <value column="PrintName" isTrl="N" original="Deduction Group">Deduction Group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

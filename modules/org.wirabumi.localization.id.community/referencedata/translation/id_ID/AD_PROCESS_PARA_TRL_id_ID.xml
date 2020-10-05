@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS_PARA" version="">
+  <row id="123" trl="N">
+    <value column="Name" isTrl="N" original="Product Search Key">Product Search Key</value>
+    <value column="Description" isTrl="N" original="A fast method for finding a particular product.">A fast method for finding a particular product.</value>
+    <value column="Help" isTrl="N" original="A product search key allows for a fast method of finding a particular product. ">A product search key allows for a fast method of finding a particular product. </value>
+  </row>
+  <row id="227" trl="N">
+    <value column="Name" isTrl="N" original="Delete existing Accounting Entries">Delete existing Accounting Entries</value>
+    <value column="Description" isTrl="N" original="The selected accounting entries will be deleted!  DANGEROUS !!!">The selected accounting entries will be deleted!  DANGEROUS !!!</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="233" trl="N">
+    <value column="Name" isTrl="N" original="Pricelist Version">Pricelist Version</value>
+    <value column="Description" isTrl="N" original="Only used if Price List is used to set future cost price">Only used if Price List is used to set future cost price</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="302" trl="N">
+    <value column="Name" isTrl="N" original="Target Payment Rule">Target Payment Rule</value>
+    <value column="Description" isTrl="N" original="How you pay the invoice">How you pay the invoice</value>
+    <value column="Help" isTrl="N" original="The Payment Rule indicates the method of invoice payment.">The Payment Rule indicates the method of invoice payment.</value>
+  </row>
+  <row id="3401DE925FBB4A3AAC72E914595E1C71" trl="N">
+    <value column="Name" isTrl="N" original="Process action">Process action</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E19A05CE9564C15BA5FAA118C005859" trl="N">
+    <value column="Name" isTrl="N" original="Language">Language</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800007" trl="N">
+    <value column="Name" isTrl="N" original="Storage Bin from">Storage Bin from</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800008" trl="N">
+    <value column="Name" isTrl="N" original="Storage Bin to">Storage Bin to</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800013" trl="N">
+    <value column="Name" isTrl="N" original="Set Book Quantity to zero">Set Book Quantity to zero</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D906A4F1EF4E4372A32DDD1BD34A54BF" trl="N">
+    <value column="Name" isTrl="N" original="Cascade">Cascade</value>
+    <value column="Description" isTrl="N" original="Also mark as ready organization every child organization">Also mark as ready organization every child organization</value>
+    <value column="Help" isTrl="N" original="Also mark as ready organization every child organization">Also mark as ready organization every child organization</value>
+  </row>
+</compiereTrl>

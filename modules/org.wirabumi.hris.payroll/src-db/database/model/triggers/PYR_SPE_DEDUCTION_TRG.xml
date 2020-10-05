@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER PYR_SPE_DEDUCTION_TRG">
+    <trigger name="PYR_SPE_DEDUCTION_TRG" table="PYR_SPE_DEDUCTION" fires="before" insert="true" update="true" delete="true" foreach="row">
+      <body><![CDATA[
+/*************************************************************************
+* The contents of this file are subject to the Openbravo  Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+* Version 1.1  with a permitted attribution clause; you may not  use this
+* file except in compliance with the License. You  may  obtain  a copy of
+* the License at http://www.openbravo.com/legal/license.html
+* Software distributed under the License  is  distributed  on  an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+* License for the specific  language  governing  rights  and  limitations
+* under the License.
+* The Original Code is Openbravo ERP.
+* The Initial Developer of the Original Code is Openbravo SLU
+* All portions are Copyright (C) 2008-2009 Openbravo SLU
+* All Rights Reserved.
+* Contributor(s):  ______________________________________.
+************************************************************************/
+  v_DocStatus VARCHAR(60);
+      
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+  IF TG_OP <> 'DELETE' THEN
+    select sp.docstatus into v_DocStatus 
+    from pyr_salarypayment sp
+    left join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+    where spe.pyr_sp_employee_id=:new.pyr_sp_employee_id;
+  ELSE
+    select sp.docstatus into v_DocStatus 
+    from pyr_salarypayment sp
+    left join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+    where spe.pyr_sp_employee_id=:old.pyr_sp_employee_id;
+  END IF;
+
+
+  IF (v_DocStatus = 'CL') THEN
+    RAISE_APPLICATION_ERROR(-20527, 'It is not possible to modify a closed salary payment');
+  END IF;
+  
+  IF UPDATING THEN
+    IF ((COALESCE(:old.pyr_sp_employee_id, '0') <> COALESCE(:new.pyr_sp_employee_id, '0'))
+       OR (COALESCE(:old.pyr_deduction_id, '0') <> COALESCE(:new.pyr_deduction_id, '0'))
+       OR (COALESCE(:old.amount, -1) <> COALESCE(:new.amount, -1 ))) 
+       THEN
+    IF (v_DocStatus = 'CL') THEN
+       RAISE_APPLICATION_ERROR(-20522, 'It is not possible to modify a Detail when the Salary payment is closed');
+
+     END IF;
+    END IF;
+  END IF;
+
+END PYR_SPE_DEDUCTION_TRG
+]]></body>
+    </trigger>
+  </database>

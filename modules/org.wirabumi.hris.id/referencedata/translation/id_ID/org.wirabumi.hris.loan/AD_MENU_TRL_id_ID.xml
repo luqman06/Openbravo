@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="13AB3105B11548FA95866BFF6B25686F" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="303F57D6FF5E472BA993EC736F913350" trl="Y">
+    <value column="Name" isTrl="Y" original="Loan">Pinjaman</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="60D0514CA2C4404D8727A2D5BF63E039" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Loan Request">Pengajuan Pinjaman</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6811053093934BE5A235894497AEB56F" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Loan - Statement Account">Loan Statement - Pending</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="97ED56E5005B4350A6926821F10EBE03" trl="N">
+    <value column="Name" isTrl="N" original="Tagihan Koperasi">Tagihan Koperasi</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D5624712A79A4215BEFBAE87BF19AFE2" trl="N">
+    <value column="Name" isTrl="N" original="Employee Loan Report">Employee Loan Report</value>
+    <value column="Description" isTrl="N" original="Employee Loan Report">Employee Loan Report</value>
+  </row>
+</compiereTrl>

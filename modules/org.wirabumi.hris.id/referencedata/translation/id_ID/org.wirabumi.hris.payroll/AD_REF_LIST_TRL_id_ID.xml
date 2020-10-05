@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="020A0A934CDA4F4D85D0B5A2313AA7B2" trl="Y">
+    <value column="Name" isTrl="Y" original="Overtime">Lembur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="088A4D0EF5EB4975829EC20ECFD62FE0" trl="Y">
+    <value column="Name" isTrl="Y" original="Periodical Disinsentive">Potongan Berkala</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="091289324620421AAD0E16FF2B778D6E" trl="Y">
+    <value column="Name" isTrl="Y" original="Attendance Insentive">Tunjangan Kehadiran</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2390F520F7CD4D7588F1CBB77C828AF3" trl="Y">
+    <value column="Name" isTrl="Y" original="Replacement">Penggantian</value>
+    <value column="Description" isTrl="N" original="Dana Penggantian">Dana Penggantian</value>
+  </row>
+  <row id="26CA0B69D33A4A848E63BA55D3F3890B" trl="N">
+    <value column="Name" isTrl="N" original="Formula">Formula</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="287EDAE7580047EDA848035FF3BD2A7E" trl="Y">
+    <value column="Name" isTrl="Y" original="Constant">Konstan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3A7B4A8279C54977832F0CCE3D802BED" trl="Y">
+    <value column="Name" isTrl="Y" original="Manual Disinsentive">Potongan Manual</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5B37EB96D7C74AE59B61F40BE98097EA" trl="N">
+    <value column="Name" isTrl="N" original="Bonus">Bonus</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5B3960BEFA2C49D8B091D5AB8C672239" trl="Y">
+    <value column="Name" isTrl="Y" original="General Disinsentive">Potongan Umum</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="680D55D9929846E3B6E65D048CEA7A90" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Insentive">Tunjangan Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6B5C02CBEC5D4EBEB5B32B6AEF51BEAD" trl="Y">
+    <value column="Name" isTrl="Y" original="Attendance Disinsentive">Potongan Kehadiran</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="719A33DF12744088A5AD4D9C83F3623C" trl="N">
+    <value column="Name" isTrl="N" original="Custom Java Class Library">Custom Java Class Library</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7249942BDFD24D3C8C976BB894A9E8CC" trl="N">
+    <value column="Name" isTrl="N" original="Custom Java Class Library">Custom Java Class Library</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="75EEC9D94EB24AAA90544600FF59155B" trl="N">
+    <value column="Name" isTrl="N" original="Tunjangan Hari Raya">Tunjangan Hari Raya</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="89B8857BDFE043B28D1D6DE2762C41F7" trl="N">
+    <value column="Name" isTrl="N" original="Bonus">Bonus</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="89F1484A990A4FA0B885A8655A903859" trl="N">
+    <value column="Name" isTrl="Y" original="Salary">Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8FD5B3FD15784B67A9D9B2A8EA070F28" trl="Y">
+    <value column="Name" isTrl="Y" original="Emergency Call">Panggilan Darurat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="98E49237CEB046A493307D1CDDDBF5B9" trl="N">
+    <value column="Name" isTrl="N" original="General Insentive">General Insentive</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AC085810113C4B25B78B6759F92DC50A" trl="N">
+    <value column="Name" isTrl="N" original="Formula">Formula</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DEC0944F154D4D249121E34E7A083A69" trl="Y">
+    <value column="Name" isTrl="Y" original="Constant">Konstan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

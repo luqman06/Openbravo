@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+  <vector>
+    <versionInfo version="3.0.32403"/>
+    <columnDataChange tablename="AD_REF_LIST" columnname="ISACTIVE" pkRow="800145">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_REF_LIST" columnname="ISACTIVE" pkRow="800146">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISMANDATORY" pkRow="802853">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_ID" pkRow="802858">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[95E2A8B50A254B2AAE6774B8C2F28120]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_VALUE_ID" pkRow="802858">
+      <oldValue><![CDATA[800060]]></oldValue>
+      <newValue><![CDATA[FF808181312DA8D801312DDDAA750008]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_CALLOUT_ID" pkRow="802858">
+      <oldValue><![CDATA[800005]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_VAL_RULE_ID" pkRow="722EE1A3B4A2660EE040007F01001A37">
+      <oldValue/>
+      <newValue><![CDATA[100]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803196">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISREADONLY" pkRow="43FBA00F5B544E0D9DF4EEFC7B2229C5">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TABLE" columnname="EM_SR_ISINVENTORY" pkRow="259">
+      <oldValue/>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TABLE" columnname="EM_OEZ_TRXAMTCOLUMN" pkRow="259">
+      <oldValue/>
+      <newValue><![CDATA[grandTotalAmount]]></newValue>
+    </columnDataChange>
+  </vector>

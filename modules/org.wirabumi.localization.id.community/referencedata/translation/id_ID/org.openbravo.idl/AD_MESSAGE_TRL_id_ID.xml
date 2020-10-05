@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="04221FB4F3BC46D0BB22BD8E6F2CFB65" trl="N">
+    <value column="MsgText" isTrl="N" original="Number of rows validated: ">Number of rows validated: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2148A0A6687C41798681AD465CCF71D2" trl="N">
+    <value column="MsgText" isTrl="N" original="Boolean values must be {TRUE, True, true, FALSE, False, false}: ">Boolean values must be {TRUE, True, true, FALSE, False, false}: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="299C17D324D04ADF95FBB714E3135525" trl="N">
+    <value column="MsgText" isTrl="N" original="Financial Account already exists: ">Financial Account already exists: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3BB3C725273641A8986279417176C295" trl="N">
+    <value column="MsgText" isTrl="N" original="Total of rows read: ">Total of rows read: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="45D20C317C4749528338AFD09EB33F8F" trl="N">
+    <value column="MsgText" isTrl="N" original="Input file not found.">Input file not found.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="461C537A006D48779FB11563B19DAD5D" trl="N">
+    <value column="MsgText" isTrl="N" original="One, and only one of the &quot;SHOW&quot; options can to be checked (true value).">One, and only one of the "SHOW" options can to be checked (true value).</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="48879607E90D482EBFF1FE0F071B721F" trl="N">
+    <value column="MsgText" isTrl="N" original="Comma (,) not allowed.">Comma (,) not allowed.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4A4F18899F174CCB83E6BF167F797275" trl="N">
+    <value column="MsgText" isTrl="N" original="Bank Account already exists: ">Bank Account already exists: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4A988620E17C4866BCED796E8B314BD8" trl="N">
+    <value column="MsgText" isTrl="N" original="Success">Success</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4E6B8BC3767A4C299B7B3D4BA80CC552" trl="N">
+    <value column="MsgText" isTrl="N" original="CSV file is not correclty defined.">CSV file is not correclty defined.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5DD6EF2D8F8C4E43BC2BE96BB6C5B770" trl="N">
+    <value column="MsgText" isTrl="N" original="Product already exists: ">Product already exists: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5EE53B9B65CA4FD5A4E14073DD8BCFB4" trl="N">
+    <value column="MsgText" isTrl="N" original="Entity not found.">Entity not found.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="602B61FC392D453A8DF2FA03497A0FE1" trl="N">
+    <value column="MsgText" isTrl="N" original="Initial Data Load Module does not support Multicurrency in payments. Please review the currency of the payment and the financial account ">Initial Data Load Module does not support Multicurrency in payments. Please review the currency of the payment and the financial account </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="67179C6B53464055BB10233BC1B6BE57" trl="N">
+    <value column="MsgText" isTrl="N" original="Not valid Organization: ">Not valid Organization: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="715A4E11084E4161838E25F4C8985A72" trl="N">
+    <value column="MsgText" isTrl="N" original="Data type validation fail.">Data type validation fail.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="812A1F42E4D14DE1835E6DEEBFFEAB2C" trl="N">
+    <value column="MsgText" isTrl="N" original="Number of row rejected: ">Number of row rejected: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="82A8EBDE45884E4A989A921CD3D39E72" trl="N">
+    <value column="MsgText" isTrl="N" original="Currency not found: ">Currency not found: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="82FE06DFFC4C461BA73AB68DF4559AB7" trl="N">
+    <value column="MsgText" isTrl="N" original="Error">Error</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8404C07AE73249B5A64B112252A35E4C" trl="N">
+    <value column="MsgText" isTrl="N" original="Dates must match with the pattern (yyyy-MM-dd): ">Dates must match with the pattern (yyyy-MM-dd): </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8EF3F19063CC48BAB260A1756B2B7DAE" trl="N">
+    <value column="MsgText" isTrl="N" original="Use values {TRUE, True, true, FALSE, False, false}.">Use values {TRUE, True, true, FALSE, False, false}.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8F96D82817CD4E3B924D81D8C46E768B" trl="N">
+    <value column="MsgText" isTrl="N" original="Business Partner not found: ">Business Partner not found: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9817070B23924E92A644F89AAA917CCD" trl="N">
+    <value column="MsgText" isTrl="N" original="Value: ">Value: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ACE46EA67EED4D77B442B89D341A58E4" trl="N">
+    <value column="MsgText" isTrl="N" original="Use the format (yyyy-MM-dd).">Use the format (yyyy-MM-dd).</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ACFBC2E569514C10A2FF156296629344" trl="N">
+    <value column="MsgText" isTrl="N" original="Import service not found.">Import service not found.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B1186A63260A4D32A55EB56AFFC021E6" trl="N">
+    <value column="MsgText" isTrl="N" original="Default Value doesn't match with the data type: ">Default Value doesn't match with the data type: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B2D66DE2649B44A79329D5A0886B9DFF" trl="N">
+    <value column="MsgText" isTrl="N" original="Project already exists:">Project already exists:</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BD4E86D449E14C9F9EAB743B96C1F262" trl="N">
+    <value column="MsgText" isTrl="N" original="Financial Account not found: ">Financial Account not found: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C0E9DEE62CD74422BA53F01A152D111D" trl="N">
+    <value column="MsgText" isTrl="N" original="Reference value not found: ">Reference value not found: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DB3693486465479F8FCE6A421D003E16" trl="N">
+    <value column="MsgText" isTrl="N" original="Number of rows processed: ">Number of rows processed: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DCBA26FC6FFD468685421375A34D162A" trl="N">
+    <value column="MsgText" isTrl="N" original="The Organization does not match or the role does not have access: ">The Organization does not match or the role does not have access: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ED632B4F3A954780ACD46E5AE500D672" trl="N">
+    <value column="MsgText" isTrl="N" original="Cannot be NULL: ">Cannot be NULL: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EE315DC01B344CBFAEC6FCCCE70C9556" trl="N">
+    <value column="MsgText" isTrl="N" original="The account '%0' is not included in account tree '%1'">The account '%0' is not included in account tree '%1'</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EE5A8CAE1B054A9B9E6E6A07ECEF43BF" trl="N">
+    <value column="MsgText" isTrl="N" original="Please, view the log">Please, view the log</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EF5EC816CE9E46C18659DE47A6DAB690" trl="N">
+    <value column="MsgText" isTrl="N" original="Number is not correct or do not use a dot (.) as decimal separator: ">Number is not correct or do not use a dot (.) as decimal separator: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F0EEA61767464932BCE58EDDA538511D" trl="N">
+    <value column="MsgText" isTrl="N" original="Type: ">Type: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F473F024F3D44762901AE0B447BA3715" trl="N">
+    <value column="MsgText" isTrl="N" original="Field maximum length exceeded: ">Field maximum length exceeded: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F5A79B687311450AB1443F0B0DFAB807" trl="N">
+    <value column="MsgText" isTrl="N" original="Number of rows not processed: ">Number of rows not processed: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F69E836F01914C829833744ADF1B5CFC" trl="N">
+    <value column="MsgText" isTrl="N" original="Process failure.">Process failure.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FDE5A6E8CC6F4457A017C9B2891824B4" trl="N">
+    <value column="MsgText" isTrl="N" original="Business Partner already exists: ">Business Partner already exists: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="leave_summaryreport"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="782"
+		 pageHeight="555"
+		 columnWidth="782"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="AD_CLIENT_ID" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[new String("")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Hris_C_Bp_Department_ID" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="c_bpartner_id" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="Start_Date" isForPrompting="true" class="java.util.Date"/>
+	<parameter name="EndDate" isForPrompting="true" class="java.util.Date"/>
+	<queryString><![CDATA[select A.* from (select bp.value as NIK, bp.name as Employee,  dep.name as Department, 
+(select name from ad_ref_list rl where rl.ad_reference_id=
+(select ad_reference_id from ad_reference where name='Employee Position')
+and rl.value=bp.em_hris_position) as Position, em_hris_joindate as Mulai_Kerja, 
+bpl.duration as Plafon, bpl.usedleave as Dipakai, 
+(bpl.duration-bpl.usedleave) as Sisa, 'Cuti Bersalin'::character varying as keterangan 
+from c_bpartner bp
+left join lv_leave lv on bp.c_bpartner_id=lv.c_bpartner_id
+left join lv_c_bp_leave bpl on bpl.c_bpartner_id=bp.c_bpartner_id
+left join hris_c_bp_department dep on dep.hris_c_bp_department_id=bp.em_hris_c_bp_department_id
+where bp.ad_client_id=$P{AD_CLIENT_ID}
+and bpl.type='CB'
+and (case when $P{Hris_C_Bp_Department_ID} is not null then bp.em_hris_c_bp_department_id=$P{Hris_C_Bp_Department_ID} else 1=1 end)
+and (case when $P{c_bpartner_id} is not null then bp.c_bpartner_id=$P{c_bpartner_id} else 1=1 end)
+and (case when $P{Start_Date}::date is not null then bpl.validfrom::date>=$P{Start_Date}::date else 1=1 end)
+and (case when $P{EndDate}::date is not null then bpl.validto::date<=$P{EndDate}::date else 1=1 end)
+union
+select bp.value as NIK, bp.name as Employee,  dep.name as Department, 
+(select name from ad_ref_list rl where rl.ad_reference_id=
+(select ad_reference_id from ad_reference where name='Employee Position')
+and rl.value=bp.em_hris_position) as Position, em_hris_joindate as "Mulai Kerja", 
+bpl.duration as Plafon, bpl.usedleave as Dipakai, 
+(bpl.duration-bpl.usedleave) as Sisa, 'Cuti Besar'::character varying as keterangan 
+from c_bpartner bp
+left join lv_leave lv on bp.c_bpartner_id=lv.c_bpartner_id
+left join lv_c_bp_leave bpl on bpl.c_bpartner_id=bp.c_bpartner_id
+left join hris_c_bp_department dep on dep.hris_c_bp_department_id=bp.em_hris_c_bp_department_id
+where bp.ad_client_id=$P{AD_CLIENT_ID}
+and bpl.type='CBS'
+and (case when $P{Hris_C_Bp_Department_ID} is not null then bp.em_hris_c_bp_department_id=$P{Hris_C_Bp_Department_ID} else 1=1 end)
+and (case when $P{c_bpartner_id} is not null then bp.c_bpartner_id=$P{c_bpartner_id} else 1=1 end)
+and (case when $P{Start_Date}::date is not null then bpl.validfrom::date>=$P{Start_Date}::date else 1=1 end)
+and (case when $P{EndDate}::date is not null then bpl.validto::date<=$P{EndDate}::date else 1=1 end)
+union
+select bp.value as NIK, bp.name as Employee,  dep.name as Department, 
+(select name from ad_ref_list rl where rl.ad_reference_id=
+(select ad_reference_id from ad_reference where name='Employee Position')
+and rl.value=bp.em_hris_position) as Position, em_hris_joindate as "Mulai Kerja", 
+bpl.duration as Plafon, bpl.usedleave as Dipakai, 
+(bpl.duration-bpl.usedleave) as Sisa, 'Cuti Haid'::character varying as keterangan 
+from c_bpartner bp
+left join lv_leave lv on bp.c_bpartner_id=lv.c_bpartner_id
+left join lv_c_bp_leave bpl on bpl.c_bpartner_id=bp.c_bpartner_id
+left join hris_c_bp_department dep on dep.hris_c_bp_department_id=bp.em_hris_c_bp_department_id
+where bp.ad_client_id=$P{AD_CLIENT_ID}
+and bpl.type='CH'
+and (case when $P{Hris_C_Bp_Department_ID} is not null then bp.em_hris_c_bp_department_id=$P{Hris_C_Bp_Department_ID} else 1=1 end)
+and (case when $P{c_bpartner_id} is not null then bp.c_bpartner_id=$P{c_bpartner_id} else 1=1 end)
+and (case when $P{Start_Date}::date is not null then bpl.validfrom::date>=$P{Start_Date}::date else 1=1 end)
+and (case when $P{EndDate}::date is not null then bpl.validto::date<=$P{EndDate}::date else 1=1 end)
+union
+select bp.value as NIK, bp.name as Employee,  dep.name as Department, 
+(select name from ad_ref_list rl where rl.ad_reference_id=
+(select ad_reference_id from ad_reference where name='Employee Position')
+and rl.value=bp.em_hris_position) as Position, em_hris_joindate as "Mulai Kerja", 
+bpl.duration as Plafon, bpl.usedleave as Dipakai, 
+(bpl.duration-bpl.usedleave) as Sisa, 'Cuti Kematian'::character varying as keterangan 
+from c_bpartner bp
+left join lv_leave lv on bp.c_bpartner_id=lv.c_bpartner_id
+left join lv_c_bp_leave bpl on bpl.c_bpartner_id=bp.c_bpartner_id
+left join hris_c_bp_department dep on dep.hris_c_bp_department_id=bp.em_hris_c_bp_department_id
+where bp.ad_client_id=$P{AD_CLIENT_ID}
+and bpl.type='CK'
+and (case when $P{Hris_C_Bp_Department_ID} is not null then bp.em_hris_c_bp_department_id=$P{Hris_C_Bp_Department_ID} else 1=1 end)
+and (case when $P{c_bpartner_id} is not null then bp.c_bpartner_id=$P{c_bpartner_id} else 1=1 end)
+and (case when $P{Start_Date}::date is not null then bpl.validfrom::date>=$P{Start_Date}::date else 1=1 end)
+and (case when $P{EndDate}::date is not null then bpl.validto::date<=$P{EndDate}::date else 1=1 end)
+union
+select bp.value as NIK, bp.name as Employee,  dep.name as Department, 
+(select name from ad_ref_list rl where rl.ad_reference_id=
+(select ad_reference_id from ad_reference where name='Employee Position')
+and rl.value=bp.em_hris_position) as Position, em_hris_joindate as "Mulai Kerja", 
+bpl.duration as Plafon, bpl.usedleave as Dipakai, 
+(bpl.duration-bpl.usedleave) as Sisa, 'Cuti Tahunan'::character varying as keterangan 
+from c_bpartner bp
+left join lv_leave lv on bp.c_bpartner_id=lv.c_bpartner_id
+left join lv_c_bp_leave bpl on bpl.c_bpartner_id=bp.c_bpartner_id
+left join hris_c_bp_department dep on dep.hris_c_bp_department_id=bp.em_hris_c_bp_department_id
+where bp.ad_client_id=$P{AD_CLIENT_ID}
+and bpl.type='CT'
+and (case when $P{Hris_C_Bp_Department_ID} is not null then bp.em_hris_c_bp_department_id=$P{Hris_C_Bp_Department_ID} else 1=1 end)
+and (case when $P{c_bpartner_id} is not null then bp.c_bpartner_id=$P{c_bpartner_id} else 1=1 end)
+and (case when $P{Start_Date}::date is not null then bpl.validfrom::date>=$P{Start_Date}::date else 1=1 end)
+and (case when $P{EndDate}::date is not null then bpl.validto::date<=$P{EndDate}::date else 1=1 end))A
+Order by A.employee asc, A.department asc]]></queryString>
+
+	<field name="nik" class="java.lang.String"/>
+	<field name="employee" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="position" class="java.lang.String"/>
+	<field name="mulai_kerja" class="java.sql.Timestamp"/>
+	<field name="plafon" class="java.math.BigDecimal"/>
+	<field name="dipakai" class="java.math.BigDecimal"/>
+	<field name="sisa" class="java.math.BigDecimal"/>
+	<field name="keterangan" class="java.lang.String"/>
+
+	<variable name="department" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[$F{department}]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="40"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="124"
+						y="0"
+						width="534"
+						height="40"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-1"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="30" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Laporan Sisa Cuti Pegawai]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="39"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="-80"
+						width="782"
+						height="0"
+						forecolor="#808080"
+						backcolor="#FFFFFF"
+						key="line"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="174"  isSplitAllowed="true" >
+				<crosstab >
+					<reportElement
+						x="0"
+						y="0"
+						width="782"
+						height="174"
+						key="crosstab-1"/>
+
+					<crosstabParameter name="ad_client_id" class="java.lang.String" >						<parameterValueExpression><![CDATA[$P{AD_CLIENT_ID}]]></parameterValueExpression>
+					</crosstabParameter>
+					<crosstabParameter name="c_bpartner_id" class="java.lang.String" >						<parameterValueExpression><![CDATA[$P{c_bpartner_id}]]></parameterValueExpression>
+					</crosstabParameter>
+					<crosstabParameter name="hris_c_bp_department_id" class="java.lang.String" >						<parameterValueExpression><![CDATA[$P{Hris_C_Bp_Department_ID}]]></parameterValueExpression>
+					</crosstabParameter>
+					<crosstabHeaderCell>						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="78"
+						y="0"
+						width="50"
+						height="41"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["NIK"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="128"
+						y="0"
+						width="70"
+						height="41"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Nama"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="198"
+						y="0"
+						width="67"
+						height="41"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Jabatan"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="265"
+						y="0"
+						width="60"
+						height="41"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Mulai Kerja"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="78"
+						height="41"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Department"]]></textFieldExpression>
+				</textField>
+						</cellContents>
+					</crosstabHeaderCell>					<rowGroup name="Department" width="78">
+						<bucket>
+							<bucketExpression class="java.lang.String"><![CDATA[$F{department}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="78"
+						height="30"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{Department}]]></textFieldExpression>
+				</textField>
+						</cellContents>
+						</crosstabRowHeader>
+					</rowGroup>
+					<rowGroup name="nik" width="50">
+						<bucket>
+							<bucketExpression class="java.lang.String"><![CDATA[$F{nik}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="50"
+						height="30"
+						key="textField"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{nik}]]></textFieldExpression>
+				</textField>
+						</cellContents>
+						</crosstabRowHeader>
+					</rowGroup>
+					<rowGroup name="employee" width="70">
+						<bucket>
+							<bucketExpression class="java.lang.String"><![CDATA[$F{employee}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="70"
+						height="30"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{employee}]]></textFieldExpression>
+				</textField>
+						</cellContents>
+						</crosstabRowHeader>
+					</rowGroup>
+					<rowGroup name="position" width="67">
+						<bucket>
+							<bucketExpression class="java.lang.String"><![CDATA[$F{position}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="67"
+						height="30"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{position}]]></textFieldExpression>
+				</textField>
+						</cellContents>
+						</crosstabRowHeader>
+					</rowGroup>
+					<rowGroup name="mulai" width="60">
+						<bucket>
+							<bucketExpression class="java.util.Date"><![CDATA[$F{mulai_kerja}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="true" pattern="dd-MMM-yy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="60"
+						height="30"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$V{mulai}]]></textFieldExpression>
+				</textField>
+						</cellContents>
+						</crosstabRowHeader>
+					</rowGroup>
+					<columnGroup name="keterangan" height="41" headerPosition="Center">
+						<bucket>
+							<bucketExpression class="java.lang.String"><![CDATA[$F{keterangan}]]></bucketExpression>
+						</bucket>
+						<crosstabColumnHeader>
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="132"
+						height="20"
+						backcolor="#CCCCCC"
+						key="textField"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{keterangan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="20"
+						width="44"
+						height="21"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Plafon"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="44"
+						y="20"
+						width="44"
+						height="21"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Dipakai"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="88"
+						y="20"
+						width="44"
+						height="21"
+						backcolor="#CCCCCC"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Sisa"]]></textFieldExpression>
+				</textField>
+						</cellContents>
+						</crosstabColumnHeader>
+					</columnGroup>
+
+					<measure name="plafon" class="java.math.BigDecimal">
+						<measureExpression><![CDATA[$F{plafon}]]></measureExpression>
+					</measure>
+					<measure name="dipakai" class="java.math.BigDecimal">
+						<measureExpression><![CDATA[$F{dipakai}]]></measureExpression>
+					</measure>
+					<measure name="sisa" class="java.math.BigDecimal">
+						<measureExpression><![CDATA[$F{sisa}]]></measureExpression>
+					</measure>
+					<crosstabCell width="132" height="30">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="44"
+						height="30"
+						key="textField"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{plafon}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="44"
+						y="0"
+						width="44"
+						height="30"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{dipakai}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="88"
+						y="0"
+						width="44"
+						height="30"
+						key="textField-1"
+						stretchType="RelativeToTallestObject"
+						isPrintWhenDetailOverflows="true"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{sisa}]]></textFieldExpression>
+				</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="30" columnTotalGroup="keterangan">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="132" height="0" rowTotalGroup="employee">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="0" rowTotalGroup="employee" columnTotalGroup="keterangan">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="132" height="0" rowTotalGroup="nik">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="0" rowTotalGroup="nik" columnTotalGroup="keterangan">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="132" height="0" rowTotalGroup="position">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="0" rowTotalGroup="position" columnTotalGroup="keterangan">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="132" height="0" rowTotalGroup="mulai">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="0" rowTotalGroup="mulai" columnTotalGroup="keterangan">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="132" height="0" rowTotalGroup="Department">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="0" rowTotalGroup="Department" columnTotalGroup="keterangan">
+						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						</cellContents>
+					</crosstabCell>
+					<whenNoDataCell>						<cellContents mode="Transparent">
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+						</cellContents>
+					</whenNoDataCell>					</crosstab>
+			</band>
+		</summary>
+</jasperReport>

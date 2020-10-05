@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="115E1E4A48294BE880525B71474ECEF9" trl="N">
+    <value column="Name" isTrl="N" original="Sortable">Sortable</value>
+    <value column="PrintName" isTrl="N" original="Sortable">Sortable</value>
+    <value column="Description" isTrl="N" original="Allow sorting by this field in the popup grid.">Allow sorting by this field in the popup grid.</value>
+    <value column="Help" isTrl="N" original="Allow sorting by this field in the popup grid.">Allow sorting by this field in the popup grid.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="14118749B4354DCAB332F4A29D585699" trl="N">
+    <value column="Name" isTrl="N" original="Default Expression">Default Expression</value>
+    <value column="PrintName" isTrl="N" original="Default Expression">Default Expression</value>
+    <value column="Description" isTrl="N" original="Defines a expression used to filter the property">Defines a expression used to filter the property</value>
+    <value column="Help" isTrl="N" original="Defines a JavaScript expression that will be evaluated in the server side and used as default value for the property. You can use any type of variable but it must match the property type, examples:&#10;&#10;true - the property associated is boolean&#10;&quot;Hello&quot; - the propery associated is string&#10;5.3 - the property associated is numeric&#10;&#10;You can also access the Openbravo API through the OB object and do some more complex expressions, e.g.&#10;&#10;OB.getSession().getAttribute(&quot;SESSIONVAR&quot;);&#10;&#10;This will retrieve the session variable SESSIONVAR and use it as default value for the selector field">Defines a JavaScript expression that will be evaluated in the server side and used as default value for the property. You can use any type of variable but it must match the property type, examples:
+
+true - the property associated is boolean
+"Hello" - the propery associated is string
+5.3 - the property associated is numeric
+
+You can also access the Openbravo API through the OB object and do some more complex expressions, e.g.
+
+OB.getSession().getAttribute("SESSIONVAR");
+
+This will retrieve the session variable SESSIONVAR and use it as default value for the selector field</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="20B322C49F2B4A5EBEDA5BA73CE97623" trl="N">
+    <value column="Name" isTrl="N" original="Selector Out Field">Selector Out Field</value>
+    <value column="PrintName" isTrl="N" original="Selector Out Field">Selector Out Field</value>
+    <value column="Description" isTrl="N" original="Identifies the 'out field' from which get a value on a row selection">Identifies the 'out field' from which get a value on a row selection</value>
+    <value column="Help" isTrl="N" original="The new selector can define a field as 'Out Field'. If a column from a tab is using a selector with an out field it will get listed. A field from the tab can receive the value of an Selector Out Field when the user picks a record in the selector. This fields establishes the connection between a selector out field and a field in the tab.">The new selector can define a field as 'Out Field'. If a column from a tab is using a selector with an out field it will get listed. A field from the tab can receive the value of an Selector Out Field when the user picks a record in the selector. This fields establishes the connection between a selector out field and a field in the tab.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4BB494AABEA44BB4A383D4814FD72041" trl="N">
+    <value column="Name" isTrl="N" original="Property">Property</value>
+    <value column="PrintName" isTrl="N" original="Property">Property</value>
+    <value column="Description" isTrl="N" original="Path/name of the property to show in the selector">Path/name of the property to show in the selector</value>
+    <value column="Help" isTrl="N" original="Path/name of the property to show in the selector">Path/name of the property to show in the selector</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4DD095DE15384EB1A4B9DCFDE6BA4853" trl="N">
+    <value column="Name" isTrl="N" original="Filter Expression">Filter Expression</value>
+    <value column="PrintName" isTrl="N" original="Filter Expression">Filter Expression</value>
+    <value column="Description" isTrl="N" original="Defines a JavaScript expression that returns a HQL where clause">Defines a JavaScript expression that returns a HQL where clause</value>
+    <value column="Help" isTrl="N" original="Defines a JavaScript expression evaluated on the server that returns a HQL where clause string and will be appended in the where clause. HQL where clause is static defined where clause. The filter expression can use JavaScript to access the Openbravo API evaluate on the fly and return a HQL dynamically. Note: This expression expression must always return a string value, e.g. &quot;e.customer = true&quot;">Defines a JavaScript expression evaluated on the server that returns a HQL where clause string and will be appended in the where clause. HQL where clause is static defined where clause. The filter expression can use JavaScript to access the Openbravo API evaluate on the fly and return a HQL dynamically. Note: This expression expression must always return a string value, e.g. "e.customer = true"</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="61493F0A941F4256900765CF36989AC7" trl="N">
+    <value column="Name" isTrl="N" original="Obuisel_Selector_Field_Trl_ID">Obuisel_Selector_Field_Trl_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuisel_Selector_Field_Trl_ID">Obuisel_Selector_Field_Trl_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="713B5A55B3DD4A17A9ECC6095DFCCD4F" trl="N">
+    <value column="Name" isTrl="N" original="Value Field">Value Field</value>
+    <value column="PrintName" isTrl="N" original="Value Field">Value Field</value>
+    <value column="Description" isTrl="N" original="The value of this field will be set in the foreign key column. ">The value of this field will be set in the foreign key column. </value>
+    <value column="Help" isTrl="N" original="The value of this field will be set in the foreign key column. Normally this field does not need to be set. If not set then the id of the referenced entity is used.">The value of this field will be set in the foreign key column. Normally this field does not need to be set. If not set then the id of the referenced entity is used.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="779CE92421BF4EF5B29997CAF66FEABF" trl="N">
+    <value column="Name" isTrl="N" original="Show in grid">Show in grid</value>
+    <value column="PrintName" isTrl="N" original="Showingrid">Showingrid</value>
+    <value column="Description" isTrl="N" original="Defines if the field is shown in the popup grid.">Defines if the field is shown in the popup grid.</value>
+    <value column="Help" isTrl="N" original="Defines if the field is shown in the popup grid.">Defines if the field is shown in the popup grid.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7E3AF59AB6BB471DA2D0835926F92C07" trl="N">
+    <value column="Name" isTrl="N" original="Sorting of columns in a grid">Sorting of columns in a grid</value>
+    <value column="PrintName" isTrl="N" original="Column Sorting ">Column Sorting </value>
+    <value column="Description" isTrl="N" original="Defines the sorting of columns in a grid">Defines the sorting of columns in a grid</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A4B096709FEB876E040007F01007259" trl="N">
+    <value column="Name" isTrl="N" original="HQL">HQL</value>
+    <value column="PrintName" isTrl="N" original="HQL">HQL</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="HQL Query code to populate selector's grid.&#10;&#10;Retrieved columns must have an alias defined, this alias is used to identify the returned value with a selector field. It is mandatory to set the &quot;@additional_filters@&quot; String on the main where clause. It is forbidden to include an Order by clause in the HQL, the order is defined on the Selector fields.">HQL Query code to populate selector's grid.
+
+Retrieved columns must have an alias defined, this alias is used to identify the returned value with a selector field. It is mandatory to set the "@additional_filters@" String on the main where clause. It is forbidden to include an Order by clause in the HQL, the order is defined on the Selector fields.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A4B09670A04B876E040007F01007259" trl="N">
+    <value column="Name" isTrl="N" original="Entity Alias">Entity Alias</value>
+    <value column="PrintName" isTrl="N" original="Entity Alias">Entity Alias</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="In case that the the selector's table has an alias in the HQL it is mandatory to set it on this field. This alias is used to add some mandatory filters on the Where clause replacing the @additional_filters@ string. Some examples of added filters are: client, organization and active flag.">In case that the the selector's table has an alias in the HQL it is mandatory to set it on this field. This alias is used to add some mandatory filters on the Where clause replacing the @additional_filters@ string. Some examples of added filters are: client, organization and active flag.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A597DDF9955E963E040007F01002F75" trl="N">
+    <value column="Name" isTrl="N" original="Custom Query">Custom Query</value>
+    <value column="PrintName" isTrl="N" original="Custom Query">Custom Query</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Indicates that a custom query is used to fill out the selector's grid.">Indicates that a custom query is used to fill out the selector's grid.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A5A29111528107DE040007F01002F6B" trl="N">
+    <value column="Name" isTrl="N" original="Display Column Alias">Display Column Alias</value>
+    <value column="PrintName" isTrl="N" original="Display Column Alias">Display Column Alias</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Alias of the HQL query column to be shown">Alias of the HQL query column to be shown</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A5A29111529107DE040007F01002F6B" trl="N">
+    <value column="Name" isTrl="N" original="Clause Left Part">Clause Left Part</value>
+    <value column="PrintName" isTrl="N" original="Clause Left Part">Clause Left Part</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Left part of a clause to be used on the where or order by clauses of the HQL.">Left part of a clause to be used on the where or order by clauses of the HQL.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9D05F0BD3CA6AAECE040007F0100087A" trl="N">
+    <value column="Name" isTrl="N" original="Show In Picklist">Show In Picklist</value>
+    <value column="PrintName" isTrl="N" original="Show In Picklist">Show In Picklist</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Sets additional fields to appear on the selectors pick list.">Sets additional fields to appear on the selectors pick list.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B843BE7E4A984128AA589685C313E709" trl="N">
+    <value column="Name" isTrl="N" original="Search in suggestion box">Search in suggestion box</value>
+    <value column="PrintName" isTrl="N" original="Searchinsuggestionbox">Searchinsuggestionbox</value>
+    <value column="Description" isTrl="N" original="Defines if the field is used to search when retrieving values in the suggestion box.">Defines if the field is used to search when retrieving values in the suggestion box.</value>
+    <value column="Help" isTrl="N" original="Defines if the field is used to search when retrieving values in the suggestion box.">Defines if the field is used to search when retrieving values in the suggestion box.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BC75AC54601F4C17B6B5DDC7C8F18FDC" trl="N">
+    <value column="Name" isTrl="N" original="Popup Text Match Style">Popup Text Match Style</value>
+    <value column="PrintName" isTrl="N" original="Popup Text Match Style">Popup Text Match Style</value>
+    <value column="Description" isTrl="N" original="Defines the text matching logic used in the filters in the popup grid.">Defines the text matching logic used in the filters in the popup grid.</value>
+    <value column="Help" isTrl="N" original="Defines the text matching logic used in the filters in the popup grid.">Defines the text matching logic used in the filters in the popup grid.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C4B7AF76B82145BC9439ADF6855CBE7E" trl="N">
+    <value column="Name" isTrl="N" original="Selector Field">Selector Field</value>
+    <value column="PrintName" isTrl="N" original="Selector Field">Selector Field</value>
+    <value column="Description" isTrl="N" original="Unique identifying key for the selector field record.">Unique identifying key for the selector field record.</value>
+    <value column="Help" isTrl="N" original="Unique identifying key for the selector field record.">Unique identifying key for the selector field record.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C549CDBBFA994C9F952CB205EBFE5302" trl="N">
+    <value column="Name" isTrl="N" original="Obuisel_Selector_Trl_ID">Obuisel_Selector_Trl_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuisel_Selector_Trl_ID">Obuisel_Selector_Trl_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CE0AB5DC107A4D288DE5E83015641750" trl="N">
+    <value column="Name" isTrl="N" original="Filterable">Filterable</value>
+    <value column="PrintName" isTrl="N" original="Filterable">Filterable</value>
+    <value column="Description" isTrl="N" original="Allow filtering on this field.">Allow filtering on this field.</value>
+    <value column="Help" isTrl="N" original="Make it possible to filter in the grid using this field.">Make it possible to filter in the grid using this field.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CEF66D7F6D124261B706973417D761CD" trl="N">
+    <value column="Name" isTrl="N" original="Out Field">Out Field</value>
+    <value column="PrintName" isTrl="N" original="Out Field">Out Field</value>
+    <value column="Description" isTrl="N" original="The value of this field should be returned to the opener window">The value of this field should be returned to the opener window</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D71D9890834E4D4183B4A2872A5107A2" trl="N">
+    <value column="Name" isTrl="N" original="Selector">Selector</value>
+    <value column="PrintName" isTrl="N" original="Selector">Selector</value>
+    <value column="Description" isTrl="N" original="The unique identifying key for the selector.">The unique identifying key for the selector.</value>
+    <value column="Help" isTrl="N" original="The unique identifying key for the selector.">The unique identifying key for the selector.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E4FCED1CB10743E8A6BD994F27F939F1" trl="N">
+    <value column="Name" isTrl="N" original="Display Field">Display Field</value>
+    <value column="PrintName" isTrl="N" original="Display Field">Display Field</value>
+    <value column="Description" isTrl="N" original="The value of this field will be displayed in the selector text input box.">The value of this field will be displayed in the selector text input box.</value>
+    <value column="Help" isTrl="N" original="The value of this field will be displayed in the selector text input box.">The value of this field will be displayed in the selector text input box.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E54D4B7821C44A6A9BD20D5B464B30E4" trl="N">
+    <value column="Name" isTrl="N" original="Suggestion Text Match Style">Suggestion Text Match Style</value>
+    <value column="PrintName" isTrl="N" original="Suggestion Text Match Style">Suggestion Text Match Style</value>
+    <value column="Description" isTrl="N" original="Defines the text matching logic used in the suggestion box.">Defines the text matching logic used in the suggestion box.</value>
+    <value column="Help" isTrl="N" original="Defines the text matching logic used in the suggestion box.">Defines the text matching logic used in the suggestion box.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FE81758CDCFA4B329F7F1BB8C99E45C3" trl="N">
+    <value column="Name" isTrl="N" original="HQL Where Clause">HQL Where Clause</value>
+    <value column="PrintName" isTrl="N" original="HQL Where Clause">HQL Where Clause</value>
+    <value column="Description" isTrl="N" original="The HQL where clause is added to the query to retrieve the data which is returned by the datasource.">The HQL where clause is added to the query to retrieve the data which is returned by the datasource.</value>
+    <value column="Help" isTrl="N" original="The HQL where clause is added to the query to retrieve the data which is returned by the datasource. When refering to properties of the entity shown in the selector then use the prefix e. For example if the selector shows Products then refering to product category works like this: e.productCategory.name='Ceramics'.">The HQL where clause is added to the query to retrieve the data which is returned by the datasource. When refering to properties of the entity shown in the selector then use the prefix e. For example if the selector shows Products then refering to product category works like this: e.productCategory.name='Ceramics'.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

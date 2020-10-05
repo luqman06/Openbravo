@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+  <database name="TABLE PYR_SP_EMPLOYEE">
+    <table name="PYR_SP_EMPLOYEE" primaryKey="PYR_SPE_EMPLOYEE_KEY">
+      <column name="PYR_SP_EMPLOYEE_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="C_BPARTNER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="DESCRIPTION" primaryKey="false" required="false" type="VARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="PYR_SALARYPAYMENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AMOUNT" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="POSITION" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="HRIS_JOBTITLE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="GRADE" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="C_COSTCENTER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="HRIS_SITE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="CALCULATESALARYFORMULA" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_BPARTNER" name="PYR_SPE_BPARTNER_FK">
+        <reference local="C_BPARTNER_ID" foreign="C_BPARTNER_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="C_COSTCENTER" name="PYR_SPE_COSTCENTER_FK">
+        <reference local="C_COSTCENTER_ID" foreign="C_COSTCENTER_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_CLIENT" name="PYR_SPE_EMPLOYEE_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="PYR_SPE_EMPLOYEE_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="HRIS_JOBTITLE" name="PYR_SPE_JOBTITLE_FK">
+        <reference local="HRIS_JOBTITLE_ID" foreign="HRIS_JOBTITLE_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="PYR_SALARYPAYMENT" name="PYR_SPE_SALARYPAYMENT">
+        <reference local="PYR_SALARYPAYMENT_ID" foreign="PYR_SALARYPAYMENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="HRIS_SITE" name="PYR_SPE_SITE_FK">
+        <reference local="HRIS_SITE_ID" foreign="HRIS_SITE_ID"/>
+      </foreign-key>
+      <index name="PYR_SPE_BP_E_IDX" unique="false">
+        <index-column name="PYR_SALARYPAYMENT_ID"/>
+        <index-column name="C_BPARTNER_ID"/>
+      </index>
+      <index name="PYR_SPE_BPARTNER_FK" unique="false">
+        <index-column name="C_BPARTNER_ID"/>
+      </index>
+      <index name="PYR_SPE_EMPLOYEE_IDX" unique="false">
+        <index-column name="PYR_SALARYPAYMENT_ID"/>
+        <index-column name="C_BPARTNER_ID"/>
+      </index>
+      <check name="PYR_SPE_ISACTIVE_CHK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+    </table>
+  </database>

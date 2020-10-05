@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ARB_DO" pageWidth="595" pageHeight="842" columnWidth="581" leftMargin="7" rightMargin="7" topMargin="7" bottomMargin="7" uuid="c8708281-3380-4eb4-8a3b-2294307496f2">
+	<property name="ireport.zoom" value="1.464100000000001"/>
+	<property name="ireport.x" value="75"/>
+	<property name="ireport.y" value="20"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("F34841079DBF4A6597145BFA2AF7A5C5")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select DISTINCT
+a.ad_org_id,
+l.name as usercontact,
+l.phone as phone,
+l.phone2 as phone_al,
+a.ad_client_id,
+a.m_inout_id,
+a.poreference,
+n.poreference as purchasereference,
+n.dateordered,
+m.qtyordered,
+---a.created,
+a.documentno as delivery_no,
+a.description,
+a.docstatus as status,
+b.name as ORG_name,
+c.c_Location_id,
+d.ADDRESS1 AS ORG_ADDRESS1,
+d.ADDRESS2 AS ORG_ADDRESS2,
+d.POSTAL AS ORG_POSTAL,
+d.C_COUNTRY_ID AS COUNTRY_ID,
+
+(CASE WHEN coalesce(a.docstatus)='DR' THEN ('DRAFT')
+	WHEN coalesce(a.docstatus)='CO' THEN ('COMPLETED')
+		ELSE coalesce(a.docstatus) END) as document_status,
+movementdate as delivery_date,
+a.created as date_created,
+h.name as customer_name,
+coalesce(o.address1,'')||coalesce(' '||o.address2,'') as address1,
+coalesce(o.postal,'')||coalesce(' - '||o.city,'')||coalesce(' ('||p.name,'')||coalesce(') - '||q.name,'') as address2,
+coalesce('Tel. '||i.phone,'')||coalesce(' Fax. '||i.fax,'') as phonefax,
+coalesce(l.name,'') as customer_contact,
+coalesce(h.poreference, '') as po_reference,
+g.line as delivery_line,
+j.name as productname,
+j.value as productcode,
+coalesce(j.description, '') || coalesce(g.description, '') as productdescription,
+--b.description as linedescription,
+g.movementqty as delivery_qty,
+k.x12de355 as uom,
+k.name as uom_name,
+g.description as line_description,
+m.qtyordered-m.qtydelivered as po_balance_qtyx,
+C_LOCATION_DESCRIPTION(c.C_LOCATION_ID) AS LOCATION,
+e.name as org_country_header,
+f.description as org_website, --ambil dari contact di organization
+f.phone as org_phone, --ambil dari contact di organization
+f.phone2 as org_phone_al, --ambil dari contact di organization
+f.fax as org_fax, --ambil dari contact di organization
+d.city as org_city, --ambil di city contact di organization,
+f.title as org_title
+from m_inout a
+left join ad_org b on b.ad_org_id=a.ad_org_id
+left join ad_orginfo c on c.ad_org_id=a.ad_org_id
+left join c_location d on d.c_location_id=c.c_location_id
+left join c_country e on d.c_country_id=e.c_country_id
+left join ad_user f on c.ad_user_id=f.ad_user_id
+
+left join m_inoutline g on a.m_inout_id=g.m_inout_id
+left join c_bpartner h on g.c_bpartner_id=h.c_bpartner_id
+left join c_bpartner_location i on a.delivery_location_id=i.c_bpartner_location_id
+--left join c_bpartner_location d on a.c_bpartner_location_id=d.c_bpartner_location_id
+left join m_product j on g.m_product_id=j.m_product_id
+left join c_uom k on k.c_uom_id=g.c_uom_id
+left join ad_user l on a.ad_user_id=l.ad_user_id
+left join c_orderline m on g.c_orderline_id=m.c_orderline_id
+left join c_order n on m.c_order_id = n.c_order_id
+left join c_location o on o.c_location_id=i.c_location_id
+left join c_region p on o.c_region_id=p.c_region_id
+left join c_country q on p.c_country_id=q.c_country_id
+
+where
+-- sample VOID Document = a.m_inout_id='321D982178FF48B0A23DEF1D1DA119C0'
+-- sample General Sales = a.m_inout_id = 'A15348D66334403F851D17E824CF3C20'
+--AND a.docstatus <> 'DR'
+a.m_inout_id=$P{DOCUMENT_ID}--'F34841079DBF4A6597145BFA2AF7A5C5'
+
+order by g.line ASC]]>
+	</queryString>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="usercontact" class="java.lang.String"/>
+	<field name="phone" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="phone_al" class="java.lang.String"/>
+	<field name="ad_client_id" class="java.lang.String"/>
+	<field name="m_inout_id" class="java.lang.String"/>
+	<field name="poreference" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="purchasereference" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="qtyordered" class="java.math.BigDecimal"/>
+	<field name="delivery_no" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="c_location_id" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="country_id" class="java.lang.String"/>
+	<field name="document_status" class="java.lang.String"/>
+	<field name="delivery_date" class="java.sql.Timestamp"/>
+	<field name="date_created" class="java.sql.Timestamp"/>
+	<field name="customer_name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="address2" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="customer_contact" class="java.lang.String"/>
+	<field name="po_reference" class="java.lang.String"/>
+	<field name="delivery_line" class="java.math.BigDecimal"/>
+	<field name="productname" class="java.lang.String"/>
+	<field name="productcode" class="java.lang.String"/>
+	<field name="productdescription" class="java.lang.String"/>
+	<field name="delivery_qty" class="java.math.BigDecimal"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="line_description" class="java.lang.String"/>
+	<field name="po_balance_qtyx" class="java.math.BigDecimal"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="org_country_header" class="java.lang.String"/>
+	<field name="org_website" class="java.lang.String"/>
+	<field name="org_phone" class="java.lang.String"/>
+	<field name="org_phone_al" class="java.lang.String"/>
+	<field name="org_fax" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="org_title" class="java.lang.String"/>
+	<group name="group 1">
+		<groupHeader>
+			<band height="28">
+				<textField isBlankWhenNull="true">
+					<reportElement x="106" y="0" width="359" height="14" uuid="86af3396-6ba0-48de-a1d2-cfe2d1220ab1"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(""+(($F{phone}!=null)?$F{phone}:""))+""+("/ "+(($F{phone_al}!=null)?$F{phone_al}:""))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="96" y="0" width="10" height="14" uuid="81b50e25-8c36-4613-b2f2-997219e46a77"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="106" y="14" width="176" height="14" uuid="e3e90112-1f79-428f-8044-545ebac3df24"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{usercontact}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="96" y="14" width="10" height="14" uuid="26a9a350-bf01-4511-9bb4-2869b3258644"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="14" width="63" height="14" uuid="84157f91-3316-4d81-bed2-7304590a9563"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Attention]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="0" width="67" height="14" uuid="084020e3-579a-4c57-b620-7e8081a60585"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Telephone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-61" x="362" y="14" width="219" height="14" uuid="33a52b5f-4a65-4ee4-bbf2-363fe8e9238b"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Powered By : www.infinite-erp.co.id]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="group 2">
+		<groupExpression><![CDATA[$F{ad_org_id}]]></groupExpression>
+		<groupHeader>
+			<band height="17">
+				<line>
+					<reportElement x="0" y="4" width="581" height="1" uuid="9d6e3400-e46e-4cea-8e61-c4d43fac4aa3"/>
+					<graphicElement>
+						<pen lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="group 3">
+		<groupExpression><![CDATA[$F{ad_org_id}]]></groupExpression>
+		<groupHeader>
+			<band height="50"/>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="134" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="23" y="119" width="222" height="15" uuid="5b351b82-70e8-4b24-9bfa-c411b3fd7602"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-28" x="372" y="-110" width="80" height="15" uuid="1e9a502a-abf5-4ca7-90f8-38b27c0171be"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="372" y="-80" width="80" height="15" uuid="49a0fb3e-8c7f-4ea9-8ea6-9d6b1d1cb7a8"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="372" y="-95" width="80" height="15" uuid="18d6ac18-1e22-42ac-bd79-b4422b7444ed"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="372" y="-65" width="80" height="15" uuid="1f2b5319-4421-4274-989e-7a0ea1e3f742"/>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-32" x="372" y="-50" width="80" height="15" uuid="0e30d19d-c2f5-4f55-8ca1-f4372b32334f"/>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-33" x="451" y="-110" width="7" height="15" uuid="6221f084-43e9-454a-9eeb-d3cb281f22d4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-34" x="451" y="-80" width="7" height="15" uuid="29d7fa80-4835-4595-bd0f-775ed507398c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-35" x="451" y="-95" width="7" height="15" uuid="e0843446-51bf-4919-afbc-002bb3742888"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-36" x="451" y="-65" width="7" height="15" uuid="96eaa1f0-175b-45cb-86b8-cdcd8e24fd42"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-37" x="451" y="-50" width="7" height="15" uuid="9dce3dbf-80f0-4d40-af1e-fc44e4bcf07b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" x="372" y="-110" width="80" height="15" uuid="05c8b3d7-2005-4ed0-8df5-b7fc0a94f3ed"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-39" x="372" y="-80" width="80" height="15" uuid="80e89919-95d2-4727-8574-74a2ec788028"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-40" x="372" y="-95" width="80" height="15" uuid="b00d9584-9308-47cf-b6b2-51660ede3b2f"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-41" x="372" y="-65" width="80" height="15" uuid="5840812e-c086-4ceb-99cc-ba2f22046712"/>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-42" x="372" y="-50" width="80" height="15" uuid="e71b9a9c-aa3d-43cb-8460-be7f84f439db"/>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="451" y="-110" width="7" height="15" uuid="ba071c17-557c-4f38-bc20-2ffa1db36730"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-44" x="451" y="-80" width="7" height="15" uuid="8641b61e-8f6d-460d-83a8-9900915d1a45"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" x="451" y="-95" width="7" height="15" uuid="09d258e1-ffa4-44e5-80f9-08954cfca2a8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-46" x="451" y="-65" width="7" height="15" uuid="a065eb8c-a32e-43ff-b745-7fdae2419d76"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-47" x="451" y="-50" width="7" height="15" uuid="368ee669-08e0-4c36-be25-972d3dc7de68"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-48" x="372" y="-110" width="80" height="15" uuid="60efe73b-b189-4fa8-95d7-383e82a1879c"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-49" x="372" y="-80" width="80" height="15" uuid="57f2c0da-48bc-47c8-b222-ee43d951a5f0"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-50" x="372" y="-95" width="80" height="15" uuid="06891609-234e-4a20-93fc-41a729b4e84c"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-51" x="451" y="-110" width="7" height="15" uuid="cdf1e0f7-a033-4525-bce4-5f0ade98b855"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-52" x="451" y="-80" width="7" height="15" uuid="474c2001-2fee-4545-823e-7f3470c85114"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-53" x="451" y="-95" width="7" height="15" uuid="9b55c878-dad6-4d29-83af-97d9b6c4b132"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-54" x="372" y="-110" width="80" height="15" uuid="a356fc89-7872-414b-afde-3165125b5f6e"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-55" x="451" y="-110" width="7" height="15" uuid="caeb2aa6-ccc4-4bed-84a9-40124025f26e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-56" x="372" y="-110" width="80" height="15" uuid="334e023b-d7c5-403a-8425-419014e9a8bf"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-57" x="372" y="-110" width="80" height="15" uuid="be2564ef-907c-44f6-a424-0c49caa4b1d7"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="88" y="0" width="377" height="27" uuid="687db777-75a2-40ed-8404-f44aa3dce6b5"/>
+				<textElement>
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-61" x="0" y="104" width="88" height="15" uuid="d55627e4-0fe5-4b2c-9c29-2d957d4bcb45"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deliver To :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="88" y="24" width="459" height="64" uuid="21b488cf-71d7-4667-8587-c888bb98148a"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{location}+'-'+(" "+(($F{org_country_header}!=null)?$F{org_country_header}:""))+"\n"+("Tlp. "+(($F{org_phone}!=null)?$F{org_phone}:""))+","+(" Fax. "+(($F{org_fax}!=null)?$F{org_fax}:""))+'\n'+(""+(($F{org_website}!=null)?$F{org_website}:""))]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="95" width="581" height="1" uuid="bb862c8c-0101-4fa0-9bc6-81e6cbe54ed1"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-59" mode="Transparent" x="394" y="27" width="187" height="29" forecolor="#000000" backcolor="#CCFFCC" uuid="8042f93e-9ac7-4282-9474-5bb0c2870773"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="20" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Goods Shipment]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy" isBlankWhenNull="true">
+				<reportElement x="465" y="119" width="116" height="15" uuid="220612f7-8b80-4dea-a625-014127fead47"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateordered}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-24" x="361" y="119" width="97" height="15" uuid="3fc9e1be-9641-4711-aacc-0c0cd5fa0b9f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Date Ordered]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="458" y="119" width="7" height="15" uuid="f99d1738-0ed4-4937-9364-0d4c0cf8a64c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="0" y="0" width="122" height="84" uuid="9363184a-4823-4f22-ad2a-508df8a8afd8"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{ad_org_id})]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="23" y="0" width="276" height="17" uuid="d7b8bf20-2d00-409a-b3e7-144eb894c16b"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1}+ "\n" +$F{address2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="465" y="0" width="169" height="15" uuid="c6d7eed5-0e03-48d1-8bfd-bdf968aaa79c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delivery_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-24" x="361" y="0" width="97" height="15" uuid="718eaed1-7d71-48bc-bde1-6d4bdc106125"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Document No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="458" y="0" width="7" height="15" uuid="7a5cc490-32b4-4185-9ef6-2cdf908bbdc7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="55" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="100" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

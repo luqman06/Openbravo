@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="0E0B43D5E508489E963CA6B4C23E0204" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Earning">Import Incidental Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3160605E90B24F4AB7E41CE14ACDBF7A" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction Catalog">Komponen Gaji - Potongan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3232B3E1FE8944B599670929913352A8" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment">Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="Help" isTrl="N" original="Salary payment, a.k.a payroll period.">Salary payment, a.k.a payroll period.</value>
+  </row>
+  <row id="33F7BCBD452A4EEAB6E4DC1052BAC073" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning Paramater">Rumusan Gaji - Parameter Pendapatan</value>
+    <value column="Description" isTrl="N" original="For saved Salary Formula Paramater">For saved Salary Formula Paramater</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6282A09642AF4F77B56DED808AAA96E4" trl="N">
+    <value column="Name" isTrl="N" original="Earning Group">Earning Group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6907208151D14A24B437BF348E5264AE" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning Catalog">konponen Gaji - Pendapatan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="91D371AB60F54CB08523885746E502D9" trl="N">
+    <value column="Name" isTrl="Y" original="Salary Formula Library">Java Class Formula</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B4A3797C31E1488997CEB86B4FC98CCA" trl="N">
+    <value column="Name" isTrl="N" original="Incidental Earning">Incidental Earning</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B7E1F22D4F4A4015BEBFAAD973EB0FB7" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Variable">Variabel Penggajian</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C7063096DE6E424FA2C76A6BF9D4E76F" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Group">Deduction Group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D6C795533E32403B870939D710115605" trl="N">
+    <value column="Name" isTrl="N" original="Incidental Deduction">Incidental Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EAD7602F3D8349B899EB338575E8DB84" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment (Payroll Master View)">Pembayaran Gaji - Penggaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EEC29C8FDF944C5090EFA487292588BD" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Deduction">Import Incidental Deduction</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F73A24A7DC584839BF2DEDE1877BD1A4" trl="N">
+    <value column="Name" isTrl="Y" original="Deduction Paramater">Salary Formula - Deduction Paramater</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FCBD7EC259414FA9BE415BB248842736" trl="N">
+    <value column="Name" isTrl="N" original="Employee Salary">Employee Salary</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

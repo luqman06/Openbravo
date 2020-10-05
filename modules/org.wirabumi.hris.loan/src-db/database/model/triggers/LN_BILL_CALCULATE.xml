@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER LN_BILL_CALCULATE">
+    <trigger name="LN_BILL_CALCULATE" table="LN_BILL_DETAIL" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_total_paid NUMBER;
+v_paid NUMBER;
+v_partner varchar;
+v_outstanding NUMBER;
+v_datefrom DATE;v_dateacct DATE;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- definisi trigger
+
+	select sum(total) into v_total_paid from ln_bill_detail
+	where ln_bill_register_id=:new.ln_bill_register_id;
+
+	--raise exception '%,%',new.ln_bill_register_id,v_total_paid;
+	select paid,c_bpartner_id,datefrom,dateacct into v_paid,v_partner,v_datefrom,v_dateacct
+	 from ln_bill_register where ln_bill_register_id=:new.ln_bill_register_id;
+
+	 v_paid:=v_paid+:new.total;
+
+	 if v_paid>v_total_paid then
+		v_paid:=v_total_paid;
+	 end if;
+
+	select outstandingamt into v_outstanding from ln_bill_register  
+	where c_bpartner_id=v_partner and docstatus='CL'
+	and dateto<=v_datefrom and date_part('month',dateacct)=date_part('month',v_dateacct)-1;
+	v_outstanding:=coalesce(v_outstanding,0);
+
+	v_total_paid:=v_outstanding+v_total_paid;
+	
+	
+	update ln_bill_register set bill_total=v_total_paid,paid=v_paid
+	where ln_bill_register_id=:new.ln_bill_register_id;
+
+       END LN_BILL_CALCULATE
+]]></body>
+    </trigger>
+  </database>

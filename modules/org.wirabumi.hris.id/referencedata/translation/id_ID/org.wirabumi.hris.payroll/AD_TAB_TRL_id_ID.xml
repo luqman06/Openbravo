@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="047150F8573D4F34808F1B3C8D4CB9EA" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="086D86E7A5DB4EE58526AFEBE41C8A33" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1188DC4E8A8044639472ACCA5750B57F" trl="N">
+    <value column="Name" isTrl="N" original="Incidental Earning">Incidental Earning</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1EEE7C7BE4C54702A884D171D74E9455" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Employee to be paid">Employee to be paid</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Employee to be paid">Employee to be paid</value>
+  </row>
+  <row id="250673AAA0F24402AE7B4F16DAA9EC99" trl="N">
+    <value column="Name" isTrl="N" original="Header">Header</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="32E00FD4DA8845E49B36B460FBBBB9DF" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction Parameter">Paramater Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="37F494980B4547CE9ACB3592E1618235" trl="N">
+    <value column="Name" isTrl="N" original="Incidental Deduction">Incidental Deduction</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3DBE526616ED4E438675C6F7B58050B5" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Deduction">Import Incidental Deduction</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4098FBF9FCEF4EF4B6AEA2FDB9A42B31" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning Paramater">Parameter Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="43C3E31B8D624E14990F04E676465439" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5730F0F4048546C6A292CD216324271F" trl="N">
+    <value column="Name" isTrl="Y" original="Header">Java Class Formula</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="606B7B71874C4B2FBDD8D842EA128E40" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Earning part of employee salary payment">Earning part of employee salary payment</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Earning part of employee salary payment">Earning part of employee salary payment</value>
+  </row>
+  <row id="65B600C8EBE04FC6BBE08C5D661F18F6" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Earning">Import Incidental Earning</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="65D346B43A924F42B928E90C34AED1DA" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Deduction part of employee salary payment">Deduction part of employee salary payment</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Deduction part of employee salary payment">Deduction part of employee salary payment</value>
+  </row>
+  <row id="8676B7A54BD14ADBB2E6E34A48025C38" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9422A9EBF0464C8B910583162DDA692D" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary History">Riwayat Gaji</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="96053D5524774B4CAE849212A857C0A0" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee">Karyawan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Employee to be paid">Employee to be paid</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Employee to be paid">Employee to be paid</value>
+  </row>
+  <row id="A1B949882C074EAE84C01C78073BC898" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Formula Variable">Rumusan Gaji - Variabel</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B2E0151F3A94458BADA0E80D00B839AB" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Earning part of employee salary payment">Earning part of employee salary payment</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Earning part of employee salary payment">Earning part of employee salary payment</value>
+  </row>
+  <row id="C0AA220D4B4342B3A8FA57382F2A1C0E" trl="N">
+    <value column="Name" isTrl="N" original="Header">Header</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C4916119BBCF4994A95082C7554459AE" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CE15636EA5924F58927F2D435176A1BA" trl="N">
+    <value column="Name" isTrl="N" original="Salary">Salary</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D6DFA844A6CA4620B86179EABB44C5A7" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment (Payroll Master View)">Pembayran Gaji - Penggaji</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Salary Payment, a.k.a payroll period.">Salary Payment, a.k.a payroll period.</value>
+  </row>
+  <row id="DB899B15D47B4B5C8633CD33766AF7BE" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction">Potongan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Deduction part of employee salary payment">Deduction part of employee salary payment</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Deduction part of employee salary payment">Deduction part of employee salary payment</value>
+  </row>
+  <row id="F097DDFA06674850BE491218F472CC89" trl="Y">
+    <value column="Name" isTrl="Y" original="Earning">Pendapatan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F764A799B3324ED7B4D666CEE47634F6" trl="N">
+    <value column="Name" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Salary Payment, a.k.a payroll period.">Salary Payment, a.k.a payroll period.</value>
+  </row>
+</compiereTrl>

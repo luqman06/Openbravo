@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELD" version="">
+  <row id="7FBBB9741B4648AE9E7D7BB83840BEE7" trl="N">
+    <value column="Name" isTrl="N" original="Position Cost Rate">Position Cost Rate</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DF0AD1069C2F43B4986442F023376759" trl="N">
+    <value column="Name" isTrl="N" original="Maximum Position Cost">Maximum Position Cost</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

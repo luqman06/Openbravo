@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="001FB1EF715D476C8E3A490E4759EE70" trl="N">
+    <value column="Name" isTrl="N" original="Pesangon">Pesangon</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0482CB7EE4DE41CE99E614B503F052F1" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Termination)">Tarif PHK</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="09081C4DEA1F4F549E0896728539435C" trl="N">
+    <value column="Name" isTrl="N" original="Detail">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6C107FA42F904EF382B6044769E383CE" trl="N">
+    <value column="Name" isTrl="Y" original="Appreciation Rate">Tarif Penghargaan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B4898336D5DC4D209FE1E032378AF7B1" trl="N">
+    <value column="Name" isTrl="Y" original="Salary/Wage Rate">Tarif Upah</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C8BDF801F9B24CBDA9816D68BC8FB48D" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Termination">Pemutusan Hubungan Kerja</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="Employee Termination">Pemutusan Hubungan Kerja</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Company decide to terminate an employee due to a specific reason.">Perusahaan memutuskan untuk memutuskan hubungan kerja (PHK) kepada seorang karyawan dengan sebab tertentu.</value>
+  </row>
+  <row id="C92C33B46A6C46049E4E035BEFCC5FBB" trl="N">
+    <value column="Name" isTrl="Y" original="Lines">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D14662345AE640E8953A6A0473E730F2" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Pension)">Tarif Pesangon</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F378312BA8334B37A2775D22AD3A564B" trl="N">
+    <value column="Name" isTrl="N" original="Detail">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FE92EC3FFB9244EDA05BC1A7C76B9E89" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Resign)">Tarif Uang Pisah</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

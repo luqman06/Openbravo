@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="0B4716645B114D0FA9F36DFDFD55FE59" trl="Y">
+    <value column="Name" isTrl="Y" original="Check Out">Keluar</value>
+    <value column="PrintName" isTrl="N" original="Check Out">Check Out</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1A3F8A2684E242AD8D22323B920A7BFF" trl="Y">
+    <value column="Name" isTrl="Y" original="Check Out">Keluar</value>
+    <value column="PrintName" isTrl="N" original="Check Out">Check Out</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2174C554AEF449DDAD64B98B887AF106" trl="Y">
+    <value column="Name" isTrl="Y" original="Duration">Durasi</value>
+    <value column="PrintName" isTrl="N" original="Duration">Duration</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4606D92CE6644359AD827FBBE6D80C8F" trl="Y">
+    <value column="Name" isTrl="Y" original="Work Minutes/Day">Bekerja Menit/Hari</value>
+    <value column="PrintName" isTrl="N" original="Work Minutes/Day">Work Minutes/Day</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="48D27CF34EBD44928B4892531D03206F" trl="Y">
+    <value column="Name" isTrl="Y" original="Late">Terlambat</value>
+    <value column="PrintName" isTrl="N" original="Late">Late</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4A3CDE8E94C04A18A10F45873FC64128" trl="N">
+    <value column="Name" isTrl="N" original="Switched Date">Switched Date</value>
+    <value column="PrintName" isTrl="N" original="Switched Date">Switched Date</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4A8B1479CD2546BBA78D67773683D88C" trl="N">
+    <value column="Name" isTrl="N" original="TA_Detail_Pot_Cuti_ID">TA_Detail_Pot_Cuti_ID</value>
+    <value column="PrintName" isTrl="N" original="TA_Detail_Pot_Cuti_ID">TA_Detail_Pot_Cuti_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="51F5FC6F2AF842E791046B812AA870AB" trl="Y">
+    <value column="Name" isTrl="Y" original="Attendance">Kehadiran</value>
+    <value column="PrintName" isTrl="N" original="Attendance">Attendance</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="56012F67B5604945BF88005CDAEF892D" trl="Y">
+    <value column="Name" isTrl="Y" original="Check In">Masuk</value>
+    <value column="PrintName" isTrl="N" original="Check In">Check In</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="59EDD3A631F447FC9C9FEA731AF9C6BA" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potongan Gaji">Akumulasi Potongan Gaji</value>
+    <value column="PrintName" isTrl="N" original="Akumulasi Potongan Gaji">Akumulasi Potongan Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5F86768AE5804D908FC86A0A4FCEB11B" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potongan Cuti">Akumulasi Potongan Cuti</value>
+    <value column="PrintName" isTrl="N" original="Akumulasi Potongan Cuti">Akumulasi Potongan Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6692D517BD8D4541BF16F5AC116A7623" trl="N">
+    <value column="Name" isTrl="N" original="Gray Area Before">Gray Area Before</value>
+    <value column="PrintName" isTrl="N" original="Gray Area Before">Gray Area Before</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7AC059A1473145ABA2DDFDCAEA08D90F" trl="Y">
+    <value column="Name" isTrl="Y" original="Department">Departemen</value>
+    <value column="PrintName" isTrl="N" original="Department">Department</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9021CDA598D34BD09BE20381431876AE" trl="N">
+    <value column="Name" isTrl="N" original="TA_Tukar_Shift_ID">TA_Tukar_Shift_ID</value>
+    <value column="PrintName" isTrl="N" original="TA_Tukar_Shift_ID">TA_Tukar_Shift_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9C77E6192289405EB68E1C29AC39F4FA" trl="N">
+    <value column="Name" isTrl="N" original="TA_Shiftline_ID">TA_Shiftline_ID</value>
+    <value column="PrintName" isTrl="N" original="TA_Shiftline_ID">TA_Shiftline_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9F9AF84D137B442A9D9CE8A3BA6114BB" trl="Y">
+    <value column="Name" isTrl="Y" original="Check In">Masuk</value>
+    <value column="PrintName" isTrl="N" original="Check In">Check In</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="AA7ADF2047AC4D8294EF0FBFC91C1CA0" trl="N">
+    <value column="Name" isTrl="N" original="Shift">Shift</value>
+    <value column="PrintName" isTrl="N" original="Shift">Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="AFBD0348F5C146EBB99B637B8081AAD8" trl="N">
+    <value column="Name" isTrl="N" original="Gray Area Check In">Gray Area Check In</value>
+    <value column="PrintName" isTrl="N" original="Gray Area Check In">Gray Area Check In</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B68093BA8C7344649ED69DA45F867A37" trl="N">
+    <value column="Name" isTrl="N" original="Labour Time Master">Labour Time Master</value>
+    <value column="PrintName" isTrl="N" original="Labour Time Master">Labour Time Master</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C50FE3F46B514AF28BB593A356763155" trl="N">
+    <value column="Name" isTrl="N" original="TA_Detail_Pot_Gaji_ID">TA_Detail_Pot_Gaji_ID</value>
+    <value column="PrintName" isTrl="N" original="TA_Detail_Pot_Gaji_ID">TA_Detail_Pot_Gaji_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CAA00310469542AB9411E43AF24FDAED" trl="N">
+    <value column="Name" isTrl="N" original="TA_C_Bp_Shift_ID">TA_C_Bp_Shift_ID</value>
+    <value column="PrintName" isTrl="N" original="TA_C_Bp_Shift_ID">TA_C_Bp_Shift_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D36DD3BD468D47E1937C1D59E9A13C12" trl="Y">
+    <value column="Name" isTrl="Y" original="Replacement Employee">Karywan Pengganti</value>
+    <value column="PrintName" isTrl="N" original="Replacement Employee">Replacement Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E1E6E00E7A7B4BDCBCA4807FE37D6980" trl="N">
+    <value column="Name" isTrl="N" original="Gray Area After">Gray Area After</value>
+    <value column="PrintName" isTrl="N" original="Gray Area After">Gray Area After</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E722E60F7255427F99B9EB3FA7BB93A6" trl="Y">
+    <value column="Name" isTrl="Y" original="Check In Status">Status Masuk</value>
+    <value column="PrintName" isTrl="N" original="Check In Status">Check In Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E848F9F2FD0C40B18706B06CE622AAD0" trl="Y">
+    <value column="Name" isTrl="Y" original="Check Out Status">Status Keluar</value>
+    <value column="PrintName" isTrl="N" original="Check Out Status">Check Out Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F215ABD69423411F8685DF9F090361C5" trl="Y">
+    <value column="Name" isTrl="Y" original="Isoff">Libur</value>
+    <value column="PrintName" isTrl="N" original="Isoff">Isoff</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F35B0D6732384FECA882A63E8B1EF16B" trl="N">
+    <value column="Name" isTrl="N" original="Gray Area Check Out">Gray Area Check Out</value>
+    <value column="PrintName" isTrl="N" original="Gray Area Check Out">Gray Area Check Out</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FF758EFF7CC749A8A723C7135FD1195E" trl="N">
+    <value column="Name" isTrl="N" original="Early">Early</value>
+    <value column="PrintName" isTrl="N" original="Early">Early</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

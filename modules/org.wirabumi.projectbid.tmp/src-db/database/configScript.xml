@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+  <vector>
+    <versionInfo version="3.0.32403"/>
+    <columnSizeChange tablename="C_PROJECTLINE" columnname="DESCRIPTION" newSize="2000" oldSize="255"/>
+    <columnRequiredChange tableName="C_PROJECTPROPOSAL" columnName="C_PROJECT_ID">
+      <required>false</required>
+    </columnRequiredChange>
+    <columnSizeChange tablename="M_REQUISITIONLINE" columnname="DESCRIPTION" newSize="2000" oldSize="255"/>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISUPDATEABLE" pkRow="1350">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_ID" pkRow="2202">
+      <oldValue><![CDATA[95E2A8B50A254B2AAE6774B8C2F28120]]></oldValue>
+      <newValue><![CDATA[19]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_VALUE_ID" pkRow="2202">
+      <oldValue><![CDATA[263693E51C7847BF90C897ADB830E2BB]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_VAL_RULE_ID" pkRow="2202">
+      <oldValue/>
+      <newValue><![CDATA[A3DCDE5EDD4A4403AC205B131F10F84D]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1356">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1358">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DEFAULTVALUE" pkRow="2010">
+      <oldValue/>
+      <newValue><![CDATA[@SQL=SELECT get_uuid() as DefaultValue]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISIDENTIFIER" pkRow="2010">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="3901">
+      <oldValue><![CDATA[@ProjectCategory@='S' | @Projectstatus@!'OP']]></oldValue>
+      <newValue><![CDATA[@ProjectCategory@='S' | @Projectstatus@!'OP' | @Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISUPDATEABLE" pkRow="5749">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISSESSIONATTR" pkRow="5749">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="5767">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="FIELDLENGTH" pkRow="5768">
+      <oldValue><![CDATA[255]]></oldValue>
+      <newValue><![CDATA[2000]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="5768">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="5769">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_REFERENCE_VALUE_ID" pkRow="5775">
+      <oldValue><![CDATA[800060]]></oldValue>
+      <newValue><![CDATA[800011]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="5775">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="5796">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="9637">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISMANDATORY" pkRow="800071">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800072">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800073">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800074">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800075">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800101">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800102">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_CALLOUT_ID" pkRow="800102">
+      <oldValue><![CDATA[150]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800103">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800104">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800137">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DEFAULTVALUE" pkRow="800138">
+      <oldValue/>
+      <newValue><![CDATA[@em_pbid_requisition_id@]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800152">
+      <oldValue><![CDATA[@Projectstatus@!'OP']]></oldValue>
+      <newValue><![CDATA[@Projectstatus@!'OP' | @Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800879">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="AD_PROCESS_ID" pkRow="800888">
+      <oldValue><![CDATA[800094]]></oldValue>
+      <newValue><![CDATA[AA3FEBF2A14147FAA0FE5AA479D8890F]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISSESSIONATTR" pkRow="800888">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="800890">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="DEFAULTVALUE" pkRow="803242">
+      <oldValue/>
+      <newValue><![CDATA[@SQL=SELECT c_bpartner_id AS DefaultValue FROM ad_user WHERE ad_user_id=@#AD_USER_ID@]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803242">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803537">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISUPDATEABLE" pkRow="803538">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803539">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISUPDATEABLE" pkRow="803540">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803540">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803541">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803552">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803553">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL' | @UomManagement@='Y']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803556">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="803558">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400000">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400001">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL' | @UomManagement@='Y']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400002">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400003">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400004">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400020">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="FIELDLENGTH" pkRow="1004400021">
+      <oldValue><![CDATA[255]]></oldValue>
+      <newValue><![CDATA[2000]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400021">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400025">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISSESSIONATTR" pkRow="1004400026">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400031">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400032">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400033">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400034">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400035">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400036">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400037">
+      <oldValue><![CDATA[@DocStatus@='CO'|@DocStatus@='CL']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400038">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400039">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1004400040">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="1322478AD1C444D7B9116099CA2B7787">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="828EE0AE80255FA1E040007F010067C7">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @em_oez_docstatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="828EE0AE802B5FA1E040007F010067C7">
+      <oldValue/>
+      <newValue><![CDATA[@Projectwon@='Y']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="B108A87BC7D64558A16441E3059EE277">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="BAACF5821C3849C3B4A2C44CE2E04186">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="BD29550316AC4DFEA994934546D6CED4">
+      <oldValue><![CDATA[@Processed@='Y'|@GROSSPRICE@='N']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @DocStatus@='OEZ_REVIEW' | @GROSSPRICE@='N']]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="NAME" pkRow="800249">
+      <oldValue><![CDATA[Requisition]]></oldValue>
+      <newValue><![CDATA[Header]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="WHERECLAUSE" pkRow="800249">
+      <oldValue><![CDATA[M_Requisition.Ad_User_ID = @#AD_User_ID@]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="HQLWHERECLAUSE" pkRow="800249">
+      <oldValue><![CDATA[e.userContact.id=@user@]]></oldValue>
+      <newValue/>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="NAME" pkRow="801116">
+      <oldValue><![CDATA[Process a Winning Bid]]></oldValue>
+      <newValue><![CDATA[Process to Winning Bid]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1004400029">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DISPLAYLOGIC" pkRow="D8CD2F90DAB844889C9419CD1189FF33">
+      <oldValue/>
+      <newValue><![CDATA[@Processed@='N']]></newValue>
+    </columnDataChange>
+  </vector>

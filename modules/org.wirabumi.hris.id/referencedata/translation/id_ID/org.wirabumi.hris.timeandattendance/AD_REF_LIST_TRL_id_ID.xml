@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="17065B98B08848658FE76A44EB7A35A7" trl="N">
+    <value column="Name" isTrl="N" original="Masuk Telat">Masuk Telat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4DB192710D5C43DBAF51F2BBA6FBC86A" trl="N">
+    <value column="Name" isTrl="N" original="Pulang Awal">Pulang Awal</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BDC19BC1AAE34F00B0CF524E84105664" trl="N">
+    <value column="Name" isTrl="N" original="OK">OK</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C207D9AE5E0E47099C7C5BBAC1BF92A7" trl="N">
+    <value column="Name" isTrl="N" original="Pulang Tepat Waktu">Pulang Tepat Waktu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F1741FD9863A47E5B83BFE7326764776" trl="N">
+    <value column="Name" isTrl="N" original="Masuk Tepat Waktu">Masuk Tepat Waktu</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F5664A7F280E41C9A807EE8D3A9C186B" trl="N">
+    <value column="Name" isTrl="N" original="Terlambat">Terlambat</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

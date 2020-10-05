@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_POC_DOCTYPE_TEMPLATE">
+    <table name="C_POC_DOCTYPE_TEMPLATE" primaryKey="C_POC_DOCTYPE_TEMPLATE_PK">
+      <column name="EM_PRNT_PRINTSERVICECLASS" primaryKey="false" required="false" type="VARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

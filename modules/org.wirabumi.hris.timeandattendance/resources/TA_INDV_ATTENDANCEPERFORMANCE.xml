@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TA_INDV_ATTENDANCEPERFORMANCE">
+    <function name="TA_INDV_ATTENDANCEPERFORMANCE" type="VARCHAR">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_startdate" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_enddate" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr varchar(2000);
+  v_currentdate timestamp without time zone;
+  v_enddate timestamp without time zone;
+  v_checkin timestamp without time zone;
+  v_checkout timestamp without time zone;
+  v_checkinactual timestamp without time zone;
+  v_checkoutactual timestamp without time zone;
+  v_duration varchar(2000);
+  v_keterangan varchar(32);
+  v_bpartner_id varchar(32);
+  r ta_indv_attendanceperformance%rowtype;
+  v_day NUMBER;
+  v_count NUMBER;
+  v_count1 NUMBER;
+  v_count2 NUMBER;
+  v_count3 NUMBER;
+  v_count4 NUMBER;
+  v_count5 NUMBER;
+  v_late NUMBER;
+  v_early NUMBER;
+  v_shift_id varchar(32);
+  v_shiftline_id varchar(32);
+  v_shiftline bigint;
+  v_cuti timestamp without time zone;
+  v_shifttmp_id varchar(32);
+
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+  cur_employee record;
+  v_checkinstatus character varying(32); 
+  v_checkoutstatus character varying(32);
+
+  BEGIN
+ BEGIN --BODY
+   if p_startdate is null then
+     v_currentdate:='0001-01-01'::date;
+   else
+     v_currentdate:=p_startdate;
+   end if;
+
+   if p_enddate is null then
+     v_enddate:=now();
+   else
+     v_enddate:=p_enddate;
+   end if;
+   v_shifttmp_id := '';
+   while v_currentdate<=v_enddate 
+   loop --loop date
+   --cari apakah harus absen
+     --konversi dari tanggal ke hari
+     select ta_shift_id into v_shift_id
+     from ta_c_bp_shift 
+     where c_bpartner_id=p_employee_id
+     and v_currentdate>=validfrom
+     and v_currentdate<=validto;
+     
+     if (v_shifttmp_id <> v_shift_id ) then 
+	v_shifttmp_id := v_shift_id;
+     end if;
+
+    
+     --mendapatkan shift
+     select (v_currentdate::date-s.validfrom::date)%(select count(*) from ta_shiftline where ta_shift_id=s.ta_shift_id) 
+        into v_shiftline
+	from ta_shift s where ta_shift_id=v_shifttmp_id;
+     select ta_shiftline_id, count(*) into v_shiftline_id, v_count
+        from ta_shiftline where ta_shift_id=v_shifttmp_id and line=v_shiftline and isoff='N'
+        group by ta_shiftline_id;
+        
+    --if v_count1=1 then v_count=0; end if;
+    
+     --cek apakah hari libur
+    select count(*) into v_count2 from C_NonBusinessDay
+               where ad_client_id=ad_client_id and date1::date=v_currentdate;
+
+    if v_count2=1 then v_count=0; end if;
+ 
+    --cek apakah cuti
+    select count(*) into v_count3 from lv_leave
+		where c_bpartner_id=p_employee_id
+		and datefrom=v_currentdate
+		and docstatus='CO';
+
+
+    
+   --cek apakah perjalanan dinas
+    select count(*) into v_count4 from bt_businesstrip
+		where c_bpartner_id=p_employee_id
+		and datefrom=v_currentdate
+		and docstatus='CO';
+
+    --cek apakah izin tidak masuk
+    select count(*) into v_count5 from lv_tidakmasuk
+		where c_bpartner_id=p_employee_id
+		and datefrom=v_currentdate
+		and docstatus='CO';
+
+		
+   --memberikan Keterangan
+   IF v_count3=1  then v_keterangan:='Cuti';
+   ELSIF v_count4=1 then v_keterangan:='Perjalanan Dinas';
+   ELSIF v_count5=1 then v_keterangan:='Izin Tidak Masuk';
+   ELSE  v_keterangan:=null;
+   End If;
+   
+
+   --cek apakah harus absen
+   if (v_count>0) then --if untuk apakah harus absen
+        --mendapatkan data employee pada tukar shift
+        select c_bpartner_id into  v_bpartner_id
+	from ta_tukar_shift
+	where docstatus='CO'
+	and c_bpartner_id=p_employee_id
+	and checkin::date=v_currentdate::date;
+
+	--menentukan tukar Shift
+	IF v_bpartner_id is not null then
+	   --tukar shift untuk yang mengajukan
+	   select att.checkin, tts.checkin, att.checkin_status, att.checkout, tts.checkout, att.checkout_status, (extract(hour from late)*60 + extract(minute from late)), att.duration
+	   into  v_checkinactual, v_checkin, v_checkinstatus, v_checkoutactual, v_checkout, v_checkoutstatus, v_late, v_duration
+	   from ta_tukar_shift tts, ta_attendance att
+	   where docstatus='CO'
+	   and tts.c_bpartner_id=att.c_bpartner_id
+	   and att.checkin::date=tts.checkin::date
+	   and att.c_bpartner_id=p_employee_id
+	   and att.checkin::date=v_currentdate::date;
+        Else 
+	   --tukar shift untuk yang menggantikan
+	   select att.checkin, tts.checkin2, att.checkin_status, att.checkout, tts.checkout2, att.checkout_status, (extract(hour from late)*60 + extract(minute from late)), att.duration
+	   into v_checkinactual, v_checkin, v_checkinstatus, v_checkoutactual, v_checkout, v_checkoutstatus, v_late, v_duration
+	   from ta_tukar_shift tts, ta_attendance att
+	   where docstatus='CO'
+	   and att.c_bpartner_id=tts.pgs_id
+	   and att.checkin::date=tts.checkin2::date
+	   and att.c_bpartner_id=p_employee_id 
+	   and att.checkin::date=v_currentdate::date;
+	End If;
+
+        IF v_checkinactual is not null and  v_checkin is not null and v_checkoutactual is not null and v_checkout is not null then
+	   v_checkinactual:= v_checkinactual; v_checkin:=v_checkin; v_checkoutactual:=v_checkoutactual; v_checkout:=v_checkout;
+        Else	
+        --cari data absensi
+           select att.checkin, sl.checkin, att.checkin_status, (extract(hour from late)*60 + extract(minute from late)), 
+           (extract(hour from early)*60 + extract(minute from early)), att.duration, att.checkout, sl.checkout, att.checkout_status, sl.ta_shift_id
+           into v_checkinactual, v_checkin, v_checkinstatus, v_late, v_early, v_duration, v_checkoutactual, v_checkout, v_checkoutstatus, v_shift_id
+           from ta_attendance att, ta_shiftline sl
+           where att.c_bpartner_id=p_employee_id
+           and att.checkin::date=v_currentdate::date
+           and sl.ta_shiftline_id=v_shiftline_id
+           limit 1;
+        End If;
+       
+         --return per record menggunakan return next
+         r.t_date:=v_currentdate;
+         r.employee_id:=p_employee_id;
+         r.checkin:=v_checkin;
+         r.checkinactual:=v_checkinactual;
+         r.checkinstatus:=v_checkinstatus;
+         r.late:=v_late;
+         r.early:=v_early;
+         r.checkout:=v_checkout;
+         r.checkoutactual:=v_checkoutactual;
+         r.checkoutstatus:=v_checkoutstatus;
+         r.duration:=v_duration;
+         r.keterangan:=v_keterangan;
+         return next r;
+         
+     end if; --end if untuk apakah harus absen
+     v_currentdate:=v_currentdate+'1 Day'::interval;
+
+
+   end loop; --end loop date
+
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= '@ERROR=' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+END TA_INDV_ATTENDANCEPERFORMANCE
+]]></body>
+    </function>
+  </database>

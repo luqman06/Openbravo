@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="031415069CB54DB7A7BBE561BB0AC1C5" trl="N">
+    <value column="Name" isTrl="Y" original="Emergency Call Request">Emergency Call</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0758EBDF08EE4A959BF5FC908157784E" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Report">Overtime Report</value>
+    <value column="Description" isTrl="N" original="Overtime Report">Overtime Report</value>
+  </row>
+  <row id="25721BFE74414CCCAAFBFD8FACE08230" trl="N">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="447D6D757D774DBDBD73E377FCC38070" trl="N">
+    <value column="Name" isTrl="N" original="Perhitungan Tarif Lembur">Perhitungan Tarif Lembur</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4CEE69BAB57847AF98A5606981D44223" trl="N">
+    <value column="Name" isTrl="N" original="Transaction">Transaction</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="654CA2DAE0094732899058AB8151FB7D" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Request">Overtime Request</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7589DB621EB246248F908156722A53AE" trl="N">
+    <value column="Name" isTrl="N" original="Setup">Setup</value>
+    <value column="Description" isTrl="N" original="Setup For Overtime">Setup For Overtime</value>
+  </row>
+  <row id="BAEED1B9AAEA472B99505ADDD75A7158" trl="N">
+    <value column="Name" isTrl="N" original="Overtime By Employee">Overtime By Employee</value>
+    <value column="Description" isTrl="N" original="Overtime By Employee">Overtime By Employee</value>
+  </row>
+  <row id="CEEDB810EDC3466DA12E087CAE2E7C42" trl="N">
+    <value column="Name" isTrl="Y" original="Overtime Rule">Overtime Catalogue</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

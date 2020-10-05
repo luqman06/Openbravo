@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="594C3AD27237438A875202E9E5C29EEF" trl="N">
+    <value column="Name" isTrl="N" original="Translation">Translation</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="884860D303934BB68E23849B1FFA7B69" trl="N">
+    <value column="Name" isTrl="N" original="Fields">Fields</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Initial Data Load define field and its default value">Initial Data Load define field and its default value</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E6A83361201B4261B9EF57BE4A62D1C6" trl="N">
+    <value column="Name" isTrl="N" original="Entities">Entities</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Initial Data Load entity definition window">Initial Data Load entity definition window</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

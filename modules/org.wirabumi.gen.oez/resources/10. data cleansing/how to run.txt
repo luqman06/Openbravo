@@ -1,0 +1,15 @@
+add/edit new variable in kettle.properties:
+	oltp.dbhost
+	oltp.dbname 
+	oltp.dbuser
+	oltp.dbpassword
+	oltp.dbport
+example:
+	oltp.dbname=openbravo
+	oltp.dbhost=localhost
+	oltp.dbport=5432
+	oltp.dbuser=postgres
+	oltp.dbpassword=postgres
+make sure both data_cleansing.ktr and non-tab-table.xls located in single folder
+open spoon and load data_cleansing.ktr
+run data_cleansing.ktr

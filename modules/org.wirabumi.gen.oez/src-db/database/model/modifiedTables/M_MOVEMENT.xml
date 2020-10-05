@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_MOVEMENT">
+    <table name="M_MOVEMENT" primaryKey="M_MOVEMENT_KEY">
+      <column name="EM_OEZ_DOCACTION" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default><![CDATA[AP]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OEZ_DOCSTATUS" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default><![CDATA[DR]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OEZ_UNDER_DELIVERY" primaryKey="false" required="false" type="VARCHAR" size="40" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OEZ_OVER_DELIVERY" primaryKey="false" required="false" type="VARCHAR" size="40" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OEZ_NO_VEHICLE" primaryKey="false" required="false" type="VARCHAR" size="40" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OEZ_DOCTYPE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OEZ_DRIVERNAME" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_DOCTYPE" name="EM_OEZ_DOCTYPE_FK">
+        <reference local="EM_OEZ_DOCTYPE_ID" foreign="C_DOCTYPE_ID"/>
+      </foreign-key>
+    </table>
+  </database>

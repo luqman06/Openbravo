@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="013D183CE54B42B29227EB23C9761F30" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Salary Payment (PLSQL)">Bentuk Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Generate Salary Payment">Generate Salary Payment</value>
+    <value column="Help" isTrl="N" original="Generate employee and its salary component to be paid.">Generate employee and its salary component to be paid.</value>
+  </row>
+  <row id="0B9BC0C6675E48E083EF02153A8C6D4B" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Salary Formula">Calculate Salary Formula</value>
+    <value column="Description" isTrl="N" original="Calculate Salary Formula">Calculate Salary Formula</value>
+    <value column="Help" isTrl="N" original="Calculate Salary Formula">Calculate Salary Formula</value>
+  </row>
+  <row id="107764141FA94DC8BB87C35E7BDAEBE0" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment Summary Report">Laporan Rekapitulasi Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Salary Payment Summary Report">Salary Payment Summary Report</value>
+    <value column="Help" isTrl="N" original="display summary of salary payment.">display summary of salary payment.</value>
+  </row>
+  <row id="141DCD15791C42A7946680181665DCF7" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Salary Component">Salin Komponen Gaji</value>
+    <value column="Description" isTrl="N" original="Copy Salary Component">Copy Salary Component</value>
+    <value column="Help" isTrl="N" original="Copy earning/dedution inside salary template into employee earning/deduction">Copy earning/dedution inside salary template into employee earning/deduction</value>
+  </row>
+  <row id="14E82A449A504DA09627CF13191D7BB4" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment Report">Laporan Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Salary Payment Report">Salary Payment Report</value>
+    <value column="Help" isTrl="N" original="Display Salary Payment Report">Display Salary Payment Report</value>
+  </row>
+  <row id="3A8732062865496B9E018213F0FB32A9" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Salary Invoice">Bentuk Tagihan Gaji</value>
+    <value column="Description" isTrl="N" original="Generate Salary Invoice">Generate Salary Invoice</value>
+    <value column="Help" isTrl="N" original="Generate purchase for each employee to pay salary">Generate purchase for each employee to pay salary</value>
+  </row>
+  <row id="4425FAA501F74705B7D2EEB140717226" trl="N">
+    <value column="Name" isTrl="Y" original="Generate Employee Salary Payment">Generate Salary Payment</value>
+    <value column="Description" isTrl="Y" original="Generate Employee To Be Paid">Generate Salary Payment</value>
+    <value column="Help" isTrl="Y" original="Lookup employee master data for valid employee to be paid in this salary payment batch. This proses also populating salary component, both earing and deduction. At this point, all salary component amount are zero. You may run salary formula calculation process later, to get exact salary component amount.">Lookup employee master data for valid payroll member. This proses also populating salary component, both earing and deduction.</value>
+  </row>
+  <row id="63EC32A8143449CDB6717D24017EA5DD" trl="Y">
+    <value column="Name" isTrl="Y" original="Print Salary Slip">Cetak Slip Gaji</value>
+    <value column="Description" isTrl="N" original="Print Employee pay slip">Print Employee pay slip</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="881FE912B2844461AE0C5AE4310B0B48" trl="Y">
+    <value column="Name" isTrl="Y" original="Print Salary Payment">Cetak Pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original="Print Salary Payment">Print Salary Payment</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="960976FDD79E4D139796DC257AFE0E53" trl="Y">
+    <value column="Name" isTrl="Y" original="Salary Payment Post">Jurnal Pembayran Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A7F929725B69422FA50BF3EBBC0B77F5" trl="N">
+    <value column="Name" isTrl="N" original="Generate Employee Salary">Generate Employee Salary</value>
+    <value column="Description" isTrl="N" original="Generate Employee Salary">Generate Employee Salary</value>
+    <value column="Help" isTrl="N" original="this process will copy all active earning and deduction on master data to valid active employee.">this process will copy all active earning and deduction on master data to valid active employee.</value>
+  </row>
+  <row id="B0FE443BA0AD453FAB67332729930F1C" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Deduction Process">Import Incidental Deduction Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B42D7EC5AF8746699F4C933DD28A76A5" trl="N">
+    <value column="Name" isTrl="N" original="Background Process Gaji Prorate">Background Process Gaji Prorate</value>
+    <value column="Description" isTrl="N" original="Background Process Gaji Prorate">Background Process Gaji Prorate</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B4BAFBCB595A4782B0E4EECE44C0B4B3" trl="N">
+    <value column="Name" isTrl="N" original="Backgound Process Upah Harian">Backgound Process Upah Harian</value>
+    <value column="Description" isTrl="N" original="Backgound Process Upah Harian">Backgound Process Upah Harian</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D9BE934098084CD0807FE5795258B763" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Formula Salary">Calculate Formula Salary</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E17D7B1680EC44B5A93CC0E9B72DC119" trl="N">
+    <value column="Name" isTrl="N" original="Import Incidental Earning Process">Import Incidental Earning Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E2352DD134384FE595EF9170C787E661" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Take-Home Pay">Calculate Take-Home Pay</value>
+    <value column="Description" isTrl="N" original="Calculate Take-Home Pay">Calculate Take-Home Pay</value>
+    <value column="Help" isTrl="N" original="Calculate employee take-home pay">Calculate employee take-home pay</value>
+  </row>
+</compiereTrl>

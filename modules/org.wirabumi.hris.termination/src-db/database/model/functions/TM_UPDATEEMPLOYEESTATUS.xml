@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TM_UPDATEEMPLOYEESTATUS">
+    <function name="TM_UPDATEEMPLOYEESTATUS" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[--Record
+cur_header Record;
+
+
+BEGIN
+result:=0;
+
+update c_bpartner set isactive='N', updated=now() 
+where isactive='Y' and isemployee='Y' and EM_Hris_Retirementdate is not null and
+EXTRACT(YEAR FROM EM_Hris_Retirementdate)=EXTRACT(YEAR FROM now()) and
+EXTRACT(month FROM EM_Hris_Retirementdate)+1=EXTRACT(month FROM now());
+
+
+result:=1;
+RETURN;
+END TM_UPDATEEMPLOYEESTATUS
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="C_OrderLinesJR_new" pageWidth="554" pageHeight="802" columnWidth="554" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0ba5232c-3b45-41bb-aa90-bf3fdd457f39">
+	<property name="ireport.zoom" value="1.7715610000000037"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Column_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#666666"/>
+	<parameter name="C_ORDER_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["'1000069'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="ISTAXINCLUDED" class="java.lang.String"/>
+	<parameter name="NUMBER" class="java.text.DecimalFormat" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT 1 AS ISBOM, C_ORDERLINE.LINE,M_PRODUCT.NAME AS PRODUCT_NAME,
+C_ORDERLINE.QTYORDERED AS QUANTITY,
+TO_CHAR(C_UOM.NAME) AS UOM,
+CASE WHEN $P{ISTAXINCLUDED} = 'N' THEN C_ORDERLINE.PRICEACTUAL ELSE C_ORDERLINE.GROSS_UNIT_PRICE END as PRICEACTUAL ,
+TO_NUMBER(NULL) AS BASE,
+CASE WHEN $P{ISTAXINCLUDED} = 'N' THEN C_ORDERLINE.LINENETAMT ELSE C_ORDERLINE.LINE_GROSS_AMOUNT END as LINENETAMT,
+TO_NUMBER(NULL) AS TAXLINE,
+M_PRODUCT.DESCRIPTION AS PRODUCT_DESCRIPTION,
+C_ORDERLINE.DESCRIPTION as C_ORDERLINE_DESCRIPTION,
+case when C_ORDERLINE.DESCRIPTION = 'DR' then '' else C_ORDERLINE.DESCRIPTION end  as C_ORDERLINE_DESCRIPTION1,
+C_ORDER.docstatus AS STATUS, TO_CHAR(M_PRODUCT.VALUE) AS VALUE, M_Product_PO.deliverytime_promised as LEADTIME,
+coalesce('','')||E'\n\n'||coalesce('Under Delivery :'||'','')||E'\n'||coalesce('Over Delivery :'||'','')||E'\n\n'||coalesce('Spesification : '||M_PRODUCT.DESCRIPTION,'') as allinone,
+coalesce('','')||E'\n\n'||coalesce('Under Delivery : '||M_PRODUCT.em_oez_under_delivery,'')||E'\n'||coalesce('Over Delivery : '||M_PRODUCT.em_oez_over_delivery,'') as allinone1,
+'Spesification :' as SPEC,
+'Under Delivery :' as under_delivery,
+'Over Delivery :' as over_delivery,
+c_currency.iso_code as currency_code
+        FROM C_ORDER left join C_ORDERLINE on C_ORDER.c_order_id=C_ORDERLINE.c_order_id
+  left join M_PRODUCT on C_ORDERLINE.M_PRODUCT_ID = M_PRODUCT.M_PRODUCT_ID
+                         left join C_UOM on C_ORDERLINE.C_UOM_ID = C_UOM.C_UOM_ID
+		     left join M_Product_PO on  C_ORDERLINE.M_PRODUCT_ID=M_Product_PO.M_PRODUCT_ID and C_ORDER.c_bpartner_id=M_Product_PO.c_bpartner_id
+left join c_currency on C_ORDER.c_currency_id=c_currency.c_currency_id
+--,C_ORDER
+        WHERE C_ORDERLINE.C_ORDER_ID = $P{C_ORDER_ID}
+              AND C_ORDERLINE.C_ORDER_ID=C_ORDER.C_ORDER_ID
+              AND C_ORDERLINE.BOM_PARENT_ID IS NULL
+        UNION
+        SELECT 2 AS ISBOM, C_ORDERLINE.LINE, M_PRODUCT.NAME AS PRODUCT_NAME, C_ORDERLINE.QTYORDERED AS QUANTITY,
+        TO_CHAR(C_UOM.NAME) AS UOM, CASE WHEN $P{ISTAXINCLUDED} = 'N' THEN C_ORDERLINE.PRICEACTUAL ELSE C_ORDERLINE.GROSS_UNIT_PRICE END AS PRICEACTUAL, TO_NUMBER(NULL) AS BASE,
+CASE WHEN $P{ISTAXINCLUDED} = 'N' THEN C_ORDERLINE.LINENETAMT ELSE C_ORDERLINE.LINE_GROSS_AMOUNT END AS LINENETAMT,
+TO_NUMBER(NULL) AS TAXLINE, TO_CHAR(M_PRODUCT.DESCRIPTION) AS PRODUCT_DESCRIPTION,
+C_ORDERLINE.DESCRIPTION AS C_ORDERLINE_DESCRIPTION,
+case when C_ORDERLINE.DESCRIPTION = 'DR' then '' else C_ORDERLINE.DESCRIPTION end  as C_ORDERLINE_DESCRIPTION1,
+        C_ORDER.docstatus AS STATUS, TO_CHAR(M_PRODUCT.VALUE) AS VALUE,M_Product_PO.deliverytime_promised AS LEADTIME,
+coalesce('','')||coalesce('Under Delivery :'||M_PRODUCT.em_oez_under_delivery,'')||coalesce('Over Delivery :'||M_PRODUCT.em_oez_over_delivery,'')||coalesce('Spesification :'||M_PRODUCT.DESCRIPTION,'') as allinone,
+coalesce('','')||E'\n\n'||coalesce('Under Delivery :'||'','')||E'\n'||coalesce('Over Delivery :'||'','') as allinone1,
+'Spesification :' as SPEC,
+'Under Delivery :' as under_delivery,
+'Over Delivery :' as over_delivery, NULL as currency_code
+        FROM M_PRODUCT_BOM, M_PRODUCT, C_ORDERLINE  left join M_Product_PO on C_ORDERLINE.M_PRODUCT_ID=M_Product_PO.M_PRODUCT_ID
+, C_UOM
+,  C_ORDER
+        WHERE  C_ORDERLINE.M_PRODUCT_ID = M_PRODUCT_BOM.M_PRODUCTBOM_ID
+            AND M_PRODUCT_BOM.M_PRODUCTBOM_ID = M_PRODUCT.M_PRODUCT_ID
+            AND M_PRODUCT.C_UOM_ID = C_UOM.C_UOM_ID
+            AND C_ORDERLINE.C_ORDER_ID = $P{C_ORDER_ID}
+            AND C_ORDERLINE.C_ORDER_ID=C_ORDER.C_ORDER_ID
+            AND C_ORDERLINE.BOM_PARENT_ID IS NOT NULL
+        UNION
+        SELECT 3 AS ISBOM, TO_NUMBER(null) AS LINE, C_TAX.NAME AS PRODUCT_NAME, TO_NUMBER(NULL) AS QUANTITY, '' AS UOM, TO_NUMBER(NULL) AS PRICEACTUAL,
+        C_ORDERTAX.TAXBASEAMT AS BASE, C_ORDERTAX.TAXAMT AS LINENETAMT, C_ORDERTAX.LINE AS TAXLINE, '' AS PRODUCT_DESCRIPTION, C_ORDER.docstatus AS STATUS,
+'' as C_ORDERLINE_DESCRIPTION,
+'' as C_ORDERLINE_DESCRIPTION1,
+        '' AS VALUE,TO_NUMBER(NULL) AS LEADTIME,
+'' as allinone,
+'' as allinone1,
+NULL as SPEC,
+NULL as under_delivery,
+NULL as over_delivery,
+NULL as currency_code
+        FROM C_ORDER, C_ORDERTAX, C_TAX
+        WHERE C_ORDER.C_ORDER_ID = C_ORDERTAX.C_ORDER_ID
+            AND C_TAX.C_TAX_ID = C_ORDERTAX.C_TAX_ID
+            AND C_ORDERTAX.TAXAMT <> 0
+            AND C_ORDER.C_ORDER_ID = $P{C_ORDER_ID}
+            AND $P{ISTAXINCLUDED} = 'N'
+        ORDER BY LINE,ISBOM, TAXLINE]]>
+	</queryString>
+	<field name="isbom" class="java.lang.Integer"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="quantity" class="java.math.BigDecimal"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="priceactual" class="java.math.BigDecimal"/>
+	<field name="base" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<field name="taxline" class="java.math.BigDecimal"/>
+	<field name="product_description" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="c_orderline_description" class="java.lang.String"/>
+	<field name="c_orderline_description1" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="value" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="leadtime" class="java.math.BigDecimal"/>
+	<field name="allinone" class="java.lang.String"/>
+	<field name="allinone1" class="java.lang.String"/>
+	<field name="spec" class="java.lang.String"/>
+	<field name="under_delivery" class="java.lang.String"/>
+	<field name="over_delivery" class="java.lang.String"/>
+	<field name="currency_code" class="java.lang.String"/>
+	<variable name="SUM_LINENETAMT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{linenetamt}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="3" width="554" height="25" forecolor="#000080" backcolor="#000080" uuid="200a3c81-4c0b-4252-bc0c-98c27ee42e44"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-16" x="99" y="3" width="98" height="25" forecolor="#FFFFFF" uuid="130ef584-91f8-48a6-98a1-5ab2d411c452"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="25" y="3" width="74" height="25" forecolor="#FFFFFF" uuid="c954fe97-3d1c-4951-aefa-35f41bab2494"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Material Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="315" y="3" width="45" height="25" forecolor="#FFFFFF" uuid="f0ec8d00-512c-4704-bcf8-dff5dd439d40"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[UoM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="360" y="3" width="30" height="25" forecolor="#FFFFFF" uuid="4c26ba86-48a3-4b8d-8800-1892a7e5ae4b"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lead
+Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" x="275" y="3" width="40" height="25" forecolor="#FFFFFF" uuid="3199a844-d645-471c-aa2a-12f70c586822"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="468" y="3" width="86" height="25" forecolor="#FFFFFF" uuid="1f60829b-5172-4eb1-90fe-9e7642bd7239"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="197" y="3" width="78" height="25" forecolor="#FFFFFF" uuid="771e4260-d5db-49d2-a18e-169d5a860cd7"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="0" y="3" width="25" height="25" forecolor="#FFFFFF" uuid="a51ef281-9d2b-44c6-846c-651373fdfda1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="390" y="3" width="78" height="25" forecolor="#FFFFFF" uuid="c99547f8-58ef-430d-8a74-394170905943"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[("Price ("+(($F{currency_code}!=null)?$F{currency_code}:""+")"))+""+(")")]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="275" y="0" width="40" height="15" forecolor="#000000" uuid="53faf6de-d12f-4361-ba79-6621c7023e28"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="25" height="15" forecolor="#000000" uuid="d6ccffa7-2821-48fa-9632-81dd7d822867"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="315" y="0" width="45" height="15" forecolor="#000000" uuid="f9652d8a-94b3-4886-b89b-3b760a1e345f"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="99" y="0" width="98" height="15" forecolor="#000000" uuid="9255cd1f-d909-489d-98e6-ad23382c697f"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_name}+""+(" "+(($F{allinone1}!=null)?$F{allinone1}:""))]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="25" y="0" width="74" height="15" forecolor="#000000" uuid="58ae1c1f-ec1e-4323-a7a0-6a2c4bc393c6"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="false">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="468" y="0" width="86" height="15" forecolor="#000000" uuid="7fb814f5-6804-47ae-937f-9f9c3379a53f"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{linenetamt}!=null)?$P{NUMBERFORMAT}.format($F{linenetamt}) : new String(" ")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="197" y="0" width="78" height="15" forecolor="#000000" uuid="17ca9ded-d546-4360-9c85-b5b28cdff682"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_orderline_description1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="360" y="0" width="30" height="15" forecolor="#000000" uuid="e73abad7-8dd3-4326-9a73-4b870491126b"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leadtime}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;-#,##0.##" isBlankWhenNull="false">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="390" y="0" width="78" height="15" forecolor="#000000" uuid="c69a87b3-f8bd-404c-aac2-b77de36ee2bd"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{priceactual}!=null)?$P{NUMBERFORMAT}.format($F{priceactual}).toString():new String(" ")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="28" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField-1" style="Total_Gray" x="419" y="7" width="135" height="21" backcolor="#FFFFFF" uuid="b1a58403-a042-4d48-ae2c-4fce57366dde"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{SUM_LINENETAMT}!=null)?$P{NUMBERFORMAT}.format($V{SUM_LINENETAMT}):new String(" ")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-11" x="329" y="27" width="225" height="1" forecolor="#CCCCCC" uuid="fe165662-42a8-4d8b-a6ff-153d07b6549a"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-12" x="329" y="6" width="225" height="1" forecolor="#CCCCCC" uuid="a21b4017-93f3-47f7-9589-dee52e8e3310"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-5" x="328" y="7" width="88" height="21" forecolor="#7E7979" uuid="1fa32810-2bdf-4e11-9d4b-21f3f0b8c40e"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="12" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="65" y="0" width="78" height="25" forecolor="#FFFFFF" uuid="ad616111-4204-4507-8f92-6a77cc6f1b14"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/Helvetica-Normal.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Price (IDR)]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

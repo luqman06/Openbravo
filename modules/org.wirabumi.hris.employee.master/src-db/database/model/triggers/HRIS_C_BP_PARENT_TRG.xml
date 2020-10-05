@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_C_BP_PARENT_TRG">
+    <trigger name="HRIS_C_BP_PARENT_TRG" table="AD_TREENODE" fires="after" insert="false" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_xTree_ID varchar;
+v_xParent_ID varchar;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- definisi trigger
+    IF (TG_OP='UPDATE') THEN
+	--get tree type
+
+	select t.ad_tree_id, t.treetype
+        from ad_tree t
+INTO  v_xTree_ID, v_xParent_ID
+        inner join ad_client c on c.ad_client_id=t.ad_client_id
+        left join ad_treenode tn on tn.ad_tree_id=t.AD_Tree_ID 
+        where c.ad_client_id=:new.AD_Client_ID
+        and tn.node_id=:new.node_id
+        and t.name=c.name||' Bus Partner' ;
+	--update tree node
+	IF v_xParent_ID ='BP' THEN 
+      update c_bpartner set em_hris_REPORT_TO=:new.parent_id WHERE C_BPARTNER_ID = :new.node_id;
+      END IF;
+
+    END IF;
+    
+    
+END HRIS_C_BP_PARENT_TRG
+]]></body>
+    </trigger>
+  </database>

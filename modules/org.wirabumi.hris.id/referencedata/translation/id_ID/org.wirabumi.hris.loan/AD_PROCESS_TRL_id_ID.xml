@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="2CEE97ACD34F433A9937AE1BCBBB1C3A" trl="N">
+    <value column="Name" isTrl="N" original="Post Loan Statement">Post Loan Statement</value>
+    <value column="Description" isTrl="N" original="Post Loan Statement">Post Loan Statement</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4D052247951F41B380901A8F9318C5F0" trl="N">
+    <value column="Name" isTrl="N" original="Post Bill Register">Post Bill Register</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A0EE74F19CA64E5C995CE31B147592FF" trl="N">
+    <value column="Name" isTrl="N" original="Loan Report">Loan Report</value>
+    <value column="Description" isTrl="N" original="Loan Report">Loan Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BCD057684E0A46498C90229A55C1D301" trl="N">
+    <value column="Name" isTrl="N" original="Employee Loan Report">Employee Loan Report</value>
+    <value column="Description" isTrl="N" original="Employee Loan Report">Employee Loan Report</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F6D0279F857C410DA6FEF4BB5078BAC8" trl="N">
+    <value column="Name" isTrl="N" original="Post Loan">Post Loan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FE1D7D65120A4E1EBA8BD6AD264CA63E" trl="N">
+    <value column="Name" isTrl="N" original="Calculate Rate Loan">Calculate Rate Loan</value>
+    <value column="Description" isTrl="N" original="Calculate Rate Loan">Calculate Rate Loan</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

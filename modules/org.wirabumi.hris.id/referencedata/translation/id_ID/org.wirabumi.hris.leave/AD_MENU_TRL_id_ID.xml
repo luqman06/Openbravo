@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="2D1C5DFE072C4566A5855824035D2914" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Rule">Katalog Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3AF0FEA9DE604B68A5876179950E7C72" trl="N">
+    <value column="Name" isTrl="Y" original="Leave Permit">Izin Tidak Masuk</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="46DA1972C310410FAD63ED31861D50F1" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave">Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="64EF717AA6524C7CB5EAD16974447631" trl="N">
+    <value column="Name" isTrl="N" original="Laporan Sisa Cuti Pegawai">Laporan Sisa Cuti Pegawai</value>
+    <value column="Description" isTrl="N" original="Laporan Sisa Cuti Pegawai">Laporan Sisa Cuti Pegawai</value>
+  </row>
+  <row id="848C3FBAFA5E4A95AD6F57196BEA2EB9" trl="N">
+    <value column="Name" isTrl="N" original="Employee Leave">Employee Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A2CD37C7ABAD445488A4686042070533" trl="N">
+    <value column="Name" isTrl="N" original="Mass Leave">Mass Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B5B7A5B4C0AE4805903EFA00CE55DE18" trl="Y">
+    <value column="Name" isTrl="Y" original="Analysis Tools">Laporan</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C1C5497E69444E3BB7F9BC2F712E203E" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Request">Permohonan Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DA8EF3F504D545D8AA5FF4FBA7491C5A" trl="N">
+    <value column="Name" isTrl="N" original="Setup">Setup</value>
+    <value column="Description" isTrl="N" original="Setup For Leave">Setup For Leave</value>
+  </row>
+</compiereTrl>

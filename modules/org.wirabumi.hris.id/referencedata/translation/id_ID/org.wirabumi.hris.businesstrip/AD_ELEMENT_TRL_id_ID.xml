@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="1E1848DA6FA34F3F98301F71F62162D9" trl="Y">
+    <value column="Name" isTrl="Y" original="Destination">Tempat Tujuan</value>
+    <value column="PrintName" isTrl="N" original="Destination">Destination</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6CFF0D49133F432B8A0DB54BCBA96F03" trl="N">
+    <value column="Name" isTrl="N" original="BT_Businesstrip_ID">BT_Businesstrip_ID</value>
+    <value column="PrintName" isTrl="N" original="BT_Businesstrip_ID">BT_Businesstrip_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="74FF284D85E047DD91375E53EC8D34CB" trl="Y">
+    <value column="Name" isTrl="Y" original="Objective">Sasaran</value>
+    <value column="PrintName" isTrl="N" original="Objective">Objective</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BDC964D2FD674176BEE954F4F9E625BD" trl="N">
+    <value column="Name" isTrl="Y" original="Attendance Score">Nilai Absensi</value>
+    <value column="PrintName" isTrl="Y" original="Attendance Score">Nilai Absensi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D9456818B532411F80F920021E1252AC" trl="N">
+    <value column="Name" isTrl="N" original="Achieved">Achieved</value>
+    <value column="PrintName" isTrl="N" original="Achieved">Achieved</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="57804162B287454F9EDF7909F15D4512" trl="N">
+    <value column="MsgText" isTrl="N" original="The template or the template class path location must be set.">The template or the template class path location must be set.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

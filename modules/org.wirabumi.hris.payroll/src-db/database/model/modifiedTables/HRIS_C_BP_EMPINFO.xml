@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE HRIS_C_BP_EMPINFO">
+    <table name="HRIS_C_BP_EMPINFO" primaryKey="HRIS_C_BP_EMPINFO_KEY">
+      <column name="EM_PYR_PAYROLLMASTER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PYR_ISPAYROLLMASTER" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_BPARTNER" name="EM_PYR_C_BPART_PAYROLLMASTER">
+        <reference local="EM_PYR_PAYROLLMASTER_ID" foreign="C_BPARTNER_ID"/>
+      </foreign-key>
+    </table>
+  </database>

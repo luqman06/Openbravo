@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="C_OrderJR_new" pageWidth="595" pageHeight="842" columnWidth="565" leftMargin="15" rightMargin="15" topMargin="15" bottomMargin="15" isFloatColumnFooter="true" isIgnorePagination="true" uuid="ef3589f0-9333-4fee-afff-3aaabbe3f4fc">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10"/>
+	<style name="Report_Title" fontName="Bitstream Vera Sans" fontSize="18">
+		<box leftPadding="5"/>
+	</style>
+	<style name="Group_Data_Label" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Report_Subtitle" forecolor="#555555" fontName="Bitstream Vera Sans" fontSize="14">
+		<box leftPadding="5"/>
+	</style>
+	<style name="Total_Field" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC" vAlign="Middle">
+		<box leftPadding="5"/>
+	</style>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#555555" vAlign="Middle">
+		<box leftPadding="5">
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="GroupHeader_DarkGray" mode="Opaque" forecolor="#FFFFFF" backcolor="#555555" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="14">
+		<box leftPadding="5"/>
+	</style>
+	<style name="GroupHeader_Gray" mode="Opaque" backcolor="#999999"/>
+	<style name="Detail_Line">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<parameter name="ATTACH" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BASE_DESIGN" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/AppsOpenbravo/src"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LANGUAGE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["en_US"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_CLIENT" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["('1000000')"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_ORG" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["('0')"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REPORT_TITLE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["REPORT TITLE"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REPORT_SUBTITLE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/home/infinite/appl/tomcat8-dev/webapps/infinite/src-loc/design/org/openbravo/erpReports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("B3CA8C33266D4348869F2F5DDB68B91B")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="SUBREP_C_OrderLinesJR_Idol" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUBREP_C_OrderLinesTaxIncludedJR_PNRI_new" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUBREP_RptC_Order_TaxLines_PNRI_new" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SHOW_LOGO" class="java.lang.String"/>
+	<parameter name="SHOW_COMPANYDATA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="HEADER_MARGIN" class="java.lang.String"/>
+	<parameter name="SUBREP_C_RMOrderLinesJR_Idol1" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT (select printname from c_doctype where c_doctype_id=c_order.c_doctypetarget_id) as documenttype,
+i_user.name as created_by,
+C_ORDER.ad_org_id,
+C_ORDER.C_ORDER_ID, C_ORDER.ISSOTRX,C_BPARTNER.NAME, coalesce(L.ADDRESS1, '')||coalesce(' '||L.ADDRESS2,'')  ||
+(CASE WHEN (L.POSTAL||L.CITY||R.NAME) IS NOT NULL THEN (CHR(10)||L.POSTAL || (CASE WHEN L.POSTAL IS NOT NULL THEN (' - '||TO_CHAR(L.CITY)) END) ||
+(CASE WHEN R.NAME IS NOT NULL THEN (' ('||TO_CHAR(R.NAME)|| ')') END)) END) AS ADDRESS1,
+C_BPARTNER_LOCATION.PHONE,C_BPARTNER_LOCATION.FAX,C_BPARTNER.URL,
+C_ORDER.DESCRIPTION, C_ORDER.DATEORDERED, C_ORDER.DOCUMENTNO AS ALBARAN,
+coalesce(AD_USER.NAME,'')||coalesce(' / Phone : '||AD_USER.PHONE,'') AS VENDOR_CONTACT,
+	AD_USER.EMAIL AS VENDOR_CONTACT_EMAIL,
+
+coalesce(L.address1,'')||coalesce(' '||L.address2,'') as address_bussinespartner,
+coalesce(l.postal,'')||coalesce(' - '||l.city,'')||coalesce(' ('||r.name||')')||coalesce(' - '||co.name,'') as address_bussinespartner2,
+
+ad_user.lastname as LASTNAME,
+ad_user.firstname as FIRSTNAME,
+ad_user.name as suppliername,
+ad_user.email as email_user,
+ad_user.em_lv_signature as signatureid,
+CASE WHEN C_ORDER.docstatus = 'CO' THEN 'pnri.png' ELSE 'blank.png' end as ttd,
+Salesrep.name as SalesRepresentatif,
+Salesrep.title as position_agent,
+C_ORDER.datepromised as deliverydate,
+C_ORDER.DELIVERYNOTES as DELIVERYNOTES,
+C_BPARTNER.NAME2 || ' (' || C_BPARTNER.NAME || ')' AS COMPLETE_NAME, AD_CLIENT.DESCRIPTION AS ENTITY,
+C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+ORG_DATA_INFO.name as org_country_header,
+ORG_DATA_INFO.description as org_website, --ambil dari contact di organization
+ORG_DATA_INFO.phone as org_phone, --ambil dari contact di organization
+ORG_DATA_INFO.phone2 as org_phone_al, --ambil dari contact di organization
+ORG_DATA_INFO.fax as org_fax, --ambil dari contact di organization
+ORG_DATA_INFO.city as org_city, --ambil di city contact di organization
+ORG_DATA_INFO.supervisor as org_supervisor,
+ORG_DATA_INFO.title as org_title,
+ORG_DATA_INFO.org_address1 as org_address1,
+ORG_DATA_INFO.org_address2 as org_address2,
+showimage.showsignature as showimage,
+coalesce(warehouse_info.wrh_address1,'')||coalesce(' '||warehouse_info.wrh_address2,'') as wrh_address1,
+coalesce(warehouse_info.wrh_postal,'')||coalesce(' - '||warehouse_info.wrh_city,'')||coalesce(' ('||warehouse_info.wrh_region||')')||coalesce(' - '||warehouse_info.wrh_country,'') as wrh_address2,
+warehouse_info.wrh_name as wrh_name ,
+coalesce(C_BPARTNER_LOCATION.PHONE,'')||coalesce('/ Alternatif. '||C_BPARTNER_LOCATION.PHONE2,'')||coalesce('/ Fax. '||C_BPARTNER_LOCATION.FAX,'') as vendor_phone,
+warehouse_info.incoterms as incoterms,
+AD_ORG.ad_org_id AS ORGANIZATIONID, C_ORDER.docstatus AS STATUS,
+(COALESCE(TO_CHAR(AD_USER.NAME), '') || CASE WHEN AD_USER.NAME IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(C_BPARTNER.TAXID), '') || CASE WHEN C_BPARTNER.TAXID IS null THEN '' ELSE CHR(13) END ||
+COALESCE(TO_CHAR(ADDRESS1), '') || CASE WHEN ADDRESS1 IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(POSTAL), '') || CASE WHEN POSTAL IS null THEN '' ELSE CHR(13) END ||
+COALESCE(TO_CHAR(L.CITY), '') || CASE WHEN L.CITY IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(CO.NAME), '') || CASE WHEN CO.NAME IS null THEN '' ELSE CHR(13) END ||
+COALESCE(TO_CHAR(C_BPARTNER_LOCATION.PHONE), '') || CASE WHEN C_BPARTNER_LOCATION.PHONE IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(C_BPARTNER_LOCATION.FAX), '') ||
+CASE WHEN C_BPARTNER_LOCATION.FAX IS null THEN '' ELSE CHR(13) END) AS BP_DATA, AD_ORGINFO.TAXID AS ORG_TAXID, $P{SHOW_LOGO} AS SHOWLOGO, $P{SHOW_COMPANYDATA} AS SHOWCOMPANYDATA, $P{HEADER_MARGIN} AS HEADERMARGIN,
+AD_ORG.NAME AS ORG_NAME, DELIVERYRULE.NAME AS DELIVERYTERM, PAYMENTTERM.TERM AS PAYMENTTERM, C_CURRENCY.ISO_CODE as CURRENCY_ISO, M_PRICELIST.ISTAXINCLUDED
+FROM C_BPARTNER_LOCATION left join C_LOCATION L on C_BPARTNER_LOCATION.C_LOCATION_ID = L.C_LOCATION_ID
+             left join C_COUNTRY CO ON L.C_COUNTRY_ID = CO.C_COUNTRY_ID
+             left join  C_REGION R on L.C_REGION_ID = R.C_REGION_ID,
+     AD_USER right join C_ORDER on AD_USER.AD_USER_ID = C_ORDER.AD_USER_ID,
+C_BPARTNER,
+AD_ORGINFO,
+AD_CLIENT, AD_ORG,
+   (SELECT VALUE, NAME
+    FROM AD_REF_LIST_V
+    WHERE AD_REFERENCE_ID = '151'
+          AND AD_LANGUAGE IN ($P{LANGUAGE})) DELIVERYRULE,
+(select c.binarydata as showsignature  from c_order a left join ad_user b on  a.salesrep_id=b.ad_user_id
+          left join ad_image c on c.ad_image_id=b.em_lv_signature where a.c_order_id = $P{DOCUMENT_ID}) as showimage, --encode(binarydata,'base64')
+(select  b.ad_user_id, b.name,b.title
+from c_order a left join ad_user  b on a.salesrep_id = b.ad_user_id
+where a.c_order_id = $P{DOCUMENT_ID}) AS Salesrep,
+
+(select ad_user.ad_user_id, ad_user.name, ad_user.email
+	from c_order left join ad_user on c_order.createdby = ad_user.ad_user_id
+		where c_order.c_order_id =$P{DOCUMENT_ID}) AS I_USER,
+
+(select b.name as wrh_name,c.address1 as wrh_address1,c.address2 as wrh_address2,
+c.postal as wrh_postal,c.city as wrh_city,e.name as wrh_region,d.name as wrh_country, f.name as incoterms
+from C_ORDER a left join m_warehouse b on a.m_warehouse_id=b.m_warehouse_id
+left join c_location c on b.c_location_id=c.c_location_id
+left join c_country d on c.c_country_id=d.c_country_id
+left join c_region e on c.c_region_id=e.c_region_id
+left join c_incoterms f on a.c_incoterms_id=f.c_incoterms_id
+where a.c_order_id = $P{DOCUMENT_ID}) as warehouse_info,
+
+(select  d.name, e.description,e.email,e.phone,e.phone2,e.fax,c.city,f.name as supervisor,e.title,c.address1 as org_address1,c.address2 as org_address2
+from c_order a left join ad_orginfo b on a.ad_org_id=b.ad_org_id
+left join c_location c on b.c_location_id=c.c_location_id
+left join c_country d on c.c_country_id=d.c_country_id
+left join ad_user e on b.ad_user_id=e.ad_user_id
+left join ad_user f on e.supervisor_id=f.ad_user_id
+where a.c_order_id = $P{DOCUMENT_ID}) as ORG_DATA_INFO,
+   (SELECT C_PAYMENTTERM.C_PAYMENTTERM_ID, COALESCE( C_PAYMENTTERM_TRL.NAME, C_PAYMENTTERM.NAME) AS TERM
+    FROM C_PAYMENTTERM LEFT JOIN C_PAYMENTTERM_TRL ON C_PAYMENTTERM.C_PAYMENTTERM_ID = C_PAYMENTTERM_TRL.C_PAYMENTTERM_ID
+          AND C_PAYMENTTERM_TRL.AD_LANGUAGE IN ($P{LANGUAGE})) PAYMENTTERM, C_CURRENCY, M_PRICELIST
+WHERE C_ORDER.C_BPARTNER_LOCATION_ID = C_BPARTNER_LOCATION.C_BPARTNER_LOCATION_ID
+AND C_ORDER.M_PRICELIST_ID = M_PRICELIST.M_PRICELIST_ID
+AND C_ORDER.C_BPARTNER_ID = C_BPARTNER.C_BPARTNER_ID
+AND AD_ORG.ad_org_id = AD_ORGINFO.ad_org_id
+AND AD_ORG.ad_org_id = (SELECT o.AD_ORG_ID FROM AD_ORG o JOIN AD_OrgType t USING (AD_ORGTYPE_ID)
+WHERE AD_ISORGINCLUDED(C_ORDER.AD_ORG_ID, o.ad_org_id, C_ORDER.ad_client_id)<>-1
+AND (t.IsLegalEntity='Y' OR t.IsAcctLegalEntity='Y'))
+AND C_ORDER.AD_CLIENT_ID = AD_CLIENT.AD_CLIENT_ID
+AND C_ORDER.C_ORDER_ID = ($P{DOCUMENT_ID})
+AND C_ORDER.DELIVERYRULE = DELIVERYRULE.VALUE
+
+
+AND C_ORDER.C_PAYMENTTERM_ID = PAYMENTTERM.C_PAYMENTTERM_ID
+AND C_CURRENCY.C_CURRENCY_ID=C_ORDER.C_CURRENCY_ID]]>
+	</queryString>
+	<field name="documenttype" class="java.lang.String"/>
+	<field name="created_by" class="java.lang.String"/>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="c_order_id" class="java.lang.String"/>
+	<field name="issotrx" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="fax" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="url" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="albaran" class="java.lang.String"/>
+	<field name="vendor_contact" class="java.lang.String"/>
+	<field name="vendor_contact_email" class="java.lang.String"/>
+	<field name="address_bussinespartner" class="java.lang.String"/>
+	<field name="address_bussinespartner2" class="java.lang.String"/>
+	<field name="lastname" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="suppliername" class="java.lang.String"/>
+	<field name="email_user" class="java.lang.String"/>
+	<field name="signatureid" class="java.lang.String"/>
+	<field name="ttd" class="java.lang.String"/>
+	<field name="salesrepresentatif" class="java.lang.String"/>
+	<field name="position_agent" class="java.lang.String"/>
+	<field name="deliverydate" class="java.sql.Timestamp"/>
+	<field name="deliverynotes" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="complete_name" class="java.lang.String"/>
+	<field name="entity" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="org_country_header" class="java.lang.String"/>
+	<field name="org_website" class="java.lang.String"/>
+	<field name="org_phone" class="java.lang.String"/>
+	<field name="org_phone_al" class="java.lang.String"/>
+	<field name="org_fax" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="org_supervisor" class="java.lang.String"/>
+	<field name="org_title" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="showimage" class="java.lang.Object"/>
+	<field name="wrh_address1" class="java.lang.String"/>
+	<field name="wrh_address2" class="java.lang.String"/>
+	<field name="wrh_name" class="java.lang.String"/>
+	<field name="vendor_phone" class="java.lang.String"/>
+	<field name="incoterms" class="java.lang.String"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="bp_data" class="java.lang.String"/>
+	<field name="org_taxid" class="java.lang.String"/>
+	<field name="showlogo" class="java.lang.String"/>
+	<field name="showcompanydata" class="java.lang.String"/>
+	<field name="headermargin" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="deliveryterm" class="java.lang.String"/>
+	<field name="paymentterm" class="java.lang.String"/>
+	<field name="currency_iso" class="java.lang.String"/>
+	<field name="istaxincluded" class="java.lang.String"/>
+	<variable name="SHOWLOGO" class="java.lang.String"/>
+	<variable name="SHOWCOMPANYDATA" class="java.lang.String"/>
+	<group name="footer group">
+		<groupHeader>
+			<band height="29">
+				<staticText>
+					<reportElement key="staticText-10" x="81" y="16" width="5" height="13" uuid="aa2258e3-daad-4bbf-b41f-73fb01a5d1db"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="4" width="297" height="13" uuid="30265090-3ced-4607-b650-dd0830ace95a"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" x="0" y="16" width="61" height="13" uuid="579ff02d-ecbe-49ca-9d84-001d61c17c74"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Address]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-10" x="421" y="16" width="5" height="13" uuid="a7db140b-7beb-4e2c-87ef-0006283d3a15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="0" width="565" height="1" uuid="b61387fb-0a5b-4829-a908-cc2297fc6999"/>
+				</line>
+				<staticText>
+					<reportElement key="staticText-7" x="327" y="4" width="94" height="13" uuid="2faa04b0-80c4-494f-8a68-8c9a5518432e"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Coordinator]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-10" x="421" y="4" width="5" height="13" uuid="cc3dcf6f-9210-4703-9674-51d75789b8d7"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="426" y="4" width="139" height="13" uuid="9662b7fb-baea-4c96-ab2e-fd2a12f42f51"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salesrepresentatif}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="426" y="16" width="139" height="13" uuid="24c7a94b-3335-44ca-a3a3-5906a8857374"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{albaran}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="86" y="16" width="210" height="13" uuid="f42112c5-2422-47b8-b050-1b8dfcc5bec3"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(""+(($F{address_bussinespartner}!=null)?$F{address_bussinespartner}:""))
++"\n"+(""+(($F{address_bussinespartner2}!=null)?$F{address_bussinespartner2}:""))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" x="327" y="16" width="81" height="13" uuid="523cd3e6-4880-4609-bfd2-746fa4499cdc"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[No Return]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="group1">
+		<groupHeader>
+			<band height="13">
+				<staticText>
+					<reportElement key="staticText-10" x="81" y="0" width="5" height="13" uuid="dcbeec96-42e8-4f0b-9c28-b10c187988a4"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" x="0" y="0" width="61" height="13" uuid="365df288-5882-4c49-ae8b-8986ecef41cc"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Telephone]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="86" y="0" width="210" height="13" isPrintWhenDetailOverflows="true" uuid="5fe4fa53-91fd-41ae-9262-2244cb4dc317"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vendor_phone}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" x="327" y="0" width="81" height="13" uuid="530810ee-b48d-4bc7-9c5e-d6afb01ee03b"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Date Return]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-10" x="421" y="0" width="5" height="13" uuid="6dde66a0-920b-4349-bdcc-a1babe518ae0"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-10" x="421" y="0" width="5" height="13" uuid="40e915fa-d9f1-408f-9ef4-c8d4becceef7"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="426" y="0" width="139" height="13" uuid="7b1ebb29-1009-49be-9bdc-1d800b515567"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dateordered}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="group_header1">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<staticText>
+					<reportElement key="staticText-10" x="81" y="0" width="5" height="13" uuid="3a481380-ec8c-47da-81d8-1d259caa2e4a"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="86" y="0" width="210" height="13" uuid="05928228-e40a-40a8-bd01-531a6667626d"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vendor_contact}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" x="0" y="0" width="61" height="13" uuid="e960bc96-0ed8-44d9-8428-93550a00ecfe"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Attention]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="1">
+		<groupExpression><![CDATA[$F{documenttype}]]></groupExpression>
+		<groupHeader>
+			<band height="26">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="FixRelativeToBottom" x="86" y="0" width="210" height="13" uuid="e7ce997a-987f-48e3-9446-d58fcbad1381"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vendor_contact_email}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-10" positionType="FixRelativeToBottom" x="81" y="0" width="5" height="13" uuid="917abf2d-6b30-4dbc-a987-025561628bfa"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="FixRelativeToBottom" x="86" y="13" width="210" height="13" uuid="099e361a-6cf1-40f0-9c79-7be3afc23ba1"/>
+					<textElement>
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="13" width="61" height="13" uuid="a6b54c43-a807-45f9-8754-bfa5676bd2bb"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Status]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="0" width="61" height="13" uuid="ad01b2d1-9379-43f7-ae7e-3d23107d1f80"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-10" positionType="FixRelativeToBottom" x="81" y="13" width="5" height="13" uuid="f214ea96-78e4-43f1-8376-e278b6786196"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Helvetica-Normal" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="305" height="20" uuid="c4dedae0-0872-4104-90ed-c109f9b5d3e5"/>
+				<textElement>
+					<font fontName="Helvetica-Normal" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-12" x="255" y="20" width="310" height="30" uuid="f0c7c925-5f91-4498-8a62-a0783d2228ac"/>
+				<textElement textAlignment="Right">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Return to Vendor]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="20" width="279" height="30" uuid="c5fb43e3-c8ac-41d5-a201-1c81a529646f"/>
+				<textElement>
+					<font fontName="Helvetica-Normal" size="11" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(""+(($F{location}!=null)?$F{location}:""))+'-'+(" "+(($F{org_country_header}!=null)?$F{org_country_header}:""))+"\n"+("Tlp. "+(($F{org_phone}!=null)?$F{org_phone}:""))+","+(" Fax. "+(($F{org_fax}!=null)?$F{org_fax}:""))+'\n'+(""+(($F{org_website}!=null)?$F{org_website}:""))]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<subreport isUsingCache="false">
+				<reportElement key="subreport-1" x="0" y="0" width="553" height="25" uuid="3fab4a60-a49f-4941-af14-1aea218655c7">
+					<printWhenExpression><![CDATA[]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="NUMBERFORMAT">
+					<subreportParameterExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.getCountryNumberFormat($F{organizationid},$P{NUMBERFORMAT})]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LOCALE">
+					<subreportParameterExpression><![CDATA[$P{LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="C_ORDER_ID">
+					<subreportParameterExpression><![CDATA[$F{c_order_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ISTAXINCLUDED">
+					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREP_C_OrderLinesTaxIncludedJR_PNRI_new}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false">
+				<reportElement key="subreport-1" x="0" y="0" width="553" height="18" uuid="4306c41d-91a3-495c-b092-6680f431da9d">
+					<printWhenExpression><![CDATA[]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="NUMBERFORMAT">
+					<subreportParameterExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.getCountryNumberFormat($F{organizationid},$P{NUMBERFORMAT})]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LOCALE">
+					<subreportParameterExpression><![CDATA[$P{LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="C_ORDER_ID">
+					<subreportParameterExpression><![CDATA[$F{c_order_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREP_RptC_Order_TaxLines_PNRI_new}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false">
+				<reportElement key="subreport-1" x="0" y="0" width="565" height="25" uuid="e9401019-2ee3-45ed-bd42-2b69ffa3f709"/>
+				<subreportParameter name="C_ORDER_ID">
+					<subreportParameterExpression><![CDATA[$F{c_order_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="NUMBERFORMAT">
+					<subreportParameterExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.getCountryNumberFormat($F{organizationid},$P{NUMBERFORMAT})]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LOCALE">
+					<subreportParameterExpression><![CDATA[$P{LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREP_C_RMOrderLinesJR_Idol1}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField-10" positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="432" y="0" width="95" height="19" uuid="b6fde58d-119b-4af3-a210-85ce1361f2e7"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Helvetica" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField-9" positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="529" y="0" width="36" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="5198fd5d-8bc5-4a6d-bf00-01166b398f0a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None">
+					<font fontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="CP1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="144">
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField-9" positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="529" y="125" width="36" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="6b11fabd-ec1c-48a4-9896-8d72bce78afc"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None">
+					<font fontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="CP1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="0" y="105" width="565" height="20" uuid="e61b996d-a512-496d-a8db-a6e58f7bf0ce"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+				</textElement>
+				<text><![CDATA[Supplier WAJIB melampirkan nota return asli yang di tanda tangani oleh kedua belah pihak pada saat tukar faktur tagihan.]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField-10" positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="432" y="125" width="95" height="19" uuid="65f8c041-a3f2-46bb-86f1-01254f8e7b58"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Helvetica" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="0" width="175" height="92" uuid="1a5dc357-3632-4ef9-b17f-cdfb673b11d3"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="textField-22" mode="Transparent" x="0" y="66" width="175" height="13" isPrintWhenDetailOverflows="true" backcolor="#FFFFFF" uuid="d8a3e745-75fc-47db-b81d-717b4b69c2fd"/>
+					<textElement textAlignment="Center">
+						<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{created_by}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="1" width="175" height="13" uuid="b64259a8-f0c5-4d64-9c43-4179abe88e42"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Prepared by :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="79" width="175" height="13" uuid="cd2e0a00-c87c-419b-8860-c687a1dc79c9"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10" isBold="false" isUnderline="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[RMR Coordinator]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="194" y="0" width="175" height="92" uuid="9ceac78f-4ce6-4f2d-a58a-f92060485de9"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="79" width="175" height="13" uuid="a907c7be-04c4-4b40-8bdc-06c5c7c58256"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10" isBold="false" isUnderline="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[DC Head]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="66" width="175" height="13" uuid="d112e9a6-91ab-4a0b-945d-e35b332bc5e9"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10" isBold="false" isUnderline="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[(Bpk Yusuf)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-7" x="0" y="1" width="175" height="13" uuid="bcab41c8-ebd3-4120-a52e-86d85a63947b"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Approval by:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="textField-22" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="12" width="175" height="15" isPrintWhenDetailOverflows="true" backcolor="#FFFFFF" uuid="79b4e5f1-b786-4667-9e14-b822cba5601c"/>
+					<textElement textAlignment="Center">
+						<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="390" y="0" width="175" height="92" uuid="ca356337-6b1d-4f2a-b099-11762568694e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="textField-22" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="12" width="175" height="15" isPrintWhenDetailOverflows="true" backcolor="#FFFFFF" uuid="d3291d41-f1e0-4e33-8ea9-43188ebb3048"/>
+					<textElement textAlignment="Center">
+						<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-7" positionType="FixRelativeToBottom" x="0" y="0" width="175" height="13" uuid="4700f27e-bc16-47c2-8fe6-4d7513c453ab"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="DejaVu Serif" size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Received by:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="textField-22" positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="79" width="175" height="13" isPrintWhenDetailOverflows="true" backcolor="#FFFFFF" uuid="8f22f104-b0a9-4c80-820b-f0f909495e89"/>
+					<textElement textAlignment="Center">
+						<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{suppliername}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

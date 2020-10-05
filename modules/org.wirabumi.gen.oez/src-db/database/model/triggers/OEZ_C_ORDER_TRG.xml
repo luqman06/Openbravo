@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OEZ_C_ORDER_TRG">
+    <trigger name="OEZ_C_ORDER_TRG" table="C_ORDER" fires="after" insert="false" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+
+    /*************************************************************************
+    * Title: Order Trigger
+    * Description:
+    *  Change Document No not allowed
+    ************************************************************************/
+ 
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+  	IF(UPDATING) then
+	  	IF((COALESCE(:old.documentno, '.') <> COALESCE(:NEW.documentno, '.') and (:old.docstatus <> 'DR'))) THEN
+	   		
+	    	RAISE NO_DATA_FOUND;
+	
+	  	END IF;
+ 	END IF;
+ 
+	END OEZ_C_ORDER_TRG
+]]></body>
+    </trigger>
+  </database>

@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TA_CALCULATION_OF_LATE">
+    <function name="TA_CALCULATION_OF_LATE" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_checkinactual timestamp without time zone;
+  v_checkoutactual timestamp without time zone;
+  v_lateatt timestamp without time zone;
+  v_in_business timestamp without time zone;
+  v_out_business timestamp without time zone;
+  v_checkin_status varchar(60);
+  v_checkout_status varchar(60);
+  v_bpartner_id varchar(32);
+  v_date timestamp without time zone;
+  v_duration timestamp without time zone;
+  v_early timestamp without time zone;
+  v_leave timestamp without time zone;
+
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+  cur_employee record;
+  cur_attendance record;
+  cur_attendance1 record;
+  cur_attendance2 record;
+
+ 
+begin
+ result:=0;
+
+for cur_employee in (select bp.name, bp.c_bpartner_id, bp.ad_client_id, bp.ad_org_id
+			from c_bpartner bp
+			where exists (select 1 from ta_attendance where c_bpartner_id=bp.c_bpartner_id) 
+			and (case when p_employee_id is not null then bp.c_bpartner_id=p_employee_id else 1=1 end))
+Loop --Loop Employee
+
+  FOR cur_attendance in (select employee_id as c_bpartner_id, t_date as DATE, checkinactual, checkin, checkoutactual, checkout, keterangan 
+	from ta_indv_attendanceperformance (cur_employee.c_bpartner_id, (now()::date-'1 year'::interval)::date, (now()::date+'1 month'::interval)::date))
+
+  Loop --Loop Attendance      
+	--validasi untuk attendance
+        if cur_attendance.checkinactual is null or cur_attendance.checkin is null and cur_attendance.checkoutactual is null or cur_attendance.checkout is null 
+        then continue; end if;
+
+        
+        --mengambil data checkin yang paling awal
+	select checkin into v_checkinactual
+	from ta_attendance
+	where c_bpartner_id=cur_attendance.c_bpartner_id
+	and checkin::date=cur_attendance.date 
+	order by checkin asc limit 1;
+
+	
+                                   /*********************************
+                                   ***     Validasi Untuk Late    ***
+                                   **********************************/        
+
+	--validasi checkin attendance berdasarkan checkin shift
+	IF v_checkinactual::time>cur_attendance.checkin::time and v_checkinactual::time<cur_attendance.checkout::time then
+	v_lateatt:=('0001-01-01'||' '|| v_checkinactual::time-cur_attendance.checkin::time)::timestamp;
+	Elsif v_checkinactual::time<=cur_attendance.checkin::time or v_checkinactual::time>=cur_attendance.checkout::time then 
+	v_lateatt:=('0001-01-01'||' '|| '00:00:00'::time)::timestamp;
+	End IF;
+
+	--mengambil data dari business trip untuk validasi late
+	select datefrom, dateto into v_in_business, v_out_business 
+	from bt_businesstrip
+	where docstatus='CO'
+	and c_bpartner_id=Cur_attendance.c_bpartner_id
+	and Cur_attendance.date>=datefrom::date
+	and Cur_attendance.date<=dateto::date;
+
+	--validasi checkin menggunakan business trip
+        if v_in_business::time <= cur_attendance.checkin::time then v_lateatt:=('0001-01-01'||' '|| '00:00:00'::time)::timestamp;
+        else v_lateatt:=v_lateatt;
+        End IF;
+
+	--mengambil data dari tukar jam untuk validasi late
+	select total_duration, DATE into v_duration, v_date
+	from dild_tukar_jam
+	where docstatus='CO'
+	and c_bpartner_id=Cur_attendance.c_bpartner_id
+	and Cur_attendance.date=date::date;
+	
+	--validasi keterlambatan berdasarkan durasi tukar jam
+        IF v_duration is not null then 
+        v_lateatt:=(('0001-01-01'||' '|| (v_checkinactual::time-cur_attendance.checkin::time)-v_duration::time)::timestamp);
+        else v_lateatt:=v_lateatt;
+        End IF;
+
+	--mengambil data dari cuti untuk validasi late
+	select (sampai::time-mulai::time)::time into v_leave 
+	from lv_leave
+	where docstatus='CO'
+	and ishour='Y'
+	and c_bpartner_id=Cur_attendance.c_bpartner_id
+	and Cur_attendance.date=datefrom::date;
+
+	--validasi keterlambatan berdasarkan durasi tukar jam
+        IF v_leave is not null then 
+        v_lateatt:=(('0001-01-01'||' '|| (v_checkinactual::time-cur_attendance.checkin::time)-v_leave::time)::timestamp);
+        else v_lateatt:=v_lateatt;
+        End IF;
+
+	--Menentukan status masuk
+        IF v_checkinactual::time<=cur_attendance.checkin::time or v_lateatt='0001-01-01 00:00:00'
+        then v_checkin_status:='ok';
+        else v_checkin_status:='delay';
+        end IF;
+
+
+        for cur_attendance1 in (select checkin from ta_attendance
+				where c_bpartner_id=cur_attendance.c_bpartner_id
+				and checkin::date=cur_attendance.date
+				order by checkin asc)
+
+        Loop
+
+		IF v_checkinactual=cur_attendance1.checkin then
+		   --update late sesuai dengan shift
+		   update ta_attendance set late=v_lateatt, 
+		   checkin_status=v_checkin_status
+		   where c_bpartner_id=cur_employee.c_bpartner_id
+		   and ad_client_id=cur_employee.ad_client_id
+		   and checkin=v_checkinactual
+		   and checkin::date=cur_attendance.date;
+		Else
+		   update ta_attendance set late=('0001-01-01'||' '|| '00:00:00'::time)::timestamp, 
+		   checkin_status=v_checkin_status
+		   where c_bpartner_id=cur_employee.c_bpartner_id
+		   and ad_client_id=cur_employee.ad_client_id
+		   and checkin::date=cur_attendance.date
+		   and checkin<>v_checkinactual;
+		End If;
+	End Loop;
+	
+        
+	
+                                   /**********************************
+                                   ***     Validasi Untuk Early    ***
+                                   **********************************/
+	--mengambil data checkout yang paling Akhir
+	select checkout into v_checkoutactual
+	from ta_attendance
+	where c_bpartner_id=cur_attendance.c_bpartner_id
+	and checkin::date=cur_attendance.date
+	and checkin<=(cur_attendance.date::date+1||' '||cur_attendance.checkout::time)::timestamp
+	order by checkout desc limit 1;
+	
+	IF v_checkoutactual::time<cur_attendance.checkout::time and v_checkinactual::time<cur_attendance.checkout::time 
+	then v_early:=('0001-01-01'||' '|| cur_attendance.checkout::time-v_checkoutactual::time)::timestamp;
+	Else 
+	v_early:=('0001-01-01'||' '|| '00:00:00'::time)::timestamp;
+	End IF;
+
+
+        --Menentukan status pulang
+        IF v_checkoutactual::time>=cur_attendance.checkout::time then v_checkout_status:='ok';
+        else v_checkout_status:='delay';
+        end IF;
+
+
+	for cur_attendance2 in (select checkout from ta_attendance
+				where c_bpartner_id=cur_attendance.c_bpartner_id
+				and checkin::date=cur_attendance.date
+				order by checkout desc)
+
+        Loop
+
+        
+		IF v_checkoutactual=cur_attendance2.checkout then
+		   --update early sesuai dengan shift	
+		   update ta_attendance set early=v_early,
+		   checkout_status=v_checkout_status
+		   where c_bpartner_id=cur_employee.c_bpartner_id
+		   and ad_client_id=cur_employee.ad_client_id
+		   and checkout::date=cur_attendance.date
+		   and checkout=v_checkoutactual;
+		Else
+		   update ta_attendance set early=('0001-01-01'||' '|| '00:00:00'::time)::timestamp,
+		   checkout_status=v_checkout_status
+		   where c_bpartner_id=cur_employee.c_bpartner_id
+		   and ad_client_id=cur_employee.ad_client_id
+		   and checkout::date=cur_attendance.date
+		   and checkout<>v_checkoutactual;
+		End IF;
+	End Loop;
+
+
+         
+	raise notice '%, %, checkin: %, checkinactual: % , v_lateatt: %', 
+        cur_employee.name, cur_attendance.date, cur_attendance.checkin, v_checkinactual, v_lateatt;
+        
+	raise notice '%, %, checkout: %, checkoutactual: % , v_early: %', 
+        cur_employee.name, cur_attendance.date, cur_attendance.checkout, v_checkoutactual, v_early;
+       
+        Raise notice '=======================================================================';
+
+		
+
+    End Loop; --Loop Indv_Attendance
+End Loop; --Loop Employee
+
+result:=1;
+   
+RETURN;
+END TA_CALCULATION_OF_LATE
+]]></body>
+    </function>
+  </database>

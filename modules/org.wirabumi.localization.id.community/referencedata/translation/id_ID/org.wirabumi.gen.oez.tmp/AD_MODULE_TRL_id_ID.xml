@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="A559EC02F99D4528A36AEF86703BD523" trl="N">
+    <value column="Description" isTrl="N" original="Industry template module for Openbravo EZ">Industry template module for Openbravo EZ</value>
+    <value column="Help" isTrl="N" original="Industry template module for Openbravo EZ. See Openbravo EZ description and comment for more information.">Industry template module for Openbravo EZ. See Openbravo EZ description and comment for more information.</value>
+    <value column="License" isTrl="N" original="This module is distributed under GNU GPL v2">This module is distributed under GNU GPL v2</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

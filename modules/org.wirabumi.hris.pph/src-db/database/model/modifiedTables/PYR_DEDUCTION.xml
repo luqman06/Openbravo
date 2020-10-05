@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE PYR_DEDUCTION">
+    <table name="PYR_DEDUCTION" primaryKey="PYR_DEDUCTION_KEY">
+      <column name="EM_PPH_TAXMODE" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PPH_ISANNUALIZED" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

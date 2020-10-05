@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TA_PROCESS_TUKAR_SHIFT">
+    <function name="TA_PROCESS_TUKAR_SHIFT" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[/*************************************************************************
+* The contents of this file are subject to the Openbravo  Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+* Version 1.1  with a permitted attribution clause; you may not  use this
+* file except in compliance with the License. You  may  obtain  a copy of
+* the License at http://www.openbravo.com/legal/license.html
+* Software distributed under the License  is  distributed  on  an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+* License for the specific  language  governing  rights  and  limitations
+* under the License.
+* The Original Code is Openbravo ERP.
+* The Initial Developer of the Original Code is Openbravo SLU
+* All portions are Copyright (C) 2001-2006 Openbravo SLU
+* All Rights Reserved.
+* Contributor(s):  ______________________________________.
+************************************************************************/
+  -- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Result NUMBER:=1; -- 0=failure
+  v_Record_ID VARCHAR2(32);
+  v_User_ID VARCHAR2(32):='0';
+  v_DocAction VARCHAR2(60);
+  v_DocStatus VARCHAR2(60);
+  v_duration NUMBER;
+  v_Aux NUMBER;
+  v_usedleave NUMBER;
+  v_bpartner_id varchar(32);
+  v_type varchar(60);
+  v_datefrom timestamp without time zone;
+  v_dateto timestamp without time zone;
+
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+    Cur_Parameter RECORD;
+    Cur_RequisitionLine RECORD;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Updating PInstance - Processing ' || p_PInstance_ID) ;
+  v_ResultStr:='PInstanceNotFound';
+  AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'Y', NULL, NULL) ;
+
+  BEGIN --BODY
+    -- Get Parameters
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID, i.AD_Client_ID, i.AD_Org_ID,
+        p.ParameterName, p.P_String, p.P_Number, p.P_Date
+      FROM AD_PInstance i
+      LEFT JOIN AD_PInstance_Para p
+        ON i.AD_PInstance_ID=p.AD_PInstance_ID
+      WHERE i.AD_PInstance_ID=p_PInstance_ID
+      ORDER BY p.SeqNo) LOOP
+      v_Record_ID:=Cur_Parameter.Record_ID;
+      v_User_ID:=Cur_Parameter.AD_User_ID;
+    END LOOP; -- Get Parameter
+
+    --mendapatkan data dari window tukar shift
+    SELECT DocAction, DocStatus, c_bpartner_id
+    INTO v_DocAction, v_DocStatus, v_bpartner_id
+    FROM ta_tukar_shift
+    WHERE ta_tukar_shift_ID = v_Record_ID;
+
+    v_ResultStr := 'ta_tukar_shift ' || v_Record_ID || ', DocAction=' || v_DocAction || ', DocStatus=' || v_DocStatus;
+
+
+    /**
+    * Order Closed, Voided or Reversed - No action possible
+    */
+    IF(v_DocStatus IN('CL', 'VO', 'RE')) THEN
+      RAISE_APPLICATION_ERROR(-20000, '@AlreadyPosted@') ;
+    ELSIF (v_DocStatus = 'DR') THEN
+      IF (v_DocAction = 'CO') THEN
+        v_ResultStr := 'Complete Window Tukar Shift: ' || v_Record_ID;
+        UPDATE ta_tukar_shift
+        SET DocStatus = 'CO',
+            DocAction = 'CL',
+            Updated=now(),
+            UpdatedBy=v_User_ID
+        WHERE ta_tukar_shift_id = v_Record_ID;
+      ELSE
+        RAISE_APPLICATION_ERROR(-20000, '@ActionNotAllowedHere@');
+      END IF;
+    ELSIF (v_DocStatus = 'CO') THEN 
+      IF (v_DocAction = 'RE' ) THEN
+        v_ResultStr := 'Reactivate Window Tukar Shift: ' || v_Record_ID;
+        UPDATE ta_tukar_shift
+        SET DocStatus = 'DR',
+            DocAction = 'CO',
+            Updated=now(),
+            UpdatedBy=v_User_ID
+        WHERE ta_tukar_shift_id=v_Record_ID;
+      ELSIF (v_DocAction = 'CL' ) THEN
+        v_ResultStr := 'Close Window Tukar Shift: ' || v_Record_ID;
+        UPDATE ta_tukar_shift
+        SET DocStatus = 'CL',
+            DocAction = 'VO',
+            Updated=now(),
+            UpdatedBy=v_User_ID
+        WHERE ta_tukar_shift_id=v_Record_ID;
+      ELSE
+        RAISE_APPLICATION_ERROR(-20000, '@ActionNotAllowedHere@');
+      END IF;
+
+/*
+    ELSIF (v_DocAction = 'CO') THEN
+	UPDATE ta_tukar_shift
+        SET DocStatus = 'CO',
+            DocAction = 'CL',
+            Updated=now(),
+            UpdatedBy=v_User_ID
+        WHERE ta_tukar_shift_ID = v_Record_ID;
+
+    ELSIF (v_DocAction = 'CL') THEN
+        UPDATE ta_tukar_shift
+        SET DocStatus = 'DR',
+            DocAction = 'CO',
+            Updated=now(),
+            UpdatedBy=v_User_ID
+        WHERE ta_tukar_shift_ID = v_Record_ID;
+*/        
+    END IF;
+  END; --BODY
+  
+  AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', v_Result, v_Message) ;
+EXCEPTION
+WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE('ta_tukar_shift error: ' || v_ResultStr);
+  v_ResultStr:= '@ERROR=' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+  AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr);
+END TA_PROCESS_TUKAR_SHIFT
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+  <database name="TABLE OBEDL_REQUEST">
+    <table name="OBEDL_REQUEST" primaryKey="OBEDL_REQUEST_KEY">
+      <column name="OBEDL_REQUEST_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="PROCESS" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EXECUTED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="STATUS" primaryKey="false" required="true" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OBEDL_PROCESS_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="REQUESTDATA" primaryKey="false" required="false" type="CLOB" size="4000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="RESPONSE" primaryKey="false" required="false" type="NVARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="REQUESTDATE" primaryKey="false" required="false" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="CANCEL" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CONTEXTDATA" primaryKey="false" required="false" type="CLOB" size="4000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="PROCESSED" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA[(CASE WHEN status IN ('Success', 'Voided') THEN 'Y' ELSE 'N' END)]]></onCreateDefault>
+      </column>
+      <column name="EXECUTION_MODE" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="OBEDL_PROCESS" name="OBEDL_IMPORT_ENTRY_PROCESS">
+        <reference local="OBEDL_PROCESS_ID" foreign="OBEDL_PROCESS_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_CLIENT" name="OBEDL_REQUEST_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="OBEDL_REQUEST_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <index name="OBEDL_REQUEST_PROCESS_IDX" unique="false">
+        <index-column name="OBEDL_PROCESS_ID"/>
+      </index>
+      <index name="OBEDL_REQUEST_REQDATE_IDX" unique="false">
+        <index-column name="REQUESTDATE"/>
+      </index>
+      <index name="OBEDL_REQUEST_STATUS_IDX" unique="false">
+        <index-column name="STATUS"/>
+      </index>
+      <check name="OBEDL_REQUEST_ACTIVE_CHK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+      <check name="OBEDL_REQUEST_DISCARD_CHECK"><![CDATA[CANCEL IN ('Y', 'N')]]></check>
+      <check name="OBEDL_REQUEST_PROCESS_CHECK"><![CDATA[PROCESS IN ('Y', 'N')]]></check>
+      <check name="OBEDL_REQUEST_PROCESSED_CHK"><![CDATA[PROCESSED IN ('Y', 'N')]]></check>
+    </table>
+  </database>

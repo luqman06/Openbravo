@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="00C3034138B54309A2C22A74893928D1" trl="N">
+    <value column="Text" isTrl="N" original="Stok Akhir">Stok Akhir</value>
+  </row>
+  <row id="02E02E5EDE4F462FB730CBB4B695D322" trl="N">
+    <value column="Text" isTrl="N" original="OKTOBER">OKTOBER</value>
+  </row>
+  <row id="051C7A82FF92487CB762521F33A58C44" trl="N">
+    <value column="Text" isTrl="N" original="Pesanan Penjualan Tunggu Tagihan Penjualan">Pesanan Penjualan Tunggu Tagihan Penjualan</value>
+  </row>
+  <row id="0523DB7C296447C6A5F4126D05CD3BBD" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="05298D0CC3904350A6C2B1265D9F9B83" trl="N">
+    <value column="Text" isTrl="N" original="MEI">MEI</value>
+  </row>
+  <row id="05D62790C430422EA763C848532E61CE" trl="N">
+    <value column="Text" isTrl="N" original="Pengiriman Barang Tunggu Tagihan Penjualan">Pengiriman Barang Tunggu Tagihan Penjualan</value>
+  </row>
+  <row id="0613BC84073D45CA98F67DF68D9B3964" trl="N">
+    <value column="Text" isTrl="N" original="OCTOBER">OCTOBER</value>
+  </row>
+  <row id="063121F58518453BAFC5058FDE5FF1BC" trl="N">
+    <value column="Text" isTrl="N" original="No. Psn:">No. Psn:</value>
+  </row>
+  <row id="077F09C1656A4F938BF62C7FA8AD8F1D" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARI">FEBRUARI</value>
+  </row>
+  <row id="07E006B20E174C309DF9038EC38E5795" trl="N">
+    <value column="Text" isTrl="N" original="NOVEMBER">NOVEMBER</value>
+  </row>
+  <row id="08217DEDFFD046BF8D08F7BF41418DD7" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARY">FEBRUARY</value>
+  </row>
+  <row id="0AFFC6094C2C4F8F93521596488C9BE0" trl="N">
+    <value column="Text" isTrl="N" original="Tgl Penerimaan">Tgl Penerimaan</value>
+  </row>
+  <row id="0BA91DBFFD5B4DF4BB4F12B67C4EFED0" trl="N">
+    <value column="Text" isTrl="N" original="JULY">JULY</value>
+  </row>
+  <row id="0BE253D9A07042D8B5CDE0BC69FAA8AB" trl="N">
+    <value column="Text" isTrl="N" original="Nama Produk">Nama Produk</value>
+  </row>
+  <row id="0C02F233167F4615BBA184DC1619DD22" trl="N">
+    <value column="Text" isTrl="N" original="Nama Produk">Nama Produk</value>
+  </row>
+  <row id="0D07EA90AED2429BA2CDE4D97274D932" trl="N">
+    <value column="Text" isTrl="N" original="Limit price">Limit price</value>
+  </row>
+  <row id="104404B1AEE54B56BF8459F328505CDB" trl="N">
+    <value column="Text" isTrl="N" original="NOVEMBER">NOVEMBER</value>
+  </row>
+  <row id="12B0ED4AC668495B9F13EC0E19A255F3" trl="N">
+    <value column="Text" isTrl="N" original="JUNI">JUNI</value>
+  </row>
+  <row id="12B4DB99DB294931BA323F2806A750EF" trl="N">
+    <value column="Text" isTrl="N" original="DECEMBER">DECEMBER</value>
+  </row>
+  <row id="154CE93C9DE6425297AC436A53CD9B47" trl="N">
+    <value column="Text" isTrl="N" original="Nama Pelanggan">Nama Pelanggan</value>
+  </row>
+  <row id="173469DD8AAA4070AD389DD7DBA8AFA5" trl="N">
+    <value column="Text" isTrl="N" original="Nomor">Nomor</value>
+  </row>
+  <row id="17F88FEEACF4424CB91C359D55CAECBF" trl="N">
+    <value column="Text" isTrl="N" original="DECEMBER">DECEMBER</value>
+  </row>
+  <row id="182F79CD16934BFAABE4F4A342C729FC" trl="N">
+    <value column="Text" isTrl="N" original="Nomor">Nomor</value>
+  </row>
+  <row id="185C8263A37F43D58893D74E9E5D560D" trl="N">
+    <value column="Text" isTrl="N" original="SEPTEMBER">SEPTEMBER</value>
+  </row>
+  <row id="1A98B668AC9A446F906838231982ED00" trl="N">
+    <value column="Text" isTrl="N" original="APRIL">APRIL</value>
+  </row>
+  <row id="1B2BC39CCFE04FE2AE98B4E8283EE10B" trl="N">
+    <value column="Text" isTrl="N" original="JUNI">JUNI</value>
+  </row>
+  <row id="1CD26BE7195D4CA0BD8A873EB9F9B47D" trl="N">
+    <value column="Text" isTrl="N" original="JULY">JULY</value>
+  </row>
+  <row id="1E5B5F59D4FB4026A87D7A181A1E3EF9" trl="N">
+    <value column="Text" isTrl="N" original="Banyak penerimaan">Banyak penerimaan</value>
+  </row>
+  <row id="1EF1A0CD51F34F23AEC858FF8A89D513" trl="N">
+    <value column="Text" isTrl="N" original="Stock Availability">Stock Availability</value>
+  </row>
+  <row id="20EDD901CDCF472A8026E28476258120" trl="N">
+    <value column="Text" isTrl="N" original="JANUARI">JANUARI</value>
+  </row>
+  <row id="2180FAB05B4349FC8CA7650375A52F2C" trl="N">
+    <value column="Text" isTrl="N" original="Hal">Hal</value>
+  </row>
+  <row id="219850023B6A463794A9BAF7DBF2F26F" trl="N">
+    <value column="Text" isTrl="N" original="JULY">JULY</value>
+  </row>
+  <row id="2257967172BD4055A775DBA8340EBAA4" trl="N">
+    <value column="Text" isTrl="N" original="AGUSTUS">AGUSTUS</value>
+  </row>
+  <row id="266C453BC8B44E1E97F64E578959EE82" trl="N">
+    <value column="Text" isTrl="N" original="OKTOBER">OKTOBER</value>
+  </row>
+  <row id="2927633D90D6491382981111C2787B0B" trl="N">
+    <value column="Text" isTrl="N" original="MARET">MARET</value>
+  </row>
+  <row id="2B6A2F4EDEE048EC9B903C5623D6AFA0" trl="N">
+    <value column="Text" isTrl="N" original="JUNI">JUNI</value>
+  </row>
+  <row id="2BAF6FC08CDC4ED9941D4168FC0999C6" trl="N">
+    <value column="Text" isTrl="N" original="OCTOBER">OCTOBER</value>
+  </row>
+  <row id="2F4628CB94864642B1985A9C90303F1D" trl="N">
+    <value column="Text" isTrl="N" original="Stok Keluar">Stok Keluar</value>
+  </row>
+  <row id="2FD2DE3CFD7A4364AD4A9C7F736CE8A6" trl="N">
+    <value column="Text" isTrl="N" original="AUGUST">AUGUST</value>
+  </row>
+  <row id="3064C4804F5A4D37BA16D30A50955C2B" trl="N">
+    <value column="Text" isTrl="N" original="DESEMBER">DESEMBER</value>
+  </row>
+  <row id="3175E83B92884A39A3450EFD7DE18B14" trl="N">
+    <value column="Text" isTrl="N" original="No Referensi">No Referensi</value>
+  </row>
+  <row id="31E7B847E3E54DBDA40DCA1244C17E79" trl="N">
+    <value column="Text" isTrl="N" original="Nama Produk">Nama Produk</value>
+  </row>
+  <row id="344871D9A9C84582A75D5B31D0E57619" trl="N">
+    <value column="Text" isTrl="N" original="MEI">MEI</value>
+  </row>
+  <row id="358DC70455AC418AAD50B6BAAA6F8805" trl="N">
+    <value column="Text" isTrl="N" original="APRIL">APRIL</value>
+  </row>
+  <row id="364BBEE9CFB6430492537311DF1F99DD" trl="N">
+    <value column="Text" isTrl="N" original="Variance">Variance</value>
+  </row>
+  <row id="377862F1D6CA44418035554382B275E6" trl="N">
+    <value column="Text" isTrl="N" original="JULI">JULI</value>
+  </row>
+  <row id="38B8A7812CDE4B11AA0A5DA5042D153E" trl="N">
+    <value column="Text" isTrl="N" original="MARCH">MARCH</value>
+  </row>
+  <row id="3BAA141DE83B45D6B1599A6869EA84A9" trl="N">
+    <value column="Text" isTrl="N" original="Hal">Hal</value>
+  </row>
+  <row id="3D0E4DC5E0484141B87A3F4162B4FFD6" trl="N">
+    <value column="Text" isTrl="N" original="Pesanan Pembelian Tunggu Tagihan Pembelian">Pesanan Pembelian Tunggu Tagihan Pembelian</value>
+  </row>
+  <row id="3D48620859F641C5A86D4DAAAE88A24E" trl="N">
+    <value column="Text" isTrl="N" original="Nama Pelanggan">Nama Pelanggan</value>
+  </row>
+  <row id="3D8E9A73ABB043FF90E683193708F636" trl="N">
+    <value column="Text" isTrl="N" original="MARCH">MARCH</value>
+  </row>
+  <row id="3E3423EED4624F1495F8B1D99B4DE9EC" trl="N">
+    <value column="Text" isTrl="N" original="MARET">MARET</value>
+  </row>
+  <row id="3E470E541EE24FB09D845EF0F6212682" trl="N">
+    <value column="Text" isTrl="N" original="Hal">Hal</value>
+  </row>
+  <row id="3E502D57989B4CAE89098DC74B016F92" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="3F2F29397FE4437F850BA5CBFA88EBEB" trl="N">
+    <value column="Text" isTrl="N" original="DESEMBER">DESEMBER</value>
+  </row>
+  <row id="4015FC94583D4CF4ABA4BA5F9D005400" trl="N">
+    <value column="Text" isTrl="N" original="JANUARY">JANUARY</value>
+  </row>
+  <row id="418AA02CD4F8424AB52090C4993C070C" trl="N">
+    <value column="Text" isTrl="N" original="Banyak">Banyak</value>
+  </row>
+  <row id="42E2CA1645294E0AB4FD97B34FF8023A" trl="N">
+    <value column="Text" isTrl="N" original="MARET">MARET</value>
+  </row>
+  <row id="451174B7C6F1471C93CF12CFD2FBA5AC" trl="N">
+    <value column="Text" isTrl="N" original="Nomor">Nomor</value>
+  </row>
+  <row id="45941F7A02A24BA783338C2FD26F9105" trl="N">
+    <value column="Text" isTrl="N" original="PRICE LIST REPORT">PRICE LIST REPORT</value>
+  </row>
+  <row id="4760BA504E934D9EB4B148EDBA36D797" trl="N">
+    <value column="Text" isTrl="N" original="MARET">MARET</value>
+  </row>
+  <row id="4A6CA557CC424D828FCA00BEA0A98F83" trl="N">
+    <value column="Text" isTrl="N" original="NOVEMBER">NOVEMBER</value>
+  </row>
+  <row id="4C8BCDC435F246EEB1D40039E65CDA8A" trl="N">
+    <value column="Text" isTrl="N" original="Tgl Pesan:">Tgl Pesan:</value>
+  </row>
+  <row id="4ED4FEB26B51424886CA4B40474E427E" trl="N">
+    <value column="Text" isTrl="N" original="Hal">Hal</value>
+  </row>
+  <row id="4F04447FED1C41FE881BC3BE0D8168F2" trl="N">
+    <value column="Text" isTrl="N" original="No. Dokumen">No. Dokumen</value>
+  </row>
+  <row id="4FD6F575ED084E5EB2B7BED091FB9EFE" trl="N">
+    <value column="Text" isTrl="N" original="APRIL">APRIL</value>
+  </row>
+  <row id="50EAA0EA37C5402C8B3F19DD074736B3" trl="N">
+    <value column="Text" isTrl="N" original="APRIL">APRIL</value>
+  </row>
+  <row id="5264D3DE95BC4C9D8357F5B7C7893B9F" trl="N">
+    <value column="Text" isTrl="N" original="Storage Bin">Storage Bin</value>
+  </row>
+  <row id="568C712BBF5C44C8B8CCEA985F713D7B" trl="N">
+    <value column="Text" isTrl="N" original="MEI">MEI</value>
+  </row>
+  <row id="56AC127C944C42939AD3C23D72B96DB5" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARY">FEBRUARY</value>
+  </row>
+  <row id="57D2004F070349D89FEAEC96EDF52158" trl="N">
+    <value column="Text" isTrl="N" original="Qty Ordered">Qty Ordered</value>
+  </row>
+  <row id="5904E6F360D549819C335A4E2B03A270" trl="N">
+    <value column="Text" isTrl="N" original="Byk Terima">Byk Terima</value>
+  </row>
+  <row id="5A121E56088C4E2AB0CEACF337CD960A" trl="N">
+    <value column="Text" isTrl="N" original="SEPTEMBER">SEPTEMBER</value>
+  </row>
+  <row id="5A548D404EE948FC920E2D98A3270D38" trl="N">
+    <value column="Text" isTrl="N" original="DESEMBER">DESEMBER</value>
+  </row>
+  <row id="5AC4603E31F540ABB01A27E451FDBD6E" trl="N">
+    <value column="Text" isTrl="N" original="Price Variation">Price Variation</value>
+  </row>
+  <row id="5B420F388252444AA7BE56B496225315" trl="N">
+    <value column="Text" isTrl="N" original="OCTOBER">OCTOBER</value>
+  </row>
+  <row id="5B491631D7FA47FC9C280F4D3FB37BF7" trl="N">
+    <value column="Text" isTrl="N" original="SEPTEMBER">SEPTEMBER</value>
+  </row>
+  <row id="5B50F6DBE0FB4DA48ECBB5DF15518D1A" trl="N">
+    <value column="Text" isTrl="N" original="JANUARY">JANUARY</value>
+  </row>
+  <row id="5B6540A4BC204691B9E4EFDD05161A57" trl="N">
+    <value column="Text" isTrl="N" original="MAY">MAY</value>
+  </row>
+  <row id="5C78406DA9E14D7E92AFF6A47C16C7FD" trl="N">
+    <value column="Text" isTrl="N" original="Customer Receivables">Customer Receivables</value>
+  </row>
+  <row id="5C7CD70FE97F4415BD3F1DB9A4F1338F" trl="N">
+    <value column="Text" isTrl="N" original="Byk Telah Diterima">Byk Telah Diterima</value>
+  </row>
+  <row id="5D331E7DCFF841B994E45CF83E42CFBB" trl="N">
+    <value column="Text" isTrl="N" original="Stok Masuk">Stok Masuk</value>
+  </row>
+  <row id="5DD7F77F9C3E4920AD9814AE8B456EE2" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="5E1C06DB62FF4D1F8345AA860F1CA84A" trl="N">
+    <value column="Text" isTrl="N" original="JULI">JULI</value>
+  </row>
+  <row id="5E250DD9D4794717B8AAB347E8E6BBD4" trl="N">
+    <value column="Text" isTrl="N" original="JANUARI">JANUARI</value>
+  </row>
+  <row id="5F33C5D2758D471B90C218B51BFC8F76" trl="N">
+    <value column="Text" isTrl="N" original="Byk Pesan">Byk Pesan</value>
+  </row>
+  <row id="623C8981A19A47F4B3FBE838CA27D7CA" trl="N">
+    <value column="Text" isTrl="N" original="APRIL">APRIL</value>
+  </row>
+  <row id="62535ECCA2D04A5191D5B462C9E64247" trl="N">
+    <value column="Text" isTrl="N" original="JUNI">JUNI</value>
+  </row>
+  <row id="626E072BF8D6454288FD18DCB05F92DE" trl="N">
+    <value column="Text" isTrl="N" original="Byk Pesanan">Byk Pesanan</value>
+  </row>
+  <row id="64AF68E16FD14FCFA4CCDBF61EBF8707" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARI">FEBRUARI</value>
+  </row>
+  <row id="64C0B7CFE2D34FC6ACA91EA86630615D" trl="N">
+    <value column="Text" isTrl="N" original="JULY">JULY</value>
+  </row>
+  <row id="64D63D3C70F94CED8A7F6AF17F7482E0" trl="N">
+    <value column="Text" isTrl="N" original="Net Unit Price">Net Unit Price</value>
+  </row>
+  <row id="66053385E97446E4BC86EBF70F7CE470" trl="N">
+    <value column="Text" isTrl="N" original="Nama Vendor">Nama Vendor</value>
+  </row>
+  <row id="66064CEF266B46FEBF09479872DAE945" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="6B1440E6AA714326801E9D4972199F2C" trl="N">
+    <value column="Text" isTrl="N" original="Tgl Pesanan">Tgl Pesanan</value>
+  </row>
+  <row id="6BF9A3EEBF5D48459FDA0DCBCA232585" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARI">FEBRUARI</value>
+  </row>
+  <row id="6D00CF1305364F039BD7D4654E33A30C" trl="N">
+    <value column="Text" isTrl="N" original="JUNE">JUNE</value>
+  </row>
+  <row id="6D8197EB023B4413A69D2A54CD4DE9FE" trl="N">
+    <value column="Text" isTrl="N" original="Movement Type">Movement Type</value>
+  </row>
+  <row id="6E38F82D21794877ACC401EA4A25F3D7" trl="N">
+    <value column="Text" isTrl="N" original="AGUSTUS">AGUSTUS</value>
+  </row>
+  <row id="6F77E06558384D84AF0614F00E02051F" trl="N">
+    <value column="Text" isTrl="N" original="Pesanan Penjualan Belum Dikirim">Pesanan Penjualan Belum Dikirim</value>
+  </row>
+  <row id="700EB0D6513F4570A99DD05E1CB44AE0" trl="N">
+    <value column="Text" isTrl="N" original="DESEMBER">DESEMBER</value>
+  </row>
+  <row id="70A36A60843C45B8BC355357E10E27D7" trl="N">
+    <value column="Text" isTrl="N" original="JANUARI">JANUARI</value>
+  </row>
+  <row id="71B7B96FBA79471B9BB2133F4313C23F" trl="N">
+    <value column="Text" isTrl="N" original="JULI">JULI</value>
+  </row>
+  <row id="75484195498844E7BC5760701686DAD6" trl="N">
+    <value column="Text" isTrl="N" original="Age in Warehouse">Age in Warehouse</value>
+  </row>
+  <row id="75504441EE3A4FF997118AB35CAFDCB2" trl="N">
+    <value column="Text" isTrl="N" original="NOVEMBER">NOVEMBER</value>
+  </row>
+  <row id="75A6E5ADB51C41DEBED4ABE988AE04F5" trl="N">
+    <value column="Text" isTrl="N" original="Tgl Pengiriman">Tgl Pengiriman</value>
+  </row>
+  <row id="7606FB9B09324D67B4F19A3D01988C26" trl="N">
+    <value column="Text" isTrl="N" original="JANUARY">JANUARY</value>
+  </row>
+  <row id="769F4BF53E1F457E819A53CB05FAD2B9" trl="N">
+    <value column="Text" isTrl="N" original="Nomor">Nomor</value>
+  </row>
+  <row id="77EEFE07DF534967A909B5D0A809FF08" trl="N">
+    <value column="Text" isTrl="N" original="No. Dokumen">No. Dokumen</value>
+  </row>
+  <row id="794AC64B875B4DE097E781D5D30D00CF" trl="N">
+    <value column="Text" isTrl="N" original="JULY">JULY</value>
+  </row>
+  <row id="797481A1ED1643078C5227FB236E5922" trl="N">
+    <value column="Text" isTrl="N" original="MEI">MEI</value>
+  </row>
+  <row id="7CEA6424B9B443E2AEB6202BA8FB9E20" trl="N">
+    <value column="Text" isTrl="N" original="AGUSTUS">AGUSTUS</value>
+  </row>
+  <row id="7D9518D56155490CA0660B5B8C2B379A" trl="N">
+    <value column="Text" isTrl="N" original="Byk Telah Ditagih">Byk Telah Ditagih</value>
+  </row>
+  <row id="7F3FEE45572741998CCF10EF9F6B9ECE" trl="N">
+    <value column="Text" isTrl="N" original="MARCH">MARCH</value>
+  </row>
+  <row id="80ADE531778144EC98F7C265040A55C0" trl="N">
+    <value column="Text" isTrl="N" original="OKTOBER">OKTOBER</value>
+  </row>
+  <row id="812091BFCFDC44A9A15E4DF1FE90F857" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARY">FEBRUARY</value>
+  </row>
+  <row id="85208D0C2ABF47EEA0119011842E3938" trl="N">
+    <value column="Text" isTrl="N" original="AUGUST">AUGUST</value>
+  </row>
+  <row id="85D967BB1B0F4584A8687AF0BBEADB9F" trl="N">
+    <value column="Text" isTrl="N" original="AGUSTUS">AGUSTUS</value>
+  </row>
+  <row id="85F06680EB8C439986CE28424B31319E" trl="N">
+    <value column="Text" isTrl="N" original="JUNE">JUNE</value>
+  </row>
+  <row id="86E3111482E54AB49859D3C4E1BFF30C" trl="N">
+    <value column="Text" isTrl="N" original="NOVEMBER">NOVEMBER</value>
+  </row>
+  <row id="8720C5A20D3B4B0CB08CFD7458975B63" trl="N">
+    <value column="Text" isTrl="N" original="OCTOBER">OCTOBER</value>
+  </row>
+  <row id="89CCE888253D4976938A935D07958972" trl="N">
+    <value column="Text" isTrl="N" original="JUNE">JUNE</value>
+  </row>
+  <row id="89E2E9C337BA4D7DBC415B421B15F54D" trl="N">
+    <value column="Text" isTrl="N" original="DECEMBER">DECEMBER</value>
+  </row>
+  <row id="8CC7BF0CD09A470896F5CBFF206D2991" trl="N">
+    <value column="Text" isTrl="N" original="Terima Barang Tunggu Tagihan Pembelian">Terima Barang Tunggu Tagihan Pembelian</value>
+  </row>
+  <row id="8DBC998C8B0740428FEFD45E161FC76A" trl="N">
+    <value column="Text" isTrl="N" original="JUNI">JUNI</value>
+  </row>
+  <row id="8EBC002B29DD43CAB6F6739EEFDC8B8C" trl="N">
+    <value column="Text" isTrl="N" original="Storage Bin">Storage Bin</value>
+  </row>
+  <row id="90B18931BC434E2D8CFF4BA1157AC4D6" trl="N">
+    <value column="Text" isTrl="N" original="Banyak pengiriman">Banyak pengiriman</value>
+  </row>
+  <row id="90B3EDB9DBD74FE3AC90D6260566AD4B" trl="N">
+    <value column="Text" isTrl="N" original="MARET">MARET</value>
+  </row>
+  <row id="90BC204746414F3AB05772BCB684BC76" trl="N">
+    <value column="Text" isTrl="N" original="Stok Awal">Stok Awal</value>
+  </row>
+  <row id="91A616298D47429680B94C4BB643CF43" trl="N">
+    <value column="Text" isTrl="N" original="NOVEMBER">NOVEMBER</value>
+  </row>
+  <row id="91EDC95AD9F143818322563ED22C62EA" trl="N">
+    <value column="Text" isTrl="N" original="JUNE">JUNE</value>
+  </row>
+  <row id="951EE43B848E4EA7A8277C3B017B0189" trl="N">
+    <value column="Text" isTrl="N" original="MEI">MEI</value>
+  </row>
+  <row id="96EE8EA31ACA44ACB16220855CA3E071" trl="N">
+    <value column="Text" isTrl="N" original="OCTOBER">OCTOBER</value>
+  </row>
+  <row id="9804B741378F4304A8C6A803F8C1A748" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARI">FEBRUARI</value>
+  </row>
+  <row id="98FA952842954C5B8D097B90320BB396" trl="N">
+    <value column="Text" isTrl="N" original="Nama Pelanggan">Nama Pelanggan</value>
+  </row>
+  <row id="998308E57FF64335ADB824412D63483F" trl="N">
+    <value column="Text" isTrl="N" original="Byk Pesanan">Byk Pesanan</value>
+  </row>
+  <row id="9A95E2372786495AB484792809BE7F04" trl="N">
+    <value column="Text" isTrl="N" original="No. Dokumen">No. Dokumen</value>
+  </row>
+  <row id="9D9B4B8436E34A769632BA8ABD477578" trl="N">
+    <value column="Text" isTrl="N" original="OCTOBER">OCTOBER</value>
+  </row>
+  <row id="9DA3C3A14C6E4C5E98481E47380B2159" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARI">FEBRUARI</value>
+  </row>
+  <row id="A01F63DE6DD849ACACE1E025741A39D5" trl="N">
+    <value column="Text" isTrl="N" original="JULI">JULI</value>
+  </row>
+  <row id="A0A4F053DB6F4C18A86C7C8F43B5C78B" trl="N">
+    <value column="Text" isTrl="N" original="MARCH">MARCH</value>
+  </row>
+  <row id="A1263D702D6748A0953B83C0A05776F9" trl="N">
+    <value column="Text" isTrl="N" original="Current Order">Current Order</value>
+  </row>
+  <row id="A4B5EE119D924252A80A5FA508753F17" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARY">FEBRUARY</value>
+  </row>
+  <row id="A6004D09189748E4A86EF84DBD8B7E7B" trl="N">
+    <value column="Text" isTrl="N" original="Credit Limit">Credit Limit</value>
+  </row>
+  <row id="A7D0918755604586A2A46EC668C11997" trl="N">
+    <value column="Text" isTrl="N" original="Advance Product Movement Report">Advance Product Movement Report</value>
+  </row>
+  <row id="A8733852C1094A50B603463B8CA71D38" trl="N">
+    <value column="Text" isTrl="N" original="Standart Price">Standart Price</value>
+  </row>
+  <row id="A8A5A7AEC31F4F52AD64F3F26B23EFC8" trl="N">
+    <value column="Text" isTrl="N" original="Pesanan Pembelian Tunggu Terima Barang">Pesanan Pembelian Tunggu Terima Barang</value>
+  </row>
+  <row id="AE8517367346426B9B189BE3C1FF51AB" trl="N">
+    <value column="Text" isTrl="N" original="DESEMBER">DESEMBER</value>
+  </row>
+  <row id="B03D6CD8D661434AB8513670BFD56EF7" trl="N">
+    <value column="Text" isTrl="N" original="JANUARI">JANUARI</value>
+  </row>
+  <row id="B11470D4720F4E50BD77E2481E7DD7AC" trl="N">
+    <value column="Text" isTrl="N" original="OKTOBER">OKTOBER</value>
+  </row>
+  <row id="B193FD5B7C60457F8AD6CC8B33C9887D" trl="N">
+    <value column="Text" isTrl="N" original="Byk Belum Diterima">Byk Belum Diterima</value>
+  </row>
+  <row id="B1EBE54C1AD045C0A4F2D2B5F81580ED" trl="N">
+    <value column="Text" isTrl="N" original="DECEMBER">DECEMBER</value>
+  </row>
+  <row id="B205A18B095047F784F8E60E2ABDBD6A" trl="N">
+    <value column="Text" isTrl="N" original="MARCH">MARCH</value>
+  </row>
+  <row id="B2A7C61155D54FE9A8FFBE923B1D65AA" trl="N">
+    <value column="Text" isTrl="N" original="Nama Produk">Nama Produk</value>
+  </row>
+  <row id="B310E0913C8945E08B3C7DA5040B661E" trl="N">
+    <value column="Text" isTrl="N" original="MARCH">MARCH</value>
+  </row>
+  <row id="B399AF8FE69941E79512089C2BBD5832" trl="N">
+    <value column="Text" isTrl="N" original="MAY">MAY</value>
+  </row>
+  <row id="B3FE842457E7415FAC9703C738463280" trl="N">
+    <value column="Text" isTrl="N" original="Sales Order Review Report">Sales Order Review Report</value>
+  </row>
+  <row id="B40C983E688F453FB2628251362DDE44" trl="N">
+    <value column="Text" isTrl="N" original="No. Dokumen">No. Dokumen</value>
+  </row>
+  <row id="B48299F5C4D04AC89925BCC717DDAFF4" trl="N">
+    <value column="Text" isTrl="N" original="Nama Pelanggan">Nama Pelanggan</value>
+  </row>
+  <row id="B62E350C9CFE4A33963198D31750FADC" trl="N">
+    <value column="Text" isTrl="N" original="Hal">Hal</value>
+  </row>
+  <row id="B689CF9296ED427BA859D62EBF5E5058" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="B720F1DEEF924B40B1D698CE136B5173" trl="N">
+    <value column="Text" isTrl="N" original="DESEMBER">DESEMBER</value>
+  </row>
+  <row id="B8995C1CA7AD409A8892DE18AE55D663" trl="N">
+    <value column="Text" isTrl="N" original="AGUSTUS">AGUSTUS</value>
+  </row>
+  <row id="B9518C1BA81D41F88F9D4221BC35BB20" trl="N">
+    <value column="Text" isTrl="N" original="Byk Belum Ditagih">Byk Belum Ditagih</value>
+  </row>
+  <row id="BA25F01C1B0F449EA3E566E44E1F58E5" trl="N">
+    <value column="Text" isTrl="N" original="JULI">JULI</value>
+  </row>
+  <row id="BAD93D8A658F44CD995CFCF6748487CA" trl="N">
+    <value column="Text" isTrl="N" original="SEPTEMBER">SEPTEMBER</value>
+  </row>
+  <row id="BB45E2791D6F4E23BDB602A212F6B408" trl="N">
+    <value column="Text" isTrl="N" original="MAY">MAY</value>
+  </row>
+  <row id="BE4838E622234E0E9E6BBCBAA3692A82" trl="N">
+    <value column="Text" isTrl="N" original="JULY">JULY</value>
+  </row>
+  <row id="BE58EEBA83DF4246827BA663A0307304" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARI">FEBRUARI</value>
+  </row>
+  <row id="C44EDED71B204F18953E22F6F3760B06" trl="N">
+    <value column="Text" isTrl="N" original="Byk Telah Ditagih">Byk Telah Ditagih</value>
+  </row>
+  <row id="C60FCAAB512641AC9F475AB12B2B34FE" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="CE4B8798F6804563B99E11B1556E3950" trl="N">
+    <value column="Text" isTrl="N" original="JANUARY">JANUARY</value>
+  </row>
+  <row id="D063BD47D35E4486891CE33C0D5D8E3C" trl="N">
+    <value column="Text" isTrl="N" original="AUGUST">AUGUST</value>
+  </row>
+  <row id="D09E41D237534AC2963F16F5974C5697" trl="N">
+    <value column="Text" isTrl="N" original="Customer Balance">Customer Balance</value>
+  </row>
+  <row id="D11E5A65201B4DCC88796621C9D57F02" trl="N">
+    <value column="Text" isTrl="N" original="MAY">MAY</value>
+  </row>
+  <row id="D1FB2C0600644D529BC69511FE6B2289" trl="N">
+    <value column="Text" isTrl="N" original="MAY">MAY</value>
+  </row>
+  <row id="D2B308B847A640B5BBCE3681D77500EF" trl="N">
+    <value column="Text" isTrl="N" original="MAY">MAY</value>
+  </row>
+  <row id="D3A10BDC71184CD7A019704660F46E3A" trl="N">
+    <value column="Text" isTrl="N" original="Nama Produk">Nama Produk</value>
+  </row>
+  <row id="D4A059088C644196879AB4916E563CE6" trl="N">
+    <value column="Text" isTrl="N" original="AUGUST">AUGUST</value>
+  </row>
+  <row id="D5DC7EF7514A446D9289CDF4B683803D" trl="N">
+    <value column="Text" isTrl="N" original="No. Dokumen">No. Dokumen</value>
+  </row>
+  <row id="D6BCE96FC501403D8B7868F8767EECF8" trl="N">
+    <value column="Text" isTrl="N" original="MARET">MARET</value>
+  </row>
+  <row id="D7FB9FF108C440E791812319F2ABAA43" trl="N">
+    <value column="Text" isTrl="N" original="JUNE">JUNE</value>
+  </row>
+  <row id="D8C7ADBBB4CC41F999F23B3B77F79811" trl="N">
+    <value column="Text" isTrl="N" original="Applicable price">Applicable price</value>
+  </row>
+  <row id="D8F286497BDC40EA9D574E2AA89551F8" trl="N">
+    <value column="Text" isTrl="N" original="JUNE">JUNE</value>
+  </row>
+  <row id="D9BF557EB0E943599B30D8D3638D59BD" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="DA5683188C7344EFB5F70A1A553341FC" trl="N">
+    <value column="Text" isTrl="N" original="JANUARI">JANUARI</value>
+  </row>
+  <row id="DB26071BBECE448DB61F70FA554BDC95" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARY">FEBRUARY</value>
+  </row>
+  <row id="DB46A2AFE39E468D837C1EC7CB8B9025" trl="N">
+    <value column="Text" isTrl="N" original="JANUARY">JANUARY</value>
+  </row>
+  <row id="DBC88575399147F0B7A796279F18F971" trl="N">
+    <value column="Text" isTrl="N" original="JULI">JULI</value>
+  </row>
+  <row id="DD4059611B6B4C448621635DE3E41586" trl="N">
+    <value column="Text" isTrl="N" original="Stock Aging Report">Stock Aging Report</value>
+  </row>
+  <row id="DD517B4DE95D4FA496D2A050B52D2D6C" trl="N">
+    <value column="Text" isTrl="N" original="Byk Pesanan">Byk Pesanan</value>
+  </row>
+  <row id="DFF19B9E9C964C08A038ADC656EA2F07" trl="N">
+    <value column="Text" isTrl="N" original="AUGUST">AUGUST</value>
+  </row>
+  <row id="E16981FCA0334999A44F4DD64CB3BC45" trl="N">
+    <value column="Text" isTrl="N" original="Hal">Hal</value>
+  </row>
+  <row id="E26D9C6EF6114B6590A347D16E6DB0D6" trl="N">
+    <value column="Text" isTrl="N" original="OKTOBER">OKTOBER</value>
+  </row>
+  <row id="E3B5BFF04F6749F0A90EDE103959284A" trl="N">
+    <value column="Text" isTrl="N" original="Nama Produk">Nama Produk</value>
+  </row>
+  <row id="E4964229C4FC4396B2351D98E6CEBB10" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="E5B7E96745394163A96B997A152B1874" trl="N">
+    <value column="Text" isTrl="N" original="DECEMBER">DECEMBER</value>
+  </row>
+  <row id="E646B21269F344CC963EC28CFB9FE26A" trl="N">
+    <value column="Text" isTrl="N" original="OKTOBER">OKTOBER</value>
+  </row>
+  <row id="E6D5C822527C4056B330C7536425A27F" trl="N">
+    <value column="Text" isTrl="N" original="SEPTEMBER">SEPTEMBER</value>
+  </row>
+  <row id="E76D3BDAF525406D9D296C9A154F557D" trl="N">
+    <value column="Text" isTrl="N" original="Tgl Pesanan">Tgl Pesanan</value>
+  </row>
+  <row id="E9580DF6186541169103EB5D3BA7154B" trl="N">
+    <value column="Text" isTrl="N" original="Nomor">Nomor</value>
+  </row>
+  <row id="E97CF92786ED41588D53806E7E807104" trl="N">
+    <value column="Text" isTrl="N" original="AGUSTUS">AGUSTUS</value>
+  </row>
+  <row id="EBE3A5996B7C4561823E8EEB1EBBEC02" trl="N">
+    <value column="Text" isTrl="N" original="Ending Balance">Ending Balance</value>
+  </row>
+  <row id="EF1503FE9B6B451D9CE53E7D8560A5E6" trl="N">
+    <value column="Text" isTrl="N" original="Tgl Pesanan">Tgl Pesanan</value>
+  </row>
+  <row id="F01B68773E9F47AD821D02239081217A" trl="N">
+    <value column="Text" isTrl="N" original="Total Qty on hand">Total Qty on hand</value>
+  </row>
+  <row id="F0F1C6002B8C49079A5342D318773523" trl="N">
+    <value column="Text" isTrl="N" original="MEI">MEI</value>
+  </row>
+  <row id="F196C6E821454F25A5026EFA5DEBEDD8" trl="N">
+    <value column="Text" isTrl="N" original="Byk Belum Ditagih">Byk Belum Ditagih</value>
+  </row>
+  <row id="F24CD734139F4045BBBDED7721C2B65C" trl="N">
+    <value column="Text" isTrl="N" original="JUNI">JUNI</value>
+  </row>
+  <row id="F29E35B6B58A44F3AFAA4F18BEDD63B9" trl="N">
+    <value column="Text" isTrl="N" original="JANUARI">JANUARI</value>
+  </row>
+  <row id="F4FD00EB30F245B9913B329C0D982C65" trl="N">
+    <value column="Text" isTrl="N" original="APRIL">APRIL</value>
+  </row>
+  <row id="FA20F68076EA46F8B9D83BA654B0BA89" trl="N">
+    <value column="Text" isTrl="N" original="FEBRUARY">FEBRUARY</value>
+  </row>
+  <row id="FA57B36CF8124BA8A3DFB70A739F6E62" trl="N">
+    <value column="Text" isTrl="N" original="DECEMBER">DECEMBER</value>
+  </row>
+  <row id="FBAD4C6134294694A4BFF9B24B672760" trl="N">
+    <value column="Text" isTrl="N" original="Mitra Bisnis:">Mitra Bisnis:</value>
+  </row>
+  <row id="FC2573C616FD436CBF591977C56B4FDA" trl="N">
+    <value column="Text" isTrl="N" original="SEPTEMBER">SEPTEMBER</value>
+  </row>
+  <row id="FE495A2E3B534181A686786F265389D4" trl="N">
+    <value column="Text" isTrl="N" original="JANUARY">JANUARY</value>
+  </row>
+  <row id="FE6658A975EE431181F95ADBEA548677" trl="N">
+    <value column="Text" isTrl="N" original="AUGUST">AUGUST</value>
+  </row>
+</compiereTrl>

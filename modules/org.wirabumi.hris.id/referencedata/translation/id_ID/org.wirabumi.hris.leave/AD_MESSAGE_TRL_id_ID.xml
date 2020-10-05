@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="1786F4D7FD444C5E9B363B4B40F1F225" trl="N">
+    <value column="MsgText" isTrl="N" original="Leave Request voided.">Leave Request voided.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5544262F40D0409AB4668CB7DF313D25" trl="N">
+    <value column="MsgText" isTrl="N" original="Document status changed into ">Document status changed into </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C10D896E596E4E61A7EEFFB412A93B65" trl="N">
+    <value column="MsgText" isTrl="N" original="Leave Request approved.">Leave Request approved.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

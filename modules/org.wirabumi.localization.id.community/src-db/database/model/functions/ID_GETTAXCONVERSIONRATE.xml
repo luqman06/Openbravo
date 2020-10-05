@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION ID_GETTAXCONVERSIONRATE">
+    <function name="ID_GETTAXCONVERSIONRATE" type="NUMERIC">
+      <parameter name="p_curfrom_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_curto_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_convdate" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_client_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_Rate NUMBER;
+BEGIN
+
+  -- Get Rate
+  select multiplyrate into v_Rate
+	from id_tax_conversion_rate
+	where ad_client_id=p_client_id
+	and c_currency_id=p_curfrom_id
+	and c_currency_id_to=p_curto_id
+	and validfrom<=p_convdate
+	and validto>=p_convdate;
+  
+  IF(v_Rate IS NULL) THEN
+  raise notice 'null rate';
+    RETURN NULL;
+  END IF;
+  -- Standard Precision
+  return v_Rate;
+EXCEPTION
+WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ;
+  RAISE;
+END ID_GETTAXCONVERSIONRATE
+]]></body>
+    </function>
+  </database>

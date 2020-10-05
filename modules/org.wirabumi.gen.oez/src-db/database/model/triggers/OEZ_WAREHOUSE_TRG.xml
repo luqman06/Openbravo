@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OEZ_WAREHOUSE_TRG">
+    <trigger name="OEZ_WAREHOUSE_TRG" table="M_WAREHOUSE" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[declare
+
+v_jumlah NUMBER;
+    
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+   
+   select count(*) into v_jumlah
+   from m_warehouse
+   where ad_client_id=:new.ad_client_id
+   and em_oez_iddistributioncenter='Y';
+
+   if (v_jumlah>1) then
+   	raise exception '@oez_distributioncenterexists@';
+   end if;
+
+END OEZ_WAREHOUSE_TRG
+]]></body>
+    </trigger>
+  </database>

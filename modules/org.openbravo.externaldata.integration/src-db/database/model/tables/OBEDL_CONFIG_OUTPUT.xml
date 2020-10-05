@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+  <database name="TABLE OBEDL_CONFIG_OUTPUT">
+    <table name="OBEDL_CONFIG_OUTPUT" primaryKey="OBEDL_CONFIG_OUT_KEY">
+      <column name="OBEDL_CONFIG_OUTPUT_ID" primaryKey="true" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_CLIENT_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="AD_ORG_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISACTIVE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="CREATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATED" primaryKey="false" required="true" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default><![CDATA[SYSDATE]]></default>
+        <onCreateDefault/>
+      </column>
+      <column name="UPDATEDBY" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="SEQNO" primaryKey="false" required="true" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OUTPUT_PATH" primaryKey="false" required="false" type="VARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OUTPUT_USER" primaryKey="false" required="false" type="NVARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OUTPUT_PASS" primaryKey="false" required="false" type="NVARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OUTPUT_FILENAME" primaryKey="false" required="false" type="VARCHAR" size="2000" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OBEDL_CONFIGURATION_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="OBEDL_OUTPUT_TYPE_ID" primaryKey="false" required="true" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="WSMETHOD" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="ISRETRYENABLED" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <column name="MAXRETRY" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="RETRYINTERVAL" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="AD_CLIENT" name="OBEDL_CONFIG_OUT_AD_CLIENT">
+        <reference local="AD_CLIENT_ID" foreign="AD_CLIENT_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_ORG" name="OBEDL_CONFIG_OUT_AD_ORG">
+        <reference local="AD_ORG_ID" foreign="AD_ORG_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="OBEDL_CONFIGURATION" name="OBEDL_CONFIG_OUT_CONFIG">
+        <reference local="OBEDL_CONFIGURATION_ID" foreign="OBEDL_CONFIGURATION_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="OBEDL_OUTPUT_TYPE" name="OBEDL_CONFIG_OUT_TYPE">
+        <reference local="OBEDL_OUTPUT_TYPE_ID" foreign="OBEDL_OUTPUT_TYPE_ID"/>
+      </foreign-key>
+      <index name="OBEDL_CONF_OUT_CONF_INDEX" unique="false">
+        <index-column name="OBEDL_CONFIGURATION_ID"/>
+      </index>
+      <check name="OBEDL_CONFIG_OUT_ACTIVE_CHECK"><![CDATA[ISACTIVE IN ('Y', 'N')]]></check>
+      <check name="OBEDL_CONFIG_OUT_ISRETRY_CHK"><![CDATA[ISRETRYENABLED IN ('Y', 'N')]]></check>
+      <check name="OBEDL_CONFIG_OUT_MAXRETRY_CHK"><![CDATA[ISRETRYENABLED = 'N' OR MAXRETRY IS NOT NULL]]></check>
+      <check name="OBEDL_CONFIG_OUT_RETRYINT_CHK"><![CDATA[ISRETRYENABLED = 'N' OR RETRYINTERVAL IS NOT NULL]]></check>
+    </table>
+  </database>

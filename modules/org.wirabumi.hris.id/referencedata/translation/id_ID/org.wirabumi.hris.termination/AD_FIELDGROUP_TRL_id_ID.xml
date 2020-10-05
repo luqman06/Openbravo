@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELDGROUP" version="">
+  <row id="61EBC138FC07480986F42CC6E1C89004" trl="N">
+    <value column="Name" isTrl="N" original="Salary">Salary</value>
+  </row>
+</compiereTrl>

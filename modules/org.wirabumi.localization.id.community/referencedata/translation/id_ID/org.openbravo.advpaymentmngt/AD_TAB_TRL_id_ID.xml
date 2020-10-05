@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="15ECCF8974044A81982F57F9F1E1A67B" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan">Payment Plan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Sales Invoice Payment Plans">Sales Invoice Payment Plans</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Sales invoice payment plan information is shown grouped in two sections. ">Sales invoice payment plan information is shown grouped in two sections. </value>
+  </row>
+  <row id="1EA4A3F31A27483A8C6E93176AE912D3" trl="N">
+    <value column="Name" isTrl="N" original="Accounting">Accounting</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Accounting information related to the doubtful debt">Accounting information related to the doubtful debt</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Accounting information related to the doubtful debt">Accounting information related to the doubtful debt</value>
+  </row>
+  <row id="2A9BA5FDA0F8470D881F8EA9DEDCC598" trl="N">
+    <value column="Name" isTrl="N" original="Accounting History">Accounting History</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Accounting history">Accounting history</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This tab shows the accounting history of a given transaction.">This tab shows the accounting history of a given transaction.</value>
+  </row>
+  <row id="2ECAED4620B840BA8DD738140F58A629" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan">Payment Plan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Sales Invoice Payment Plans">Sales Invoice Payment Plans</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Purchase invoice payment plan information is shown grouped in two sections. ">Purchase invoice payment plan information is shown grouped in two sections. </value>
+  </row>
+  <row id="3FD616A223E44621806A8573068B6C62" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debts Process">Doubtful Debts Process</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.</value>
+  </row>
+  <row id="5B9941AC1F6A4529A76FCA7CDA0A7D7A" trl="N">
+    <value column="Name" isTrl="N" original="Transactions old">Transactions old</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="60825C9E68644DBC9C530DDCABE05A6E" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan">Payment Plan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.">List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The payment plan tab lists the scheduled payments expected against the invoice.">The payment plan tab lists the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="6707D7449A8D45DB851F608BA88329C8" trl="N">
+    <value column="Name" isTrl="N" original="Payment Details">Payment Details</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Displays the details of the payments (pre-payments or regular payments) made for the order or for the invoice/s of the order.">Displays the details of the payments (pre-payments or regular payments) made for the order or for the invoice/s of the order.</value>
+  </row>
+  <row id="79DFBE24B39742AD877E3163643E619F" trl="N">
+    <value column="Name" isTrl="N" original="Cleared items">Cleared items</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Cleared transactions">Cleared transactions</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This tab shows the transactions cleared or set as matched in a reconciliation.">This tab shows the transactions cleared or set as matched in a reconciliation.</value>
+  </row>
+  <row id="7A8D43541F8C49F1BD8A431A0041BF89" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan">Payment Plan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.">List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The payment plan tab lists the scheduled payments expected against the invoice.">The payment plan tab lists the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="7BE8B207C88947C498677C172ECDDECC" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt Method">Doubtful Debt Method</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="81644A22CC4D4B879AA71C33C30E00A4" trl="N">
+    <value column="Name" isTrl="N" original="Pick and Edit Lines">Pick and Edit Lines</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="89C009D99323470DB51F100697E2F50C" trl="N">
+    <value column="Name" isTrl="N" original="Lines">Lines</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9380E9AFB1074FB98030E5549D7FF346" trl="N">
+    <value column="Name" isTrl="N" original="Financial Account Defaults">Financial Account Defaults</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="Default accounts for the financial accounts in this accounting schema">Default accounts for the financial accounts in this accounting schema</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Default ledger accounts for the financial accounts.">Default ledger accounts for the financial accounts.</value>
+  </row>
+  <row id="9817E22E2536417F8C9AEC8D5FA33E18" trl="N">
+    <value column="Name" isTrl="N" original="Payment Details">Payment Details</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of payment made details against a particular invoice based on the payment in plan..">List of payment made details against a particular invoice based on the payment in plan..</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This tab displays the details of the payments made against the invoice.">This tab displays the details of the payments made against the invoice.</value>
+  </row>
+  <row id="9D859A2A50F44562AFA21AAF2DF91B8A" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt">Doubtful Debt</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A94442B27F664A41BF64735DFA76FB4D" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan (old)">Payment Plan (old)</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of scheduled payments in expected against a particular invoice and payment plan associated with that invoice.">List of scheduled payments in expected against a particular invoice and payment plan associated with that invoice.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The payment plan tab lists the scheduled payments expected against the invoice.">The payment plan tab lists the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="B82C02920AA84E8DB57D553185BD2F06" trl="N">
+    <value column="Name" isTrl="N" original="Payment Details">Payment Details</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Displays the details of the payments (pre-payments or regular payments) received for the order or for the invoice/s of the order.">Displays the details of the payments (pre-payments or regular payments) received for the order or for the invoice/s of the order.</value>
+  </row>
+  <row id="C095D2CC39704DBE8B906B7CD7710968" trl="N">
+    <value column="Name" isTrl="N" original="Reconciliations old">Reconciliations old</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D4D450A66C754D65940DBC36B11779C8" trl="N">
+    <value column="Name" isTrl="N" original="Lines">Lines</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E4DC11F751F34F0DAE11A4D856CD99EB" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt">Doubtful Debt</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EB0466B2A22343F28773B356D292BC7E" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan (old)">Payment Plan (old)</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.">List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="List of the scheduled payments expected against the invoice.">List of the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="EB0E0C5A58344F7FA345097E7365CD22" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan">Payment Plan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Shows the total amount expected to be collected upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.">Shows the total amount expected to be collected upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.</value>
+  </row>
+  <row id="F6C2283A21314407BBBB23FF14B85ED4" trl="N">
+    <value column="Name" isTrl="N" original="Payment Details">Payment Details</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of payment made details against a particular invoice based on the payment in plan..">List of payment made details against a particular invoice based on the payment in plan..</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This tab displays the details of the payments made against the invoice.">This tab displays the details of the payments made against the invoice.</value>
+  </row>
+  <row id="F9751D712A804D57B97A36803843F2D7" trl="N">
+    <value column="Name" isTrl="N" original="Payment Details (old)">Payment Details (old)</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of payments made details against a particular invoice based on the payment plan">List of payments made details against a particular invoice based on the payment plan</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This tab displays the details of the payments made against the invoice.">This tab displays the details of the payments made against the invoice.</value>
+  </row>
+  <row id="FA57D75B1BBB4583B4A777008A29BF54" trl="N">
+    <value column="Name" isTrl="N" original="Payment Plan">Payment Plan</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Shows the total amount expected to be paid upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.">Shows the total amount expected to be paid upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.</value>
+  </row>
+  <row id="FA66A130BE8B48E88BF4F5A6E2FA0CDD" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt Run">Doubtful Debt Run</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FD40D9C2F1F14943933DEFEF4A8458E4" trl="N">
+    <value column="Name" isTrl="N" original="Payment Details (old)">Payment Details (old)</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original="List of payment made details against a particular invoice based on the payment in plan..">List of payment made details against a particular invoice based on the payment in plan..</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Display the details of the payments received against the invoice.">Display the details of the payments received against the invoice.</value>
+  </row>
+  <row id="FF8080812F213146012F2135BC25000E" trl="N">
+    <value column="Name" isTrl="N" original="Transactions old 2">Transactions old 2</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The transaction tab lists all the deposit and withdrawal transactions of the financial account.">The transaction tab lists all the deposit and withdrawal transactions of the financial account.</value>
+  </row>
+  <row id="FF80808130BB89090130BB9A3A2B0043" trl="N">
+    <value column="Name" isTrl="N" original="Accounting">Accounting</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The accounting tab is a read-only tab which showa every financial account transaction posting.">The accounting tab is a read-only tab which showa every financial account transaction posting.</value>
+  </row>
+  <row id="FF8080813320657F0133209DE21B0042" trl="N">
+    <value column="Name" isTrl="N" original="Reconciliations">Reconciliations</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The reconciliation tab shows the reconciliations created manually if no matching algorithm is assigned to the financial account as well as the ones created while matching an imported bank statement file otherwise.">The reconciliation tab shows the reconciliations created manually if no matching algorithm is assigned to the financial account as well as the ones created while matching an imported bank statement file otherwise.</value>
+  </row>
+</compiereTrl>

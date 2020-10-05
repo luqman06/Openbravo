@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="01393AA1D2794CE58FF37D05582C66F5" trl="N">
+    <value column="Text" isTrl="N" original="Current Address">Current Address</value>
+  </row>
+  <row id="01426CAF7316416EBAE287D89A7728F0" trl="N">
+    <value column="Text" isTrl="N" original="Grade">Grade</value>
+  </row>
+  <row id="05E0C91FD49D48AD9CF7537E687DCADD" trl="N">
+    <value column="Text" isTrl="N" original="Grade">Grade</value>
+  </row>
+  <row id="0636C50C46074038BEA5DFE3A12D025C" trl="N">
+    <value column="Text" isTrl="N" original="Mulai Tanggal">Mulai Tanggal</value>
+  </row>
+  <row id="06ABEA9BF503444FBC09876B8C92AA24" trl="N">
+    <value column="Text" isTrl="N" original="Withholding">Withholding</value>
+  </row>
+  <row id="09A9195DE02746C8955A7B460F961B94" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Mulai">Tanggal Mulai</value>
+  </row>
+  <row id="0A4A237174CF469CB734DF31EF32D812" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="0A5CBF69DE6B482E8803D4E75FAF14DC" trl="N">
+    <value column="Text" isTrl="N" original="Expired">Expired</value>
+  </row>
+  <row id="0B6BA51AB2B446AF8615FFF825E3965F" trl="N">
+    <value column="Text" isTrl="N" original="Graduate">Graduate</value>
+  </row>
+  <row id="0BEA79A04C374564A52F0F0089644754" trl="N">
+    <value column="Text" isTrl="N" original="Activity Name">Activity Name</value>
+  </row>
+  <row id="0CCD24F016B14AF9A1136D21A42C9F35" trl="N">
+    <value column="Text" isTrl="N" original="Training">Training</value>
+  </row>
+  <row id="0EEF4689301542D59D9F938C5E8E8AFD" trl="N">
+    <value column="Text" isTrl="N" original="Valid To">Valid To</value>
+  </row>
+  <row id="10997643669E4130BFAB1E20B245CF4A" trl="N">
+    <value column="Text" isTrl="N" original="Insured">Insured</value>
+  </row>
+  <row id="12389BAA3B3A489AB9E2B5D621716338" trl="N">
+    <value column="Text" isTrl="N" original="Address 2">Address 2</value>
+  </row>
+  <row id="1240FD082F614193848E58371F6A83CA" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Mulai Kerja">Tanggal Mulai Kerja</value>
+  </row>
+  <row id="13D1006030854B5FAF4A71B741060EE2" trl="N">
+    <value column="Text" isTrl="N" original="General Information">General Information</value>
+  </row>
+  <row id="15A45070CF134746AF3E19044CF2091A" trl="N">
+    <value column="Text" isTrl="N" original="religion">religion</value>
+  </row>
+  <row id="16B3B8FFBB2248478329F73AC8BFE8EF" trl="N">
+    <value column="Text" isTrl="N" original="Birth Day">Birth Day</value>
+  </row>
+  <row id="19765C2673AE44B3A8E7F856CFD3CEFB" trl="N">
+    <value column="Text" isTrl="N" original="4. Riwayat Pendidikan">4. Riwayat Pendidikan</value>
+  </row>
+  <row id="19C638A5EC26456BA3BE5307E4CFB1D1" trl="N">
+    <value column="Text" isTrl="N" original="Jenjang Jabatan">Jenjang Jabatan</value>
+  </row>
+  <row id="19FBCCCFCC3145869CF4A430CF616561" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="1A27316D4FFC4DA692EDE317ED6013A5" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan Lengkap">Jabatan Lengkap</value>
+  </row>
+  <row id="1A4EB0F33B6D42BE9CE80634DFC5AFBF" trl="N">
+    <value column="Text" isTrl="N" original="Marital Status">Marital Status</value>
+  </row>
+  <row id="1AFA9BDB33104FC0BCECC74F11980554" trl="N">
+    <value column="Text" isTrl="N" original="Grade Note">Grade Note</value>
+  </row>
+  <row id="1B0DF47686E94578A9EFB19700891BE5" trl="N">
+    <value column="Text" isTrl="N" original="Valid From">Valid From</value>
+  </row>
+  <row id="1CEA5B7F18224A0DA4928D481843EAD4" trl="N">
+    <value column="Text" isTrl="N" original="Grade">Grade</value>
+  </row>
+  <row id="21285314C63C470A8D6E65F790188925" trl="N">
+    <value column="Text" isTrl="N" original="Valid To">Valid To</value>
+  </row>
+  <row id="2220099A42E34BA39CD3DCC65AA86727" trl="N">
+    <value column="Text" isTrl="N" original="Nama Karyawan">Nama Karyawan</value>
+  </row>
+  <row id="26FC75CA045E4A149208EA1A8F2C2317" trl="N">
+    <value column="Text" isTrl="N" original="Name :">Name :</value>
+  </row>
+  <row id="28CAEA83F4F94F5DB81BF7D6C67EA55E" trl="N">
+    <value column="Text" isTrl="N" original="Valid From">Valid From</value>
+  </row>
+  <row id="29376F67C09A4A4A91C364E0E4CC444D" trl="N">
+    <value column="Text" isTrl="N" original="Wilayah">Wilayah</value>
+  </row>
+  <row id="2E9861AE22AD48C2B37EA3DA57291300" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan Lengkap">Jabatan Lengkap</value>
+  </row>
+  <row id="32C47AB16D644A22B0FAEA9991C7605B" trl="N">
+    <value column="Text" isTrl="N" original="Join Date">Join Date</value>
+  </row>
+  <row id="33272E869A8B40998177D43D04556113" trl="N">
+    <value column="Text" isTrl="N" original="Job Title :">Job Title :</value>
+  </row>
+  <row id="3410AE14C2FA4E21B486D3C581D822DE" trl="N">
+    <value column="Text" isTrl="N" original="Remark">Remark</value>
+  </row>
+  <row id="34506578291E42559EC3ABAC6E2AF306" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="34DF27A477E9445A8EE1A074870120DF" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Mulai">Tanggal Mulai</value>
+  </row>
+  <row id="34E718C3EC7C45B3A8DF670380420C41" trl="N">
+    <value column="Text" isTrl="N" original="Phone 1">Phone 1</value>
+  </row>
+  <row id="384FD76DA38C4F7AA11021BC75E0D8C8" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="38651A90443447A7B74050ED3F4E9FD3" trl="N">
+    <value column="Text" isTrl="N" original="Employement Period">Employement Period</value>
+  </row>
+  <row id="3AC8CEAEEE0B441C86742902B903CBD0" trl="N">
+    <value column="Text" isTrl="N" original="Rate">Rate</value>
+  </row>
+  <row id="3CC1E339D34C4294ABC3FB324DFD7842" trl="N">
+    <value column="Text" isTrl="N" original="Nomor SK">Nomor SK</value>
+  </row>
+  <row id="3CCAAAF4D3E74D6187AA8D4200B048C9" trl="N">
+    <value column="Text" isTrl="N" original="Birthday">Birthday</value>
+  </row>
+  <row id="3D0921CCF9BB4F648F420F3ED4B281E1" trl="N">
+    <value column="Text" isTrl="N" original="Remark">Remark</value>
+  </row>
+  <row id="3E0BD94DD4594BD4B9763204E73C0C0A" trl="N">
+    <value column="Text" isTrl="N" original="5. Penghargaan">5. Penghargaan</value>
+  </row>
+  <row id="3E248592C8194AECB27ED99C543F1E5F" trl="N">
+    <value column="Text" isTrl="N" original="Jenjang Jabatan">Jenjang Jabatan</value>
+  </row>
+  <row id="3FB8C1E03A974976A902DBA244EA60C4" trl="N">
+    <value column="Text" isTrl="N" original="Report To">Report To</value>
+  </row>
+  <row id="455941974937434CBEAA5A5DAB583223" trl="N">
+    <value column="Text" isTrl="N" original="Ending Date">Ending Date</value>
+  </row>
+  <row id="45BE3EE08B9F488F9CAC0384124A6514" trl="N">
+    <value column="Text" isTrl="N" original="Pangkat/Gol">Pangkat/Gol</value>
+  </row>
+  <row id="45F8C2854D5B49408ADD4201A85EA1A2" trl="N">
+    <value column="Text" isTrl="N" original="Contract No">Contract No</value>
+  </row>
+  <row id="496E8E0A6BB04A6791308A945879B8BE" trl="N">
+    <value column="Text" isTrl="N" original="Tingkat Pendidikan">Tingkat Pendidikan</value>
+  </row>
+  <row id="4B3CD319C6D24ACA9EC1D867D2E7D9F2" trl="N">
+    <value column="Text" isTrl="N" original="Dicipline">Dicipline</value>
+  </row>
+  <row id="4BB144AB8FB7491AB3A0168DB94C58DA" trl="N">
+    <value column="Text" isTrl="N" original="Level">Level</value>
+  </row>
+  <row id="4C13179918C74B059501114926166FE5" trl="N">
+    <value column="Text" isTrl="N" original="ARCI Matrix by Activity">ARCI Matrix by Activity</value>
+  </row>
+  <row id="4E7059A075314945BA2826D2D93870F7" trl="N">
+    <value column="Text" isTrl="N" original="Grade Note">Grade Note</value>
+  </row>
+  <row id="4F4071CB91764092AFE391CED88D2926" trl="N">
+    <value column="Text" isTrl="N" original="Nama Institusi">Nama Institusi</value>
+  </row>
+  <row id="5241E0D2463C4BEE95C59F49C1C70B1A" trl="N">
+    <value column="Text" isTrl="N" original="Status Kepegawaian">Status Kepegawaian</value>
+  </row>
+  <row id="559ABD12FF7B447A9ECCD9301871E332" trl="N">
+    <value column="Text" isTrl="N" original="Activity Search Key">Activity Search Key</value>
+  </row>
+  <row id="5636110D6CA6432AB752F56040C4ED13" trl="N">
+    <value column="Text" isTrl="N" original="8. Kompetensi">8. Kompetensi</value>
+  </row>
+  <row id="566153B614764C1494073B0F5732AB3E" trl="N">
+    <value column="Text" isTrl="N" original="Position">Position</value>
+  </row>
+  <row id="5912BD60A59C438B9C1021D6B32BCEF7" trl="N">
+    <value column="Text" isTrl="N" original="Level">Level</value>
+  </row>
+  <row id="59C1398685B940A7852FDBACEDB0B885" trl="N">
+    <value column="Text" isTrl="N" original="Ending Date">Ending Date</value>
+  </row>
+  <row id="5A9789BA319D4B51A86FAE837DA543CA" trl="N">
+    <value column="Text" isTrl="N" original="Operator">Operator</value>
+  </row>
+  <row id="5AC05FB48B8B46F3AB67DE808ED843E0" trl="N">
+    <value column="Text" isTrl="N" original="Family">Family</value>
+  </row>
+  <row id="5AE819084A6C439BAFE028A8A34C82C7" trl="N">
+    <value column="Text" isTrl="N" original="Valid To">Valid To</value>
+  </row>
+  <row id="5BAB601A715045DCB04C04AAB30A7E0F" trl="N">
+    <value column="Text" isTrl="N" original="Position">Position</value>
+  </row>
+  <row id="5E75E61D30AD4A9DA7DC87A6CC198A8E" trl="N">
+    <value column="Text" isTrl="N" original="State">State</value>
+  </row>
+  <row id="62869114B1064F6083DFE21C768E61A8" trl="N">
+    <value column="Text" isTrl="N" original="Tax ID">Tax ID</value>
+  </row>
+  <row id="63CA933F55C34090899C236EC54BF631" trl="N">
+    <value column="Text" isTrl="N" original="Job Title">Job Title</value>
+  </row>
+  <row id="6438D6136E52455BAED1AD9D2B0BFBB4" trl="N">
+    <value column="Text" isTrl="N" original="name">name</value>
+  </row>
+  <row id="6633CD2E2F014D3FB20BBEA7985E9C35" trl="N">
+    <value column="Text" isTrl="N" original="Valid To">Valid To</value>
+  </row>
+  <row id="68C18C56423145638791352F2862FA46" trl="N">
+    <value column="Text" isTrl="N" original="Education">Education</value>
+  </row>
+  <row id="6B72191B654049B7B812A72A845F1294" trl="N">
+    <value column="Text" isTrl="N" original="Jenis Kelamin">Jenis Kelamin</value>
+  </row>
+  <row id="6D2CEB6BE0A741249209F9BE5E3CA7BC" trl="N">
+    <value column="Text" isTrl="N" original="Status Kepegawaian">Status Kepegawaian</value>
+  </row>
+  <row id="6EE19228DC2F4F00B16DA98B9CC3F8C2" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="70A49143794542E68FE4698B8D2BAB88" trl="N">
+    <value column="Text" isTrl="N" original="Nomer SK">Nomer SK</value>
+  </row>
+  <row id="7285719D061449CB96C52AFA00EB51E6" trl="N">
+    <value column="Text" isTrl="N" original="Location Address">Location Address</value>
+  </row>
+  <row id="7301128F28CC4D07ABF0BC8D54464326" trl="N">
+    <value column="Text" isTrl="N" original="Contract No">Contract No</value>
+  </row>
+  <row id="73481DA488104DB8ACFF7DC10A39D618" trl="N">
+    <value column="Text" isTrl="N" original="Status Pernikahan">Status Pernikahan</value>
+  </row>
+  <row id="747DAD53A27C404D913789CBAA397441" trl="N">
+    <value column="Text" isTrl="N" original="Status Kepegawaian">Status Kepegawaian</value>
+  </row>
+  <row id="74881172660341E1AAA1B6686F6C56A2" trl="N">
+    <value column="Text" isTrl="N" original="Jenis Pelanggaran">Jenis Pelanggaran</value>
+  </row>
+  <row id="7490E12680054BFDB827B798113D6F82" trl="N">
+    <value column="Text" isTrl="N" original="Certificate">Certificate</value>
+  </row>
+  <row id="75482B46ED1A4B159A3972EC3E811B99" trl="N">
+    <value column="Text" isTrl="N" original="Resignation Reason">Resignation Reason</value>
+  </row>
+  <row id="75A6E223873A4332A82F50BE08DBB42B" trl="N">
+    <value column="Text" isTrl="N" original="Valid To">Valid To</value>
+  </row>
+  <row id="779994E7947842028569030FAF6FD62E" trl="N">
+    <value column="Text" isTrl="N" original="Valid From">Valid From</value>
+  </row>
+  <row id="7D78ACF603C840AC833E4AF03A442A3A" trl="N">
+    <value column="Text" isTrl="N" original="Relation">Relation</value>
+  </row>
+  <row id="7EB43BA48DDA4553A1D95108DF027939" trl="N">
+    <value column="Text" isTrl="N" original="Grade">Grade</value>
+  </row>
+  <row id="7FC69D16279F4F3C9A71CD42F1E9FCDE" trl="N">
+    <value column="Text" isTrl="N" original="Employment Type">Employment Type</value>
+  </row>
+  <row id="80BD5CAC20214F2C8E4552F0C1098851" trl="N">
+    <value column="Text" isTrl="N" original="Valid From">Valid From</value>
+  </row>
+  <row id="82112348E72C4E2FA5C7C53289DF96A1" trl="N">
+    <value column="Text" isTrl="N" original="Marital Status">Marital Status</value>
+  </row>
+  <row id="829D31353EEB4CE3885EF9F0112C75C4" trl="N">
+    <value column="Text" isTrl="N" original="Pangkat/Gol">Pangkat/Gol</value>
+  </row>
+  <row id="82BD53E2476B42B59246C00490236F0B" trl="N">
+    <value column="Text" isTrl="N" original="Remark">Remark</value>
+  </row>
+  <row id="83EC1F8C00A24713B47BEB10BF8A93DC" trl="N">
+    <value column="Text" isTrl="N" original="Staff">Staff</value>
+  </row>
+  <row id="844B7C0085C84D939C8BF44903C496EA" trl="N">
+    <value column="Text" isTrl="N" original="Agama">Agama</value>
+  </row>
+  <row id="85D76FAD554B499481A19B88A7F1DA38" trl="N">
+    <value column="Text" isTrl="N" original="Tempat Lahir">Tempat Lahir</value>
+  </row>
+  <row id="8B92509DA66140DE8A4DD4D4D8086888" trl="N">
+    <value column="Text" isTrl="N" original="Years Of Service">Years Of Service</value>
+  </row>
+  <row id="8D1C3FED22D043BF843E86B95E1CC01B" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan Lengkap">Jabatan Lengkap</value>
+  </row>
+  <row id="8FA0717C49C14804B182E83413748EBA" trl="N">
+    <value column="Text" isTrl="N" original="Employment History">Employment History</value>
+  </row>
+  <row id="91EC492EC14A452C9D4FC5CFC329B79B" trl="N">
+    <value column="Text" isTrl="N" original="Actual">Actual</value>
+  </row>
+  <row id="942AEA637CE1407B9CC16965D87353CA" trl="N">
+    <value column="Text" isTrl="N" original="Institution Name">Institution Name</value>
+  </row>
+  <row id="966A520BADBC4D9297D8DD2D63E5A207" trl="N">
+    <value column="Text" isTrl="N" original="Nomer SK">Nomer SK</value>
+  </row>
+  <row id="98483BD2657C42AEA2AA9394EC29FE5C" trl="N">
+    <value column="Text" isTrl="N" original="Retriment Date">Retriment Date</value>
+  </row>
+  <row id="9B09891A514B4626B48F7AE6FF9622AF" trl="N">
+    <value column="Text" isTrl="N" original="Jenjang Jabatan">Jenjang Jabatan</value>
+  </row>
+  <row id="9C6284181B954A06B18121A69CC0D572" trl="N">
+    <value column="Text" isTrl="N" original="Job Title">Job Title</value>
+  </row>
+  <row id="A12070717959489C882A1CF1B3D16428" trl="N">
+    <value column="Text" isTrl="N" original="Position">Position</value>
+  </row>
+  <row id="A1D984A976E04888A197C47882877B1F" trl="N">
+    <value column="Text" isTrl="N" original="Competency">Competency</value>
+  </row>
+  <row id="A74C2A071D6E4C989AAE3102B86E015D" trl="N">
+    <value column="Text" isTrl="N" original="7. Sertifikat">7. Sertifikat</value>
+  </row>
+  <row id="A7EB0270EB4741AD9FEC30D58861DA45" trl="N">
+    <value column="Text" isTrl="N" original="KPI">KPI</value>
+  </row>
+  <row id="A836A9B08F7141B89E77B32EAF3EF4F9" trl="N">
+    <value column="Text" isTrl="N" original="Required Competency Report by Job Title by Personel">Required Competency Report by Job Title by Personel</value>
+  </row>
+  <row id="A9D2CE58A0CE45B1B812001EAE285F68" trl="N">
+    <value column="Text" isTrl="N" original="Search Key">Search Key</value>
+  </row>
+  <row id="ABEFF034026C42B2A68A60BA411006DA" trl="N">
+    <value column="Text" isTrl="N" original="Grade Note">Grade Note</value>
+  </row>
+  <row id="AD30CAED13C84A198CCBA4B724229756" trl="N">
+    <value column="Text" isTrl="N" original="Search Key">Search Key</value>
+  </row>
+  <row id="ADE53C3FA44741259600BF2918CB0FE1" trl="N">
+    <value column="Text" isTrl="N" original="Blod Group">Blod Group</value>
+  </row>
+  <row id="AF2A852A68754B43A6D6133B42614FFF" trl="N">
+    <value column="Text" isTrl="N" original="Employee Card">Employee Card</value>
+  </row>
+  <row id="B2F65A48C1D544BBA765DE17A05B7C6F" trl="N">
+    <value column="Text" isTrl="N" original="1. Kontrak Kerja">1. Kontrak Kerja</value>
+  </row>
+  <row id="B3E496651328422E811236BB005A80F6" trl="N">
+    <value column="Text" isTrl="N" original="Disiplin Ilmu">Disiplin Ilmu</value>
+  </row>
+  <row id="B69EAAA83D2B4E049D5CA96DD5FF1D78" trl="N">
+    <value column="Text" isTrl="N" original="Valid From">Valid From</value>
+  </row>
+  <row id="B75007698DC14B9D967318869A85A173" trl="N">
+    <value column="Text" isTrl="N" original="Certificate/License">Certificate/License</value>
+  </row>
+  <row id="B757B07DDA2845329817F0B960B80019" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Lahir">Tanggal Lahir</value>
+  </row>
+  <row id="BAFAFA94492F415893CA2E9A76A84B2D" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="BD6C64F7753C4B8188807E2AAE2A902C" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="BD9F02A3CD544B7DAD63EFF6C41F0939" trl="N">
+    <value column="Text" isTrl="N" original="Job Title">Job Title</value>
+  </row>
+  <row id="C48A35B2587B4CC79D5B3E45D2D8BD70" trl="N">
+    <value column="Text" isTrl="N" original="Certified">Certified</value>
+  </row>
+  <row id="C6BA4D81764341D99D69C4DCD3623548" trl="N">
+    <value column="Text" isTrl="N" original="Sertifikat">Sertifikat</value>
+  </row>
+  <row id="C76284C85E6440C4AE3810C5A60955A4" trl="N">
+    <value column="Text" isTrl="N" original="Working Experience">Working Experience</value>
+  </row>
+  <row id="C7CE58FC1E3245B9B5EA95BDFADCEE5F" trl="N">
+    <value column="Text" isTrl="N" original="Status Kepegawaian">Status Kepegawaian</value>
+  </row>
+  <row id="CAD5480355C7452C924A9A8A70166E80" trl="N">
+    <value column="Text" isTrl="N" original="Nomor Induk Karyawan">Nomor Induk Karyawan</value>
+  </row>
+  <row id="CB157B495539460BAECDFFDABEB056DB" trl="N">
+    <value column="Text" isTrl="N" original="Selesai Tanggal">Selesai Tanggal</value>
+  </row>
+  <row id="CC761D4EC0494440AB1FDE3B775039D1" trl="N">
+    <value column="Text" isTrl="N" original="Level">Level</value>
+  </row>
+  <row id="CE74D7C650A24961921B09C6704E8BD1" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Kelulusan">Tanggal Kelulusan</value>
+  </row>
+  <row id="D119A64AF3AD44A2A05F8F8B4E51560D" trl="N">
+    <value column="Text" isTrl="N" original="Holder">Holder</value>
+  </row>
+  <row id="D21C3FC0C37946F6BD4848040C78490B" trl="N">
+    <value column="Text" isTrl="N" original="Bank Name">Bank Name</value>
+  </row>
+  <row id="D5D9796FE2C34255826FEA90AC59C4C9" trl="N">
+    <value column="Text" isTrl="N" original="Ending Date">Ending Date</value>
+  </row>
+  <row id="D5F1B34203B14F689BD6BD6F2F77B0D5" trl="N">
+    <value column="Text" isTrl="N" original="Nama Penghargaan">Nama Penghargaan</value>
+  </row>
+  <row id="D679B79D664341FC89EAFCBD548E311B" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="DADC43103A1841128E2DD2E6F56293D7" trl="N">
+    <value column="Text" isTrl="N" original="Valid From">Valid From</value>
+  </row>
+  <row id="DB87DF751BD74301A2886059577200BB" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan Lengkap">Jabatan Lengkap</value>
+  </row>
+  <row id="DB907A840D1E446B9DF8840860B65B34" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Sertifikat">Tanggal Sertifikat</value>
+  </row>
+  <row id="DCF09045CF984527AA0B99F866BD9C2C" trl="N">
+    <value column="Text" isTrl="N" original="Competency">Competency</value>
+  </row>
+  <row id="DDAEBBE8D1F54ED883B0AF092C5815F4" trl="N">
+    <value column="Text" isTrl="N" original="Required Traning By Job Title By Personel">Required Traning By Job Title By Personel</value>
+  </row>
+  <row id="DE10E1285B904B05A02FB64FC87EBA28" trl="N">
+    <value column="Text" isTrl="N" original="Job Title">Job Title</value>
+  </row>
+  <row id="DEF28FD704454002904D4563829F1D51" trl="N">
+    <value column="Text" isTrl="N" original="Phone 1">Phone 1</value>
+  </row>
+  <row id="DF0DDA94204645B1A60E705D0B466F07" trl="N">
+    <value column="Text" isTrl="N" original="Target">Target</value>
+  </row>
+  <row id="DFC8DAAD5A624BE781788D94C90A1696" trl="N">
+    <value column="Text" isTrl="N" original="Report To">Report To</value>
+  </row>
+  <row id="E550BE8423ED47BAACE554E4C467A8D5" trl="N">
+    <value column="Text" isTrl="N" original="Grade Note">Grade Note</value>
+  </row>
+  <row id="E87398A00A984033A1E5A5944868CA1B" trl="N">
+    <value column="Text" isTrl="N" original="Competency Certification by Employee Report">Competency Certification by Employee Report</value>
+  </row>
+  <row id="EDBA6A2B3DF24BABBF86094AE15426F9" trl="N">
+    <value column="Text" isTrl="N" original="ARCI Matrix">ARCI Matrix</value>
+  </row>
+  <row id="EDD17FCDA6C64A509595C3A671E4616B" trl="N">
+    <value column="Text" isTrl="N" original="6. Pelanggaran Disiplin">6. Pelanggaran Disiplin</value>
+  </row>
+  <row id="F100F954BD3244358C380EED09BB7FE6" trl="N">
+    <value column="Text" isTrl="N" original="Address 1">Address 1</value>
+  </row>
+  <row id="F224EA4DB75E41739E80FB0B42ABDB06" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Penghargaan">Tanggal Penghargaan</value>
+  </row>
+  <row id="F3333C4C1AAF4E01AD83B918413DD8A1" trl="N">
+    <value column="Text" isTrl="N" original="Ending Date">Ending Date</value>
+  </row>
+  <row id="F601E9D09C8B4AE5A96C64AB98824585" trl="N">
+    <value column="Text" isTrl="N" original="Job Title">Job Title</value>
+  </row>
+  <row id="F78FD92597664A059BD5F48CD362F03C" trl="N">
+    <value column="Text" isTrl="N" original="Remark">Remark</value>
+  </row>
+  <row id="F8A13C3949784904B479317BE8B76F1B" trl="N">
+    <value column="Text" isTrl="N" original="Sales Representative">Sales Representative</value>
+  </row>
+  <row id="F8AD82E769C04FE7958A449D8E883F8C" trl="N">
+    <value column="Text" isTrl="N" original="Kompetensi">Kompetensi</value>
+  </row>
+  <row id="FA76D94FF80D47EAA5F0F74C89F4D42B" trl="N">
+    <value column="Text" isTrl="N" original="3. Riwayat Mutasi">3. Riwayat Mutasi</value>
+  </row>
+  <row id="FAF9160C8F014BD2BDC76A6C9255D568" trl="N">
+    <value column="Text" isTrl="N" original="Employement Information">Employement Information</value>
+  </row>
+  <row id="FB39D92C4D88476AA922224A0F307D36" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="FB5D1D2ECB294BC7A8168FA30DA24FC2" trl="N">
+    <value column="Text" isTrl="N" original="2. Riwayat Golongan">2. Riwayat Golongan</value>
+  </row>
+  <row id="FD817EF81665426188F7678CA36D4435" trl="N">
+    <value column="Text" isTrl="N" original="Include Tax">Include Tax</value>
+  </row>
+  <row id="FDF05D89C0954F25A19CAF431B315087" trl="N">
+    <value column="Text" isTrl="N" original="Pangkat/Gol">Pangkat/Gol</value>
+  </row>
+</compiereTrl>

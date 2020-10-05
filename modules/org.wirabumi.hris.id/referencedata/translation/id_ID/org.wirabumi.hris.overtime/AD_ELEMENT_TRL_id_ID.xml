@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="02E07ED264AA46218E39BD3C93B69CF0" trl="N">
+    <value column="Name" isTrl="N" original="Valid Request Finish">Valid Request Finish</value>
+    <value column="PrintName" isTrl="N" original="Valid Request Finish">Valid Request Finish</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="03AD8FAE70F048209AF603D9E7FF6214" trl="N">
+    <value column="Name" isTrl="N" original="Employee Grade">Employee Grade</value>
+    <value column="PrintName" isTrl="N" original="Employee Grade">Employee Grade</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="040FF6C8B2C34103A7A83B5B2A6B7C2E" trl="N">
+    <value column="Name" isTrl="N" original="Duration">Duration</value>
+    <value column="PrintName" isTrl="N" original="Duration">Duration</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0739D61E3E884CB4A4FB505FF3C99145" trl="N">
+    <value column="Name" isTrl="N" original="Chek-in on Holiday">Chek-in on Holiday</value>
+    <value column="PrintName" isTrl="N" original="Chek-in on Holiday">Chek-in on Holiday</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0853D73CEEB742F89CBD98E08814F130" trl="N">
+    <value column="Name" isTrl="N" original="Validation Note">Validation Note</value>
+    <value column="PrintName" isTrl="N" original="Validation Note">Validation Note</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1866498FC7654AE5A5DB411D4E513491" trl="N">
+    <value column="Name" isTrl="N" original="Maximum Overtime Duration">Maximum Overtime Duration</value>
+    <value column="PrintName" isTrl="N" original="Maximum Overtime Duration">Maximum Overtime Duration</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1C16C99CDCB7435B83515DD37F9A03E2" trl="N">
+    <value column="Name" isTrl="N" original="Paid">Paid</value>
+    <value column="PrintName" isTrl="N" original="Paid">Paid</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2282704409CA40B59736ADF3B27E9CF6" trl="N">
+    <value column="Name" isTrl="N" original="Minimum Overtime Duration">Minimum Overtime Duration</value>
+    <value column="PrintName" isTrl="N" original="Minimum Overtime Duration">Minimum Overtime Duration</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2BBCCD931ADC4A0CB8F48732341E557A" trl="N">
+    <value column="Name" isTrl="N" original="PYR_Salarypayment_ID">PYR_Salarypayment_ID</value>
+    <value column="PrintName" isTrl="N" original="PYR_Salarypayment_ID">PYR_Salarypayment_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="32E43B3580E4477A9A47AD22FCC71023" trl="N">
+    <value column="Name" isTrl="N" original="TA_Attendance_ID">TA_Attendance_ID</value>
+    <value column="PrintName" isTrl="N" original="TA_Attendance_ID">TA_Attendance_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="34634D0886F345F59E0E3EFCA92ED522" trl="N">
+    <value column="Name" isTrl="N" original="Checkin">Checkin</value>
+    <value column="PrintName" isTrl="N" original="Checkin">Checkin</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="39B3BA97912D45D588ABCA76BC0D4544" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Request">Overtime Request</value>
+    <value column="PrintName" isTrl="N" original="Overtime Request">Overtime Request</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3BFA8F93F497402D984DA4FF25AD4AF6" trl="N">
+    <value column="Name" isTrl="N" original="Job Title">Job Title</value>
+    <value column="PrintName" isTrl="N" original="Job Title">Job Title</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="44C479A2FB7E41CBB7FD0F96764B1E47" trl="N">
+    <value column="Name" isTrl="N" original="OT_Emergency_Call_Detail_ID">OT_Emergency_Call_Detail_ID</value>
+    <value column="PrintName" isTrl="N" original="OT_Emergency_Call_Detail_ID">OT_Emergency_Call_Detail_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5BCB341CF34C4611B8D39E5B6FD4DEA0" trl="N">
+    <value column="Name" isTrl="N" original="Calculateemergencycall">Calculateemergencycall</value>
+    <value column="PrintName" isTrl="N" original="Calculateemergencycall">Calculateemergencycall</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6694B4410A5E430ABA94F0DB3BAB2797" trl="N">
+    <value column="Name" isTrl="N" original="Valid Request Start">Valid Request Start</value>
+    <value column="PrintName" isTrl="N" original="Valid Request Start">Valid Request Start</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="67DBF901D5C04F298A16E267864EE670" trl="N">
+    <value column="Name" isTrl="N" original="OT_Nonbusiness_Rate_ID">OT_Nonbusiness_Rate_ID</value>
+    <value column="PrintName" isTrl="N" original="OT_Nonbusiness_Rate_ID">OT_Nonbusiness_Rate_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="74669F6BFD744672B2D74F3BA72BD817" trl="N">
+    <value column="Name" isTrl="N" original="Chek Out on Holiday">Chek Out on Holiday</value>
+    <value column="PrintName" isTrl="N" original="Chek Out on Holiday">Chek Out on Holiday</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8DC740E9B92D4FF3803010CC07D5A114" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Hour">Overtime Hour</value>
+    <value column="PrintName" isTrl="N" original="Overtime Hour">Overtime Hour</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9079F7D112F04F2384C4C2181A54AB71" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Rate Amount">Overtime Rate Amount</value>
+    <value column="PrintName" isTrl="N" original="Overtime Rate Amount">Overtime Rate Amount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="91E84F04FA0A4C029B7FBC4D9F5D19F0" trl="N">
+    <value column="Name" isTrl="N" original="OT_Business_Rate_ID">OT_Business_Rate_ID</value>
+    <value column="PrintName" isTrl="N" original="OT_Business_Rate_ID">OT_Business_Rate_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="999C9559D2AF40579748717EE1682A87" trl="N">
+    <value column="Name" isTrl="N" original="Overtime">Overtime</value>
+    <value column="PrintName" isTrl="N" original="Overtime">Overtime</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9C55F3CACF15469097B32D118643074E" trl="N">
+    <value column="Name" isTrl="N" original="Echelon">Echelon</value>
+    <value column="PrintName" isTrl="N" original="Echelon">Echelon</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9D332FBA5E4745B4850526A113F56759" trl="N">
+    <value column="Name" isTrl="N" original="Calculateovertime">Calculateovertime</value>
+    <value column="PrintName" isTrl="N" original="Calculateovertime">Calculateovertime</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A3AAD17DCDFE4579A8D5C1AD92BF51D9" trl="N">
+    <value column="Name" isTrl="N" original="OT_Overtime_Detail_ID">OT_Overtime_Detail_ID</value>
+    <value column="PrintName" isTrl="N" original="OT_Overtime_Detail_ID">OT_Overtime_Detail_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B9E49F8DE37F4F1C9DC829551D9F8F84" trl="N">
+    <value column="Name" isTrl="N" original="Work Day">Work Day</value>
+    <value column="PrintName" isTrl="N" original="Work Day">Work Day</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D1AE7669ACAF4768B59F7C900940BAA9" trl="N">
+    <value column="Name" isTrl="N" original="Tarif">Tarif</value>
+    <value column="PrintName" isTrl="N" original="Tarif">Tarif</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E70957B79BA74650A904FE673DC9E60E" trl="N">
+    <value column="Name" isTrl="N" original="OT_Emergency_Call_ID">OT_Emergency_Call_ID</value>
+    <value column="PrintName" isTrl="N" original="OT_Emergency_Call_ID">OT_Emergency_Call_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F322435E8B2945BBB9E320BAEF238088" trl="N">
+    <value column="Name" isTrl="N" original="Total Jam Kerja">Total Jam Kerja</value>
+    <value column="PrintName" isTrl="N" original="Total Jam Kerja">Total Jam Kerja</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F71E7DB3BAF0423B8DAE04E66E03365E" trl="N">
+    <value column="Name" isTrl="N" original="Checkout">Checkout</value>
+    <value column="PrintName" isTrl="N" original="Checkout">Checkout</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

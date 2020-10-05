@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="298F4C20A76B4B30860330F188BD7AEA" trl="N">
+    <value column="Name" isTrl="N" original="Fee">Fee</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2C29C3C687FC403A802A15DEAF9E0D26" trl="N">
+    <value column="Name" isTrl="N" original="Process Received Payment(s)">Process Received Payment(s)</value>
+    <value column="Description" isTrl="N" original="Process Received Payment(s)">Process Received Payment(s)</value>
+  </row>
+  <row id="3F087596A0A14DE5BAECAD211AB393BA" trl="N">
+    <value column="Name" isTrl="N" original="Group all orders/invoices into one payment">Group all orders/invoices into one payment</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="432DB5DD63B449ACB9DEFF26D21B219F" trl="N">
+    <value column="Name" isTrl="N" original="Generate Payments">Generate Payments</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4A633A692495425FA27BEF840905D29E" trl="N">
+    <value column="Name" isTrl="N" original="Reactivate">Reactivate</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4A647396E4CE4E8B90D58E9FE4C12BBA" trl="N">
+    <value column="Name" isTrl="N" original="Process">Process</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5A9398A729924B7EAB9494E722992B55" trl="N">
+    <value column="Name" isTrl="N" original="Process Made Payment(s) and Withdrawal">Process Made Payment(s) and Withdrawal</value>
+    <value column="Description" isTrl="N" original="Process Made Payment(s) and Withdrawal">Process Made Payment(s) and Withdrawal</value>
+  </row>
+  <row id="5B87C97B045D4CC8B09F6578A305D826" trl="N">
+    <value column="Name" isTrl="N" original="Reactivate">Reactivate</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="5E71718700A245BB838783695843D2F3" trl="N">
+    <value column="Name" isTrl="N" original="Process">Process</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="668B8E7BEFE24B7FB044D267A8B5E7E1" trl="N">
+    <value column="Name" isTrl="N" original="Process Made Payment(s)">Process Made Payment(s)</value>
+    <value column="Description" isTrl="N" original="Process Made Payment(s)">Process Made Payment(s)</value>
+  </row>
+  <row id="6746D09AE633453EBD21A8B36B16C088" trl="N">
+    <value column="Name" isTrl="N" original="Submit">Submit</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6AA9B332DAE04D7ABEC8A9BE66866A70" trl="N">
+    <value column="Name" isTrl="N" original="Payments">Payments</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7178525D7629435B98DFDF97EF4A3631" trl="N">
+    <value column="Name" isTrl="N" original="Deposits and payments">Deposits and payments</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="72DCA5FC143E44DE818116701D529F28" trl="N">
+    <value column="Name" isTrl="N" original="Submit">Submit</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="A29540336120479B825D190E5B51C79E" trl="N">
+    <value column="Name" isTrl="N" original="Reactivate">Reactivate</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AA18A706616845D183B63BE88C967C89" trl="N">
+    <value column="Name" isTrl="N" original="Process Received Payment(s) and Deposit">Process Received Payment(s) and Deposit</value>
+    <value column="Description" isTrl="N" original="Process Received Payment(s) and Deposit">Process Received Payment(s) and Deposit</value>
+  </row>
+  <row id="B481A754BB024A1BA57D3DF852386B87" trl="N">
+    <value column="Name" isTrl="N" original="Deposits">Deposits</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BABE6BF881DD471BB18BF1AD764A3B78" trl="N">
+    <value column="Name" isTrl="N" original="GL Item">GL Item</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C5D1596D065545B49156C1F9426C9E14" trl="N">
+    <value column="Name" isTrl="N" original="Group separate payments for the same vendor into one payment">Group separate payments for the same vendor into one payment</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E047F81FACD0440EACB0EE63EB18A4EE" trl="N">
+    <value column="Name" isTrl="N" original="Payment In/Out">Payment In/Out</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FF8080812E443491012E443C4ED60020" trl="N">
+    <value column="Name" isTrl="N" original="Reactivate">Reactivate</value>
+    <value column="Description" isTrl="N" original="Reconciliation process actions">Reconciliation process actions</value>
+  </row>
+  <row id="FF8080812E443491012E443CA7460027" trl="N">
+    <value column="Name" isTrl="N" original="Process Reconciliation">Process Reconciliation</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FF808181312414380131241DC25C0025" trl="N">
+    <value column="Name" isTrl="N" original="Invoice Document Number">Invoice Document Number</value>
+    <value column="Description" isTrl="N" original="Use Invoice Document Number">Use Invoice Document Number</value>
+  </row>
+  <row id="FF808181312414380131241E6B370029" trl="N">
+    <value column="Name" isTrl="N" original="Supplier Reference">Supplier Reference</value>
+    <value column="Description" isTrl="N" original="Use invoice's supplier reference. If empty, it uses the invoice's document number">Use invoice's supplier reference. If empty, it uses the invoice's document number</value>
+  </row>
+</compiereTrl>

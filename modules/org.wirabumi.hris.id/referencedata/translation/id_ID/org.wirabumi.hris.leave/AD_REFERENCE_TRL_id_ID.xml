@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="30928B0BFC5A4C72BE293F23A2665479" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Leave">Jenis Cuti Karyawan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BCC073AC5B7C402492B75EB4134E7D79" trl="N">
+    <value column="Name" isTrl="Y" original="Leave Type">Type Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

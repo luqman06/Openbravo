@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="8C5FCB59D5824A76AD88E142677FCB4F" trl="N">
+    <value column="Description" isTrl="N" original="Daftar Propinsi Indonesia.">Daftar Propinsi Indonesia.</value>
+    <value column="Help" isTrl="N" original="Dataset untuk 33 propinsi di Indonesia">Dataset untuk 33 propinsi di Indonesia</value>
+    <value column="License" isTrl="N" original="This module is distributed under GNU GPL v2">This module is distributed under GNU GPL v2</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

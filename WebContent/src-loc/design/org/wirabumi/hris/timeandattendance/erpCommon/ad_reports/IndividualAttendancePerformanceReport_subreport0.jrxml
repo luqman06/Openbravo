@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="IndividualAttendancePerformanceReport_subreport0"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="535"
+		 pageHeight="782"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="c_bpartner_id" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="checkin_status" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="checkout_status" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="EndDate" isForPrompting="false" class="java.util.Date"/>
+	<parameter name="Start_Date" isForPrompting="false" class="java.util.Date"/>
+	<queryString><![CDATA[select B.* from
+(select 'Masuk Terlambat dan Pulang Awal' as Keterangan, count(A.checkinactual) as Jumlah
+from
+(select t_date::date, employee_id, checkin::time, checkinactual::time,
+    checkinstatus,
+    checkout::time, checkoutactual::time,
+    checkoutstatus
+    from ta_indv_attendanceperformance($P{c_bpartner_id},
+                            $P{Start_Date}, $P{EndDate})) A
+where a.checkinstatus='delay' and a.checkoutstatus='delay'
+union
+select 'Masuk Terlambat dan Pulang Tepat Waktu' as Keterangan, count(A.checkinactual) as Jumlah
+from
+(select t_date::date, employee_id, checkin::time, checkinactual::time,
+    checkinstatus,
+    checkout::time, checkoutactual::time,
+    checkoutstatus
+    from ta_indv_attendanceperformance($P{c_bpartner_id},
+                             $P{Start_Date}, $P{EndDate})) A
+where a.checkinstatus='delay' and a.checkoutstatus='ok'
+union
+select 'Masuk Tepat Waktu dan Pulang Awal' as Keterangan, count(A.checkinactual) as Jumlah
+from
+(select t_date::date, employee_id, checkin::time, checkinactual::time,
+    checkinstatus,
+    checkout::time, checkoutactual::time,
+    checkoutstatus
+    from ta_indv_attendanceperformance($P{c_bpartner_id},
+                            $P{Start_Date}, $P{EndDate})) A
+where a.checkinstatus='ok' and a.checkoutstatus='delay'
+union
+select 'Masuk Tepat Waktu dan Pulang Tepat Waktu' as Keterangan, count(A.checkinactual) as Jumlah
+from
+(select t_date::date, employee_id, checkin::time, checkinactual::time,
+    checkinstatus,
+    checkout::time, checkoutactual::time,
+    checkoutstatus
+    from ta_indv_attendanceperformance($P{c_bpartner_id},
+                           $P{Start_Date}, $P{EndDate})) A
+where a.checkinstatus='ok' and a.checkoutstatus='ok'
+union
+select 'Tidak Masuk' as Keterangan, count(A.*) as Jumlah
+from
+(select t_date::date, employee_id, checkin::time, checkinactual::time,
+    checkinstatus,
+    checkout::time, checkoutactual::time,
+    checkoutstatus
+from ta_indv_attendanceperformance($P{c_bpartner_id},
+                            $P{Start_Date}, $P{EndDate}))A
+where a.checkinstatus is null and a.checkoutstatus is null)B
+order by b.keterangan]]></queryString>
+
+	<field name="keterangan" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Long"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="18"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="535"
+						height="18"
+						forecolor="#000000"
+						backcolor="#808080"
+						key="rectangle"/>
+					<graphicElement stretchType="NoStretch" pen="None"/>
+				</rectangle>
+				<line direction="BottomUp">
+					<reportElement
+						x="0"
+						y="17"
+						width="535"
+						height="0"
+						forecolor="#FEFEFE"
+						backcolor="#FFFFFF"
+						key="line"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="311"
+						height="18"
+						forecolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" rightPadding="2" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[Keterangan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="316"
+						y="0"
+						width="218"
+						height="18"
+						forecolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" rightPadding="2" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[Jumlah]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="312"
+						y="0"
+						width="0"
+						height="18"
+						forecolor="#FEFEFE"
+						backcolor="#FFFFFF"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="0"
+						height="18"
+						forecolor="#FEFEFE"
+						backcolor="#FFFFFF"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="535"
+						y="0"
+						width="0"
+						height="18"
+						forecolor="#FEFEFE"
+						backcolor="#FFFFFF"
+						key="line-7"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="17"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="311"
+						height="17"
+						forecolor="#000000"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" rightPadding="2" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{keterangan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="316"
+						y="0"
+						width="218"
+						height="17"
+						forecolor="#000000"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" rightPadding="2" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.Long"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="312"
+						y="0"
+						width="0"
+						height="17"
+						forecolor="#010101"
+						backcolor="#FFFFFF"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="0"
+						height="17"
+						forecolor="#010101"
+						backcolor="#FFFFFF"
+						key="line-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="16"
+						width="535"
+						height="0"
+						forecolor="#010101"
+						backcolor="#FFFFFF"
+						key="line"
+						positionType="Float"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="535"
+						y="0"
+						width="0"
+						height="17"
+						forecolor="#010101"
+						backcolor="#FFFFFF"
+						key="line-8"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_BP_SALCATEGORY">
+    <table name="C_BP_SALCATEGORY" primaryKey="C_BP_SALCATEGORY_KEY">
+      <column name="EM_HRIS_VALIDTO" primaryKey="false" required="false" type="TIMESTAMP" size="7" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="01FF5A5C107944A781F676C662AE8292" trl="N">
+    <value column="Text" isTrl="N" original="kami memberi tugas kepada :">kami memberi tugas kepada :</value>
+  </row>
+  <row id="17D3464673F64DB1BFBF67D8CA322D2A" trl="N">
+    <value column="Text" isTrl="N" original="adapun pelaksanaannya dengan">adapun pelaksanaannya dengan</value>
+  </row>
+  <row id="2B75482B0A6E47F79EDB2C2032D335AA" trl="N">
+    <value column="Text" isTrl="N" original="Unit Kerja">Unit Kerja</value>
+  </row>
+  <row id="2D8A199E01E84055B5902E13C5751CF9" trl="N">
+    <value column="Text" isTrl="N" original="Target">Target</value>
+  </row>
+  <row id="2F72785BF170441887AAB80F37E45D3A" trl="N">
+    <value column="Text" isTrl="N" original="Info :">Info :</value>
+  </row>
+  <row id="5ACA79128E0E439B9759917F40220E82" trl="N">
+    <value column="Text" isTrl="N" original="Telp">Telp</value>
+  </row>
+  <row id="62F7859B79D84996BF32A558927F88BF" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="98931FB936124899B32A72446C093A5F" trl="N">
+    <value column="Text" isTrl="N" original="Berangkat">Berangkat</value>
+  </row>
+  <row id="A1F9EE999EBD44B9A33AEEB11AA5AF0B" trl="N">
+    <value column="Text" isTrl="N" original="ketentuan sebagai berikut :">ketentuan sebagai berikut :</value>
+  </row>
+  <row id="A9C2CC515E364F3A845145EFE3D34C50" trl="N">
+    <value column="Text" isTrl="N" original="Untuk melakukan perjalanan dinas ke">Untuk melakukan perjalanan dinas ke</value>
+  </row>
+  <row id="B54E9189A3C742D8BF24C59CCBAC488A" trl="N">
+    <value column="Text" isTrl="N" original="Dicapai">Dicapai</value>
+  </row>
+  <row id="B912043040F947618FED009FD9AC0E88" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="BA7AA07586634491BDC4D2E3A8C63BC9" trl="N">
+    <value column="Text" isTrl="N" original="Surat Perjalanan Dinas">Surat Perjalanan Dinas</value>
+  </row>
+  <row id="C9EB9C11843C4681B556755BDA2BEF92" trl="N">
+    <value column="Text" isTrl="N" original="Demikian harap Saudara melakasanakan dan kami mohon bantuan semua pihak guna kelancaran pelaksanaan perjalanan dinas tersebut.">Demikian harap Saudara melakasanakan dan kami mohon bantuan semua pihak guna kelancaran pelaksanaan perjalanan dinas tersebut.</value>
+  </row>
+  <row id="D6830764BC7043F9850D5A80B3227C5E" trl="N">
+    <value column="Text" isTrl="N" original="Pengajuan">Pengajuan</value>
+  </row>
+  <row id="D8885B8D6CAE417B862A477ABC7345FD" trl="N">
+    <value column="Text" isTrl="N" original="Telp :">Telp :</value>
+  </row>
+  <row id="E1A36E7E05514DC19A85C2D423EB7EB8" trl="N">
+    <value column="Text" isTrl="N" original="Dalam rangka">Dalam rangka</value>
+  </row>
+  <row id="F9F5BCD7DBBF4D15835DF1E4BF750903" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="FED86A683D8F4A4B8EB720B586B7F5BE" trl="N">
+    <value column="Text" isTrl="N" original="Kembali">Kembali</value>
+  </row>
+</compiereTrl>

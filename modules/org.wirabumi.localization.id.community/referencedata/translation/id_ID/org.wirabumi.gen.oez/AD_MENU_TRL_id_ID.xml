@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="068E1DB34B274A38BCCC00158E6199E1" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import Inventory">Import Inventory</value>
+  </row>
+  <row id="2FA2A6FBC2254E21944C9C5A7184AD3B" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Awaiting Goods Shipment Report">Sales Order Awaiting Goods Shipment Report</value>
+    <value column="Description" isTrl="N" original="Sales Order Awaiting Goods Shipment Report">Sales Order Awaiting Goods Shipment Report</value>
+  </row>
+  <row id="35FC48211ED9422C9B9069BE970F1B81" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Awaiting Sales Invoice Report">Sales Order Awaiting Sales Invoice Report</value>
+    <value column="Description" isTrl="N" original="Sales Order Awaiting Sales Invoice Report">Sales Order Awaiting Sales Invoice Report</value>
+  </row>
+  <row id="40DC90E3B3944A268D63603003AF3336" trl="N">
+    <value column="Name" isTrl="N" original="Goods Receipt Awaiting Purchase Invoice Report">Goods Receipt Awaiting Purchase Invoice Report</value>
+    <value column="Description" isTrl="N" original="Goods Receipt Awaiting Purchase Invoice Report">Goods Receipt Awaiting Purchase Invoice Report</value>
+  </row>
+  <row id="6E4F38955DBF4C78BF5AAE647D926D43" trl="N">
+    <value column="Name" isTrl="N" original="Import Goods Receipt/Shipment">Import Goods Receipt/Shipment</value>
+    <value column="Description" isTrl="N" original="Import Goods Receipt/Shipment from csv">Import Goods Receipt/Shipment from csv</value>
+  </row>
+  <row id="7CA86EA70263457CB0E500B9A5C4F97B" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Order Awaiting Goods Receipt Report">Purchase Order Awaiting Goods Receipt Report</value>
+    <value column="Description" isTrl="N" original="Purchase Order Awaiting Goods Receipt Report">Purchase Order Awaiting Goods Receipt Report</value>
+  </row>
+  <row id="A4BF9CFD70214925A7895B9B3353936E" trl="N">
+    <value column="Name" isTrl="N" original="Stock Card">Stock Card</value>
+    <value column="Description" isTrl="N" original="Stock Card">Stock Card</value>
+  </row>
+  <row id="A4DD8B410C644222B551BA3ECA441BAB" trl="N">
+    <value column="Name" isTrl="N" original="Import Product Prices">Import Product Prices</value>
+    <value column="Description" isTrl="N" original="Import Product Prices">Import Product Prices</value>
+  </row>
+  <row id="B4F2A4E2FE4949F6A0065A3DFCC4EDFB" trl="N">
+    <value column="Name" isTrl="N" original="Shipment Awaiting Sales Invoice Report">Shipment Awaiting Sales Invoice Report</value>
+    <value column="Description" isTrl="N" original="Shipment Awaiting Sales Invoice Report">Shipment Awaiting Sales Invoice Report</value>
+  </row>
+  <row id="BFE1856B12CB48F39BD487AE7BA2162A" trl="N">
+    <value column="Name" isTrl="N" original="Stock Aging Report">Stock Aging Report</value>
+    <value column="Description" isTrl="N" original="Stock Aging Report">Stock Aging Report</value>
+  </row>
+  <row id="D37E90ABA60C472582518C1FAF40B1C5" trl="N">
+    <value column="Name" isTrl="N" original="Import Products Cost">Import Products Cost</value>
+    <value column="Description" isTrl="N" original="Import Product Cost to define the latest costing at the begining of accounting period">Import Product Cost to define the latest costing at the begining of accounting period</value>
+  </row>
+  <row id="DF30192827454BBFB89C0A2CCBBBA8F7" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="Description" isTrl="N" original="Import business partner balance">Import business partner balance</value>
+  </row>
+  <row id="EDDDB54E7AB6474D99580AEC23919A36" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Order Awaiting Purchase Invoice Report">Purchase Order Awaiting Purchase Invoice Report</value>
+    <value column="Description" isTrl="N" original="Purchase Order Awaiting Purchase Invoice Report">Purchase Order Awaiting Purchase Invoice Report</value>
+  </row>
+</compiereTrl>

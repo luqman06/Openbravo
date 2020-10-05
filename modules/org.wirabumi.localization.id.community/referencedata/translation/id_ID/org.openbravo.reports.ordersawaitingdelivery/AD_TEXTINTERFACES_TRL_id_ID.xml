@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="D217B67C621E11DEBEE4001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Not shipped orders filter">Not shipped orders filter</value>
+  </row>
+  <row id="D235F5EC621E11DEA0EB001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Order Reference">Order Reference</value>
+  </row>
+  <row id="D4CEE110621E11DE9A90001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Order Document No.">Order Document No.</value>
+  </row>
+  <row id="D4D5216A621E11DE8F79001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Delivery Terms">Delivery Terms</value>
+  </row>
+  <row id="D4D6DD16621E11DEBF56001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Delivery Location">Delivery Location</value>
+  </row>
+  <row id="D4DA403C621E11DEBC20001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Ordered Quantity">Ordered Quantity</value>
+  </row>
+  <row id="D4DBC998621E11DE8893001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Pending Quantity">Pending Quantity</value>
+  </row>
+  <row id="D4DD3332621E11DE8A1C001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Quantity in Stock">Quantity in Stock</value>
+  </row>
+  <row id="D4EE2FC0621E11DE9C19001B388C05F0" trl="N">
+    <value column="Text" isTrl="N" original="Generated on">Generated on</value>
+  </row>
+</compiereTrl>

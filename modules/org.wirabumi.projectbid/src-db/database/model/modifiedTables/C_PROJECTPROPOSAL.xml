@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_PROJECTPROPOSAL">
+    <table name="C_PROJECTPROPOSAL" primaryKey="C_PROJECTPROPOSAL_KEY">
+      <column name="EM_PBID_ORDER_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PBID_REQUISITION_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PBID_SCORE" primaryKey="false" required="true" type="DECIMAL" autoIncrement="false">
+        <default><![CDATA[0]]></default>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_ORDER" name="EM_PBID_ORDER_FK">
+        <reference local="EM_PBID_ORDER_ID" foreign="C_ORDER_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="M_REQUISITION" name="EM_PBID_PROPOSALREQUISITION_FK">
+        <reference local="EM_PBID_REQUISITION_ID" foreign="M_REQUISITION_ID"/>
+      </foreign-key>
+    </table>
+  </database>

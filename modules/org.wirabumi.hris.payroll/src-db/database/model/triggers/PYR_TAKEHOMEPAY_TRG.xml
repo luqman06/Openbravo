@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER PYR_TAKEHOMEPAY_TRG">
+    <trigger name="PYR_TAKEHOMEPAY_TRG" table="PYR_SPE_EARNING" fires="after" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_earning NUMBER;
+v_deduction NUMBER;
+v_takehomepay NUMBER;
+
+BEGIN
+
+   IF AD_isTriggerEnabled()='N' THEN
+     RETURN NEW; 
+   END IF;
+
+select sum(amount) into v_earning
+from pyr_spe_earning 
+where pyr_sp_employee_id=:new.pyr_sp_employee_id
+group by pyr_sp_employee_id;
+
+select sum(amount) into v_deduction
+from pyr_spe_deduction 
+where pyr_sp_employee_id=:new.pyr_sp_employee_id
+group by pyr_sp_employee_id;
+
+v_takehomepay:=v_earning-v_deduction;
+
+update pyr_sp_employee set amount=v_takehomepay 
+where pyr_sp_employee_id=:new.pyr_sp_employee_id;
+
+END PYR_TAKEHOMEPAY_TRG
+]]></body>
+    </trigger>
+  </database>

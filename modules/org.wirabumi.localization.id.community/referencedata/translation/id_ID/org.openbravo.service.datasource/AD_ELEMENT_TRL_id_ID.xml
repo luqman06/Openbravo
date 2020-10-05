@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="0D5107C3E85B4520AD9E4386DAA90C30" trl="N">
+    <value column="Name" isTrl="N" original="Template">Template</value>
+    <value column="PrintName" isTrl="N" original="Template">Template</value>
+    <value column="Description" isTrl="N" original="The template used to generate the client-side representation.">The template used to generate the client-side representation.</value>
+    <value column="Help" isTrl="N" original="The template used to generate the client-side representation (in the browser) of the datasource.">The template used to generate the client-side representation (in the browser) of the datasource.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3FB0A141F73D4E119BC633EEB22D07FD" trl="N">
+    <value column="Name" isTrl="N" original="Java class name">Java class name</value>
+    <value column="PrintName" isTrl="N" original="Class implementing the functionality in java">Class implementing the functionality in java</value>
+    <value column="Description" isTrl="N" original="Class implementing the functionality in java">Class implementing the functionality in java</value>
+    <value column="Help" isTrl="N" original="Class implementing the functionality in java">Class implementing the functionality in java</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="60A68A01BC1D481996705730BDEA560D" trl="N">
+    <value column="Name" isTrl="N" original="Datasource Field">Datasource Field</value>
+    <value column="PrintName" isTrl="N" original="Datasource Field">Datasource Field</value>
+    <value column="Description" isTrl="N" original="The datasource field is part of the datasource definition.">The datasource field is part of the datasource definition.</value>
+    <value column="Help" isTrl="N" original="The datasource field is part of the datasource definition.">The datasource field is part of the datasource definition.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="73C534367AFA4C28A9F8767D59AAE37E" trl="N">
+    <value column="Name" isTrl="N" original="Datasource">Datasource</value>
+    <value column="PrintName" isTrl="N" original="Datasource">Datasource</value>
+    <value column="Description" isTrl="N" original="The datasource ">The datasource </value>
+    <value column="Help" isTrl="N" original="The datasource provides data from the database or from in-memory data.">The datasource provides data from the database or from in-memory data.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9D90F1136B8048D590DC661CF73DFCF6" trl="N">
+    <value column="Name" isTrl="N" original="Use As Table Data Origin">Use As Table Data Origin</value>
+    <value column="PrintName" isTrl="N" original="UseAsTableDataOrigin">UseAsTableDataOrigin</value>
+    <value column="Description" isTrl="N" original="A flag indicating whether this datasource is used as a data origin in the Table window">A flag indicating whether this datasource is used as a data origin in the Table window</value>
+    <value column="Help" isTrl="N" original="A flag indicating whether this datasource is used as a data origin in the Table window. In that case, the Table and Column subtabs of the Datasource window are hidden, because the columns of the datasource must be defined in the Columns tab of the Tables and Columns window.">A flag indicating whether this datasource is used as a data origin in the Table window. In that case, the Table and Column subtabs of the Datasource window are hidden, because the columns of the datasource must be defined in the Columns tab of the Tables and Columns window.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D8467987FB7A4EA6AADCB5500A96CBDB" trl="N">
+    <value column="Name" isTrl="N" original="HQL Where Clause">HQL Where Clause</value>
+    <value column="PrintName" isTrl="N" original="The HQL where clause used to filter and query for data.">The HQL where clause used to filter and query for data.</value>
+    <value column="Description" isTrl="N" original="The HQL where clause used to filter and query for data.">The HQL where clause used to filter and query for data.</value>
+    <value column="Help" isTrl="N" original="The HQL where clause is added to the query to retrieve the data which is returned by the datasource.">The HQL where clause is added to the query to retrieve the data which is returned by the datasource.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="177E13C6D1AD4F7F831A492FC8B40726" trl="N">
+    <value column="Name" isTrl="N" original="Tagihan Koperasi">Tagihan Koperasi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="82F9C71C702D48C8AC0E03285E685C9A" trl="Y">
+    <value column="Name" isTrl="Y" original="Employee Loan Request">Pengajuan Pinjaman</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9D9C341502F242F49A112F085F1078B8" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Loan - Statement Account">Loan Statement - Pending</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

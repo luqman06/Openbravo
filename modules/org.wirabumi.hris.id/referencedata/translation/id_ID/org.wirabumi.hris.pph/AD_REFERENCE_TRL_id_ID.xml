@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="1FF4F6AFE7754E6EB35E3002FA9ABDB7" trl="N">
+    <value column="Name" isTrl="N" original="pph_pph21">pph_pph21</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="502B23B45579493483EBF24D40323CBC" trl="N">
+    <value column="Name" isTrl="N" original="Deduction Tax Mode">Deduction Tax Mode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="690093E5F3A4498F9D3E64A189F15E93" trl="N">
+    <value column="Name" isTrl="N" original="Salary Payment Tax Mode">Salary Payment Tax Mode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E32372DDD77649A694F3170BC8E4C928" trl="N">
+    <value column="Name" isTrl="N" original="Earning Tax Mode">Earning Tax Mode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FA52B936A4F5480E904B9332FA3530B1" trl="N">
+    <value column="Name" isTrl="N" original="Tax Marital Status">Tax Marital Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

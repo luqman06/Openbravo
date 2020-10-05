@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER TA_UPDATEDURATION_ATT">
+    <trigger name="TA_UPDATEDURATION_ATT" table="TA_ATTENDANCE" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_checkin timestamp without time zone;
+v_checkout timestamp without time zone;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- definisi trigger
+    
+       :new.duration:=to_char(:new.checkout-:new.checkin,'HH24:MI:SS');
+
+      END TA_UPDATEDURATION_ATT
+]]></body>
+    </trigger>
+  </database>

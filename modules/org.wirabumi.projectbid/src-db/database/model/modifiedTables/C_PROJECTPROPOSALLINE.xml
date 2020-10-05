@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_PROJECTPROPOSALLINE">
+    <table name="C_PROJECTPROPOSALLINE" primaryKey="C_PROJECTPROPOSALLINE_KEY">
+      <column name="EM_PBID_ORDERLINE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PBID_REQUISITIONLINE_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_PBID_EXCLUDEFROMWIN" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_ORDERLINE" name="EM_PBID_ORDERLINE_FK">
+        <reference local="EM_PBID_ORDERLINE_ID" foreign="C_ORDERLINE_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="M_REQUISITIONLINE" name="EM_PBID_PROPREQUISITIONLINE_FK">
+        <reference local="EM_PBID_REQUISITIONLINE_ID" foreign="M_REQUISITIONLINE_ID"/>
+      </foreign-key>
+      <unique name="EM_PBID_PRJPROPOSAL_PRD_UNQ">
+        <unique-column name="C_PROJECTPROPOSAL_ID"/>
+        <unique-column name="M_PRODUCT_ID"/>
+      </unique>
+    </table>
+  </database>

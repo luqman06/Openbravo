@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+  <database name="VIEW HRIS_EMPLOYEE_TREE_V">
+    <view name="HRIS_EMPLOYEE_TREE_V"><![CDATA[SELECT c_bpartner.c_bpartner_id AS hris_employee_tree_v_id, c_bpartner.ad_client_id, c_bpartner.ad_org_id, c_bpartner.isactive, c_bpartner.created, c_bpartner.createdby, c_bpartner.updated, c_bpartner.updatedby, c_bpartner.name, c_bpartner.em_hris_jobtitle_id AS hris_jobtitle_id, ad_treenode.node_id, ad_treenode.parent_id, c_bpartner.c_bpartner_id FROM c_bpartner JOIN hris_jobtitle ON hris_jobtitle.hris_jobtitle_id = c_bpartner.em_hris_jobtitle_id LEFT JOIN ad_treenode ON ad_treenode.node_id = hris_jobtitle.hris_jobtitle_id WHERE c_bpartner.isemployee = 'Y' AND c_bpartner.ad_client_id = 'AE56E7FBDE964A198A5CD83CEB9EC51D']]></view>
+  </database>

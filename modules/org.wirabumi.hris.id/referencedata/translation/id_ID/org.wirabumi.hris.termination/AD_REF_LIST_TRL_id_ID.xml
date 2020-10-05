@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="2C55BFEDDB374198B697F25084566EC4" trl="N">
+    <value column="Name" isTrl="N" original="MENINGGAL">MENINGGAL</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F6676403C38B40D7A459EFE41FBB6E1D" trl="N">
+    <value column="Name" isTrl="N" original="TEWAS">TEWAS</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="525D95D3B9A34B7CA49384A2FF775818" trl="N">
+    <value column="Name" isTrl="N" original="Jamsostek Pension Funds Report">Jamsostek Pension Funds Report</value>
+    <value column="Description" isTrl="N" original="Pension Funds Report">Pension Funds Report</value>
+    <value column="Help" isTrl="N" original="Display Pension Funds managed by Jamsostek">Display Pension Funds managed by Jamsostek</value>
+  </row>
+  <row id="B504959087344D36A84F97CAF6FE10C4" trl="N">
+    <value column="Name" isTrl="N" original="Jamsostek Paymet Report">Jamsostek Paymet Report</value>
+    <value column="Description" isTrl="N" original="Jamsostek Paymet Report">Jamsostek Paymet Report</value>
+    <value column="Help" isTrl="N" original="Display premium payment summary for Jamsostek">Display premium payment summary for Jamsostek</value>
+  </row>
+  <row id="F4FF4AD217BC4FABB9790844C0BC267E" trl="N">
+    <value column="Name" isTrl="N" original="Kalkulasi Jamsostek">Kalkulasi Jamsostek</value>
+    <value column="Description" isTrl="N" original="Kalkulasi Jamsostek">Kalkulasi Jamsostek</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MENU" version="">
+  <row id="C662C29A164243C18C71BE164899A71B" trl="N">
+    <value column="Name" isTrl="N" original="Payment Report">Payment Report</value>
+    <value column="Description" isTrl="N" original="Payment Report">Payment Report</value>
+  </row>
+</compiereTrl>

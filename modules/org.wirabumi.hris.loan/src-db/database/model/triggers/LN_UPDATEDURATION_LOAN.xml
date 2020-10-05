@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER LN_UPDATEDURATION_LOAN">
+    <trigger name="LN_UPDATEDURATION_LOAN" table="LN_LOAN" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_checkin timestamp without time zone;
+v_checkout timestamp without time zone;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- definisi trigger
+      
+       :new.duration:=months_between(:new.dateto, :new.datefrom); 
+      
+	
+      --new.duration:=months_between(new.dateto, new.datefrom); 
+
+      END LN_UPDATEDURATION_LOAN
+]]></body>
+    </trigger>
+  </database>

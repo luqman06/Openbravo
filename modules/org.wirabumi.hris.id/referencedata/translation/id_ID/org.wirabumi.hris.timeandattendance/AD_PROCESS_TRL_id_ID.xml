@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="1388C5A42B77411AB1576479818964BC" trl="N">
+    <value column="Name" isTrl="N" original="Report Potong Cuti">Report Potong Cuti</value>
+    <value column="Description" isTrl="N" original="Report Potong Cuti">Report Potong Cuti</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1AFD4E178B5F46508D625C1B4BD6168C" trl="N">
+    <value column="Name" isTrl="N" original="Process For Window Akumulasi Potong Gaji">Process For Window Akumulasi Potong Gaji</value>
+    <value column="Description" isTrl="N" original="Process For Window Akumulasi Potong Gaji">Process For Window Akumulasi Potong Gaji</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="303A9E52AE9046EDAAC23DD6D91828B8" trl="N">
+    <value column="Name" isTrl="N" original="Attendance Performance Report">Attendance Performance Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="45636537F202449A9714BBAACFD7B028" trl="N">
+    <value column="Name" isTrl="N" original="Background Process untuk Window Akumulasi Potong Cuti">Background Process untuk Window Akumulasi Potong Cuti</value>
+    <value column="Description" isTrl="N" original="Background Process untuk Window Akumulasi Potong Cuti">Background Process untuk Window Akumulasi Potong Cuti</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="47766E4D9BA74C3B8C12F19A9AFF3EC3" trl="N">
+    <value column="Name" isTrl="N" original="Background Process untuk Window Akumulasi Potong Gaji">Background Process untuk Window Akumulasi Potong Gaji</value>
+    <value column="Description" isTrl="N" original="Background Process untuk Window Akumulasi Potong Gaji">Background Process untuk Window Akumulasi Potong Gaji</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4A81E29CC06E4D169A2E37F9053250F3" trl="N">
+    <value column="Name" isTrl="N" original="Attendance Summary Report">Attendance Summary Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5FECC86201AA4D5197A719945980B2EF" trl="N">
+    <value column="Name" isTrl="N" original="Potongan Cuti">Potongan Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6445135367544A329CFEC7506B7475FD" trl="N">
+    <value column="Name" isTrl="N" original="Individual Attendance Performance">Individual Attendance Performance</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7D720CA873304EB7A827BAB41105843C" trl="N">
+    <value column="Name" isTrl="N" original="Report Potong Gaji">Report Potong Gaji</value>
+    <value column="Description" isTrl="N" original="Report Potong Gaji">Report Potong Gaji</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="842FA8ADED064D488A07B61676768466" trl="N">
+    <value column="Name" isTrl="N" original="Update Data Potongan Gaji Pada window Salary Payment">Update Data Potongan Gaji Pada window Salary Payment</value>
+    <value column="Description" isTrl="N" original="Update Data Potongan Gaji Pada window Salary Payment">Update Data Potongan Gaji Pada window Salary Payment</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8722C6EB947C4597AE913430DD84C9C3" trl="N">
+    <value column="Name" isTrl="Y" original="Shift Report">Report Shift</value>
+    <value column="Description" isTrl="Y" original="Shift Report">Report Shift</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A70A8A5AEF284DEB89F36BAEB7CE077A" trl="N">
+    <value column="Name" isTrl="N" original="Process Untuk Window Tukar Shift">Process Untuk Window Tukar Shift</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF147BD64A17441AADD20C93975DB932" trl="N">
+    <value column="Name" isTrl="N" original="Kalkulasi Telat Pada Attendance">Kalkulasi Telat Pada Attendance</value>
+    <value column="Description" isTrl="N" original="Kalkulasi Telat Pada Attendance">Kalkulasi Telat Pada Attendance</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

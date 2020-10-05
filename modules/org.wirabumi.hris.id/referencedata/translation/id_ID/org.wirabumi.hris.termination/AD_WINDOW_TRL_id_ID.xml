@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="512451ECA3854CF79F47393E87791B5B" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Payment">Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B7660CB3E6B64A18B279E9910F6F75BA" trl="N">
+    <value column="Name" isTrl="Y" original="Employee Termination">Pemutusan Hubungan Kerja</value>
+    <value column="Description" isTrl="Y" original="Employee Termination">Pemutusan Hubungan Kerja</value>
+    <value column="Help" isTrl="Y" original="Company decide to terminate an employee due to a specific reason.">Perusahaan memutuskan untuk memutuskan hubungan kerja (PHK) kepada seorang karyawan dengan sebab tertentu.</value>
+  </row>
+  <row id="D7F54B2F7EDF416A8025F6CFB9D87D11" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Resign)">Tarif Uang Pisah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E75FC4D5C29046BF8691B4BA942A6B49" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Pension)">Tarif Pesangon</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F5157D338FA4438783C7E5EFB5686D49" trl="N">
+    <value column="Name" isTrl="Y" original="Severance Rule (Termination)">Tarif PHK</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

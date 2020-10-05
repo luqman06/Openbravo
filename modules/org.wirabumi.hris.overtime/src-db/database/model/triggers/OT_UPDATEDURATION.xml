@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OT_UPDATEDURATION">
+    <trigger name="OT_UPDATEDURATION" table="OT_EMERGENCY_CALL" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+v_INTERVAL DATE without time zone;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+    -- definisi trigger
+       
+       :new.duration:=('0001-01-01'||' '||AGE((:NEW.DATETO::DATE||' '||:NEW.CHECKOUT::TIME)::TIMESTAMP,(:NEW.DATEFROM::DATE||' '||:NEW.CHECKIN::TIME)::TIMESTAMP)::TIME)::timestamp;
+
+       END OT_UPDATEDURATION
+]]></body>
+    </trigger>
+  </database>

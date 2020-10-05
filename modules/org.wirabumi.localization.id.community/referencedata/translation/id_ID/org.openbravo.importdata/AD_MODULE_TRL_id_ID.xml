@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="FF8081812FBF677A012FBF6A0D3E0003" trl="N">
+    <value column="Description" isTrl="N" original="Import Data feature previously available on Openbravo 2.50 (Core)">Import Data feature previously available on Openbravo 2.50 (Core)</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="License" isTrl="N" original="Licensed under the Openbravo Public License version 1.1.&#10;You may obtain a copy of the License at http://www.openbravo.com/legal/license.html or in the legal folder of the Openbravo ERP core distribution.">Licensed under the Openbravo Public License version 1.1.
+You may obtain a copy of the License at http://www.openbravo.com/legal/license.html or in the legal folder of the Openbravo ERP core distribution.</value>
+    <value column="Updateinfo" isTrl="N" original="Fixes issue 22739: Accounts with Default Account defined could not be imported">Fixes issue 22739: Accounts with Default Account defined could not be imported</value>
+  </row>
+</compiereTrl>

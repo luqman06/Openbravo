@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="FF808081316ACC4501316ADAA4FB0006" trl="N">
+    <value column="MsgText" isTrl="N" original="This process associates your Google account with your Openbravo user id. After completion, if you access the system using your Google account, you will be logged in with your currently active user.&#10;&#10;Do you want to continue?">This process associates your Google account with your Openbravo user id. After completion, if you access the system using your Google account, you will be logged in with your currently active user.
+
+Do you want to continue?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF808081318513B201318519AE3C0005" trl="N">
+    <value column="MsgText" isTrl="N" original="Sign in using:">Sign in using:</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF808081318513B20131851A50FD000A" trl="N">
+    <value column="MsgText" isTrl="N" original="Sign in using your Google Account">Sign in using your Google Account</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF808081318528680131852B80EF000A" trl="N">
+    <value column="MsgText" isTrl="N" original="&lt;a href=&quot;http://wiki.openbravo.com/wiki/Configuration_Manual/Google_Integration&quot; target=&quot;_blank&quot;&gt;Log in to application using Google Account&lt;/a&gt; is a Premium Feature">&lt;a href="http://wiki.openbravo.com/wiki/Configuration_Manual/Google_Integration" target="_blank"&gt;Log in to application using Google Account&lt;/a&gt; is a Premium Feature</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF80808131862F7C0131863B5AD50006" trl="N">
+    <value column="MsgText" isTrl="N" original="Google Account login configuration of this instance does not allow an access to application using @@email@@. &lt;a href=&quot;http://wiki.openbravo.com/wiki/Configuration_Manual/Google_Integration&quot; target=&quot;_blank&quot;&gt;Learn more&lt;/a&gt; about it or contact this instance System Administrator for help.">Google Account login configuration of this instance does not allow an access to application using @@email@@. &lt;a href="http://wiki.openbravo.com/wiki/Configuration_Manual/Google_Integration" target="_blank"&gt;Learn more&lt;/a&gt; about it or contact this instance System Administrator for help.</value>
+    <value column="MsgTip" isTrl="N" original="Don't delete the @@email@@ place-holder">Don't delete the @@email@@ place-holder</value>
+  </row>
+  <row id="FF808081318644E001318647A9A20008" trl="N">
+    <value column="MsgText" isTrl="N" original="Google Account login configuration of this instance does not allow an access to application using @@emai@l@. &lt;a href=&quot;http://wiki.openbravo.com/wiki/Configuration_Manual/Google_Integration&quot; target=&quot;_blank&quot;&gt;Learn more&lt;/a&gt; about it or contact this instance System Administrator for help.">Google Account login configuration of this instance does not allow an access to application using @@emai@l@. &lt;a href="http://wiki.openbravo.com/wiki/Configuration_Manual/Google_Integration" target="_blank"&gt;Learn more&lt;/a&gt; about it or contact this instance System Administrator for help.</value>
+    <value column="MsgTip" isTrl="N" original="Don't delete the @@email@@ place-holder">Don't delete the @@email@@ place-holder</value>
+  </row>
+  <row id="FF808081318644E00131864951C20011" trl="N">
+    <value column="MsgText" isTrl="N" original="Your user and Google Account have been successfully linked">Your user and Google Account have been successfully linked</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF8080813190BB58013190C047510009" trl="N">
+    <value column="MsgText" isTrl="N" original="This Google Account is already associated with another user. You can only associate one Google Account to one Openbravo user.">This Google Account is already associated with another user. You can only associate one Google Account to one Openbravo user.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

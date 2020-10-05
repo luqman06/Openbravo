@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION PYR_SALARY_DAILY">
+    <function name="PYR_SALARY_DAILY" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_startdate timestamp without time zone;
+  v_enddate timestamp without time zone;
+  v_attendance integer;
+  v_workday integer;
+  v_gaji NUMBER;
+  v_tunjangan NUMBER;
+  v_gajitotal NUMBER;
+  v_sp_employee_id varchar(32);
+
+  --  Parameter
+  TYPE RECORD IS REF CURSOR;
+  cur_employee record;
+
+ 
+begin
+
+--select * from c_bpartner limit 1
+--salary prorate untuk karyawan yang baru masuk
+ result:=0;
+   for cur_employee in (select c_bpartner_id, name, ad_org_id, ad_client_id
+			from c_bpartner
+			where em_hris_employementtype='Freelance'
+			and (case when p_employee_id is not null then c_bpartner_id=p_employee_id else 1=1 end))
+   loop
+
+   raise notice 'employee: %', 
+   (select name from c_bpartner where c_bpartner_id=cur_employee.c_bpartner_id);
+   
+   select startdate, enddate, spe.pyr_sp_employee_id  into v_startdate, v_enddate, v_sp_employee_id
+   from pyr_salarypayment sp
+   inner join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+   where spe.c_bpartner_id=cur_employee.c_bpartner_id
+   and startdate::date<=now()::date
+   and enddate::date>=now()::date
+   limit 1;
+
+   IF v_startdate is null or v_enddate is null then continue; end if;
+
+
+   select count(checkinactual) into v_attendance
+   from ta_indv_attendanceperform_nh(cur_employee.c_bpartner_id, v_startdate, v_enddate);
+   
+   --menghitung Gaji
+   select bpe.amount into v_gaji
+   from c_bp_salcategory bps
+   inner join pyr_bp_earning bpe on bpe.c_bp_salcategory_id=bps.c_bp_salcategory_id
+   inner join pyr_earning pe on pe.pyr_earning_id=bpe.pyr_earning_id
+   where pe.value='GP'
+   and c_bpartner_id=cur_employee.c_bpartner_id;
+
+   raise notice 'v_gaji: %', v_gaji;
+
+   --menghitung gaji pokok
+   v_gajitotal:=round(v_gaji*v_attendance, 2);
+   
+   If v_gajitotal<0 then v_gajitotal:=0; end if;
+
+   v_gajitotal:=round(v_gajitotal, 2);
+   
+   --update salary payment
+   UPDATE pyr_spe_earning
+      SET amount=v_gajitotal, updated=now()
+   where pyr_earning_id=(select pyr_earning_id from pyr_earning where value='GP')
+   and pyr_sp_employee_id=v_sp_employee_id;
+   
+ raise notice 'employee: %, c_bpartner_id: %, v_attendance: %, v_gajitotal: %',
+ cur_employee.name, cur_employee.c_bpartner_id, v_attendance, v_gajitotal;
+ 
+ end loop;
+result:=1;
+   
+RETURN;
+END PYR_SALARY_DAILY
+]]></body>
+    </function>
+  </database>

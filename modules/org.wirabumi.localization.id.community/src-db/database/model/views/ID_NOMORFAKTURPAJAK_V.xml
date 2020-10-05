@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+  <database name="VIEW ID_NOMORFAKTURPAJAK_V">
+    <view name="ID_NOMORFAKTURPAJAK_V"><![CDATA[SELECT COALESCE(i.c_invoice_id, nfp.id_nomorfakturpajak_id) AS id_nomorfakturpajak_v_id, nfp.ad_client_id, nfp.ad_org_id, nfp.isactive, nfp.created, nfp.createdby, nfp.updated, nfp.updatedby, nfp.nomorfakturpajak, i.c_invoice_id FROM id_nomorfakturpajak nfp LEFT JOIN c_invoice i ON i.em_id_nomorfakturpajak_id = nfp.id_nomorfakturpajak_id]]></view>
+  </database>

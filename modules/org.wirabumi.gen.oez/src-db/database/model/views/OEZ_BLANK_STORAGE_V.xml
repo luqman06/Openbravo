@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+  <database name="VIEW OEZ_BLANK_STORAGE_V">
+    <view name="OEZ_BLANK_STORAGE_V"><![CDATA[SELECT a.m_locator_id AS oez_blank_storage_v_id, a.ad_org_id, a.ad_client_id, a.isactive, a.created, a.createdby, a.updated, a.updatedby, c.name AS namewarehouse, a.value AS storagename, a.x, a.y, a.z, b.qtyonhand, d.name AS inventorystatus FROM m_locator a LEFT JOIN m_storage_detail b ON a.m_locator_id = b.m_locator_id LEFT JOIN m_warehouse c ON a.m_warehouse_id = c.m_warehouse_id LEFT JOIN m_inventorystatus d ON d.m_inventorystatus_id = a.m_inventorystatus_id WHERE b.qtyonhand IS NULL]]></view>
+  </database>

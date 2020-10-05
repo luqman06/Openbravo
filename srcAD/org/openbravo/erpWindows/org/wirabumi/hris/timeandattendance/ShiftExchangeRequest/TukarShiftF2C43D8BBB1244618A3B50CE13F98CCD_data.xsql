@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SqlClass id="class" name="TukarShiftF2C43D8BBB1244618A3B50CE13F98CCDData" package="org.openbravo.erpWindows.org.wirabumi.hris.timeandattendance.ShiftExchangeRequest">
+  <SqlClassComment>WAD Generated class</SqlClassComment>
+
+  <SqlMethod name="dummy" type="preparedStatement" return="multiple">
+    <Sql>
+      SELECT '' AS dummy from DUAL
+    </Sql>
+  </SqlMethod>
+
+
+
+
+  <SqlMethod name="updateDocAction" type="preparedStatement" return="rowCount">
+    <Sql><![CDATA[
+        UPDATE ta_tukar_shift
+        SET docaction = ? 
+        WHERE ta_tukar_shift.TA_Tukar_Shift_ID = ?
+    ]]></Sql>
+    <Parameter name="docaction"></Parameter>
+    <Parameter id="paramKey" name="taTukarShiftId"></Parameter>
+  </SqlMethod>
+
+
+
+
+</SqlClass>

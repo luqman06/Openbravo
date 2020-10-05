@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="B28898E7BCB848ECB4A228A6B3703EE1" trl="N">
+    <value column="Name" isTrl="N" original="Overtime Request">Overtime Request</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F5D4D22E90EB4EAF84211F708F67D350" trl="N">
+    <value column="Name" isTrl="Y" original="Overtime Rule">Overtime Catalogue</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F5D6914B217540178E08E3AE6B7D826D" trl="N">
+    <value column="Name" isTrl="Y" original="Emergency Call Request">Emergency Call</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

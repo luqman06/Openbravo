@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER TM_DETAILPESANGON_TRG">
+    <trigger name="TM_DETAILPESANGON_TRG" table="TM_DETAIL_PESANGON" fires="before" insert="true" update="true" delete="true" foreach="row">
+      <body><![CDATA[
+/*************************************************************************
+* The contents of this file are subject to the Openbravo  Public  License
+* Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+* Version 1.1  with a permitted attribution clause; you may not  use this
+* file except in compliance with the License. You  may  obtain  a copy of
+* the License at http://www.openbravo.com/legal/license.html
+* Software distributed under the License  is  distributed  on  an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+* License for the specific  language  governing  rights  and  limitations
+* under the License.
+* The Original Code is Openbravo ERP.
+* The Initial Developer of the Original Code is Openbravo SLU
+* All portions are Copyright (C) 2008-2009 Openbravo SLU
+* All Rights Reserved.
+* Contributor(s):  ______________________________________.
+************************************************************************/
+  v_DocStatus VARCHAR(60);
+      
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+  IF INSERTING THEN
+    select docstatus into v_DocStatus 
+    from tm_form_pesangon where tm_form_pesangon_id=:new.tm_form_pesangon_id;
+  ELSE
+    select docstatus into v_DocStatus 
+    from tm_form_pesangon where tm_form_pesangon_id=:old.tm_form_pesangon_id;
+  END IF;
+
+
+  IF (v_DocStatus = 'CL') THEN
+    RAISE_APPLICATION_ERROR(-20527, 'It is not possible to modify a closed requisition');
+  END IF;
+  
+  IF (v_DocStatus = 'CO' AND INSERTING) THEN
+    RAISE_APPLICATION_ERROR(-20525, 'It is not possible insert a new line in a completed requisition');
+  END IF;
+  
+  IF (v_DocStatus = 'CO' AND DELETING) THEN
+    RAISE_APPLICATION_ERROR(-20000, '@20501@');
+  END IF;
+
+  IF UPDATING THEN
+    IF ((COALESCE(:old.name, '.') <> COALESCE(:new.name,'.'))
+       OR (COALESCE(:old.tm_form_pesangon_id, '0') <> COALESCE(:new.tm_form_pesangon_id, '0'))
+       OR (COALESCE(:old.amount, -1) <> COALESCE(:new.amount, -1 ))
+       OR (COALESCE(:old.total, -1) <> COALESCE(:new.total, -1 ))
+       OR (COALESCE(:old.calculate, -1) <> COALESCE(:new.calculate, -1 ))
+       OR (COALESCE(:old.multiplier, -1) <> COALESCE(:new.multiplier, -1 ))) THEN
+    IF (v_DocStatus = 'CO') THEN
+       RAISE_APPLICATION_ERROR(-20522, 'It is not possible to modify a Detail when the Pesangon is completed');
+
+     END IF;
+    END IF;
+  END IF;
+
+END TM_DETAILPESANGON_TRG
+]]></body>
+    </trigger>
+  </database>

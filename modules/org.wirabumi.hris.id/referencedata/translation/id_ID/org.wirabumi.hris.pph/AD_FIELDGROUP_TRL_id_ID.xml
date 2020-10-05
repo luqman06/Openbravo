@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELDGROUP" version="">
+  <row id="079F98B5BFBB4E5DAFAC7F7AD2E1AC20" trl="N">
+    <value column="Name" isTrl="N" original="Set Biaya Jabatan">Set Biaya Jabatan</value>
+  </row>
+  <row id="18243303DDE74009BE8EBA3AB3B89D11" trl="N">
+    <value column="Name" isTrl="N" original="Perhitungan PPh 21">Perhitungan PPh 21</value>
+  </row>
+  <row id="91987F6217204520965981DCCDD64913" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Bruto">Penghasilan Bruto</value>
+  </row>
+  <row id="A995D1164FA345EE9AE4626200F272F1" trl="N">
+    <value column="Name" isTrl="N" original="Tanda Tangan dan Cap Perusahaan">Tanda Tangan dan Cap Perusahaan</value>
+  </row>
+  <row id="C6B343AB26184C7086D5CB4BD1C758BC" trl="N">
+    <value column="Name" isTrl="N" original="Pengurangan">Pengurangan</value>
+  </row>
+</compiereTrl>

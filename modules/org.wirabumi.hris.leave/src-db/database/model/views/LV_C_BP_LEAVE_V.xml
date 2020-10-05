@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+  <database name="VIEW LV_C_BP_LEAVE_V">
+    <view name="LV_C_BP_LEAVE_V"><![CDATA[SELECT lv_c_bp_leave.lv_c_bp_leave_id AS lv_c_bp_leave_v_id, lv_c_bp_leave.ad_client_id, lv_c_bp_leave.ad_org_id, lv_c_bp_leave.updated, lv_c_bp_leave.updatedby, lv_c_bp_leave.created, lv_c_bp_leave.createdby, lv_c_bp_leave.isactive, ((((SELECT lv_set_leave.name FROM lv_set_leave WHERE lv_set_leave.lv_set_leave_id = lv_c_bp_leave.lv_set_leave_id))) || ' ') || date_part('year', lv_c_bp_leave.validfrom) AS employeeleave, lv_c_bp_leave.c_bpartner_id, lv_c_bp_leave.validfrom, lv_c_bp_leave.validto FROM lv_c_bp_leave]]></view>
+  </database>

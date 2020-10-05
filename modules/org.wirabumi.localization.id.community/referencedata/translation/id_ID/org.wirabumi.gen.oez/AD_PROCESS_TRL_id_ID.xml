@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_PROCESS" version="">
+  <row id="0C32C66672F1458598940A308E75DBF4" trl="N">
+    <value column="Name" isTrl="N" original="Stock Card">Stock Card</value>
+    <value column="Description" isTrl="N" original="Stock Card">Stock Card</value>
+    <value column="Help" isTrl="N" original="Report to show starting balance, movement quantity, and ending balance of a product within a warehouse, to review product movement.">Report to show starting balance, movement quantity, and ending balance of a product within a warehouse, to review product movement.</value>
+  </row>
+  <row id="147BF5A7C5BB4B89A12589E41A906625" trl="N">
+    <value column="Name" isTrl="N" original="Import Product Price">Import Product Price</value>
+    <value column="Description" isTrl="N" original="Import Product Price">Import Product Price</value>
+    <value column="Help" isTrl="N" original="Run process to import product pricess. This process will update or insert new record for price of a particular product. Its assumed you have define your product and price list version first.">Run process to import product pricess. This process will update or insert new record for price of a particular product. Its assumed you have define your product and price list version first.</value>
+  </row>
+  <row id="2DD838352350470DAB65A5CF015CC166" trl="N">
+    <value column="Name" isTrl="N" original="Goods Receipt Awaiting Purchase Invoice Report">Goods Receipt Awaiting Purchase Invoice Report</value>
+    <value column="Description" isTrl="N" original="Goods Receipt Awaiting Purchase Invoice Report">Goods Receipt Awaiting Purchase Invoice Report</value>
+    <value column="Help" isTrl="N" original="Report to show goods receipt without purchase invoice">Report to show goods receipt without purchase invoice</value>
+  </row>
+  <row id="2F841CB320134E4CB64BD6E5AAE09946" trl="N">
+    <value column="Name" isTrl="N" original="Configuration Wizard">Configuration Wizard</value>
+    <value column="Description" isTrl="N" original="Openbravo EZ Configuration Wizard">Openbravo EZ Configuration Wizard</value>
+    <value column="Help" isTrl="N" original="Run configuration wizard to create all required configuration data.">Run configuration wizard to create all required configuration data.</value>
+  </row>
+  <row id="5059DC89F5C34BAA99A967E39E606562" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Awaiting Sales Invoice Report">Sales Order Awaiting Sales Invoice Report</value>
+    <value column="Description" isTrl="N" original="Sales Order Awaiting Sales Invoice Report">Sales Order Awaiting Sales Invoice Report</value>
+    <value column="Help" isTrl="N" original="report to show sales order without sales invoice">report to show sales order without sales invoice</value>
+  </row>
+  <row id="6B2A5CA4F9594F21B132F1048922EFBF" trl="N">
+    <value column="Name" isTrl="N" original="oez_imp_m_inout">oez_imp_m_inout</value>
+    <value column="Description" isTrl="N" original="Import Receipt/Shipment">Import Receipt/Shipment</value>
+    <value column="Help" isTrl="N" original="The Parameters are default values for null import record values, they do not overwrite any data.">The Parameters are default values for null import record values, they do not overwrite any data.</value>
+  </row>
+  <row id="77B4C27E61674B9595DE2ADA83B99925" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Order Awaiting Goods Receipt Report">Purchase Order Awaiting Goods Receipt Report</value>
+    <value column="Description" isTrl="N" original="Purchase Order Awaiting Goods Receipt Report">Purchase Order Awaiting Goods Receipt Report</value>
+    <value column="Help" isTrl="N" original="List of item inside purchase order which not received yet.">List of item inside purchase order which not received yet.</value>
+  </row>
+  <row id="79C2622162B6439E96A15E366ACF326C" trl="N">
+    <value column="Name" isTrl="N" original="Stock Aging Report">Stock Aging Report</value>
+    <value column="Description" isTrl="N" original="Stock Aging Report">Stock Aging Report</value>
+    <value column="Help" isTrl="N" original="Report to show how long (in days) item exists in the warehouse.">Report to show how long (in days) item exists in the warehouse.</value>
+  </row>
+  <row id="79DBF462188A4DA5B25709DAECC387BF" trl="N">
+    <value column="Name" isTrl="N" original="Process Import Budget">Process Import Budget</value>
+    <value column="Description" isTrl="N" original="Import Budget">Import Budget</value>
+    <value column="Help" isTrl="N" original="Import budget from temporary table (origanally from CSV) to Budget.">Import budget from temporary table (origanally from CSV) to Budget.</value>
+  </row>
+  <row id="7BFDF49C41354EE49E9BE08C3E3C1B3E" trl="N">
+    <value column="Name" isTrl="N" original="Import Product Cost">Import Product Cost</value>
+    <value column="Description" isTrl="N" original="Import Product Cost">Import Product Cost</value>
+    <value column="Help" isTrl="N" original="Import Product Cost to define the latest costing at the begining of accounting period. By providing the product cost you are allowed to see the valued stock value, and also post the 1st Goods Receipt document. Beside that, you will get matched value of your inventory in the warehouse and in your balance sheet.">Import Product Cost to define the latest costing at the begining of accounting period. By providing the product cost you are allowed to see the valued stock value, and also post the 1st Goods Receipt document. Beside that, you will get matched value of your inventory in the warehouse and in your balance sheet.</value>
+  </row>
+  <row id="8F5EF0FCF01C41D2AA51E16CFD697D6E" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Order Awaiting Purchase Invoice Report">Purchase Order Awaiting Purchase Invoice Report</value>
+    <value column="Description" isTrl="N" original="Purchase Order Awaiting Purchase Invoice Report">Purchase Order Awaiting Purchase Invoice Report</value>
+    <value column="Help" isTrl="N" original="Report to show purchase order without purchase invoice.">Report to show purchase order without purchase invoice.</value>
+  </row>
+  <row id="9352988270C6464688CA21BE3B982C62" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Review Report">Sales Order Review Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="976D91FE82154B03A8EB4446C571ED22" trl="N">
+    <value column="Name" isTrl="N" original="Process Import Invoice">Process Import Invoice</value>
+    <value column="Description" isTrl="N" original="Import Invoice">Import Invoice</value>
+    <value column="Help" isTrl="N" original="import invoice from temporary table (originally from CSV) into Sales/Purchase Invoice.">import invoice from temporary table (originally from CSV) into Sales/Purchase Invoice.</value>
+  </row>
+  <row id="9B26EF017C244CD59C77BE203A2D14A8" trl="N">
+    <value column="Name" isTrl="N" original="Process Import G/L Journal">Process Import G/L Journal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AE856EB10CD8444EB7555625E1F48631" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="Description" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="Help" isTrl="N" original="Import Business Partner A/R or A/P balance.">Import Business Partner A/R or A/P balance.</value>
+  </row>
+  <row id="C75B7F44C5C641359191D7C3B98E874C" trl="N">
+    <value column="Name" isTrl="N" original="Stock Aging Background Process">Stock Aging Background Process</value>
+    <value column="Description" isTrl="N" original="Stock Aging Background Process">Stock Aging Background Process</value>
+    <value column="Help" isTrl="N" original="Background process for calculating inventory aging, and store calculation result in oez_stockaging">Background process for calculating inventory aging, and store calculation result in oez_stockaging</value>
+  </row>
+  <row id="CC5C103DF6164869A5847C431668FB0B" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Help" isTrl="N" original="Import Inventory for Opening Balance">Import Inventory for Opening Balance</value>
+  </row>
+  <row id="E222FF23CCB7480E9D354B33517E8C6B" trl="N">
+    <value column="Name" isTrl="N" original="Shipment Awaiting Sales Invoice Report">Shipment Awaiting Sales Invoice Report</value>
+    <value column="Description" isTrl="N" original="Shipment Awaiting Sales Invoice Report">Shipment Awaiting Sales Invoice Report</value>
+    <value column="Help" isTrl="N" original="Display a report to show Goods shipment without Sales Invoice.">Display a report to show Goods shipment without Sales Invoice.</value>
+  </row>
+  <row id="FFB36346586F49FF8E590DD00A037318" trl="N">
+    <value column="Name" isTrl="N" original="Sales Order Awaiting Goods Shipment Report">Sales Order Awaiting Goods Shipment Report</value>
+    <value column="Description" isTrl="N" original="Sales Order Awaiting Goods Shipment Report">Sales Order Awaiting Goods Shipment Report</value>
+    <value column="Help" isTrl="N" original="List of item inside sales order which not shipped yet.">List of item inside sales order which not shipped yet.</value>
+  </row>
+</compiereTrl>

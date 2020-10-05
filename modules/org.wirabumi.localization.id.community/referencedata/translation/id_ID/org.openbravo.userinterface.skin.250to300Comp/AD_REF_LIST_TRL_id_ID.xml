@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REF_LIST" version="">
+  <row id="27F0D1235450423C814D3A0DCABA7D10" trl="N">
+    <value column="Name" isTrl="N" original="2.50 to 3.00 Compatibility">2.50 to 3.00 Compatibility</value>
+    <value column="Description" isTrl="N" original="Skin module to proper visualization of classic windows inside the MDI interface">Skin module to proper visualization of classic windows inside the MDI interface</value>
+  </row>
+</compiereTrl>

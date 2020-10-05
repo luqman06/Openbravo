@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TAB" version="">
+  <row id="011EDB3E217F4D8589C206BC7015B3B3" trl="N">
+    <value column="Name" isTrl="Y" original="Calculation Detail">Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="19082F1BACE04B3ABA047722D661B332" trl="N">
+    <value column="Name" isTrl="Y" original="Header">Overtime Request</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4FAA9DD40BA847C68E16E6FA221841D2" trl="N">
+    <value column="Name" isTrl="Y" original="Header">Emergency Call</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="52663BAC3B464E418F8883A3852A9AD5" trl="N">
+    <value column="Name" isTrl="N" original="Business Rate">Business Rate</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="70A6C9A9089947C19D4FD6C3C34B099E" trl="N">
+    <value column="Name" isTrl="N" original="Non Business Rate">Non Business Rate</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9958AEDB121E40CB899C7F2EF4F03E8D" trl="N">
+    <value column="Name" isTrl="Y" original="Calculation Detail">Emergecy Detail</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A19813E1098E4DA7A3855A2E3C77F803" trl="N">
+    <value column="Name" isTrl="Y" original="Overtime Rule">Overtime Catalogue</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

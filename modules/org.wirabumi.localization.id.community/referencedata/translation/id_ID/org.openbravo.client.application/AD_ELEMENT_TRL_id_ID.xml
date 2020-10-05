@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="0E87BDD6E59C4B5FB9273E2580CC76B2" trl="N">
+    <value column="Name" isTrl="N" original="Navigation Bar Component Role Access">Navigation Bar Component Role Access</value>
+    <value column="PrintName" isTrl="N" original="Navigation Bar Component Role Access">Navigation Bar Component Role Access</value>
+    <value column="Description" isTrl="N" original="Defines which roles have access to which navigation bar components.">Defines which roles have access to which navigation bar components.</value>
+    <value column="Help" isTrl="N" original="Defines which roles have access to which navigation bar components.">Defines which roles have access to which navigation bar components.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="18EA6EC150C545AE8C5E0A3BD4BD4871" trl="N">
+    <value column="Name" isTrl="N" original="Value">Value</value>
+    <value column="PrintName" isTrl="N" original="Value">Value</value>
+    <value column="Description" isTrl="N" original="The value for the record.">The value for the record.</value>
+    <value column="Help" isTrl="N" original="The value for the record.">The value for the record.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="31DCDECE67A34C418930D50405D8057D" trl="N">
+    <value column="Name" isTrl="N" original="Start in New Line">Start in New Line</value>
+    <value column="PrintName" isTrl="Y" original="Startinnewline">Start in New Line</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3C899452C68646A7A3E35A0CDCA8CA7A" trl="N">
+    <value column="Name" isTrl="N" original="Summary Function">Summary Function</value>
+    <value column="PrintName" isTrl="N" original="Summary Function">Summary Function</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Defines the summary function to use, valid values: sum, avg, max, min, count">Defines the summary function to use, valid values: sum, avg, max, min, count</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3F9E2C7B705C46ACADEDA8CF477FC9C5" trl="N">
+    <value column="Name" isTrl="N" original="New Function">New Function</value>
+    <value column="PrintName" isTrl="N" original="New Function">New Function</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Defines the function that will called when adding a new row to the grid">Defines the function that will called when adding a new row to the grid</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="41A5FEDD70F140BF8438B8C8FA03B876" trl="N">
+    <value column="Name" isTrl="N" original="Validation Function">Validation Function</value>
+    <value column="PrintName" isTrl="N" original="Validation Function">Validation Function</value>
+    <value column="Description" isTrl="N" original="Defines the function to be used as part of fields validatiors">Defines the function to be used as part of fields validatiors</value>
+    <value column="Help" isTrl="N" original="By default a field have a set of validation functions, isNumber, isBoolean, etc. The developer can define a custom validator function to check the value entered by a the user.">By default a field have a set of validation functions, isNumber, isBoolean, etc. The developer can define a custom validator function to check the value entered by a the user.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4813809446914A86B03E9211DEA0A0E5" trl="N">
+    <value column="Name" isTrl="N" original="Multi Record">Multi Record</value>
+    <value column="PrintName" isTrl="N" original="Multi Record">Multi Record</value>
+    <value column="Description" isTrl="N" original="Allow execution on multiple records at the same time">Allow execution on multiple records at the same time</value>
+    <value column="Help" isTrl="N" original="Multi Record allows to execute the process in multiple records at the same time. When this flag is set, multiple records can be selected in grid mode and the process can be executed in all of them at the same time.">Multi Record allows to execute the process in multiple records at the same time. When this flag is set, multiple records can be selected in grid mode and the process can be executed in all of them at the same time.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4B3999F4700C4C93ABEA49C89A8E484E" trl="N">
+    <value column="Name" isTrl="N" original="Available for All Roles">Available for All Roles</value>
+    <value column="PrintName" isTrl="N" original="Available for All Roles">Available for All Roles</value>
+    <value column="Description" isTrl="N" original="Defines that this navigation bar component is available to all roles or that role access is defined specifically by role.">Defines that this navigation bar component is available to all roles or that role access is defined specifically by role.</value>
+    <value column="Help" isTrl="N" original="Defines that this navigation bar component is available to all roles or that role access is defined specifically by role through the navigation bar role access table.">Defines that this navigation bar component is available to all roles or that role access is defined specifically by role through the navigation bar role access table.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4F42DE67C7DE44F6AD3C24E7C3B13844" trl="N">
+    <value column="Name" isTrl="N" original="Remove Function">Remove Function</value>
+    <value column="PrintName" isTrl="N" original="Remove Function">Remove Function</value>
+    <value column="Description" isTrl="N" original="Function that will get executed when removing a row from the grid">Function that will get executed when removing a row from the grid</value>
+    <value column="Help" isTrl="N" original="When the grid allows remove rows you can specify a &quot;on remove&quot; function that will get executed when trying remove a row. If the function returns false, the row will not get removed.">When the grid allows remove rows you can specify a "on remove" function that will get executed when trying remove a row. If the function returns false, the row will not get removed.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="50069593057E4B64AE1FCF29E2898A74" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Uipersonalization_ID">Obuiapp_Uipersonalization_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Uipersonalization_ID">Obuiapp_Uipersonalization_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5509E6BF87024E24A53DA324952D33C1" trl="N">
+    <value column="Name" isTrl="N" original="Classname of the view implementation">Classname of the view implementation</value>
+    <value column="PrintName" isTrl="Y" original="Java Classname">Classname of the view implementation</value>
+    <value column="Description" isTrl="N" original="The java class name of the view implementation. The java class must extend the org.openbravo.client.kernel.BaseTemplateComponent.">The java class name of the view implementation. The java class must extend the org.openbravo.client.kernel.BaseTemplateComponent.</value>
+    <value column="Help" isTrl="N" original="The java class name of the view implementation. The java class must extend the org.openbravo.client.kernel.BaseTemplateComponent.">The java class name of the view implementation. The java class must extend the org.openbravo.client.kernel.BaseTemplateComponent.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="557A756A00364FE5AFF9584D2F1C19FF" trl="N">
+    <value column="Name" isTrl="N" original="Process Defintion">Process Defintion</value>
+    <value column="PrintName" isTrl="Y" original="Obuiapp_Process_ID">Process Defintion</value>
+    <value column="Description" isTrl="N" original="Process Defintion">Process Defintion</value>
+    <value column="Help" isTrl="N" original="Process Defintion is a re implementation of Process with 3.0 infrastructure.">Process Defintion is a re implementation of Process with 3.0 infrastructure.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6C7868D921F648E3AF7933397AAF2727" trl="N">
+    <value column="Name" isTrl="N" original="Show Summary">Show Summary</value>
+    <value column="PrintName" isTrl="N" original="Show Summary">Show Summary</value>
+    <value column="Description" isTrl="N" original="Show Summary">Show Summary</value>
+    <value column="Help" isTrl="N" original="Defines if the Field should show a summary function at the end of the grid">Defines if the Field should show a summary function at the end of the grid</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6DBAB16113DB4879A0EA095E80FBA959" trl="N">
+    <value column="Name" isTrl="N" original="Can Delete">Can Delete</value>
+    <value column="PrintName" isTrl="N" original="Can Delete">Can Delete</value>
+    <value column="Description" isTrl="N" original="Defines if a user is allowed to delete lines">Defines if a user is allowed to delete lines</value>
+    <value column="Help" isTrl="N" original="Defines if a user is allowed to delete lines">Defines if a user is allowed to delete lines</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7A18B7D741A349B493D145C80DB54E5E" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Ref_Window_ID">Obuiapp_Ref_Window_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Ref_Window_ID">Obuiapp_Ref_Window_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7F257DE6A0C847A8A121804BC5F9B7A8" trl="N">
+    <value column="Name" isTrl="N" original="Navigation Bar Component">Navigation Bar Component</value>
+    <value column="PrintName" isTrl="N" original="Navigation Bar Component">Navigation Bar Component</value>
+    <value column="Description" isTrl="N" original="A component shown in the navigation bar in the top of the user interface">A component shown in the navigation bar in the top of the user interface</value>
+    <value column="Help" isTrl="N" original="A navigation bar component is a component which is shown in the navigation bar in the top of the user interface. For example a quick create or an application menu.">A navigation bar component is a component which is shown in the navigation bar in the top of the user interface. For example a quick create or an application menu.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7F9BC17EC8B74EE1A19EAF0AE074A44B" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_View_Role_Access_ID">Obuiapp_View_Role_Access_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_View_Role_Access_ID">Obuiapp_View_Role_Access_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7FCB281817674667B5E7BA53B464F299" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Note_ID">Obuiapp_Note_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Note_ID">Obuiapp_Note_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927E4DC3105D1526E040A8C0CF072A46" trl="N">
+    <value column="Name" isTrl="N" original="Fixed Value">Fixed Value</value>
+    <value column="PrintName" isTrl="N" original="Fixed Value">Fixed Value</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927E4DC3105F1526E040A8C0CF072A46" trl="N">
+    <value column="Name" isTrl="N" original="Parameter">Parameter</value>
+    <value column="PrintName" isTrl="N" original="Parameter">Parameter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927E4DC310661526E040A8C0CF072A46" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Parameter_Trl_ID">Obuiapp_Parameter_Trl_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Parameter_Trl_ID">Obuiapp_Parameter_Trl_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927FD512FEF6BBA9E040A8C0CF073D3C" trl="N">
+    <value column="Name" isTrl="N" original="Value Number">Value Number</value>
+    <value column="PrintName" isTrl="N" original="Value Number">Value Number</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927FD512FEF8BBA9E040A8C0CF073D3C" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Parameter_Value_ID">Obuiapp_Parameter_Value_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Parameter_Value_ID">Obuiapp_Parameter_Value_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927FD512FEFABBA9E040A8C0CF073D3C" trl="N">
+    <value column="Name" isTrl="N" original="Value Date">Value Date</value>
+    <value column="PrintName" isTrl="N" original="Value Date">Value Date</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="927FD512FEFCBBA9E040A8C0CF073D3C" trl="N">
+    <value column="Name" isTrl="N" original="Value String">Value String</value>
+    <value column="PrintName" isTrl="N" original="Value String">Value String</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="95680940E12C4271A7AF8F68E92358E6" trl="N">
+    <value column="Name" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="PrintName" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="Description" isTrl="N" original="The view implementation which is shown in the tab of a multi-document-interface">The view implementation which is shown in the tab of a multi-document-interface</value>
+    <value column="Help" isTrl="N" original="The view implementation which is shown in the tab of a multi-document-interface. ">The view implementation which is shown in the tab of a multi-document-interface. </value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="969A16E782CF42E797A10365AB76E9D7" trl="N">
+    <value column="Name" isTrl="N" original="Can Add">Can Add</value>
+    <value column="PrintName" isTrl="N" original="Can Add">Can Add</value>
+    <value column="Description" isTrl="N" original="Defines if a user is allowed to add new lines">Defines if a user is allowed to add new lines</value>
+    <value column="Help" isTrl="N" original="Defines if a user is allowed to add new lines">Defines if a user is allowed to add new lines</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="970F01C5451937C3E040007F01002163" trl="N">
+    <value column="Name" isTrl="N" original="Evaluate Fixed Value">Evaluate Fixed Value</value>
+    <value column="PrintName" isTrl="N" original="Evaluate Fixed Value">Evaluate Fixed Value</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="When the flag is enabled the Fixed Value is evaluated as a JS expression.">When the flag is enabled the Fixed Value is evaluated as a JS expression.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="98001F5A0FFD4D21BDE553CF8B2F00F5" trl="N">
+    <value column="Name" isTrl="N" original="Selection Function">Selection Function</value>
+    <value column="PrintName" isTrl="N" original="Selection Function">Selection Function</value>
+    <value column="Description" isTrl="N" original="Custom JavaScript function that will get executed when the selection in a grid changes">Custom JavaScript function that will get executed when the selection in a grid changes</value>
+    <value column="Help" isTrl="N" original="When the user changes the selection (a row gets selected or deselected) the custom JavaScript function will get executed">When the user changes the selection (a row gets selected or deselected) the custom JavaScript function will get executed</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A40E05056A904DD8970BFAB4F5AF7E37" trl="N">
+    <value column="Name" isTrl="N" original="Process Definition">Process Definition</value>
+    <value column="PrintName" isTrl="N" original="Process Definition">Process Definition</value>
+    <value column="Description" isTrl="N" original="Process to be executed by the button">Process to be executed by the button</value>
+    <value column="Help" isTrl="N" original="Process to be executed by the button. There are 2 kinds of processes:&#10;*&quot;Process&quot;: Implements the 2.50 style processes with a Servlet.&#10;*&quot;Process Definition&quot;: Implements 3.0 processes with a pure SmartClient UI.">Process to be executed by the button. There are 2 kinds of processes:
+*"Process": Implements the 2.50 style processes with a Servlet.
+*"Process Definition": Implements 3.0 processes with a pure SmartClient UI.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B7BB240B9AA74817AFD7B8C2602B1CAD" trl="N">
+    <value column="Name" isTrl="N" original="Colspan">Colspan</value>
+    <value column="PrintName" isTrl="N" original="Colspan">Colspan</value>
+    <value column="Description" isTrl="N" original="Number of columns this field should occupy in the form">Number of columns this field should occupy in the form</value>
+    <value column="Help" isTrl="N" original="This value can be used to define, multi-columns fields. So fields occupying more then one column. If this value is not set the normal calculation takes place.">This value can be used to define, multi-columns fields. So fields occupying more then one column. If this value is not set the normal calculation takes place.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BAF19AAC391C420E9BA1E54641D563D9" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Menu_Parameters_ID">Obuiapp_Menu_Parameters_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Menu_Parameters_ID">Obuiapp_Menu_Parameters_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C39954911E27408CBF8F44743A1A0F51" trl="N">
+    <value column="Name" isTrl="N" original="Show Select Column">Show Select Column</value>
+    <value column="PrintName" isTrl="N" original="Show Select Column">Show Select Column</value>
+    <value column="Description" isTrl="N" original="Defines if the select column should be shown">Defines if the select column should be shown</value>
+    <value column="Help" isTrl="N" original="Some use cases requires that the selection column (checkbox column) is hidden">Some use cases requires that the selection column (checkbox column) is hidden</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D407F5CD8D234F738D98EDB872F9377A" trl="N">
+    <value column="Name" isTrl="N" original="Navigation Bar Classname">Navigation Bar Classname</value>
+    <value column="PrintName" isTrl="Y" original="Java Classname">Navigation Bar Classname</value>
+    <value column="Description" isTrl="N" original="The classname of the navigation bar component.">The classname of the navigation bar component.</value>
+    <value column="Help" isTrl="N" original="The java class name of the navigation bar component. The java class must extend the org.openbravo.client.kernel.BaseTemplateComponent.">The java class name of the navigation bar component. The java class must extend the org.openbravo.client.kernel.BaseTemplateComponent.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EAC4A032E1AF4EFBBCBE5C8355EDDE74" trl="N">
+    <value column="Name" isTrl="N" original="Rowspan">Rowspan</value>
+    <value column="PrintName" isTrl="N" original="Rowspan">Rowspan</value>
+    <value column="Description" isTrl="N" original="Number of rows this field should occupy in the form">Number of rows this field should occupy in the form</value>
+    <value column="Help" isTrl="N" original="This value can be used to define, multi-row fields. So fields occupying more then one row. If this value is not set the normal calculation takes place.">This value can be used to define, multi-row fields. So fields occupying more then one row. If this value is not set the normal calculation takes place.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F39469FBB4F041BFBC730BB9E0691F29" trl="N">
+    <value column="Name" isTrl="N" original="Obuiapp_Process_Access_ID">Obuiapp_Process_Access_ID</value>
+    <value column="PrintName" isTrl="N" original="Obuiapp_Process_Access_ID">Obuiapp_Process_Access_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FC093F3F9DD64F81828FE06AB2CC4FEB" trl="N">
+    <value column="Name" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="PrintName" isTrl="N" original="View Implementation">View Implementation</value>
+    <value column="Description" isTrl="N" original="Defines the implementation of a view shown in the user interface.">Defines the implementation of a view shown in the user interface.</value>
+    <value column="Help" isTrl="N" original="A view is displayed inside a tab in the multi document interface.">A view is displayed inside a tab in the multi document interface.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TaxInvoice" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="562" leftMargin="30" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0000000000000144"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="29"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[new String("")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[-- FAKTUR PAJAK
+
+select il.line::integer,
+(select nomorfakturpajak
+from id_nomorfakturpajak
+where id_nomorfakturpajak_id=i.em_id_nomorfakturpajak_id) as "DOCUMENT NO",
+
+(select dividerate
+from id_tax_conversion_rate
+where c_currency_id_to = i.c_currency_id
+and validfrom >= i.dateinvoiced
+and i.dateinvoiced <= validto
+limit 1) as "RATE",
+
+
+o.name as "NAMA ORGANISASI",
+l.address1 as "ALAMAT ORGANISASI",
+oi.taxid as "NPWP1",
+to_char(oi.em_id_tglpengukuhanpkp::date, 'dd MONTH yyyy') as "TGL PENGUKUHAN PKP",
+bp.name as "NAMA BPARTNER",
+l2.address1 as "ALAMAT BPARTNER",
+bpl.em_id_alamatnpwp as "ALAMAT NPWP",
+bpl.em_pmse_npwp as "NPWP2",
+bp.em_id_nppkp as "NPPKP",
+p.name as "NAMA PRODUCT",
+round(il.priceactual, 2) as "HARGA SATUAN",
+il.qtyinvoiced as "UNIT",
+round(il.linenetamt, 2) as "HARGA JUAL",
+i.documentno as "NO_INVOICE",
+cc.iso_code as "CURRENCY",
+t.em_pmse_prefix  as "prefix",
+
+round((select sum(linenetamt)
+from c_invoiceline
+where c_invoice_id = i.c_invoice_id
+and c_tax_id in (select c_tax_id from c_tax where em_id_ppn = 'Y')), 2) as "JUMLAH HARGA JUAL",
+
+round((select sum(taxamt) from c_invoicetax
+where c_invoice_id = i.c_invoice_id
+and c_tax_id in (select c_tax_id from c_tax where em_id_ppn = 'Y')), 2) as "TAX",
+
+
+
+l.city as "KOTA",
+to_char(i.dateinvoiced::date, 'dd/MM/yyyy') as "TANGGAL",
+u.name as "NAMA",
+u.title as "JABATAN"
+
+from
+c_invoice i
+inner join ad_org o on o.ad_org_id = i.ad_org_id
+inner join c_bpartner bp on bp.c_bpartner_id = i.c_bpartner_id
+inner join ad_orginfo oi on oi.ad_client_id = i.ad_client_id
+inner join c_location l on l.c_location_id = oi.c_location_id
+inner join c_bpartner_location bpl on bpl.c_bpartner_id = bp.c_bpartner_id
+inner join c_location l2 on bpl.c_location_id = l2.c_location_id
+inner join c_invoiceline il on il.c_invoice_id = i.c_invoice_id
+inner join m_product p on p.m_product_id = il.m_product_id
+inner join c_tax t on t.c_tax_id = il.c_tax_id
+left join ad_user u on u.ad_user_id = oi.em_id_pkp_id
+left join c_currency cc on cc.c_currency_id = i.c_currency_id
+
+
+
+where
+bpl.c_bpartner_location_id = i.c_bpartner_location_id and
+i.c_invoice_id = $P{DOCUMENT_ID}
+--i.c_invoice_id = '154DFABD898745CD87B12E1F4C25A233'
+ORDER BY il.line ASC;]]>
+	</queryString>
+	<field name="prefix" class="java.lang.String"/>
+	<field name="line" class="java.lang.Integer"/>
+	<field name="DOCUMENT NO" class="java.lang.String"/>
+	<field name="NAMA ORGANISASI" class="java.lang.String"/>
+	<field name="ALAMAT ORGANISASI" class="java.lang.String"/>
+	<field name="NPWP1" class="java.lang.String"/>
+	<field name="TGL PENGUKUHAN PKP" class="java.lang.String"/>
+	<field name="NAMA BPARTNER" class="java.lang.String"/>
+	<field name="ALAMAT BPARTNER" class="java.lang.String"/>
+	<field name="NPWP2" class="java.lang.String"/>
+	<field name="NPPKP" class="java.lang.String"/>
+	<field name="NAMA PRODUCT" class="java.lang.String"/>
+	<field name="HARGA SATUAN" class="java.math.BigDecimal"/>
+	<field name="UNIT" class="java.math.BigDecimal"/>
+	<field name="HARGA JUAL" class="java.math.BigDecimal"/>
+	<field name="JUMLAH HARGA JUAL" class="java.math.BigDecimal"/>
+	<field name="TAX" class="java.math.BigDecimal"/>
+	<field name="KOTA" class="java.lang.String"/>
+	<field name="TANGGAL" class="java.lang.String"/>
+	<field name="NAMA" class="java.lang.String"/>
+	<field name="JABATAN" class="java.lang.String"/>
+	<field name="NO_INVOICE" class="java.lang.String"/>
+	<field name="RATE" class="java.lang.String"/>
+	<field name="CURRENCY" class="java.lang.String"/>
+	<field name="ALAMAT NPWP" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="248" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="182" y="6" width="319" height="26" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{prefix}+$F{DOCUMENT NO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="182" y="142" width="380" height="17"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAMA BPARTNER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="182" y="189" width="165" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NPWP2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="162" width="357" height="27"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ALAMAT NPWP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="67" y="2" width="377" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAMA PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="455" y="2" width="103" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{HARGA JUAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="2" width="38" height="13"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="104" splitType="Stretch">
+			<textField pattern="#,##0">
+				<reportElement positionType="FixRelativeToBottom" x="456" y="21" width="100" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{JUMLAH HARGA JUAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="456" y="74" width="100" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{JUMLAH HARGA JUAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="456" y="92" width="100" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TAX}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="456" y="39" width="100" height="12"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<text><![CDATA[0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="56" width="100" height="12"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<text><![CDATA[0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="1" width="58" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<text><![CDATA[No. Invoice :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="1" width="100" height="12"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NO_INVOICE}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="22" y="27" width="43" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="22" y="29" width="43" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="122" y="27" width="63" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="122" y="29" width="63" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="207" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="465" y="26" width="98" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TANGGAL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="374" y="26" width="72" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{KOTA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="422" y="116" width="67" height="11"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<text><![CDATA[AHMAD WASLI ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

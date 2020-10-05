@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="059B04AB5BEC426A9177A1D9D283C138" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Rule">Katalog Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2B7864156C9E418494AF5BCE6E51097B" trl="N">
+    <value column="Name" isTrl="N" original="Mass Leave">Mass Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3F711C86BBA344F88EFA993FF4131E77" trl="N">
+    <value column="Name" isTrl="N" original="Employee Leave">Employee Leave</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="956440C0F3A54774A9BAA29D82DB54B5" trl="Y">
+    <value column="Name" isTrl="Y" original="Leave Request">Permohonan Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F51244E514C04E7E8E8669564CD1EBFC" trl="N">
+    <value column="Name" isTrl="Y" original="Leave Permit">Izin Tidak Masuk</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

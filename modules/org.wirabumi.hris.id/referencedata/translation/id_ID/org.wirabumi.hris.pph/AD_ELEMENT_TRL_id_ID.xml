@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="0086EDFD37B54BD48328723B90CFBD61" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Netto Setahun">Penghasilan Netto Setahun</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Netto Setahun">Penghasilan Netto Setahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0169E0A606E64D66874E0514701E5AB2" trl="Y">
+    <value column="Name" isTrl="Y" original="Annualized">Setahun</value>
+    <value column="PrintName" isTrl="N" original="Annualized">Annualized</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0B007A32CCE44A079D5232358A1C2900" trl="N">
+    <value column="Name" isTrl="N" original="PPH_1721_ID">PPH_1721_ID</value>
+    <value column="PrintName" isTrl="N" original="PPH_1721_ID">PPH_1721_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="173B271BA2604AB6B23270B838FA041C" trl="N">
+    <value column="Name" isTrl="N" original="Pemotong Pajak">Pemotong Pajak</value>
+    <value column="PrintName" isTrl="N" original="Pemotong Pajak">Pemotong Pajak</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="187AB5F024934AFCB0B8CEFBEF528CD5" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilanlain">Penghasilanlain</value>
+    <value column="PrintName" isTrl="N" original="Penghasilanlain">Penghasilanlain</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1B41B4C2FC884AC09B947D60DA89E7BF" trl="N">
+    <value column="Name" isTrl="N" original="K/0">K/0</value>
+    <value column="PrintName" isTrl="N" original="K/0">K/0</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1D93DB00ECA646429DE823FF6329FC25" trl="Y">
+    <value column="Name" isTrl="Y" original="Uperbound">Batas Atas</value>
+    <value column="PrintName" isTrl="N" original="Uperbound">Uperbound</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1E97CB91DCC64BBCBFF404FFBA83AD3F" trl="N">
+    <value column="Name" isTrl="N" original="PPH_Set_Ptkp_ID">PPH_Set_Ptkp_ID</value>
+    <value column="PrintName" isTrl="N" original="PPH_Set_Ptkp_ID">PPH_Set_Ptkp_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="22C1DE2B0CE04A6D9DC1098A7F2FA334" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Tidak Teratur Nett">Penghasilan Tidak Teratur Nett</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Tidak Teratur Nett">Penghasilan Tidak Teratur Nett</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2425A48CD3104A1E82FD586AD669BC5C" trl="N">
+    <value column="Name" isTrl="N" original="K/3">K/3</value>
+    <value column="PrintName" isTrl="N" original="K/3">K/3</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="28E7C6EBF884423698C1B7D78BF5872C" trl="N">
+    <value column="Name" isTrl="N" original="Dipotong dengan SSP">Dipotong dengan SSP</value>
+    <value column="PrintName" isTrl="N" original="Dipotong dengan SSP">Dipotong dengan SSP</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2DB5F8519D6845D4BE1C49B2DBCD4D59" trl="N">
+    <value column="Name" isTrl="N" original="Rutin Setahun Nett">Rutin Setahun Nett</value>
+    <value column="PrintName" isTrl="N" original="Rutin Setahun Nett">Rutin Setahun Nett</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2F706D3987FA4E4082D300F536BFFC99" trl="Y">
+    <value column="Name" isTrl="Y" original="Deduction Tax Mode">Tipe Pajak - Potongan</value>
+    <value column="PrintName" isTrl="N" original="Deduction Tax Mode">Deduction Tax Mode</value>
+    <value column="Description" isTrl="N" original="If deduction tax mode set to deductable, then this deduction considered as a component of gross income and will reduce income tax. If not, the this earning does not affecting income tax amount.">If deduction tax mode set to deductable, then this deduction considered as a component of gross income and will reduce income tax. If not, the this earning does not affecting income tax amount.</value>
+    <value column="Help" isTrl="N" original="If deduction tax mode set to deductable, then this deduction considered as a component of gross income and will reduce income tax. If not, the this earning does not affecting income tax amount.">If deduction tax mode set to deductable, then this deduction considered as a component of gross income and will reduce income tax. If not, the this earning does not affecting income tax amount.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="30CB783E49A84D19AC6CDCC209090D77" trl="N">
+    <value column="Name" isTrl="N" original="Rutin Sebulan Gross">Rutin Sebulan Gross</value>
+    <value column="PrintName" isTrl="N" original="Rutin Sebulan Gross">Rutin Sebulan Gross</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3288C38AA02D49C5A0128C6CA718159C" trl="N">
+    <value column="Name" isTrl="N" original="Rutin Sebulan Nett">Rutin Sebulan Nett</value>
+    <value column="PrintName" isTrl="N" original="Rutin Sebulan Nett">Rutin Sebulan Nett</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="33610E5C168E49D28A11E7C6323CE70C" trl="N">
+    <value column="Name" isTrl="N" original="PPH_Prevpph21_ID">PPH_Prevpph21_ID</value>
+    <value column="PrintName" isTrl="N" original="PPH_Prevpph21_ID">PPH_Prevpph21_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="341B5CBC4373414F836FA065CB1FB6AB" trl="N">
+    <value column="Name" isTrl="Y" original="PPh 21 Setahun">PPh 21 Terhutang</value>
+    <value column="PrintName" isTrl="Y" original="PPh 21 Setahun">PPh 21 Terhutang</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3492AE77D96349EABC3409D03B387559" trl="N">
+    <value column="Name" isTrl="N" original="Biaya Jabatan Atas Gaji">Biaya Jabatan Atas Gaji</value>
+    <value column="PrintName" isTrl="N" original="Biaya Jabatan Atas Gaji">Biaya Jabatan Atas Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3B4454B837F74FF0A67D76FFFBE84D21" trl="N">
+    <value column="Name" isTrl="N" original="Pendapatanlainnettbulanlalu">Pendapatanlainnettbulanlalu</value>
+    <value column="PrintName" isTrl="N" original="Pendapatanlainnettbulanlalu">Pendapatanlainnettbulanlalu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3D1390A4EC5346858462090252278F97" trl="N">
+    <value column="Name" isTrl="N" original="Pph21 Setahun">Pph21 Setahun</value>
+    <value column="PrintName" isTrl="N" original="Pph21 Setahun">Pph21 Setahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3EF044DF2F00468FBF4D5A95EE7589F6" trl="N">
+    <value column="Name" isTrl="N" original="Pengurangpajakbulanlalu">Pengurangpajakbulanlalu</value>
+    <value column="PrintName" isTrl="N" original="Pengurangpajakbulanlalu">Pengurangpajakbulanlalu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="40343696630044DB832995A597B45A71" trl="N">
+    <value column="Name" isTrl="N" original="NPWP Pemotong Pajak">NPWP Pemotong Pajak</value>
+    <value column="PrintName" isTrl="N" original="NPWP Pemotong Pajak">NPWP Pemotong Pajak</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="42E8E9847E7D4922BB3EB714EBCB806F" trl="N">
+    <value column="Name" isTrl="N" original="Biaya Jabatan Maksimal">Biaya Jabatan Maksimal</value>
+    <value column="PrintName" isTrl="N" original="Biaya Jabatan Maksimal">Biaya Jabatan Maksimal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4346978D358F43C6A03E694AF76050AF" trl="N">
+    <value column="Name" isTrl="N" original="Tantiem, Bonus, dan THR">Tantiem, Bonus, dan THR</value>
+    <value column="PrintName" isTrl="N" original="Tantiem, Bonus, dan THR">Tantiem, Bonus, dan THR</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="43908E5691E9417F865148BE244CF08B" trl="N">
+    <value column="Name" isTrl="N" original="Month">Month</value>
+    <value column="PrintName" isTrl="N" original="Month">Month</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="43B14F7799C0497AB4DD4D818D52197A" trl="N">
+    <value column="Name" isTrl="N" original="PTKP Setahun">PTKP Setahun</value>
+    <value column="PrintName" isTrl="N" original="PTKP Setahun">PTKP Setahun</value>
+    <value column="Description" isTrl="N" original="Penghasilan tidak kena pajak (setahun)">Penghasilan tidak kena pajak (setahun)</value>
+    <value column="Help" isTrl="N" original="Penghasilan tidak kena pajak (setahun)">Penghasilan tidak kena pajak (setahun)</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="46F560A7C4C64424B7E1654E04E8C065" trl="N">
+    <value column="Name" isTrl="N" original="Pendapatan Tidak Teratur Saja">Pendapatan Tidak Teratur Saja</value>
+    <value column="PrintName" isTrl="N" original="Pendapatan Tidak Teratur Saja">Pendapatan Tidak Teratur Saja</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4C69FAE4F7534A999BFAD8A987329218" trl="N">
+    <value column="Name" isTrl="N" original="Nama Pemotong Pajak">Nama Pemotong Pajak</value>
+    <value column="PrintName" isTrl="N" original="Nama Pemotong Pajak">Nama Pemotong Pajak</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4D24071EA4014A36A88205807D56DE1C" trl="N">
+    <value column="Name" isTrl="N" original="Kuasa">Kuasa</value>
+    <value column="PrintName" isTrl="N" original="Kuasa">Kuasa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4D7EA40E29A64B89B8A56E413A611B53" trl="N">
+    <value column="Name" isTrl="N" original="Jumlah Tanggungan">Jumlah Tanggungan</value>
+    <value column="PrintName" isTrl="N" original="Jumlah Tanggungan">Jumlah Tanggungan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="517A713C03F642739B5E06645397C271" trl="N">
+    <value column="Name" isTrl="N" original="Diperhitungkan dengan PPh 21">Diperhitungkan dengan PPh 21</value>
+    <value column="PrintName" isTrl="N" original="Diperhitungkan dengan PPh 21">Diperhitungkan dengan PPh 21</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="51E37D38321D45ADA517D5415FE05BBF" trl="N">
+    <value column="Name" isTrl="N" original="Ispajakrampung">Ispajakrampung</value>
+    <value column="PrintName" isTrl="N" original="Ispajakrampung">Ispajakrampung</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5303CAE2ED754788B90A8DEE1A5523DB" trl="N">
+    <value column="Name" isTrl="N" original="Tunjangan PPh 21 Bulan Ini">Tunjangan PPh 21 Bulan Ini</value>
+    <value column="PrintName" isTrl="N" original="Tunjangan PPh 21 Bulan Ini">Tunjangan PPh 21 Bulan Ini</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="534A8F771DB44DCCB31CA2E871321C03" trl="N">
+    <value column="Name" isTrl="N" original="Previous Salary Payment">Previous Salary Payment</value>
+    <value column="PrintName" isTrl="N" original="Previous Salary Payment">Previous Salary Payment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="54D0E041C1E94DC391A279CB78971B11" trl="N">
+    <value column="Name" isTrl="Y" original="Biaya Jabatan Sebulan">Biaya Jabatan</value>
+    <value column="PrintName" isTrl="Y" original="Biaya Jabatan Sebulan">Biaya Jabatan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="54F84CA6B464458EBE1A2CA6566661E3" trl="N">
+    <value column="Name" isTrl="N" original="Alamat2 Pegawai">Alamat2 Pegawai</value>
+    <value column="PrintName" isTrl="N" original="Alamat2 Pegawai">Alamat2 Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5603B058A3794B98B449DABC76185AAD" trl="N">
+    <value column="Name" isTrl="N" original="Pph21 atas PKP Setahun">Pph21 atas PKP Setahun</value>
+    <value column="PrintName" isTrl="N" original="Pph21 atas PKP Setahun">Pph21 atas PKP Setahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="569D5348F9E14C7E9C97644C6D168F5A" trl="N">
+    <value column="Name" isTrl="N" original="PPh 21 Dibayar Sampai Bulan Sebelumnya">PPh 21 Dibayar Sampai Bulan Sebelumnya</value>
+    <value column="PrintName" isTrl="N" original="PPh 21 Dibayar Sampai Bulan Sebelumnya">PPh 21 Dibayar Sampai Bulan Sebelumnya</value>
+    <value column="Description" isTrl="N" original="Beben PPh21 yang sudah dibayar sampai bulan sebelumnya">Beben PPh21 yang sudah dibayar sampai bulan sebelumnya</value>
+    <value column="Help" isTrl="N" original="Beben PPh21 yang sudah dibayar sampai bulan sebelumnya">Beben PPh21 yang sudah dibayar sampai bulan sebelumnya</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="56B8653E17284261B00768A8E4F969A3" trl="N">
+    <value column="Name" isTrl="N" original="Pph21 Lebih Dipotong">Pph21 Lebih Dipotong</value>
+    <value column="PrintName" isTrl="N" original="Pph21 Lebih Dipotong">Pph21 Lebih Dipotong</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5A7D6BFCDCFD44FC8C0BD9FB97BA4716" trl="N">
+    <value column="Name" isTrl="N" original="Perempuan">Perempuan</value>
+    <value column="PrintName" isTrl="N" original="Perempuan">Perempuan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5B4F5BF951A14CAEB9A41B982B1FDEEB" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilanbrutototalsetahun">Penghasilanbrutototalsetahun</value>
+    <value column="PrintName" isTrl="N" original="Penghasilanbrutototalsetahun">Penghasilanbrutototalsetahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5C719D9679204F6EB0723657DF6B3D6A" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilannettoperiodesebelumnya">Penghasilannettoperiodesebelumnya</value>
+    <value column="PrintName" isTrl="N" original="Penghasilannettoperiodesebelumnya">Penghasilannettoperiodesebelumnya</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5E21243614E84AE9BBA9B68F0D69BB1A" trl="N">
+    <value column="Name" isTrl="N" original="Pengurang Pajak Sebulan">Pengurang Pajak Sebulan</value>
+    <value column="PrintName" isTrl="N" original="Pengurang Pajak Sebulan">Pengurang Pajak Sebulan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5EE18FE1F20B4B98A9D4579BD02B04A5" trl="N">
+    <value column="Name" isTrl="N" original="PKP Setahun">PKP Setahun</value>
+    <value column="PrintName" isTrl="N" original="PKP Setahun">PKP Setahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="608507708BDA4E9D9E15B1637454CD74" trl="N">
+    <value column="Name" isTrl="N" original="Sampai dengan">Sampai dengan</value>
+    <value column="PrintName" isTrl="N" original="Sampai dengan">Sampai dengan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="614AEC1B02064CE1B5839409D00AD8BE" trl="N">
+    <value column="Name" isTrl="N" original="Dipotong dari pembayaran Gaji">Dipotong dari pembayaran Gaji</value>
+    <value column="PrintName" isTrl="N" original="Dipotong dari pembayaran Gaji">Dipotong dari pembayaran Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6CD608D70BF144049D6D8A8ADFB8C266" trl="N">
+    <value column="Name" isTrl="N" original="Rutinsebulangrossbulanlalu">Rutinsebulangrossbulanlalu</value>
+    <value column="PrintName" isTrl="N" original="Rutinsebulangrossbulanlalu">Rutinsebulangrossbulanlalu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="71461D1FA41240A48E735ADCC6ACCB37" trl="N">
+    <value column="Name" isTrl="N" original="Dipotong dengan SSP Ditanggung Pemerintah">Dipotong dengan SSP Ditanggung Pemerintah</value>
+    <value column="PrintName" isTrl="N" original="Dipotong dengan SSP Ditanggung Pemerintah">Dipotong dengan SSP Ditanggung Pemerintah</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7AEABEB4793A400AA1923F049AC60468" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Netto Sebelumnya">Penghasilan Netto Sebelumnya</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Netto Sebelumnya">Penghasilan Netto Sebelumnya</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7D88217AC44E46889188E469662476AB" trl="N">
+    <value column="Name" isTrl="N" original="Pengurang Pajak Setahun">Pengurang Pajak Setahun</value>
+    <value column="PrintName" isTrl="N" original="Pengurang Pajak Setahun">Pengurang Pajak Setahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7DADA1F2489F48DFB1639161A5A3CA60" trl="N">
+    <value column="Name" isTrl="N" original="Laki-Laki">Laki-Laki</value>
+    <value column="PrintName" isTrl="N" original="Laki-Laki">Laki-Laki</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8441619E08744784924DD188271D5B95" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Netto Sebulan">Penghasilan Netto Sebulan</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Netto Sebulan">Penghasilan Netto Sebulan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8583B2027E1B43EF9CD02037F27B00C1" trl="N">
+    <value column="Name" isTrl="N" original="Biaya Jabatan Setahun">Biaya Jabatan Setahun</value>
+    <value column="PrintName" isTrl="N" original="Biaya Jabatan Setahun">Biaya Jabatan Setahun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="877A6393C9CF484289E2F3FE748986E0" trl="N">
+    <value column="Name" isTrl="N" original="Pph21bonus">Pph21bonus</value>
+    <value column="PrintName" isTrl="N" original="Pph21bonus">Pph21bonus</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="892471B2F60F42D0B1C0C897F50595E5" trl="Y">
+    <value column="Name" isTrl="Y" original="Lowerbound">Batas Bawah</value>
+    <value column="PrintName" isTrl="N" original="Lowerbound">Lowerbound</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8A38333C67E24E2BB0C7D699D9D7B2AC" trl="N">
+    <value column="Name" isTrl="N" original="PPH_Tarifprogresif_ID">PPH_Tarifprogresif_ID</value>
+    <value column="PrintName" isTrl="N" original="PPH_Tarifprogresif_ID">PPH_Tarifprogresif_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="910B4BED89E34A23881F2298113D90DC" trl="N">
+    <value column="Name" isTrl="N" original="PPH_Tarifpph21_ID">PPH_Tarifpph21_ID</value>
+    <value column="PrintName" isTrl="N" original="PPH_Tarifpph21_ID">PPH_Tarifpph21_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="912B2972247C416AB21EF733635CAB3E" trl="N">
+    <value column="Name" isTrl="N" original="Honorarium dan Imbalan">Honorarium dan Imbalan</value>
+    <value column="PrintName" isTrl="N" original="Honorarium dan Imbalan">Honorarium dan Imbalan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="91B045A0C0344B4FACD5EA422275F9BB" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilannetto">Penghasilannetto</value>
+    <value column="PrintName" isTrl="N" original="Penghasilannetto">Penghasilannetto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="924884646A294CB093DA7362DF97C9CB" trl="Y">
+    <value column="Name" isTrl="Y" original="Taxmode">Tipe Pajak</value>
+    <value column="PrintName" isTrl="N" original="Taxmode">Taxmode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="97FB174E531E411CB7A018DE3E846638" trl="N">
+    <value column="Name" isTrl="N" original="K/2">K/2</value>
+    <value column="PrintName" isTrl="N" original="K/2">K/2</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="988060A21521427EA079580D9405E060" trl="N">
+    <value column="Name" isTrl="N" original="PPh 21 Terpotong Bulan Ini">PPh 21 Terpotong Bulan Ini</value>
+    <value column="PrintName" isTrl="N" original="PPh 21 Terpotong Bulan Ini">PPh 21 Terpotong Bulan Ini</value>
+    <value column="Description" isTrl="N" original="beban PPh21 yang dipotong bulan ini">beban PPh21 yang dipotong bulan ini</value>
+    <value column="Help" isTrl="N" original="beban PPh21 yang dipotong bulan ini">beban PPh21 yang dipotong bulan ini</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="98903639E41F42D189C28D21CA3C6CC4" trl="N">
+    <value column="Name" isTrl="N" original="Masa Perolehan Penghasilan">Masa Perolehan Penghasilan</value>
+    <value column="PrintName" isTrl="N" original="Masa Perolehan Penghasilan">Masa Perolehan Penghasilan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A518FA9E9154EC2ABEAB6F623B3A25E" trl="N">
+    <value column="Name" isTrl="N" original="Pajak Rampung">Pajak Rampung</value>
+    <value column="PrintName" isTrl="N" original="Pajak Rampung">Pajak Rampung</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A596A000F27445C835416DC32456A6D" trl="Y">
+    <value column="Name" isTrl="Y" original="Progresiverate">Tarif Progresif</value>
+    <value column="PrintName" isTrl="N" original="Progresiverate">Progresiverate</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A6973B2DC38F4DBFAD06E45B39253FE1" trl="N">
+    <value column="Name" isTrl="N" original="PPH_Pph21_ID">PPH_Pph21_ID</value>
+    <value column="PrintName" isTrl="N" original="PPH_Pph21_ID">PPH_Pph21_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A7C1A41E76DC4EC4AB0BCB3330B35064" trl="N">
+    <value column="Name" isTrl="N" original="Pendapatanlaingrossbulanlalu">Pendapatanlaingrossbulanlalu</value>
+    <value column="PrintName" isTrl="N" original="Pendapatanlaingrossbulanlalu">Pendapatanlaingrossbulanlalu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="ACB89BADB13B47539ECB64E29BC4A326" trl="N">
+    <value column="Name" isTrl="N" original="Persentase">Persentase</value>
+    <value column="PrintName" isTrl="N" original="Persentase">Persentase</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="ACE842C23BCE4496B1AB7FFB92C741C5" trl="N">
+    <value column="Name" isTrl="N" original="Pegawai Asing">Pegawai Asing</value>
+    <value column="PrintName" isTrl="N" original="Pegawai Asing">Pegawai Asing</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B0F1A43297B04B748122C075A4155685" trl="N">
+    <value column="Name" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="PrintName" isTrl="N" original="Salary Payment">Salary Payment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BAA81AF081614F4EAB06552D6B7AA1C1" trl="N">
+    <value column="Name" isTrl="N" original="Premi Asuransi">Premi Asuransi</value>
+    <value column="PrintName" isTrl="N" original="Premi Asuransi">Premi Asuransi</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C27040ABE48746418BDCC2CB3E1FBE69" trl="N">
+    <value column="Name" isTrl="N" original="Pengurang Pajak Sebulan">Pengurang Pajak Sebulan</value>
+    <value column="PrintName" isTrl="N" original="Pengurang Pajak Sebulan">Pengurang Pajak Sebulan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C3F469869C0D4FE0B3DAC6B0B73175E0" trl="N">
+    <value column="Name" isTrl="N" original="Jabatan">Jabatan</value>
+    <value column="PrintName" isTrl="N" original="Jabatan">Jabatan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C5BD638C2EBA4F7DA0D15827ACC62BCF" trl="N">
+    <value column="Name" isTrl="N" original="NPWP Pegawai">NPWP Pegawai</value>
+    <value column="PrintName" isTrl="N" original="NPWP Pegawai">NPWP Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CCA063EA3AF84FA7949387802CEEF406" trl="N">
+    <value column="Name" isTrl="N" original="Pph21 Kurang Dipotong">Pph21 Kurang Dipotong</value>
+    <value column="PrintName" isTrl="N" original="Pph21 Kurang Dipotong">Pph21 Kurang Dipotong</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CD20C6CE99E24250881376D20007DC67" trl="N">
+    <value column="Name" isTrl="N" original="Tunjangan PPh">Tunjangan PPh</value>
+    <value column="PrintName" isTrl="N" original="Tunjangan PPh">Tunjangan PPh</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CEC1ECBC92E94D24B237D82E952420E5" trl="N">
+    <value column="Name" isTrl="N" original="Penerimaan Natura Kena Potongan">Penerimaan Natura Kena Potongan</value>
+    <value column="PrintName" isTrl="N" original="Penerimaan Natura Kena Potongan">Penerimaan Natura Kena Potongan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D0098EA968B041A89C8CB9C77177CE02" trl="N">
+    <value column="Name" isTrl="N" original="Nama">Nama</value>
+    <value column="PrintName" isTrl="N" original="Nama">Nama</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D0A418A51FFB46B882DF5DD11F729613" trl="N">
+    <value column="Name" isTrl="N" original="K/1">K/1</value>
+    <value column="PrintName" isTrl="N" original="K/1">K/1</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D0DD4432FC614EBE9E8E87DDAEDCF4B9" trl="N">
+    <value column="Name" isTrl="N" original="Gaji / pensiun">Gaji / pensiun</value>
+    <value column="PrintName" isTrl="N" original="Gaji / pensiun">Gaji / pensiun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D0F8A762A48D4509A1E5361B7597F4D8" trl="N">
+    <value column="Name" isTrl="N" original="Nomor Urut">Nomor Urut</value>
+    <value column="PrintName" isTrl="N" original="Nomor Urut">Nomor Urut</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D550195EECBB4981B9BB63E411FAE447" trl="N">
+    <value column="Name" isTrl="N" original="Npwp">Npwp</value>
+    <value column="PrintName" isTrl="N" original="Npwp">Npwp</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D5A9C45F01A74701BC6D0D8280BFA021" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Tidak Teratur Gross">Penghasilan Tidak Teratur Gross</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Tidak Teratur Gross">Penghasilan Tidak Teratur Gross</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DCA37AF102FB46DDAD03A4AAD4FFAC57" trl="N">
+    <value column="Name" isTrl="N" original="Earning Tax Mode">Earning Tax Mode</value>
+    <value column="PrintName" isTrl="N" original="Earning Tax Mode">Earning Tax Mode</value>
+    <value column="Description" isTrl="N" original="If earning tax mode set to taxable, then this earning considered as a component of gross income and will increase income tax. If not, the this earning is tax free.">If earning tax mode set to taxable, then this earning considered as a component of gross income and will increase income tax. If not, the this earning is tax free.</value>
+    <value column="Help" isTrl="N" original="If earning tax mode set to taxable, then this earning considered as a component of gross income and will increase income tax. If not, the this earning is tax free.">If earning tax mode set to taxable, then this earning considered as a component of gross income and will increase income tax. If not, the this earning is tax free.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E0CAE9EAB4F9402FB11711808D2C7666" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Rutin Setahun Gross">Penghasilan Rutin Setahun Gross</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Rutin Setahun Gross">Penghasilan Rutin Setahun Gross</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E12E652873974B7DB5F3A965CF42DD81" trl="N">
+    <value column="Name" isTrl="Y" original="Tax Marital Status">Status Perkawinan (Pajak)</value>
+    <value column="PrintName" isTrl="Y" original="Tax Marital Status">Status Perkawinan (Pajak)</value>
+    <value column="Description" isTrl="Y" original="Marital status for tax purpose.">Status Perkawinan (Pajak)</value>
+    <value column="Help" isTrl="N" original="">Status perkawinan yang digunakan untuk perhitungan pajak penghasilan</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E1EEAAD8F83C4A46861DB2EC301BF6FD" trl="N">
+    <value column="Name" isTrl="N" original="Biaya Jabatan Atas Bonus">Biaya Jabatan Atas Bonus</value>
+    <value column="PrintName" isTrl="N" original="Biaya Jabatan Atas Bonus">Biaya Jabatan Atas Bonus</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E21665B519F44CDEA307F4B1B72FE73F" trl="N">
+    <value column="Name" isTrl="N" original="PPh 21 Terhutang Bulan Ini">PPh 21 Terhutang Bulan Ini</value>
+    <value column="PrintName" isTrl="N" original="PPh 21 Terhutang Bulan Ini">PPh 21 Terhutang Bulan Ini</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E362092E4DB14FF1B974177D89A0D4D6" trl="N">
+    <value column="Name" isTrl="N" original="Tunjangan Lainnya, Uang Lembur, dsb">Tunjangan Lainnya, Uang Lembur, dsb</value>
+    <value column="PrintName" isTrl="N" original="Tunjangan Lainnya, Uang Lembur, dsb">Tunjangan Lainnya, Uang Lembur, dsb</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E56E8AF164CB4F19A950187EBD6F56FF" trl="N">
+    <value column="Name" isTrl="N" original="Rutinsebulannettbulanlalu">Rutinsebulannettbulanlalu</value>
+    <value column="PrintName" isTrl="N" original="Rutinsebulannettbulanlalu">Rutinsebulannettbulanlalu</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EB70E604D58041A9B9E7505C5209A495" trl="N">
+    <value column="Name" isTrl="N" original="Penghasilan Bruto Setahun Gross">Penghasilan Bruto Setahun Gross</value>
+    <value column="PrintName" isTrl="N" original="Penghasilan Bruto Setahun Gross">Penghasilan Bruto Setahun Gross</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EE276DA3E3C44A549392D54583DF8BE5" trl="N">
+    <value column="Name" isTrl="N" original="Alamat Pegawai">Alamat Pegawai</value>
+    <value column="PrintName" isTrl="N" original="Alamat Pegawai">Alamat Pegawai</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F49003E98D574174AD15BC476E5F24FE" trl="N">
+    <value column="Name" isTrl="N" original="TK">TK</value>
+    <value column="PrintName" isTrl="N" original="TK">TK</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F5075E5F20944CA5A087893F65D090CA" trl="N">
+    <value column="Name" isTrl="N" original="Iuran Pensiun">Iuran Pensiun</value>
+    <value column="PrintName" isTrl="N" original="Iuran Pensiun">Iuran Pensiun</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FB2B721446F840E5A5841D5CA413CB48" trl="N">
+    <value column="Name" isTrl="N" original="Rutingrosssetahunperiodesebelumnya">Rutingrosssetahunperiodesebelumnya</value>
+    <value column="PrintName" isTrl="N" original="Rutingrosssetahunperiodesebelumnya">Rutingrosssetahunperiodesebelumnya</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

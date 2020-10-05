@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_REFERENCE" version="">
+  <row id="0A9B37CA4E2D4334B536913154E4F80D" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potongan Cuti">Akumulasi Potongan Cuti</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="30A96D1AC9014C66B5F73B1C2A7D7437" trl="N">
+    <value column="Name" isTrl="N" original="TA_CheckInOut_Status">TA_CheckInOut_Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6325B87D668643C2A82AAF20138D26EE" trl="N">
+    <value column="Name" isTrl="N" original="Attendance Selector">Attendance Selector</value>
+    <value column="Description" isTrl="N" original="Attendance Selector">Attendance Selector</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7454C1A032C5402FA3D3A0ABA71E1786" trl="N">
+    <value column="Name" isTrl="N" original="HRIS_Department">HRIS_Department</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7EB743AA6E0F4A93B3C7712CE44FF16A" trl="N">
+    <value column="Name" isTrl="N" original="TA_Shift_Ref">TA_Shift_Ref</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="967502DC588447B88ACC1E1A53AAC318" trl="N">
+    <value column="Name" isTrl="N" original="Akumulasi Potongan Gaji">Akumulasi Potongan Gaji</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FD81A2157A724AFFA99525D7065BCCC5" trl="N">
+    <value column="Name" isTrl="N" original="HRIS_Remark">HRIS_Remark</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

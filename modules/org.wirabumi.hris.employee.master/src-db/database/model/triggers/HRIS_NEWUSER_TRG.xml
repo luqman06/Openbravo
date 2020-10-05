@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_NEWUSER_TRG">
+    <trigger name="HRIS_NEWUSER_TRG" table="C_BPARTNER" fires="after" insert="true" update="false" delete="false" foreach="row">
+      <body><![CDATA[  v_employeebpgroup VARCHAR;
+  
+  
+  
+  BEGIN
+      
+      IF AD_isTriggerEnabled()='N' THEN RETURN;
+      END IF;
+  
+  
+      -- insert new user account
+      if :new.EM_Hris_Iswindowemployee='Y' then
+        INSERT INTO ad_user(
+              ad_user_id, ad_client_id, ad_org_id, isactive, created, createdby, 
+              updated, updatedby, name, description, password, email,
+              supervisor_id, 
+              c_bpartner_id, processing, emailuser, emailuserpw, c_bpartner_location_id, 
+              c_greeting_id, title, comments, phone, phone2, fax, lastcontact, 
+              lastresult, birthday, ad_orgtrx_id, firstname, lastname, username, 
+              default_ad_client_id, default_ad_language, default_ad_org_id, 
+              default_ad_role_id, default_m_warehouse_id, islocked, ad_image_id, em_lv_signature)
+        VALUES (get_uuid(), :new.ad_client_id, :new.ad_org_id, 'Y', now(), :new.createdby, 
+              now(), :new.updatedby, :new.name, null, 'cRDtpNCeBiql5KOQsKVyrA0sAiA=', :new.em_hris_email, --PASSWORD=1234
+              null,
+              :new.c_bpartner_id, 'N', null, null, null, 
+              null, null, null, null, null, null, null, 
+              null, null, null, null, null, :new.value||' '||:new.name, 
+              null, null, null, 
+              null, null, 'N', null,null);
+      end if;
+      
+    END HRIS_NEWUSER_TRG
+]]></body>
+    </trigger>
+  </database>

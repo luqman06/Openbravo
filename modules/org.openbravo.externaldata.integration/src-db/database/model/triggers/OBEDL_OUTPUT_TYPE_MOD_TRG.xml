@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OBEDL_OUTPUT_TYPE_MOD_TRG">
+    <trigger name="OBEDL_OUTPUT_TYPE_MOD_TRG" table="OBEDL_OUTPUT_TYPE" fires="before" insert="true" update="true" delete="true" foreach="row">
+      <body><![CDATA[
+/*
+ ************************************************************************************
+ * Copyright (C) 2015-2016 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************
+ */
+  devTemplate NUMBER;
+  devModule   CHAR(1);
+  currentID  VARCHAR2(32);
+  currentModuleID  VARCHAR2(32);
+  vAux NUMBER;
+    
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+
+  SELECT COUNT(*)
+    INTO devTemplate
+    FROM AD_MODULE
+   WHERE IsInDevelopment = 'Y'
+     AND Type = 'T';
+  
+  --Check if trying to move object from module not in dev   
+  IF (UPDATING) THEN
+    IF (COALESCE(:NEW.AD_Module_ID , '.') != COALESCE(:OLD.AD_Module_ID , '.')) THEN
+      SELECT COUNT(*) 
+        INTO vAux
+        FROM AD_MODULE
+       WHERE AD_MODULE_ID = :old.AD_Module_ID
+        AND isindevelopment = 'N';
+      IF (vAux!=0) THEN
+        RAISE_APPLICATION_ERROR(-20000, '@ChangeNotInDevModule@');
+      END IF;
+    END IF;
+  END IF;
+     
+  IF (UPDATING OR INSERTING) THEN
+    currentID := :new.OBEDL_OUTPUT_TYPE_ID;
+    currentModuleID := :new.AD_Module_ID;
+  ELSE
+    currentID := :old.OBEDL_OUTPUT_TYPE_ID;
+    currentModuleID := :old.AD_Module_ID;
+  END IF;
+  
+  SELECT M.IsInDevelopment
+    INTO devModule
+    FROM AD_MODULE M
+   WHERE M.AD_MODULE_ID = currentModuleID;
+     
+  IF (UPDATING AND devTemplate=0 AND devModule='N') THEN
+    IF (
+        COALESCE(:NEW.AD_Client_ID , '.') != COALESCE(:OLD.AD_Client_ID , '.') OR
+        COALESCE(:NEW.AD_Org_ID , '.') != COALESCE(:OLD.AD_Org_ID , '.') OR
+        COALESCE(:NEW.IsActive , '.') != COALESCE(:OLD.IsActive , '.') OR
+        :NEW.UPDATED != :OLD.UPDATED OR
+        COALESCE(:NEW.UPDATEDBY , '.') != COALESCE(:OLD.UPDATEDBY , '.') OR
+        :NEW.CREATED != :OLD.CREATED OR
+        COALESCE(:NEW.CREATEDBY , '.') != COALESCE(:OLD.CREATEDBY , '.') OR
+        COALESCE(:NEW.VALUE , '.') != COALESCE(:OLD.VALUE , '.') OR
+        COALESCE(:NEW.requirespath , '.') != COALESCE(:OLD.requirespath , '.') OR
+        COALESCE(:NEW.requiresuser , '.') != COALESCE(:OLD.requiresuser , '.') OR
+        COALESCE(:NEW.requirespassword , '.') != COALESCE(:OLD.requirespassword , '.') OR
+        COALESCE(:NEW.requiresfilename , '.') != COALESCE(:OLD.requiresfilename , '.') OR
+        COALESCE(:NEW.AD_Module_Id , '.') != COALESCE(:OLD.AD_Module_Id , '.')) THEN
+      
+      RAISE_APPLICATION_ERROR(-20000, '@20532@');
+    END IF;
+  END IF;
+  
+  IF ((DELETING OR INSERTING) AND devModule='N') THEN
+    RAISE_APPLICATION_ERROR(-20000, '@20533@');
+  END IF;
+END OBEDL_OUTPUT_TYPE_MOD_TRG
+]]></body>
+    </trigger>
+  </database>

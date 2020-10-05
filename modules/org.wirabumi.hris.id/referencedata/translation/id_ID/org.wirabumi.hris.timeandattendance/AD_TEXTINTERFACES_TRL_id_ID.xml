@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="0771A57EB37140A0B03D6DE937131037" trl="N">
+    <value column="Text" isTrl="N" original="TOTAL TELAT">TOTAL TELAT</value>
+  </row>
+  <row id="0BAD2E664E7E4B438B8E2C87B408BC5E" trl="N">
+    <value column="Text" isTrl="N" original="SAMPAI">SAMPAI</value>
+  </row>
+  <row id="113BEF8E1249405D8C7F8F3A95BDC1F2" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="195372D7EFEA40A081860D5D67B223BC" trl="N">
+    <value column="Text" isTrl="N" original="Masuk Tepat Waktu">Masuk Tepat Waktu</value>
+  </row>
+  <row id="1A429A3C412A4D4F81A7A74B1BD40526" trl="N">
+    <value column="Text" isTrl="N" original="MULAI">MULAI</value>
+  </row>
+  <row id="1B8198ABDD274B0BB25C5D3CAE4973FD" trl="N">
+    <value column="Text" isTrl="N" original="Telat">Telat</value>
+  </row>
+  <row id="1CE1C8E4665044F3BF844255194C1AAA" trl="N">
+    <value column="Text" isTrl="N" original="Start Date">Start Date</value>
+  </row>
+  <row id="257AA6A134BD47ABBD81FE52CABC59AA" trl="N">
+    <value column="Text" isTrl="N" original="NAMA PETUGAS">NAMA PETUGAS</value>
+  </row>
+  <row id="25E2ED2042624DA2929BEBEC5C5D45D1" trl="N">
+    <value column="Text" isTrl="N" original="Pulang Tepat Waktu">Pulang Tepat Waktu</value>
+  </row>
+  <row id="284F4C4DCFDE461AA7195E17E95B1582" trl="N">
+    <value column="Text" isTrl="N" original="Menit">Menit</value>
+  </row>
+  <row id="2E91CFF7E2C44A6E9DC6CB8D7B6D3F91" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="2FD2AFCEAB9D4079AB12E8977C8EC717" trl="N">
+    <value column="Text" isTrl="N" original="JADWAL SHIFT">JADWAL SHIFT</value>
+  </row>
+  <row id="544FA0B0CFA14C85B801C731AE72BD53" trl="N">
+    <value column="Text" isTrl="N" original="keterangan">keterangan</value>
+  </row>
+  <row id="54DACF95A3AB437299F0235903CFFD83" trl="N">
+    <value column="Text" isTrl="N" original="Attendance Performance Report">Attendance Performance Report</value>
+  </row>
+  <row id="56B2DE41BD9C4B6590564CC19443648D" trl="N">
+    <value column="Text" isTrl="N" original="MULAI">MULAI</value>
+  </row>
+  <row id="56C3E4B6F35F4562AE5B579A2906E5E9" trl="N">
+    <value column="Text" isTrl="N" original="RINCIAN POTONG CUTI">RINCIAN POTONG CUTI</value>
+  </row>
+  <row id="60258BFDD56D4F0381F70E37428377F0" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="625C4094BE9B4799BD32AF00744A90E1" trl="N">
+    <value column="Text" isTrl="N" original="Ending Date">Ending Date</value>
+  </row>
+  <row id="69D1D0DDCD924F03A5B41F24EDBC3219" trl="N">
+    <value column="Text" isTrl="N" original="SAMPAI">SAMPAI</value>
+  </row>
+  <row id="714A1B6F1994477C82B072FF86A07B5C" trl="N">
+    <value column="Text" isTrl="N" original="Attendance Summary Report">Attendance Summary Report</value>
+  </row>
+  <row id="72440C7B93C642E785010E9C769D6329" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="7A20124444E74AED9382342E7CCC5CD9" trl="N">
+    <value column="Text" isTrl="N" original="NAMA">NAMA</value>
+  </row>
+  <row id="7B494460BFC74A198BFBED31B17E0851" trl="N">
+    <value column="Text" isTrl="N" original="End Date">End Date</value>
+  </row>
+  <row id="7C96E1C9AD694D03AF389FC96DF43469" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="7DE4D2B287284686B31EB36750C2DD74" trl="N">
+    <value column="Text" isTrl="N" original="NAMA">NAMA</value>
+  </row>
+  <row id="8893D11BB05446999AD35C0430DBD8C4" trl="N">
+    <value column="Text" isTrl="N" original="Jumlah Hari Kerja">Jumlah Hari Kerja</value>
+  </row>
+  <row id="8C125477F55A42AEA59DE9C0D148A9DE" trl="N">
+    <value column="Text" isTrl="N" original="Menit">Menit</value>
+  </row>
+  <row id="961910EAB2D14529A8C34EB45B9B1876" trl="N">
+    <value column="Text" isTrl="N" original="DEPARTEMEN">DEPARTEMEN</value>
+  </row>
+  <row id="9BF81C7538E642588F5B463731B97EF7" trl="N">
+    <value column="Text" isTrl="N" original="Pulang Awal">Pulang Awal</value>
+  </row>
+  <row id="9E9439FE9393472480349C9DC719953B" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="A2CF60CF72084A49964A0D9DF191F491" trl="N">
+    <value column="Text" isTrl="N" original="KETERANGAN">KETERANGAN</value>
+  </row>
+  <row id="A67E36B6B26E4D1D8F7672B6E4A6E217" trl="N">
+    <value column="Text" isTrl="N" original="Check In Actual">Check In Actual</value>
+  </row>
+  <row id="B7ED53ADD4324DC49E96AC838113EE76" trl="N">
+    <value column="Text" isTrl="N" original="Masuk Telat">Masuk Telat</value>
+  </row>
+  <row id="BA594FC5108B4AFD97EAF34D32D1E11D" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="BC5B3C7637914E86BBDE2B9F04BAEAE1" trl="N">
+    <value column="Text" isTrl="N" original="DEPARTEMEN">DEPARTEMEN</value>
+  </row>
+  <row id="BE0910DD3A304CC1BB065F5EEE3AA1AF" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="D62FD4F5FCB449EC993A487A31B79178" trl="N">
+    <value column="Text" isTrl="N" original="TYPE CUTI">TYPE CUTI</value>
+  </row>
+  <row id="D66F316BB5B144B78DE69E813DEDEFBB" trl="N">
+    <value column="Text" isTrl="N" original="NO. PEG">NO. PEG</value>
+  </row>
+  <row id="D70AD6A4D78B4187AF062AE569B00A20" trl="N">
+    <value column="Text" isTrl="N" original="Telat">Telat</value>
+  </row>
+  <row id="D719609F0798499BA18E1964E8E32A9E" trl="N">
+    <value column="Text" isTrl="N" original="Duration">Duration</value>
+  </row>
+  <row id="D74C92A3F8244424B04921816DA4F16E" trl="N">
+    <value column="Text" isTrl="N" original="Jumlah">Jumlah</value>
+  </row>
+  <row id="D9973D8EFDD24CCCA856F3F93CC713BC" trl="N">
+    <value column="Text" isTrl="N" original="KETERANGAN">KETERANGAN</value>
+  </row>
+  <row id="D9A30F9E513B4BDBA216961F3ED95FED" trl="N">
+    <value column="Text" isTrl="N" original="JABATAN">JABATAN</value>
+  </row>
+  <row id="DB42BA8AC8C342AA96CF4C5F17D71A3D" trl="N">
+    <value column="Text" isTrl="N" original="NO. PEG">NO. PEG</value>
+  </row>
+  <row id="E143C66467114F49BF784C072FA073D3" trl="N">
+    <value column="Text" isTrl="N" original="Individual Attendance Performance Report">Individual Attendance Performance Report</value>
+  </row>
+  <row id="E430853B0EB5486B9A95ECC4810DC1FA" trl="N">
+    <value column="Text" isTrl="N" original="TOTAL TELAT">TOTAL TELAT</value>
+  </row>
+  <row id="E9455FAC26614D26BE2AEC172A0F7D01" trl="N">
+    <value column="Text" isTrl="N" original="total">total</value>
+  </row>
+  <row id="F124AD710FE54F099AFE93308E16D456" trl="N">
+    <value column="Text" isTrl="N" original="JAM">JAM</value>
+  </row>
+  <row id="F554279562D8453FAEFA4D1135B6B10E" trl="N">
+    <value column="Text" isTrl="N" original="Tidak Masuk">Tidak Masuk</value>
+  </row>
+  <row id="F57B3A9EDE8946058C29491385DEF15F" trl="N">
+    <value column="Text" isTrl="N" original="Check Out Actual">Check Out Actual</value>
+  </row>
+  <row id="F5E9E9EFF26E488E8142996DA1D01F2B" trl="N">
+    <value column="Text" isTrl="N" original="RINCIAN POTONG GAJI">RINCIAN POTONG GAJI</value>
+  </row>
+  <row id="F5FC00E572494B7F8F43C17C5FCCB747" trl="N">
+    <value column="Text" isTrl="N" original="TOTAL POTONGAN">TOTAL POTONGAN</value>
+  </row>
+  <row id="F8B5F82905DE432D85B6DEABD9AF2E12" trl="N">
+    <value column="Text" isTrl="N" original="JAM">JAM</value>
+  </row>
+  <row id="FC14CDEE9A2044C79BF75FFC742260F6" trl="N">
+    <value column="Text" isTrl="N" original="JABATAN">JABATAN</value>
+  </row>
+</compiereTrl>

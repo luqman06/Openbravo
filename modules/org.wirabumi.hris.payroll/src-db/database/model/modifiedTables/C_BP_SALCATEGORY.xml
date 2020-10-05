@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_BP_SALCATEGORY">
+    <table name="C_BP_SALCATEGORY" primaryKey="C_BP_SALCATEGORY_KEY">
+      <column name="EM_PYR_COPY_FROM_TEMPLATE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="0624063393974362A8169F59A696ED70" trl="N">
+    <value column="Text" isTrl="N" original="Demikian untuk dimaklumi, terima kasih">Demikian untuk dimaklumi, terima kasih</value>
+  </row>
+  <row id="06D81D6210B345689E927DACE75367E6" trl="N">
+    <value column="Text" isTrl="N" original="dengan tujuan cuti">dengan tujuan cuti</value>
+  </row>
+  <row id="29141037558847CCBFCB4FFBACF08768" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="2D2A7FC2F7D644C586A76F879F7B64D3" trl="N">
+    <value column="Text" isTrl="N" original="sebagai PGS untuk tugas-tugas rutin,">sebagai PGS untuk tugas-tugas rutin,</value>
+  </row>
+  <row id="2DF61C031B9F4D83A77E03E3311A11F4" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="42CF5E63B69747B4ADA1297B609C78F5" trl="N">
+    <value column="Text" isTrl="N" original="sedangkan untuk tugas-tugas non rutin sepenuhnya di serahkan kepada atasan saya.">sedangkan untuk tugas-tugas non rutin sepenuhnya di serahkan kepada atasan saya.</value>
+  </row>
+  <row id="45FCF7227D4E486B8048867EBAB9E123" trl="N">
+    <value column="Text" isTrl="N" original="Site">Site</value>
+  </row>
+  <row id="4D4B320C3DA04542B82C60F2C112867B" trl="N">
+    <value column="Text" isTrl="N" original="Dipakai">Dipakai</value>
+  </row>
+  <row id="56627AA0541B4E03B22B45C4C88D215E" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="5FC9F08D97D74E6B896C7FBB730F113C" trl="N">
+    <value column="Text" isTrl="N" original="s/d tanggal">s/d tanggal</value>
+  </row>
+  <row id="6585221F321840708CD3A4A1112EB363" trl="N">
+    <value column="Text" isTrl="N" original="hari kerja/kalender dari tanggal">hari kerja/kalender dari tanggal</value>
+  </row>
+  <row id="6D08B873BBA4490A9CEF11CFECE4B420" trl="N">
+    <value column="Text" isTrl="N" original="Dengan Hormat, yang bertanda di bawah ini :">Dengan Hormat, yang bertanda di bawah ini :</value>
+  </row>
+  <row id="71577A6E206549BE93D48F6A74DE37CB" trl="N">
+    <value column="Text" isTrl="N" original="Department">Department</value>
+  </row>
+  <row id="8AADDCE9D39245F6A37FB781506614C6" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="90CB25553ABF41989463DD550B3D14E4" trl="N">
+    <value column="Text" isTrl="N" original="tahun">tahun</value>
+  </row>
+  <row id="923D361805234F82A341CBD295DB2418" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="963B04153E7C43DCB9CFA28AD9623333" trl="N">
+    <value column="Text" isTrl="N" original="NIK">NIK</value>
+  </row>
+  <row id="A127FD71CCCC4A069CD4E86F998DF93F" trl="N">
+    <value column="Text" isTrl="N" original="Mengajukan permohonan untuk mengambil">Mengajukan permohonan untuk mengambil</value>
+  </row>
+  <row id="A994D92E782642D58B4FA3AD03DFDD4D" trl="N">
+    <value column="Text" isTrl="N" original="Selama">Selama</value>
+  </row>
+  <row id="AB1F736B997F42A29333D4A7DBB541A4" trl="N">
+    <value column="Text" isTrl="N" original="Sesuai SK. DIR. Nomor 045/SKEP.07/1996 tanggal 17 Juli 1996, maka saya menjalani cuti.">Sesuai SK. DIR. Nomor 045/SKEP.07/1996 tanggal 17 Juli 1996, maka saya menjalani cuti.</value>
+  </row>
+  <row id="B873DA8A50424C9D89B0EAE3FAA2DB7F" trl="N">
+    <value column="Text" isTrl="N" original="Plafon">Plafon</value>
+  </row>
+  <row id="BEEE19AD5A7B4242BB796688A8582A17" trl="N">
+    <value column="Text" isTrl="N" original="Telp">Telp</value>
+  </row>
+  <row id="C321DD7A362146DD99239C5D1AD8B386" trl="N">
+    <value column="Text" isTrl="N" original="Info :">Info :</value>
+  </row>
+  <row id="C3702BD7C8424E52816A97BD3BDFC5AF" trl="N">
+    <value column="Text" isTrl="N" original="Laporan Sisa Cuti Pegawai">Laporan Sisa Cuti Pegawai</value>
+  </row>
+  <row id="C84F2BD0608C42B78A669F8E713A889B" trl="N">
+    <value column="Text" isTrl="N" original="Telp :">Telp :</value>
+  </row>
+  <row id="D6FB476AE5C04B40A1BEAB992C0913BE" trl="N">
+    <value column="Text" isTrl="N" original="saya menunjuk saudara">saya menunjuk saudara</value>
+  </row>
+  <row id="DF05D139A7824B92BB3B036465C9D7E6" trl="N">
+    <value column="Text" isTrl="N" original="Sisa">Sisa</value>
+  </row>
+  <row id="F2D8416B60AD4415B3678E913B84A4BF" trl="N">
+    <value column="Text" isTrl="N" original="Mulai Kerja">Mulai Kerja</value>
+  </row>
+  <row id="F817AF68B0554823943D0F28CD34832A" trl="N">
+    <value column="Text" isTrl="N" original="Unit Kerja">Unit Kerja</value>
+  </row>
+</compiereTrl>

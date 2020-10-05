@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="id_ID" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="0F58436D45F94DD0841D187BC495CB80" trl="N">
+    <value column="Text" isTrl="N" original="Pengiriman">Pengiriman</value>
+  </row>
+  <row id="218B39B63AA549D19D1A7BF54B8B0ED3" trl="N">
+    <value column="Text" isTrl="N" original="VO">VO</value>
+  </row>
+  <row id="2E85065C4BDC4CE4AA0B8CD6E8FC44CC" trl="N">
+    <value column="Text" isTrl="N" original="\n">\n</value>
+  </row>
+  <row id="5CDC40FFD369481DA0F3650F10EE467E" trl="N">
+    <value column="Text" isTrl="N" original="Termin Pembayaran">Termin Pembayaran</value>
+  </row>
+  <row id="5F61C66A9F484CA983F15EC8DCEFC4F3" trl="N">
+    <value column="Text" isTrl="N" original="Mata Uang">Mata Uang</value>
+  </row>
+  <row id="6D496371EBFC4F1490807CBB63BD4C59" trl="N">
+    <value column="Text" isTrl="N" original="PRICE">PRICE</value>
+  </row>
+  <row id="718799D6926144A88F4421455F90CD4C" trl="N">
+    <value column="Text" isTrl="N" original="dari">dari</value>
+  </row>
+  <row id="830DE0FEB4E54D81857404BF6D68274D" trl="N">
+    <value column="Text" isTrl="N" original="Nomor Dokumen">Nomor Dokumen</value>
+  </row>
+  <row id="8B5BA659A1C04345BC40082398363B7D" trl="N">
+    <value column="Text" isTrl="N" original="PRODUCT NAME">PRODUCT NAME</value>
+  </row>
+  <row id="8F7B8E27A51F45F39D074A0932182B40" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal">Tanggal</value>
+  </row>
+  <row id="A3B2BC9393014F5784443E7698D700BD" trl="N">
+    <value column="Text" isTrl="N" original="PRODUCT NAME">PRODUCT NAME</value>
+  </row>
+  <row id="E0C6E416AF5E4AF58DD73D21948A1145" trl="N">
+    <value column="Text" isTrl="N" original="Halaman">Halaman</value>
+  </row>
+  <row id="E97D936BD7A5415A9BF7613F84CA73FD" trl="N">
+    <value column="Text" isTrl="N" original="VOIDED">VOIDED</value>
+  </row>
+  <row id="FA1573C99DA84A3489C8D12A1F0AB04D" trl="N">
+    <value column="Text" isTrl="N" original="PRICE">PRICE</value>
+  </row>
+  <row id="FE248062D1D142BFB0C71A83E21A68E4" trl="N">
+    <value column="Text" isTrl="N" original="BASE">BASE</value>
+  </row>
+</compiereTrl>

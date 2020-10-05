@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE HRIS_EC_LINES">
+    <table name="HRIS_EC_LINES" primaryKey="HRIS_EC_LINES_ID">
+      <column name="EM_PPH_TAXMARITALSTATUS" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

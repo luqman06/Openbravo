@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER HRIS_SITE_TRG">
+    <trigger name="HRIS_SITE_TRG" table="HRIS_SITE" fires="before" insert="true" update="false" delete="false" foreach="row">
+      <body><![CDATA[
+v_xTree_ID varchar;
+v_xParent_ID varchar;
+
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+    -- definisi trigger
+    IF (TG_OP='INSERT') THEN
+    
+	--get tree type
+	select t.ad_tree_id, tn.node_id
+        from ad_tree t
+        INTO  v_xTree_ID, v_xParent_ID
+        inner join ad_client c on c.ad_client_id=t.ad_client_id
+        left join ad_treenode tn on tn.ad_tree_id=t.AD_Tree_ID and tn.parent_id is null
+        where c.ad_client_id=:new.AD_Client_ID
+        and t.treetype='HRIS_REGIONAL';
+
+        --insert tree node
+	INSERT INTO ad_treenode
+         (ad_treenode_id, AD_Client_ID, AD_Org_ID,
+         IsActive, Created, CreatedBy, Updated, UpdatedBy,
+         AD_Tree_ID, Node_ID,
+         Parent_ID, SeqNo)
+	VALUES
+         (get_uuid(), :new.AD_Client_ID, :new.AD_Org_ID,
+         :new.IsActive, :new.Created, :new.CreatedBy, :new.Updated, :new.UpdatedBy,
+         v_xTree_ID, :new.hris_site_id,
+         v_xParent_ID, (CASE :new.IsSummary WHEN 'Y' THEN 100 ELSE 999 END));     -- Summary Nodes first
+      
+    END IF;
+    
+    
+END HRIS_SITE_TRG
+]]></body>
+    </trigger>
+  </database>

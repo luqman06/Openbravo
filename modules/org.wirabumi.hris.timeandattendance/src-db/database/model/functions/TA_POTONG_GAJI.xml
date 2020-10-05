@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TA_POTONG_GAJI">
+    <function name="TA_POTONG_GAJI" type="NULL">
+      <parameter name="p_employee_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_effectivedate" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="result" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[declare
+v_month NUMBER;
+v_year NUMBER;
+v_amount NUMBER;
+cur_salary record;
+
+begin
+ result:=0;
+ --memberikan parameter berupa tahun dan bulan
+ if p_effectivedate is null then
+   select date_part('year', now()), date_part('month', now()) into v_year, v_month
+   from dual;
+ else
+   v_year:=date_part('year',p_effectivedate);
+   v_month:=date_part('month', p_effectivedate);
+ end if;
+
+
+--loop employee
+for cur_salary in 
+	(select distinct spe.c_bpartner_id, spe.pyr_sp_employee_id, sp.name, sp.startdate, sp.enddate,
+	sp.ad_client_id, date_part('month',sp.valutadate)::numeric as valutadate 
+	from pyr_salarypayment sp
+	inner join pyr_sp_employee spe on spe.pyr_salarypayment_id=sp.pyr_salarypayment_id
+	left join lv_c_bp_leave bpl on bpl.c_bpartner_id=spe.c_bpartner_id
+	where date_part('year',sp.valutadate)=v_year
+	and date_part('month',sp.valutadate)=v_month
+	and bpl.lv_c_bp_leave_id is null
+	and exists (select 1 from pyr_spe_deduction sped
+	inner join pyr_deduction ded on ded.pyr_deduction_id=sped.pyr_deduction_id
+	where ded.value='PTLT' and pyr_sp_employee_id=spe.pyr_sp_employee_id)
+	and (case when p_employee_id is not null then spe.c_bpartner_id=p_employee_id else 1=1 end))
+
+loop  --loop ta_potong_gaji
+select amount into v_amount
+from ta_akumulasi_pot_gaji
+where c_bpartner_id=cur_salary.c_bpartner_id
+and startdate>=cur_salary.startdate
+and enddate<=cur_salary.enddate
+and docstatus='CO';
+
+--raise exception '%', v_amount;
+
+IF v_amount is null then 
+   v_amount:=0; 
+else 
+   v_amount:=v_amount;
+end if;
+
+update pyr_spe_deduction set amount=v_amount, updated=now()
+where pyr_deduction_id=(select pyr_deduction_id from pyr_deduction where value='PTLT' and ad_client_id=cur_salary.ad_client_id) 
+and pyr_sp_employee_id=cur_salary.pyr_sp_employee_id;
+
+end loop; --loop ta_potong_gaji
+
+result:=1;
+
+return;
+end
+]]></body>
+    </function>
+  </database>

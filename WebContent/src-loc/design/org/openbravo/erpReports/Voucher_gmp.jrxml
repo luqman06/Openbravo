@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptFIN_Payment" pageWidth="595" pageHeight="421" orientation="Landscape" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="56" bottomMargin="56" uuid="a153f6ea-213e-4334-80cb-a6548f2851f0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="Label" forecolor="#999999" fontSize="14" isBold="true"/>
+	<parameter name="SUBREP_RptFIN_PaymentLines" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ATTACH" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BASE_DESIGN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SHOW_LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SHOW_COMPANYDATA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="HEADER_MARGIN" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT DISTINCT
+p.documentno as PAYMENTNO, bp.name AS BUSINESSPARTNER, p.paymentdate as PAYMENT_DATE,p.description,
+       p.amount as TOTAL, pm.name as PAYMENT_METHOD, cur.cursymbol as CURRENCY, p.isreceipt as ISRECEIPT,
+       org.ad_org_id as legalentity, org.name as LE_NAME,
+v.invoiceno,
+v.paidamt,
+v.glitemname,
+a.name as costcenter,
+ad_orginfo.taxid as LE_TAXID,
+       c_location_description(ad_orginfo.c_location_id) as LE_LOCATION
+FROM fin_payment p left join c_bpartner bp on (p.c_bpartner_id=bp.c_bpartner_id)
+     join c_currency cur on (p.c_currency_id=cur.c_currency_id)
+left outer join c_costcenter a on (p.c_costcenter_id=a.c_costcenter_id)
+left outer join fin_payment_detail_v v on v.fin_payment_id=p.fin_payment_id
+     left outer join fin_paymentmethod pm on (p.fin_paymentmethod_id=pm.fin_paymentmethod_id), ad_org org, ad_orginfo
+WHERE p.fin_payment_id=$P{DOCUMENT_ID}
+      and org.ad_org_id = ad_orginfo.ad_org_id
+      and org.ad_org_id = (select o.ad_org_id
+                           from ad_org o join ad_orgtype t on (o.ad_orgtype_id=t.ad_orgtype_id)
+                           where ad_isorgincluded(p.ad_org_id, o.ad_org_id, p.ad_client_id)<>-1
+                                 and (t.islegalentity='Y' OR t.isacctlegalentity='Y'))]]>
+	</queryString>
+	<field name="paymentno" class="java.lang.String"/>
+	<field name="businesspartner" class="java.lang.String"/>
+	<field name="payment_date" class="java.sql.Timestamp"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="payment_method" class="java.lang.String"/>
+	<field name="currency" class="java.lang.String"/>
+	<field name="isreceipt" class="java.lang.String"/>
+	<field name="legalentity" class="java.lang.String"/>
+	<field name="le_name" class="java.lang.String"/>
+	<field name="invoiceno" class="java.lang.String"/>
+	<field name="paidamt" class="java.math.BigDecimal"/>
+	<field name="glitemname" class="java.lang.String"/>
+	<field name="costcenter" class="java.lang.String"/>
+	<field name="le_taxid" class="java.lang.String"/>
+	<field name="le_location" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="70">
+			<staticText>
+				<reportElement key="label_receiveddate" style="Label" x="236" y="14" width="130" height="13" forecolor="#000000" uuid="3ffb6cff-da08-42cc-bcbf-7326e1636a67">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10"/>
+				</textElement>
+				<text><![CDATA[Receipt Date]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="376" y="1" width="107" height="13" uuid="3f41c3d3-17fe-47a5-a673-dbb4977a8c4d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_paymentdate" style="Label" x="236" y="15" width="131" height="13" forecolor="#000000" uuid="75a11074-2353-4157-9c25-0d4e6570f495">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Payment Date]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-4" x="376" y="14" width="108" height="13" uuid="ac8ead32-7396-46f9-b412-af10f56536a8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch"/>
+				</textElement>
+				<textFieldExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.applyCountryDateFormat($F{payment_date},$F{legalentity})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="236" y="1" width="130" height="13" forecolor="#000000" uuid="deefcefb-b281-494d-bcaf-c5474d7c48ff"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Payment Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="title_receipt" x="57" y="-34" width="383" height="35" uuid="2721067e-1303-45c0-a002-148a0e7ced0e">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receipt Voucher]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="title_payment" x="57" y="-34" width="383" height="35" uuid="442857db-4a5a-4a14-8f92-726619d50b81">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Courier 10 Pitch" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Voucher]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="367" y="0" width="9" height="14" uuid="5fe63bf9-7831-472d-81ca-40639303c8dd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="367" y="14" width="9" height="14" uuid="5654f311-d685-48d9-a7c5-e4b2b75caef4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="0" y="1" width="219" height="15" uuid="c091e1e0-1ff8-4e9a-b17b-920390e6ef8f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[PT. GEMA PUTRA ABADI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="1" y="15" width="218" height="24" uuid="f54207ff-4777-426c-a7f8-e0f1d298dbc7"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[PAdurenan, Bekasi, Jawa Barat]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-8" x="1" y="42" width="478" height="1" uuid="0a30621e-e156-4485-a146-39a85f18ebb8"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="label_receivedfrom" style="Label" x="0" y="48" width="479" height="22" forecolor="#000000" uuid="548f9011-178e-4421-97d4-fea58cc08d3f">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="14" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[BUKTI KAS KELUAR / MASUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_payment_number" style="Label" x="238" y="28" width="130" height="13" forecolor="#000000" uuid="cad75886-3a70-478a-b867-76e85296c536"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Payment Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="368" y="26" width="9" height="14" uuid="5cbb87d9-71b2-479c-a43a-351593cbac9e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="377" y="26" width="107" height="13" uuid="81c3e9ae-511e-4bb9-87df-c45d38651810"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{costcenter}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="141" y="32" width="340" height="15" uuid="e1776d5a-f4bd-4acd-804d-57a91d9688f9"/>
+				<textElement markup="none">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_paidto" style="Label" x="3" y="5" width="130" height="13" forecolor="#000000" uuid="81d1472a-4c6f-45ab-abe5-16cb15b8a08f">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan Kepada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_receivedfrom" style="Label" x="3" y="5" width="130" height="13" forecolor="#000000" uuid="47cb1e55-91dc-4931-b0ae-7bf82240993a">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Terima Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="133" y="5" width="9" height="14" uuid="39d01aba-9d93-4306-8dc3-94bfe14a38b1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-9" x="141" y="5" width="341" height="13" uuid="74b3fabe-6bf3-4f84-aeb0-c50585562c8b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{businesspartner}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-11" x="133" y="17" width="9" height="14" uuid="7a58164b-10b6-4019-bf94-000c40fae053"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;#,##0.00-" isBlankWhenNull="true">
+				<reportElement key="textField" x="141" y="18" width="340" height="12" uuid="d3cc0fa1-3fb3-4d0d-bdb2-1a0e82afc563"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_receivedfrom" style="Label" x="4" y="31" width="130" height="13" forecolor="#000000" uuid="bc2b0b06-f6b1-445b-9732-e063714d5369">
+					<printWhenExpression><![CDATA[new Boolean($F{isreceipt}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" x="134" y="30" width="9" height="14" uuid="644f3276-f498-4d13-80c2-df3632c8da1c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="label_paymentmethod-1" style="Label" x="2" y="18" width="132" height="13" forecolor="#000000" uuid="0b3993de-e048-4468-8b79-d66047a75e51"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<lastPageFooter>
+		<band height="102">
+			<staticText>
+				<reportElement key="staticText-1" x="355" y="79" width="84" height="10" uuid="24d0455a-ae2e-481d-a142-b2ff629783e6"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Courier 10 Pitch" size="8"/>
+				</textElement>
+				<text><![CDATA[Printed on]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="false">
+				<reportElement key="textField-6" x="424" y="79" width="60" height="10" uuid="278cc899-7152-4e35-84be-8254142d0518"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Courier 10 Pitch" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="false">
+				<reportElement key="textField-8" x="446" y="88" width="40" height="14" uuid="66b31903-dd98-4e87-bc76-dd772b96d9d8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="8" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-7" x="376" y="88" width="70" height="14" uuid="e290e1d4-6371-432b-8e94-7391647e535b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Courier 10 Pitch" size="8" pdfFontName="Courier"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-16" x="143" y="5" width="94" height="15" uuid="da4b0e93-d626-458c-b5ca-47e61afc5ada"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Disetujui Oleh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="271" y="5" width="83" height="15" uuid="9bddd735-6847-446a-ad95-15eb90af1c25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Diterima Oleh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="398" y="5" width="83" height="15" uuid="4f4f8875-8af3-4c68-bc58-ba726af34346"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="Courier"/>
+				</textElement>
+				<text><![CDATA[Dibayar Oleh]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-8" x="144" y="68" width="94" height="1" uuid="172015bd-5df0-456c-ad1a-2dfabda6eb9b"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-8" x="265" y="68" width="94" height="1" uuid="8268078d-9d01-4a79-bd90-190a06073482"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-8" x="385" y="68" width="94" height="1" uuid="da3272aa-2b6a-4441-864b-ff9ee7dc968c"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

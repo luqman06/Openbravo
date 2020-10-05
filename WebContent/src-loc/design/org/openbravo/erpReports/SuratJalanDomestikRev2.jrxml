@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Packing List" pageWidth="595" pageHeight="842" columnWidth="553" leftMargin="21" rightMargin="21" topMargin="21" bottomMargin="0" isFloatColumnFooter="true" isIgnorePagination="true" uuid="0db49da0-c58b-4df0-8d6a-f15a902d698e">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("0C24BB749B4845C9BCFBBF98A50FFE48")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select DISTINCT
+a.ad_org_id,
+a.ad_client_id,
+b.line,
+e.name as productname,
+h.poreference,
+b.description as linedes,
+a.m_inout_id,
+a.EM_Oez_Letterofcredit_Date,
+a.movementdate,
+a.em_oez_packinglist_no,
+a.EM_Oez_Dest_Port,
+a.EM_Oez_Vessel_Name,
+a.EM_Oez_Voyage_Number,
+a.em_oez_depature,
+---a.created,
+a.documentno as delivery_no,
+a.em_oez_containerno as containerno,
+a.em_oez_sealno as sealno,
+bp.bank_name,
+e.weight,
+bp.accountno,
+e.name2,
+a.em_oez_letterofcredit_number,
+j.city,
+j.postal,
+sp.vessel_name as sp_vessel_name,
+sp.voyage_number as sp_voyage_number,
+sp.loading_port_name as sp_loading_port_name,
+sp.loading_port_city as sp_loading_port_city,
+sp.loading_port_etd as sp_loading_port_etd,
+sp.loading_port_country_id as sp_loading_port_country_id,
+sp.dest_port_name as sp_dest_port_name,
+sp.dest_port_eta as sp_dest_port_eta,
+sp.dest_port_city as sp_dest_port_city,
+sp.connect_vessel_name as sp_connect_vessel_name,
+sp.connect_port_eta as sp_connect_port_eta,
+sp.connect_port_eta_city as sp_connect_port_eta_city,
+sp.connect_port_etd as sp_connect_port_etd,
+sp.connect_port_etd_city as sp_connect_port_etd_city,
+sp.Connect_Vessel_Name sp_Connect_Vessel_Name,
+
+
+
+i.description as linedescriptionnew,
+
+a.EM_Oez_Port_Of_Loading,
+a.EM_Oez_Port_Of_Discharge,
+a.em_oez_port_of_loading,
+a.em_oez_dest_port,
+
+CASE WHEN a.docstatus = 'DR' THEN 'gunttdnew.png' ELSE 'gunttdnew.png' end as ttd,
+CASE WHEN a.docstatus = 'CO' THEN 'gunttdnew.png' ELSE 'gunttdnew.png' end as ttd,
+CASE WHEN a.docstatus = 'DR' THEN 'istana.png' ELSE 'istana.png' end as ttd2,
+CASE WHEN a.docstatus = 'CO' THEN 'istana.png' ELSE 'istana.png' end as ttd2,
+
+case when a.c_doctype_id='D28D7F1BDC1947C095C8FD0B15B3562F' then 'Jl. Raya Waru No.30 A, Waru, Sidoarjo 61256, Jawa Timur, Indonesia' else '' end as orgaddres,
+
+case when c.C_BPartner_ID='122A4FEB2FA949DFA5C5AA3CB34DC6F2' then 'APPLICANTS CONTRACT No' else 'APPLICANTS REF No' end as REFERENCNOnew,
+
+
+pc.description as productcategorydes,
+h.EM_Oez_Container_Size,
+CASE WHEN h.EM_Oez_Container_Size ='oez_20RH' then '20RH'
+when h.EM_Oez_Container_Size = 'oez_40RH' then '40RH' else 'other' end as containersize,
+
+
+e.em_oez_packaging_size,
+CASE WHEN e.em_oez_packaging_size ='em_oez_size1' then '1 kg x 10'
+when e.em_oez_packaging_size = 'em_oez_size2' then '900 gr x 2 x 6'
+when e.em_oez_packaging_size = 'em_oez_size3' then '450 gr'
+when e.em_oez_packaging_size = 'em_oez_size4' then '1.8 kg x 6'
+when e.em_oez_packaging_size = 'em_oez_size5' then '10p x 2'
+when e.em_oez_packaging_size = 'em_oez_size10' then '5 kg x 2'
+when e.em_oez_packaging_size = 'em_oez_size9' then '1 kg x 12'
+when e.em_oez_packaging_size = 'em_oez_size8' then '1.8 kg x 12'
+when e.em_oez_packaging_size = 'em_oez_size7' then '1,8 kg x 10'
+when e.em_oez_packaging_size = 'em_oez_size6' then '1,6 kg x 6'
+else '' end as packagingsize,
+
+
+
+e.em_oez_packaging,
+CASE WHEN e.em_oez_packaging ='em_oez_vacuum_pack' then 'Vacuum Pack'
+when e.em_oez_packaging = 'em_oez_pollybag' then 'Polybag'
+else '' end as packaging,
+
+
+e.em_oez_frozen_type,
+CASE WHEN e.em_oez_frozen_type ='em_oez_semi_iqf' then 'Semi IQF'
+when e.em_oez_frozen_type = 'em_oez_iqf' then 'IQF'
+when e.em_oez_frozen_type = 'em_oez_block_frozen' then 'Block Frozen'
+else '' end as frozentype,
+
+
+e.em_oez_raw_type,
+CASE WHEN e.em_oez_raw_type ='em_oez_vanamei' then 'Vannamei'
+
+else '' end as rawtype,
+
+e.em_oez_type_of_goods,
+
+CASE WHEN e.em_oez_type_of_goods ='em_oez_raw' then 'RAW'
+when e.em_oez_type_of_goods = 'em_oez_cooked' then 'Cooked'
+when e.em_oez_type_of_goods = 'em_oez_blanched_cut' then 'Blanched Cut Octopus Natural'
+when e.em_oez_type_of_goods = 'em_oez_boiled_cut' then 'Prima Octopus Treated'
+when e.em_oez_type_of_goods = 'em_oez_cooked_natural' then 'Cooked Natural'
+when e.em_oez_type_of_goods = 'em_oez_Cooked_treated' then 'Cooked Treated'
+when e.em_oez_type_of_goods = 'em_oez_raw_natural' then 'Prima Green Natural'
+when e.em_oez_type_of_goods = 'em_oez_raw_treated' then 'Prima Red Treated'
+
+when e.em_oez_type_of_goods = 'em_oez_prima_blue_treated_iqf' then 'Prima Blue Treated IQF'
+when e.em_oez_type_of_goods = 'em_oez_prima_red_treated' then 'Prima Red Treated'
+when e.em_oez_type_of_goods = 'em_oez_prima_green_natural' then 'Prima Green Natural'
+when e.em_oez_type_of_goods = 'em_oez_prima_red_treated_iqf' then 'Prima Red Treated IQF'
+
+else '' end as typeofgoods,
+
+b.aumqty,
+CASE WHEN b.C_aum ='72BA247D31F745F3AF11F74A5E2CCBEF' then 'KG'
+when b.C_aum = 'E26A062373F54C539E68D1DB76F301B6' then 'TY'
+when b.C_aum = '52DFFEBF92F343AFBAE745EE30421AA1' then 'PH'
+when b.C_aum = '4028E6C72959682B01295ADC1A380221' then 'BA'
+else 'other' end as AUMCODE,
+
+
+
+
+
+
+
+a.em_oez_codocumentno,
+e.em_oez_gross_weight,
+e.weight*b.MovementQty as totalaumqty,
+e.em_oez_gross_weight * b.movementqty as groswight,
+e.weight * b.movementqty as netweight,
+a.docstatus as status,
+a.description as headerdes,
+ad_org.name as ORG_name,
+ad_orginfo.c_Location_id,
+c_location.ADDRESS1 AS ORG_ADDRESS1,
+c_location.ADDRESS2 AS ORG_ADDRESS2,
+c_location.POSTAL AS ORG_POSTAL,
+c_location.C_COUNTRY_ID AS COUNTRY_ID,
+
+(CASE WHEN coalesce(a.docstatus)='DR' THEN ('DRAFT')
+	WHEN coalesce(a.docstatus)='CO' THEN ('COMPLETED')
+		ELSE coalesce(a.docstatus) END) as document_status,
+movementdate as delivery_date,
+a.created as date_created,
+c.name as customer_name,
+coalesce(j.address1,'')||coalesce(' '||j.address2,'') as address1,
+coalesce(j.city,'')||coalesce(' '||j.postal,'')||coalesce(' '||k.name,'')||coalesce(' '||l.name,'') as address2,
+coalesce('Tel. '||d.phone,'')||coalesce(' Fax. '||d.fax,'') as phonefax,
+coalesce(g.name,'') as customer_contact,
+coalesce(h.poreference, '') as po_reference,
+b.line as delivery_line,
+e.name as productname,
+coalesce(e.description, '') || coalesce(b.description, '') as productdescription,
+--b.description as linedescription,
+b.movementqty as delivery_qty,
+f.x12de355 as uom,
+f.name as uom_name,
+mb.name as brandname,
+b.description as line_description,
+i.qtyordered-i.qtydelivered as po_balance_qty
+
+from m_inout a
+
+left join ad_org on ad_org.ad_org_id=a.ad_org_id
+left join ad_orginfo on AD_ORGINFO.ad_org_id=a.ad_org_id
+left join c_location on c_location.c_location_id=ad_orginfo.c_location_id
+
+left join m_inoutline b on a.m_inout_id=b.m_inout_id
+left join c_bpartner c on b.c_bpartner_id=c.c_bpartner_id
+left join c_bpartner_location d on a.delivery_location_id=d.c_bpartner_location_id
+--left join c_bpartner_location d on a.c_bpartner_location_id=d.c_bpartner_location_id
+left join m_product e on b.m_product_id=e.m_product_id
+left join c_uom f on f.c_uom_id=b.c_uom_id
+left join ad_user g on a.ad_user_id=g.ad_user_id
+left join c_orderline i on b.c_orderline_id=i.c_orderline_id
+left join c_order h on i.c_order_id = h.c_order_id
+left join c_location j on d.c_location_id=j.c_location_id
+left join c_region k on j.c_region_id=k.c_region_id
+left join c_country l on k.c_country_id=l.c_country_id
+left join C_BP_BankAccount bp on bp.c_bpartner_id=c.c_bpartner_id
+left join m_brand mb on mb.m_brand_id=e.m_brand_id
+left join m_product_category pc on e.m_product_category_id=pc.m_product_category_id
+
+left join OEZ_Shipmentdata sp on sp.m_inout_id=a.m_inout_id
+
+
+where
+-- sample VOID Document = a.m_inout_id='321D982178FF48B0A23DEF1D1DA119C0'
+-- sample General Sales = a.m_inout_id = 'A15348D66334403F851D17E824CF3C20'
+--AND a.docstatus <> 'DR'
+a.m_inout_id=$P{DOCUMENT_ID}
+order by b.line ASC]]>
+	</queryString>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="ad_client_id" class="java.lang.String"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="productname" class="java.lang.String"/>
+	<field name="poreference" class="java.lang.String"/>
+	<field name="linedes" class="java.lang.String"/>
+	<field name="m_inout_id" class="java.lang.String"/>
+	<field name="em_oez_letterofcredit_date" class="java.sql.Timestamp"/>
+	<field name="movementdate" class="java.sql.Timestamp"/>
+	<field name="em_oez_packinglist_no" class="java.lang.String"/>
+	<field name="em_oez_dest_port" class="java.lang.String"/>
+	<field name="em_oez_vessel_name" class="java.lang.String"/>
+	<field name="em_oez_voyage_number" class="java.lang.String"/>
+	<field name="em_oez_depature" class="java.sql.Timestamp"/>
+	<field name="delivery_no" class="java.lang.String"/>
+	<field name="containerno" class="java.lang.String"/>
+	<field name="sealno" class="java.lang.String"/>
+	<field name="bank_name" class="java.lang.String"/>
+	<field name="weight" class="java.math.BigDecimal"/>
+	<field name="accountno" class="java.lang.String"/>
+	<field name="name2" class="java.lang.String"/>
+	<field name="em_oez_letterofcredit_number" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="postal" class="java.lang.String"/>
+	<field name="sp_vessel_name" class="java.lang.String"/>
+	<field name="sp_voyage_number" class="java.lang.String"/>
+	<field name="sp_loading_port_name" class="java.lang.String"/>
+	<field name="sp_loading_port_city" class="java.lang.String"/>
+	<field name="sp_loading_port_etd" class="java.sql.Timestamp"/>
+	<field name="sp_loading_port_country_id" class="java.lang.String"/>
+	<field name="sp_dest_port_name" class="java.lang.String"/>
+	<field name="sp_dest_port_eta" class="java.sql.Timestamp"/>
+	<field name="sp_dest_port_city" class="java.lang.String"/>
+	<field name="sp_connect_vessel_name" class="java.lang.String"/>
+	<field name="sp_connect_port_eta" class="java.sql.Timestamp"/>
+	<field name="sp_connect_port_eta_city" class="java.lang.String"/>
+	<field name="sp_connect_port_etd" class="java.sql.Timestamp"/>
+	<field name="sp_connect_port_etd_city" class="java.lang.String"/>
+	<field name="linedescriptionnew" class="java.lang.String"/>
+	<field name="em_oez_port_of_loading" class="java.lang.String"/>
+	<field name="em_oez_port_of_discharge" class="java.lang.String"/>
+	<field name="ttd" class="java.lang.String"/>
+	<field name="ttd2" class="java.lang.String"/>
+	<field name="orgaddres" class="java.lang.String"/>
+	<field name="referencnonew" class="java.lang.String"/>
+	<field name="productcategorydes" class="java.lang.String"/>
+	<field name="em_oez_container_size" class="java.lang.String"/>
+	<field name="containersize" class="java.lang.String"/>
+	<field name="em_oez_packaging_size" class="java.lang.String"/>
+	<field name="packagingsize" class="java.lang.String"/>
+	<field name="em_oez_packaging" class="java.lang.String"/>
+	<field name="packaging" class="java.lang.String"/>
+	<field name="em_oez_frozen_type" class="java.lang.String"/>
+	<field name="frozentype" class="java.lang.String"/>
+	<field name="em_oez_raw_type" class="java.lang.String"/>
+	<field name="rawtype" class="java.lang.String"/>
+	<field name="em_oez_type_of_goods" class="java.lang.String"/>
+	<field name="typeofgoods" class="java.lang.String"/>
+	<field name="aumqty" class="java.math.BigDecimal"/>
+	<field name="aumcode" class="java.lang.String"/>
+	<field name="em_oez_codocumentno" class="java.lang.String"/>
+	<field name="em_oez_gross_weight" class="java.math.BigDecimal"/>
+	<field name="totalaumqty" class="java.math.BigDecimal"/>
+	<field name="groswight" class="java.math.BigDecimal"/>
+	<field name="netweight" class="java.math.BigDecimal"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="headerdes" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="c_location_id" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="country_id" class="java.lang.String"/>
+	<field name="document_status" class="java.lang.String"/>
+	<field name="delivery_date" class="java.sql.Timestamp"/>
+	<field name="date_created" class="java.sql.Timestamp"/>
+	<field name="customer_name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="customer_contact" class="java.lang.String"/>
+	<field name="po_reference" class="java.lang.String"/>
+	<field name="delivery_line" class="java.math.BigDecimal"/>
+	<field name="productdescription" class="java.lang.String"/>
+	<field name="delivery_qty" class="java.math.BigDecimal"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="brandname" class="java.lang.String"/>
+	<field name="line_description" class="java.lang.String"/>
+	<field name="po_balance_qty" class="java.math.BigDecimal"/>
+	<variable name="SUMQTY" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{delivery_qty}]]></variableExpression>
+	</variable>
+	<variable name="SUMWEIGHT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{netweight}]]></variableExpression>
+	</variable>
+	<variable name="SUMGROS" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{groswight}]]></variableExpression>
+	</variable>
+	<variable name="SUMTOTALAUMQQTY" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{aumqty}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="145" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-28" x="372" y="-110" width="80" height="15" uuid="3063c0fb-3d72-4eae-a0e2-9c3d38972c82"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" x="372" y="-80" width="80" height="15" uuid="26f62b7d-4eb2-4deb-b71e-d8ef0aa09375"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="372" y="-95" width="80" height="15" uuid="e3e657ec-8a8b-46cf-bde3-4b72326c12c8"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="372" y="-65" width="80" height="15" uuid="300b6257-d22c-4fa2-89b6-50de89259c2f"/>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-32" x="372" y="-50" width="80" height="15" uuid="545d39da-4452-477a-93ab-5073ba2d143a"/>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-33" x="451" y="-110" width="7" height="15" uuid="50b57b3a-2334-4d77-a32b-d89f81140960"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-34" x="451" y="-80" width="7" height="15" uuid="8f98b111-4c52-477d-864b-0375936cd0e4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-35" x="451" y="-95" width="7" height="15" uuid="fef3c7e4-d89c-4b16-99cc-7ed790e14437"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-36" x="451" y="-65" width="7" height="15" uuid="104a45e2-d8b8-48f4-8533-8eb11e3d538a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-37" x="451" y="-50" width="7" height="15" uuid="acdba25c-79b8-4d45-ad6f-45213cf96d6c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" x="372" y="-110" width="80" height="15" uuid="19f34254-76ae-4838-bc8f-833045deb006"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-39" x="372" y="-80" width="80" height="15" uuid="972580ce-5c1d-4a9b-9981-a205362293b3"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-40" x="372" y="-95" width="80" height="15" uuid="bd12d567-6393-4ea0-959f-d613718aadbf"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-41" x="372" y="-65" width="80" height="15" uuid="3aa42b4a-e393-4420-afc1-731359cb487b"/>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-42" x="372" y="-50" width="80" height="15" uuid="3a492064-dbf5-428c-9ca0-1481b7b16859"/>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" x="451" y="-110" width="7" height="15" uuid="81c30f6a-08c7-4a9d-b346-8a24ccb4061a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-44" x="451" y="-80" width="7" height="15" uuid="27ab193a-a596-4016-a62b-f85b0c95c371"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" x="451" y="-95" width="7" height="15" uuid="6fbb14ae-1a6a-4fbe-b85c-bc910b266cbe"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-46" x="451" y="-65" width="7" height="15" uuid="c3e00703-a448-4309-918d-8fd69b8f49df"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-47" x="451" y="-50" width="7" height="15" uuid="3bfa781e-8346-4e52-b1f4-3566cdebf242"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-48" x="372" y="-110" width="80" height="15" uuid="308a742d-cba3-4ff6-9fd3-9e1a5d3db4ca"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-49" x="372" y="-80" width="80" height="15" uuid="e16552f9-3f7b-4e31-9ff9-b828d2529d7b"/>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-50" x="372" y="-95" width="80" height="15" uuid="063c0e31-694a-458b-ac2d-790989f679c6"/>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-51" x="451" y="-110" width="7" height="15" uuid="7bfca0e5-07d6-4284-a71a-e13cab9611ca"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-52" x="451" y="-80" width="7" height="15" uuid="0f114a1c-d367-44c6-8b19-a953c301ee3f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-53" x="451" y="-95" width="7" height="15" uuid="ffa1828f-90bb-4d46-913d-82e05eaf6519"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-54" x="372" y="-110" width="80" height="15" uuid="9d131354-cddf-4929-b168-152c1e7dde85"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-55" x="451" y="-110" width="7" height="15" uuid="27f42268-8302-47fb-9945-ff21d0ea467e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-56" x="372" y="-110" width="80" height="15" uuid="2dc6dfdd-5853-4b90-a135-9cdb13fd9124"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-57" x="372" y="-110" width="80" height="15" uuid="e276a72a-0636-4cfa-90b7-4c73ba8516ad"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="79" y="104" width="180" height="13" uuid="88b935ff-0727-40c4-96f1-6cf8cc839fa9"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="1" y="61" width="550" height="42" uuid="c30d61bb-edac-453a-baf5-4ac69ddf6114"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="24" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Delivery Order Domestic]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="78" y="130" width="182" height="13" uuid="2b3d6419-5c4e-4ead-b711-41ea8b4bd6e0"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1} + ' ' +$F{address2}+ ' '+(""+(($F{postal}!=null)?$F{postal}:""))+ ' '+ (""+(($F{city}!=null)?$F{city}:""))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="1" y="104" width="73" height="13" uuid="31d63b02-adc1-474b-b49a-0d2d408955aa"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="73" y="104" width="6" height="13" uuid="e2503c4e-21a0-4510-81c4-56e34f68736c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="72" y="117" width="6" height="13" uuid="9381bf2e-168a-451a-afb7-5a2a20c6f88f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="117" width="73" height="13" uuid="d11dc0f0-9fe9-49d9-8a9e-402dc04bb943"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="79" y="117" width="180" height="13" uuid="b96001b8-7b8a-42c8-b0b9-9d412ce42b22"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" x="72" y="130" width="6" height="13" uuid="2711d114-fe21-4f40-8d87-f46c60e77a6a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="130" width="73" height="13" uuid="23b70efc-60ca-464a-a1e6-f5b6397e4bdd"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" vAlign="Middle">
+				<reportElement x="-21" y="-20" width="597" height="81" uuid="78123433-791d-44c2-b0dc-e42199727b62"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/header.png"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="373" y="104" width="180" height="13" uuid="00caeaf1-5d76-41f5-8126-af408c7ce310"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{movementdate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" x="367" y="104" width="6" height="13" uuid="84e244d3-83a0-4876-81f6-171c0898355e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="295" y="104" width="73" height="13" uuid="2fbb4110-b194-4501-bffc-f5488b4b532a"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="295" y="116" width="73" height="13" uuid="7936a5ad-6e48-42ae-808f-6a4b6561ff47"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[No. Reff]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="373" y="116" width="180" height="13" uuid="4b2885a5-ecb5-4d44-a1ee-ab09b54539e2"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{poreference}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" x="367" y="116" width="6" height="13" uuid="9600a766-5a0b-4939-bcbb-5cec3825b5af"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-9" mode="Opaque" x="379" y="1" width="172" height="26" forecolor="#FFFFFF" backcolor="#000080" uuid="c9153d28-0165-4fa6-a4dc-2bb4d9cb9140"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Qty 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="207" y="1" width="170" height="26" forecolor="#FFFFFF" backcolor="#000080" uuid="9dee426f-99ac-48cf-92df-d1db4089d1ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-9" mode="Opaque" x="50" y="1" width="156" height="26" forecolor="#FFFFFF" backcolor="#000080" uuid="2ede0bab-bc18-421d-a439-00ea88585bca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Size]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-9" mode="Opaque" x="1" y="1" width="48" height="26" forecolor="#FFFFFF" backcolor="#000080" uuid="6b0d89db-25bf-4c3a-ad6a-f747e4a7b82f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="379" y="0" width="140" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="4ba867ab-17d1-47dc-a11d-71ecc161b5da"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delivery_qty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="0" width="156" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="a20c70fc-1039-4ce8-ac4e-43e73b330e82"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="519" y="0" width="32" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="c66b8fa8-faa9-41bb-97ab-ef4b144bf4ca"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="1" y="0" width="49" height="13" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="1eef53ff-2f93-4177-8dfc-9c944394eb14"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="206" y="0" width="173" height="13" uuid="bb31206d-bfb1-46c5-96f2-482a1eeaf0a5"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{linedes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="98">
+			<image scaleImage="FillFrame" vAlign="Middle">
+				<reportElement x="-21" y="0" width="597" height="98" uuid="c848df16-f648-476f-8bde-af2abfd7b092"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/footer.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="204">
+			<line>
+				<reportElement key="line-2" x="1" y="92" width="115" height="1" uuid="42f9d412-147d-4952-9c85-b3f87190d78a"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-16" x="0" y="80" width="135" height="13" uuid="16ff392b-5582-4072-8cf5-aaaa64836b04"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Sulistyanto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-9" mode="Opaque" x="0" y="1" width="219" height="13" forecolor="#FFFFFF" backcolor="#000080" uuid="04180b62-842e-4c77-9657-d644680ba966"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="10" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[GRAND TOTAL]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField-11" mode="Opaque" x="378" y="1" width="141" height="13" forecolor="#FFFFFF" backcolor="#000080" uuid="fa4f965a-37c9-4d4e-9f2d-57cb2408b62f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMQTY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField-11" mode="Opaque" x="219" y="1" width="159" height="13" forecolor="#FFFFFF" backcolor="#000080" uuid="aa34e771-1d81-478a-8ba1-4aa5c2a7b4db"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField-11" mode="Opaque" x="519" y="1" width="34" height="13" forecolor="#FFFFFF" backcolor="#000080" uuid="24bf7f07-8d3e-45ac-97b5-2c3a5eefeb2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="DejaVu Serif" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+			</textField>
+			<image scaleImage="FillFrame" vAlign="Middle">
+				<reportElement x="-23" y="106" width="597" height="98" uuid="f87a3c3a-9d5b-4d7a-92ee-ec8a81579224"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/footer.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-16" x="1" y="92" width="135" height="13" uuid="c07efd9d-7a9a-466c-96f2-f67e2a080fbc"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama & Tanda Tangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="207" y="14" width="135" height="13" uuid="56f1a5d2-0583-4b89-b35b-abc93cb106ec"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Penerima,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="1" y="15" width="135" height="13" uuid="0dfb702f-5fe1-43ff-904f-c0cb4ac65da5"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="207" y="92" width="135" height="13" uuid="74bd532b-861a-4c3c-9f41-bdb11f26900c"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Nama & Tanda Tangan]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="206" y="92" width="115" height="1" uuid="58808024-bc29-46c5-af82-bac85b3069cb"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-16" x="414" y="94" width="135" height="13" uuid="8064801e-7132-4b21-b6e0-2d1a5ab75ccf"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Nama & Tanda Tangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="414" y="81" width="135" height="13" uuid="a5b7db3c-5bcb-415a-b0ca-b2a030f15f4f"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Titim]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="414" y="93" width="120" height="1" uuid="3fbb65b4-59d2-4f41-a445-d126b7354f07"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-16" x="415" y="16" width="135" height="13" uuid="b60cc538-d529-49a1-b33f-39df833eada3"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Yang Mengeluarkan,]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

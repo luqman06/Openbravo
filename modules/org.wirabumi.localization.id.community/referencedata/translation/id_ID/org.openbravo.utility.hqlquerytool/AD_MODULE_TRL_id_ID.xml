@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MODULE" version="">
+  <row id="0CD06AFA024342CD94FDD9AB1ECDFC14" trl="N">
+    <value column="Description" isTrl="N" original="This module makes it possible to enter/try HQL queries directly in a web interface.">This module makes it possible to enter/try HQL queries directly in a web interface.</value>
+    <value column="Help" isTrl="N" original="Provides a tool for an administrator to enter and try HQL queries directly in Openbravo's web interface.">Provides a tool for an administrator to enter and try HQL queries directly in Openbravo's web interface.</value>
+    <value column="License" isTrl="N" original="Licensed under the Openbravo Public License Version 1.1.&#10;You may obtain a copy of the License at&#10;http://www.openbravo.com/legal/license.html&#10;or in the legal folder of the Openbravo ERP core distribution. ">Licensed under the Openbravo Public License Version 1.1.
+You may obtain a copy of the License at
+http://www.openbravo.com/legal/license.html
+or in the legal folder of the Openbravo ERP core distribution. </value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

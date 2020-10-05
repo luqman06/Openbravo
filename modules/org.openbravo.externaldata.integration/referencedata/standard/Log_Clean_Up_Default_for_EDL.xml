@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OBULOG_Config id="224710ADA6C944FF96F4651352D31C8F" identifier="OBEDL_Request">
+    <id>224710ADA6C944FF96F4651352D31C8F</id>
+    <active>true</active>
+    <table id="C0F82AE97B764C7B9F700396D5E89A26" entity-name="ADTable" identifier="OBEDL_Request"/>
+    <olderThan>30</olderThan>
+    <column xsi:nil="true"/>
+    <hQLWhereClause>processed is true</hQLWhereClause>
+    <truncateTable>false</truncateTable>
+  </OBULOG_Config>
+</ob:Openbravo>

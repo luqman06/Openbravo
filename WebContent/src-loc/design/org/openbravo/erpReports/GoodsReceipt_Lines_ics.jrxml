@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Rptm_InOut_Lines_new" pageWidth="553" pageHeight="842" columnWidth="553" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a4a06de8-2715-48bf-92dd-590febb0d7eb">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5000000000000007"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Report_Title" fontName="Bitstream Vera Sans" fontSize="18"/>
+	<style name="Report_Subtitle" forecolor="#555555" fontName="Bitstream Vera Sans" fontSize="14"/>
+	<style name="Report_Data_Label" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Report_Data_Field" fontName="Bitstream Vera Sans" fontSize="11" isBold="false"/>
+	<style name="Total_Field" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="GroupHeader_DarkGray" mode="Opaque" forecolor="#FFFFFF" backcolor="#555555" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="12" isBold="true"/>
+	<style name="Group_Data_Label" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Group_Data_Field" fontName="Bitstream Vera Sans" fontSize="11"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line" fontName="Bitstream Vera Sans" fontSize="8">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Detail_Data_Label" mode="Opaque" backcolor="#CCCCCC" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Data_Field" mode="Opaque" backcolor="#CCCCCC" fontName="Bitstream Vera Sans" fontSize="10"/>
+	<style name="Group_Footer" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Report_Footer" isDefault="true" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="11"/>
+	<parameter name="M_INOUT_ID" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT M_PRODUCT.VALUE,
+        COALESCE((SELECT M_PRODUCT_CUSTOMER.NAME
+            FROM M_PRODUCT_CUSTOMER
+            WHERE M_PRODUCT_CUSTOMER.M_PRODUCT_ID=M_INOUTLINE.M_PRODUCT_ID
+            AND M_PRODUCT_CUSTOMER.C_BPARTNER_ID=M_INOUT.C_BPARTNER_ID)
+            ,M_PRODUCT.NAME) AS NAME,SUM(M_INOUTLINE.MOVEMENTQTY) AS MOVEMENTQTY, M_ATTRIBUTESETINSTANCE.DESCRIPTION AS LOT,M_INOUTLINE.line as line,
+            REPLACE(M_INOUTLINE.DESCRIPTION, CHR(10), '') AS LLOT, REPLACE(M_INOUT.DESCRIPTION, CHR(10), '') AS DESCRIPTION, M_PRODUCT.UPC, C_UOM.NAME AS UOM
+        FROM M_INOUTLINE left join C_ORDERLINE on M_INOUTLINE.C_ORDERLINE_ID = C_ORDERLINE.C_ORDERLINE_ID
+                         left join C_ORDER on C_ORDERLINE.C_ORDER_ID = C_ORDER.C_ORDER_ID
+                         left join M_ATTRIBUTESETINSTANCE on M_INOUTLINE.M_ATTRIBUTESETINSTANCE_ID = M_ATTRIBUTESETINSTANCE.M_ATTRIBUTESETINSTANCE_ID,
+             M_INOUT, M_PRODUCT, C_UOM
+        WHERE M_INOUT.M_INOUT_ID = M_INOUTLINE.M_INOUT_ID
+        AND M_INOUTLINE.M_PRODUCT_ID = M_PRODUCT.M_PRODUCT_ID
+        AND M_INOUT.M_INOUT_ID = '$P!{M_INOUT_ID}'
+        AND M_PRODUCT.C_UOM_ID = C_UOM.C_UOM_ID
+        GROUP BY C_ORDER.DOCUMENTNO, M_INOUT.C_BPARTNER_ID, C_ORDER.POREFERENCE, M_PRODUCT.VALUE, M_INOUTLINE.M_PRODUCT_ID, M_PRODUCT.NAME, M_ATTRIBUTESETINSTANCE.DESCRIPTION, M_INOUT.DESCRIPTION, M_INOUTLINE.DESCRIPTION, M_PRODUCT.UPC, C_UOM.NAME,M_INOUTLINE.line
+        ORDER BY C_ORDER.DOCUMENTNO, M_PRODUCT.NAME]]>
+	</queryString>
+	<field name="value" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String"/>
+	<field name="movementqty" class="java.math.BigDecimal"/>
+	<field name="lot" class="java.lang.String"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="llot" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="upc" class="java.lang.String">
+		<fieldDescription><![CDATA[--OBTG:NVARCHAR--]]></fieldDescription>
+	</field>
+	<field name="uom" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="553" height="18" forecolor="#000080" backcolor="#000080" uuid="5786b6f1-4232-49c1-960f-f36c3218726e"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText" style="default" x="0" y="0" width="32" height="18" forecolor="#FFFFFF" uuid="05887237-2cb5-45a0-9558-4363ce4062e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="32" y="0" width="93" height="18" forecolor="#FFFFFF" uuid="bed49dd2-709d-40e1-823f-c0b3d8b6c19f"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Material Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" x="125" y="0" width="157" height="18" forecolor="#FFFFFF" uuid="b92b85d7-ca4b-4c31-92cc-bc7df62f51ca"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="default" x="282" y="0" width="129" height="18" forecolor="#FFFFFF" uuid="8da2cbe0-7bf2-439c-9246-ba2be19e5d72"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Attributes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" x="482" y="0" width="71" height="18" forecolor="#FFFFFF" uuid="363f5190-0130-4a4c-b8f7-d01ed574a765"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[UoM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-18" x="411" y="0" width="71" height="18" forecolor="#FFFFFF" uuid="efa47152-d0e8-4308-b8ad-18bd0330d10b"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="482" y="0" width="71" height="15" forecolor="#000000" uuid="2ae287eb-a123-42d5-a7e8-415b273248c0"/>
+				<box>
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+					<rightPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="411" y="0" width="71" height="15" forecolor="#000000" uuid="bc3716ba-3aff-404d-9221-744206eb423e"/>
+				<box rightPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{movementqty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="282" y="0" width="129" height="15" forecolor="#000000" uuid="531c83b1-c026-4094-b7bf-888c5e65db3e"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{lot}==null ? " " : " " + $F{lot})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="125" y="0" width="157" height="15" forecolor="#000000" uuid="504d199b-72a9-4cad-b1f2-15cadfd18728"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{name}==null ? " " : " " + $F{name})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="32" y="0" width="93" height="15" forecolor="#000000" uuid="29dff07b-051f-4347-af19-e08c30720a88"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $F{value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField" style="default" stretchType="RelativeToTallestObject" x="0" y="0" width="32" height="15" forecolor="#000000" uuid="e5443883-9c06-4648-970d-451feccdf36c"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.5" lineColor="#000080"/>
+					<bottomPen lineWidth="0.5" lineColor="#000080"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Helvetica-Normal" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

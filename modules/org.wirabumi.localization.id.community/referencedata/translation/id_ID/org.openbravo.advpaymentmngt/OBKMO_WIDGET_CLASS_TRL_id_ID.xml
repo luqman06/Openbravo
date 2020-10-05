@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="FF80808133186ADD01331B3A932C000D" trl="N">
+    <value column="Title" isTrl="N" original="Reconciliation Details">Reconciliation Details</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

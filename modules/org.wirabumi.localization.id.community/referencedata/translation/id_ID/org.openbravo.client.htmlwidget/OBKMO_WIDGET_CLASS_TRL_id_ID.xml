@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="10DE6579FF7A4864AEB31FE957849461" trl="N">
+    <value column="Title" isTrl="N" original="HTML Widget">HTML Widget</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E4C82D04605C4256A74258B770AA8867" trl="N">
+    <value column="Title" isTrl="N" original="User defined HTML Widget">User defined HTML Widget</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

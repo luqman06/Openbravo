@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_ELEMENT" version="">
+  <row id="004268A8E7D24600AEEF8FAC8EF42DC8" trl="N">
+    <value column="Name" isTrl="N" original="Location / Address">Location / Address</value>
+    <value column="PrintName" isTrl="N" original="C_Ship_Location_ID">C_Ship_Location_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0215AF04A1214F43A9C64014207C25E0" trl="N">
+    <value column="Name" isTrl="N" original="City Name">City Name</value>
+    <value column="PrintName" isTrl="N" original="Ship_City">Ship_City</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0B4CF3723D2E493599B78B17D6598E66" trl="N">
+    <value column="Name" isTrl="N" original="Postal">Postal</value>
+    <value column="PrintName" isTrl="N" original="Ship_Postal">Ship_Postal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1170233418784961AD7ADE9615AEF954" trl="N">
+    <value column="Name" isTrl="N" original="Fiscal Calendar Name">Fiscal Calendar Name</value>
+    <value column="PrintName" isTrl="N" original="Fiscal Calendar Name">Fiscal Calendar Name</value>
+    <value column="Description" isTrl="N" original="Name of your new fiscal calendar when you run configuration wizard.">Name of your new fiscal calendar when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Name of your new fiscal calendar when you run configuration wizard.">Name of your new fiscal calendar when you run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="14F9DEDCF26A445CAAC030C18072575C" trl="N">
+    <value column="Name" isTrl="N" original="OEZ_Stockaginglog_ID">OEZ_Stockaginglog_ID</value>
+    <value column="PrintName" isTrl="N" original="OEZ_Stockaginglog_ID">OEZ_Stockaginglog_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1BA4E42230F54301B7AB4F710DF38B3D" trl="N">
+    <value column="Name" isTrl="N" original="Document Routing">Document Routing</value>
+    <value column="PrintName" isTrl="N" original="Document Routig">Document Routig</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1BDB392D0BDA4431870703D6E1C8798F" trl="N">
+    <value column="Name" isTrl="N" original="Balance Sheet Name">Balance Sheet Name</value>
+    <value column="PrintName" isTrl="N" original="Balance Sheet Name">Balance Sheet Name</value>
+    <value column="Description" isTrl="N" original="Name of new created balance sheet.">Name of new created balance sheet.</value>
+    <value column="Help" isTrl="N" original="When you create balance sheet option enable, you should provide balance sheet name in this field.">When you create balance sheet option enable, you should provide balance sheet name in this field.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1C0F11AEC9C345588D029629E577737C" trl="N">
+    <value column="Name" isTrl="N" original="Import Product Cost">Import Product Cost</value>
+    <value column="PrintName" isTrl="N" original="Import Product Cost">Import Product Cost</value>
+    <value column="Description" isTrl="N" original="Import Product Cost to define the latest costing at the begining of accounting period">Import Product Cost to define the latest costing at the begining of accounting period</value>
+    <value column="Help" isTrl="N" original="Import Product Cost to define the latest costing at the begining of accounting period. By providing the product cost you are allowed to see the valued stock value, and also post the 1st Goods Receipt document. Beside that, you will get matched value of your inventory in the warehouse and in your balance sheet.">Import Product Cost to define the latest costing at the begining of accounting period. By providing the product cost you are allowed to see the valued stock value, and also post the 1st Goods Receipt document. Beside that, you will get matched value of your inventory in the warehouse and in your balance sheet.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1C93798BE9D440358A02F70963C6CAE8" trl="N">
+    <value column="Name" isTrl="N" original="Create Default Accounting Period">Create Default Accounting Period</value>
+    <value column="PrintName" isTrl="N" original="Create Default Accounting Period">Create Default Accounting Period</value>
+    <value column="Description" isTrl="N" original="Create Default Accounting Period when you run configuration wizard">Create Default Accounting Period when you run configuration wizard</value>
+    <value column="Help" isTrl="N" original="No accouting period provided. By enabling this option, you will get default accounting period. For example, if initial opening balance is 01-01-2011, its mean current year is 2011, then default period is 12 records, starting from 01-01-2011 until 31-12-2011, 1 record for each month.">No accouting period provided. By enabling this option, you will get default accounting period. For example, if initial opening balance is 01-01-2011, its mean current year is 2011, then default period is 12 records, starting from 01-01-2011 until 31-12-2011, 1 record for each month.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2966C8619E7E471E8E559FBA4C617F1D" trl="N">
+    <value column="Name" isTrl="N" original="Create Fiscal Calendar">Create Fiscal Calendar</value>
+    <value column="PrintName" isTrl="N" original="Create Fiscal Calendar">Create Fiscal Calendar</value>
+    <value column="Description" isTrl="N" original="Cretae fiscal calendar when you run configuration wizard.">Cretae fiscal calendar when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Cretae fiscal calendar when you run configuration wizard.">Cretae fiscal calendar when you run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2E13845A7B4447EC8A6AAF2E231BC564" trl="N">
+    <value column="Name" isTrl="N" original="Address1">Address1</value>
+    <value column="PrintName" isTrl="N" original="Ship_Address1">Ship_Address1</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="37B0CA627A25466094048E6D7C8318C2" trl="N">
+    <value column="Name" isTrl="N" original="Document Action for Orders">Document Action for Orders</value>
+    <value column="PrintName" isTrl="N" original="Document Action for Orders">Document Action for Orders</value>
+    <value column="Description" isTrl="N" original="Next action taken for order transaction">Next action taken for order transaction</value>
+    <value column="Help" isTrl="N" original="Next action taken for order transaction. Order transaction including purchase order, sales order, vendor return, customer return, and quotation.">Next action taken for order transaction. Order transaction including purchase order, sales order, vendor return, customer return, and quotation.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3B5A6712024343ABA5ED329584648F19" trl="N">
+    <value column="Name" isTrl="N" original="Activate All Transaction Document">Activate All Transaction Document</value>
+    <value column="PrintName" isTrl="N" original="Activate All Transaction Document">Activate All Transaction Document</value>
+    <value column="Description" isTrl="N" original="Not all transaction activated by default, by enable this option, all inactive transaction document will be activated.">Not all transaction activated by default, by enable this option, all inactive transaction document will be activated.</value>
+    <value column="Help" isTrl="N" original="Not all transaction activated by default, by enable this option, all inactive transaction document will be activated.">Not all transaction activated by default, by enable this option, all inactive transaction document will be activated.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3D4BF1F9C74E4B33921EDB49042D9133" trl="N">
+    <value column="Name" isTrl="N" original="Employee">Employee</value>
+    <value column="PrintName" isTrl="N" original="Employee">Employee</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3E58EE772A9648A6BA0A0805499F5B4C" trl="N">
+    <value column="Name" isTrl="N" original="Create Opening Balance Accounting Period">Create Opening Balance Accounting Period</value>
+    <value column="PrintName" isTrl="N" original="Create Opening Balance Accounting Period">Create Opening Balance Accounting Period</value>
+    <value column="Description" isTrl="N" original="Create Opening Balance Accounting Period when you run configuration wizard.">Create Opening Balance Accounting Period when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Usually, Opening balance happen before the 1st date of your accounting data live in the Openbravo. For example, when your accounting data inside openbravo is starting from 01-01-2011, then your Opening Balance, should stated as per date 31-12-2010. By enabling this option, you will get a new dedicated accounting period for opening balance, according to the case study, this period will valid only on 31-12-2010.">Usually, Opening balance happen before the 1st date of your accounting data live in the Openbravo. For example, when your accounting data inside openbravo is starting from 01-01-2011, then your Opening Balance, should stated as per date 31-12-2010. By enabling this option, you will get a new dedicated accounting period for opening balance, according to the case study, this period will valid only on 31-12-2010.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3F7BFD9E0B3F455088EC2A125524EE97" trl="N">
+    <value column="Name" isTrl="N" original="Vendor">Vendor</value>
+    <value column="PrintName" isTrl="N" original="Vendor">Vendor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="3FA551D844E546EFB982444493F68669" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Name">Warehouse Name</value>
+    <value column="PrintName" isTrl="N" original="Warehouse Name">Warehouse Name</value>
+    <value column="Description" isTrl="N" original="Name of created warehouse when you run configuration wizard,">Name of created warehouse when you run configuration wizard,</value>
+    <value column="Help" isTrl="N" original="Name of created warehouse when you run configuration wizard,">Name of created warehouse when you run configuration wizard,</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4166CBD38BAB418D8D37DCAC8F281510" trl="N">
+    <value column="Name" isTrl="N" original="Import Product Price">Import Product Price</value>
+    <value column="PrintName" isTrl="N" original="Import Product Price">Import Product Price</value>
+    <value column="Description" isTrl="N" original="Import product price">Import product price</value>
+    <value column="Help" isTrl="N" original="Import product price record, you may import prices for a product, after import its definition (and also product purchasing data, using Import Product window).">Import product price record, you may import prices for a product, after import its definition (and also product purchasing data, using Import Product window).</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4B82CF31F4B74FAB9081008A325098CC" trl="N">
+    <value column="Name" isTrl="N" original="Line Description">Line Description</value>
+    <value column="PrintName" isTrl="N" original="Line Description">Line Description</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="52288F97F1F24413AC09CD2712075D0F" trl="N">
+    <value column="Name" isTrl="N" original="Age">Age</value>
+    <value column="PrintName" isTrl="N" original="Age">Age</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5400DF60A98440368FC250A938687A1A" trl="N">
+    <value column="Name" isTrl="N" original="Customer">Customer</value>
+    <value column="PrintName" isTrl="N" original="Customer">Customer</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="57E9D516A3D34BFCB4D0DB3CE705D93E" trl="N">
+    <value column="Name" isTrl="N" original="Assign Fiscal Calender to Organization">Assign Fiscal Calender to Organization</value>
+    <value column="PrintName" isTrl="N" original="Assign Fiscal Calender to Organization">Assign Fiscal Calender to Organization</value>
+    <value column="Description" isTrl="N" original="Apply new fiscal calendar to current organization.">Apply new fiscal calendar to current organization.</value>
+    <value column="Help" isTrl="N" original="During run configuration wizard, new fiscal calendar may be created. By enable this option, the new calendar will be assigned to current organization.">During run configuration wizard, new fiscal calendar may be created. By enable this option, the new calendar will be assigned to current organization.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="58C675E4A8434DDA96FEF5BA7EAC0F09" trl="N">
+    <value column="Name" isTrl="N" original="Open Default Accounting Period">Open Default Accounting Period</value>
+    <value column="PrintName" isTrl="N" original="Open Default Accounting Period">Open Default Accounting Period</value>
+    <value column="Description" isTrl="N" original="Open your Default Accounting Period">Open your Default Accounting Period</value>
+    <value column="Help" isTrl="N" original="When accounting period created, its not defined wheter the period is opened or closed. By enabling this option, you will get your default accounting period opened.">When accounting period created, its not defined wheter the period is opened or closed. By enabling this option, you will get your default accounting period opened.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="58E37CCE0C2241558B41076C70151298" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Address">Warehouse Address</value>
+    <value column="PrintName" isTrl="N" original="Warehouse Address">Warehouse Address</value>
+    <value column="Description" isTrl="N" original="Address for new created warehouse when you run configuration wizard.">Address for new created warehouse when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Address for new created warehouse when you run configuration wizard.">Address for new created warehouse when you run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5D905C650C0141188C03F5DB231B4EB6" trl="N">
+    <value column="Name" isTrl="N" original="Price List Version Name">Price List Version Name</value>
+    <value column="PrintName" isTrl="N" original="Price List Version Name">Price List Version Name</value>
+    <value column="Description" isTrl="N" original="Name of price list version">Name of price list version</value>
+    <value column="Help" isTrl="N" original="price list version name, used to retrieve price list version ID, to be inserted in the product price">price list version name, used to retrieve price list version ID, to be inserted in the product price</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="62CBE6F3EC4245BA8E773866CE1B39D9" trl="N">
+    <value column="Name" isTrl="N" original="Country Code">Country Code</value>
+    <value column="PrintName" isTrl="N" original="Country Code">Country Code</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6D550AC9A84E41118E1D05014E55A819" trl="N">
+    <value column="Name" isTrl="N" original="Document Status for Order">Document Status for Order</value>
+    <value column="PrintName" isTrl="N" original="Document Status for Order">Document Status for Order</value>
+    <value column="Description" isTrl="N" original="Document status for order transaction">Document status for order transaction</value>
+    <value column="Help" isTrl="N" original="Document Status for order transaction. Order transaction including purchase order, sales order, vendor return, customer return, and quotation.">Document Status for order transaction. Order transaction including purchase order, sales order, vendor return, customer return, and quotation.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7642B6ECDB1640B3AE61F368B895B734" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="PrintName" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="Description" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="Help" isTrl="N" original="Import business partner balance, to enable you register the payment from/lto your business partner after opening balance. You may not enter the detail of invoice, but you define how much and when you need to receive/pay to your business partner. One business partner can have several due date and amount to be received/paid.">Import business partner balance, to enable you register the payment from/lto your business partner after opening balance. You may not enter the detail of invoice, but you define how much and when you need to receive/pay to your business partner. One business partner can have several due date and amount to be received/paid.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="81A3DD51E8C7405E8EFA68E58740F542" trl="N">
+    <value column="Name" isTrl="N" original="Create Default Warehouse">Create Default Warehouse</value>
+    <value column="PrintName" isTrl="N" original="Create Default Warehouse">Create Default Warehouse</value>
+    <value column="Description" isTrl="N" original="Create default warehouse when you run configuration wizard.">Create default warehouse when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Create default warehouse when you run configuration wizard.">Create default warehouse when you run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="850A6FAFE2B84773A20FBC6621ABE137" trl="N">
+    <value column="Name" isTrl="N" original="Initial Opening Balance Date">Initial Opening Balance Date</value>
+    <value column="PrintName" isTrl="N" original="Initial Opening Balance Date">Initial Opening Balance Date</value>
+    <value column="Description" isTrl="N" original="Initial Opening Balance Date, i.e: 01-01-2011">Initial Opening Balance Date, i.e: 01-01-2011</value>
+    <value column="Help" isTrl="N" original="Initial Opening Balance Date, i.e: 01-01-2011.">Initial Opening Balance Date, i.e: 01-01-2011.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="870B075770B1491CBFEF7AC31B8CA681" trl="N">
+    <value column="Name" isTrl="N" original="Bank Account Control Digit">Bank Account Control Digit</value>
+    <value column="PrintName" isTrl="N" original="Bank Account Control Digit">Bank Account Control Digit</value>
+    <value column="Description" isTrl="N" original="Control digit for new created bank account when you run configuration wizard.">Control digit for new created bank account when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Control digit for new created bank account when you run configuration wizard.">Control digit for new created bank account when you run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="87F568E588C3478CB772C52F7AB10855" trl="N">
+    <value column="Name" isTrl="N" original="Show Review">Show Review</value>
+    <value column="PrintName" isTrl="N" original="Show Review">Show Review</value>
+    <value column="Description" isTrl="N" original="Show sales order review report">Show sales order review report</value>
+    <value column="Help" isTrl="N" original="Show sales order review report before approve this order.">Show sales order review report before approve this order.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8981A311C20D4BABA26877A627C1B607" trl="N">
+    <value column="Name" isTrl="N" original="Edicode">Edicode</value>
+    <value column="PrintName" isTrl="N" original="Edicode">Edicode</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="92010B3DDFC94476BE9F0DF172BEA60A" trl="N">
+    <value column="Name" isTrl="N" original="OEZ_I_Inout_ID">OEZ_I_Inout_ID</value>
+    <value column="PrintName" isTrl="N" original="OEZ_I_Inout_ID">OEZ_I_Inout_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="93403D056E3740D09BFA674EBEA7D5AF" trl="N">
+    <value column="Name" isTrl="N" original="Currency ISO Code">Currency ISO Code</value>
+    <value column="PrintName" isTrl="N" original="Currency ISO Code">Currency ISO Code</value>
+    <value column="Description" isTrl="N" original="ISO Code for Currency">ISO Code for Currency</value>
+    <value column="Help" isTrl="N" original="ISO Code for Currency, such as USD for US Dollar.">ISO Code for Currency, such as USD for US Dollar.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="96EBC848496B49E69FB6517253F1DB30" trl="N">
+    <value column="Name" isTrl="N" original="Last Update">Last Update</value>
+    <value column="PrintName" isTrl="N" original="Last Update">Last Update</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A6F5480C97A84E66B2B6524AB6B13D91" trl="N">
+    <value column="Name" isTrl="N" original="Upon Document Routing Executed">Upon Document Routing Executed</value>
+    <value column="PrintName" isTrl="N" original="Upon Document Routing Executed">Upon Document Routing Executed</value>
+    <value column="Description" isTrl="N" original="Determine how Openbravo handle document routing execution.">Determine how Openbravo handle document routing execution.</value>
+    <value column="Help" isTrl="N" original="Document routing enable Openbravo user to create complex approval flow process for certain document. However, this feature requires lot of configuration. If you select &quot;Always use document routing rule&quot;, and you don't configure the document routing rule inside role definition yet, then you can't complete the document. Selecting &quot;Apply standard rule if no document rule defined&quot;, allow openbravo to bring standard document approval rule when you don't have any document routing configuration for selected document.">Document routing enable Openbravo user to create complex approval flow process for certain document. However, this feature requires lot of configuration. If you select "Always use document routing rule", and you don't configure the document routing rule inside role definition yet, then you can't complete the document. Selecting "Apply standard rule if no document rule defined", allow openbravo to bring standard document approval rule when you don't have any document routing configuration for selected document.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="AA145194B9BC4C008EBE50AD0B89C6DD" trl="N">
+    <value column="Name" isTrl="N" original="Create Balance Sheet">Create Balance Sheet</value>
+    <value column="PrintName" isTrl="N" original="Create Balance Sheet">Create Balance Sheet</value>
+    <value column="Description" isTrl="N" original="Create Balance Sheet when you run configuration wizard.">Create Balance Sheet when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="No balance sheet provided by default. By enabling this option, you will get 1 new balance sheet after run configuration wizard.">No balance sheet provided by default. By enabling this option, you will get 1 new balance sheet after run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="AE611B0B47434437B2617778F4A7FA37" trl="N">
+    <value column="Name" isTrl="N" original="Currency for Cashbook">Currency for Cashbook</value>
+    <value column="PrintName" isTrl="N" original="Currency for Cashbook">Currency for Cashbook</value>
+    <value column="Description" isTrl="N" original="Currency for Cashbook">Currency for Cashbook</value>
+    <value column="Help" isTrl="N" original="Currency used for Cashbook creation">Currency used for Cashbook creation</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B54D87805B884B3B90A41A7C4B41135B" trl="N">
+    <value column="Name" isTrl="N" original="Warehouse Search Key">Warehouse Search Key</value>
+    <value column="PrintName" isTrl="N" original="Warehouse Search Key">Warehouse Search Key</value>
+    <value column="Description" isTrl="N" original="Search Key for created warehouse when you run configuration wizard,">Search Key for created warehouse when you run configuration wizard,</value>
+    <value column="Help" isTrl="N" original="Search Key for created warehouse when you run configuration wizard,">Search Key for created warehouse when you run configuration wizard,</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="BADF0252E7B841328AD3D93977ABA05D" trl="N">
+    <value column="Name" isTrl="N" original="Accounting Schema">Accounting Schema</value>
+    <value column="PrintName" isTrl="N" original="Accounting Schema">Accounting Schema</value>
+    <value column="Description" isTrl="N" original="The structure used in accounting including costing methods, currencies, and the calendar.">The structure used in accounting including costing methods, currencies, and the calendar.</value>
+    <value column="Help" isTrl="N" original="An Accounting Schema defines the rules used in accounting such as costing method, currency and calendar">An Accounting Schema defines the rules used in accounting such as costing method, currency and calendar</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C24040E5EC9445879992F2AADC00B915" trl="N">
+    <value column="Name" isTrl="N" original="Storage Bin Search Key">Storage Bin Search Key</value>
+    <value column="PrintName" isTrl="N" original="Storage Bin Search Key">Storage Bin Search Key</value>
+    <value column="Description" isTrl="N" original="Storage Bin Search Key">Storage Bin Search Key</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C2E584CC63FC478DA7253ADE9F39D8DA" trl="N">
+    <value column="Name" isTrl="N" original="Approve">Approve</value>
+    <value column="PrintName" isTrl="N" original="Approve">Approve</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C99CEFCCC5EE414982D0EC5D419B98DF" trl="N">
+    <value column="Name" isTrl="N" original="Income Statement Name">Income Statement Name</value>
+    <value column="PrintName" isTrl="N" original="Income Statement Name">Income Statement Name</value>
+    <value column="Description" isTrl="N" original="Income Statement Name, i.e: Profit and Loss Statement.">Income Statement Name, i.e: Profit and Loss Statement.</value>
+    <value column="Help" isTrl="N" original="No income statement provided by default. When you enable this option, you will get 1 income statement configuration. You can provide name, for example: Profit and Loss Statement.">No income statement provided by default. When you enable this option, you will get 1 income statement configuration. You can provide name, for example: Profit and Loss Statement.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CDAA3E15FF314A0EB4C3B78A00B8CB82" trl="N">
+    <value column="Name" isTrl="N" original="Run Configuration Wizard">Run Configuration Wizard</value>
+    <value column="PrintName" isTrl="N" original="Run Configuration Wizard">Run Configuration Wizard</value>
+    <value column="Description" isTrl="N" original="Run Configuration Wizard">Run Configuration Wizard</value>
+    <value column="Help" isTrl="N" original="Run Configuration Wizard, create all maste data based on supplied information.">Run Configuration Wizard, create all maste data based on supplied information.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D1619CD482C948349BFDEE23D3A1E2FF" trl="N">
+    <value column="Name" isTrl="N" original="Country Code">Country Code</value>
+    <value column="PrintName" isTrl="N" original="Country Code">Country Code</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D19F04C36D3647CBB5DF5FACA5E6BB99" trl="N">
+    <value column="Name" isTrl="N" original="Handler Class Name">Handler Class Name</value>
+    <value column="PrintName" isTrl="N" original="Handler Class Name">Handler Class Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D4F93D9332F84B4FB3EE6EBCE56BDA27" trl="N">
+    <value column="Name" isTrl="N" original="GL Item Name">GL Item Name</value>
+    <value column="PrintName" isTrl="N" original="GL Item Name">GL Item Name</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D9F83C74C2824BE2BFAF469B4D3A3239" trl="N">
+    <value column="Name" isTrl="N" original="OEZ_Stockaging_ID">OEZ_Stockaging_ID</value>
+    <value column="PrintName" isTrl="N" original="OEZ_Stockaging_ID">OEZ_Stockaging_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DCB2FD2E680548FBA119D178BEC43726" trl="N">
+    <value column="Name" isTrl="N" original="Country">Country</value>
+    <value column="PrintName" isTrl="N" original="C_Ship_Country_ID">C_Ship_Country_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DE1059E1BCCB4510876D70A4BD9D5678" trl="N">
+    <value column="Name" isTrl="N" original="Proposed Date">Proposed Date</value>
+    <value column="PrintName" isTrl="N" original="Proposed Date">Proposed Date</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DF97606FA1FB4B08A4D849DDD33E01B1" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="PrintName" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Help" isTrl="N" original="Import Inventory for opening balance">Import Inventory for opening balance</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EB15C3F745FA4F788CC3A34D2C284280" trl="N">
+    <value column="Name" isTrl="N" original="Allow Approve PO when Using Requisition to Order Form">Allow Approve PO when Using Requisition to Order Form</value>
+    <value column="PrintName" isTrl="N" original="Allow Approve PO when Using Requisition to Order Form">Allow Approve PO when Using Requisition to Order Form</value>
+    <value column="Description" isTrl="N" original="If this option checked, then openbravo will create approved PO when user using Requisition to Order form">If this option checked, then openbravo will create approved PO when user using Requisition to Order form</value>
+    <value column="Help" isTrl="N" original="If this option checked, then openbravo will create approved PO when user using Requisition to Order form. Otherwise, PO created in Draft.">If this option checked, then openbravo will create approved PO when user using Requisition to Order form. Otherwise, PO created in Draft.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F018476AC5824BB8B32249B7BE080719" trl="N">
+    <value column="Name" isTrl="N" original="Create Income Statement">Create Income Statement</value>
+    <value column="PrintName" isTrl="N" original="Create Income Statement">Create Income Statement</value>
+    <value column="Description" isTrl="N" original="Create Income Statement when you run configuration wizard.">Create Income Statement when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="No income statement provided by default. When you enable this option, you will get 1 income statement configuration. You can provide name, for example: Profit and Loss Statement.">No income statement provided by default. When you enable this option, you will get 1 income statement configuration. You can provide name, for example: Profit and Loss Statement.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F08ECA3DFC8D4E609FF95099DC63DF7E" trl="N">
+    <value column="Name" isTrl="N" original="Address2">Address2</value>
+    <value column="PrintName" isTrl="N" original="Ship_Address2">Ship_Address2</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F0BB760254ED4128BC91E3D319D55E5E" trl="N">
+    <value column="Name" isTrl="N" original="Set Organization Ready">Set Organization Ready</value>
+    <value column="PrintName" isTrl="N" original="Set Organization Ready">Set Organization Ready</value>
+    <value column="Description" isTrl="N" original="Set Organization Ready when you run configuration wizard.">Set Organization Ready when you run configuration wizard.</value>
+    <value column="Help" isTrl="N" original="Set Organization Ready when you run configuration wizard.">Set Organization Ready when you run configuration wizard.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F8CC19C5486149C384B541D679111DA2" trl="N">
+    <value column="Name" isTrl="N" original="Accounting Schema for Balance Sheet">Accounting Schema for Balance Sheet</value>
+    <value column="PrintName" isTrl="N" original="Accounting Schema for Balance Sheet">Accounting Schema for Balance Sheet</value>
+    <value column="Description" isTrl="N" original="Accounting Schema for Balance Sheet">Accounting Schema for Balance Sheet</value>
+    <value column="Help" isTrl="N" original="Accounting Schema for Balance Sheet creation.">Accounting Schema for Balance Sheet creation.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FD604A989B09426A909A04DB9632801E" trl="N">
+    <value column="Name" isTrl="N" original="Accounting Schema for Income Statement">Accounting Schema for Income Statement</value>
+    <value column="PrintName" isTrl="N" original="Accounting Schema for Income Statement">Accounting Schema for Income Statement</value>
+    <value column="Description" isTrl="N" original="Accounting Schema for Income Statement">Accounting Schema for Income Statement</value>
+    <value column="Help" isTrl="N" original="Accounting Schema for Income Statement creation.">Accounting Schema for Income Statement creation.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

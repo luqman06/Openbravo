@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FIELD" version="">
+  <row id="2538F9F602FB49FBA1BCB414A64F1AC0" trl="N">
+    <value column="Name" isTrl="N" original="G/L Account">G/L Account</value>
+    <value column="Description" isTrl="N" original="The identification code used for accounting.">The identification code used for accounting.</value>
+    <value column="Help" isTrl="N" original="The (natural) account used">The (natural) account used</value>
+  </row>
+  <row id="C30C8DF24EA143D7BD558C399ED40551" trl="N">
+    <value column="Name" isTrl="N" original="G/L Account">G/L Account</value>
+    <value column="Description" isTrl="N" original="The identification code used for accounting.">The identification code used for accounting.</value>
+    <value column="Help" isTrl="N" original="The (natural) account used">The (natural) account used</value>
+  </row>
+</compiereTrl>

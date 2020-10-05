@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION HRIS_C_BP_KPI">
+    <function name="HRIS_C_BP_KPI" type="VARCHAR">
+      <body><![CDATA[v_count integer:=0;
+BEGIN
+
+  IF AD_isTriggerEnabled()='N' THEN 
+	IF TG_OP = 'DELETE' THEN RETURN OLD;
+	ELSE RETURN NEW;
+	END IF; 
+   END IF;
+
+	select count(*) into v_count from hris_c_bp_kpi	
+	where hris_c_bp_kpiversion_id = new.hris_c_bp_kpiversion
+	and hris_c_bp_kpiversion<>new.hris_c_bp_kpiversion;
+		
+	if v_count=0 then
+	
+	   update hris_c_bp_kpiversion set em_hris_description = new.description,
+	     em_hris_comments = new.comments,
+	     em_hris_target = new.target,
+	     em_hris_actual = new.actual
+           where hris_c_bp_kpiversion_id = new.hris_c_bp_kpiversion;
+           
+	end if;
+	
+  IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;
+END HRIS_C_BP_KPI
+]]></body>
+    </function>
+  </database>

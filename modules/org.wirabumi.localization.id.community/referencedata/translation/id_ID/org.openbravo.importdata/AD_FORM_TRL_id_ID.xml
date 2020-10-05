@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_FORM" version="">
+  <row id="101" trl="N">
+    <value column="Name" isTrl="N" original="Import File Loader">Import File Loader</value>
+    <value column="Description" isTrl="N" original="Import .csv data files into temporary tables according to the parameters and selected format.">Import .csv data files into temporary tables according to the parameters and selected format.</value>
+    <value column="Help" isTrl="N" original="The Import File Loader parses the content of a flat file and loads it into import tables. Comments start with a '[' and end with a ']' and are ignored; example: [Some Heading].">The Import File Loader parses the content of a flat file and loads it into import tables. Comments start with a '[' and end with a ']' and are ignored; example: [Some Heading].</value>
+  </row>
+  <row id="800012" trl="N">
+    <value column="Name" isTrl="N" original="Import EDI File">Import EDI File</value>
+    <value column="Description" isTrl="N" original="Import an EDI (Electronic Data Interchange) file.">Import an EDI (Electronic Data Interchange) file.</value>
+    <value column="Help" isTrl="N" original="Imports EDI data from file.">Imports EDI data from file.</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_TEXTINTERFACES" version="">
+  <row id="04A541DAF8CD4DF8BB12311D94217B3B" trl="N">
+    <value column="Text" isTrl="N" original="III ALASAN PHK &amp; LANDASAN HUKUM">III ALASAN PHK &amp; LANDASAN HUKUM</value>
+  </row>
+  <row id="0A83F65AE92242588091A25D5E3F65C3" trl="N">
+    <value column="Text" isTrl="N" original="Memberhentikan sebagai Pegawai Perum BULOG terhitung mulai tanggal">Memberhentikan sebagai Pegawai Perum BULOG terhitung mulai tanggal</value>
+  </row>
+  <row id="0DFDB4D8B933494B81F0146F5F50211C" trl="N">
+    <value column="Text" isTrl="N" original="No">No</value>
+  </row>
+  <row id="0E691F0B58C64407BF6447E705CB391C" trl="N">
+    <value column="Text" isTrl="N" original="Gaji Pokok Terahir">Gaji Pokok Terahir</value>
+  </row>
+  <row id="0F84B5055D5B4047AD315561F24DC4CD" trl="N">
+    <value column="Text" isTrl="N" original="Dept.">Dept.</value>
+  </row>
+  <row id="0FA25C459DCB470FB3D2ED3FED695C16" trl="N">
+    <value column="Text" isTrl="N" original="Upah penghargaan masa kerja">Upah penghargaan masa kerja</value>
+  </row>
+  <row id="0FB861F353A349BC971D85EFB86F49D5" trl="N">
+    <value column="Text" isTrl="N" original="Sesuai dengan asli">Sesuai dengan asli</value>
+  </row>
+  <row id="117B5BA4BC894C1CA91881344125B198" trl="N">
+    <value column="Text" isTrl="N" original="Uraian">Uraian</value>
+  </row>
+  <row id="11A4243DB7824EE18C0CE27584DEB2CC" trl="N">
+    <value column="Text" isTrl="N" original="Menimbang :">Menimbang :</value>
+  </row>
+  <row id="11CE55F73A424E91A7B47704740140E3" trl="N">
+    <value column="Text" isTrl="N" original="Kode">Kode</value>
+  </row>
+  <row id="1314C64C35F5464FB9CAAAC8DE772602" trl="N">
+    <value column="Text" isTrl="N" original="(1) Pengusaha dapat melakukan pemutusan hubungan kerja terhadap pekerja/buruh karena memasuki usia pensiun dan apabila pengusaha telah mengikutkan pekerja/buruh pada program pensiun yang iurannya dibayar penuh oleh pengusaha, maka pekerja/buruh tidak berhak mendapatkan uang pesangon sesuai ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3), tetapi tetap berhak atas uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).">(1) Pengusaha dapat melakukan pemutusan hubungan kerja terhadap pekerja/buruh karena memasuki usia pensiun dan apabila pengusaha telah mengikutkan pekerja/buruh pada program pensiun yang iurannya dibayar penuh oleh pengusaha, maka pekerja/buruh tidak berhak mendapatkan uang pesangon sesuai ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3), tetapi tetap berhak atas uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).</value>
+  </row>
+  <row id="15E4F83AC72C439EA9060E3F09BF0EE4" trl="N">
+    <value column="Text" isTrl="N" original="PETIKAN -">PETIKAN -</value>
+  </row>
+  <row id="18CF81B295FF4C0699ECCFA0583ADA8B" trl="N">
+    <value column="Text" isTrl="N" original="1. Kepala Cabang PT. Taspen (Persero) setempat.">1. Kepala Cabang PT. Taspen (Persero) setempat.</value>
+  </row>
+  <row id="19D003CD79E8421DA861167763F0E2DE" trl="N">
+    <value column="Text" isTrl="N" original="Dasar aturan">Dasar aturan</value>
+  </row>
+  <row id="1FA744A25F514BD38727D86701DF45AF" trl="N">
+    <value column="Text" isTrl="N" original="Perusahaan Umum BULOG">Perusahaan Umum BULOG</value>
+  </row>
+  <row id="27234EEFB25D4222B316A5A3FA954120" trl="N">
+    <value column="Text" isTrl="N" original="upah">upah</value>
+  </row>
+  <row id="278F9F7449C14F0F92381E540E8BC8EB" trl="N">
+    <value column="Text" isTrl="N" original="Masa kerja untuk Pesangon">Masa kerja untuk Pesangon</value>
+  </row>
+  <row id="297C0BAEA4354BDF8067CEF9613227BD" trl="N">
+    <value column="Text" isTrl="N" original="Kelipatan berdasar alasan PHK">Kelipatan berdasar alasan PHK</value>
+  </row>
+  <row id="2F4666CC2B904C20AB3E21CFE35B535F" trl="N">
+    <value column="Text" isTrl="N" original="dst - nya;">dst - nya;</value>
+  </row>
+  <row id="2F73EA28097C4B669FCF66A3C2F2AFEB" trl="N">
+    <value column="Text" isTrl="N" original="Menyetujui,">Menyetujui,</value>
+  </row>
+  <row id="36E775062BD544079FC28099A0BF7886" trl="N">
+    <value column="Text" isTrl="N" original="Direktur Utama">Direktur Utama</value>
+  </row>
+  <row id="3B14B92727CD48F79597AF1BBF217475" trl="N">
+    <value column="Text" isTrl="N" original="3. Kepala Divisi Regional yang bersangkuatan.">3. Kepala Divisi Regional yang bersangkuatan.</value>
+  </row>
+  <row id="3B4BE206D6E94E92B4ED91E4F7D24389" trl="N">
+    <value column="Text" isTrl="N" original="NIP/Noreg">NIP/Noreg</value>
+  </row>
+  <row id="419C664419DA41098A18C18413B9AAAD" trl="N">
+    <value column="Text" isTrl="N" original="Total Pesangon yang diterima">Total Pesangon yang diterima</value>
+  </row>
+  <row id="41CCB8B3FBED4F35A53E294B2FF5C30D" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal di PHK">Tanggal di PHK</value>
+  </row>
+  <row id="468C2D5F57444D33A5ED65AB20579728" trl="N">
+    <value column="Text" isTrl="N" original="Hubungan Keluarga">Hubungan Keluarga</value>
+  </row>
+  <row id="533B10C6B21E4BAE96F9865FA0CCB5E0" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan Terakhir">Jabatan Terakhir</value>
+  </row>
+  <row id="561D5E6DB0BF49098CC2E4D4E4363B3E" trl="N">
+    <value column="Text" isTrl="N" original="PETIKAN">PETIKAN</value>
+  </row>
+  <row id="592F93497FC84A578B40E5A211B81113" trl="N">
+    <value column="Text" isTrl="N" original="SALINAN -">SALINAN -</value>
+  </row>
+  <row id="5964535B314C45C0A512901EF1B22304" trl="N">
+    <value column="Text" isTrl="N" original="Nomor :">Nomor :</value>
+  </row>
+  <row id="5D1B56525749400788D2E762F8EED0FF" trl="N">
+    <value column="Text" isTrl="N" original="Direktur Utama">Direktur Utama</value>
+  </row>
+  <row id="5D668AD3B1FA443D9D36D0693A6CBDAC" trl="N">
+    <value column="Text" isTrl="N" original="ini akan diadakan perubahan dan perbaikan sebagaimana mestinya.">ini akan diadakan perubahan dan perbaikan sebagaimana mestinya.</value>
+  </row>
+  <row id="5EC3EF9F367046249E800C9CDBB73557" trl="N">
+    <value column="Text" isTrl="N" original="Keputusan Direksi Perum Bulog ini disampaikan kepada Yth :">Keputusan Direksi Perum Bulog ini disampaikan kepada Yth :</value>
+  </row>
+  <row id="60FB1DF458394A2384D3DD07AC562D09" trl="N">
+    <value column="Text" isTrl="N" original="(5) Dalam hal pengusaha tidak mengikutsertakan pekerja/buruh yang mengalami pemutusan hubungan kerja karena usia pensiun pada program pensiun maka pengusaha wajib memberikan kepada pekerja/buruh uang pesangon sebesar 2 (dua) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).">(5) Dalam hal pengusaha tidak mengikutsertakan pekerja/buruh yang mengalami pemutusan hubungan kerja karena usia pensiun pada program pensiun maka pengusaha wajib memberikan kepada pekerja/buruh uang pesangon sebesar 2 (dua) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).</value>
+  </row>
+  <row id="616178900671495790C341926D2FAF3C" trl="N">
+    <value column="Text" isTrl="N" original="DAFTAR RINCIAN HAK KARYAWAN AKIBAT PHK (PESANGON)">DAFTAR RINCIAN HAK KARYAWAN AKIBAT PHK (PESANGON)</value>
+  </row>
+  <row id="61EFEFA4AC2A4EFBBC5218284C210A53" trl="N">
+    <value column="Text" isTrl="N" original="Hak">Hak</value>
+  </row>
+  <row id="651FBB971E08443A9D9B2F259CEEB960" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Awal Kerja">Tanggal Awal Kerja</value>
+  </row>
+  <row id="65BAC392BF584F05BEA4EA71D1C81C77" trl="N">
+    <value column="Text" isTrl="N" original="IV HAK KARYAWAN YANG TIMBUL AKIBAT PHK">IV HAK KARYAWAN YANG TIMBUL AKIBAT PHK</value>
+  </row>
+  <row id="694298C69CF84D9786B6D70799B4E19C" trl="N">
+    <value column="Text" isTrl="N" original="KEDUA :">KEDUA :</value>
+  </row>
+  <row id="6A085192968247A89105A8BE527BED24" trl="N">
+    <value column="Text" isTrl="N" original="Keputusan Direksi Perum Bulog ini disampaikan kepada ahli waris untuk">Keputusan Direksi Perum Bulog ini disampaikan kepada ahli waris untuk</value>
+  </row>
+  <row id="6A83EB8B4D604D5985CCD8B515DD3F2E" trl="N">
+    <value column="Text" isTrl="N" original="Dan meninggalkan keluarga sebagai ahli waris antara lain :">Dan meninggalkan keluarga sebagai ahli waris antara lain :</value>
+  </row>
+  <row id="6B988D9D287F409C8C44B02B38154D0A" trl="N">
+    <value column="Text" isTrl="N" original="Upah (Gaji + Tunjangan Tetap)">Upah (Gaji + Tunjangan Tetap)</value>
+  </row>
+  <row id="6CA0BED38D4346778E92EDF156E24BC9" trl="N">
+    <value column="Text" isTrl="N" original="Direksi,">Direksi,</value>
+  </row>
+  <row id="727A2E436653488A94D6BC341E9F96F1" trl="N">
+    <value column="Text" isTrl="N" original="Perhitungan sesuai masa kerja">Perhitungan sesuai masa kerja</value>
+  </row>
+  <row id="730AC1B82A9C45C98C2A58D13BF0D9F8" trl="N">
+    <value column="Text" isTrl="N" original="Pasal 167 (1,5)">Pasal 167 (1,5)</value>
+  </row>
+  <row id="757F4ECE7ACB442B9907ACE18E82BDA1" trl="N">
+    <value column="Text" isTrl="N" original="Dibuat Oleh,">Dibuat Oleh,</value>
+  </row>
+  <row id="76195E0015134C1CB5E8FB892AD02174" trl="N">
+    <value column="Text" isTrl="N" original="II KLASIFIKASI MASA KERJA">II KLASIFIKASI MASA KERJA</value>
+  </row>
+  <row id="793B57C43B6B4D0A9524911702799FAF" trl="N">
+    <value column="Text" isTrl="N" original="KEPUTUSAN DIREKSI PERUSAHAAN UMUM BULOG">KEPUTUSAN DIREKSI PERUSAHAAN UMUM BULOG</value>
+  </row>
+  <row id="7ADAD3F4AA584843A46FB3465ABA93A0" trl="N">
+    <value column="Text" isTrl="N" original="Jabatan">Jabatan</value>
+  </row>
+  <row id="7B7A938DAF384B3180A28EE58B942D34" trl="N">
+    <value column="Text" isTrl="N" original="dasar aturan PHK yaitu UU No 13/2003 ttg. Ketenagakerjaan">dasar aturan PHK yaitu UU No 13/2003 ttg. Ketenagakerjaan</value>
+  </row>
+  <row id="7BD1F25C547E476E9E65D72C07AA6FBC" trl="N">
+    <value column="Text" isTrl="N" original="Mengetahui,">Mengetahui,</value>
+  </row>
+  <row id="7D19D4655A4E4CDFB0C763867AED0D71" trl="N">
+    <value column="Text" isTrl="N" original="Pada tanggal :">Pada tanggal :</value>
+  </row>
+  <row id="7F9BC961994C433C8AC898063204A4FE" trl="N">
+    <value column="Text" isTrl="N" original="Direktur">Direktur</value>
+  </row>
+  <row id="806A5FD29DF74687859B42D036D60EE9" trl="N">
+    <value column="Text" isTrl="N" original="Ditetapkan di :">Ditetapkan di :</value>
+  </row>
+  <row id="8136673724964AAB82A87548BA29BE77" trl="N">
+    <value column="Text" isTrl="N" original="PERTAMA :">PERTAMA :</value>
+  </row>
+  <row id="8F44A36053FD490A901F392BF063A8C7" trl="N">
+    <value column="Text" isTrl="N" original="karena meninggal dunia kepada :">karena meninggal dunia kepada :</value>
+  </row>
+  <row id="91CFB409DD16409CA728D554400E6CD5" trl="N">
+    <value column="Text" isTrl="N" original="Klasifikasi">Klasifikasi</value>
+  </row>
+  <row id="994257EB9B8F48C39A7164647BEA0124" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="9CF9F6E613684A5581519F702C1F1DA9" trl="N">
+    <value column="Text" isTrl="N" original="Dasar Perhitungan">Dasar Perhitungan</value>
+  </row>
+  <row id="9DB4D9004F7C420FAEAA40E9E50D40D4" trl="N">
+    <value column="Text" isTrl="N" original="Tunjangan Terakhir">Tunjangan Terakhir</value>
+  </row>
+  <row id="9E2FC12BCE944731808BB0928016A8B0" trl="N">
+    <value column="Text" isTrl="N" original="Upah">Upah</value>
+  </row>
+  <row id="A8EC2ECDD8B14415A1F08013CE4381CF" trl="N">
+    <value column="Text" isTrl="N" original="Uraian">Uraian</value>
+  </row>
+  <row id="ABF2A28F4A064946A7C9A5267326BA27" trl="N">
+    <value column="Text" isTrl="N" original="Tgl. Lahir">Tgl. Lahir</value>
+  </row>
+  <row id="AC6C51DE75704A3A9AE0D94AD66B5E84" trl="N">
+    <value column="Text" isTrl="N" original="M E M U T U S K A N :">M E M U T U S K A N :</value>
+  </row>
+  <row id="B513C471EF7F4EE28B638AC3F41A4602" trl="N">
+    <value column="Text" isTrl="N" original="dipergunakan sebagaimana mestinya.">dipergunakan sebagaimana mestinya.</value>
+  </row>
+  <row id="B7D083708888457FBCC458C004732DD9" trl="N">
+    <value column="Text" isTrl="N" original="Tempat Diterima Kerja">Tempat Diterima Kerja</value>
+  </row>
+  <row id="C991E6872D2C43A0BC4C4378F1A28317" trl="N">
+    <value column="Text" isTrl="N" original="I DATA KARYAWAN">I DATA KARYAWAN</value>
+  </row>
+  <row id="CF66454177404DDFBA204E612517D6AB" trl="N">
+    <value column="Text" isTrl="N" original="Total Diterima">Total Diterima</value>
+  </row>
+  <row id="D65ADC0FC4604678B365FE2C12F06D92" trl="N">
+    <value column="Text" isTrl="N" original="Menetapkan :">Menetapkan :</value>
+  </row>
+  <row id="D78D14D210834807AF1E35C0714F2FBF" trl="N">
+    <value column="Text" isTrl="N" original="Nama">Nama</value>
+  </row>
+  <row id="DA09CFCB40C64351A1A659CE973B015C" trl="N">
+    <value column="Text" isTrl="N" original="Keterangan">Keterangan</value>
+  </row>
+  <row id="DDFEF7BFD24C4D4BB48421C640C6B1F5" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Lahir">Tanggal Lahir</value>
+  </row>
+  <row id="DED6371BB13B46969813F444294CDCAA" trl="N">
+    <value column="Text" isTrl="N" original="Head Of HC Div">Head Of HC Div</value>
+  </row>
+  <row id="DEFDA6AAF65E433F9FF1FC087D040F7E" trl="N">
+    <value column="Text" isTrl="N" original="2. Divisi SDM Perum Bulog.">2. Divisi SDM Perum Bulog.</value>
+  </row>
+  <row id="E187DF07FBA741BE871199226F1DB755" trl="N">
+    <value column="Text" isTrl="N" original="Tanggal Meninggal">Tanggal Meninggal</value>
+  </row>
+  <row id="E266665E200D43DFB72E0FA0E8B8EC3F" trl="N">
+    <value column="Text" isTrl="N" original="DIREKSI PERUSAHAAN UMUM BULOG">DIREKSI PERUSAHAAN UMUM BULOG</value>
+  </row>
+  <row id="E8A89739E4F446D8B3BA7258D7E04263" trl="N">
+    <value column="Text" isTrl="N" original="Kadiv SDM">Kadiv SDM</value>
+  </row>
+  <row id="F27FB1CC4FDE43A6AA02E92D9A0FFB43" trl="N">
+    <value column="Text" isTrl="N" original="Gaji Pokok Terakhir">Gaji Pokok Terakhir</value>
+  </row>
+  <row id="FA9780731EDB4C7EB889AB51A9D53B01" trl="N">
+    <value column="Text" isTrl="N" original="Apabila dikemudian hari ternyata terdapat kesalahan dan atau kekeliruan dalam keputusan">Apabila dikemudian hari ternyata terdapat kesalahan dan atau kekeliruan dalam keputusan</value>
+  </row>
+  <row id="FE5FDA00B98B4C6B97DF12A2FE548CAD" trl="N">
+    <value column="Text" isTrl="N" original="Bersama Mewujudkan Kedaulatan Pangan">Bersama Mewujudkan Kedaulatan Pangan</value>
+  </row>
+</compiereTrl>

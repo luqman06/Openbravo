@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OEZ_PRODUCT_TGR">
+    <trigger name="OEZ_PRODUCT_TGR" table="M_PRODUCT" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+ 
+ DECLARE
+    v_parentgroup_id varchar(32);
+ 
+ BEGIN
+ 
+   IF AD_isTriggerEnabled()='N' THEN RETURN;
+   END IF;
+ 
+   select (case when d.parent_id='0' then d.node_id else d.parent_id end) into v_parentgroup_id
+	from m_product_category a
+	inner join ad_clientinfo b on b.ad_client_id=a.ad_client_id
+	inner join ad_tree c on c.ad_tree_id=b.ad_tree_product_category_id
+	inner join ad_treenode d on d.ad_tree_id=c.ad_tree_id and d.node_id=a.m_product_category_id
+	where a.m_product_category_id=:new.m_product_category_id;
+
+	:new.em_oez_parentgroup_id=v_parentgroup_id;
+ 
+     END OEZ_PRODUCT_TGR
+]]></body>
+    </trigger>
+  </database>

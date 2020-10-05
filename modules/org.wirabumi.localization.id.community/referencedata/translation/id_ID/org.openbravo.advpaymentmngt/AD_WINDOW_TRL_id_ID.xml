@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="4A35B1C57B4243F4A1E42D882C8DDA3D" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt">Doubtful Debt</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="681E982F747A48A6AF328A236A067559" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt Run">Doubtful Debt Run</value>
+    <value column="Description" isTrl="N" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect.</value>
+    <value column="Help" isTrl="N" original="The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.">The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.</value>
+  </row>
+  <row id="6EFB8443A1C64F3D926CE42A0E40631C" trl="N">
+    <value column="Name" isTrl="N" original="Purchase Invoice Payment Plan">Purchase Invoice Payment Plan</value>
+    <value column="Description" isTrl="N" original="Displays all Invoice Payment Plans for purchase transactions which are not fully paid">Displays all Invoice Payment Plans for purchase transactions which are not fully paid</value>
+    <value column="Help" isTrl="N" original="The purchase invoice payment plan window displays all the purchase invoice payment plans which are not fully paid. ">The purchase invoice payment plan window displays all the purchase invoice payment plans which are not fully paid. </value>
+  </row>
+  <row id="C57DED2495184380AFBAAA3CA720C3DA" trl="N">
+    <value column="Name" isTrl="N" original="Modify Payment In Plan">Modify Payment In Plan</value>
+    <value column="Description" isTrl="N" original="Modify Payment Plan">Modify Payment Plan</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C5D0C6D541254921B9848A9A1362EE68" trl="N">
+    <value column="Name" isTrl="N" original="Payment Proposal Pick and Edit Lines">Payment Proposal Pick and Edit Lines</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D636C2D5C8B94735A2C532267C4E68B0" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debts Pick and Edit">Doubtful Debts Pick and Edit</value>
+    <value column="Description" isTrl="N" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect.</value>
+    <value column="Help" isTrl="N" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.</value>
+  </row>
+  <row id="EB6621E5513F41449E77D68C58C3C409" trl="N">
+    <value column="Name" isTrl="N" original="Doubtful Debt Method">Doubtful Debt Method</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EDBED920F400435DA5E7CB625301DCBE" trl="N">
+    <value column="Name" isTrl="N" original="Modify Payment Out Plan">Modify Payment Out Plan</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FC6A51DF5F32451987C0C84D7B338B94" trl="N">
+    <value column="Name" isTrl="N" original="Sales Invoice Payment Plan">Sales Invoice Payment Plan</value>
+    <value column="Description" isTrl="N" original="Displays all Invoice Payment Plans for sales transactions which are not fully paid">Displays all Invoice Payment Plans for sales transactions which are not fully paid</value>
+    <value column="Help" isTrl="N" original="The sales invoice payment plan window displays all the sales invoice payment plans which are not fully paid. ">The sales invoice payment plan window displays all the sales invoice payment plans which are not fully paid. </value>
+  </row>
+</compiereTrl>

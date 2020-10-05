@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" pageWidth="595" pageHeight="842" columnWidth="553" leftMargin="21" rightMargin="21" topMargin="21" bottomMargin="0" uuid="09f8ac3d-89f4-4868-9bab-dc3ab66fbfd9">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.1586575189467514"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="298"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new String("A249840784F940A185AE9FFE0B457137")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select DISTINCT
+	i.ad_org_id,
+	i.documentno,
+	i.docstatus as status,
+	i.description as remark,
+iol.description as minoutdes,
+l.city,
+io.em_oez_depature,
+
+case when i.c_doctype_id='0' then 'Jl. Raya Waru No.30 A, Waru, Sidoarjo 61256, Jawa Timur, Indonesia' else '' end as orgaddres,
+
+
+p.weight,
+p.em_oez_gross_weight,
+p.weight * il.qtyinvoiced as netweight,
+p.em_oez_gross_weight * il.qtyinvoiced as groswight,
+
+--io.em_oez_container_no as containerno,
+--io.em_oez_seal_no as sealno,
+
+k.loading_port_etd,
+k.dest_port_eta,
+k.dest_port_city,
+k.loading_port_city,
+k.Voyage_Number,
+k.Vessel_Name,
+
+
+io.MovementDate as depature,
+io.em_oez_sealno,
+io.em_oez_containerno,
+io.em_oez_vessel_name,
+io.em_oez_voyage_number,
+io.em_oez_dest_port,
+io.EM_Oez_Letterofcredit_date,
+io.em_oez_letterofcredit_number,
+io.EM_Oez_Port_Of_Loading,
+EM_Oez_Port_Of_Discharge,
+iol.description as linedes,
+pc.description as productcategorydes,
+ol.aumqty,
+i.EM_Oez_Invoice_Notes,
+p.em_oez_packaging_size,
+CASE WHEN p.em_oez_packaging_size ='em_oez_size1' then '1 kg x 10'
+when p.em_oez_packaging_size = 'em_oez_size2' then '900 gr x 2 x 6'
+when p.em_oez_packaging_size = 'em_oez_size3' then '450 gr'
+when p.em_oez_packaging_size = 'em_oez_size4' then '1,8 kg x 6'
+when p.em_oez_packaging_size = 'em_oez_size5' then '10p x 2'
+when p.em_oez_packaging_size = 'em_oez_size6' then '1,6 kg x 6'
+when p.em_oez_packaging_size = 'em_oez_size7' then '1,8 kg x 10'
+
+else '' end as packagingsize,
+
+p.weight*il.QtyInvoiced as totalaumqty,
+
+CASE WHEN il.C_aum ='72BA247D31F745F3AF11F74A5E2CCBEF' then 'KG'
+when il.C_aum = 'E26A062373F54C539E68D1DB76F301B6' then 'TY'
+when il.C_aum ='4028E6C72959682B01295ADC1A380221' then 'BA'
+when il.C_aum = '52DFFEBF92F343AFBAE745EE30421AA1' then 'PH'
+else '' end as AUMCODE,
+il.aumqty,
+
+z.name as incotermname,
+
+p.em_oez_packaging,
+CASE WHEN p.em_oez_packaging ='em_oez_vacuum_pack' then 'Vacuum Pack'
+when p.em_oez_packaging = 'em_oez_pollybag' then 'Polybag'
+when p.em_oez_packaging = 'em_oez_tray' then 'Tray'
+else '' end as packaging,
+
+
+p.em_oez_frozen_type,
+CASE WHEN p.em_oez_frozen_type ='em_oez_semi_iqf' then 'Semi IQF'
+when p.em_oez_frozen_type = 'em_oez_iqf' then 'IQF'
+when p.em_oez_frozen_type = 'em_oez_block_frozen' then 'Block Frozen'
+when p.em_oez_frozen_type = 'em_oez_semi_block' then 'Semi Block'
+else '' end as frozentype,
+
+p.em_oez_raw_type,
+CASE WHEN p.em_oez_raw_type ='em_oez_vanamei' then 'Vannamei'
+
+else '' end as rawtype,
+
+p.em_oez_type_of_goods,
+
+CASE WHEN p.em_oez_type_of_goods ='em_oez_raw' then 'RAW'
+when p.em_oez_type_of_goods = 'em_oez_cooked' then 'Cooked'
+when p.em_oez_type_of_goods = 'em_oez_cooked_natural' then 'Cooked Natural'
+when p.em_oez_type_of_goods = 'em_oez_cooked_natural' then 'Cooked Natural'
+when p.em_oez_type_of_goods = 'em_oez_Cooked_treated' then 'Cooked Treated'
+when p.em_oez_type_of_goods = 'em_oez_raw_natural' then 'Raw Natural'
+when p.em_oez_type_of_goods = 'em_oez_raw_treated' then 'Raw Treated'
+
+else '' end as typeofgoods,
+
+
+ol.em_oez_aum_priceactual,
+
+p.name2,
+	bp.name as customer,
+	l.address1||coalesce(' '||l.address2,'') as address1,
+	coalesce(l.city,'')||coalesce(' '||l.postal,'')||coalesce(' '||r.name,'')||coalesce(' '||c.name,'') as address2,
+	coalesce('Tel. '||bpl.phone,'')||coalesce(' Fax. '||bpl.fax,'') as phonefax,
+	u.name as customer_contact,
+	io.em_oez_codocumentno,
+	ad_org.name,
+	ad_orginfo.taxid as tax,
+	org_loc.ADDRESS1 AS ORG_ADDRESS1,
+	org_loc.ADDRESS2 AS ORG_ADDRESS2,
+	org_loc.POSTAL AS ORG_POSTAL,
+	org_loc.C_COUNTRY_ID AS COUNTRY_ID,
+	i.dateinvoiced as invoice_date,
+	cr.iso_code as currency_code,
+	pt.name as payment_term,
+	pt.description as payment_term_description,
+	il.line as invoice_line,
+	p.name as product,
+	p.value as partcode,
+	um.x12de355 as uom,
+	mb.name as brand,
+	ba.bank_name,
+	ba.accountno,
+	um.name as uom_name,
+	il.qtyinvoiced as invoice_qty,
+CASE WHEN i.docstatus = 'CO' THEN 'gunttdnew.png' ELSE 'blank.png' end as ttd,
+CASE WHEN i.docstatus = 'CO' THEN 'istana.png' ELSE 'blank.png' end as ttd2,
+
+
+	ol.pricelist as orderpricelist,
+	il.priceactual as unit_price,
+	il.linenetamt as line_net_amount,
+	coalesce(p.description, '') || coalesce(il.description, '') as product_description,
+	(select min (duedate) from FIN_Payment_Schedule where c_invoice_id=i.c_invoice_id) as invoice_line_due_date,
+	coalesce(io.documentno,'') as shipment_no,
+	io.movementdate::date as delivery_date,
+	coalesce(o.poreference,'') as order_reference,
+	i.totallines as total_invoice_amount
+from c_invoice i
+left join c_invoiceline il on i.c_invoice_id=il.c_invoice_id
+left join ad_org on ad_org.ad_org_id=i.ad_org_id
+left join ad_orginfo on AD_ORGINFO.ad_org_id=i.ad_org_id
+
+
+--left join c_location org_loc on ad_orginfo.c_location_id=org_loc.c_location_id
+left join c_location on c_location.ad_org_id=i.ad_org_id
+left join c_bpartner bp on i.c_bpartner_id = bp.c_bpartner_id
+left join c_bpartner_location bpl on i.c_bpartner_location_id = bpl.c_bpartner_location_id
+left join c_location l on bpl.c_location_id = l.c_location_id
+
+left join C_LOCATION org_loc on AD_ORGINFO.C_LOCATION_ID =org_loc.C_LOCATION_ID
+
+left join c_region r on l.c_region_id = r.c_region_id
+left join c_country c on l.c_country_id = c.c_country_id
+left join ad_user u on u.ad_user_id=i.ad_user_id
+left join c_currency cr on i.c_currency_id = cr.c_currency_id
+left join c_paymentterm pt on i.c_paymentterm_id = pt.c_paymentterm_id
+left join m_inoutline iol on il.m_inoutline_id = iol.m_inoutline_id
+left join m_inout io on io.m_inout_id= iol.m_inout_id
+left join c_orderline ol on ol.c_orderline_id=il.c_orderline_id
+left join c_order o on o.c_order_id=ol.c_order_id
+left join c_incoterms z on z.c_incoterms_id=o.c_incoterms_id
+left join m_product p on il.m_product_id = p.m_product_id
+left join c_uom um on il.c_uom_id = um.c_uom_id
+left join C_BP_BankAccount ba on bp.c_bpartner_id=ba.c_bpartner_id
+left join m_brand mb on mb.m_brand_id=p.m_brand_id
+left join m_product_category pc on p.m_product_category_id=pc.m_product_category_id
+left join oez_shipmentdata k on k.m_inout_id=io.m_inout_id
+
+where i.c_invoice_id=$P{DOCUMENT_ID}
+
+
+--Sample Invoice General product = "55F4807A53BF489A9F0FD612BDB2967E"
+--sample Invoice status DRAFT = "388E524BA7284EB888C6A11E2A95BA0F"
+order by il.line asc]]>
+	</queryString>
+	<field name="ad_org_id" class="java.lang.String"/>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="remark" class="java.lang.String"/>
+	<field name="minoutdes" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="em_oez_depature" class="java.sql.Timestamp"/>
+	<field name="orgaddres" class="java.lang.String"/>
+	<field name="weight" class="java.math.BigDecimal"/>
+	<field name="em_oez_gross_weight" class="java.math.BigDecimal"/>
+	<field name="netweight" class="java.math.BigDecimal"/>
+	<field name="groswight" class="java.math.BigDecimal"/>
+	<field name="loading_port_etd" class="java.sql.Timestamp"/>
+	<field name="dest_port_eta" class="java.sql.Timestamp"/>
+	<field name="dest_port_city" class="java.lang.String"/>
+	<field name="loading_port_city" class="java.lang.String"/>
+	<field name="voyage_number" class="java.lang.String"/>
+	<field name="vessel_name" class="java.lang.String"/>
+	<field name="depature" class="java.sql.Timestamp"/>
+	<field name="em_oez_sealno" class="java.lang.String"/>
+	<field name="em_oez_containerno" class="java.lang.String"/>
+	<field name="em_oez_vessel_name" class="java.lang.String"/>
+	<field name="em_oez_voyage_number" class="java.lang.String"/>
+	<field name="em_oez_dest_port" class="java.lang.String"/>
+	<field name="em_oez_letterofcredit_date" class="java.sql.Timestamp"/>
+	<field name="em_oez_letterofcredit_number" class="java.lang.String"/>
+	<field name="em_oez_port_of_loading" class="java.lang.String"/>
+	<field name="em_oez_port_of_discharge" class="java.lang.String"/>
+	<field name="linedes" class="java.lang.String"/>
+	<field name="productcategorydes" class="java.lang.String"/>
+	<field name="aumqty" class="java.math.BigDecimal"/>
+	<field name="em_oez_invoice_notes" class="java.lang.String"/>
+	<field name="em_oez_packaging_size" class="java.lang.String"/>
+	<field name="packagingsize" class="java.lang.String"/>
+	<field name="totalaumqty" class="java.math.BigDecimal"/>
+	<field name="aumcode" class="java.lang.String"/>
+	<field name="incotermname" class="java.lang.String"/>
+	<field name="em_oez_packaging" class="java.lang.String"/>
+	<field name="packaging" class="java.lang.String"/>
+	<field name="em_oez_frozen_type" class="java.lang.String"/>
+	<field name="frozentype" class="java.lang.String"/>
+	<field name="em_oez_raw_type" class="java.lang.String"/>
+	<field name="rawtype" class="java.lang.String"/>
+	<field name="em_oez_type_of_goods" class="java.lang.String"/>
+	<field name="typeofgoods" class="java.lang.String"/>
+	<field name="em_oez_aum_priceactual" class="java.math.BigDecimal"/>
+	<field name="name2" class="java.lang.String"/>
+	<field name="customer" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="phonefax" class="java.lang.String"/>
+	<field name="customer_contact" class="java.lang.String"/>
+	<field name="em_oez_codocumentno" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="tax" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="country_id" class="java.lang.String"/>
+	<field name="invoice_date" class="java.sql.Timestamp"/>
+	<field name="currency_code" class="java.lang.String"/>
+	<field name="payment_term" class="java.lang.String"/>
+	<field name="payment_term_description" class="java.lang.String"/>
+	<field name="invoice_line" class="java.math.BigDecimal"/>
+	<field name="product" class="java.lang.String"/>
+	<field name="partcode" class="java.lang.String"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="brand" class="java.lang.String"/>
+	<field name="bank_name" class="java.lang.String"/>
+	<field name="accountno" class="java.lang.String"/>
+	<field name="uom_name" class="java.lang.String"/>
+	<field name="invoice_qty" class="java.math.BigDecimal"/>
+	<field name="ttd" class="java.lang.String"/>
+	<field name="ttd2" class="java.lang.String"/>
+	<field name="orderpricelist" class="java.math.BigDecimal"/>
+	<field name="unit_price" class="java.math.BigDecimal"/>
+	<field name="line_net_amount" class="java.math.BigDecimal"/>
+	<field name="product_description" class="java.lang.String"/>
+	<field name="invoice_line_due_date" class="java.sql.Timestamp"/>
+	<field name="shipment_no" class="java.lang.String"/>
+	<field name="delivery_date" class="java.sql.Date"/>
+	<field name="order_reference" class="java.lang.String"/>
+	<field name="total_invoice_amount" class="java.math.BigDecimal"/>
+	<variable name="SUMQTY" class="java.math.BigDecimal" resetType="Group" resetGroup="brand" calculation="Sum">
+		<variableExpression><![CDATA[$F{invoice_qty}]]></variableExpression>
+	</variable>
+	<variable name="NETWEIGTGROUP" class="java.math.BigDecimal" resetType="Group" resetGroup="brand" calculation="Sum">
+		<variableExpression><![CDATA[$F{netweight}]]></variableExpression>
+	</variable>
+	<variable name="TOTALINVGROUP" class="java.math.BigDecimal" resetType="Group" resetGroup="brand" calculation="Sum">
+		<variableExpression><![CDATA[$F{line_net_amount}]]></variableExpression>
+	</variable>
+	<variable name="sumnetweight" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{netweight}]]></variableExpression>
+	</variable>
+	<variable name="sumgrosweight" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{groswight}]]></variableExpression>
+	</variable>
+	<variable name="suminvqty" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{invoice_qty}]]></variableExpression>
+	</variable>
+	<variable name="SUBTOTALAUMQTY" class="java.math.BigDecimal" resetType="Group" resetGroup="brand" calculation="Sum">
+		<variableExpression><![CDATA[$F{aumqty}]]></variableExpression>
+	</variable>
+	<variable name="GRANTOTALAUMQTY" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{aumqty}]]></variableExpression>
+	</variable>
+	<group name="brand">
+		<groupExpression><![CDATA[$F{brand}]]></groupExpression>
+		<groupHeader>
+			<band height="15">
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-11" mode="Opaque" x="-1" y="0" width="554" height="15" backcolor="#CCCCCC" uuid="c5ba07e6-fa0a-45aa-8a61-5f1713d360f0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{brand} +" | "+ $F{rawtype} +" | "+ $F{frozentype} +" | "+  $F{packaging} +" | "+ $F{packagingsize}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="16">
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-11" x="313" y="1" width="68" height="14" uuid="a695eb21-9dcf-4e83-a9cb-16f03d1cf730"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+						<paragraph rightIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUBTOTALAUMQTY}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-15" x="424" y="1" width="129" height="15" uuid="21b14fbe-efd7-44f1-bacf-503b06637210"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+						<paragraph rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TOTALINVGROUP}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement key="line-4" x="0" y="0" width="552" height="1" uuid="b03702b6-3b2c-4093-8921-bedf6ca93852"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-4" x="0" y="15" width="552" height="1" uuid="3f091eda-9b17-44c4-84e9-21adcef0083f"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement key="staticText-7" x="1" y="1" width="202" height="14" uuid="0c85947c-2df2-4720-8b25-3364fabd3362"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+					</textElement>
+					<text><![CDATA[SUB TOTAL]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+					<reportElement key="textField-11" x="228" y="1" width="53" height="14" uuid="d2712a0f-1351-4cd3-adb1-f150951566cc"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+						<paragraph leftIndent="3" rightIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMQTY}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement key="line-4" x="0" y="0" width="1" height="15" uuid="2608955b-b520-4230-aefa-9f17b4d41c85"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-4" x="552" y="1" width="1" height="14" uuid="0d2e3938-dbf9-4070-8f71-af0516c84eef"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="247" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="92" width="261" height="13" uuid="c3476d86-a765-417b-9343-7bc596d5a2f2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="144" width="118" height="13" uuid="da18816a-194b-4c18-98f3-baad396670bd"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[APPLICANT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="79" width="118" height="13" uuid="b61c58f8-f3e5-478d-bd71-589c8b608f71"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[BENEFICIARY :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="291" y="198" width="135" height="13" uuid="f94d1f96-976d-43d3-9e96-cd8501497fe9"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[APPLICANT'S REF No :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-1" x="-1" y="169" width="285" height="36" uuid="7b662479-d55b-4ef6-af50-ecae5d716f3a"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address1} + ' ' +$F{address2}+ ' '+(""+(($F{org_postal}!=null)?$F{org_postal}:""))+ ' '+ (""+(($F{city}!=null)?$F{city}:""))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="-1" y="157" width="282" height="13" uuid="8b474972-4059-4ef2-b728-fc82f36edd4e"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" x="289" y="129" width="98" height="13" uuid="1c180209-dc85-491b-aa55-7f57f4ec92e9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[L/C Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" x="387" y="128" width="6" height="13" uuid="ed50e7de-59fa-4212-8458-aa355c1dfa4e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="289" y="103" width="98" height="13" uuid="823eac55-d21b-4fc0-9841-646bb076b12b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" x="387" y="116" width="6" height="13" uuid="f03a3678-b46d-4031-b154-d27557a90d31"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-59" x="289" y="116" width="98" height="13" uuid="05fa8467-2501-41f3-a339-b9d1ab424a8f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[L/C No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="387" y="90" width="6" height="13" uuid="68655768-943b-44ff-8ed6-a73b80e602de"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-27" x="387" y="103" width="6" height="13" uuid="ae8b8bdb-0409-4a44-a10c-1917e188251d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" x="289" y="90" width="98" height="13" uuid="c6ff7670-b3af-422d-8e9f-4b7cc724bb4f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="393" y="129" width="159" height="13" uuid="d7e0fc46-2b77-4c06-ae60-0960fbe0ffb3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_letterofcredit_date}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="393" y="116" width="159" height="13" uuid="4db72c73-9f56-487f-af7b-108f7a927f91"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_letterofcredit_number}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="393" y="90" width="159" height="13" uuid="92e27756-df18-4f49-8c4e-e97fdfba3e1e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="393" y="103" width="159" height="13" uuid="e21baba7-b6cd-4962-b084-2001079a53dd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-2" x="420" y="198" width="132" height="13" uuid="020c96e8-11ce-4f79-898a-704e7ec519eb"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_reference}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-2" x="290" y="162" width="261" height="13" uuid="37550ada-f9cb-46d0-9aed-d9d1f5cac5c0"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-2" x="291" y="174" width="260" height="13" uuid="9078b80b-4be8-4e3f-8f14-ebde0ab0db63"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountno}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-1" x="-1" y="230" width="543" height="17" uuid="bb25d007-a89b-411d-b10d-2e892d720b28"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_port_of_loading}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="205" width="118" height="13" uuid="2f0b438b-5226-47e7-b8fc-ff047f6b001c"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[NOTIFY PARTY :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="0" y="218" width="118" height="13" uuid="97d3cf8e-685e-4c4d-b6ca-9983950ec4ad"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[PORT OF LOADING]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" x="292" y="211" width="128" height="13" uuid="2ecaf5ee-9153-47c4-8b2e-b3aaddd3a877"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[PORT OF DESTINATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" x="419" y="211" width="6" height="13" uuid="dda2cb37-5487-4982-8f77-467ecb9f82ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-2" x="424" y="211" width="127" height="13" uuid="e319bf9c-b4ab-4e49-bc23-7e3fe932261d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_dest_port}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="1" y="51" width="551" height="28" uuid="747c883b-aa18-4ae4-9b38-91aa640ecbea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="24" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[COMMERCIAL INVOICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" x="-1" y="0" width="300" height="19" forecolor="#000000" uuid="e8283a8d-041c-4b39-8f4e-1a061bb2e9cf"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="12" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[PT. ISTANA CIPTA SEMBADA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" x="290" y="149" width="97" height="13" uuid="f7e67a44-f15c-4bcc-b414-6363fc60eeb5"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Issuing Bank :]]></text>
+			</staticText>
+			<image scaleImage="RetainShape" hAlign="Right" vAlign="Top" isUsingCache="true">
+				<reportElement key="image-1" x="436" y="-23" width="117" height="83" uuid="42cd7133-f57f-474d-b5cc-8612cea7f4e7"/>
+				<imageExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{ad_org_id})]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="19" width="207" height="41" uuid="b88a89e7-af39-4e4b-b73e-63715cd1ce83"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orgaddres}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="0" y="105" width="207" height="40" uuid="a433a81d-da53-459b-a164-15b34cfd9602"/>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orgaddres}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="485" y="0" width="67" height="15" forecolor="#FFFFFF" backcolor="#000080" uuid="945c0f81-0c4d-4e3b-bd93-da922390e021"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="228" y="0" width="84" height="31" forecolor="#FFFFFF" backcolor="#000080" uuid="55898086-4da5-40fa-bbcc-8435d727feea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Qty 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="61" y="0" width="166" height="31" forecolor="#FFFFFF" backcolor="#000080" uuid="7bc1a34d-06b6-4113-b2d7-a7ab44ee5b78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-11" mode="Opaque" x="485" y="16" width="67" height="15" forecolor="#FFFFFF" backcolor="#000080" uuid="7658ad6b-a68c-4555-95c7-597a594e283c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currency_code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="313" y="0" width="98" height="31" forecolor="#FFFFFF" backcolor="#000080" uuid="21f12c1c-b8aa-4b41-ae36-75df975e1cd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Qty 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="412" y="16" width="72" height="15" forecolor="#FFFFFF" backcolor="#000080" uuid="50b294cc-a4dc-4944-b5b1-e2151d885fa6"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[USD/KGS]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-4" x="554" y="1" width="1" height="25" forecolor="#FFFFFF" uuid="6a725934-3746-492f-ae9d-6da4a64a383e"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="412" y="0" width="72" height="15" forecolor="#FFFFFF" backcolor="#000080" uuid="6fdfb4f8-0224-44b9-b18e-2f56b5632ec8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" mode="Opaque" x="-1" y="0" width="61" height="31" forecolor="#FFFFFF" backcolor="#000080" uuid="2aa8a170-3227-45f0-8516-524a91b43e5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[Size]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="381" y="0" width="32" height="13" uuid="9fb0ceb3-e3b9-4030-a9bc-bb156c613e36"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aumcode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="313" y="0" width="68" height="13" uuid="06a48456-7b27-4530-a18b-e4ee973fdfcd"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aumqty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="61" y="0" width="168" height="13" uuid="75d252f9-0e4b-42eb-994d-f8f4b06f8bc2"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{minoutdes}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="413" y="0" width="75" height="13" uuid="149ba544-6af1-4db2-8a53-c41f95faeb37"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_aum_priceactual}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="-1" y="0" width="62" height="13" uuid="82524e3b-1f83-40f5-8bd8-a1442508f29a"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="229" y="0" width="52" height="13" uuid="b88e57f5-8eda-46b3-a92e-68a301ab964b"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_qty}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="281" y="0" width="32" height="13" uuid="0c562b5c-89bd-4234-b335-74013e00788d"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="488" y="0" width="64" height="13" uuid="a230c8c3-e2c3-47e1-a19c-9ceaed6bc7bd"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line_net_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16">
+			<staticText>
+				<reportElement key="staticText-9" mode="Opaque" x="0" y="1" width="230" height="14" forecolor="#FFFFFF" backcolor="#000080" uuid="d6c79102-0cf8-4662-8a34-b8db4789ceb8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[GRAND TOTAL]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField-15" mode="Opaque" x="366" y="1" width="187" height="14" forecolor="#FFFFFF" backcolor="#000080" uuid="3662b8ed-d7c3-424d-bcd0-6fb2d1243028"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_invoice_amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+				<reportElement key="textField-11" mode="Opaque" x="229" y="1" width="60" height="14" forecolor="#FFFFFF" backcolor="#000080" uuid="392ebc60-93ad-4696-bbf7-69e43d14afb6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{suminvqty}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-9" mode="Opaque" x="289" y="1" width="79" height="14" forecolor="#FFFFFF" backcolor="#000080" uuid="736d51da-c21e-4df2-a53b-6302d1e1ffb8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<lastPageFooter>
+		<band height="214">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="292" y="1" width="256" height="13" uuid="f6287111-58c2-439c-b3de-4c75216759c3"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="10" isBold="false" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-58" x="145" y="103" width="6" height="13" uuid="8ec197cf-06cf-437e-a9b5-42dd96e24285"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" x="145" y="78" width="6" height="13" uuid="60a6c8ab-308e-42d8-b419-764029611f26"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" x="1" y="1" width="144" height="13" uuid="dd386ffd-36d2-416f-8154-d4bfeefaa836"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Net Weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="1" y="14" width="144" height="13" uuid="0c8ce574-2351-4d37-ab99-60a202044a5a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Gross Weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" x="146" y="1" width="6" height="13" uuid="fdb8b461-58c6-46c5-b488-97c4cee13e50"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="1" y="103" width="144" height="13" uuid="fcf57337-bee4-4113-b8c9-55321dc7354e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Seal No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" x="1" y="78" width="144" height="13" uuid="14f329cf-6565-4e79-a533-b24ce52092ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Ctn No]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField-11" x="153" y="1" width="63" height="13" uuid="53ed6939-7e69-42e1-a6ad-50f276e44513"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sumnetweight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-58" x="146" y="14" width="6" height="13" uuid="6530352c-d424-470e-b666-f9ae7cab9e04"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="1" y="26" width="202" height="13" uuid="3014c176-aeec-40e3-84bb-830a6ccaa907"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[PRODUCTS OF ORIGIN INDONESIA]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField-11" x="153" y="14" width="63" height="13" uuid="f5a4402b-2bc5-4133-b095-a53ee0cba3e5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sumgrosweight}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="151" y="103" width="215" height="13" uuid="d7b458c7-3546-4eef-8af4-9d5729479a69"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_sealno}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="151" y="78" width="215" height="13" uuid="f6c0e21b-27c3-406e-819c-af12b3a54f00"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_containerno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-58" x="145" y="66" width="6" height="13" uuid="cef2390e-e9dd-4967-8d9c-f19a1710c2fc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="151" y="66" width="226" height="13" uuid="fe7a8ba9-e60c-4c3c-9a0d-3634a97935e0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(""+(($F{em_oez_vessel_name}!=null)?$F{em_oez_vessel_name}:""))+ '/'+ (""+(($F{em_oez_voyage_number}!=null)?$F{em_oez_voyage_number}:""))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-24" x="1" y="40" width="94" height="13" uuid="4cdf911c-8cde-496e-ad83-d46297f8c13e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Say's]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="38" y="40" width="386" height="13" uuid="c7cebfd8-526a-440f-959a-9e18b769029e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_invoice_notes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" x="207" y="2" width="77" height="13" uuid="983e88a5-e16a-4a1c-a984-c39c11979c44"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[KGS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="206" y="15" width="77" height="13" uuid="efb38711-8384-4f4d-a483-e83c9b342db2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" isBold="true" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antquab.ttf"/>
+				</textElement>
+				<text><![CDATA[KGS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" x="1" y="53" width="144" height="13" uuid="8ec9a980-1e66-4ef9-93af-ae76519963d0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Incoterms]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" x="145" y="53" width="6" height="13" uuid="d1cd0609-0668-43cd-98c7-1ff2a99e8c5a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="151" y="53" width="147" height="13" uuid="aa6173cb-dc9c-4b32-a2dd-364988168c94"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{incotermname}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Left">
+				<reportElement x="435" y="23" width="110" height="49" uuid="a512ad0d-5325-4351-91a9-95a1fe6bb86f"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/" +$F{ttd2}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Left">
+				<reportElement x="449" y="32" width="93" height="35" uuid="594dc718-4038-4bc9-8609-371ffd49e652"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/" +$F{ttd}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-24" x="1" y="66" width="144" height="13" uuid="11509b0f-fa31-4b80-8f6b-db839e3b759a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Vessel Name / Voyage No]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" vAlign="Middle">
+				<reportElement x="-22" y="116" width="598" height="98" uuid="4e8c8e75-899b-4bac-b280-f0b52edc9b04"/>
+				<imageExpression><![CDATA["/home/infinite/appl/infinite/src/org/openbravo/erpReports/footer.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-16" x="387" y="77" width="158" height="13" uuid="1894ffaf-0667-488f-90d6-909fedb89026"/>
+				<textElement textAlignment="Right">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[GUNAWAN MULYONO]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="434" y="90" width="111" height="1" uuid="1f64f4bc-0d5a-49f0-a4f9-523c40351712"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-58" x="145" y="90" width="6" height="13" uuid="dfe9e0c2-d5bf-411a-82e2-1a170d097ab8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" x="1" y="90" width="144" height="13" uuid="3eaaacf8-3cdc-458c-8e47-78202378e5a4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<text><![CDATA[Depature Date]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy" isBlankWhenNull="true">
+				<reportElement key="textField" x="151" y="90" width="217" height="13" uuid="80416c23-c77f-411f-be37-f09a344ec322"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="10" pdfFontName="/home/infinite/appl/infinite/src/org/openbravo/erpReports/antqua.ttf"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{em_oez_depature}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

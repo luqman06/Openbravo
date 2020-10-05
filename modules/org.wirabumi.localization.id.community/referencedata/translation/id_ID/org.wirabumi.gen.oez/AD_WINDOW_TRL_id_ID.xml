@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_WINDOW" version="">
+  <row id="0D33D40AC35F4AE7862AED4602D39596" trl="N">
+    <value column="Name" isTrl="N" original="Import Product Prices">Import Product Prices</value>
+    <value column="Description" isTrl="N" original="Import Product Prices">Import Product Prices</value>
+    <value column="Help" isTrl="N" original="You may import product price after import product (product definition and product purchasing data, using import product window). You can import several prices for a product, 1 price for 1 price list. You can not import 2 price for same product at the same price list.">You may import product price after import product (product definition and product purchasing data, using import product window). You can import several prices for a product, 1 price for 1 price list. You can not import 2 price for same product at the same price list.</value>
+  </row>
+  <row id="179B637B416345B9AE8A3B9633246450" trl="N">
+    <value column="Name" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Description" isTrl="N" original="Import Inventory">Import Inventory</value>
+    <value column="Help" isTrl="N" original="Import Inventory for Opening Balance">Import Inventory for Opening Balance</value>
+  </row>
+  <row id="7BD03245396B4345909BCC97045E651A" trl="N">
+    <value column="Name" isTrl="N" original="Import Products Cost">Import Products Cost</value>
+    <value column="Description" isTrl="N" original="Import Product Cost to define the latest costing at the begining of accounting period">Import Product Cost to define the latest costing at the begining of accounting period</value>
+    <value column="Help" isTrl="N" original="Import Product Cost to define the latest costing at the begining of accounting period. By providing the product cost you are allowed to see the valued stock value, and also post the 1st Goods Receipt document. Beside that, you will get matched value of your inventory in the warehouse and in your balance sheet.">Import Product Cost to define the latest costing at the begining of accounting period. By providing the product cost you are allowed to see the valued stock value, and also post the 1st Goods Receipt document. Beside that, you will get matched value of your inventory in the warehouse and in your balance sheet.</value>
+  </row>
+  <row id="7FC2E5FA12934D3BB9C70B294CF8A683" trl="N">
+    <value column="Name" isTrl="N" original="Import Business Partner Balance">Import Business Partner Balance</value>
+    <value column="Description" isTrl="N" original="Import business partner balance">Import business partner balance</value>
+    <value column="Help" isTrl="N" original="Import business partner balance, to enable you register the payment from/lto your business partner after opening balance. You may not enter the detail of invoice, but you define how much and when you need to receive/pay to your business partner. One business partner can have several due date and amount to be received/paid.">Import business partner balance, to enable you register the payment from/lto your business partner after opening balance. You may not enter the detail of invoice, but you define how much and when you need to receive/pay to your business partner. One business partner can have several due date and amount to be received/paid.</value>
+  </row>
+  <row id="B1B632318B984946AA2F62ED9581A07B" trl="N">
+    <value column="Name" isTrl="N" original="Import Goods Receipt/Shipment">Import Goods Receipt/Shipment</value>
+    <value column="Description" isTrl="N" original="Import Goods Receipt/Shipment from csv">Import Goods Receipt/Shipment from csv</value>
+    <value column="Help" isTrl="N" original="Import Goods Receipt/Shipment from csv">Import Goods Receipt/Shipment from csv</value>
+  </row>
+</compiereTrl>

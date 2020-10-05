@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="id_ID" language="id_ID" table="AD_MODULE" version="">
+  <row id="79EDDE32821B41F7A598DEBB56144700" trl="N">
+    <value column="Description" isTrl="N" original="Wirabumi Human Resouce Information and Payroll Management System Indonesia Localization Pack">Wirabumi Human Resouce Information and Payroll Management System Indonesia Localization Pack</value>
+    <value column="Help" isTrl="N" original="Indonesia Localization Pack for Wirabumi HRIS and Payroll.">Indonesia Localization Pack for Wirabumi HRIS and Payroll.</value>
+    <value column="License" isTrl="N" original="This module is distributed under GNU GPL v2">This module is distributed under GNU GPL v2</value>
+    <value column="Updateinfo" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

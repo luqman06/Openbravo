@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION HRIS_CHECK_JOBTITLE_TREE">
+    <function name="HRIS_CHECK_JOBTITLE_TREE" type="CHAR">
+      <parameter name="p_parent" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_child" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_parent character varying(32);
+v_child character varying(32);
+BEGIN
+return 'Y';
+IF p_parent = p_child THEN
+	return 'N' ; --OBTG:-20000--
+ELSE 
+select parent_id into v_parent from ad_treenode where node_id = p_child;
+	IF (v_parent = p_parent)  THEN
+	RETURN 'Y';
+		ELSIF (v_parent = '0') THEN
+		RETURN 'N';
+		ELSE
+		v_child := v_parent;
+		RETURN hris_check_jobtitle_tree(p_parent, v_child);
+	END IF;
+END IF;
+END HRIS_CHECK_JOBTITLE_TREE
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="id_ID" table="AD_MESSAGE" version="">
+  <row id="3791CD188E244108A810A6422829B73C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Data Created Succesfull">Data Telah Dibuat dengan Sukses</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="38A6E4F85BF54C679123CF562CFFAF91" trl="N">
+    <value column="MsgText" isTrl="Y" original="Release Date">Tanggal SK</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="49B44CC7E3714FAFA8E5C31F81F6FDBE" trl="N">
+    <value column="MsgText" isTrl="Y" original="Data Failed To Create Unknow Error">Tidak berhasil membuat data karena alasan yang tidak jelas.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6A18A837780149309AE6267C3DD2EA8B" trl="N">
+    <value column="MsgText" isTrl="Y" original="is not Deffined in Cost Center table">tidak didefinisikan di table Pusat Biaya</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6AD46D227D094C1792510807A57DB4CF" trl="N">
+    <value column="MsgText" isTrl="N" original="Role in new job title master data is null. Role is used to define new role for transfered employee.">Role in new job title master data is null. Role is used to define new role for transfered employee.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="73007F9DAE7E48A4B1B8388D7ECD054D" trl="N">
+    <value column="MsgText" isTrl="Y" original="is not Defined in Country table">tidak didefinisikan pada table Negara</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="76EE3A14DDFE4F07B474577D14589CE7" trl="N">
+    <value column="MsgText" isTrl="Y" original="Data Imported Succesfully">Data Telah Berhasil Di import</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="88315FA1CF77415DB95654290FB61035" trl="N">
+    <value column="MsgText" isTrl="N" original="No department defined. Department entity is required in Employee Contract Creation.">No department defined. Department entity is required in Employee Contract Creation.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8832B61840564562B85728164A93D13A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Data Matched to Defined Criteria">Data sesuai dengan Kriteria yang didefinisikan.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8DBAAC6DE1814D01AE3C97F9D091E32A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Competency Depencency Error.&#10;Employee does not have all required competency before take this competency.">Error Dependensi Kompetensi.
+Karyawan tidak memilki kompetensi yang cukup untk mengambil kompetensi ini.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9398AF0DDF9747978536E416A59DE4C4" trl="N">
+    <value column="MsgText" isTrl="Y" original="is not match to pair of position and job title configuration or not defined in job title table.">tidak cocok dengan konfigurasi pasangan jabatan dan jabatan lengkap, atau tidak didefinisikan pada tabel jabatan lengkap.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B6267D52DC464C48BC1E4F36105E9BA1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Is Not defines As region in Country">Tidak Di kenal Sebagai Nama Provinsi Pada Negara</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BDB24ECA7DB0419BBBB8D464B38CBE7B" trl="N">
+    <value column="MsgText" isTrl="N" original="Role in old job title master data is null. Role is used to define new role for transfered employee.">Role in old job title master data is null. Role is used to define new role for transfered employee.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D267E97E485B41658D2F2AA3740AB801" trl="N">
+    <value column="MsgText" isTrl="Y" original="Record Update Failed due to Invalid Paramater">Gagal mengubah data karena parameter tidak valid.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D4FEF6015BAC4974B4AAEE499CB8E0D5" trl="N">
+    <value column="MsgText" isTrl="Y" original="Effective Date">Terhitung Mulai Taggal</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ED9519549C8C4F5A95CE0CC536A09532" trl="N">
+    <value column="MsgText" isTrl="Y" original="Contract No.">Nomor SK</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>
