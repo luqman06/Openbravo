@@ -15,12 +15,33 @@ public class AttendancePerformanceBean {
 	int pulangcepat;
 	int durasipulangcepat;
 	int lupacheckout;
+	int nightShift;
+	int unpaidLeaveDuration;
+	int unpaidLeave;
 	
+	public int getUnpaidLeave() {
+		return unpaidLeave;
+	}
+	public void setUnpaidLeave(int unpaidLeave) {
+		this.unpaidLeave = unpaidLeave;
+	}
+	public int getNightShift() {
+		return nightShift;
+	}
+	public void setNightShift(int nightShift) {
+		this.nightShift = nightShift;
+	}
 	public int getHarikerja() {
 		return harikerja;
 	}
 	public void setHarikerja(int harikerja) {
 		this.harikerja = harikerja;
+	}
+	public int getUnpaidLeaveDuration() {
+		return unpaidLeaveDuration;
+	}
+	public void setUnpaidLeaveDuration(int unpaidLeaveDuration) {
+		this.unpaidLeaveDuration = unpaidLeaveDuration;
 	}
 	public int getTotaljamkerja() {
 		return totaljamkerja;
@@ -94,9 +115,4 @@ public class AttendancePerformanceBean {
 	public void setLupacheckout(int lupacheckout) {
 		this.lupacheckout = lupacheckout;
 	}
-	
-	
-	
-	
-
 }
