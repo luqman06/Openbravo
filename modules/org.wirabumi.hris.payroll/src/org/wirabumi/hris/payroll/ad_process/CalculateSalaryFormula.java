@@ -383,6 +383,9 @@ public class CalculateSalaryFormula extends DalBaseProcess implements SalaryForm
 	  int harikerja = abp.getHarikerja();
 	  se.put("harikerja", harikerja);
 	  
+	  int nightShift = abp.getNightShift();
+	  se.put("nightshift", nightShift);
+	  
 	  int terlambat = abp.getTerlambat();
 	  se.put("terlambat", terlambat);
 	  
@@ -395,9 +398,18 @@ public class CalculateSalaryFormula extends DalBaseProcess implements SalaryForm
 	  int durasipulangcepat = abp.getDurasipulangcepat();
 	  se.put("durasipulangcepat", durasipulangcepat);
 	  
+	  int cuti = abp.getCuti();
+	  se.put("leave", cuti);
+
 	  int tidakmasuk = abp.getTidakmasuk();
 	  se.put("tidakmasuk", tidakmasuk);
 	  
+	  int unpaidLeaveDuration = abp.getUnpaidLeaveDuration();
+	  se.put("leaveduration", unpaidLeaveDuration);
+	  
+	  int unpaidLeave = abp.getUnpaidLeave();
+	  se.put("unpaidleave", unpaidLeave);
+
 	  //employee related internal variable
 	  boolean issalesrep=bp.isSalesRepresentative();
 	  if (issalesrep)
@@ -637,7 +649,7 @@ public class CalculateSalaryFormula extends DalBaseProcess implements SalaryForm
   @Override
   public double hitungFormulaGaji(pyr_salarypayment salaryPayment, pyr_sp_employee sp_employee, pyr_spe_earning spee,
 		  pyr_spe_deduction sped) {
-	
+	System.out.println("Hitung Salary Formula Mulai.");
 	  List<pyr_sp_employee> speList;
 	  if (sp_employee!=null){
 		  speList = new ArrayList<pyr_sp_employee>();
