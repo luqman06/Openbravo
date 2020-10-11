@@ -76,9 +76,13 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
           "RequisitionToOrder|ShowNullVendor", "Y");
       String strOrgId = vars.getGlobalVariable("inpadOrgId", "RequisitionToOrder|AD_Org_ID",
           vars.getOrg());
+      String strDocumentNo = vars.getRequestGlobalVariable("inpDocumentNo",
+              "RequisitionToOrder|DocumentNo");
+      if (strDocumentNo.equals(""))
+          strDocumentNo += "%";
       vars.setSessionValue("RequisitionToOrder|isSOTrx", "N");
       printPageDataSheet(response, vars, strProductId, strDateFrom, strDateTo, strRequesterId,
-          strVendorId, strIncludeVendor, strOrgId);
+          strVendorId, strIncludeVendor, strOrgId,strDocumentNo);
     } else if (vars.commandIn("FIND")) {
       String strProductId = vars.getRequestGlobalVariable("inpmProductId",
           "RequisitionToOrder|M_Product_ID");
@@ -91,10 +95,14 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
           "RequisitionToOrder|C_BPartner_ID");
       String strIncludeVendor = vars.getRequestGlobalVariable("inpShowNullVendor",
           "RequisitionToOrder|ShowNullVendor");
+      String strDocumentNo = vars.getRequestGlobalVariable("inpDocumentNo",
+              "RequisitionToOrder|DocumentNo");
+      if (strDocumentNo.equals(""))
+          strDocumentNo += "%";
       String strOrgId = vars.getRequestGlobalVariable("inpadOrgId", "RequisitionToOrder|AD_Org_ID");
       updateLockedLines(vars, strOrgId);
       printPageDataSheet(response, vars, strProductId, strDateFrom, strDateTo, strRequesterId,
-          strVendorId, strIncludeVendor, strOrgId);
+          strVendorId, strIncludeVendor, strOrgId,strDocumentNo);
     } else if (vars.commandIn("ADD")) {
       String strProductId = vars.getRequestGlobalVariable("inpmProductId",
           "RequisitionToOrder|M_Product_ID");
@@ -111,9 +119,13 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
       String strRequisitionLines = vars.getRequiredInStringParameter("inpRequisitionLine",
           IsIDFilter.instance);
       updateLockedLines(vars, strOrgId);
+      String strDocumentNo = vars.getRequestGlobalVariable("inpDocumentNo",
+              "RequisitionToOrder|DocumentNo");
+      if (strDocumentNo.equals(""))
+          strDocumentNo += "%";
       lockRequisitionLines(vars, strRequisitionLines);
       printPageDataSheet(response, vars, strProductId, strDateFrom, strDateTo, strRequesterId,
-          strVendorId, strIncludeVendor, strOrgId);
+          strVendorId, strIncludeVendor, strOrgId,strDocumentNo);
     } else if (vars.commandIn("REMOVE")) {
       String strProductId = vars.getRequestGlobalVariable("inpmProductId",
           "RequisitionToOrder|M_Product_ID");
@@ -131,8 +143,12 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
           IsIDFilter.instance);
       unlockRequisitionLines(vars, strSelectedLines);
       updateLockedLines(vars, strOrgId);
+      String strDocumentNo = vars.getRequestGlobalVariable("inpDocumentNo",
+              "RequisitionToOrder|DocumentNo");
+      if (strDocumentNo.equals(""))
+          strDocumentNo += "%";
       printPageDataSheet(response, vars, strProductId, strDateFrom, strDateTo, strRequesterId,
-          strVendorId, strIncludeVendor, strOrgId);
+          strVendorId, strIncludeVendor, strOrgId,strDocumentNo);
     } else if (vars.commandIn("OPEN_CREATE")) {
       String strSelectedLines = vars.getRequiredInStringParameter("inpSelectedReq",
           IsIDFilter.instance);
@@ -161,7 +177,7 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
 
   private void printPageDataSheet(HttpServletResponse response, VariablesSecureApp vars,
       String strProductId, String strDateFrom, String strDateTo, String strRequesterId,
-      String strVendorId, String strIncludeVendor, String strOrgId) throws IOException,
+      String strVendorId, String strIncludeVendor, String strOrgId,String strDocumentNo) throws IOException,
       ServletException {
     if (log4j.isDebugEnabled())
       log4j.debug("Output: dataSheet");
@@ -171,7 +187,7 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
 
     String strTreeOrg = RequisitionToOrderData.treeOrg(this, vars.getClient());
     RequisitionToOrderData[] datalines = RequisitionToOrderData.selectLines(this, vars
-        .getLanguage(), Utility.getContext(this, vars, "#User_Client", "RequisitionToOrder"), Tree
+        .getLanguage(),"%"+strDocumentNo+"%", Utility.getContext(this, vars, "#User_Client", "RequisitionToOrder"), Tree
         .getMembers(this, strTreeOrg, strOrgId), strDateFrom, DateTimeData.nDaysAfter(this,
         strDateTo, "1"), strProductId, strRequesterId, (strIncludeVendor.equals("Y") ? strVendorId
         : null), (strIncludeVendor.equals("Y") ? null : strVendorId));
@@ -234,6 +250,8 @@ public class RequisitionToOrder extends HttpSecureAppServlet {
         : RequisitionToOrderData.bPartnerDescription(this, strVendorId, vars.getLanguage()));
     xmlDocument.setParameter("paramShowNullVendor", strIncludeVendor);
     xmlDocument.setParameter("paramAdOrgId", strOrgId);
+    xmlDocument.setParameter("paramDocumentNo", strDocumentNo);
+    System.out.println(strDocumentNo);
     try {
       ComboTableData comboTableData = new ComboTableData(vars, this, "TABLEDIR", "AD_User_ID", "",
           "UsersWithRequisition", Utility.getContext(this, vars, "#AccessibleOrgTree",
