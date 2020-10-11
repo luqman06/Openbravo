@@ -71,7 +71,8 @@
                                LEFT JOIN M_PRODUCT_UOM ON M_PRODUCT_UOM.M_PRODUCT_UOM_ID = M_REQUISITIONLINE.M_PRODUCT_UOM_ID
                                LEFT JOIN C_UOM C_UOM1 ON M_PRODUCT_UOM.C_UOM_ID = C_UOM1.C_UOM_ID
                                LEFT JOIN m_pricelist pl on COALESCE(M_REQUISITIONLINE.M_PRICELIST_ID, M_REQUISITION.M_PRICELIST_ID) = pl.m_pricelist_id
-        WHERE M_REQUISITION.ISACTIVE = 'Y'
+         WHERE M_REQUISITION.ISACTIVE = 'Y'
+          AND M_REQUISITION.DOCUMENTNO LIKE ?
           AND M_REQUISITIONLINE.ISACTIVE = 'Y'
           AND M_REQUISITION.DOCSTATUS = 'CO'
           AND M_REQUISITIONLINE.REQSTATUS = 'O'
@@ -94,6 +95,7 @@
     <Parameter name="language"/>
     <Parameter name="language"/>
     <Parameter name="language"/>
+    <Parameter name="parDocumentNo"/>
     <Parameter name="adUserClient" type="replace" optional="true" after="AND M_REQUISITION.AD_CLIENT_ID IN (" text="'1'"/>
     <Parameter name="adOrgId" optional="true" type="replace" after="AND M_REQUISITIONLINE.AD_ORG_ID IN (" text="'1'"/>
     <Parameter name="parDateFrom" optional="true" after="AND 1=1"><![CDATA[ AND M_REQUISITIONLINE.NEEDBYDATE >= TO_DATE(?)]]></Parameter>
