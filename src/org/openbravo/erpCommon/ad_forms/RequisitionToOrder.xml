@@ -37,6 +37,7 @@
   <PARAMETER id="paramBoolean" name="constant" default="Y"/>
   <PARAMETER id="paramShowNullVendor" name="paramShowNullVendor" boolean="checked" withId="paramBoolean"/>
   <PARAMETER id="paramAD_Org_ID" name="paramAdOrgId"/>
+  <PARAMETER id="paramDocumentNo" name="paramDocumentNo" attribute="value"/>
   <PARAMETER id="paramDisable" name="disable" default="-1"/>
   <PARAMETER id="paramCSS" name="theme" attribute="href" replace="Default"/>
   <PARAMETER id="tdleftTabs" name="leftTabs" default=""/>
@@ -47,6 +48,7 @@
   <PARAMETER id="messageBoxID" name="messageType" attribute="class" replace="yy" default="HIDDEN"/>
   <PARAMETER id="messageBoxIDTitle" name="messageTitle" default=""/>
   <PARAMETER id="messageBoxIDMessage" name="messageMessage" default=""/>
+
   <SUBREPORT id="reportRequester_ID" name="reportRequester_ID" report="org/openbravo/erpCommon/reference/List">
     <ARGUMENT name="parameterListSelected" withId="paramRequester"/>
   </SUBREPORT>
